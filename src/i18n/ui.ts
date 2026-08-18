@@ -1,0 +1,313 @@
+import type { LanguageCode } from "./languages";
+
+export interface UIStrings {
+  appTitle: string;
+  tagline: string;
+  selectLanguage: string;
+  changeLanguage: string;
+  startTour: string;
+  allStations: string;
+  backToStations: string;
+  stationOf: string; // e.g. "Station {current} of {total}"
+  keyPoints: string;
+  duration: string;
+  virtualTour: string;
+  watchProcess: string;
+  scanQrHint: string;
+  unverifiedNotice: string;
+  loadingVirtualTour: string;
+  draftLabel: string;
+  qrSheetTitle: string;
+  qrSheetSubtitle: string;
+  printButton: string;
+  backToApp: string;
+  contactUs: string;
+  followUs: string;
+  staffPrintQr: string;
+  footer: string;
+}
+
+/**
+ * appTitle/changeLanguage/virtualTour/watchProcess were extracted directly
+ * from the factory's own live site (tea-tourism-guide.netlify.app) on
+ * 2026-08-18 by switching its language picker and reading the rendered
+ * text — verified real, in-use copy, safe to ship as-is. `footer` is built
+ * from that same real appTitle plus "All rights reserved." in English,
+ * matching the live site's actual behavior (it does not translate that
+ * suffix in any language either).
+ *
+ * Everything else — tagline, selectLanguage, startTour, allStations,
+ * backToStations, stationOf, keyPoints, duration, scanQrHint — is new copy
+ * for this app's extra UI (the live site has no multi-station/QR concept),
+ * so there's no factory source to pull from. It was machine-translated
+ * (by Claude) on 2026-08-18, not reviewed by a native speaker or the
+ * factory. Good enough to browse/demo the full app in every language, but
+ * flag it for native-speaker review before printing QR codes for real
+ * visitors — especially Sinhala/Tamil/Arabic/Chinese/Japanese.
+ */
+const VERIFIED: Record<LanguageCode, { appTitle: string; changeLanguage: string; virtualTour: string; watchProcess: string }> = {
+  en: { appTitle: "Athukorala Tea Factory", changeLanguage: "Change Language", virtualTour: "Virtual Tour", watchProcess: "Watch the Process" },
+  zh: { appTitle: "阿图科拉拉茶厂", changeLanguage: "更改语言", virtualTour: "虚拟参观", watchProcess: "观看流程" },
+  ja: { appTitle: "アトゥコララ紅茶工場", changeLanguage: "言語の変更", virtualTour: "バーチャルツアー", watchProcess: "プロセスの視聴" },
+  es: { appTitle: "Fábrica de Té Athukorala", changeLanguage: "Cambiar Idioma", virtualTour: "Tour Virtual", watchProcess: "Ver el Proceso" },
+  fr: { appTitle: "Usine de Thé Athukorala", changeLanguage: "Changer de Langue", virtualTour: "Visite Virtuelle", watchProcess: "Voir le Processus" },
+  ru: { appTitle: "Чайная фабрика Атукорала", changeLanguage: "Сменить язык", virtualTour: "Виртуальный Тур", watchProcess: "Смотреть Процесс" },
+  si: { appTitle: "අතුකෝරළ තේ කර්මාන්තශාලාව", changeLanguage: "භාෂාව වෙනස් කරන්න", virtualTour: "මාර්ගගත චාරිකාව", watchProcess: "ක්‍රියාවලිය නරඹන්න" },
+  ar: { appTitle: "مصنع أثوكورالا للشاي", changeLanguage: "تغيير اللغة", virtualTour: "جولة افتراضية", watchProcess: "شاهد العملية" },
+  it: { appTitle: "Fabbrica di Tè Athukorala", changeLanguage: "Cambia Lingua", virtualTour: "Tour Virtuale", watchProcess: "Guarda il Processo" },
+  de: { appTitle: "Athukorala Tee-Fabrik", changeLanguage: "Sprache ändern", virtualTour: "Virtueller Rundgang", watchProcess: "Prozess ansehen" },
+  ta: { appTitle: "அத்துகோரள தேயிலை தொழிற்சாலை", changeLanguage: "மொழியை மாற்றவும்", virtualTour: "மெய்நிகர் பயணம்", watchProcess: "செயல்முறையைப் பார்க்கவும்" },
+};
+
+type AppUiStrings = Omit<UIStrings, keyof (typeof VERIFIED)["en"] | "footer">;
+
+/** Machine-translated (Claude, 2026-08-18) — not factory-verified, see doc comment above. */
+const APP_UI: Record<LanguageCode, AppUiStrings> = {
+  en: {
+    tagline: "Experience the art of tea production from leaf to cup",
+    selectLanguage: "Select Language",
+    startTour: "Start the Tour",
+    allStations: "Tour Stations",
+    backToStations: "Back to all stations",
+    stationOf: "Station {current} of {total}",
+    keyPoints: "Importance",
+    duration: "Timing",
+    scanQrHint: "Scan the QR code at each station to jump straight to that stage.",
+    unverifiedNotice: "This station's content is general Ceylon tea process knowledge and hasn't been confirmed against this factory's actual process yet.",
+    loadingVirtualTour: "Loading virtual tour — this can take a few seconds…",
+    draftLabel: "Draft",
+    qrSheetTitle: "Station QR Codes",
+    qrSheetSubtitle: "Print this page, cut out each card, and place it at the matching stage.",
+    printButton: "Print",
+    backToApp: "Back to app",
+    contactUs: "Contact Us",
+    followUs: "Follow Us",
+    staffPrintQr: "Staff: print station QR codes",
+  },
+  zh: {
+    tagline: "体验从茶叶到茶杯的制茶艺术",
+    selectLanguage: "选择语言",
+    startTour: "开始参观",
+    allStations: "参观站点",
+    backToStations: "返回所有站点",
+    stationOf: "第 {current} 站，共 {total} 站",
+    keyPoints: "重要性",
+    duration: "时间",
+    scanQrHint: "扫描每个站点的二维码，直接跳转到该阶段。",
+    unverifiedNotice: "此站点的内容为一般性锡兰茶工艺知识，尚未与本工厂的实际流程核实。",
+    loadingVirtualTour: "正在加载虚拟参观——这可能需要几秒钟…",
+    draftLabel: "草稿",
+    qrSheetTitle: "站点二维码",
+    qrSheetSubtitle: "打印此页面，剪下每张卡片，并将其放置在对应的阶段。",
+    printButton: "打印",
+    backToApp: "返回应用",
+    contactUs: "联系我们",
+    followUs: "关注我们",
+    staffPrintQr: "员工专用：打印站点二维码",
+  },
+  ja: {
+    tagline: "茶葉からカップまで、紅茶製造の芸術を体験してください",
+    selectLanguage: "言語を選択",
+    startTour: "ツアーを開始",
+    allStations: "ツアーステーション",
+    backToStations: "すべてのステーションに戻る",
+    stationOf: "ステーション {current} / {total}",
+    keyPoints: "重要性",
+    duration: "所要時間",
+    scanQrHint: "各ステーションのQRコードをスキャンすると、そのステージに直接移動できます。",
+    unverifiedNotice: "このステーションの内容は一般的なセイロン紅茶の製造工程に関する知識であり、この工場の実際の工程で確認されたものではありません。",
+    loadingVirtualTour: "バーチャルツアーを読み込み中です——数秒かかる場合があります…",
+    draftLabel: "下書き",
+    qrSheetTitle: "ステーションQRコード",
+    qrSheetSubtitle: "このページを印刷し、各カードを切り取って対応するステージに設置してください。",
+    printButton: "印刷",
+    backToApp: "アプリに戻る",
+    contactUs: "お問い合わせ",
+    followUs: "フォローする",
+    staffPrintQr: "スタッフ用：ステーションQRコードを印刷",
+  },
+  es: {
+    tagline: "Experimente el arte de la producción de té, de la hoja a la taza",
+    selectLanguage: "Seleccionar Idioma",
+    startTour: "Iniciar el Recorrido",
+    allStations: "Estaciones del Recorrido",
+    backToStations: "Volver a todas las estaciones",
+    stationOf: "Estación {current} de {total}",
+    keyPoints: "Importancia",
+    duration: "Duración",
+    scanQrHint: "Escanee el código QR en cada estación para ir directamente a esa etapa.",
+    unverifiedNotice: "El contenido de esta estación es conocimiento general sobre el proceso del té de Ceilán y aún no ha sido confirmado con el proceso real de esta fábrica.",
+    loadingVirtualTour: "Cargando el tour virtual — esto puede tardar unos segundos…",
+    draftLabel: "Borrador",
+    qrSheetTitle: "Códigos QR de las Estaciones",
+    qrSheetSubtitle: "Imprima esta página, recorte cada tarjeta y colóquela en la etapa correspondiente.",
+    printButton: "Imprimir",
+    backToApp: "Volver a la aplicación",
+    contactUs: "Contáctenos",
+    followUs: "Síganos",
+    staffPrintQr: "Personal: imprimir códigos QR de las estaciones",
+  },
+  fr: {
+    tagline: "Découvrez l'art de la production de thé, de la feuille à la tasse",
+    selectLanguage: "Sélectionner la Langue",
+    startTour: "Commencer la Visite",
+    allStations: "Stations de la Visite",
+    backToStations: "Retour à toutes les stations",
+    stationOf: "Station {current} sur {total}",
+    keyPoints: "Importance",
+    duration: "Durée",
+    scanQrHint: "Scannez le code QR à chaque station pour accéder directement à cette étape.",
+    unverifiedNotice: "Le contenu de cette station est une connaissance générale du processus du thé de Ceylan et n'a pas encore été confirmé par rapport au processus réel de cette usine.",
+    loadingVirtualTour: "Chargement de la visite virtuelle — cela peut prendre quelques secondes…",
+    draftLabel: "Brouillon",
+    qrSheetTitle: "Codes QR des Stations",
+    qrSheetSubtitle: "Imprimez cette page, découpez chaque carte et placez-la à l'étape correspondante.",
+    printButton: "Imprimer",
+    backToApp: "Retour à l'application",
+    contactUs: "Contactez-nous",
+    followUs: "Suivez-nous",
+    staffPrintQr: "Personnel : imprimer les codes QR des stations",
+  },
+  ru: {
+    tagline: "Познакомьтесь с искусством производства чая от листа до чашки",
+    selectLanguage: "Выбрать язык",
+    startTour: "Начать тур",
+    allStations: "Станции тура",
+    backToStations: "Назад ко всем станциям",
+    stationOf: "Станция {current} из {total}",
+    keyPoints: "Важность",
+    duration: "Время",
+    scanQrHint: "Отсканируйте QR-код на каждой станции, чтобы перейти прямо к этому этапу.",
+    unverifiedNotice: "Содержание этой станции представляет собой общие сведения о процессе производства цейлонского чая и пока не подтверждено в соответствии с реальным процессом на этой фабрике.",
+    loadingVirtualTour: "Загрузка виртуального тура — это может занять несколько секунд…",
+    draftLabel: "Черновик",
+    qrSheetTitle: "QR-коды станций",
+    qrSheetSubtitle: "Распечатайте эту страницу, вырежьте каждую карточку и разместите её на соответствующем этапе.",
+    printButton: "Печать",
+    backToApp: "Назад в приложение",
+    contactUs: "Связаться с нами",
+    followUs: "Подписывайтесь на нас",
+    staffPrintQr: "Для персонала: печать QR-кодов станций",
+  },
+  si: {
+    tagline: "තේ දලුවේ සිට කෝප්පය දක්වා තේ නිෂ්පාදන කලාව අත්විඳින්න",
+    selectLanguage: "භාෂාව තෝරන්න",
+    startTour: "චාරිකාව ආරම්භ කරන්න",
+    allStations: "චාරිකා ස්ථාන",
+    backToStations: "සියලුම ස්ථාන වෙත ආපසු",
+    stationOf: "ස්ථානය {current} න් {total}",
+    keyPoints: "වැදගත්කම",
+    duration: "කාලය",
+    scanQrHint: "එම අදියරට කෙලින්ම යාමට එක් එක් ස්ථානයේ QR කේතය ස්කෑන් කරන්න.",
+    unverifiedNotice: "මෙම ස්ථානයේ අන්තර්ගතය සාමාන්‍ය ලංකා තේ ක්‍රියාවලිය පිළිබඳ දැනුමක් වන අතර, එය මෙම කර්මාන්තශාලාවේ සත්‍ය ක්‍රියාවලිය සමඟ තවම තහවුරු කර නොමැත.",
+    loadingVirtualTour: "මාර්ගගත චාරිකාව පූරණය වෙමින්—මෙයට තත්පර කිහිපයක් ගතවිය හැක…",
+    draftLabel: "කෙටුම්පත",
+    qrSheetTitle: "ස්ථාන QR කේත",
+    qrSheetSubtitle: "මෙම පිටුව මුද්‍රණය කර, එක් එක් කාඩ්පත කපා, අදාළ අදියරේ තබන්න.",
+    printButton: "මුද්‍රණය",
+    backToApp: "යෙදුමට ආපසු",
+    contactUs: "අප අමතන්න",
+    followUs: "අප අනුගමනය කරන්න",
+    staffPrintQr: "කාර්ය මණ්ඩලය සඳහා: ස්ථාන QR කේත මුද්‍රණය කරන්න",
+  },
+  ar: {
+    tagline: "اختبر فن إنتاج الشاي من الورقة إلى الكوب",
+    selectLanguage: "اختر اللغة",
+    startTour: "ابدأ الجولة",
+    allStations: "محطات الجولة",
+    backToStations: "العودة إلى جميع المحطات",
+    stationOf: "المحطة {current} من {total}",
+    keyPoints: "الأهمية",
+    duration: "التوقيت",
+    scanQrHint: "امسح رمز QR في كل محطة للانتقال مباشرة إلى تلك المرحلة.",
+    unverifiedNotice: "محتوى هذه المحطة هو معرفة عامة بعملية إنتاج شاي سيلان ولم يتم بعد التحقق منه مقارنة بالعملية الفعلية لهذا المصنع.",
+    loadingVirtualTour: "جارٍ تحميل الجولة الافتراضية — قد يستغرق ذلك بضع ثوانٍ…",
+    draftLabel: "مسودة",
+    qrSheetTitle: "رموز QR للمحطات",
+    qrSheetSubtitle: "اطبع هذه الصفحة، وقص كل بطاقة، وضعها في المرحلة المطابقة.",
+    printButton: "طباعة",
+    backToApp: "العودة إلى التطبيق",
+    contactUs: "اتصل بنا",
+    followUs: "تابعنا",
+    staffPrintQr: "للموظفين: طباعة رموز QR للمحطات",
+  },
+  it: {
+    tagline: "Scopri l'arte della produzione del tè dalla foglia alla tazzina",
+    selectLanguage: "Seleziona Lingua",
+    startTour: "Inizia il Tour",
+    allStations: "Stazioni del Tour",
+    backToStations: "Torna a tutte le stazioni",
+    stationOf: "Stazione {current} di {total}",
+    keyPoints: "Importanza",
+    duration: "Tempistica",
+    scanQrHint: "Scansiona il codice QR di ogni stazione per passare direttamente a quella fase.",
+    unverifiedNotice: "Il contenuto di questa stazione è una conoscenza generale del processo del tè di Ceylon e non è ancora stato confermato rispetto al processo reale di questa fabbrica.",
+    loadingVirtualTour: "Caricamento del tour virtuale in corso — potrebbe richiedere alcuni secondi…",
+    draftLabel: "Bozza",
+    qrSheetTitle: "Codici QR delle Stazioni",
+    qrSheetSubtitle: "Stampa questa pagina, ritaglia ogni scheda e posizionala nella fase corrispondente.",
+    printButton: "Stampa",
+    backToApp: "Torna all'app",
+    contactUs: "Contattaci",
+    followUs: "Seguici",
+    staffPrintQr: "Personale: stampa i codici QR delle stazioni",
+  },
+  de: {
+    tagline: "Erleben Sie die Kunst der Tee-Produktion vom Blatt bis zur Tasse",
+    selectLanguage: "Sprache wählen",
+    startTour: "Tour starten",
+    allStations: "Tour-Stationen",
+    backToStations: "Zurück zu allen Stationen",
+    stationOf: "Station {current} von {total}",
+    keyPoints: "Wichtigkeit",
+    duration: "Zeitpunkt",
+    scanQrHint: "Scannen Sie den QR-Code an jeder Station, um direkt zu dieser Phase zu springen.",
+    unverifiedNotice: "Der Inhalt dieser Station ist allgemeines Wissen über den Ceylon-Tee-Prozess und wurde noch nicht mit dem tatsächlichen Prozess dieser Fabrik abgeglichen.",
+    loadingVirtualTour: "Virtuelle Tour wird geladen — dies kann einige Sekunden dauern…",
+    draftLabel: "Entwurf",
+    qrSheetTitle: "Stations-QR-Codes",
+    qrSheetSubtitle: "Drucken Sie diese Seite aus, schneiden Sie jede Karte aus und platzieren Sie sie an der passenden Station.",
+    printButton: "Drucken",
+    backToApp: "Zurück zur App",
+    contactUs: "Kontaktieren Sie uns",
+    followUs: "Folgen Sie uns",
+    staffPrintQr: "Personal: Stations-QR-Codes drucken",
+  },
+  ta: {
+    tagline: "இலையிலிருந்து கோப்பை வரை தேயிலை உற்பத்தியின் கலையை அனுபவியுங்கள்",
+    selectLanguage: "மொழியைத் தேர்ந்தெடுக்கவும்",
+    startTour: "சுற்றுலாவைத் தொடங்கவும்",
+    allStations: "சுற்றுலா நிலையங்கள்",
+    backToStations: "அனைத்து நிலையங்களுக்கும் திரும்பு",
+    stationOf: "நிலையம் {current} / {total}",
+    keyPoints: "முக்கியத்துவம்",
+    duration: "நேரம்",
+    scanQrHint: "அந்த கட்டத்திற்கு நேரடியாகச் செல்ல ஒவ்வொரு நிலையத்திலும் உள்ள QR குறியீட்டை ஸ்கேன் செய்யவும்.",
+    unverifiedNotice: "இந்த நிலையத்தின் உள்ளடக்கம் பொதுவான இலங்கை தேயிலை செயல்முறை பற்றிய அறிவாகும், இது இந்த தொழிற்சாலையின் உண்மையான செயல்முறையுடன் இன்னும் உறுதிப்படுத்தப்படவில்லை.",
+    loadingVirtualTour: "மெய்நிகர் பயணம் ஏற்றப்படுகிறது — இதற்கு சில வினாடிகள் ஆகலாம்…",
+    draftLabel: "வரைவு",
+    qrSheetTitle: "நிலைய QR குறியீடுகள்",
+    qrSheetSubtitle: "இந்தப் பக்கத்தை அச்சிட்டு, ஒவ்வொரு அட்டையையும் வெட்டி, பொருந்தும் கட்டத்தில் வைக்கவும்.",
+    printButton: "அச்சிடு",
+    backToApp: "பயன்பாட்டிற்குத் திரும்பு",
+    contactUs: "எங்களைத் தொடர்பு கொள்ளவும்",
+    followUs: "எங்களைப் பின்தொடரவும்",
+    staffPrintQr: "பணியாளர்கள்: நிலைய QR குறியீடுகளை அச்சிடவும்",
+  },
+};
+
+export const UI_STRINGS: Record<LanguageCode, UIStrings> = Object.fromEntries(
+  (Object.keys(VERIFIED) as LanguageCode[]).map((lang) => [
+    lang,
+    {
+      ...APP_UI[lang],
+      ...VERIFIED[lang],
+      // Matches the live site's own behavior: it never translates this suffix either.
+      footer: `© 2026 ${VERIFIED[lang].appTitle}. All rights reserved.`,
+    },
+  ])
+) as Record<LanguageCode, UIStrings>;
+
+export function t(lang: LanguageCode, key: keyof UIStrings): string {
+  return UI_STRINGS[lang]?.[key] ?? UI_STRINGS.en[key] ?? String(key);
+}
