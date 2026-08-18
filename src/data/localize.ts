@@ -1,0 +1,23 @@
+import type { LanguageCode } from "../i18n/languages";
+import type { Station } from "./stations";
+import { STATION_TRANSLATIONS } from "./translations";
+
+/** Returns `station` with any text fields swapped for the given language's translation, where one exists. */
+export function localizeStation(station: Station, lang: LanguageCode): Station {
+  const tr = STATION_TRANSLATIONS[station.id]?.[lang];
+  if (!tr) return station;
+
+  return {
+    ...station,
+    name: tr.name ?? station.name,
+    heroTagline: tr.heroTagline ?? station.heroTagline,
+    description: tr.description ?? station.description,
+    keyPoints: tr.keyPoints ?? station.keyPoints,
+    duration: tr.duration ?? station.duration,
+    sections: station.sections?.map((section, i) => ({
+      ...section,
+      heading: tr.sectionHeadings?.[i] ?? section.heading,
+      body: tr.sectionBodies?.[i] ?? section.body,
+    })),
+  };
+}
