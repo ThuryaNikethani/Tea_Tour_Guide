@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback: QR codes point straight at deep routes like /station/nursery,
+# so a direct hit or page refresh on those has to still serve index.html
+# and let react-router take over, instead of 404ing.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
