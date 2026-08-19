@@ -1,34 +1,24 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, ExternalLink, Languages, Printer } from "lucide-react";
+import { ChevronDown, Languages, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { LANGUAGES } from "../i18n/languages";
 import { STATIONS } from "../data/stations";
 import logo from "../assets/brand/athu-BZCrr7Wr.png";
 
+const NAV_LINKS: Array<{ to: string; key: "startTour" | "allStations" | "contactUs" }> = [
+  { to: `/station/${STATIONS[0].id}`, key: "startTour" },
+  { to: "/#stations", key: "allStations" },
+  { to: "/#contact", key: "contactUs" },
+];
+
 export function Header() {
   const { t } = useLanguage();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div className="sticky top-0 z-20 print:hidden">
-      <div className="bg-tea-950 text-gold-300 text-[11px]">
-        <div className="max-w-5xl mx-auto px-4 py-1.5 flex items-center justify-between tracking-wide">
-          <a
-            href="https://www.facebook.com/athukorala.tea.1/"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors"
-          >
-            <ExternalLink size={11} />
-            Facebook
-          </a>
-          <span className="font-medium uppercase tracking-[0.15em]">{t("tagline")}</span>
-          <Link to="/qr-codes" className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors">
-            <Printer size={11} />
-            {t("staffPrintQr")}
-          </Link>
-        </div>
-      </div>
+      <div className="bg-tea-950 h-2" />
 
       <header className="bg-white border-b border-gold-500/30">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -36,19 +26,41 @@ export function Header() {
             <img src={logo} alt="" className="w-10 h-10 rounded-full object-contain" />
             <span className="font-heading font-semibold text-xl text-tea-900">{t("appTitle")}</span>
           </Link>
-          <div className="hidden md:flex items-center gap-6 text-xs font-semibold uppercase tracking-[0.12em] text-tea-700">
-            <Link to={`/station/${STATIONS[0].id}`} className="hover:text-gold-600 transition-colors">
-              {t("startTour")}
-            </Link>
-            <Link to="/#stations" className="hover:text-gold-600 transition-colors">
-              {t("allStations")}
-            </Link>
-            <Link to="/#contact" className="hover:text-gold-600 transition-colors">
-              {t("contactUs")}
-            </Link>
+          <div className="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-[0.12em] text-tea-700">
+            {NAV_LINKS.map(({ to, key }) => (
+              <Link key={key} to={to} className="hover:text-gold-600 transition-colors">
+                {t(key)}
+              </Link>
+            ))}
           </div>
-          <LanguageDropdown />
+          <div className="flex items-center gap-2">
+            <LanguageDropdown />
+            <button
+              type="button"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen((v) => !v)}
+              className="md:hidden flex items-center justify-center w-9 h-9 border border-gold-500/50 text-tea-900"
+            >
+              {mobileOpen ? <X size={16} /> : <Menu size={16} />}
+            </button>
+          </div>
         </div>
+
+        {mobileOpen && (
+          <div className="md:hidden border-t border-gold-500/20 px-4 py-3 flex flex-col gap-1 text-sm font-semibold uppercase tracking-[0.1em] text-tea-700">
+            {NAV_LINKS.map(({ to, key }) => (
+              <Link
+                key={key}
+                to={to}
+                onClick={() => setMobileOpen(false)}
+                className="py-2.5 border-b border-tea-100 last:border-b-0 hover:text-gold-600 transition-colors"
+              >
+                {t(key)}
+              </Link>
+            ))}
+          </div>
+        )}
       </header>
     </div>
   );
