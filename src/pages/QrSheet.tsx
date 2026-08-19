@@ -17,11 +17,11 @@ export function QrSheet() {
   const printedOn = new Intl.DateTimeFormat(language, { dateStyle: "long" }).format(new Date());
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 print:max-w-none print:px-6 print:py-6">
+    <div className="max-w-5xl mx-auto px-4 py-6 print:max-w-none print:px-6 print:py-6">
       {/* Screen-only controls */}
       <div className="flex items-center justify-between mb-6 print:hidden">
         <div>
-          <h1 className="font-display text-2xl text-tea-900">{t("qrSheetTitle")}</h1>
+          <h1 className="font-heading font-semibold text-2xl text-tea-900">{t("qrSheetTitle")}</h1>
           <p className="text-tea-600 text-sm">{t("qrSheetSubtitle")}</p>
         </div>
         <button
@@ -38,7 +38,7 @@ export function QrSheet() {
       <div className="hidden print:flex items-center gap-3 border-b-2 border-tea-900 pb-4 mb-6">
         <img src={logo} alt="" className="w-10 h-10 rounded-full object-contain" />
         <div>
-          <p className="font-display text-lg text-tea-900 leading-tight">{t("appTitle")}</p>
+          <p className="font-heading font-semibold text-lg text-tea-900 leading-tight">{t("appTitle")}</p>
           <p className="text-tea-500 text-xs">
             {t("qrSheetTitle")} · {printedOn}
           </p>
@@ -52,7 +52,7 @@ export function QrSheet() {
           return (
             <div
               key={station.id}
-              className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-tea-300 rounded-2xl p-6 print:break-inside-avoid print:border-tea-400"
+              className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-tea-300 rounded-md p-6 print:break-inside-avoid print:border-tea-400"
             >
               <Scissors
                 size={14}
@@ -75,7 +75,7 @@ export function QrSheet() {
                 )}
               </div>
 
-              <h2 className="font-display text-xl text-tea-900 text-center">{localized.name}</h2>
+              <h2 className="font-heading font-semibold text-xl text-tea-900 text-center">{localized.name}</h2>
 
               <div className="p-3 bg-white rounded-xl border border-tea-100 shadow-sm">
                 <QRCodeSVG
