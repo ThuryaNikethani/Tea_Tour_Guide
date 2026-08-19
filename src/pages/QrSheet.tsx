@@ -69,7 +69,7 @@ export function QrSheet() {
                 {station.verified ? (
                   <CheckCircle2 size={14} className="text-tea-600" />
                 ) : (
-                  <span className="text-[10px] uppercase tracking-wide text-amber-600 bg-amber-50 border border-amber-200 rounded-full px-2 py-0.5">
+                  <span className="text-[10px] uppercase tracking-wide text-brass-600 bg-brass-300/15 border border-brass-300/50 rounded-full px-2 py-0.5">
                     {t("draftLabel")}
                   </span>
                 )}
