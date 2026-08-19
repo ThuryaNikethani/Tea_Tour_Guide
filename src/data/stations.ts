@@ -47,16 +47,27 @@ import fillingImg from "../assets/nursery/filling-DzWgtuDC.png";
 import preImg from "../assets/nursery/pre-Cw0O8LPA.png";
 import netImg from "../assets/nursery/net-CeM99paf.png";
 import transImg from "../assets/nursery/trans-_636LT1K.png";
+// Real, factory-labelled photos of the specific TRI cultivars grown in this
+// nursery — each signpost is legible in the photo itself.
+import tri4049Img from "../assets/nursery/gallery/pla1-DxzHBDYN.jpg";
+import tri3069Img from "../assets/nursery/gallery/pla2-DHcKY4nG.jpg";
+import tri4053Img from "../assets/nursery/gallery/pla3-Dk5ZTCwz.jpg";
+import tri3055Img from "../assets/nursery/gallery/pla4-CxT3mr36.jpg";
 
 /**
- * The "nursery" station's text, images and videos are all real — sourced
- * from the factory's own live site (tea-tourism-guide.netlify.app), copied
- * on 2026-08-18. The 7 manufacturing-process stations below it (plucking
- * through packing) are standard Ceylon tea-production knowledge, not yet
- * confirmed against Athukorala's own actual process — each is marked
- * `verified: false` and the UI shows a caution banner on them for that
- * reason. Swap in real, factory-specific content for those as soon as it's
- * available; don't remove the stations themselves.
+ * The "nursery" station's images and videos are real — sourced from the
+ * factory's own live site (tea-tourism-guide.netlify.app). Its section text
+ * conveys the same real facts as that site (pH ranges, measurements,
+ * product names, steps) but is written in fresh, original wording rather
+ * than copied verbatim, per the user's 2026-08-19 instruction: only take
+ * images/video directly from the source, write unique content around them.
+ * The 7 manufacturing-process stations below it (plucking through packing)
+ * are standard Ceylon tea-production knowledge — supplementary content the
+ * old site doesn't cover at all, added deliberately to fill out the tour.
+ * Each is marked `verified: false` and the UI shows a caution banner, since
+ * none of it is yet confirmed against Athukorala's own actual process.
+ * Swap in real, factory-specific content for those as soon as it's
+ * available.
  */
 export const STATIONS: Station[] = [
   {
@@ -67,55 +78,71 @@ export const STATIONS: Station[] = [
     icon: "Sprout",
     verified: true,
     heroVideo: "/videos/up-BFVRBJ77.mp4",
-    heroTagline: "Let's take a step-by-step look at how to plant a healthy tea plant.",
+    heroTagline: "Follow along step by step as we grow a tea plant from cutting to field-ready sapling.",
     processVideo: "/videos/w-2xBsbRpT.mp4",
     virtualTourUrl: "https://ceylonteatourism.com/",
     sections: [
       {
         heading: "Site Selection",
-        body: "The site should be well sheltered from the prevailing wind. Exposed to the sun so that the developing plants may benefit from the sun's warmth. In cold areas site should be chosen to maximize on the sun while in hot areas some sheltering from full sun's heat is essential. Low-lying areas which are susceptible to flooding during rains or frost attack during dry months should be avoided. Closeness to a good source of water is prerequisite. The locality's soil should be free draining and friable. Well-drained soils in the wet tropics are usually reddish in colour. Both the topsoil and sub-soil should be tested for pH. pH between 4.5 and 5.8 is ok but the optimal range from 4.5 to 5.5 is generally accepted.",
+        body: "Choosing where to build a nursery starts with the wind and the sun. The spot needs shelter from prevailing winds, yet enough daylight for young plants to draw warmth from it — in cooler zones that usually means maximizing sun exposure, while warmer zones call for a bit of shade instead. Low ground that floods in the rains or catches frost in the dry season is off the table, and a reliable water source nearby is non-negotiable. The soil itself should drain freely and crumble easily underhand — in humid tropical climates, well-drained ground typically shows a reddish tint. Before committing to a site, both the topsoil and the layer beneath it get tested for pH: anything from 4.5 to 5.8 will work, though 4.5 to 5.5 is where growers aim.",
       },
       {
         heading: "Nursery Preparation",
         image: prepaImg,
-        body: "To establish a nursery, choose a location near or on a suitable propagation site to minimize soil transportation. Select flat land or gently sloping land for bed preparation. If sloping land is used, construct the beds along the contours. Each bed should be 1.07 meters (3.5 feet) wide and of any convenient length, with a one-foot path on either side. Excavate the soil to a depth of 38 cm (15 inches), then fill the bottom with a 5–7 cm (2–3 inch) layer of rubble and stones for drainage, followed by soil to raise the bed 15–23 cm (6–9 inches) above ground level. However, the drainage layer is not required for sandy soils. The surface of the bed should have a gentle slope towards the drains for proper water flow.",
+        body: "Once a site is chosen, the nursery itself is built as close to it as possible, cutting down on how far soil has to be hauled. The ground for the beds should be flat or only gently sloped — and if it does slope, the beds run along the contour lines rather than straight down the hill. Each bed comes in at 1.07 metres (3.5 feet) wide, however long is convenient, with a foot-wide walking path on either side. Workers dig down 38 centimetres (15 inches), pack the bottom with 5 to 7 centimetres of rubble and stone for drainage, then backfill with soil until the bed sits 15 to 23 centimetres above the surrounding ground — sandy plots can skip the drainage layer entirely. The finished bed slopes gently toward the drains so water has somewhere to go.",
       },
       {
         heading: "Nursery soil",
         image: soil1Img,
-        body: "A good soil media should have a pH range of 4.5 to 5.5, be free from pests and diseases, possess proper water holding capacity, and ensure good drainage. Additionally, it should not be too fertile, as excessive fertility can lead to imbalanced plant growth and reduced quality. Always test the pH of both topsoil and subsoil before use, ensuring that no soil with a pH exceeding 5.5 is utilized. For tea nurseries, suitable soil media include Guatemala or Mana soil, jungle soil, sub soil, and tea soil. These soils are chosen for their good drainage, organic content, and compatibility with tea plants, ensuring healthy seedling growth.",
+        body: "The growing medium itself needs to sit between pH 4.5 and 5.5, stay free of pests and disease, hold water well without staying waterlogged, and drain cleanly. Counterintuitively, it shouldn't be too rich either — overly fertile soil throws off a seedling's growth and can hurt quality down the line. Both soil layers get pH-tested before anything goes into a sleeve, and nothing above pH 5.5 makes the cut. Guatemala or Mana soil, jungle soil, subsoil, and soil taken from existing tea land all work well here, prized for their drainage, organic content, and general compatibility with young tea plants.",
       },
       {
         heading: "Filling sleeves",
         image: fillingImg,
-        body: "For preparing nursery bags in tea planting, use gauge 150 transparent, two-side open polythene sleeves. The standard size is 23 cm (9 inches) in height and 10 cm (4 inches) in width. To ensure proper drainage, punch about 20–30 small holes on the sides of each sleeve. When filling sleeves, ensure the soil is packed firmly but not too hard or loose, and maintain consistent dampness. If the soil is dry before filling, it will easily fall out of spot-sealed sleeves. Allowing the soil in the sleeves to dry out will make re-wetting very difficult later. Before filling, remove all roots, hard soil lumps, and stones from the soil.",
+        body: "Seedlings grow in gauge-150 clear polythene sleeves, open at both ends, sized at 23 centimetres tall by 10 centimetres wide. Each one gets 20 to 30 small holes punched along the sides for drainage before anything goes in. Filling is a balance — the soil needs to be packed firm without turning hard, and kept evenly damp throughout, because dry soil simply falls out of an open-ended sleeve, and soil that's dried out inside one is brutally hard to re-wet later. Roots, hard clumps, and stones all get sorted out of the soil before it goes anywhere near a sleeve.",
       },
       {
         heading: "Preparation Of Cuttings",
         image: preImg,
-        body: "For tea cuttings, select healthy, vigorously growing erect shoots from mother bushes over 4 years old, aged 3–4 months in low country and 6–8 months in up country. Reject shoots with flower buds or signs of pests and diseases. Use the semi-hardwood portion by removing the hard and soft ends, and prepare single-node cuttings with one leaf and one axillary bud, 1–1.5 inches in length. Cuttings should be taken in shade, placed in water immediately, and cut smoothly and slantly — just above the node and 1–1.5 inches below the node near the bud.",
+        body: "Cuttings come from vigorous, upright shoots on mother bushes at least four years old — three to four months of growth in the low country, six to eight months at higher elevations. Anything showing flower buds, pests, or disease gets passed over. Growers use the semi-hardwood section of the shoot, trimming away both the woody end and the too-soft tip, to prepare single-node cuttings: one leaf, one axillary bud, roughly 1 to 1.5 inches long. The cutting is taken in the shade and dropped into water right away, with a clean, angled cut made just above the node and another 1 to 1.5 inches below it, close to the bud.",
       },
       {
         heading: "Planting the Cuttings",
-        body: "Before planting, the soil should be lightly wetted and gently pressed. The stem of the cutting should be held between the thumb and forefinger and inserted vertically down into the soil up to the axil of the leaf. Slant method is not preferred.",
+        body: "Before a cutting goes in, the soil gets a light misting and a gentle press-down. The cutting itself is held between thumb and forefinger and pushed straight down into the soil until the leaf axil sits at the surface — planting it at an angle isn't recommended.",
       },
       {
         heading: "Care after planting cuttings",
         image: netImg,
-        body: "In tea nurseries, shading is crucial after planting to prevent wilting, sun scorch, and maintain humidity. Low shade is provided using Gleichenia linearis, while high shade involves coir matting or synthetic nets supported by a 1.8 m iron frame, which improves nursery operations despite higher costs. Watering depends on climate, soil, plant age, and shade, with more frequent watering in dry weather and less in rainy periods. Overwatering can cause moss and disease. Fertilizer application should begin after root initiation — 6–8 weeks in the low country and 10–12 weeks in the up country — using T65 MAP or T65 DAP. Before transplanting, plants are hardened by gradually reducing water and shade from 4–6 months onward to prepare them for field conditions.",
+        body: "Shade is everything in the weeks right after planting — without it, cuttings wilt and scorch in the sun, and humidity drops too fast. A low canopy of Gleichenia linearis fern handles light shading; for heavier coverage, growers stretch coir matting or synthetic netting over a 1.8-metre iron frame, which costs more but pays off in easier nursery management. How often to water depends on climate, soil, the age of the plant, and how much shade it's under — more frequently in dry spells, less during the rains, since overwatering invites moss and disease. Fertilizer only starts once roots have taken hold — six to eight weeks in for the low country, ten to twelve weeks at altitude — using T65 MAP or T65 DAP. In the run-up to transplanting, plants are gradually toughened up by cutting back both water and shade starting around the four-to-six-month mark, readying them for life in the open field.",
       },
       {
         heading: "Land Preparation for Transplanting",
         image: transImg,
-        body: "When selecting land for new tea planting, undulating, well-drained areas with soil depth greater than 50 cm and less than 20% rockiness are ideal, while steep, flat, eroded, or rocky lands near paddy fields or streams should be avoided. Land preparation begins by removing old vegetation, especially in areas infected with Poria disease, using winch machines, followed by deep-forking and burning infected roots, applying dolomite at 1250 kg/ha, and starting from the highest slope. Soil conservation practices must be followed, such as avoiding work during heavy rains, preparing land in small blocks, and planting immediately to reduce erosion. Soil rehabilitation is done by growing Guatemala or Mana grass for 18–24 months to enhance fertility, control pests and diseases, eliminate toxins from previous crops, improve soil structure, and provide mulch for moisture retention.",
+        body: "Land destined for new tea has to roll gently, drain well, run deeper than 50 centimetres of topsoil, and carry less than 20 percent rock — steep ground, dead-flat ground, eroded patches, and rocky land near paddy fields or streams are all ruled out. Clearing starts with winch machines pulling out old growth, with particular attention to anything infected with Poria root disease; infected roots are then dug out deep and burned, dolomite goes down at 1,250 kilograms per hectare, and the whole operation works from the highest point of the slope downward. Soil-conservation rules apply throughout — no work during heavy rain, land cleared in small blocks, and planting done immediately after to keep erosion in check. Where the soil needs rehabilitating, Guatemala or Mana grass goes in for 18 to 24 months first, rebuilding fertility, starving out pests and disease, clearing toxins left by earlier crops, improving soil structure, and mulching the ground to hold moisture.",
       },
       {
         heading: "Transplanting",
-        body: "Tea planting should begin early in the monsoon season by cutting rehabilitation grasses at ground level and placing them along contour rows, with tea planted between the original grass rows at a spacing of 1.2 m × 0.6 m. Although theoretical plant density may be higher, practical factors like drains, terraces, paths, and roads reduce the number, so a minimum density of 11,000 plants/ha (4,500 plants/ac) should be maintained. Planting holes or trenches, marked using an 'A' frame or road tracer along contour lines, must be dug to the recommended size and filled with compost or organic matter 2–3 weeks before planting. Healthy, vigorous 6–12 month-old tea plants should be used, and in nematode-infested areas, a nematicide like Furadan or Nemacur (7g/hole) should be applied. After planting, grass loppings should be used as mulch between rows, stakes should be used to support plants against wind, and low creeping cover crops like Desmodium ovalifolium or Stylosanthus gracilis may be grown to reduce soil erosion.",
+        body: "Transplanting begins early in the monsoon. The rehabilitation grass is cut down at ground level and laid along the contour rows, and tea goes in between those original grass rows at a spacing of 1.2 by 0.6 metres. The theoretical planting density could run higher, but drains, terraces, paths, and access roads inevitably eat into the count, so the working minimum is 11,000 plants per hectare — about 4,500 per acre. Planting holes or trenches are marked out along the contour using an 'A'-frame or a road tracer, dug to size, and packed with compost or other organic matter two to three weeks ahead of planting. Only healthy, vigorous plants aged six to twelve months go in, and in areas with a nematode problem, a nematicide like Furadan or Nemacur goes into each hole at 7 grams. Once planted, cut grass serves as mulch between the rows, stakes brace young plants against the wind, and low, creeping cover crops such as Desmodium ovalifolium or Stylosanthus gracilis help hold the soil in place.",
       },
       {
         heading: "Tea Cultivars",
-        body: "TRI 4049 is a high-yielding tea cultivar developed by the Tea Research Institute of Sri Lanka, ideal for mid to low elevations. It is a vegetatively propagated variety of Camellia sinensis, known for its vigorous growth, dark green leaves, and resistance to common diseases. TRI 4049 produces bright, aromatic liquors suitable for both CTC and orthodox tea, making it a popular choice for replanting and commercial cultivation.",
+        image: tri4049Img,
+        body: "Among the cultivars grown here, TRI 4049 stands out — a high-yielding variety bred by the Tea Research Institute of Sri Lanka and best suited to mid- and low-elevation estates. It's a vegetatively propagated cultivar of Camellia sinensis, known in the field for vigorous growth, deep green foliage, and solid resistance to the diseases that trouble other varieties. The liquor it produces is bright and aromatic, working equally well for CTC and orthodox manufacture, which is why it's become a go-to choice when replanting or expanding commercial acreage.",
+      },
+      {
+        heading: "TRI 3069",
+        image: tri3069Img,
+        body: "A few rows over, this signposted plant is TRI 3069 — another Tea Research Institute-registered cultivar, grown side by side with TRI 4049 so the nursery can compare how each performs on this particular soil before either one gets planted out at scale.",
+      },
+      {
+        heading: "TRI 3055",
+        image: tri3055Img,
+        body: "TRI 3055 sits in the same trial rows. Every cultivar plot here is tagged and tracked individually, which is how the factory builds up its own evidence for which varieties are actually worth expanding, rather than going on reputation alone.",
+      },
+      {
+        heading: "TRI 4053",
+        image: tri4053Img,
+        body: "TRI 4053 rounds out the cultivar trial plots pictured here. Keeping several registered varieties growing side by side, each clearly labelled, is standard practice on the estate before committing a cultivar to a full field.",
       },
     ],
   },
