@@ -18,9 +18,12 @@ export default {
           950: "#122111",
         },
         gold: {
+          200: "#f0dfb0",
+          300: "#e8cd8f",
           400: "#d9b25f",
           500: "#c99a3d",
           600: "#ab7c2c",
+          700: "#8a611f",
         },
         // Aged-brass gold + heritage sage, paired with the tea green scale
         // above. No red/burgundy in the palette — green, white, gold only.
@@ -37,11 +40,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ["Merienda", "cursive"],
         body: ["Inter", "system-ui", "sans-serif"],
-        // "Estate Reserve" type pairing, for the new Home/Header identity.
-        editorial: ["Newsreader", "serif"],
-        modern: ["Archivo", "system-ui", "sans-serif"],
+        heading: ["Playfair Display", "Georgia", "serif"],
       },
     },
   },
