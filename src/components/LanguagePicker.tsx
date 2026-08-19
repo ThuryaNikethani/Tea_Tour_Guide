@@ -21,13 +21,13 @@ export function LanguagePicker({ onPick }: { onPick?: () => void }) {
             setLanguage(lang.code);
             onPick?.();
           }}
-          className="flex items-center justify-center gap-3 rounded-xl bg-white hover:bg-tea-50 shadow-sm px-4 py-4 transition-colors"
+          className="font-modern flex items-center justify-center gap-3 rounded-2xl bg-white hover:bg-brass-300/15 border border-transparent hover:border-brass-400 shadow-lg shadow-tea-950/20 px-4 py-4 transition-colors"
         >
           <span className="text-xl leading-none">{lang.flag}</span>
           <div className="text-center">
             <div className="text-tea-900 font-medium">{lang.nativeName}</div>
             {lang.nativeName !== lang.englishName && (
-              <div className="text-tea-500 text-sm">{lang.englishName}</div>
+              <div className="text-sage-600 text-sm">{lang.englishName}</div>
             )}
           </div>
         </motion.button>
