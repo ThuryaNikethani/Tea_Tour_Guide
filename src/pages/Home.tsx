@@ -59,6 +59,9 @@ const STATION_ICONS: Record<string, LucideIcon> = {
 export function Home() {
   const { t, language } = useLanguage();
   const totalMinutes = estimateTotalMinutes(STATIONS);
+  const nurseryStation = STATIONS[0];
+  const cultivarIndex = nurseryStation.sections?.findIndex((s) => s.heading === "Tea Cultivars") ?? -1;
+  const cultivarSection = cultivarIndex >= 0 ? localizeStation(nurseryStation, language).sections?.[cultivarIndex] : undefined;
 
   return (
     <div className="bg-white">
@@ -128,6 +131,32 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      {/* ---------- Story: second real, verified detail, alternating layout ---------- */}
+      {cultivarSection?.image && (
+        <section className="max-w-4xl mx-auto px-4 pt-8">
+          <div className="grid md:grid-cols-2 gap-0 border border-gold-500/30">
+            <div className="order-2 md:order-1 flex flex-col justify-center gap-3 p-8">
+              <div className="self-start">
+                <Flourish />
+              </div>
+              <h2 className="font-heading font-semibold text-2xl md:text-3xl text-tea-900">{cultivarSection.heading}</h2>
+              <p className="text-tea-600 leading-relaxed font-light">{cultivarSection.body}</p>
+              <Link
+                to={`/station/${nurseryStation.id}`}
+                className="inline-flex items-center gap-2 self-start border-b border-tea-900 text-tea-900 hover:text-gold-600 hover:border-gold-600 font-semibold text-xs uppercase tracking-[0.15em] pb-1 mt-3 transition-colors"
+              >
+                {t("startTour")}
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+            <div
+              className="order-1 md:order-2 h-64 md:h-auto bg-cover bg-center"
+              style={{ backgroundImage: `url(${cultivarSection.image})` }}
+            />
+          </div>
+        </section>
+      )}
 
       {/* ---------- Cultivar photo strip: real signposted plants from the nursery ---------- */}
       <section className="max-w-4xl mx-auto px-4 pt-8">
