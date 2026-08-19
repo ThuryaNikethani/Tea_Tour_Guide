@@ -1,18 +1,24 @@
 import { useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronLeft, Clock, LoaderCircle, Sparkles, TriangleAlert } from "lucide-react";
+import { Bookmark, ChevronLeft, Clock, LoaderCircle, Sparkles, TriangleAlert } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { useFavorites } from "../context/FavoritesContext";
 import { STATIONS, getStation } from "../data/stations";
 import { localizeStation } from "../data/localize";
+import { estimateStationMinutes } from "../data/estimateTime";
 
 export function StationDetail() {
   const { id } = useParams<{ id: string }>();
   const { t, language } = useLanguage();
+  const { isFavorite, toggleFavorite } = useFavorites();
   const rawStation = id ? getStation(id) : undefined;
   const station = rawStation ? localizeStation(rawStation, language) : undefined;
 
   if (!station) return <Navigate to="/" replace />;
+
+  const favorited = isFavorite(station.id);
+  const minutes = estimateStationMinutes(station);
 
   return (
     <div>
@@ -26,7 +32,7 @@ export function StationDetail() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4">
+          <div className="absolute inset-0 bg-tea-950/55 flex flex-col items-center justify-center text-center px-4">
             <h1 className="font-display text-3xl md:text-5xl text-white mb-3 drop-shadow-lg">{station.name}</h1>
             {station.heroTagline && (
               <p className="text-white/90 max-w-xl">{station.heroTagline}</p>
@@ -41,13 +47,29 @@ export function StationDetail() {
           {t("backToStations")}
         </Link>
 
-        <p className="text-gold-600 font-medium text-sm mb-1">
-          {t("stationOf").replace("{current}", String(station.order)).replace("{total}", String(STATIONS.length))}
-        </p>
+        <div className="flex items-center justify-between mb-1">
+          <p className="text-gold-600 font-medium text-sm">
+            {t("stationOf").replace("{current}", String(station.order)).replace("{total}", String(STATIONS.length))}
+          </p>
+          <div className="flex items-center gap-3">
+            <span className="flex items-center gap-1 text-tea-400 text-xs">
+              <Clock size={12} />
+              {t("minRead").replace("{minutes}", String(minutes))}
+            </span>
+            <button
+              type="button"
+              aria-label={favorited ? t("unsaveStation") : t("saveStation")}
+              onClick={() => toggleFavorite(station.id)}
+              className="flex items-center justify-center w-8 h-8 rounded-full text-tea-400 hover:text-gold-600 hover:bg-tea-50 transition-colors"
+            >
+              <Bookmark size={18} fill={favorited ? "currentColor" : "none"} className={favorited ? "text-gold-500" : ""} />
+            </button>
+          </div>
+        </div>
         {!station.heroVideo && <h1 className="font-display text-3xl text-tea-900 mb-4">{station.name}</h1>}
 
         {!station.verified && (
-          <div className="flex items-start gap-2 bg-amber-50 border border-amber-200 text-amber-800 rounded-xl px-4 py-3 text-sm mb-6">
+          <div className="flex items-start gap-2 bg-brass-300/15 border border-brass-300/50 text-brass-600 rounded-xl px-4 py-3 text-sm mb-6">
             <TriangleAlert size={16} className="mt-0.5 shrink-0" />
             <p>{t("unverifiedNotice")}</p>
           </div>
