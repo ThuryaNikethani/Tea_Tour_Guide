@@ -33,7 +33,7 @@ export function StationDetail() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-tea-950/55 flex flex-col items-center justify-center text-center px-4">
-            <h1 className="font-display text-3xl md:text-5xl text-white mb-3 drop-shadow-lg">{station.name}</h1>
+            <h1 className="font-heading font-semibold text-3xl md:text-5xl text-white mb-3 drop-shadow-lg">{station.name}</h1>
             {station.heroTagline && (
               <p className="text-white/90 max-w-xl">{station.heroTagline}</p>
             )}
@@ -41,7 +41,7 @@ export function StationDetail() {
         </div>
       )}
 
-      <div className="max-w-2xl mx-auto px-4 py-8">
+      <div className="max-w-2xl mx-auto px-4 py-6">
         <Link to="/" className="inline-flex items-center gap-1 text-tea-600 hover:text-tea-900 text-sm mb-6">
           <ChevronLeft size={16} />
           {t("backToStations")}
@@ -66,17 +66,17 @@ export function StationDetail() {
             </button>
           </div>
         </div>
-        {!station.heroVideo && <h1 className="font-display text-3xl text-tea-900 mb-4">{station.name}</h1>}
+        {!station.heroVideo && <h1 className="font-heading font-semibold text-3xl text-tea-900 mb-4">{station.name}</h1>}
 
         {!station.verified && (
-          <div className="flex items-start gap-2 bg-brass-300/15 border border-brass-300/50 text-brass-600 rounded-xl px-4 py-3 text-sm mb-6">
+          <div className="flex items-start gap-2 bg-brass-300/15 border border-brass-300/50 text-brass-600 rounded-md px-4 py-3 text-sm mb-6">
             <TriangleAlert size={16} className="mt-0.5 shrink-0" />
             <p>{t("unverifiedNotice")}</p>
           </div>
         )}
 
         {station.sections ? (
-          <div className="space-y-10">
+          <div className="space-y-7">
             {station.sections.map((section) => (
               <motion.section
                 key={section.heading}
@@ -90,10 +90,10 @@ export function StationDetail() {
                     src={section.image}
                     alt={section.heading}
                     loading="lazy"
-                    className="w-full h-56 object-cover rounded-2xl mb-4 shadow-sm"
+                    className="w-full h-56 object-cover rounded-md mb-3 shadow-sm"
                   />
                 )}
-                <h2 className="font-display text-xl text-tea-900 mb-2">{section.heading}</h2>
+                <h2 className="font-heading font-semibold text-xl text-tea-900 mb-2">{section.heading}</h2>
                 <p className="text-tea-800 leading-relaxed">{section.body}</p>
               </motion.section>
             ))}
@@ -101,15 +101,15 @@ export function StationDetail() {
         ) : (
           <>
             <p className="text-tea-800 leading-relaxed mb-6">{station.description}</p>
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              <div className="bg-tea-50 border border-tea-200 rounded-xl p-4">
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              <div className="bg-tea-50 border border-tea-200 rounded-md p-4">
                 <div className="flex items-center gap-1.5 text-tea-700 font-medium text-sm mb-1.5">
                   <Sparkles size={15} />
                   {t("keyPoints")}
                 </div>
                 <p className="text-tea-800 text-sm leading-relaxed">{station.keyPoints}</p>
               </div>
-              <div className="bg-tea-50 border border-tea-200 rounded-xl p-4">
+              <div className="bg-tea-50 border border-tea-200 rounded-md p-4">
                 <div className="flex items-center gap-1.5 text-tea-700 font-medium text-sm mb-1.5">
                   <Clock size={15} />
                   {t("duration")}
@@ -121,20 +121,20 @@ export function StationDetail() {
         )}
 
         {station.processVideo && (
-          <section className="mt-10">
-            <h2 className="font-display text-xl text-tea-900 mb-3">{t("watchProcess")}</h2>
+          <section className="mt-8">
+            <h2 className="font-heading font-semibold text-xl text-tea-900 mb-3">{t("watchProcess")}</h2>
             <video
               src={station.processVideo}
               controls
               preload="none"
-              className="w-full rounded-2xl shadow-sm"
+              className="w-full rounded-md shadow-sm"
             />
           </section>
         )}
 
         {station.virtualTourUrl && (
-          <section className="mt-10">
-            <h2 className="font-display text-xl text-tea-900 mb-3">{t("virtualTour")}</h2>
+          <section className="mt-8">
+            <h2 className="font-heading font-semibold text-xl text-tea-900 mb-3">{t("virtualTour")}</h2>
             <VirtualTourEmbed url={station.virtualTourUrl} title={t("virtualTour")} />
           </section>
         )}
@@ -149,7 +149,7 @@ function VirtualTourEmbed({ url, title }: { url: string; title: string }) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-sm border border-tea-200">
+    <div className="relative w-full h-80 rounded-md overflow-hidden shadow-sm border border-tea-200">
       {!loaded && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-tea-50 text-tea-500 text-sm">
           <LoaderCircle size={22} className="animate-spin" />
