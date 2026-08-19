@@ -24,6 +24,15 @@ export interface UIStrings {
   contactUs: string;
   followUs: string;
   staffPrintQr: string;
+  saveStation: string;
+  unsaveStation: string;
+  savedStations: string;
+  noSavedStations: string;
+  minRead: string; // e.g. "{minutes} min"
+  fullTourEstimate: string; // e.g. "About {minutes} min for the full tour"
+  statStations: string;
+  statFullTour: string;
+  statLanguages: string;
   footer: string;
 }
 
@@ -83,6 +92,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "Contact Us",
     followUs: "Follow Us",
     staffPrintQr: "Staff: print station QR codes",
+    saveStation: "Save station",
+    unsaveStation: "Remove from saved",
+    savedStations: "Saved Stations",
+    noSavedStations: "You haven't saved any stations yet. Tap the bookmark on a station to save it here.",
+    minRead: "{minutes} min",
+    fullTourEstimate: "About {minutes} min for the full tour",
+    statStations: "Stations",
+    statFullTour: "Full Tour",
+    statLanguages: "Languages",
   },
   zh: {
     tagline: "体验从茶叶到茶杯的制茶艺术",
@@ -104,6 +122,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "联系我们",
     followUs: "关注我们",
     staffPrintQr: "员工专用：打印站点二维码",
+    saveStation: "保存站点",
+    unsaveStation: "取消保存",
+    savedStations: "已保存的站点",
+    noSavedStations: "您还没有保存任何站点。点击站点上的书签图标即可保存。",
+    minRead: "{minutes} 分钟",
+    fullTourEstimate: "完整参观大约需要 {minutes} 分钟",
+    statStations: "站点",
+    statFullTour: "完整参观",
+    statLanguages: "语言",
   },
   ja: {
     tagline: "茶葉からカップまで、紅茶製造の芸術を体験してください",
@@ -125,6 +152,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "お問い合わせ",
     followUs: "フォローする",
     staffPrintQr: "スタッフ用：ステーションQRコードを印刷",
+    saveStation: "ステーションを保存",
+    unsaveStation: "保存を解除",
+    savedStations: "保存したステーション",
+    noSavedStations: "まだ保存したステーションはありません。ステーションのブックマークをタップして保存してください。",
+    minRead: "{minutes} 分",
+    fullTourEstimate: "全体のツアーは約 {minutes} 分です",
+    statStations: "ステーション",
+    statFullTour: "全体ツアー",
+    statLanguages: "言語",
   },
   es: {
     tagline: "Experimente el arte de la producción de té, de la hoja a la taza",
@@ -146,6 +182,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "Contáctenos",
     followUs: "Síganos",
     staffPrintQr: "Personal: imprimir códigos QR de las estaciones",
+    saveStation: "Guardar estación",
+    unsaveStation: "Quitar de guardados",
+    savedStations: "Estaciones Guardadas",
+    noSavedStations: "Aún no ha guardado ninguna estación. Toque el marcador de una estación para guardarla aquí.",
+    minRead: "{minutes} min",
+    fullTourEstimate: "Aproximadamente {minutes} min para el recorrido completo",
+    statStations: "Estaciones",
+    statFullTour: "Recorrido Completo",
+    statLanguages: "Idiomas",
   },
   fr: {
     tagline: "Découvrez l'art de la production de thé, de la feuille à la tasse",
@@ -167,6 +212,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "Contactez-nous",
     followUs: "Suivez-nous",
     staffPrintQr: "Personnel : imprimer les codes QR des stations",
+    saveStation: "Enregistrer la station",
+    unsaveStation: "Retirer des enregistrées",
+    savedStations: "Stations Enregistrées",
+    noSavedStations: "Vous n'avez encore enregistré aucune station. Appuyez sur le signet d'une station pour l'enregistrer ici.",
+    minRead: "{minutes} min",
+    fullTourEstimate: "Environ {minutes} min pour la visite complète",
+    statStations: "Stations",
+    statFullTour: "Visite Complète",
+    statLanguages: "Langues",
   },
   ru: {
     tagline: "Познакомьтесь с искусством производства чая от листа до чашки",
@@ -188,6 +242,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "Связаться с нами",
     followUs: "Подписывайтесь на нас",
     staffPrintQr: "Для персонала: печать QR-кодов станций",
+    saveStation: "Сохранить станцию",
+    unsaveStation: "Убрать из сохранённых",
+    savedStations: "Сохранённые Станции",
+    noSavedStations: "Вы ещё не сохранили ни одной станции. Нажмите на закладку у станции, чтобы сохранить её здесь.",
+    minRead: "{minutes} мин",
+    fullTourEstimate: "Около {minutes} мин на весь тур",
+    statStations: "Станции",
+    statFullTour: "Весь тур",
+    statLanguages: "Языки",
   },
   si: {
     tagline: "තේ දලුවේ සිට කෝප්පය දක්වා තේ නිෂ්පාදන කලාව අත්විඳින්න",
@@ -209,6 +272,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "අප අමතන්න",
     followUs: "අප අනුගමනය කරන්න",
     staffPrintQr: "කාර්ය මණ්ඩලය සඳහා: ස්ථාන QR කේත මුද්‍රණය කරන්න",
+    saveStation: "ස්ථානය සුරකින්න",
+    unsaveStation: "සුරැකි ලැයිස්තුවෙන් ඉවත් කරන්න",
+    savedStations: "සුරැකි ස්ථාන",
+    noSavedStations: "ඔබ තවම කිසිදු ස්ථානයක් සුරකා නොමැත. එහිදී සුරැකීමට ස්ථානයේ පොත්සලකුණ ස්පර්ශ කරන්න.",
+    minRead: "විනාඩි {minutes}",
+    fullTourEstimate: "සම්පූර්ණ චාරිකාව සඳහා විනාඩි {minutes}ක් පමණ ගතවේ",
+    statStations: "ස්ථාන",
+    statFullTour: "සම්පූර්ණ චාරිකාව",
+    statLanguages: "භාෂා",
   },
   ar: {
     tagline: "اختبر فن إنتاج الشاي من الورقة إلى الكوب",
@@ -230,6 +302,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "اتصل بنا",
     followUs: "تابعنا",
     staffPrintQr: "للموظفين: طباعة رموز QR للمحطات",
+    saveStation: "حفظ المحطة",
+    unsaveStation: "إزالة من المحفوظات",
+    savedStations: "المحطات المحفوظة",
+    noSavedStations: "لم تحفظ أي محطة بعد. انقر على علامة الحفظ في المحطة لحفظها هنا.",
+    minRead: "{minutes} دقيقة",
+    fullTourEstimate: "حوالي {minutes} دقيقة للجولة الكاملة",
+    statStations: "المحطات",
+    statFullTour: "الجولة الكاملة",
+    statLanguages: "اللغات",
   },
   it: {
     tagline: "Scopri l'arte della produzione del tè dalla foglia alla tazzina",
@@ -251,6 +332,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "Contattaci",
     followUs: "Seguici",
     staffPrintQr: "Personale: stampa i codici QR delle stazioni",
+    saveStation: "Salva stazione",
+    unsaveStation: "Rimuovi dai salvati",
+    savedStations: "Stazioni Salvate",
+    noSavedStations: "Non hai ancora salvato nessuna stazione. Tocca il segnalibro su una stazione per salvarla qui.",
+    minRead: "{minutes} min",
+    fullTourEstimate: "Circa {minutes} min per il tour completo",
+    statStations: "Stazioni",
+    statFullTour: "Tour Completo",
+    statLanguages: "Lingue",
   },
   de: {
     tagline: "Erleben Sie die Kunst der Tee-Produktion vom Blatt bis zur Tasse",
@@ -272,6 +362,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "Kontaktieren Sie uns",
     followUs: "Folgen Sie uns",
     staffPrintQr: "Personal: Stations-QR-Codes drucken",
+    saveStation: "Station speichern",
+    unsaveStation: "Aus Gespeicherten entfernen",
+    savedStations: "Gespeicherte Stationen",
+    noSavedStations: "Sie haben noch keine Stationen gespeichert. Tippen Sie auf das Lesezeichen einer Station, um sie hier zu speichern.",
+    minRead: "{minutes} Min.",
+    fullTourEstimate: "Etwa {minutes} Min. für die gesamte Tour",
+    statStations: "Stationen",
+    statFullTour: "Komplette Tour",
+    statLanguages: "Sprachen",
   },
   ta: {
     tagline: "இலையிலிருந்து கோப்பை வரை தேயிலை உற்பத்தியின் கலையை அனுபவியுங்கள்",
@@ -293,6 +392,15 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     contactUs: "எங்களைத் தொடர்பு கொள்ளவும்",
     followUs: "எங்களைப் பின்தொடரவும்",
     staffPrintQr: "பணியாளர்கள்: நிலைய QR குறியீடுகளை அச்சிடவும்",
+    saveStation: "நிலையத்தை சேமிக்கவும்",
+    unsaveStation: "சேமிப்பிலிருந்து அகற்று",
+    savedStations: "சேமிக்கப்பட்ட நிலையங்கள்",
+    noSavedStations: "நீங்கள் இன்னும் எந்த நிலையத்தையும் சேமிக்கவில்லை. இங்கே சேமிக்க ஒரு நிலையத்தின் புக்மார்க்கைத் தட்டவும்.",
+    minRead: "{minutes} நிமிடம்",
+    fullTourEstimate: "முழு சுற்றுலாவிற்கு சுமார் {minutes} நிமிடங்கள்",
+    statStations: "நிலையங்கள்",
+    statFullTour: "முழு சுற்றுலா",
+    statLanguages: "மொழிகள்",
   },
 };
 
