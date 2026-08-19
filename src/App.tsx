@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import { Header } from "./components/Header";
 import { LanguageGate } from "./components/LanguageGate";
@@ -72,9 +72,6 @@ function Footer() {
       </div>
       <div className="relative border-t border-white/10 py-4 text-center text-[11px] uppercase tracking-[0.15em] text-tea-400">
         <p>{t("footer")}</p>
-        <Link to="/qr-codes" className="hover:text-white underline">
-          {t("staffPrintQr")}
-        </Link>
       </div>
     </footer>
   );
