@@ -13,7 +13,7 @@ export default defineConfig({
         name: 'Athukorala Tea Factory — Visitor Tour Guide',
         short_name: 'ATF Tour Guide',
         description: 'Multilingual visitor tour guide for Athukorala Tea Factory',
-        theme_color: '#122111',
+        theme_color: '#37592c',
         background_color: '#f2f7f0',
         display: 'standalone',
         start_url: '/',
