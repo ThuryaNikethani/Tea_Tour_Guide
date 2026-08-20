@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import { Header } from "./components/Header";
 import { LanguageGate } from "./components/LanguageGate";
@@ -6,18 +7,33 @@ import { useLanguage } from "./context/LanguageContext";
 import { Home } from "./pages/Home";
 import { StationDetail } from "./pages/StationDetail";
 import { QrSheet } from "./pages/QrSheet";
+import { VillaPage } from "./pages/VillaPage";
 import footerImg from "./assets/brand/ath-CFusSk2P.jpg";
+
+function ScrollToHash() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const el = document.getElementById(hash.slice(1));
+    el?.scrollIntoView({ behavior: "instant" as ScrollBehavior });
+  }, [hash]);
+
+  return null;
+}
 
 function App() {
   return (
     <LanguageGate>
       <div className="min-h-screen bg-white flex flex-col">
+        <ScrollToHash />
         <Header />
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/station/:id" element={<StationDetail />} />
             <Route path="/qr-codes" element={<QrSheet />} />
+            <Route path="/villa" element={<VillaPage />} />
           </Routes>
         </main>
         <Footer />
