@@ -77,9 +77,11 @@ export function StationDetail() {
 
         {station.sections ? (
           <div className="space-y-7">
-            {station.sections.map((section) => (
+            {station.sections.map((section, i) => (
               <motion.section
                 key={section.heading}
+                id={`section-${i}`}
+                className="scroll-mt-32"
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
