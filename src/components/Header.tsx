@@ -6,9 +6,13 @@ import { LANGUAGES } from "../i18n/languages";
 import { STATIONS } from "../data/stations";
 import logo from "../assets/brand/athu-BZCrr7Wr.png";
 
-const NAV_LINKS: Array<{ to: string; key: "startTour" | "allStations" | "contactUs" }> = [
+const LEFT_NAV: Array<{ to: string; key: "startTour" | "allStations" }> = [
   { to: `/station/${STATIONS[0].id}`, key: "startTour" },
   { to: "/#stations", key: "allStations" },
+];
+
+const NAV_LINKS: Array<{ to: string; key: "startTour" | "allStations" | "contactUs" }> = [
+  ...LEFT_NAV,
   { to: "/#contact", key: "contactUs" },
 ];
 
@@ -21,19 +25,24 @@ export function Header() {
       <div className="bg-tea-950 h-2" />
 
       <header className="bg-white border-b border-gold-500/30">
-        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="" className="w-10 h-10 rounded-full object-contain" />
-            <span className="font-heading font-semibold text-xl text-tea-900">{t("appTitle")}</span>
-          </Link>
-          <div className="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-[0.12em] text-tea-700">
-            {NAV_LINKS.map(({ to, key }) => (
+        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between md:grid md:grid-cols-3">
+          <div className="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-[0.12em] text-tea-700 justify-self-start">
+            {LEFT_NAV.map(({ to, key }) => (
               <Link key={key} to={to} className="hover:text-gold-600 transition-colors">
                 {t(key)}
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-2">
+
+          <Link to="/" className="flex items-center gap-3 justify-self-start md:justify-self-center">
+            <img src={logo} alt="" className="w-10 h-10 rounded-full object-contain" />
+            <span className="font-heading font-semibold text-xl text-tea-900">{t("appTitle")}</span>
+          </Link>
+
+          <div className="flex items-center gap-4 justify-self-end">
+            <Link to="/#contact" className="hidden md:inline hover:text-gold-600 text-xs font-semibold uppercase tracking-[0.12em] text-tea-700 transition-colors">
+              {t("contactUs")}
+            </Link>
             <LanguageDropdown />
             <button
               type="button"
