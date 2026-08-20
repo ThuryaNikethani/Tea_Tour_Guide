@@ -127,8 +127,6 @@ export function Home() {
         </div>
       </div>
 
-      <SavedStations />
-
       {/* ---------- Story: real content, text overlaid on full-bleed photography ---------- */}
       <section className="max-w-5xl mx-auto px-4 pt-10">
         <div className="grid md:grid-cols-2 gap-px bg-gold-500/25 border border-gold-500/25">
@@ -192,6 +190,8 @@ export function Home() {
           })}
         </div>
       </section>
+
+      <SavedStations />
     </div>
   );
 }
@@ -324,7 +324,7 @@ function SavedStations() {
   const saved = STATIONS.filter((s) => favorites.has(s.id));
 
   return (
-    <section className="max-w-4xl mx-auto px-4 pt-8">
+    <section className="max-w-4xl mx-auto px-4 pt-8 pb-12">
       <h2 className="flex items-center justify-center gap-1.5 text-tea-700 text-xs font-semibold uppercase tracking-[0.15em] mb-3">
         <Bookmark size={13} />
         {t("savedStations")}
