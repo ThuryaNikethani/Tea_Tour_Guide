@@ -4,6 +4,7 @@ import { CheckCircle2, Printer, Scissors } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { STATIONS } from "../data/stations";
 import { localizeStation } from "../data/localize";
+import { localizeVilla } from "../data/villa";
 import logo from "../assets/brand/athu-BZCrr7Wr.png";
 
 /**
@@ -15,6 +16,7 @@ export function QrSheet() {
   const { t, language } = useLanguage();
   const origin = window.location.origin;
   const printedOn = new Intl.DateTimeFormat(language, { dateStyle: "long" }).format(new Date());
+  const villa = localizeVilla(language);
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-6 print:max-w-none print:px-6 print:py-6">
@@ -97,6 +99,53 @@ export function QrSheet() {
             </div>
           );
         })}
+      </div>
+
+      {/* Special QR codes: entrance overview and villa marketing, separate from the per-station tour codes above */}
+      <div className="mt-10 pt-8 border-t-2 border-tea-200 print:break-before-page">
+        <div className="grid sm:grid-cols-2 gap-5 print:grid-cols-2 print:gap-x-6 print:gap-y-8">
+          <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:border-gold-500">
+            <Scissors size={14} className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden" />
+            <h2 className="font-heading font-semibold text-xl text-tea-900 text-center">{t("appTitle")}</h2>
+            <p className="text-tea-500 text-xs text-center">{t("tagline")}</p>
+            <div className="p-3 bg-white rounded-xl border border-tea-100 shadow-sm">
+              <QRCodeSVG
+                value={`${origin}/`}
+                size={170}
+                level="H"
+                fgColor="#1a2e17"
+                imageSettings={{ src: logo, height: 32, width: 32, excavate: true }}
+              />
+            </div>
+            <p className="text-tea-600 text-xs font-medium">{t("scanQrHint")}</p>
+            <p className="text-tea-400 text-[11px] break-all text-center font-mono">{`${origin}/`}</p>
+            <div className="w-full flex items-center gap-2 pt-3 mt-1 border-t border-tea-100">
+              <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
+              <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
+            </div>
+          </div>
+
+          <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:border-gold-500">
+            <Scissors size={14} className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden" />
+            <h2 className="font-heading font-semibold text-xl text-tea-900 text-center">{villa.name}</h2>
+            <p className="text-tea-500 text-xs text-center">{villa.tagline}</p>
+            <div className="p-3 bg-white rounded-xl border border-tea-100 shadow-sm">
+              <QRCodeSVG
+                value={`${origin}/villa`}
+                size={170}
+                level="H"
+                fgColor="#1a2e17"
+                imageSettings={{ src: logo, height: 32, width: 32, excavate: true }}
+              />
+            </div>
+            <p className="text-tea-600 text-xs font-medium">{t("scanQrHint")}</p>
+            <p className="text-tea-400 text-[11px] break-all text-center font-mono">{`${origin}/villa`}</p>
+            <div className="w-full flex items-center gap-2 pt-3 mt-1 border-t border-tea-100">
+              <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
+              <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="mt-6 print:hidden">
