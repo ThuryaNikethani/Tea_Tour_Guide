@@ -18,7 +18,7 @@ export function VillaPage() {
       </div>
 
       <div className="max-w-2xl mx-auto px-4 py-6">
-        <Link to="/" className="inline-flex items-center gap-1 text-tea-600 hover:text-tea-900 text-sm mb-6">
+        <Link to="/stations" className="inline-flex items-center gap-1 text-tea-600 hover:text-tea-900 text-sm mb-6">
           <ChevronLeft size={16} />
           {t("backToStations")}
         </Link>
