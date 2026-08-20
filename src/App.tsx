@@ -5,6 +5,7 @@ import { Header } from "./components/Header";
 import { LanguageGate } from "./components/LanguageGate";
 import { useLanguage } from "./context/LanguageContext";
 import { Home } from "./pages/Home";
+import { AllStations } from "./pages/AllStations";
 import { StationDetail } from "./pages/StationDetail";
 import { QrSheet } from "./pages/QrSheet";
 import { VillaPage } from "./pages/VillaPage";
@@ -31,6 +32,7 @@ function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/stations" element={<AllStations />} />
             <Route path="/station/:id" element={<StationDetail />} />
             <Route path="/qr-codes" element={<QrSheet />} />
             <Route path="/villa" element={<VillaPage />} />
