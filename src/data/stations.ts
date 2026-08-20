@@ -53,6 +53,10 @@ import tri4049Img from "../assets/nursery/gallery/pla1-DxzHBDYN.jpg";
 import tri3069Img from "../assets/nursery/gallery/pla2-DHcKY4nG.jpg";
 import tri4053Img from "../assets/nursery/gallery/pla3-Dk5ZTCwz.jpg";
 import tri3055Img from "../assets/nursery/gallery/pla4-CxT3mr36.jpg";
+import tri2022Img from "../assets/nursery/gallery/pla5-BlOJ1RbK.jpg";
+import tri2043Img from "../assets/nursery/gallery/pla9-moj4O07C.jpg";
+import tri4006Img from "../assets/nursery/gallery/pla13-CsUH1VFU.jpg";
+import tri3025Img from "../assets/nursery/gallery/pla17-CN4UIDLb.jpg";
 
 /**
  * The "nursery" station's images and videos are real — sourced from the
@@ -71,8 +75,21 @@ import tri3055Img from "../assets/nursery/gallery/pla4-CxT3mr36.jpg";
  */
 export const STATIONS: Station[] = [
   {
-    id: "nursery",
+    id: "introduction",
     order: 1,
+    name: "Introduction to Ceylon Tea",
+    shortName: "Introduction",
+    icon: "Mountain",
+    verified: false,
+    description:
+      "Sri Lanka has grown tea commercially since the 1860s, after coffee crops on the island were wiped out by disease. Today 'Ceylon tea' is grown across three main elevation zones — high-grown, mid-grown, and low-grown — each producing a different character of tea. This stop is a starting orientation before the tour explores this particular low-country estate.",
+    keyPoints:
+      "High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker. This estate is a low-country, or 'Pahatharata,' producer.",
+    duration: "5-10 minutes",
+  },
+  {
+    id: "nursery",
+    order: 2,
     name: "Tea Nursery",
     shortName: "Nursery",
     icon: "Sprout",
@@ -144,11 +161,31 @@ export const STATIONS: Station[] = [
         image: tri4053Img,
         body: "TRI 4053 rounds out the cultivar trial plots pictured here. Keeping several registered varieties growing side by side, each clearly labelled, is standard practice on the estate before committing a cultivar to a full field.",
       },
+      {
+        heading: "TRI 2022",
+        image: tri2022Img,
+        body: "TRI 2022 is planted in the same cultivar trial section, its signpost tagged and tracked just like its neighbours. Growing several registered varieties side by side on identical ground is how the nursery builds real evidence of which ones perform best here.",
+      },
+      {
+        heading: "TRI 2043",
+        image: tri2043Img,
+        body: "TRI 2043 stands a little further down the row. Like the other numbered plants in this trial plot, it's being grown out and monitored before any decision is made about planting it out at scale.",
+      },
+      {
+        heading: "TRI 4006",
+        image: tri4006Img,
+        body: "TRI 4006 is one more entry in the same cultivar trial. The nursery keeps each variety in its own clearly marked spot, which makes it easy to track and compare growth over time.",
+      },
+      {
+        heading: "TRI 3025",
+        image: tri3025Img,
+        body: "TRI 3025 marks the edge of the trial plot, next to a bilingual 'Tea Cultivars' signboard and a dated planting plaque. Together, the labelled plants here form the nursery's working record of which cultivars are worth expanding.",
+      },
     ],
   },
   {
     id: "plucking",
-    order: 2,
+    order: 3,
     name: "Plucking",
     shortName: "Pluck",
     icon: "Hand",
@@ -161,7 +198,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "withering",
-    order: 3,
+    order: 4,
     name: "Withering",
     shortName: "Wither",
     icon: "Wind",
@@ -174,7 +211,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "rolling",
-    order: 4,
+    order: 5,
     name: "Rolling",
     shortName: "Roll",
     icon: "RotateCw",
@@ -187,7 +224,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "fermentation",
-    order: 5,
+    order: 6,
     name: "Fermentation (Oxidation)",
     shortName: "Ferment",
     icon: "FlaskConical",
@@ -200,7 +237,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "drying",
-    order: 6,
+    order: 7,
     name: "Drying (Firing)",
     shortName: "Dry",
     icon: "Flame",
@@ -213,7 +250,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "sorting",
-    order: 7,
+    order: 8,
     name: "Sorting & Grading",
     shortName: "Sort",
     icon: "Filter",
@@ -226,7 +263,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "packing",
-    order: 8,
+    order: 9,
     name: "Packing",
     shortName: "Pack",
     icon: "Package",
@@ -236,6 +273,162 @@ export const STATIONS: Station[] = [
     keyPoints:
       "Airtight packing protects the tea from moisture and odours, preserving the flavour that was carefully built through every earlier stage of the process.",
     duration: "The final batch is packed and ready for dispatch the same day it's graded.",
+  },
+  {
+    id: "cinnamon",
+    order: 10,
+    name: "Cinnamon Plantation",
+    shortName: "Cinnamon",
+    icon: "TreePine",
+    verified: false,
+    description:
+      "Sri Lanka grows most of the world's true cinnamon. This stop covers how cinnamon bark is grown, peeled, and dried into the quills sold as cinnamon sticks.",
+    keyPoints:
+      "True Ceylon cinnamon is hand-peeled from young shoots and rolled into quills, unlike the thicker cassia bark commonly sold elsewhere.",
+    duration: "5-10 minutes",
+  },
+  {
+    id: "ginger-turmeric",
+    order: 11,
+    name: "Ginger & Turmeric Plantation",
+    shortName: "Ginger & Turmeric",
+    icon: "Leaf",
+    verified: false,
+    description:
+      "Ginger and turmeric are grown alongside tea on many Sri Lankan estates. This stop covers how both root crops are grown, harvested, and used.",
+    keyPoints:
+      "Both are rhizome crops, harvested by digging up the root rather than picking leaves, and both are staples of Sri Lankan cooking and traditional medicine.",
+    duration: "5-10 minutes",
+  },
+  {
+    id: "pahatharata-manufacturing",
+    order: 12,
+    name: "Tea Manufacturing (Pahatharata)",
+    shortName: "Pahatharata",
+    icon: "Layers",
+    verified: false,
+    description:
+      "Low-country ('Pahatharata') estates process tea differently from high-grown estates further inland. This stop covers plucking, CTC processing, and grading as done in the low country.",
+    keyPoints:
+      "CTC (Crush-Tear-Curl) mechanically processes the leaf into small, dense granules, producing the strong, brisk character low-country Ceylon tea is known for.",
+    duration: "10-15 minutes",
+  },
+  {
+    id: "organic-cultivation",
+    order: 13,
+    name: "Organic Tea Cultivation",
+    shortName: "Organic Tea",
+    icon: "Recycle",
+    verified: false,
+    description:
+      "Organic cultivation avoids synthetic pesticides and fertilizers. This stop covers what sets an organic tea plot apart from conventional cultivation.",
+    keyPoints:
+      "Organic certification typically requires several years of chemical-free cultivation before a plot can be certified, and yields are often lower than conventional plots.",
+    duration: "5-10 minutes",
+  },
+  {
+    id: "clonal-tea",
+    order: 14,
+    name: "Clonal Tea",
+    shortName: "Clonal Tea",
+    icon: "Gem",
+    verified: false,
+    description:
+      "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price.",
+    keyPoints:
+      "Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities.",
+    duration: "5-10 minutes",
+  },
+  {
+    id: "organic-fertilizer",
+    order: 15,
+    name: "Organic Fertilizer Application",
+    shortName: "Organic Fertilizer",
+    icon: "Wheat",
+    verified: false,
+    description:
+      "Healthy tea soil depends on regular fertilizing. This stop covers how organic fertilizers — compost, manure, and other natural amendments — are prepared and applied without synthetic chemical inputs.",
+    keyPoints:
+      "Organic fertilizers release nutrients more slowly than synthetic ones, which means application timing and soil health both matter more.",
+    duration: "5 minutes",
+  },
+  {
+    id: "shade-management",
+    order: 16,
+    name: "Shade Tree Management",
+    shortName: "Shade Trees",
+    icon: "Trees",
+    verified: false,
+    description:
+      "Many tea estates interplant shade trees among the tea bushes to moderate sunlight, temperature, and humidity. This stop covers how shade trees are selected, planted, and pruned.",
+    keyPoints:
+      "Shade trees are typically pruned on a rotation to control how much light reaches the tea bushes below, balancing leaf quality against yield.",
+    duration: "5 minutes",
+  },
+  {
+    id: "unique-fruits",
+    order: 17,
+    name: "Unique Fruits of Sri Lanka",
+    shortName: "Unique Fruits",
+    icon: "Citrus",
+    verified: false,
+    description:
+      "Sri Lanka's climate supports a range of fruits not commonly seen elsewhere. This stop introduces some of the island's distinctive fruit varieties, often grown alongside tea and other estate crops.",
+    keyPoints:
+      "Sri Lanka's fruit varieties reflect its tropical, monsoon-influenced climate and centuries of cultivation across different elevation zones.",
+    duration: "5 minutes",
+  },
+  {
+    id: "tea-factory",
+    order: 18,
+    name: "The Tea Factory",
+    shortName: "Tea Factory",
+    icon: "Factory",
+    verified: false,
+    description:
+      "The main factory building is where plucked leaf is turned into finished tea, from withering through to packing. This stop is an overview of the working factory floor and the equipment used at each stage.",
+    keyPoints:
+      "A working tea factory runs the full withering-to-packing sequence under one roof, timed closely with each day's leaf intake.",
+    duration: "10-15 minutes",
+  },
+  {
+    id: "handmade-factory",
+    order: 19,
+    name: "Handmade Tea Factory",
+    shortName: "Handmade Factory",
+    icon: "HandHeart",
+    verified: false,
+    description:
+      "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. This stop covers what distinguishes hand-made tea from factory-line production.",
+    keyPoints:
+      "Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character.",
+    duration: "10 minutes",
+  },
+  {
+    id: "tea-center",
+    order: 20,
+    name: "Tea Center",
+    shortName: "Tea Center",
+    icon: "Coffee",
+    verified: false,
+    description:
+      "The tour ends at the tea center, where visitors can taste different grades of tea and pick up favourites to take home. This stop covers what to expect from the tasting session.",
+    keyPoints:
+      "Tasting sessions typically compare a few different grades or styles side by side, so visitors can taste the difference the earlier stops describe.",
+    duration: "10-15 minutes",
+  },
+  {
+    id: "coconut-field",
+    order: 21,
+    name: "Coconut Field",
+    shortName: "Coconut Field",
+    icon: "Palmtree",
+    verified: false,
+    description:
+      "Coconut palms are grown across many Sri Lankan estates alongside tea, providing fruit, oil, and materials used throughout the property. This stop covers how coconut is grown, harvested, and used on the estate.",
+    keyPoints:
+      "A single coconut palm can bear fruit for decades, and nearly every part of it — the fruit, husk, shell, and leaves — is put to some use on a working estate.",
+    duration: "5-10 minutes",
   },
 ];
 
