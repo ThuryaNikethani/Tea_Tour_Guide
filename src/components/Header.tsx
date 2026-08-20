@@ -8,7 +8,7 @@ import logo from "../assets/brand/athu-BZCrr7Wr.png";
 
 const LEFT_NAV: Array<{ to: string; key: "startTour" | "allStations" }> = [
   { to: `/station/${STATIONS[0].id}`, key: "startTour" },
-  { to: "/#stations", key: "allStations" },
+  { to: "/stations", key: "allStations" },
 ];
 
 const NAV_LINKS: Array<{ to: string; key: "startTour" | "allStations" | "contactUs" }> = [
