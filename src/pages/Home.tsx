@@ -3,21 +3,34 @@ import {
   ArrowRight,
   Bookmark,
   CheckCircle2,
+  Citrus,
   Clock,
+  Coffee,
+  Factory,
   Flame,
   FlaskConical,
   Filter,
+  Gem,
   Hand,
+  HandHeart,
+  Layers,
+  Leaf,
+  Mountain,
   Package,
+  Palmtree,
   QrCode,
+  Recycle,
   RotateCw,
   Sprout,
+  TreePine,
+  Trees,
+  Wheat,
   Wind,
   type LucideIcon,
 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { useFavorites } from "../context/FavoritesContext";
-import { STATIONS } from "../data/stations";
+import { STATIONS, getStation } from "../data/stations";
 import { LANGUAGES } from "../i18n/languages";
 import { localizeStation } from "../data/localize";
 import { estimateStationMinutes, estimateTotalMinutes } from "../data/estimateTime";
@@ -54,12 +67,25 @@ const STATION_ICONS: Record<string, LucideIcon> = {
   Flame,
   Filter,
   Package,
+  TreePine,
+  Leaf,
+  Layers,
+  Recycle,
+  Gem,
+  Wheat,
+  Trees,
+  Citrus,
+  Factory,
+  HandHeart,
+  Coffee,
+  Palmtree,
+  Mountain,
 };
 
 export function Home() {
   const { t, language } = useLanguage();
   const totalMinutes = estimateTotalMinutes(STATIONS);
-  const nurseryStation = STATIONS[0];
+  const nurseryStation = getStation("nursery")!;
   const cultivarIndex = nurseryStation.sections?.findIndex((s) => s.heading === "Tea Cultivars") ?? -1;
   const cultivarSection = cultivarIndex >= 0 ? localizeStation(nurseryStation, language).sections?.[cultivarIndex] : undefined;
 
@@ -103,72 +129,44 @@ export function Home() {
 
       <SavedStations />
 
-      {/* ---------- Featured: the one fully real, verified station ---------- */}
-      <section className="max-w-4xl mx-auto px-4 pt-10">
-        <div className="grid md:grid-cols-2 gap-0 border border-gold-500/30">
-          <div
-            className="h-64 md:h-auto bg-cover bg-center"
-            style={{ backgroundImage: `url(${featuredImg})` }}
+      {/* ---------- Story: real content, text overlaid on full-bleed photography ---------- */}
+      <section className="max-w-5xl mx-auto px-4 pt-10">
+        <div className="grid md:grid-cols-2 gap-px bg-gold-500/25 border border-gold-500/25">
+          <PhotoStoryCard
+            image={featuredImg}
+            eyebrow={t("stationOf").replace("{current}", String(nurseryStation.order)).replace("{total}", String(STATIONS.length))}
+            heading={localizeStation(nurseryStation, language).name}
+            body={localizeStation(nurseryStation, language).heroTagline}
+            href={`/station/${nurseryStation.id}`}
+            ctaLabel={t("startTour")}
           />
-          <div className="flex flex-col justify-center gap-3 p-8">
-            <span className="inline-flex items-center gap-1.5 self-start text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-700">
-              <CheckCircle2 size={13} />
-              {t("stationOf").replace("{current}", "1").replace("{total}", String(STATIONS.length))}
-            </span>
-            <h2 className="font-heading font-semibold text-2xl md:text-3xl text-tea-900">
-              {localizeStation(STATIONS[0], language).name}
-            </h2>
-            <p className="text-tea-600 leading-relaxed font-light">
-              {localizeStation(STATIONS[0], language).heroTagline}
-            </p>
-            <Link
-              to={`/station/${STATIONS[0].id}`}
-              className="inline-flex items-center gap-2 self-start border-b border-tea-900 text-tea-900 hover:text-gold-600 hover:border-gold-600 font-semibold text-xs uppercase tracking-[0.15em] pb-1 mt-3 transition-colors"
-            >
-              {t("startTour")}
-              <ArrowRight size={14} />
-            </Link>
-          </div>
+          {cultivarSection?.image && (
+            <PhotoStoryCard
+              image={cultivarSection.image}
+              heading={cultivarSection.heading}
+              body={cultivarSection.body}
+              href={`/station/${nurseryStation.id}#section-${cultivarIndex}`}
+              ctaLabel={t("startTour")}
+            />
+          )}
         </div>
       </section>
 
-      {/* ---------- Story: second real, verified detail, alternating layout ---------- */}
-      {cultivarSection?.image && (
-        <section className="max-w-4xl mx-auto px-4 pt-8">
-          <div className="grid md:grid-cols-2 gap-0 border border-gold-500/30">
-            <div className="order-2 md:order-1 flex flex-col justify-center gap-3 p-8">
-              <div className="self-start">
-                <Flourish />
-              </div>
-              <h2 className="font-heading font-semibold text-2xl md:text-3xl text-tea-900">{cultivarSection.heading}</h2>
-              <p className="text-tea-600 leading-relaxed font-light">{cultivarSection.body}</p>
-              <Link
-                to={`/station/${nurseryStation.id}`}
-                className="inline-flex items-center gap-2 self-start border-b border-tea-900 text-tea-900 hover:text-gold-600 hover:border-gold-600 font-semibold text-xs uppercase tracking-[0.15em] pb-1 mt-3 transition-colors"
-              >
-                {t("startTour")}
-                <ArrowRight size={14} />
-              </Link>
-            </div>
-            <div
-              className="order-1 md:order-2 h-64 md:h-auto bg-cover bg-center"
-              style={{ backgroundImage: `url(${cultivarSection.image})` }}
-            />
-          </div>
-        </section>
-      )}
-
-      {/* ---------- Cultivar photo strip: real signposted plants from the nursery ---------- */}
+      {/* ---------- Cultivar photo strip: real signposted plants from the nursery, each linking to its own section ---------- */}
       <section className="max-w-4xl mx-auto px-4 pt-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gold-500/25 border border-gold-500/25">
-          {CULTIVAR_PHOTOS.map(({ img, code }) => (
-            <figure key={code} className="relative bg-white">
-              <img src={img} alt={code} loading="lazy" className="w-full h-40 object-cover" />
-              <figcaption className="absolute bottom-0 inset-x-0 bg-tea-950/70 text-gold-200 text-[11px] font-semibold uppercase tracking-[0.1em] text-center py-1.5">
-                {code}
-              </figcaption>
-            </figure>
-          ))}
+          {CULTIVAR_PHOTOS.map(({ img, code }) => {
+            const sectionIndex = nurseryStation.sections?.findIndex((s) => s.heading === code) ?? -1;
+            const href = sectionIndex >= 0 ? `/station/${nurseryStation.id}#section-${sectionIndex}` : `/station/${nurseryStation.id}`;
+            return (
+              <Link key={code} to={href} className="relative block bg-white group">
+                <img src={img} alt={code} loading="lazy" className="w-full h-40 object-cover group-hover:opacity-85 transition-opacity" />
+                <figcaption className="absolute bottom-0 inset-x-0 bg-tea-950/70 group-hover:bg-tea-950/85 text-gold-200 text-[11px] font-semibold uppercase tracking-[0.1em] text-center py-1.5 transition-colors">
+                  {code}
+                </figcaption>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
@@ -194,6 +192,48 @@ export function Home() {
           })}
         </div>
       </section>
+    </div>
+  );
+}
+
+function PhotoStoryCard({
+  image,
+  eyebrow,
+  heading,
+  body,
+  href,
+  ctaLabel,
+}: {
+  image: string;
+  eyebrow?: string;
+  heading?: string;
+  body?: string;
+  href: string;
+  ctaLabel: string;
+}) {
+  return (
+    <div
+      className="relative h-96 bg-cover bg-center flex flex-col justify-end p-7"
+      style={{ backgroundImage: `url(${image})` }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-t from-tea-950/90 via-tea-950/35 to-transparent" />
+      <div className="relative">
+        {eyebrow && (
+          <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-300 mb-2">
+            <CheckCircle2 size={12} />
+            {eyebrow}
+          </span>
+        )}
+        {heading && <h2 className="font-heading font-semibold text-2xl text-white mb-2">{heading}</h2>}
+        {body && <p className="text-white/85 text-sm leading-relaxed font-light mb-4 line-clamp-3">{body}</p>}
+        <Link
+          to={href}
+          className="inline-flex items-center gap-2 border border-white/70 hover:border-gold-400 hover:text-gold-300 text-white font-semibold text-xs uppercase tracking-[0.15em] px-5 py-2.5 transition-colors"
+        >
+          {ctaLabel}
+          <ArrowRight size={14} />
+        </Link>
+      </div>
     </div>
   );
 }
