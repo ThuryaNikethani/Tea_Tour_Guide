@@ -64,13 +64,22 @@ export function Home() {
           <Flourish />
         </div>
         <p className="text-tea-500 text-sm font-light mb-6">{t("scanQrHint")}</p>
-        <Link
-          to="/stations"
-          className="inline-flex items-center gap-2 bg-tea-900 hover:bg-tea-800 text-white font-semibold text-xs uppercase tracking-[0.2em] px-9 py-3.5 transition-colors"
-        >
-          {t("allStations")}
-          <ArrowRight size={15} />
-        </Link>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <Link
+            to="/stations"
+            className="inline-flex items-center gap-2 bg-tea-900 hover:bg-tea-800 text-white font-semibold text-xs uppercase tracking-[0.2em] px-9 py-3.5 transition-colors"
+          >
+            {t("allStations")}
+            <ArrowRight size={15} />
+          </Link>
+          <Link
+            to="/highlights"
+            className="inline-flex items-center gap-2 border border-tea-900 text-tea-900 hover:bg-tea-900 hover:text-white font-semibold text-xs uppercase tracking-[0.2em] px-9 py-3.5 transition-colors"
+          >
+            Highlights
+            <ArrowRight size={15} />
+          </Link>
+        </div>
       </section>
     </div>
   );
