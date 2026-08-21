@@ -23,8 +23,8 @@ export function QrSheet() {
       {/* Screen-only controls */}
       <div className="flex items-center justify-between mb-6 print:hidden">
         <div>
-          <h1 className="font-heading font-semibold text-2xl text-tea-900">{t("qrSheetTitle")}</h1>
-          <p className="text-tea-600 text-sm">{t("qrSheetSubtitle")}</p>
+          <h1 className="font-heading font-semibold text-2xl text-tea-900 dark:text-white">{t("qrSheetTitle")}</h1>
+          <p className="text-tea-600 dark:text-tea-400 text-sm">{t("qrSheetSubtitle")}</p>
         </div>
         <button
           type="button"
@@ -102,7 +102,7 @@ export function QrSheet() {
       </div>
 
       {/* Special QR codes: entrance overview and villa marketing, separate from the per-station tour codes above */}
-      <div className="mt-10 pt-8 border-t-2 border-tea-200 print:break-before-page">
+      <div className="mt-10 pt-8 border-t-2 border-tea-200 dark:border-tea-700 print:break-before-page">
         <div className="grid sm:grid-cols-2 gap-5 print:grid-cols-2 print:gap-x-6 print:gap-y-8">
           <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:border-gold-500">
             <Scissors size={14} className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden" />
@@ -149,7 +149,7 @@ export function QrSheet() {
       </div>
 
       <div className="mt-6 print:hidden">
-        <Link to="/" className="text-tea-600 hover:text-tea-900 text-sm">
+        <Link to="/" className="text-tea-600 dark:text-tea-400 hover:text-tea-900 dark:hover:text-white text-sm">
           ← {t("backToApp")}
         </Link>
       </div>
