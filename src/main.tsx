@@ -5,15 +5,21 @@ import './index.css'
 import App from './App.tsx'
 import { LanguageProvider } from './context/LanguageContext.tsx'
 import { FavoritesProvider } from './context/FavoritesContext.tsx'
+import { VisitedProvider } from './context/VisitedContext.tsx'
+import { ThemeProvider } from './context/ThemeContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <LanguageProvider>
-        <FavoritesProvider>
-          <App />
-        </FavoritesProvider>
-      </LanguageProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          <FavoritesProvider>
+            <VisitedProvider>
+              <App />
+            </VisitedProvider>
+          </FavoritesProvider>
+        </LanguageProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </StrictMode>,
 )
