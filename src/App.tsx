@@ -27,7 +27,7 @@ function ScrollToHash() {
 function App() {
   return (
     <LanguageGate>
-      <div className="min-h-screen bg-white flex flex-col">
+      <div className="min-h-screen bg-white dark:bg-tea-950 flex flex-col">
         <ScrollToHash />
         <Header />
         <main className="flex-1">
@@ -57,7 +57,7 @@ function Footer() {
       <div className="absolute inset-0 bg-tea-950" style={{ opacity: 0.94 }} />
       <div className="relative max-w-4xl mx-auto px-4 py-10 grid sm:grid-cols-2 gap-8 text-center sm:text-left">
         <div>
-          <h3 className="font-heading font-semibold text-white text-lg mb-4">{t("contactUs")}</h3>
+          <h3 className="font-heading font-semibold text-white text-lg mb-4 whitespace-nowrap">{t("contactUs")}</h3>
           <ul className="space-y-2.5 text-sm font-light">
             <li className="flex items-center justify-center sm:justify-start gap-2">
               <Phone size={14} className="shrink-0 text-gold-400" />
@@ -73,7 +73,14 @@ function Footer() {
             </li>
             <li className="flex items-center justify-center sm:justify-start gap-2">
               <MapPin size={14} className="shrink-0 text-gold-400" />
-              <span>Kurunduwatta No 01, Pitigala, Sri Lanka</span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Kurunduwatta+No+01%2C+Pitigala%2C+Sri+Lanka"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white underline underline-offset-2"
+              >
+                Kurunduwatta No 01, Pitigala, Sri Lanka
+              </a>
             </li>
           </ul>
         </div>
