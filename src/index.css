@@ -8,3 +8,8 @@ body {
   background-color: theme("colors.tea.50");
   color: theme("colors.tea.950");
 }
+
+.dark body {
+  background-color: theme("colors.tea.950");
+  color: theme("colors.tea.50");
+}
