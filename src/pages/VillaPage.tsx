@@ -17,40 +17,47 @@ export function VillaPage() {
         </div>
       </div>
 
-      <div className="max-w-2xl mx-auto px-4 py-6">
-        <Link to="/stations" className="inline-flex items-center gap-1 text-tea-600 hover:text-tea-900 text-sm mb-6">
+      <div className="max-w-2xl mx-auto px-4 py-6 bg-white dark:bg-tea-950">
+        <Link to="/stations" className="inline-flex items-center gap-1 text-tea-600 dark:text-tea-400 hover:text-tea-900 dark:hover:text-white text-sm mb-6">
           <ChevronLeft size={16} />
           {t("backToStations")}
         </Link>
 
-        <div className="flex items-start gap-2 bg-brass-300/15 border border-brass-300/50 text-brass-600 rounded-md px-4 py-3 text-sm mb-6">
+        <div className="flex items-start gap-2 bg-brass-300/15 border border-brass-300/50 text-brass-600 dark:text-brass-400 rounded-md px-4 py-3 text-sm mb-6">
           <Sparkles size={16} className="mt-0.5 shrink-0" />
           <p>{villa.comingSoon}</p>
         </div>
 
-        <p className="text-tea-800 leading-relaxed mb-8">{villa.body}</p>
+        <p className="text-tea-800 dark:text-tea-200 leading-relaxed mb-8">{villa.body}</p>
 
-        <div className="bg-tea-50 border border-tea-200 rounded-md p-4">
-          <div className="flex items-center gap-1.5 text-tea-700 font-medium text-sm mb-3">
+        <div className="bg-tea-50 dark:bg-tea-900 border border-tea-200 dark:border-tea-700 rounded-md p-4">
+          <div className="flex items-center gap-1.5 text-tea-700 dark:text-tea-200 font-medium text-sm mb-3">
             <Sparkles size={15} />
             {t("contactUs")}
           </div>
-          <ul className="space-y-2 text-sm text-tea-800">
+          <ul className="space-y-2 text-sm text-tea-800 dark:text-tea-300">
             <li className="flex items-center gap-2">
               <Phone size={14} className="shrink-0 text-gold-600" />
-              <a href="tel:+94912291123" className="hover:text-tea-900">
+              <a href="tel:+94912291123" className="hover:text-tea-900 dark:hover:text-white">
                 091-229 1123 / 091-779 1123
               </a>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={14} className="shrink-0 text-gold-600" />
-              <a href="mailto:atf@athukoralagroup.com" className="hover:text-tea-900">
+              <a href="mailto:atf@athukoralagroup.com" className="hover:text-tea-900 dark:hover:text-white">
                 atf@athukoralagroup.com
               </a>
             </li>
             <li className="flex items-start gap-2">
               <MapPin size={14} className="shrink-0 mt-0.5 text-gold-600" />
-              <span>Kurunduwatta No 01, Pitigala, Sri Lanka</span>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Kurunduwatta+No+01%2C+Pitigala%2C+Sri+Lanka"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-tea-900 dark:hover:text-white underline underline-offset-2"
+              >
+                Kurunduwatta No 01, Pitigala, Sri Lanka
+              </a>
             </li>
           </ul>
         </div>
