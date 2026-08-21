@@ -21,7 +21,7 @@ export function Home() {
   const totalMinutes = estimateTotalMinutes(STATIONS);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-tea-950">
       {/* ---------- Hero: centered, symmetric ---------- */}
       <section
         className="relative bg-cover bg-center"
@@ -50,7 +50,7 @@ export function Home() {
       </section>
 
       {/* ---------- Stat row: quiet, gold-bordered ---------- */}
-      <div className="border-b border-gold-500/25 bg-tea-50">
+      <div className="border-b border-gold-500/25 bg-tea-50 dark:bg-tea-900">
         <div className="max-w-3xl mx-auto px-4 flex divide-x divide-gold-500/25">
           <Stat value={String(STATIONS.length)} label={t("statStations")} />
           <Stat value={t("minRead").replace("{minutes}", String(totalMinutes))} label={t("statFullTour")} />
@@ -63,18 +63,18 @@ export function Home() {
         <div className="mb-4">
           <Flourish />
         </div>
-        <p className="text-tea-500 text-sm font-light mb-6">{t("scanQrHint")}</p>
+        <p className="text-tea-500 dark:text-tea-400 text-sm font-light mb-6">{t("scanQrHint")}</p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link
             to="/stations"
-            className="inline-flex items-center gap-2 bg-tea-900 hover:bg-tea-800 text-white font-semibold text-xs uppercase tracking-[0.2em] px-9 py-3.5 transition-colors"
+            className="inline-flex items-center gap-2 bg-tea-900 hover:bg-tea-800 dark:bg-gold-500 dark:hover:bg-gold-600 text-white dark:text-tea-950 font-semibold text-xs uppercase tracking-[0.2em] px-9 py-3.5 transition-colors"
           >
             {t("allStations")}
             <ArrowRight size={15} />
           </Link>
           <Link
             to="/highlights"
-            className="inline-flex items-center gap-2 border border-tea-900 text-tea-900 hover:bg-tea-900 hover:text-white font-semibold text-xs uppercase tracking-[0.2em] px-9 py-3.5 transition-colors"
+            className="inline-flex items-center gap-2 border border-tea-900 dark:border-tea-100 text-tea-900 dark:text-tea-100 hover:bg-tea-900 dark:hover:bg-tea-100 hover:text-white dark:hover:text-tea-900 font-semibold text-xs uppercase tracking-[0.2em] px-9 py-3.5 transition-colors"
           >
             Highlights
             <ArrowRight size={15} />
@@ -88,8 +88,8 @@ export function Home() {
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div className="flex-1 flex flex-col items-center justify-center py-5 px-2 text-center">
-      <span className="font-heading font-semibold text-2xl text-tea-900">{value}</span>
-      <span className="text-[10px] uppercase tracking-[0.15em] text-tea-500 mt-1 font-semibold">{label}</span>
+      <span className="font-heading font-semibold text-2xl text-tea-900 dark:text-white">{value}</span>
+      <span className="text-[10px] uppercase tracking-[0.15em] text-tea-500 dark:text-tea-400 mt-1 font-semibold">{label}</span>
     </div>
   );
 }
