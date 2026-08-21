@@ -4,15 +4,16 @@ A multilingual, QR-code-driven tour guide web app for **Athukorala Tea Factory**
 
 ## ✨ Features
 
-- 📱 **QR-code navigation** — each station has its own code; scanning one jumps straight to that stage, no menu-hunting
+- 📱 **QR-code navigation** — each of the 21 tour stations has its own code; scanning one jumps straight to that stage, no menu-hunting
 - 🌍 **11 languages**, including right-to-left Arabic — English, Chinese, Japanese, Spanish, French, Russian, Sinhala, Arabic, Italian, German, Tamil
 - 🔄 **In-place language switching** — pick a language from the header dropdown, no page reload or navigation away
 - 🌱 **Tea Nursery station** — real photos, real video, and real process details sourced from the working factory, covering everything from site selection to transplanting and cultivar trials
-- 🏭 **Manufacturing stages** (Plucking → Packing) — supplementary walkthroughs clearly flagged as drafts, pending real on-site verification
+- 🏔️ **20 supplementary stations** — an introduction to Ceylon tea, the manufacturing stages (Plucking → Packing), and estate-wide topics like cinnamon, ginger & turmeric, organic cultivation, clonal tea, and the tea factory itself — all clearly flagged as drafts, pending real on-site verification
+- 🏡 **Kurunduwaththa Villa page** — a marketing page for the estate's stay-on-site accommodation, with its own QR code
 - 🔖 **Favorites** — bookmark stations to revisit, saved locally on-device
 - ⏱️ **Reading-time estimates** — calculated from actual content length, not guessed
 - 📴 **Offline-ready (PWA)** — installable to a home screen, tour content and video cached for spotty factory Wi-Fi
-- 🖨️ **Staff QR print sheet** — a ready-to-print page of every station's code, letterhead included
+- 🖨️ **Staff QR print sheet** — a ready-to-print page of every station's code plus two special codes (entrance overview, villa marketing), letterhead included
 
 ## 🛠️ Tech Stack
 
@@ -48,21 +49,23 @@ npm run lint       # run Oxlint
 
 ```
 src/
-├── pages/           # Home, StationDetail, QrSheet
+├── pages/           # Home, AllStations, Highlights, StationDetail, VillaPage, QrSheet
 ├── components/       # Header, LanguageGate, LanguagePicker
 ├── context/          # LanguageContext, FavoritesContext
-├── data/             # stations.ts, translations.ts, localize.ts, estimateTime.ts
+├── data/             # stations.ts, translations.ts, villa.ts, localize.ts, estimateTime.ts
 ├── i18n/              # languages.ts, ui.ts
 └── assets/            # station photos, video, brand imagery
 ```
+
+The Home page is a short landing page (hero, stats, and two buttons). The station list lives on its own `/stations` page, and the two real-photo highlight cards plus the cultivar photo strip live on `/highlights` — both reachable from Home.
 
 ## 🌐 Content Policy
 
 Station content is clearly split into two tiers:
 
 - ✅ **Verified** — the Tea Nursery station's images, video, and facts are sourced directly from the working factory
-- 🚧 **Draft** — the seven manufacturing stations are supplementary content flagged with an on-page notice, pending real verification before the tour is fully rolled out
+- 🚧 **Draft** — the other 20 stations are supplementary content flagged with an on-page notice, pending real verification before the tour is fully rolled out
 
 ## 🖨️ Printing Station QR Codes
 
-Visit `/qr-codes` for a print-ready sheet with one QR code per station, cut-line markers, and letterhead — meant for staff to print and post at each physical stop on the tour.
+Visit `/qr-codes` for a print-ready sheet with one QR code per station, cut-line markers, and letterhead — meant for staff to print and post at each physical stop on the tour. The same sheet includes two special codes, visually separated from the rest: one for the entrance that gives visitors a quick overview, and one marketing code for Kurunduwaththa Villa.
