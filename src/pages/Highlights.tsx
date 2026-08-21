@@ -23,7 +23,7 @@ export function Highlights() {
   const cultivarSection = cultivarIndex >= 0 ? localizeStation(nurseryStation, language).sections?.[cultivarIndex] : undefined;
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-tea-950">
       {/* ---------- Story: real content, text overlaid on full-bleed photography ---------- */}
       <section className="max-w-5xl mx-auto px-4 pt-10">
         <div className="grid md:grid-cols-2 gap-px bg-gold-500/25 border border-gold-500/25">
