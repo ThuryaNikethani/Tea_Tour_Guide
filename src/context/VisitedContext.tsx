@@ -1,6 +1,4 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-
-const STORAGE_KEY = "atf-tour-visited";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
 interface VisitedContextValue {
   visited: Set<string>;
@@ -10,21 +8,10 @@ interface VisitedContextValue {
 
 const VisitedContext = createContext<VisitedContextValue | undefined>(undefined);
 
-function readStored(): Set<string> {
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    return raw ? new Set(JSON.parse(raw)) : new Set();
-  } catch {
-    return new Set();
-  }
-}
-
+// In-memory only, on purpose: a page reload starts the visited count over
+// at 0, treating it as a fresh walk-through.
 export function VisitedProvider({ children }: { children: ReactNode }) {
-  const [visited, setVisited] = useState<Set<string>>(readStored);
-
-  useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify([...visited]));
-  }, [visited]);
+  const [visited, setVisited] = useState<Set<string>>(() => new Set());
 
   function markVisited(stationId: string) {
     setVisited((prev) => {
