@@ -5,6 +5,8 @@ export interface UIStrings {
   tagline: string;
   selectLanguage: string;
   changeLanguage: string;
+  translationUnreviewed: string;
+  onSiteConfirmed: string;
   startTour: string;
   allStations: string;
   backToStations: string;
@@ -15,6 +17,7 @@ export interface UIStrings {
   watchProcess: string;
   scanQrHint: string;
   unverifiedNotice: string;
+  lastVerified: string; // e.g. "Verified {date}"
   loadingVirtualTour: string;
   draftLabel: string;
   qrSheetTitle: string;
@@ -75,6 +78,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   en: {
     tagline: "Experience the art of tea production from leaf to cup",
     selectLanguage: "Select Language",
+    translationUnreviewed: "Machine-translated — not yet reviewed by a native speaker",
+    onSiteConfirmed: "Confirmed on-site",
     startTour: "Start the Tour",
     allStations: "Tour Stations",
     backToStations: "Back to all stations",
@@ -83,6 +88,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "Timing",
     scanQrHint: "Scan the QR code at each station to jump straight to that stage.",
     unverifiedNotice: "This station's content is general Ceylon tea process knowledge and hasn't been confirmed against this factory's actual process yet.",
+    lastVerified: "Verified {date}",
     loadingVirtualTour: "Loading virtual tour — this can take a few seconds…",
     draftLabel: "Draft",
     qrSheetTitle: "Station QR Codes",
@@ -105,6 +111,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   zh: {
     tagline: "体验从茶叶到茶杯的制茶艺术",
     selectLanguage: "选择语言",
+    translationUnreviewed: "机器翻译——尚未经母语者审核",
+    onSiteConfirmed: "已确认在现场",
     startTour: "开始参观",
     allStations: "参观站点",
     backToStations: "返回所有站点",
@@ -113,6 +121,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "时间",
     scanQrHint: "扫描每个站点的二维码，直接跳转到该阶段。",
     unverifiedNotice: "此站点的内容为一般性锡兰茶工艺知识，尚未与本工厂的实际流程核实。",
+    lastVerified: "验证于 {date}",
     loadingVirtualTour: "正在加载虚拟参观——这可能需要几秒钟…",
     draftLabel: "草稿",
     qrSheetTitle: "站点二维码",
@@ -135,6 +144,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   ja: {
     tagline: "茶葉からカップまで、紅茶製造の芸術を体験してください",
     selectLanguage: "言語を選択",
+    translationUnreviewed: "機械翻訳 — ネイティブスピーカーによる確認はまだです",
+    onSiteConfirmed: "現地で確認済み",
     startTour: "ツアーを開始",
     allStations: "ツアーステーション",
     backToStations: "すべてのステーションに戻る",
@@ -143,6 +154,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "所要時間",
     scanQrHint: "各ステーションのQRコードをスキャンすると、そのステージに直接移動できます。",
     unverifiedNotice: "このステーションの内容は一般的なセイロン紅茶の製造工程に関する知識であり、この工場の実際の工程で確認されたものではありません。",
+    lastVerified: "{date} に確認済み",
     loadingVirtualTour: "バーチャルツアーを読み込み中です——数秒かかる場合があります…",
     draftLabel: "下書き",
     qrSheetTitle: "ステーションQRコード",
@@ -165,6 +177,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   es: {
     tagline: "Experimente el arte de la producción de té, de la hoja a la taza",
     selectLanguage: "Seleccionar Idioma",
+    translationUnreviewed: "Traducción automática — aún no revisada por un hablante nativo",
+    onSiteConfirmed: "Confirmado en el lugar",
     startTour: "Iniciar el Recorrido",
     allStations: "Estaciones del Recorrido",
     backToStations: "Volver a todas las estaciones",
@@ -173,6 +187,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "Duración",
     scanQrHint: "Escanee el código QR en cada estación para ir directamente a esa etapa.",
     unverifiedNotice: "El contenido de esta estación es conocimiento general sobre el proceso del té de Ceilán y aún no ha sido confirmado con el proceso real de esta fábrica.",
+    lastVerified: "Verificado el {date}",
     loadingVirtualTour: "Cargando el tour virtual — esto puede tardar unos segundos…",
     draftLabel: "Borrador",
     qrSheetTitle: "Códigos QR de las Estaciones",
@@ -195,6 +210,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   fr: {
     tagline: "Découvrez l'art de la production de thé, de la feuille à la tasse",
     selectLanguage: "Sélectionner la Langue",
+    translationUnreviewed: "Traduction automatique — pas encore vérifiée par un locuteur natif",
+    onSiteConfirmed: "Confirmé sur place",
     startTour: "Commencer la Visite",
     allStations: "Stations de la Visite",
     backToStations: "Retour à toutes les stations",
@@ -203,6 +220,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "Durée",
     scanQrHint: "Scannez le code QR à chaque station pour accéder directement à cette étape.",
     unverifiedNotice: "Le contenu de cette station est une connaissance générale du processus du thé de Ceylan et n'a pas encore été confirmé par rapport au processus réel de cette usine.",
+    lastVerified: "Vérifié le {date}",
     loadingVirtualTour: "Chargement de la visite virtuelle — cela peut prendre quelques secondes…",
     draftLabel: "Brouillon",
     qrSheetTitle: "Codes QR des Stations",
@@ -225,6 +243,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   ru: {
     tagline: "Познакомьтесь с искусством производства чая от листа до чашки",
     selectLanguage: "Выбрать язык",
+    translationUnreviewed: "Машинный перевод — ещё не проверен носителем языка",
+    onSiteConfirmed: "Подтверждено на месте",
     startTour: "Начать тур",
     allStations: "Станции тура",
     backToStations: "Назад ко всем станциям",
@@ -233,6 +253,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "Время",
     scanQrHint: "Отсканируйте QR-код на каждой станции, чтобы перейти прямо к этому этапу.",
     unverifiedNotice: "Содержание этой станции представляет собой общие сведения о процессе производства цейлонского чая и пока не подтверждено в соответствии с реальным процессом на этой фабрике.",
+    lastVerified: "Проверено {date}",
     loadingVirtualTour: "Загрузка виртуального тура — это может занять несколько секунд…",
     draftLabel: "Черновик",
     qrSheetTitle: "QR-коды станций",
@@ -255,6 +276,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   si: {
     tagline: "තේ දලුවේ සිට කෝප්පය දක්වා තේ නිෂ්පාදන කලාව අත්විඳින්න",
     selectLanguage: "භාෂාව තෝරන්න",
+    translationUnreviewed: "යන්ත්‍ර පරිවර්තනයකි — දේශීය කථිකයෙකු විසින් තවම සමාලෝචනය කර නොමැත",
+    onSiteConfirmed: "ස්ථානයේ තහවුරු කරන ලදී",
     startTour: "චාරිකාව ආරම්භ කරන්න",
     allStations: "චාරිකා ස්ථාන",
     backToStations: "සියලුම ස්ථාන වෙත ආපසු",
@@ -263,6 +286,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "කාලය",
     scanQrHint: "එම අදියරට කෙලින්ම යාමට එක් එක් ස්ථානයේ QR කේතය ස්කෑන් කරන්න.",
     unverifiedNotice: "මෙම ස්ථානයේ අන්තර්ගතය සාමාන්‍ය ලංකා තේ ක්‍රියාවලිය පිළිබඳ දැනුමක් වන අතර, එය මෙම කර්මාන්තශාලාවේ සත්‍ය ක්‍රියාවලිය සමඟ තවම තහවුරු කර නොමැත.",
+    lastVerified: "{date} දින තහවුරු කරන ලදී",
     loadingVirtualTour: "මාර්ගගත චාරිකාව පූරණය වෙමින්—මෙයට තත්පර කිහිපයක් ගතවිය හැක…",
     draftLabel: "කෙටුම්පත",
     qrSheetTitle: "ස්ථාන QR කේත",
@@ -285,6 +309,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   ar: {
     tagline: "اختبر فن إنتاج الشاي من الورقة إلى الكوب",
     selectLanguage: "اختر اللغة",
+    translationUnreviewed: "ترجمة آلية — لم تتم مراجعتها بعد من قبل متحدث أصلي",
+    onSiteConfirmed: "تم التأكيد في الموقع",
     startTour: "ابدأ الجولة",
     allStations: "محطات الجولة",
     backToStations: "العودة إلى جميع المحطات",
@@ -293,6 +319,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "التوقيت",
     scanQrHint: "امسح رمز QR في كل محطة للانتقال مباشرة إلى تلك المرحلة.",
     unverifiedNotice: "محتوى هذه المحطة هو معرفة عامة بعملية إنتاج شاي سيلان ولم يتم بعد التحقق منه مقارنة بالعملية الفعلية لهذا المصنع.",
+    lastVerified: "تم التحقق في {date}",
     loadingVirtualTour: "جارٍ تحميل الجولة الافتراضية — قد يستغرق ذلك بضع ثوانٍ…",
     draftLabel: "مسودة",
     qrSheetTitle: "رموز QR للمحطات",
@@ -315,6 +342,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   it: {
     tagline: "Scopri l'arte della produzione del tè dalla foglia alla tazzina",
     selectLanguage: "Seleziona Lingua",
+    translationUnreviewed: "Traduzione automatica — non ancora rivista da un madrelingua",
+    onSiteConfirmed: "Confermato sul posto",
     startTour: "Inizia il Tour",
     allStations: "Stazioni del Tour",
     backToStations: "Torna a tutte le stazioni",
@@ -323,6 +352,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "Tempistica",
     scanQrHint: "Scansiona il codice QR di ogni stazione per passare direttamente a quella fase.",
     unverifiedNotice: "Il contenuto di questa stazione è una conoscenza generale del processo del tè di Ceylon e non è ancora stato confermato rispetto al processo reale di questa fabbrica.",
+    lastVerified: "Verificato il {date}",
     loadingVirtualTour: "Caricamento del tour virtuale in corso — potrebbe richiedere alcuni secondi…",
     draftLabel: "Bozza",
     qrSheetTitle: "Codici QR delle Stazioni",
@@ -345,6 +375,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   de: {
     tagline: "Erleben Sie die Kunst der Tee-Produktion vom Blatt bis zur Tasse",
     selectLanguage: "Sprache wählen",
+    translationUnreviewed: "Maschinell übersetzt — noch nicht von einem Muttersprachler geprüft",
+    onSiteConfirmed: "Vor Ort bestätigt",
     startTour: "Tour starten",
     allStations: "Tour-Stationen",
     backToStations: "Zurück zu allen Stationen",
@@ -353,6 +385,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "Zeitpunkt",
     scanQrHint: "Scannen Sie den QR-Code an jeder Station, um direkt zu dieser Phase zu springen.",
     unverifiedNotice: "Der Inhalt dieser Station ist allgemeines Wissen über den Ceylon-Tee-Prozess und wurde noch nicht mit dem tatsächlichen Prozess dieser Fabrik abgeglichen.",
+    lastVerified: "Verifiziert am {date}",
     loadingVirtualTour: "Virtuelle Tour wird geladen — dies kann einige Sekunden dauern…",
     draftLabel: "Entwurf",
     qrSheetTitle: "Stations-QR-Codes",
@@ -375,6 +408,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
   ta: {
     tagline: "இலையிலிருந்து கோப்பை வரை தேயிலை உற்பத்தியின் கலையை அனுபவியுங்கள்",
     selectLanguage: "மொழியைத் தேர்ந்தெடுக்கவும்",
+    translationUnreviewed: "இயந்திர மொழிபெயர்ப்பு — சொந்த மொழி பேசுபவரால் இன்னும் சரிபார்க்கப்படவில்லை",
+    onSiteConfirmed: "இடத்தில் உறுதிப்படுத்தப்பட்டது",
     startTour: "சுற்றுலாவைத் தொடங்கவும்",
     allStations: "சுற்றுலா நிலையங்கள்",
     backToStations: "அனைத்து நிலையங்களுக்கும் திரும்பு",
@@ -383,6 +418,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     duration: "நேரம்",
     scanQrHint: "அந்த கட்டத்திற்கு நேரடியாகச் செல்ல ஒவ்வொரு நிலையத்திலும் உள்ள QR குறியீட்டை ஸ்கேன் செய்யவும்.",
     unverifiedNotice: "இந்த நிலையத்தின் உள்ளடக்கம் பொதுவான இலங்கை தேயிலை செயல்முறை பற்றிய அறிவாகும், இது இந்த தொழிற்சாலையின் உண்மையான செயல்முறையுடன் இன்னும் உறுதிப்படுத்தப்படவில்லை.",
+    lastVerified: "{date} அன்று சரிபார்க்கப்பட்டது",
     loadingVirtualTour: "மெய்நிகர் பயணம் ஏற்றப்படுகிறது — இதற்கு சில வினாடிகள் ஆகலாம்…",
     draftLabel: "வரைவு",
     qrSheetTitle: "நிலைய QR குறியீடுகள்",
