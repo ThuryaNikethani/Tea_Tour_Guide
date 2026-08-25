@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Bookmark, Check, ChevronLeft, Clock, LoaderCircle, Share2, Sparkles, TriangleAlert } from "lucide-react";
+import { BadgeCheck, Bookmark, Check, ChevronLeft, Clock, LoaderCircle, Share2, Sparkles, TriangleAlert } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { useFavorites } from "../context/FavoritesContext";
 import { useVisited } from "../context/VisitedContext";
@@ -74,7 +74,14 @@ export function StationDetail() {
             </button>
           </div>
         </div>
-        {!station.heroVideo && <h1 className="font-heading font-semibold text-3xl text-tea-900 dark:text-white mb-4">{station.name}</h1>}
+        {!station.heroVideo && <h1 className="font-heading font-semibold text-3xl text-tea-900 dark:text-white mb-2">{station.name}</h1>}
+
+        {station.verified && station.lastVerified && (
+          <p className="flex items-center gap-1.5 text-tea-400 dark:text-tea-500 text-xs mb-4">
+            <BadgeCheck size={13} className="text-gold-600 dark:text-gold-400" />
+            {t("lastVerified").replace("{date}", formatVerifiedDate(station.lastVerified, language))}
+          </p>
+        )}
 
         {!station.verified && (
           <div className="flex items-start gap-2 bg-brass-300/15 border border-brass-300/50 text-brass-600 dark:text-brass-400 rounded-md px-4 py-3 text-sm mb-6">
@@ -152,6 +159,14 @@ export function StationDetail() {
       </div>
     </div>
   );
+}
+
+function formatVerifiedDate(iso: string, language: string): string {
+  try {
+    return new Date(`${iso}T00:00:00`).toLocaleDateString(language, { year: "numeric", month: "long", day: "numeric" });
+  } catch {
+    return iso;
+  }
 }
 
 function ShareButton({ title }: { title: string }) {
