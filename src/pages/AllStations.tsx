@@ -7,6 +7,7 @@ import {
   Citrus,
   Clock,
   Coffee,
+  Droplet,
   Factory,
   Flame,
   FlaskConical,
@@ -70,6 +71,7 @@ const STATION_ICONS: Record<string, LucideIcon> = {
   Coffee,
   Palmtree,
   Mountain,
+  Droplet,
 };
 
 export function AllStations() {
