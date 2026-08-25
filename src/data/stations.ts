@@ -433,6 +433,19 @@ export const STATIONS: Station[] = [
       "A single coconut palm can bear fruit for decades, and nearly every part of it — the fruit, husk, shell, and leaves — is put to some use on a working estate.",
     duration: "5-10 minutes",
   },
+  {
+    id: "jaggery-palm",
+    order: 22,
+    name: "Jaggery Palm (Kithul)",
+    shortName: "Jaggery Palm",
+    icon: "Droplet",
+    verified: false,
+    description:
+      "Sap tapped from the flower stalks of the kithul palm is boiled down into jaggery, a traditional Sri Lankan unrefined sugar. This stop covers how the sap is collected and processed into jaggery on the estate.",
+    keyPoints:
+      "Kithul jaggery is prized for its rich, caramel-like flavor and is a staple sweetener in Sri Lankan desserts; the same sap can also be fermented into toddy or distilled into arrack.",
+    duration: "5-10 minutes",
+  },
 ];
 
 export function getStation(id: string): Station | undefined {
