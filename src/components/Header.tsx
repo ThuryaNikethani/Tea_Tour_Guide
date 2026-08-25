@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Languages, Menu, Moon, Sun, X } from "lucide-react";
+import { AlertTriangle, ChevronDown, Languages, Menu, Moon, Sun, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
@@ -155,6 +155,11 @@ function LanguageDropdown() {
                   <span className="block text-tea-400 dark:text-tea-500 text-xs">{lang.englishName}</span>
                 )}
               </span>
+              {lang.code !== "en" && (
+                <span title={t("translationUnreviewed")} className="shrink-0">
+                  <AlertTriangle size={13} className="text-brass-500" aria-label={t("translationUnreviewed")} />
+                </span>
+              )}
             </button>
           ))}
         </div>
