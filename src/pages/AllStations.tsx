@@ -16,6 +16,7 @@ import {
   HandHeart,
   Layers,
   Leaf,
+  MapPin,
   Mountain,
   Package,
   Palmtree,
@@ -32,6 +33,7 @@ import {
 import { useLanguage } from "../context/LanguageContext";
 import { useFavorites } from "../context/FavoritesContext";
 import { useVisited } from "../context/VisitedContext";
+import { useOnSiteConfirmation } from "../hooks/useOnSiteConfirmation";
 import { STATIONS } from "../data/stations";
 import { localizeStation } from "../data/localize";
 import { estimateStationMinutes } from "../data/estimateTime";
@@ -73,6 +75,7 @@ const STATION_ICONS: Record<string, LucideIcon> = {
 export function AllStations() {
   const { t, language } = useLanguage();
   const { visited } = useVisited();
+  const onSiteConfirmed = useOnSiteConfirmation();
 
   return (
     <div className="bg-white dark:bg-tea-950">
@@ -91,6 +94,12 @@ export function AllStations() {
             <p className="flex items-center justify-center gap-1.5 text-gold-700 dark:text-gold-400 text-xs font-semibold uppercase tracking-[0.1em] mt-3">
               <CheckCheck size={14} />
               {visited.size} / {STATIONS.length} visited
+              {onSiteConfirmed && (
+                <span className="flex items-center gap-1 text-sage-500 dark:text-sage-400 normal-case tracking-normal font-medium">
+                  <MapPin size={12} />
+                  {t("onSiteConfirmed")}
+                </span>
+              )}
             </p>
           )}
         </div>
