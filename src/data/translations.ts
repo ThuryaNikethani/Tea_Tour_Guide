@@ -396,6 +396,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "උස් රට තේ (මීටර් 1,200 ට වඩා ඉහළින්, නුවරඑළිය සහ ඌව වැනි) සියුම් හා සුවඳවත් වන අතර, පහත රට තේ (මීටර් 600 ට වඩා පහළින්, මෙහි නිපදවන ලෙස) සාමාන්‍යයෙන් ශක්තිමත් හා තද පැහැති වේ. මෙම වතුයාය පහත රට, හෙවත් 'පහත්තරට,' නිෂ්පාදකයෙකි.",
       duration: "මිනිත්තු 5-10",
     },
+    "jaggery-palm": {
+      name: "කිතුල් හකුරු",
+      description: "කිතුල් ගසේ මල් කරලවලින් උරාගන්නා පැණි උතුරුවා සාම්ප්‍රදායික ශ්‍රී ලාංකික අශෝධිත සීනියක් වන හකුරු බවට පත් කරනු ලැබේ. මෙම නැවතුම වතුයායේ පැණි එකතු කර හකුරු බවට සකසන ආකාරය ගැන කියා දෙයි.",
+      keyPoints: "කිතුල් හකුරු එහි පොහොසත් කැරමල් රසය නිසා අගය කරනු ලබන අතර, ශ්‍රී ලාංකික අතුරුපස සඳහා ප්‍රධාන රසකාරකයකි; එම පැණියෙන්ම රා පැසවීමට හෝ ආසවනය කර අරක්කු බවට පත් කළ හැක.",
+      duration: "මිනිත්තු 5-10",
+    },
   },
   ta: {
     plucking: {
@@ -516,6 +522,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "இலங்கை தேயிலைக்கு அறிமுகம்",
       description: "இலங்கையின் காபி பயிர்கள் நோயால் அழிக்கப்பட்ட பின்னர், 1860களில் இருந்து இலங்கை வணிக ரீதியாக தேயிலையை வளர்த்து வருகிறது. இன்று 'இலங்கை தேயிலை' மூன்று முக்கிய உயர மண்டலங்களில் வளர்க்கப்படுகிறது — உயர்நில, நடுநிலை, மற்றும் தாழ்நில — ஒவ்வொன்றும் வெவ்வேறு தன்மையுடைய தேயிலையை உற்பத்தி செய்கின்றன. இந்த குறிப்பிட்ட தாழ்வான நாட்டு தோட்டத்தை சுற்றுலா ஆராயும் முன் இந்த நிறுத்தம் ஒரு தொடக்க அறிமுகமாகும்.",
       keyPoints: "உயர்நில தேயிலை (சுமார் 1,200 மீட்டருக்கு மேல், நுவரெலியா மற்றும் ஊவா போன்றவை) மென்மையானதாகவும் நறுமணமிக்கதாகவும் இருக்கும்; தாழ்நில தேயிலை (சுமார் 600 மீட்டருக்குக் கீழ், இங்கு உற்பத்தி செய்யப்படுவது போல்) பொதுவாக அதிக வலிமையும் அடர் நிறமும் கொண்டது. இந்த தோட்டம் ஒரு தாழ்வான நாட்டு, அல்லது 'பஹத்தரட' உற்பத்தியாளராகும்.",
+      duration: "5-10 நிமிடங்கள்",
+    },
+    "jaggery-palm": {
+      name: "கிதுள் வெல்லம்",
+      description: "கிதுள் பனையின் பூக்கும் தண்டுகளிலிருந்து சேகரிக்கப்படும் சாறு காய்ச்சப்பட்டு பாரம்பரிய இலங்கை சுத்திகரிக்கப்படாத சர்க்கரையான வெல்லமாக மாற்றப்படுகிறது. இந்த நிறுத்தம் தோட்டத்தில் சாறு சேகரிக்கப்பட்டு வெல்லமாக மாற்றப்படும் விதத்தை விளக்குகிறது.",
+      keyPoints: "கிதுள் வெல்லம் அதன் வளமான கேரமல் சுவைக்காக மதிக்கப்படுகிறது மற்றும் இலங்கை இனிப்புகளில் முக்கிய இனிப்பு பொருளாகும்; அதே சாறு புளிக்க வைக்கப்பட்டு கள்ளாகவோ அல்லது வடிகட்டி அரக்காகவோ மாற்றப்படலாம்.",
       duration: "5-10 நிமிடங்கள்",
     },
   },
@@ -640,6 +652,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Il tè d'alta quota (sopra circa 1.200 m, come a Nuwara Eliya e Uva) tende a essere delicato e aromatico; il tè di pianura (sotto circa 600 m, come quello prodotto qui) è generalmente più forte e scuro. Questa tenuta è una produttrice di pianura, o 'Pahatharata.'",
       duration: "5-10 minuti",
     },
+    "jaggery-palm": {
+      name: "Palma da Jaggery (Kithul)",
+      description: "La linfa raccolta dagli steli fiorali della palma kithul viene fatta bollire fino a diventare jaggery, uno zucchero grezzo tradizionale dello Sri Lanka. Questa tappa spiega come la linfa viene raccolta e trasformata in jaggery nella tenuta.",
+      keyPoints: "Il jaggery di kithul è apprezzato per il suo ricco sapore simile al caramello ed è un dolcificante base nei dolci dello Sri Lanka; la stessa linfa può anche essere fermentata in toddy o distillata in arrack.",
+      duration: "5-10 minuti",
+    },
   },
   ar: {
     plucking: {
@@ -760,6 +778,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "مقدمة عن شاي سيلان",
       description: "تزرع سريلانكا الشاي تجاريًا منذ ستينيات القرن التاسع عشر، بعد أن دمّر مرض محاصيل البن في الجزيرة. واليوم يُزرع 'شاي سيلان' عبر ثلاث مناطق ارتفاع رئيسية — الأراضي المرتفعة والمتوسطة والمنخفضة — تنتج كل منها طابعًا مختلفًا من الشاي. هذه المحطة توجيه تمهيدي قبل أن تستكشف الجولة هذه المزرعة المحددة من الأراضي المنخفضة.",
       keyPoints: "يميل شاي الأراضي المرتفعة (فوق حوالي 1,200 متر، كما في نوارا إليا وأوفا) إلى أن يكون رقيقًا وعطريًا؛ بينما شاي الأراضي المنخفضة (أقل من حوالي 600 متر، كما يُنتج هنا) عادة ما يكون أقوى وأغمق. هذه المزرعة منتجة للأراضي المنخفضة، أو 'باهاتارتا.'",
+      duration: "5-10 دقائق",
+    },
+    "jaggery-palm": {
+      name: "نخيل الجاجري (كيثول)",
+      description: "يُغلى النسغ المستخرج من سيقان أزهار نخيل الكيثول حتى يتحول إلى الجاجري، وهو سكر خام تقليدي من سريلانكا. تتناول هذه المحطة كيفية جمع النسغ وتحويله إلى جاجري في المزرعة.",
+      keyPoints: "يُقدَّر جاجري الكيثول لنكهته الغنية الشبيهة بالكراميل، وهو مُحلٍّ أساسي في الحلويات السريلانكية؛ كما يمكن تخمير النسغ نفسه لصنع التودي أو تقطيره لصنع الأراك.",
       duration: "5-10 دقائق",
     },
   },
@@ -884,6 +908,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Высокогорный чай (выше примерно 1200 м, как в Нувара-Элии и Уве) обычно нежный и ароматный; низинный чай (ниже примерно 600 м, как здесь) обычно крепче и темнее. Эта плантация относится к низинным производителям, или «Пахатарата».",
       duration: "5–10 минут",
     },
+    "jaggery-palm": {
+      name: "Пальма Джаггери (Китул)",
+      description: "Сок, собираемый из цветоносов пальмы китул, вываривается до состояния джаггери — традиционного неочищенного сахара Шри-Ланки. Эта остановка рассказывает о том, как сок собирают и превращают в джаггери на плантации.",
+      keyPoints: "Джаггери из китула ценится за насыщенный карамельный вкус и является основным подсластителем в шри-ланкийских десертах; тот же сок можно также сбраживать в тодди или перегонять в арак.",
+      duration: "5–10 минут",
+    },
   },
   de: {
     plucking: {
@@ -1004,6 +1034,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Einführung in Ceylon-Tee",
       description: "Sri Lanka baut seit den 1860er-Jahren kommerziell Tee an, nachdem die Kaffeekulturen der Insel durch eine Krankheit vernichtet worden waren. Heute wird 'Ceylon-Tee' in drei Haupthöhenzonen angebaut — Hochland, Mittelland und Tiefland —, von denen jede einen anderen Teecharakter hervorbringt. Diese Station ist eine einführende Orientierung, bevor die Tour dieses spezielle Tiefland-Anwesen erkundet.",
       keyPoints: "Hochlandtee (oberhalb von etwa 1.200 m, wie in Nuwara Eliya und Uva) ist tendenziell fein und aromatisch; Tieflandtee (unterhalb von etwa 600 m, wie hier produziert) ist typischerweise kräftiger und dunkler. Dieses Anwesen ist ein Tiefland-, oder 'Pahatharata'-Produzent.",
+      duration: "5-10 Minuten",
+    },
+    "jaggery-palm": {
+      name: "Jaggery-Palme (Kithul)",
+      description: "Der aus den Blütenstielen der Kithul-Palme gewonnene Saft wird zu Jaggery eingekocht, einem traditionellen unraffinierten Zucker aus Sri Lanka. Diese Station zeigt, wie der Saft gesammelt und vor Ort zu Jaggery verarbeitet wird.",
+      keyPoints: "Kithul-Jaggery wird für seinen reichen, karamellartigen Geschmack geschätzt und ist ein wichtiges Süßungsmittel in sri-lankischen Desserts; derselbe Saft kann auch zu Toddy vergoren oder zu Arrak destilliert werden.",
       duration: "5-10 Minuten",
     },
   },
@@ -1128,6 +1164,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "El té de tierras altas (por encima de aproximadamente 1.200 m, como en Nuwara Eliya y Uva) tiende a ser delicado y aromático; el té de tierras bajas (por debajo de unos 600 m, como el que se produce aquí) suele ser más fuerte y oscuro. Esta finca es una productora de tierras bajas, o 'Pahatharata.'",
       duration: "5-10 minutos",
     },
+    "jaggery-palm": {
+      name: "Palma de Jaggery (Kithul)",
+      description: "La savia extraída de los tallos florales de la palma kithul se hierve hasta convertirse en jaggery, un azúcar sin refinar tradicional de Sri Lanka. Esta parada explica cómo se recolecta la savia y se procesa hasta convertirse en jaggery en la finca.",
+      keyPoints: "El jaggery de kithul se aprecia por su intenso sabor a caramelo y es un edulcorante básico en los postres de Sri Lanka; la misma savia también puede fermentarse en toddy o destilarse en arrack.",
+      duration: "5-10 minutos",
+    },
   },
   fr: {
     plucking: {
@@ -1248,6 +1290,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Introduction au Thé de Ceylan",
       description: "Le Sri Lanka cultive du thé de façon commerciale depuis les années 1860, après que les cultures de café de l'île ont été anéanties par une maladie. Aujourd'hui, le « thé de Ceylan » est cultivé dans trois principales zones d'altitude — hautes terres, moyennes terres et basses terres — chacune produisant un thé de caractère différent. Cette étape est une orientation de départ avant que la visite n'explore cette plantation de basses terres en particulier.",
       keyPoints: "Le thé de hautes terres (au-dessus d'environ 1 200 m, comme à Nuwara Eliya et Uva) tend à être délicat et aromatique ; le thé de basses terres (en dessous d'environ 600 m, comme celui produit ici) est généralement plus fort et plus foncé. Cette plantation est une productrice de basses terres, ou « Pahatharata ».",
+      duration: "5-10 minutes",
+    },
+    "jaggery-palm": {
+      name: "Palmier à Jaggery (Kithul)",
+      description: "La sève récoltée sur les tiges florales du palmier kithul est bouillie jusqu'à devenir du jaggery, un sucre non raffiné traditionnel du Sri Lanka. Cette étape explique comment la sève est collectée et transformée en jaggery sur le domaine.",
+      keyPoints: "Le jaggery de kithul est apprécié pour sa saveur riche proche du caramel et constitue un édulcorant de base dans les desserts sri-lankais ; la même sève peut aussi être fermentée en toddy ou distillée en arrack.",
       duration: "5-10 minutes",
     },
   },
@@ -1372,6 +1420,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "高地茶（海拔约1200米以上，如努沃勒埃利耶和乌瓦地区）通常口感细腻、香气高扬；低地茶（海拔约600米以下，如本庄园所产）则通常更为浓烈、色泽更深。本庄园属于低地（“Pahatharata”）茶产区。",
       duration: "5-10分钟",
     },
+    "jaggery-palm": {
+      name: "基图尔糖棕（贾格里糖）",
+      description: "从基图尔棕榈花梗中采集的树液经熬煮后制成贾格里糖，一种传统的斯里兰卡未精炼糖。本站介绍庄园中树液的采集与熬制成糖的过程。",
+      keyPoints: "基图尔贾格里糖因浓郁的焦糖风味而备受推崇，是斯里兰卡甜点中的基本甜味剂；同样的树液也可以发酵成托迪酒或蒸馏成亚力酒。",
+      duration: "5-10分钟",
+    },
   },
   ja: {
     plucking: {
@@ -1492,6 +1546,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "セイロンティー入門",
       description: "スリランカでは1860年代から商業的に茶が栽培されてきました。それ以前、島のコーヒー作物が病害によって壊滅したことがきっかけです。現在「セイロンティー」は、高地・中地・低地という3つの主要な標高帯で栽培されており、それぞれ異なる特徴の茶が生まれます。このストップは、この低地農園を巡るツアーの導入部です。",
       keyPoints: "高地茶（ヌワラエリヤやウバなど、標高約1,200m以上）は繊細で香り高い傾向があり、低地茶（ここで生産されるような標高約600m未満）は一般により力強く色が濃くなります。この農園は低地（「パハタラタ」）産地です。",
+      duration: "5〜10分",
+    },
+    "jaggery-palm": {
+      name: "キトゥルヤシ（ジャガリー）",
+      description: "キトゥルヤシの花茎から採取した樹液を煮詰めて作られるのが、スリランカ伝統の未精製糖ジャガリーです。このストップでは、農園で樹液がどのように採取され、ジャガリーへと加工されるかを紹介します。",
+      keyPoints: "キトゥルジャガリーは濃厚なキャラメルのような風味で知られ、スリランカのデザートに欠かせない甘味料です。同じ樹液はトディ酒として発酵させたり、蒸留してアラックにすることもできます。",
       duration: "5〜10分",
     },
   },
