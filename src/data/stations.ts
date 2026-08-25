@@ -13,6 +13,8 @@ export interface Station {
   icon: string;
   /** Real, verified content sourced from the factory's own site vs. generic placeholder copy. */
   verified: boolean;
+  /** ISO date (YYYY-MM-DD) this station's facts were last checked against the source. Only set for `verified: true` stations. */
+  lastVerified?: string;
   /** Simple stations (placeholder ones) use description/keyPoints/duration. */
   description?: string;
   keyPoints?: string;
@@ -94,6 +96,7 @@ export const STATIONS: Station[] = [
     shortName: "Nursery",
     icon: "Sprout",
     verified: true,
+    lastVerified: "2026-08-19",
     heroVideo: "/videos/up-BFVRBJ77.mp4",
     heroTagline: "Follow along step by step as we grow a tea plant from cutting to field-ready sapling.",
     processVideo: "/videos/w-2xBsbRpT.mp4",
@@ -434,4 +437,18 @@ export const STATIONS: Station[] = [
 
 export function getStation(id: string): Station | undefined {
   return STATIONS.find((s) => s.id === id);
+}
+
+// Dev-only schema check — code-split out of the production bundle so it
+// never runs (or ships) for real visitors. Fails loudly in `npm run dev`
+// if a station is missing required fields, has a duplicate id/order, or
+// is marked verified without a lastVerified date.
+if (import.meta.env.DEV) {
+  import("./stations.schema").then(({ stationsSchema }) => {
+    const result = stationsSchema.safeParse(STATIONS);
+    if (!result.success) {
+      const issues = result.error.issues.map((issue) => `  - [${issue.path.join(".")}] ${issue.message}`).join("\n");
+      throw new Error(`STATIONS data failed schema validation:\n${issues}`);
+    }
+  });
 }
