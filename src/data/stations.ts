@@ -1,7 +1,19 @@
+/** A single distinct item within a section, e.g. one product on a "products" page. */
+export interface StationSubItem {
+  heading: string;
+  body: string;
+  image?: string | string[];
+  /** Short pipe-separated highlights, e.g. "100% Natural | No Artificial Flavors | Rich Aroma". */
+  tags?: string;
+}
+
 export interface StationSection {
   heading: string;
   body: string;
-  image?: string;
+  /** A single page can show one image, or a couple side by side (e.g. two product photos). */
+  image?: string | string[];
+  /** When set, renders each as its own card (image + heading + body + tags) instead of one blended paragraph. */
+  items?: StationSubItem[];
 }
 
 export interface Station {
@@ -38,6 +50,10 @@ export interface StationTranslation {
   heroTagline?: string;
   sectionHeadings?: string[];
   sectionBodies?: string[];
+  /** Indexed [sectionIndex][itemIndex] — only needed for sections that use `items` (see StationSection). */
+  itemHeadings?: string[][];
+  itemBodies?: string[][];
+  itemTags?: string[][];
   description?: string;
   keyPoints?: string;
   duration?: string;
@@ -59,6 +75,27 @@ import tri2022Img from "../assets/nursery/gallery/pla5-BlOJ1RbK.jpg";
 import tri2043Img from "../assets/nursery/gallery/pla9-moj4O07C.jpg";
 import tri4006Img from "../assets/nursery/gallery/pla13-CsUH1VFU.jpg";
 import tri3025Img from "../assets/nursery/gallery/pla17-CN4UIDLb.jpg";
+// Real photos from the factory's own cinnamon plantation and product line.
+import cinnamonTreeImg from "../assets/cinnamon/cinnamon-tree.webp";
+import cinnamonFruitImg from "../assets/cinnamon/cinnamon-fruit.jpg";
+import cinnamonPlantationImg from "../assets/cinnamon/cinnamon-plantation.jpg";
+import cinnamonLeavesImg from "../assets/cinnamon/cinnamon-leaves.webp";
+import cinnamonTeaBoxImg from "../assets/cinnamon/cinnamon-tea-box.jpg";
+import flavouredCinnamonTeaImg from "../assets/cinnamon/flavoured-cinnamon-tea.jpg";
+// Real photos from the factory's own ginger plantation and product line.
+import gingerPlantImg from "../assets/ginger/ginger-plant.jpg";
+import gingerRhizomeImg from "../assets/ginger/ginger-rhizome.jpg";
+import gingerField1Img from "../assets/ginger/ginger-field-1.jpg";
+import gingerField2Img from "../assets/ginger/ginger-field-2.webp";
+import gingerTeaBoxImg from "../assets/ginger/ginger-tea-box.jpg";
+import flavouredGingerTeaImg from "../assets/ginger/flavoured-ginger-tea.jpg";
+// Real photos from the factory's own bee/pollinator microsite. Each file is
+// pre-cropped to this station's banner/pair aspect ratio so the whole bee
+// stays in frame instead of being cut off by the object-cover crop.
+import beeFlightImg from "../assets/bee/bee-flight.jpg";
+import beeOnYellowFlowerImg from "../assets/bee/bee-on-yellow-flower.jpg";
+import beePollenBasketImg from "../assets/bee/bee-pollen-basket.jpg";
+import beeWildflowerImg from "../assets/bee/bee-wildflower.jpeg";
 
 /**
  * The "nursery" station's images and videos are real — sourced from the
@@ -67,6 +104,42 @@ import tri3025Img from "../assets/nursery/gallery/pla17-CN4UIDLb.jpg";
  * product names, steps) but is written in fresh, original wording rather
  * than copied verbatim, per the user's 2026-08-19 instruction: only take
  * images/video directly from the source, write unique content around them.
+ * The "introduction" station's facts (1824 Peradeniya planting, the 1869
+ * coffee rust collapse, the seven tea-growing regions) are likewise real,
+ * sourced from a physical "Story of Ceylon Tea" signboard photographed
+ * on-site at the estate on 2026-08-26, rewritten rather than copied verbatim.
+ * The "cinnamon" station's facts and the two product photos are sourced
+ * from the factory's own cinnamon microsite (cinnamon-atf.netlify.app) on
+ * 2026-08-26 — rewritten rather than copied verbatim. Only the two branded
+ * product-packaging photos were reused here; the rest of that site's plant
+ * photography was skipped because at least one image there (a leaf close-up)
+ * carried a visible third-party watermark ("tradewindsfruit.com"). The user
+ * confirmed on 2026-08-26 that the remaining plant/plantation photos are the
+ * factory's own, so those were added too (tree, fruit, leaves, plantation
+ * row); the watermarked photo itself was still excluded.
+ * The "ginger-turmeric" station (now "Ginger Plantation") was similarly
+ * sourced from the factory's ginger microsite (ginger-atf.netlify.app) on
+ * 2026-08-26 — rewritten rather than copied verbatim. One image there (a
+ * top-down leaf shot) carried a visible "dreamstime" stock-photo watermark
+ * and was excluded; the rest are the factory's own. That site only covers
+ * ginger, not turmeric, so turmeric was split out into its own separate
+ * "turmeric" station (kept unverified, as before) rather than guessing at
+ * verified turmeric facts that don't exist yet.
+ * The "bee" station's facts are likewise sourced from the factory's own
+ * pollinator microsite (bee-atf.netlify.app) on 2026-08-26, rewritten rather
+ * than copied verbatim. That site's photos are professional-quality macro
+ * shots (studio lighting, extreme focus-stacking) unlike the casual phone
+ * photography on the cinnamon/ginger sites, so they were initially withheld
+ * pending confirmation; the user confirmed on 2026-08-26 that these were
+ * taken on their own farm, so four were added (intro, characteristics, and
+ * a pair for habitat/behaviour). Every one of the four is pre-cropped
+ * (before being imported here) to the exact aspect ratio its slot renders
+ * at — 2.86:1 for the two single-image banners, 1.41:1 for the side-by-side
+ * habitat pair — centred on the bee's own bounding box rather than the
+ * photo's centre, so the component's object-cover crop has nothing left to
+ * trim and the whole insect stays in frame. An earlier extreme close-up
+ * (just the compound eyes/antennae) was dropped entirely since no crop of
+ * it read as a recognisable bee once squeezed into the banner ratio.
  * The 7 manufacturing-process stations below it (plucking through packing)
  * are standard Ceylon tea-production knowledge — supplementary content the
  * old site doesn't cover at all, added deliberately to fill out the tour.
@@ -82,11 +155,12 @@ export const STATIONS: Station[] = [
     name: "Introduction to Ceylon Tea",
     shortName: "Introduction",
     icon: "Mountain",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-08-26",
     description:
-      "Sri Lanka has grown tea commercially since the 1860s, after coffee crops on the island were wiped out by disease. Today 'Ceylon tea' is grown across three main elevation zones — high-grown, mid-grown, and low-grown — each producing a different character of tea. This stop is a starting orientation before the tour explores this particular low-country estate.",
+      "Since the early 1800s, the name \"Ceylon\" has been synonymous with tea. The history of Ceylon tea runs back to the British rule in Sri Lanka over two hundred years ago. The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. A few years later, more tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
     keyPoints:
-      "High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker. This estate is a low-country, or 'Pahatharata,' producer.",
+      "The story of Ceylon tea started on a 19-acre plot of land in Kandy as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa. High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker — this estate is a low-country, or 'Pahatharata,' producer.",
     duration: "5-10 minutes",
   },
   {
@@ -283,25 +357,166 @@ export const STATIONS: Station[] = [
     name: "Cinnamon Plantation",
     shortName: "Cinnamon",
     icon: "TreePine",
-    verified: false,
-    description:
-      "Sri Lanka grows most of the world's true cinnamon. This stop covers how cinnamon bark is grown, peeled, and dried into the quills sold as cinnamon sticks.",
-    keyPoints:
-      "True Ceylon cinnamon is hand-peeled from young shoots and rolled into quills, unlike the thicker cassia bark commonly sold elsewhere.",
-    duration: "5-10 minutes",
+    verified: true,
+    lastVerified: "2026-08-26",
+    heroTagline: "From a fragrant evergreen tree to the factory's own cinnamon teas.",
+    sections: [
+      {
+        heading: "About the Cinnamon Tree",
+        image: cinnamonTreeImg,
+        body: "Cinnamomum verum — sold as 'true cinnamon' or Ceylon cinnamon — is a small evergreen tree in the laurel family, native to Sri Lanka and southern India. It's the tree's inner bark that matters commercially: peeled, dried, and rolled into the familiar cinnamon quills. Given well-drained soil and steady tropical rainfall, the tree also yields leaves and an essential oil valued in cooking and traditional medicine worldwide.",
+      },
+      {
+        heading: "Characteristics",
+        image: cinnamonFruitImg,
+        body: "A quick look at the tree itself:",
+        items: [
+          { heading: "Height", body: "Up to 10 to 15 metres tall." },
+          { heading: "Leaves", body: "Glossy, oval leaves 7 to 18 centimetres long, each marked by three prominent veins and releasing a spicy scent when crushed." },
+          { heading: "Flowers", body: "Small, greenish-white to yellow flowers, arranged in loose, mildly fragrant panicles." },
+          { heading: "Fruit", body: "A small, dark purple-to-black drupe about a centimetre long, containing a single seed." },
+          { heading: "Habitat", body: "Tropical evergreen forest, with warm conditions and well-drained loamy soil." },
+        ],
+      },
+      {
+        heading: "Benefits",
+        image: [cinnamonLeavesImg, cinnamonPlantationImg],
+        body: "Cinnamon's value goes well beyond the kitchen:",
+        items: [
+          { heading: "Culinary Uses", body: "Used in both sweet and savoury dishes, drinks, and baking — Ceylon cinnamon has a milder, more delicate sweetness than the stronger, thicker-barked cassia varieties sold in many markets." },
+          { heading: "Medicinal Properties", body: "Carries antioxidant, anti-inflammatory, and antimicrobial properties, traditionally used to help regulate blood sugar, support digestion, and promote heart health; its essential oil has a long history in traditional medicine and aromatherapy." },
+          { heading: "Ecological Importance", body: "The trees add to the biodiversity of tropical forests, provide nectar for pollinators, and support agroforestry systems that let local farmers grow cinnamon alongside other crops sustainably." },
+        ],
+      },
+      {
+        heading: "Cinnamon Tea Products",
+        body: "The factory produces two premium cinnamon tea blends, crafted from natural Sri Lankan cinnamon for a pure, aromatic experience.",
+        items: [
+          {
+            heading: "Cinnamon Tea",
+            image: cinnamonTeaBoxImg,
+            body: "Pure Ceylon cinnamon combined with fine tea leaves offers a warm, soothing beverage with subtle spice notes — ideal for relaxing after meals or starting your morning with a refreshing kick.",
+            tags: "100% Natural | No Artificial Flavors | Rich Aroma",
+          },
+          {
+            heading: "Flavoured Cinnamon Tea",
+            image: flavouredCinnamonTeaImg,
+            body: "A unique blend infused with natural cinnamon flavour and aromatic herbs, bringing out a harmony of sweetness, spice, and fragrance — one of the factory's signature blends.",
+            tags: "Naturally Flavored | Smooth & Refreshing | Premium Quality",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "ginger-turmeric",
     order: 11,
-    name: "Ginger & Turmeric Plantation",
-    shortName: "Ginger & Turmeric",
+    name: "Ginger Plantation",
+    shortName: "Ginger",
+    icon: "Leaf",
+    verified: true,
+    lastVerified: "2026-08-26",
+    heroTagline: "From a fragrant tropical rhizome to the factory's own ginger teas.",
+    sections: [
+      {
+        heading: "About the Ginger Plant",
+        image: gingerPlantImg,
+        body: "Zingiber officinale — the ginger plant — is a perennial herb in the Zingiberaceae family, widely grown in tropical and subtropical regions including Sri Lanka and India. It's the underground rhizome that matters most: used as a spice and medicine for centuries. Ginger thrives in warm, humid climates with rich, well-drained soil, and plays a central role in traditional cuisine and herbal medicine across many cultures.",
+      },
+      {
+        heading: "Characteristics",
+        image: gingerRhizomeImg,
+        body: "A quick look at the plant itself:",
+        items: [
+          { heading: "Height", body: "Up to 1 to 1.5 metres tall." },
+          { heading: "Leaves", body: "Long, narrow, lance-shaped leaves 15 to 30 centimetres long, arranged alternately along the stem." },
+          { heading: "Flowers", body: "Small, yellowish-green flowers with purple lips, borne on separate shoots emerging from the rhizome." },
+          { heading: "Fruit", body: "Rarely produced in cultivation; a small capsule containing several seeds." },
+          { heading: "Habitat", body: "Warm, humid climates with partial shade and fertile, well-drained soil." },
+        ],
+      },
+      {
+        heading: "Benefits",
+        image: [gingerField1Img, gingerField2Img],
+        body: "Ginger's value goes well beyond the kitchen:",
+        items: [
+          { heading: "Culinary Uses", body: "Fresh and dried ginger are essential in cuisines worldwide, used in curries, soups, sweets, beverages, and sauces for their pungent, spicy flavour and aroma." },
+          { heading: "Medicinal Properties", body: "Contains bioactive compounds like gingerol with anti-inflammatory, antioxidant, and digestive benefits; commonly used to relieve nausea, improve digestion, and reduce cold symptoms." },
+          { heading: "Ecological Importance", body: "Ginger cultivation supports sustainable farming systems, enriches soil biodiversity, and provides income for smallholder farmers in tropical regions." },
+        ],
+      },
+      {
+        heading: "Ginger Tea Products",
+        body: "The factory produces two ginger tea blends, made from high-quality Sri Lankan ginger for a naturally spicy and refreshing experience.",
+        items: [
+          {
+            heading: "Ginger Tea",
+            image: gingerTeaBoxImg,
+            body: "Pure Ceylon tea infused with natural ginger extract offers a revitalising and aromatic drink — perfect for soothing the throat and aiding digestion.",
+            tags: "100% Natural | No Artificial Flavors | Rich Aroma",
+          },
+          {
+            heading: "Flavoured Ginger Tea",
+            image: flavouredGingerTeaImg,
+            body: "A delightful fusion of ginger and herbal flavours, providing warmth, freshness, and balance in every sip — a true harmony of nature and flavour.",
+            tags: "Naturally Flavored | Smooth & Refreshing | Premium Quality",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "turmeric",
+    order: 23,
+    name: "Turmeric Plantation",
+    shortName: "Turmeric",
     icon: "Leaf",
     verified: false,
     description:
-      "Ginger and turmeric are grown alongside tea on many Sri Lankan estates. This stop covers how both root crops are grown, harvested, and used.",
+      "Turmeric is grown alongside ginger and tea on many Sri Lankan estates. This stop covers how the rhizome is grown, harvested, and used in cooking and traditional medicine.",
     keyPoints:
-      "Both are rhizome crops, harvested by digging up the root rather than picking leaves, and both are staples of Sri Lankan cooking and traditional medicine.",
+      "Like ginger, turmeric is a rhizome crop harvested by digging up the root rather than picking leaves, valued both as a spice and for its use in traditional Ayurvedic medicine.",
     duration: "5-10 minutes",
+  },
+  {
+    id: "bee",
+    order: 24,
+    name: "Honeybees",
+    shortName: "Bees",
+    icon: "Bug",
+    verified: true,
+    lastVerified: "2026-08-26",
+    heroTagline: "Nature's tireless pollinator, hard at work across the estate.",
+    sections: [
+      {
+        heading: "About the Honeybee",
+        image: beeWildflowerImg,
+        body: "Apis mellifera — the honeybee — is one of the world's most important pollinators, admired for its remarkable teamwork, honey production, and essential role in ecosystems everywhere. A small, striped insect with two pairs of wings, a stinger, and an excellent sense of smell, it has adapted to life in highly organised colonies found on nearly every continent.",
+      },
+      {
+        heading: "Characteristics",
+        image: beeFlightImg,
+        body: "A quick look at what makes a honeybee tick:",
+        items: [
+          { heading: "Common Name", body: "Known simply as the honeybee." },
+          { heading: "Speed", body: "Can fly at speeds of up to 15 mph (24 km/h)." },
+          { heading: "Heart Rate", body: "A very high metabolism drives a heart rate of around 150 to 200 beats per minute." },
+          { heading: "Wings", body: "Two pairs of transparent wings beat up to 230 times per second." },
+          { heading: "Memory", body: "An excellent memory helps bees recognise flowers, hive locations, and scents." },
+          { heading: "Main Features", body: "A small body with yellow and black stripes, two pairs of wings, a stinger, compound eyes, and a strong sense of smell." },
+        ],
+      },
+      {
+        heading: "Habitat & Behaviour",
+        image: [beeOnYellowFlowerImg, beePollenBasketImg],
+        body: "Where bees live, and why they matter:",
+        items: [
+          { heading: "Natural Habitat", body: "Found worldwide in meadows, gardens, woodlands, orchards, and farms, building hives in tree hollows, man-made structures, or underground cavities depending on the species." },
+          { heading: "Diet & Behaviour", body: "Bees feed mainly on nectar for energy and pollen for protein. They're highly social insects, living in colonies with a queen, workers, and drones, and play a crucial role in pollination." },
+          { heading: "Conservation Status", body: "Many bee populations are declining due to pesticide use, habitat loss, disease, and climate change, so conservation efforts now focus on sustainable farming, reducing pesticide use, and protecting natural habitats." },
+        ],
+      },
+    ],
   },
   {
     id: "pahatharata-manufacturing",
