@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import { motion } from "framer-motion";
-import { BadgeCheck, Bookmark, Check, ChevronLeft, Clock, LoaderCircle, Share2, Sparkles, TriangleAlert } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { BadgeCheck, Bookmark, Check, ChevronLeft, ChevronRight, Clock, Leaf, LoaderCircle, Share2, Sparkles, TriangleAlert } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { useFavorites } from "../context/FavoritesContext";
 import { useVisited } from "../context/VisitedContext";
@@ -16,9 +16,11 @@ export function StationDetail() {
   const { markVisited } = useVisited();
   const rawStation = id ? getStation(id) : undefined;
   const station = rawStation ? localizeStation(rawStation, language) : undefined;
+  const [sectionIndex, setSectionIndex] = useState(0);
 
   useEffect(() => {
     if (rawStation) markVisited(rawStation.id);
+    setSectionIndex(0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rawStation?.id]);
 
@@ -26,6 +28,13 @@ export function StationDetail() {
 
   const favorited = isFavorite(station.id);
   const minutes = estimateStationMinutes(station);
+  const totalSections = station.sections?.length ?? 0;
+  const isLastSection = sectionIndex === totalSections - 1;
+
+  function goToSection(index: number) {
+    setSectionIndex(index);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   return (
     <div>
@@ -90,32 +99,101 @@ export function StationDetail() {
           </div>
         )}
 
-        {station.sections ? (
-          <div className="space-y-7">
-            {station.sections.map((section, i) => (
+        {station.sections ? (() => {
+          const currentSection = station.sections![sectionIndex];
+          return (
+          <div>
+            <AnimatePresence mode="wait">
               <motion.section
-                key={section.heading}
-                id={`section-${i}`}
-                className="scroll-mt-32"
+                key={sectionIndex}
                 initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.3 }}
               >
-                {section.image && (
-                  <img
-                    src={section.image}
-                    alt={section.heading}
-                    loading="lazy"
-                    className="w-full h-56 object-cover rounded-md mb-3 shadow-sm"
-                  />
+                {currentSection.image && (
+                  Array.isArray(currentSection.image) ? (
+                    <div className="grid grid-cols-2 gap-2 mb-3">
+                      {currentSection.image.map((src) => (
+                        <img
+                          key={src}
+                          src={src}
+                          alt={currentSection.heading}
+                          loading="lazy"
+                          className="w-full h-56 object-cover rounded-md shadow-sm"
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <img
+                      src={currentSection.image}
+                      alt={currentSection.heading}
+                      loading="lazy"
+                      className="w-full h-56 object-cover rounded-md mb-3 shadow-sm"
+                    />
+                  )
                 )}
-                <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-2">{section.heading}</h2>
-                <p className="text-tea-800 dark:text-tea-200 leading-relaxed">{section.body}</p>
+                <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-2">{currentSection.heading}</h2>
+                <p className="text-tea-800 dark:text-tea-200 leading-relaxed">{currentSection.body}</p>
+
+                {currentSection.items && (
+                  <div className="mt-6 grid sm:grid-cols-2 gap-4">
+                    {currentSection.items.map((item) => (
+                      <div key={item.heading} className="flex flex-col h-full bg-tea-50 dark:bg-tea-900 border border-tea-200 dark:border-tea-700 rounded-md overflow-hidden">
+                        {item.image && (
+                          Array.isArray(item.image) ? (
+                            <div className="grid grid-cols-2 gap-0.5">
+                              {item.image.map((src) => (
+                                <img key={src} src={src} alt={item.heading} loading="lazy" className="w-full h-auto" />
+                              ))}
+                            </div>
+                          ) : (
+                            <img src={item.image} alt={item.heading} loading="lazy" className="w-full h-auto" />
+                          )
+                        )}
+                        <div className="flex-1 flex flex-col p-4">
+                          <h3 className="font-heading font-semibold text-lg text-tea-900 dark:text-white mb-1.5">{item.heading}</h3>
+                          <p className="text-tea-800 dark:text-tea-200 leading-relaxed text-sm">{item.body}</p>
+                          {item.tags && (
+                            <p className="flex items-center gap-1.5 text-gold-700 dark:text-gold-400 text-xs font-semibold mt-auto pt-3">
+                              <Leaf size={13} />
+                              {item.tags}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </motion.section>
-            ))}
+            </AnimatePresence>
+
+            <div className="flex items-center justify-between mt-7 pt-4 border-t border-tea-100 dark:border-tea-800">
+              <button
+                type="button"
+                onClick={() => goToSection(sectionIndex - 1)}
+                disabled={sectionIndex === 0}
+                className="flex items-center gap-1 text-sm font-medium text-tea-700 dark:text-tea-200 hover:text-gold-600 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+              >
+                <ChevronLeft size={16} />
+                {t("previousSection")}
+              </button>
+              <span className="text-xs text-tea-400 dark:text-tea-500">
+                {t("sectionOf").replace("{current}", String(sectionIndex + 1)).replace("{total}", String(totalSections))}
+              </span>
+              <button
+                type="button"
+                onClick={() => goToSection(sectionIndex + 1)}
+                disabled={isLastSection}
+                className="flex items-center gap-1 text-sm font-medium text-tea-700 dark:text-tea-200 hover:text-gold-600 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+              >
+                {t("nextSection")}
+                <ChevronRight size={16} />
+              </button>
+            </div>
           </div>
-        ) : (
+          );
+        })() : (
           <>
             <p className="text-tea-800 dark:text-tea-200 leading-relaxed mb-6">{station.description}</p>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
@@ -137,7 +215,7 @@ export function StationDetail() {
           </>
         )}
 
-        {station.processVideo && (
+        {station.processVideo && (!station.sections || isLastSection) && (
           <section className="mt-8">
             <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-3">{t("watchProcess")}</h2>
             <video
@@ -149,7 +227,7 @@ export function StationDetail() {
           </section>
         )}
 
-        {station.virtualTourUrl && (
+        {station.virtualTourUrl && (!station.sections || isLastSection) && (
           <section className="mt-8">
             <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-3">{t("virtualTour")}</h2>
             <VirtualTourEmbed url={station.virtualTourUrl} title={t("virtualTour")} />
