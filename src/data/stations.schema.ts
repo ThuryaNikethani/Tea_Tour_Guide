@@ -5,10 +5,18 @@ import { z } from "zod";
  * for dev-time validation (see the bottom of stations.ts) — never imported
  * by the production bundle.
  */
+const stationSubItemSchema = z.object({
+  heading: z.string().min(1),
+  body: z.string().min(1),
+  image: z.union([z.string(), z.array(z.string()).min(1)]).optional(),
+  tags: z.string().optional(),
+});
+
 const stationSectionSchema = z.object({
   heading: z.string().min(1),
   body: z.string().min(1),
-  image: z.string().optional(),
+  image: z.union([z.string(), z.array(z.string()).min(1)]).optional(),
+  items: z.array(stationSubItemSchema).optional(),
 });
 
 const stationSchema = z.object({
