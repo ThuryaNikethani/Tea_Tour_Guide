@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Bookmark,
+  Bug,
   CheckCheck,
   CheckCircle2,
   Citrus,
@@ -72,6 +73,7 @@ const STATION_ICONS: Record<string, LucideIcon> = {
   Palmtree,
   Mountain,
   Droplet,
+  Bug,
 };
 
 export function AllStations() {
