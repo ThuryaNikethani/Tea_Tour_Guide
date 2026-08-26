@@ -18,6 +18,12 @@ export function localizeStation(station: Station, lang: LanguageCode): Station {
       ...section,
       heading: tr.sectionHeadings?.[i] ?? section.heading,
       body: tr.sectionBodies?.[i] ?? section.body,
+      items: section.items?.map((item, j) => ({
+        ...item,
+        heading: tr.itemHeadings?.[i]?.[j] ?? item.heading,
+        body: tr.itemBodies?.[i]?.[j] ?? item.body,
+        tags: tr.itemTags?.[i]?.[j] ?? item.tags,
+      })),
     })),
   };
 }
