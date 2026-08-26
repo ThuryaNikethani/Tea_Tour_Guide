@@ -37,7 +37,7 @@ export function Highlights() {
           />
           {cultivarSection?.image && (
             <PhotoStoryCard
-              image={cultivarSection.image}
+              image={cultivarSection.image as string}
               heading={cultivarSection.heading}
               body={cultivarSection.body}
               href={`/station/${nurseryStation.id}#section-${cultivarIndex}`}
