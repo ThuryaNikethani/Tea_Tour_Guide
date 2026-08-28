@@ -25,6 +25,7 @@ import {
   QrCode,
   Recycle,
   RotateCw,
+  Sparkles,
   Sprout,
   TreePine,
   Trees,
@@ -74,6 +75,7 @@ const STATION_ICONS: Record<string, LucideIcon> = {
   Mountain,
   Droplet,
   Bug,
+  Sparkles,
 };
 
 export function AllStations() {
