@@ -104,6 +104,20 @@ import beeWildflowerImg from "../assets/bee/bee-wildflower.jpeg";
  * product names, steps) but is written in fresh, original wording rather
  * than copied verbatim, per the user's 2026-08-19 instruction: only take
  * images/video directly from the source, write unique content around them.
+ * On 2026-08-28 it was enriched with a second real source: a recording of
+ * the estate's own guide narrating this exact stop. Rather than replacing
+ * anything, the new facts were merged in only where they filled a real gap
+ * — a new opening section on why propagation happens here at all (VP clone
+ * terminology, the 95% field-establishment rate, seed- vs. cutting-grown
+ * history), a new "Growth Timeline" section giving the 0–3 / 3–6 / 12–18
+ * month stage overview the existing steps never stated outright, and a
+ * lead-in sentence on the Tea Cultivars section naming the TRI 2000 series
+ * and T65 as clones the estate favours. The existing steps (site selection,
+ * bed prep, cutting selection, per-cultivar signposted entries, and the
+ * Transplanting section's own six-to-twelve-month planting-age figure) were
+ * left untouched rather than overwritten with the guide's rounder numbers,
+ * since both are plausible descriptions of the same process at different
+ * levels of detail and neither is clearly wrong.
  * The "introduction" station's facts (1824 Peradeniya planting, the 1869
  * coffee rust collapse, the seven tea-growing regions) are likewise real,
  * sourced from a physical "Story of Ceylon Tea" signboard photographed
@@ -140,6 +154,21 @@ import beeWildflowerImg from "../assets/bee/bee-wildflower.jpeg";
  * trim and the whole insect stays in frame. An earlier extreme close-up
  * (just the compound eyes/antennae) was dropped entirely since no crop of
  * it read as a recognisable bee once squeezed into the banner ratio.
+ * The "artisanal-tea-grades" station's facts come from a recording the user
+ * made of the estate's own tour guide narrating a field visit on 2026-08-28,
+ * transcribed and lightly reworded rather than copied verbatim. That same
+ * recording's origin-story and seven-region material duplicated what the
+ * "introduction" station already covers (verified against the on-site
+ * signboard on 2026-08-26) almost word-for-word, so only the new part — the
+ * artisanal grades (Silver/Golden Tips, white tea, purple/pink teas) — was
+ * added as its own station; no photos were supplied for it.
+ * The "shade-management" station was upgraded the same way from a generic
+ * placeholder to `verified: true` using a second recording from the same
+ * 2026-08-28 field visit, specifically about the estate's low-shade vs.
+ * high-shade (Albizia) tree layers — again transcribed and lightly
+ * reworded, not copied verbatim. The low shade tree is a single species
+ * known by three local names (Makulatha, Ladappa, Vatamara), not three
+ * separate species, per the user's 2026-08-28 correction.
  * The 7 manufacturing-process stations below it (plucking through packing)
  * are standard Ceylon tea-production knowledge — supplementary content the
  * old site doesn't cover at all, added deliberately to fill out the tour.
@@ -170,12 +199,16 @@ export const STATIONS: Station[] = [
     shortName: "Nursery",
     icon: "Sprout",
     verified: true,
-    lastVerified: "2026-08-19",
+    lastVerified: "2026-08-28",
     heroVideo: "/videos/up-BFVRBJ77.mp4",
     heroTagline: "Follow along step by step as we grow a tea plant from cutting to field-ready sapling.",
     processVideo: "/videos/w-2xBsbRpT.mp4",
     virtualTourUrl: "https://ceylonteatourism.com/",
     sections: [
+      {
+        heading: "Why We Propagate Here",
+        body: "Rather than growing tea plants directly in the open fields, the estate propagates uniform, high-quality VP (Vegetatively Propagated) clone saplings here under controlled conditions — a single-leaf cutting taken from a proven mother bush, rooted and raised until it's strong enough for the field. Sri Lanka's tea was traditionally grown from seed, but modern plantations use cuttings almost exclusively today, since cloning preserves the exact traits of a proven parent bush. The extra care this nursery gives young plants pays off: roughly 95% of the saplings that leave it go on to establish successfully once transplanted.",
+      },
       {
         heading: "Site Selection",
         body: "Choosing where to build a nursery starts with the wind and the sun. The spot needs shelter from prevailing winds, yet enough daylight for young plants to draw warmth from it — in cooler zones that usually means maximizing sun exposure, while warmer zones call for a bit of shade instead. Low ground that floods in the rains or catches frost in the dry season is off the table, and a reliable water source nearby is non-negotiable. The soil itself should drain freely and crumble easily underhand — in humid tropical climates, well-drained ground typically shows a reddish tint. Before committing to a site, both the topsoil and the layer beneath it get tested for pH: anything from 4.5 to 5.8 will work, though 4.5 to 5.5 is where growers aim.",
@@ -210,6 +243,10 @@ export const STATIONS: Station[] = [
         body: "Shade is everything in the weeks right after planting — without it, cuttings wilt and scorch in the sun, and humidity drops too fast. A low canopy of Gleichenia linearis fern handles light shading; for heavier coverage, growers stretch coir matting or synthetic netting over a 1.8-metre iron frame, which costs more but pays off in easier nursery management. How often to water depends on climate, soil, the age of the plant, and how much shade it's under — more frequently in dry spells, less during the rains, since overwatering invites moss and disease. Fertilizer only starts once roots have taken hold — six to eight weeks in for the low country, ten to twelve weeks at altitude — using T65 MAP or T65 DAP. In the run-up to transplanting, plants are gradually toughened up by cutting back both water and shade starting around the four-to-six-month mark, readying them for life in the open field.",
       },
       {
+        heading: "Growth Timeline",
+        body: "From cutting to field-ready sapling generally follows three broad stages. In the rooting phase, roughly the first 0 to 3 months, cuttings are kept under high-humidity polythene tents or covers to stop moisture loss while roots develop. Once rooted, plants enter a hardening and maturation phase, around 3 to 6 months, where they're gradually exposed to ambient air and sunlight to prepare them for open-field conditions. By around 12 to 18 months, nursery plants have typically built a strong root system and multiple leaves, making them ready for transplanting into the main fields.",
+      },
+      {
         heading: "Land Preparation for Transplanting",
         image: transImg,
         body: "Land destined for new tea has to roll gently, drain well, run deeper than 50 centimetres of topsoil, and carry less than 20 percent rock — steep ground, dead-flat ground, eroded patches, and rocky land near paddy fields or streams are all ruled out. Clearing starts with winch machines pulling out old growth, with particular attention to anything infected with Poria root disease; infected roots are then dug out deep and burned, dolomite goes down at 1,250 kilograms per hectare, and the whole operation works from the highest point of the slope downward. Soil-conservation rules apply throughout — no work during heavy rain, land cleared in small blocks, and planting done immediately after to keep erosion in check. Where the soil needs rehabilitating, Guatemala or Mana grass goes in for 18 to 24 months first, rebuilding fertility, starving out pests and disease, clearing toxins left by earlier crops, improving soil structure, and mulching the ground to hold moisture.",
@@ -221,7 +258,7 @@ export const STATIONS: Station[] = [
       {
         heading: "Tea Cultivars",
         image: tri4049Img,
-        body: "Among the cultivars grown here, TRI 4049 stands out — a high-yielding variety bred by the Tea Research Institute of Sri Lanka and best suited to mid- and low-elevation estates. It's a vegetatively propagated cultivar of Camellia sinensis, known in the field for vigorous growth, deep green foliage, and solid resistance to the diseases that trouble other varieties. The liquor it produces is bright and aromatic, working equally well for CTC and orthodox manufacture, which is why it's become a go-to choice when replanting or expanding commercial acreage.",
+        body: "The estate favours high-yielding, pest-resistant clones bred by the Tea Research Institute (TRI) — including varieties from the TRI 2000 series and T65 — for how reliably they perform in the local soil and weather. Among the cultivars grown here, TRI 4049 stands out — a high-yielding variety bred by the Tea Research Institute of Sri Lanka and best suited to mid- and low-elevation estates. It's a vegetatively propagated cultivar of Camellia sinensis, known in the field for vigorous growth, deep green foliage, and solid resistance to the diseases that trouble other varieties. The liquor it produces is bright and aromatic, working equally well for CTC and orthodox manufacture, which is why it's become a go-to choice when replanting or expanding commercial acreage.",
       },
       {
         heading: "TRI 3069",
@@ -519,6 +556,20 @@ export const STATIONS: Station[] = [
     ],
   },
   {
+    id: "artisanal-tea-grades",
+    order: 25,
+    name: "Artisanal Tea Grades",
+    shortName: "Artisanal Teas",
+    icon: "Sparkles",
+    verified: true,
+    lastVerified: "2026-08-28",
+    description:
+      "In addition to standard black tea made from mature leaves, the estate also produces rare, handcrafted artisanal teas from delicate young buds and specialty cultivars. Silver Tips and Golden Tips are extremely rare teas hand-picked exclusively from unopened leaf buds. White tea is very lightly processed for a subtle, naturally sweet taste, while purple and pink teas are unique specialty varieties rich in natural antioxidants.",
+    keyPoints:
+      "These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them.",
+    duration: "5 minutes",
+  },
+  {
     id: "pahatharata-manufacturing",
     order: 12,
     name: "Tea Manufacturing (Pahatharata)",
@@ -576,11 +627,12 @@ export const STATIONS: Station[] = [
     name: "Shade Tree Management",
     shortName: "Shade Trees",
     icon: "Trees",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-08-28",
     description:
-      "Many tea estates interplant shade trees among the tea bushes to moderate sunlight, temperature, and humidity. This stop covers how shade trees are selected, planted, and pruned.",
+      "Tea plants need balanced sunlight — too harsh and the leaves burn, too dark and they won't grow — so the estate manages this with two layers of shade trees planted among the bushes. The low shade tree — known locally as Makulatha (Ladappa, Vatamara) — is planted closer to the tea bushes to moderate ground temperature, retain soil moisture, and act as a natural windbreak. High shade trees such as Albizia are tall, wide-canopy trees that filter intense direct sunlight across large sections of the estate while enriching the soil with falling organic matter.",
     keyPoints:
-      "Shade trees are typically pruned on a rotation to control how much light reaches the tea bushes below, balancing leaf quality against yield.",
+      "Estate managers regularly prune both layers to fine-tune shade conditions for the season and altitude, tracking the botanical names and characteristics of each shade species alongside the tea cultivars to protect biodiversity and crop health.",
     duration: "5 minutes",
   },
   {
