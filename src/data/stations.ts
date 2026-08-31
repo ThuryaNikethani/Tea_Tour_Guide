@@ -96,6 +96,16 @@ import beeFlightImg from "../assets/bee/bee-flight.jpg";
 import beeOnYellowFlowerImg from "../assets/bee/bee-on-yellow-flower.jpg";
 import beePollenBasketImg from "../assets/bee/bee-pollen-basket.jpg";
 import beeWildflowerImg from "../assets/bee/bee-wildflower.jpeg";
+// Openly-licensed stock photos (Wikimedia Commons) illustrating the generic
+// peeling tools — not photos of this factory's own tools. See the provenance
+// note near the "cinnamon" station below for sourcing and licenses.
+import scraperToolImg from "../assets/cinnamon/tools/scraper.jpg";
+import peelingKnifeToolImg from "../assets/cinnamon/tools/peeling-knife.jpg";
+import brassRodToolImg from "../assets/cinnamon/tools/brass-rod.jpg";
+import kaththaToolImg from "../assets/cinnamon/tools/kaththa.jpg";
+import kathuraToolImg from "../assets/cinnamon/tools/kathura.jpg";
+import angiliKopuwaToolImg from "../assets/cinnamon/tools/angili-kopuwa.jpg";
+import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
 
 /**
  * The "nursery" station's images and videos are real — sourced from the
@@ -130,7 +140,44 @@ import beeWildflowerImg from "../assets/bee/bee-wildflower.jpeg";
  * carried a visible third-party watermark ("tradewindsfruit.com"). The user
  * confirmed on 2026-08-26 that the remaining plant/plantation photos are the
  * factory's own, so those were added too (tree, fruit, leaves, plantation
- * row); the watermarked photo itself was still excluded.
+ * row); the watermarked photo itself was still excluded. Its "Peeling
+ * Cinnamon: Tools & Process" section, added on 2026-08-31, started out with
+ * four guessed/generic tool names (including a fabricated "Whetstone" that
+ * isn't actually part of the traditional toolkit); the user then supplied a
+ * labelled reference photo of the real tool set — Kaththa, Gaana Kokaththa,
+ * Thalana Kokaththa, Piththala Danda, Kathura, Angili Kopuwa, and a
+ * measuring rod — and the item list was corrected to match on 2026-08-31.
+ * Descriptions of what each tool does are still standard, well-documented
+ * Ceylon cinnamon-peeling knowledge rather than confirmed against this
+ * factory's own process — swap in the factory's own explanations once
+ * available. All seven items now have a photo. Gaana Kokaththa and Thalana
+ * Kokaththa kept their earlier generic web-search finds, chosen only from
+ * openly-licensed Wikimedia Commons results (matched by function, not by
+ * name): "Skrobaki.jpg" (public domain) and "JA Henckels Twin Cuisine line
+ * peeling knife.JPG" (public domain), respectively — neither depicts this
+ * factory's actual tools. The other five (Piththala Danda, Kaththa, Kathura,
+ * Angili Kopuwa, Measuring Rod) crop the matching labelled item out of the
+ * same tools-display-board photo on Sri Lanka's official Department of
+ * Cinnamon Development site (cinnamon.gov.lk) that the user's own reference
+ * photo also came from — that site's only copyright line is a generic
+ * web-agency footer with no open license attached, so treat these five as
+ * lower-confidence provenance than the Commons two, and swap them out if a
+ * better-licensed source turns up. All seven photos were padded (never
+ * cropped into the subject) with a colour sampled from each photo's own
+ * edges to a shared 3:2 aspect ratio, purely so the item cards stay a
+ * consistent size next to each other — the same uncropped `h-auto`
+ * item-image treatment used everywhere else in the app. (The Measuring Rod
+ * crop was additionally rotated 90°, since a thin vertical rod padded out
+ * to a 3:2 landscape frame shrank to an illegible sliver; rotated to run
+ * horizontally, it reads clearly at the same aspect ratio.) The earlier
+ * dropped "Whetstone" image ("Whetstone Knife Sharpening, 2015-(01).jpg"
+ * by Didriks, CC BY 2.0) and its asset file were removed along with the
+ * fabricated item it illustrated. The "Cinnamon Tea Products" section body
+ * was extended on 2026-08-31 to frame the factory's teas as a value-added
+ * use of cinnamon, plus a closing sentence naming other value-added goods
+ * (bark/leaf oil, powder, oleoresin) the wider cinnamon industry typically
+ * makes — general industry knowledge, not a claim about this factory's own
+ * product line, which is still just the two confirmed cinnamon teas.
  * The "ginger-turmeric" station (now "Ginger Plantation") was similarly
  * sourced from the factory's ginger microsite (ginger-atf.netlify.app) on
  * 2026-08-26 — rewritten rather than copied verbatim. One image there (a
@@ -169,12 +216,67 @@ import beeWildflowerImg from "../assets/bee/bee-wildflower.jpeg";
  * reworded, not copied verbatim. The low shade tree is a single species
  * known by three local names (Makulatha, Ladappa, Vatamara), not three
  * separate species, per the user's 2026-08-28 correction.
- * The 7 manufacturing-process stations below it (plucking through packing)
- * are standard Ceylon tea-production knowledge — supplementary content the
- * old site doesn't cover at all, added deliberately to fill out the tour.
- * Each is marked `verified: false` and the UI shows a caution banner, since
- * none of it is yet confirmed against Athukorala's own actual process.
- * Swap in real, factory-specific content for those as soon as it's
+ * The "clonal-tea" station was similarly upgraded from a generic placeholder
+ * to `verified: true` on 2026-08-31, using a transcript the user supplied of
+ * a Sinhala dialogue (with English translation) from another on-site video
+ * clip, in which the estate's own staff explain why TRI-bred clonal
+ * varieties differ — bred for drought or rain tolerance and yield, or for
+ * the distinctive red-/green-tipped young buds used in hand-made specialty
+ * teas — that the widely-planted high-yield cultivars in the dialogue are
+ * TRI 2023, TRI 2025, and TRI 2026, that those specialty buds fetch roughly
+ * Rs. 100 more per kilogram than standard leaf, and that TRI numbers are
+ * just assigned identifiers rather than release years. This is a distinct
+ * set of cultivars from the ones signposted in the "nursery" station's "Tea
+ * Cultivars" trial plots (TRI 4049, 3069, 3055, 4053, 2022, 2043, 3025),
+ * which were left untouched.
+ * The "plucking" station was upgraded from a generic placeholder to
+ * `verified: true` on 2026-08-31 using a transcript the user supplied of a
+ * third on-site video dialogue, in which estate staff explain the actual
+ * plucking standard here — locally called "deka hamara" (two and a half
+ * leaves), often three and a half, rather than the stricter "two leaves and
+ * a bud" rule generic sources quote — and that black tea and green tea are
+ * plucked to a different leaf count (the dialogue doesn't say how; that
+ * detail is still missing). `keyPoints` and `duration` weren't contradicted
+ * by the dialogue, so they're unchanged.
+ * The "sorting" station was upgraded the same way on 2026-08-31, from a
+ * transcript of a fourth on-site dialogue in which the guide explains: Green
+ * and Black Tea come from the same bush and leaf, differing only by the
+ * fermentation step Black Tea goes through (this factory's own output is
+ * mostly Black Tea); grading separates dried leaf by which part of the
+ * original shoot it came from in a single machine pass, from FBOPF Extra
+ * Special (the tender tip, ~2% of each shoot, the priciest grade) down
+ * through BOP and Pekoe to Dust (the most mature leaf, mostly destined for
+ * flavoured tea bags) and Refuse (unusable stalks and scraps, discarded).
+ * This replaced the earlier generic claim that grading is "not really about
+ * quality," which the dialogue directly contradicts — grade tracks position
+ * on the shoot, and higher/more-tender leaf is explicitly worth more. The
+ * grade names used in the dialogue (FBOPF Extra Special, BOP, Pekoe, Dust,
+ * Refuse) replaced the placeholder's generic "Orange Pekoe, Broken Orange
+ * Pekoe" examples, which weren't actually said on camera.
+ * The "artisanal-tea-grades" station's `lastVerified` was bumped to
+ * 2026-08-31 after a fifth on-site dialogue transcript filled in specifics
+ * the 2026-08-28 recording hadn't covered: the distinctive purple-hued
+ * shoot these grades mostly come from gets its colour from anthocyanin;
+ * Golden Tip is picked from that shoot's fully matured bud and Silver Tip
+ * from the same shoot's paler, immature bud; White Tea takes two and a half
+ * leaves, steamed and dried rather than fermented and rolled; and most of
+ * these grades are actually finished by hand at the separate
+ * "handmade-factory" station rather than the main black tea line, which is
+ * why they're called "artisanal" in the first place. Purple and pink tea's
+ * own process is mentioned as being covered "at the handmade tea factory"
+ * but wasn't actually explained in this dialogue, so it's still not
+ * documented — don't guess at it. Blooming Tea and flower-infused blends
+ * (lotus was the example given) were added as additional real products from
+ * the same shoots. The "handmade-factory" station was upgraded from a
+ * generic placeholder to `verified: true` the same day using the same
+ * transcript, adding the specific list of grades finished there.
+ * The remaining 5 manufacturing-process stations (withering, rolling,
+ * fermentation, drying, packing) are standard Ceylon tea-production
+ * knowledge — supplementary content the old site doesn't cover at all,
+ * added deliberately to fill out the tour. Each is marked `verified: false`
+ * and the UI shows a caution banner, since none of it is yet confirmed
+ * against Athukorala's own actual
+ * process. Swap in real, factory-specific content for those as soon as it's
  * available.
  */
 export const STATIONS: Station[] = [
@@ -186,6 +288,7 @@ export const STATIONS: Station[] = [
     icon: "Mountain",
     verified: true,
     lastVerified: "2026-08-26",
+    virtualTourUrl: "https://ceylonteatourism.com/",
     description:
       "Since the early 1800s, the name \"Ceylon\" has been synonymous with tea. The history of Ceylon tea runs back to the British rule in Sri Lanka over two hundred years ago. The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. A few years later, more tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
     keyPoints:
@@ -203,7 +306,6 @@ export const STATIONS: Station[] = [
     heroVideo: "/videos/up-BFVRBJ77.mp4",
     heroTagline: "Follow along step by step as we grow a tea plant from cutting to field-ready sapling.",
     processVideo: "/videos/w-2xBsbRpT.mp4",
-    virtualTourUrl: "https://ceylonteatourism.com/",
     sections: [
       {
         heading: "Why We Propagate Here",
@@ -303,9 +405,10 @@ export const STATIONS: Station[] = [
     name: "Plucking",
     shortName: "Pluck",
     icon: "Hand",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-08-31",
     description:
-      "Every leaf begins in the tea garden, where pluckers hand-pick the bud and two tender leaves from each shoot. This fine plucking standard is what gives Ceylon tea its delicate character — coarser leaves are left on the bush.",
+      "Every leaf begins in the tea garden, where pluckers hand-pick each shoot down to what staff call 'deka hamara' — two and a half leaves — often three and a half, rather than a strict two-leaves-and-a-bud count. This fine plucking standard is what gives Ceylon tea its delicate character — coarser leaves are left on the bush. The exact leaf count plucked differs between black tea and green tea.",
     keyPoints:
       "Only the youngest growth is used. Hand plucking protects the bush and selects the leaves with the highest concentration of flavour compounds, something machines can't replicate at this quality level.",
     duration: "Leaves are plucked daily, year-round, and rushed to the factory within hours to stay fresh.",
@@ -368,11 +471,12 @@ export const STATIONS: Station[] = [
     name: "Sorting & Grading",
     shortName: "Sort",
     icon: "Filter",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-08-31",
     description:
-      "Dried tea is sifted through a series of mesh sieves that separate it by leaf size and shape into grades such as Orange Pekoe, Broken Orange Pekoe, and Dust.",
+      "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse.",
     keyPoints:
-      "Grading isn't about quality so much as leaf particle size, which affects brewing time and strength — this is how factories match tea to different markets and brewing styles.",
+      "Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
     duration: "Sorting runs continuously on machinery and takes roughly 30 to 45 minutes per batch.",
   },
   {
@@ -416,6 +520,19 @@ export const STATIONS: Station[] = [
         ],
       },
       {
+        heading: "Peeling Cinnamon: Tools & Process",
+        body: "Harvested shoots are left to rest for about a day so the bark loosens before peeling begins — a skill passed down through generations of peelers. The tools involved are simple but essential:",
+        items: [
+          { heading: "Kaththa (Large Knife)", image: kaththaToolImg, body: "A large, hook-shaped knife used to cut the harvested shoots to length and split the bark lengthwise before the fine peeling work begins." },
+          { heading: "Gaana Kokaththa (Scraper)", image: scraperToolImg, body: "A short-handled hooked tool drawn along the shoot to scrape off the thin, rough outer bark before the real peeling starts — 'gaanawa' means 'to scrape' in Sinhala." },
+          { heading: "Thalana Kokaththa (Peeling Knife)", image: peelingKnifeToolImg, body: "A small, curved blade used to score the loosened inner bark along its length and lift it away from the woody stem in a single strip — 'thalanawa' means 'to peel' in Sinhala." },
+          { heading: "Piththala Danda (Brass Rod)", image: brassRodToolImg, body: "A smooth, rounded metal rod worked in beneath the scored bark to gently separate it from the wood along the full length of the shoot without tearing it." },
+          { heading: "Kathura (Scissors)", image: kathuraToolImg, body: "Used to trim the peeled bark strips to a consistent length before they're rolled and dried into quills." },
+          { heading: "Angili Kopuwa (Finger Guard)", image: angiliKopuwaToolImg, body: "A protective cover worn on the fingers to guard against cuts while handling the sharp peeling tools for hours at a stretch." },
+          { heading: "Measuring Rod", image: measuringRodToolImg, body: "A calibrated rod used to measure and mark consistent lengths as the bark strips are cut and prepared for rolling." },
+        ],
+      },
+      {
         heading: "Benefits",
         image: [cinnamonLeavesImg, cinnamonPlantationImg],
         body: "Cinnamon's value goes well beyond the kitchen:",
@@ -427,7 +544,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "Cinnamon Tea Products",
-        body: "The factory produces two premium cinnamon tea blends, crafted from natural Sri Lankan cinnamon for a pure, aromatic experience.",
+        body: "Rather than selling all of its cinnamon as a raw spice, the factory also uses it as a value-added ingredient in its own tea range — blending it into two premium cinnamon teas crafted from natural Sri Lankan cinnamon for a pure, aromatic experience. More broadly, the cinnamon industry typically turns the bark and leaves into other value-added goods too — bark and leaf oil for cooking, cosmetics, and aromatherapy, ground cinnamon powder, and food-grade oleoresin.",
         items: [
           {
             heading: "Cinnamon Tea",
@@ -562,11 +679,11 @@ export const STATIONS: Station[] = [
     shortName: "Artisanal Teas",
     icon: "Sparkles",
     verified: true,
-    lastVerified: "2026-08-28",
+    lastVerified: "2026-08-31",
     description:
-      "In addition to standard black tea made from mature leaves, the estate also produces rare, handcrafted artisanal teas from delicate young buds and specialty cultivars. Silver Tips and Golden Tips are extremely rare teas hand-picked exclusively from unopened leaf buds. White tea is very lightly processed for a subtle, naturally sweet taste, while purple and pink teas are unique specialty varieties rich in natural antioxidants.",
+      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot, whose colour comes from anthocyanin. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud. White tea takes two and a half leaves from the shoot, steamed and dried rather than fermented and rolled like black tea, for a very lightly processed, naturally sweet taste. Purple and pink teas are unique specialty varieties, rich in natural antioxidants, made by their own separate process. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
     keyPoints:
-      "These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them.",
+      "These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
     duration: "5 minutes",
   },
   {
@@ -601,11 +718,12 @@ export const STATIONS: Station[] = [
     name: "Clonal Tea",
     shortName: "Clonal Tea",
     icon: "Gem",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-08-31",
     description:
-      "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price.",
+      "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price. The Tea Research Institute (TRI) breeds clonal varieties for different needs — some for drought or rain tolerance and higher yield, others for the distinctive red- or green-tipped young buds prized for hand-made specialty teas. Widely planted, high-yielding cultivars such as TRI 2023, TRI 2025, and TRI 2026 are common on both estates and in home gardens, while the rarer specialty cultivars are mostly grown on larger estates for handcrafted tea rather than everyday cultivation. Despite looking like years, these TRI numbers are simply assigned identifiers, not the year each cultivar was released.",
     keyPoints:
-      "Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities.",
+      "Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities. Buds from the specialty red- or green-tipped cultivars are hand-picked for rare grades like Golden Tips and Silver Tips, and estates typically pay around Rs. 100 more per kilogram for them than for standard plucked leaf.",
     duration: "5-10 minutes",
   },
   {
@@ -667,9 +785,10 @@ export const STATIONS: Station[] = [
     name: "Handmade Tea Factory",
     shortName: "Handmade Factory",
     icon: "HandHeart",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-08-31",
     description:
-      "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. This stop covers what distinguishes hand-made tea from factory-line production.",
+      "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. This stop covers what distinguishes hand-made tea from factory-line production.",
     keyPoints:
       "Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character.",
     duration: "10 minutes",
