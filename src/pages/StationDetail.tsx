@@ -196,21 +196,12 @@ export function StationDetail() {
         })() : (
           <>
             <p className="text-tea-800 dark:text-tea-200 leading-relaxed mb-6">{station.description}</p>
-            <div className="grid sm:grid-cols-2 gap-4 mb-6">
-              <div className="bg-tea-50 dark:bg-tea-900 border border-tea-200 dark:border-tea-700 rounded-md p-4">
-                <div className="flex items-center gap-1.5 text-tea-700 dark:text-tea-200 font-medium text-sm mb-1.5">
-                  <Sparkles size={15} />
-                  {t("keyPoints")}
-                </div>
-                <p className="text-tea-800 dark:text-tea-300 text-sm leading-relaxed">{station.keyPoints}</p>
+            <div className="bg-tea-50 dark:bg-tea-900 border border-tea-200 dark:border-tea-700 rounded-md p-4 mb-6">
+              <div className="flex items-center gap-1.5 text-tea-700 dark:text-tea-200 font-medium text-sm mb-1.5">
+                <Sparkles size={15} />
+                {t("keyPoints")}
               </div>
-              <div className="bg-tea-50 dark:bg-tea-900 border border-tea-200 dark:border-tea-700 rounded-md p-4">
-                <div className="flex items-center gap-1.5 text-tea-700 dark:text-tea-200 font-medium text-sm mb-1.5">
-                  <Clock size={15} />
-                  {t("duration")}
-                </div>
-                <p className="text-tea-800 dark:text-tea-300 text-sm leading-relaxed">{station.duration}</p>
-              </div>
+              <p className="text-tea-800 dark:text-tea-300 text-sm leading-relaxed">{station.keyPoints}</p>
             </div>
           </>
         )}
