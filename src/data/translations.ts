@@ -11,10 +11,19 @@ import type { StationTranslation } from "./stations";
  * any language but English, so they're machine-translated (Claude,
  * 2026-08-18/19) — not reviewed by a native speaker or the factory.
  *
- * For the 7 manufacturing-process stations (plucking..packing, see
- * stations.ts): all text is machine-translated generic Ceylon tea-process
- * copy — deliberate supplementary content, same caveat as the English
- * original (`verified: false`).
+ * For the 5 unverified manufacturing-process stations (withering, rolling,
+ * fermentation, drying, packing — see stations.ts): all text is
+ * machine-translated generic Ceylon tea-process copy — deliberate
+ * supplementary content, same caveat as the English original
+ * (`verified: false`).
+ *
+ * The "plucking", "sorting", and "handmade-factory" stations' English text
+ * became real on 2026-08-31 (sourced from on-site video dialogue
+ * transcripts — see stations.ts), and "artisanal-tea-grades" (already real
+ * since 2026-08-28) was substantially expanded the same day. All of these
+ * per-language `description`/`keyPoints` strings are still plain machine
+ * translations of that text, not reviewed by a native speaker, same caveat
+ * as above.
  *
  * Don't treat any of this as print-ready for real visitors until a native
  * speaker has checked it — especially Sinhala/Tamil/Arabic/Chinese/Japanese,
@@ -298,7 +307,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   si: {
     plucking: {
       name: "නෙළීම",
-      description: "සෑම කොළයක්ම ආරම්භ වන්නේ තේ වත්තෙනි, එහිදී නෙළන්නන් සෑම අංකුරයකින්ම අංකුරය සහ මෘදු කොළ දෙකක් අතින් නෙළා ගනී. මෙම සියුම් නෙළීමේ ප්‍රමිතිය නිසාය ලංකා තේවලට එහි සියුම් ලක්ෂණය ලැබෙන්නේ — රළු කොළ පඳුරේම තබා යයි.",
+      description: "සෑම කොළයක්ම ආරම්භ වන්නේ තේ වත්තෙනි, එහිදී නෙළන්නන් සෑම අංකුරයකින්ම, කම්කරුවන් 'දෙක හමාර' ලෙස හඳුන්වන කොළ දෙක හමාරක් දක්වා — බොහෝ විට කොළ තුන හමාරක් දක්වා — දැඩි ලෙස 'අංකුරය සහ කොළ දෙකක්' යන නීතියට වඩා අතින් නෙළා ගනී. මෙම සියුම් නෙළීමේ ප්‍රමිතිය නිසාය ලංකා තේවලට එහි සියුම් ලක්ෂණය ලැබෙන්නේ — රළු කොළ පඳුරේම තබා යයි. කළු තේ සහ හරිත තේ සඳහා නෙළන කොළ ගණන වෙනස් වේ.",
       keyPoints: "යොදාගන්නේ නවතම වර්ධනය පමණි. අතින් නෙළීම පඳුර ආරක්ෂා කරන අතර, රසායනික ද්‍රව්‍ය වැඩිම සාන්ද්‍රණයක් සහිත කොළ තෝරාගනී, එය මෙම තත්ත්ව මට්ටමින් යන්ත්‍ර වලට අනුකරණය කළ නොහැක.",
       duration: "කොළ දිනපතා, වසර පුරාම නෙළනු ලබන අතර, නැවුම්ව තබා ගැනීම සඳහා පැය කිහිපයක් ඇතුළත කර්මාන්තශාලාවට ගෙන යනු ලැබේ.",
     },
@@ -328,8 +337,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "වර්ග කිරීම හා ශ්‍රේණිගත කිරීම",
-      description: "වියළි තේ, කොළයේ ප්‍රමාණය සහ හැඩය අනුව Orange Pekoe, Broken Orange Pekoe සහ Dust වැනි ශ්‍රේණි වලට වෙන් කරන පබල දැල් මාලාවක් හරහා පෙරනු ලැබේ.",
-      keyPoints: "ශ්‍රේණිගත කිරීම තත්ත්වය පිළිබඳව නොව, බ්‍රුවින් කාලය හා ශක්තියට බලපාන කොළ අංශුවල ප්‍රමාණය පිළිබඳව වේ — කර්මාන්තශාලා විවිධ වෙළඳපොළවලට හා පෙරීමේ විලාසයන්ට තේ ගැලපෙන්නේ මෙසේය.",
+      description: "හරිත තේ (Green Tea) සහ කළු තේ (Black Tea) දෙකම පටන් ගන්නේ එකම පඳුරෙන් හා එකම කොළවලින්මය — ඒවා සැබවින්ම වෙන් කරන්නේ පැසවීම (ෆර්මන්ටේෂන්/ඔක්සිකරණය) නම් අදියරයි, එය කළු තේ හරහා යන නමුත් හරිත තේ මඟ හරින අදියරකි. මෙම කර්මාන්තශාලාවේ නිෂ්පාදනයෙන් වැඩි හරියක් කළු තේය. වියළි කොළ ශ්‍රේණිගත කිරීමේ යන්ත්‍රය හරහා යන විට, එය එක් වරකින්ම එහි ආරම්භක අංකුරයේ කුමන කොටසින් ආවාද යන්න අනුව වෙන් කරනු ලැබේ: මෘදු, පහසුවෙන් කැඩෙන තුඩුව සහ ඉහළම කොළ — එක් එක් අංකුරයෙන් 2%ක් පමණි — FBOPF Extra Special බවට පත් වේ, එය හොඳම හා මිල අධික ම ශ්‍රේණියයි, එසේම යටින් තව දුරටත් ඇති කොළ BOP සහ Pekoe වැනි ශක්තිමත් ශ්‍රේණි බවට පත් වේ. වඩාත් මෝරු, පහළම කොළ Dust බවට පත් වන අතර, පාවිච්චි කළ නොහැකි නටු හා කැබලි Refuse ලෙස ඉවත් කරනු ලැබේ.",
+      keyPoints: "වටිනාකම රැඳී පවතින්නේ අංකුරයේ ස්ථානය මතය, කොළයේ ප්‍රමාණය මත පමණක් නොවේ — කොළය ඉහළින් හා මෘදු වන තරමට, එහි ශ්‍රේණියත් මිලත් වැඩි වේ. සාමාන්‍යයෙන් රස එකතු කළ තේ බෑග් වල අඩංගු වන්නේ උසස් තත්ත්වයේ කොළ නොව Dust ශ්‍රේණියයි; FBOPF Extra Special වැනි හොඳම ශ්‍රේණි ඒවායේ අපනයන වෙළඳපොළ අගය නිසා දේශීයව විකිණෙන්නේ කලාතුරකිනි.",
       duration: "වර්ග කිරීම යන්ත්‍ර මත අඛණ්ඩව ක්‍රියාත්මක වන අතර, එක් කණ්ඩායමකට මිනිත්තු 30 සිට 45 දක්වා ගතවේ.",
     },
     packing: {
@@ -340,16 +349,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "කුරුඳු වගාව",
-      sectionHeadings: ["කුරුඳු ගස පිළිබඳ", "ලක්ෂණ", "ප්‍රතිලාභ", "කුරුඳු තේ නිෂ්පාදන"],
+      sectionHeadings: ["කුරුඳු ගස පිළිබඳ", "ලක්ෂණ", "කුරුඳු පීල කිරීම: මෙවලම් සහ ක්‍රියාවලිය", "ප්‍රතිලාභ", "කුරුඳු තේ නිෂ්පාදන"],
       sectionBodies: [
         "Cinnamomum verum — 'සැබෑ කුරුඳු' හෝ සිලෝන් කුරුඳු ලෙස විකුණනු ලබන — ලෝරේසී පවුලට අයත් කුඩා සදාහරිත ගසකි, ශ්‍රී ලංකාවේ සහ දකුණු ඉන්දියාවේ ආවේණික වේ. වාණිජමය වශයෙන් වැදගත් වන්නේ ගසේ අභ්‍යන්තර පොත්තයි: එය පීල කර, වියලා, හුරුපුරුදු කුරුඳු දඬු බවට රෝල් කරනු ලැබේ. හොඳින් ජලය බැස යන පසක් සහ නිතිපතා නිවර්තන වර්ෂාපතනයක් ලැබෙන විට, ගස කෑලි සහ ලොව පුරා ආහාර පිසීමේ සහ සාම්ප්‍රදායික වෛද්‍ය විද්‍යාවේ අගය කරන අත්‍යවශ්‍ය තෙල් ද ලබා දෙයි.",
         "ගස පිළිබඳ කෙටි විස්තරයක්:",
+        "පීල කිරීම ආරම්භ කිරීමට පෙර පොත්ත ලිහිල් වීමට නෙළන ලද අංකුර දිනක් පමණ විවේකයට තබනු ලැබේ — පරම්පරා ගණනාවක් තිස්සේ පීලකරුවන් අතින් අතට හුවමාරු වූ දක්ෂතාවකි. සම්බන්ධ මෙවලම් සරල නමුත් අත්‍යවශ්‍ය වේ:",
         "කුරුඳුවේ වටිනාකම කුස්සියෙන් ඔබ්බට විහිදේ:",
-        "කර්මාන්තශාලාව ස්වාභාවික ශ්‍රී ලාංකික කුරුඳුවලින් සකසන ලද, පිරිසිදු සුවඳවත් අත්දැකීමක් සඳහා උසස් තත්ත්වයේ කුරුඳු තේ මිශ්‍රණ දෙකක් නිෂ්පාදනය කරයි.",
+        "කර්මාන්තශාලාව සිය කුරුඳු සියල්ලම අමු කුළුබඩුවක් ලෙස විකිණීම වෙනුවට, එහිම තේ පරාසයේ අගය එකතු කළ අමුද්‍රව්‍යයක් ලෙසද එය භාවිතා කරයි — ස්වාභාවික ශ්‍රී ලාංකික කුරුඳුවලින් සකසන ලද, පිරිසිදු සුවඳවත් අත්දැකීමක් සඳහා උසස් තත්ත්වයේ කුරුඳු තේ මිශ්‍රණ දෙකකට එය මිශ්‍ර කරමින්. පුළුල් අර්ථයෙන්, කුරුඳු කර්මාන්තය සාමාන්‍යයෙන් පොත්ත සහ කොළ අනෙකුත් අගය එකතු කළ භාණ්ඩ බවටද පරිවර්තනය කරයි — ආහාර පිසීම, රූපලාවණ්‍යාගාර, සහ සුවඳ චිකිත්සාව සඳහා පොත්ත හා කොළ තෙල්, බාගත කළ කුරුඳු කුඩු, සහ ආහාර-ශ්‍රේණියේ ඔලියෝරෙසින්.",
       ],
       itemHeadings: [
         [],
         ["උස", "කොළ", "මල්", "ඵලය", "වාසස්ථානය"],
+        ["කැත්ත", "ගාන කොකැත්ත", "තලන කොකැත්ත", "පිත්තල දණ්ඩ", "කතුර", "ඇඟිලි කොපුව", "මිනුම් දණ්ඩ"],
         ["ආහාර පිසීමේ භාවිතය", "ඖෂධීය ගුණාංග", "පාරිසරික වැදගත්කම"],
         ["කුරුඳු තේ", "රස එකතු කළ කුරුඳු තේ"],
       ],
@@ -363,6 +374,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "නිවර්තන සදාහරිත වනාන්තර, උණුසුම් තත්ත්වයන් සහ හොඳින් ජලය බැස යන මැටිමය පස.",
         ],
         [
+          "නෙළන ලද අංකුර දිගට කැපීමට සහ සියුම් පීල කිරීමේ වැඩ ආරම්භ වීමට පෙර පොත්ත දිගට පැළීමට භාවිතා කරන විශාල, කොකු හැඩැති පිහියකි.",
+          "සැබෑ පීල කිරීම ආරම්භ වීමට පෙර තුනී, රළු පිටත පොත්ත සීරීමට අංකුරය දිගේ අදිනු ලබන කෙටි හැඬලයක් සහිත කොකු මෙවලමකි — 'ගානවා' යන්නෙන් අදහස් වන්නේ 'සීරීම' යන්නයි.",
+          "ලිහිල් වූ අභ්‍යන්තර පොත්ත එහි දිග දිගේ කැපීමට සහ ලී කඳෙන් තනි තීරුවක් ලෙස එය එසවීමට භාවිතා කරන කුඩා, වක්‍ර තලයකි — 'තලනවා' යන්නෙන් අදහස් වන්නේ 'පීල කිරීම' යන්නයි.",
+          "කැපූ පොත්ත, අංකුරයේ මුළු දිග දිගේ නොකැඩී ලීයෙන් මෘදු ලෙස වෙන් කිරීමට එය යටින් රැගෙන යන සුමට, වටකුරු ලෝහ දණ්ඩකි.",
+          "පීල කරන ලද පොත්ත රෝල් කර වියලීමට පෙර ඒකාකාර දිගකට කැපීමට භාවිතා කරයි.",
+          "පැය ගණනාවක් තිස්සේ තියුණු පීල කිරීමේ මෙවලම් හැසිරවීමේදී කැපුම්වලින් ආරක්ෂා වීමට ඇඟිලිවල පළඳින ආරක්ෂිත ආවරණයකි.",
+          "පොත්ත කැපී රෝල් කිරීමට සූදානම් කරන අතරතුර ඒකාකාර දිග මැනීමට හා සලකුණු කිරීමට භාවිතා කරන ක්‍රමාංකනය කළ දණ්ඩකි.",
+        ],
+        [
           "රසවත් සහ රස නොවන කෑම වර්ග, පාන වර්ග, සහ බේකින් සඳහා භාවිතා කරයි — සිලෝන් කුරුඳුට බොහෝ වෙළඳපොළවල විකුණන ශක්තිමත්, ඝන පොත්ත සහිත කැසියා වර්ග වලට වඩා මෘදු, සියුම් මිහිරි රසයක් ඇත.",
           "ප්‍රතිඔක්සිකාරක, ප්‍රති-ගිනි අවුලුවන, සහ ප්‍රතිබැක්ටීරීය ගුණාංග ඇති අතර, රුධිර සීනි නියාමනය කිරීමට, ආහාර දිරවීම වැඩි දියුණු කිරීමට, සහ හෘද සෞඛ්‍යය ප්‍රවර්ධනය කිරීමට සාම්ප්‍රදායිකව භාවිතා කරයි; එහි අත්‍යවශ්‍ය තෙලට සාම්ප්‍රදායික වෛද්‍ය විද්‍යාවේ සහ සුවඳ චිකිත්සාවේ දිගු ඉතිහාසයක් ඇත.",
           "ගස් නිවර්තන වනාන්තරවල ජෛව විවිධත්වයට එකතු වන අතර, පරාග කරන්නන් සඳහා පැණි සපයයි, සහ දේශීය ගොවීන්ට කුරුඳු අනෙකුත් බෝග සමඟ තිරසාර ලෙස වගා කිරීමට ඉඩ සලසන කෘෂි-වන ක්‍රම සඳහා සහාය වේ.",
@@ -373,6 +393,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -460,8 +481,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "අත්කම් තේ ශ්‍රේණි",
-      description: "පරිණත කොළවලින් සාදන සාමාන්‍ය කළු තේවලට අමතරව, වතුයාය මෘදු තරුණ අංකුර සහ විශේෂිත කල්ටිවාර වලින් දුර්ලභ, අතින් සකසන ලද අත්කම් තේ ද නිපදවයි. රිදී තුඩු සහ රන් තුඩු, විවෘත නොවූ කොළ අංකුරවලින් පමණක් අතින් නෙළන ලද අතිශයින් දුර්ලභ තේ වේ. සුදු තේ ඉතා සැහැල්ලුවෙන් සකසන ලද අතර, සියුම්, ස්වාභාවිකව මිහිරි රසයක් ලබා දෙන අතර, දම් සහ රෝස තේ ස්වාභාවික ප්‍රතිඔක්සිකාරක බහුල සුවිශේෂී විශේෂ වර්ග වේ.",
-      keyPoints: "මෙම අත්කම් ශ්‍රේණි සාමාන්‍ය කළු තේට වඩා බෙහෙවින් අඩු ප්‍රමාණවලින් නෙළා සකසනු ලබන අතර, එය ඒවා දුර්ලභ හා අගය කරන කරුණ වේ — රස බැලීමේ කවුන්ටරයේ මෙය රස බැලීමට ඉල්ලා සිටින්න.",
+      description: "සාමාන්‍ය කළු තේවලට අමතරව, වතුයාය දුර්ලභ, අතින් සකසන ලද අත්කම් තේ ද නිපදවයි — මේවා බොහෝ දුරට ප්‍රධාන කළු තේ නිෂ්පාදන මාර්ගයේ නොව, වෙනම 'අතින් සකසන තේ කර්මාන්තශාලාවේදී' අතින් නිම කරනු ලබයි; එබැවින්ම මෙම ශ්‍රේණි 'අත්කම් තේ ශ්‍රේණි' ලෙසද හඳුන්වනු ලබන්නේ — එය කර්මාන්ත නිෂ්පාදනයකට වඩා අත්කම් කලාවකට ආසන්නය. මේවායින් බොහොමයක් හටගන්නේ සුවිශේෂී දම් පැහැති අංකුරයකින් වන අතර, එහි වර්ණය ලැබෙන්නේ ඇන්තොසයනින් නිසාය. රන් තුඩුව (Golden Tip) සඳහා එම අංකුරයේම මුහුකුරා ගිය අංකුරය භාවිතා කරන අතර, රිදී තුඩුව (Silver Tip) සඳහා එම අංකුරයේම තවත් නොමුහුකුරා, ලා පැහැති අංකුරය භාවිතා කරයි. සුදු තේ (White Tea) අංකුරයෙන් කොළ දෙක හමාරක් ගෙන, එය කළු තේ මෙන් පැසවා රෝල් කිරීම වෙනුවට වාෂ්ප කර වියලනු ලැබේ, එමගින් ඉතා සැහැල්ලුවෙන් සකසන ලද, ස්වාභාවිකව මිහිරි රසයක් ලැබේ. දම් හා රෝස තේ ස්වාභාවික ප්‍රතිඔක්සිකාරක බහුල සුවිශේෂී විශේෂ වර්ග වන අතර, ඒවා තමන්ගේම වෙනම ක්‍රියාවලියකින් සකසනු ලැබේ. වතුයාය නෙළුම් මල් වැනි ද්‍රව්‍ය එකතු කර අගය එකතු කළ මිශ්‍රණ ද, එම අංකුරවලින්ම අතින් බැඳි බ්ලූමින් තේ (Blooming Tea) ද නිපදවයි.",
+      keyPoints: "මෙම අත්කම් ශ්‍රේණි සාමාන්‍ය කළු තේට වඩා බෙහෙවින් අඩු ප්‍රමාණවලින් නෙළා සකසනු ලබන අතර, එය ඒවා දුර්ලභ හා අගය කරන කරුණ වේ — රස බැලීමේ කවුන්ටරයේ මෙය රස බැලීමට ඉල්ලා සිටින්න. මෙම ශ්‍රේණි බොහොමයක් සඳහා දම් පැහැති අංකුරය හෝ සාමාන්‍ය කොළ අංකුරය යන දෙකම භාවිතා කළ හැකි වුවත්, වතුයාය බොහෝ විට භාවිතා කරන්නේ දම් පැහැති අංකුරයයි.",
       duration: "මිනිත්තු 5",
     },
     "pahatharata-manufacturing": {
@@ -478,8 +499,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "ක්ලෝන තේ",
-      description: "වඩාත්ම ඉල්ලුමක් ඇති තේ වර්ග කිහිපයක් ලැබෙන්නේ බීජවලින් නොව, එක් විශිෂ්ට මව් පඳුරකින් පැළැන්දෙන ලද ක්ලෝන පැළවලින්ය. මෙම නැවතුම ක්ලෝන තේ පැතිර යන ආකාරය සහ එහි වටිනාකම ඉහළ යාමට හේතුව ගැන කියා දෙයි.",
-      keyPoints: "ක්ලෝන ව්‍යාප්තිය විශිෂ්ට පැළයක නිශ්චිත ලක්ෂණ රඳවා ගනී; හොඳම ක්ලෝන තේ බොහෝ විට ඉතා සීමිත ප්‍රමාණවලින් නිපදවනු ලැබේ.",
+      description: "වඩාත්ම ඉල්ලුමක් ඇති තේ වර්ග කිහිපයක් ලැබෙන්නේ බීජවලින් නොව, එක් විශිෂ්ට මව් පඳුරකින් පැළැන්දෙන ලද ක්ලෝන පැළවලින්ය. මෙම නැවතුම ක්ලෝන තේ පැතිර යන ආකාරය සහ එහි වටිනාකම ඉහළ යාමට හේතුව ගැන කියා දෙයි. තේ පර්යේෂණ ආයතනය (TRI) විවිධ අවශ්‍යතා සඳහා ක්ලෝන කල්ටිවාර අභිජනනය කරයි — සමහරක් නියඟයට හෝ වැසි කාලයට ඔරොත්තු දීම සහ ඉහළ අස්වැන්න සඳහා, තවත් සමහරක් අතින් සාදන විශේෂ තේ සඳහා අගය කරන රතු හෝ කොළ පැහැති තරුණ දලු සඳහාය. TRI 2023, TRI 2025, සහ TRI 2026 වැනි පුළුල් ලෙස වගා කරන, ඉහළ අස්වැන්නක් ලබා දෙන කල්ටිවාර වතු සහ ගෙවතු දෙකෙහිම සුලභ වන අතර, දුර්ලභ විශේෂ කල්ටිවාර බොහෝ විට හැම දිනකම වගාවට වඩා අතින් සාදන තේ සඳහා විශාල වතුවල වගා කරනු ලැබේ. මෙම TRI අංක වර්ෂ මෙන් පෙනුනද, ඒවා සරලව පවරන ලද අංක මිස, එක් එක් කල්ටිවාරය නිකුත් කළ වර්ෂය නොවේ.",
+      keyPoints: "ක්ලෝන ව්‍යාප්තිය විශිෂ්ට පැළයක නිශ්චිත ලක්ෂණ රඳවා ගනී; හොඳම ක්ලෝන තේ බොහෝ විට ඉතා සීමිත ප්‍රමාණවලින් නිපදවනු ලැබේ. රතු හෝ කොළ පැහැති විශේෂ කල්ටිවාරවලින් ලැබෙන දලු, රන් තුඩු සහ රිදී තුඩු වැනි දුර්ලභ ශ්‍රේණි සඳහා අතින් නෙළනු ලබන අතර, සාමාන්‍ය නෙළන ලද කොළවලට වඩා කිලෝග්‍රෑමයකට රුපියල් 100ක් පමණ වැඩිපුර වතු සාමාන්‍යයෙන් ගෙවයි.",
       duration: "මිනිත්තු 5-10",
     },
     "organic-fertilizer": {
@@ -508,7 +529,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "අත්කම් තේ කර්මාන්තශාලාව",
-      description: "යාන්ත්‍රික නිෂ්පාදනයට අමතරව, සමහර තේ සෑම අදියරකදීම යන්ත්‍ර නොව සම්පූර්ණයෙන්ම අතින් සකසනු ලැබේ. මෙම නැවතුම අත්කම් තේ, කර්මාන්තශාලා රේඛා නිෂ්පාදනයෙන් වෙනස් වන්නේ කෙසේද යන්න ගැන කියා දෙයි.",
+      description: "යාන්ත්‍රික නිෂ්පාදනයට අමතරව, සමහර තේ සෑම අදියරකදීම යන්ත්‍රයක් නොව සම්පූර්ණයෙන්ම අතින් සකසනු ලැබේ. වතුයායේ අත්කම් විශේෂ ශ්‍රේණි බොහොමයක් — රන් තුඩුව, රිදී තුඩුව, සුදු තේ, දම් තේ, රෝස තේ, අතින් බැඳි බ්ලූමින් තේ, සහ නෙළුම් තේ වැනි මල් එකතු කළ මිශ්‍රණ — ප්‍රධාන කළු තේ කර්මාන්තශාලාව වෙනුවට මෙහිදී නිම කරනු ලැබේ. මෙම නැවතුම අත්කම් තේ, කර්මාන්තශාලා රේඛා නිෂ්පාදනයෙන් වෙනස් වන්නේ කෙසේද යන්න ගැන කියා දෙයි.",
       keyPoints: "අතින් රෝල් කිරීම සහ අතින් සැකසීම, කුඩා තොග, කොළ අතර වැඩි විචලනයක් සමඟ නිපදවන අතර, ඒවායේ සුවිශේෂී ලක්ෂණය නිසා බොහෝ විට අගය කරනු ලැබේ.",
       duration: "මිනිත්තු 10",
     },
@@ -540,7 +561,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   ta: {
     plucking: {
       name: "பறித்தல்",
-      description: "ஒவ்வொரு இலையும் தேயிலைத் தோட்டத்தில் தொடங்குகிறது, அங்கு பறிப்பவர்கள் ஒவ்வொரு தளிரிலிருந்தும் மொட்டையும் இரண்டு மென்மையான இலைகளையும் கையால் பறிக்கின்றனர். இந்த நுட்பமான பறிப்பு தரமே இலங்கை தேயிலைக்கு அதன் நுண்ணிய தன்மையை அளிக்கிறது — கரடுமுரடான இலைகள் புதரிலேயே விடப்படுகின்றன.",
+      description: "ஒவ்வொரு இலையும் தேயிலைத் தோட்டத்தில் தொடங்குகிறது, அங்கு பறிப்பவர்கள் ஒவ்வொரு தளிரையும் ஊழியர்கள் 'தேக ஹமார' என்று அழைக்கும் இரண்டரை இலைகள் வரை — பெரும்பாலும் மூன்றரை இலைகள் வரை — கடுமையான 'இரண்டு இலைகள் மற்றும் ஒரு மொட்டு' விதிக்குப் பதிலாக கையால் பறிக்கிறார்கள். இந்த நுணுக்கமான பறிப்பு தரம்தான் இலங்கை தேயிலைக்கு அதன் நுட்பமான தன்மையை அளிக்கிறது — கரடுமுரடான இலைகள் புதரிலேயே விடப்படுகின்றன. கருப்பு தேயிலை மற்றும் பச்சை தேயிலைக்கு இடையே பறிக்கப்படும் துல்லியமான இலை எண்ணிக்கை வேறுபடுகிறது.",
       keyPoints: "மிக இளம் வளர்ச்சி மட்டுமே பயன்படுத்தப்படுகிறது. கையால் பறிப்பது புதரைப் பாதுகாக்கிறது, அதிக சுவை கூறுகள் கொண்ட இலைகளைத் தேர்ந்தெடுக்கிறது — இந்த தரத்தில் இயந்திரங்களால் நகலெடுக்க முடியாதது.",
       duration: "இலைகள் தினமும், ஆண்டு முழுவதும் பறிக்கப்பட்டு, புத்துணர்ச்சியாக இருக்க சில மணி நேரங்களில் தொழிற்சாலைக்கு விரைந்து கொண்டு செல்லப்படுகின்றன.",
     },
@@ -570,8 +591,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "வகைப்படுத்தல் மற்றும் தரப்படுத்தல்",
-      description: "உலர்ந்த தேயிலை, இலையின் அளவு மற்றும் வடிவத்தின் அடிப்படையில் Orange Pekoe, Broken Orange Pekoe, Dust போன்ற தரங்களாகப் பிரிக்கும் வலைச் சல்லடைகள் தொடர் வழியாக சல்லடை போடப்படுகிறது.",
-      keyPoints: "தரப்படுத்தல் என்பது தரத்தைப் பற்றியதைக் காட்டிலும் இலைத் துகள் அளவைப் பற்றியது, இது காய்ச்சும் நேரத்தையும் வலிமையையும் பாதிக்கிறது — தொழிற்சாலைகள் வெவ்வேறு சந்தைகளுக்கும் காய்ச்சும் முறைகளுக்கும் தேயிலையை பொருத்துவது இப்படித்தான்.",
+      description: "பச்சை தேயிலையும் கருப்பு தேயிலையும் இரண்டும் ஒரே புதரிலும் ஒரே இலையிலுமே தொடங்குகின்றன — அவற்றை உண்மையில் வேறுபடுத்துவது நொதித்தல் (ஃபெர்மென்டேஷன்/ஆக்சிஜனேற்றம்) எனும் படிநிலையே, இது கருப்பு தேயிலை கடந்து செல்லும் ஆனால் பச்சை தேயிலை தவிர்க்கும் ஒரு படிநிலை. இந்த தொழிற்சாலையின் உற்பத்தியில் பெரும்பகுதி கருப்பு தேயிலையே. காய்ந்த இலை தரம் பிரிக்கும் இயந்திரங்கள் வழியாகச் செல்லும்போது, அது ஒரே பாஸில் அசல் தளிரின் எந்தப் பகுதியிலிருந்து வந்தது என்பதன் அடிப்படையில் பிரிக்கப்படுகிறது: மென்மையான, எளிதில் முறியும் நுனியும் மேல் இலைகளும் — ஒவ்வொரு தளிரிலும் சுமார் 2% மட்டுமே — FBOPF Extra Special என்ற சிறந்த மற்றும் அதிக விலையுள்ள தரமாக மாறுகிறது, அதே சமயம் கீழே உள்ள இலை BOP மற்றும் Pekoe போன்ற உறுதியான தரங்களாக மாறுகிறது. மிகவும் முதிர்ந்த, கீழ்மட்ட இலை Dust ஆக மாறுகிறது, மேலும் பயன்படுத்த முடியாத தண்டுகளும் துண்டுகளும் Refuse ஆக அகற்றப்படுகின்றன.",
+      keyPoints: "மதிப்பு தளிரின் நிலையைப் பொறுத்தே இருக்கிறது, இலையின் அளவை மட்டும் அல்ல — இலை எவ்வளவு உயரமாகவும் மென்மையாகவும் இருக்கிறதோ, அதன் தரமும் விலையும் அவ்வளவு அதிகம். சுவை சேர்க்கப்பட்ட தேநீர் பைகளில் பொதுவாக இருப்பது உயர்தர இலை அல்ல, Dust தரமே; FBOPF Extra Special போன்ற சிறந்த தரங்கள் அவற்றின் ஏற்றுமதி சந்தை மதிப்பு காரணமாக உள்நாட்டில் அரிதாகவே விற்கப்படுகின்றன.",
       duration: "வகைப்படுத்தல் இயந்திரங்களில் தொடர்ச்சியாக நடைபெறுகிறது, ஒரு தொகுதிக்கு சுமார் 30 முதல் 45 நிமிடங்கள் ஆகும்.",
     },
     packing: {
@@ -582,17 +603,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "இலவங்கப்பட்டை தோட்டம்",
-      sectionHeadings: ["இலவங்கப்பட்டை மரத்தைப் பற்றி", "பண்புகள்", "நன்மைகள்", "இலவங்கப்பட்டை தேநீர் தயாரிப்புகள்"],
+      sectionHeadings: ["இலவங்கப்பட்டை மரத்தைப் பற்றி", "பண்புகள்", "இலவங்கப்பட்டை உரித்தல்: கருவிகள் மற்றும் செயல்முறை", "நன்மைகள்", "இலவங்கப்பட்டை தேநீர் தயாரிப்புகள்"],
       sectionBodies: [
         "Cinnamomum verum — 'உண்மையான இலவங்கப்பட்டை' அல்லது சிலோன் இலவங்கப்பட்டை என விற்கப்படும் — லாரேசி குடும்பத்தைச் சேர்ந்த ஒரு சிறிய பசுமையான மரமாகும், இலங்கை மற்றும் தென் இந்தியாவை பூர்வீகமாகக் கொண்டது. வணிக ரீதியாக முக்கியமானது மரத்தின் உள் பட்டையே: அது உரிக்கப்பட்டு, உலர்த்தப்பட்டு, பரிச்சயமான இலவங்கப்பட்டை சுருள்களாக சுருட்டப்படுகிறது. வடிகட்டும் மண் மற்றும் நிலையான வெப்பமண்டல மழைப்பொழிவு கிடைக்கும் போது, மரம் இலைகளையும், உலகம் முழுவதும் சமையல் மற்றும் பாரம்பரிய மருத்துவத்தில் மதிக்கப்படும் ஒரு அத்தியாவசிய எண்ணெயையும் தருகிறது.",
-        "ஒரு முதிர்ந்த இலவங்கப்பட்டை மரம் சுமார் 10 முதல் 15 மீட்டர் வரை உயரம் வளரும், 7 முதல் 18 செ.மீ நீளமுள்ள பளபளப்பான, முட்டை வடிவ இலைகளைக் கொண்டது, ஒவ்வொரு இலையிலும் மூன்று முக்கிய நரம்புகள் தெளிவாகத் தெரிந்து நசுக்கும்போது காரமான வாசனையை வெளியிடும். சிறிய பச்சை-வெள்ளை முதல் மஞ்சள் நிற பூக்கள் தளர்வான, மென்மையான வாசனையுள்ள கொத்துகளாக உருவாகி, பின்னர் சுமார் ஒரு செ.மீ நீளமுள்ள ஒரு விதையைக் கொண்ட சிறிய கரும்பழுப்பு-கருப்பு நிற பழமாக மாறுகிறது. ஈரப்பதமான, வெப்பமண்டல பசுமையான காடுகளில், வடிகட்டும் களிமண் நிறைந்த மண்ணுடன் கூடிய வெப்பமான சூழலில் இது சிறப்பாக வளரும்.",
         "மரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+        "உரித்தல் தொடங்குவதற்கு முன் பட்டை தளர்வதற்காக அறுவடை செய்யப்பட்ட தளிர்கள் ஒரு நாள் ஓய்வெடுக்க விடப்படுகின்றன — பல தலைமுறை உரிப்பவர்களால் கடத்தப்பட்ட ஒரு திறமை. இதில் பயன்படும் கருவிகள் எளிமையானவை ஆனால் இன்றியமையாதவை:",
         "இலவங்கப்பட்டையின் மதிப்பு சமையலறையை தாண்டியும் விரிவடைகிறது:",
-        "தொழிற்சாலை இயற்கையான இலங்கை இலவங்கப்பட்டையிலிருந்து தயாரிக்கப்பட்ட, தூய, நறுமணமிக்க அனுபவத்திற்கான இரண்டு உயர்தர இலவங்கப்பட்டை தேநீர் கலவைகளை உற்பத்தி செய்கிறது.",
+        "தனது இலவங்கப்பட்டை அனைத்தையும் மூலப்பொருளாக விற்பதற்குப் பதிலாக, தொழிற்சாலை அதை தனது சொந்த தேநீர் வரம்பில் மதிப்புக்கூட்டப்பட்ட பொருளாகவும் பயன்படுத்துகிறது — இயற்கையான இலங்கை இலவங்கப்பட்டையிலிருந்து தயாரிக்கப்பட்ட, தூய, நறுமணமிக்க அனுபவத்திற்கான இரண்டு உயர்தர இலவங்கப்பட்டை தேநீர் கலவைகளில் அதை கலந்து. இன்னும் பரந்த அளவில், இலவங்கப்பட்டை தொழில்துறை பொதுவாக பட்டையையும் இலைகளையும் மற்ற மதிப்புக் கூட்டப்பட்ட பொருட்களாகவும் மாற்றுகிறது — சமையல், அழகுசாதனப் பொருட்கள் மற்றும் நறுமணச் சிகிச்சைக்கான பட்டை மற்றும் இலை எண்ணெய், அரைத்த இலவங்கப்பட்டைத் தூள், மற்றும் உணவுத் தர ஒலியோரெசின்.",
       ],
       itemHeadings: [
         [],
         ["உயரம்", "இலைகள்", "பூக்கள்", "பழம்", "வாழிடம்"],
+        ["கத்த (பெரிய கத்தி)", "காண கொக்கத்த (சுரண்டி)", "தலன கொக்கத்த (உரிக்கும் கத்தி)", "பித்தள கம்பி", "கதுர (கத்தரிக்கோல்)", "அங்கிலி கொப்புவ (விரல் காப்பு)", "அளவீட்டு கம்பி"],
         ["சமையல் பயன்பாடுகள்", "மருத்துவ பண்புகள்", "சூழலியல் முக்கியத்துவம்"],
         ["இலவங்கப்பட்டை தேநீர்", "சுவையூட்டப்பட்ட இலவங்கப்பட்டை தேநீர்"],
       ],
@@ -606,6 +628,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "வெப்பமண்டல பசுமையான காடுகள், வெப்பமான சூழல் மற்றும் வடிகட்டும் களிமண் நிறைந்த மண்.",
         ],
         [
+          "அறுவடை செய்யப்பட்ட தளிர்களை நீளத்திற்கு வெட்டவும், நுட்பமான உரித்தல் பணி தொடங்குவதற்கு முன் பட்டையை நீளவாக்கில் பிளக்கவும் பயன்படுத்தப்படும் பெரிய, கொக்கி வடிவ கத்தி.",
+          "உண்மையான உரித்தல் தொடங்குவதற்கு முன் மெல்லிய, கரடுமுரடான வெளிப்புற பட்டையை சுரண்ட தளிர் வழியாக இழுக்கப்படும் குறுகிய கைப்பிடி கொண்ட கொக்கி கருவி — 'காணவா' என்றால் சிங்களத்தில் 'சுரண்டுதல்' என்று பொருள்.",
+          "தளர்வான உட்பட்டையை அதன் நீளம் முழுவதும் கீறி, ஒரே துண்டாக மரத் தண்டிலிருந்து தூக்கி எடுக்கப் பயன்படும் ஒரு சிறிய, வளைந்த கத்தி — 'தலனவா' என்றால் சிங்களத்தில் 'உரித்தல்' என்று பொருள்.",
+          "கீறப்பட்ட பட்டையை கிழிக்காமல் தளிரின் முழு நீளம் முழுவதும் மரத்திலிருந்து மென்மையாகப் பிரிக்க அதன் அடியில் செலுத்தப்படும் மென்மையான, வட்டமான உலோகக் கம்பி.",
+          "உரிக்கப்பட்ட பட்டைத் துண்டுகளை சுருட்டி உலர்த்துவதற்கு முன் சீரான நீளத்திற்கு வெட்ட பயன்படுகிறது.",
+          "மணிக்கணக்கில் கூர்மையான உரிக்கும் கருவிகளைக் கையாளும்போது வெட்டுக்களிலிருந்து பாதுகாக்க விரல்களில் அணியப்படும் பாதுகாப்பு உறை.",
+          "பட்டைத் துண்டுகள் வெட்டப்பட்டு சுருட்டுவதற்குத் தயாராகும்போது சீரான நீளங்களை அளந்து குறிக்கப் பயன்படும் அளவீடு செய்யப்பட்ட கம்பி.",
+        ],
+        [
           "இனிப்பு மற்றும் காரமான உணவுகள், பானங்கள், மற்றும் பேக்கிங்கில் பயன்படுத்தப்படுகிறது — பல சந்தைகளில் விற்கப்படும் வலிமையான, தடிமனான பட்டையுடைய கேசியா வகைகளை விட சிலோன் இலவங்கப்பட்டை மென்மையான, நுட்பமான இனிப்புத் தன்மை கொண்டது.",
           "ஆக்ஸிஜனேற்ற எதிர்ப்பு, அழற்சி எதிர்ப்பு, மற்றும் நுண்ணுயிர் எதிர்ப்பு பண்புகள் உள்ளன, இரத்த சர்க்கரையை கட்டுப்படுத்த, செரிமானத்தை மேம்படுத்த, மற்றும் இதய ஆரோக்கியத்தை மேம்படுத்த பாரம்பரியமாக பயன்படுத்தப்படுகிறது; அதன் அத்தியாவசிய எண்ணெய்க்கு பாரம்பரிய மருத்துவத்திலும் நறுமண சிகிச்சையிலும் நீண்ட வரலாறு உண்டு.",
           "மரங்கள் வெப்பமண்டல காடுகளின் பல்லுயிர் பெருக்கத்திற்கு பங்களிக்கின்றன, மகரந்தச் சேர்க்கையாளர்களுக்கு தேன் அளிக்கின்றன, மற்றும் உள்ளூர் விவசாயிகள் இலவங்கப்பட்டையை மற்ற பயிர்களுடன் நிலைத்தன்மையுடன் வளர்க்க உதவும் வேளாண்-வனவியல் முறைகளை ஆதரிக்கின்றன.",
@@ -616,6 +647,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -703,8 +735,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "கைவினை தேயிலை தரங்கள்",
-      description: "முதிர்ந்த இலைகளிலிருந்து தயாரிக்கப்படும் நிலையான கருப்பு தேயிலைக்கு கூடுதலாக, தோட்டம் மென்மையான இளம் மொட்டுகள் மற்றும் சிறப்பு கல்டிவார்களிலிருந்து அரிதான, கைவினைத் தேயிலைகளையும் தயாரிக்கிறது. வெள்ளி முனைகள் மற்றும் தங்க முனைகள், திறக்கப்படாத இலை மொட்டுகளிலிருந்து மட்டுமே கையால் பறிக்கப்படும் மிக அரிதான தேயிலைகள் ஆகும். வெள்ளை தேயிலை மிக லேசாக செயலாக்கப்பட்டு, நுட்பமான, இயற்கையாக இனிமையான சுவையை அளிக்கிறது, ஊதா மற்றும் இளஞ்சிவப்பு தேயிலைகள் இயற்கை ஆக்ஸிஜனேற்ற எதிர்ப்பிகள் நிறைந்த தனித்துவமான சிறப்பு வகைகளாகும்.",
-      keyPoints: "இந்த கைவினைத் தரங்கள் நிலையான கருப்பு தேயிலையை விட மிகக் குறைந்த அளவில் பறிக்கப்பட்டு செயலாக்கப்படுகின்றன, இதுவே அவற்றை அரிதானதாகவும் மதிப்புமிக்கதாகவும் ஆக்குகிறது — சுவை பார்க்கும் கவுண்டரில் இவற்றை சுவைக்க கேளுங்கள்.",
+      description: "நிலையான கருப்பு தேயிலைக்கு கூடுதலாக, தோட்டம் அரிதான, கைவினைத் தேயிலைகளையும் தயாரிக்கிறது — இவை பெரும்பாலும் முக்கிய கருப்பு தேயிலை உற்பத்தி வரிசையில் அல்லாமல், தனியான 'கைவினை தேயிலை தொழிற்சாலையில்' கையால் முடிக்கப்படுகின்றன; அதனாலேயே இந்த தரங்கள் 'கைவினை தேயிலை தரங்கள்' என்றும் அழைக்கப்படுகின்றன — இது வெகுஜன உற்பத்தியை விட ஒரு கைவினைக் கலைக்கு நெருக்கமானது. இவற்றில் பெரும்பாலானவை ஒரு தனித்துவமான ஊதா நிற தளிரிலிருந்து வருகின்றன, அதன் நிறம் ஆந்தோசயனின் என்பதிலிருந்து கிடைக்கிறது. தங்க முனைக்கு அதே தளிரின் முழுமையாக முதிர்ந்த மொட்டு பயன்படுத்தப்படுகிறது, வெள்ளி முனைக்கு அதே தளிரின் இன்னும் முதிராத, வெளிர் நிற மொட்டு பயன்படுத்தப்படுகிறது. வெள்ளை தேயிலைக்கு தளிரிலிருந்து இரண்டரை இலைகள் எடுக்கப்பட்டு, கருப்பு தேயிலை போல நொதிக்க வைத்து உருட்டுவதற்குப் பதிலாக ஆவியில் வேகவைத்து உலர்த்தப்படுகிறது, இதனால் மிக லேசாக செயலாக்கப்பட்ட, இயற்கையாக இனிமையான சுவை கிடைக்கிறது. ஊதா மற்றும் இளஞ்சிவப்பு தேயிலைகள் இயற்கை ஆக்ஸிஜனேற்ற எதிர்ப்பிகள் நிறைந்த தனித்துவமான சிறப்பு வகைகளாகும், அவை தங்கள் சொந்த தனி செயல்முறையில் தயாரிக்கப்படுகின்றன. தோட்டம் தாமரை மலர் போன்றவற்றைச் சேர்த்து மதிப்புக் கூட்டப்பட்ட கலவைகளையும், அதே தளிர்களிலிருந்து கையால் கட்டப்பட்ட ப்ளூமிங் தேயிலையும் தயாரிக்கிறது.",
+      keyPoints: "இந்த கைவினைத் தரங்கள் நிலையான கருப்பு தேயிலையை விட மிகக் குறைந்த அளவில் பறிக்கப்பட்டு செயலாக்கப்படுகின்றன, இதுவே அவற்றை அரிதானதாகவும் மதிப்புமிக்கதாகவும் ஆக்குகிறது — சுவை பார்க்கும் கவுண்டரில் இவற்றை சுவைக்க கேளுங்கள். இந்த தரங்களில் பெரும்பாலானவற்றிற்கு ஊதா நிற தளிர் அல்லது சாதாரண பச்சை தளிர் இரண்டையும் பயன்படுத்தலாம் என்றாலும், தோட்டம் பெரும்பாலும் ஊதா நிற தளிரையே பயன்படுத்துகிறது.",
       duration: "5 நிமிடங்கள்",
     },
     "pahatharata-manufacturing": {
@@ -721,8 +753,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "குளோன் தேயிலை",
-      description: "மிகவும் விரும்பப்படும் சில தேயிலைகள், விதையிலிருந்து வளர்க்கப்படுவதற்குப் பதிலாக, ஒரு விதிவிலக்கான தாய் புதரிலிருந்து பெருக்கப்பட்ட கிளைநடவுகளிலிருந்து குளோன் செடிகளாக வருகின்றன. குளோன் தேயிலை எவ்வாறு பெருக்கப்படுகிறது, ஏன் அதிக விலைக்கு விற்கப்படுகிறது என்பதை இந்த நிறுத்தம் விளக்குகிறது.",
-      keyPoints: "குளோன் பெருக்கம் ஒரு சிறந்த செடியின் சரியான பண்புகளை பாதுகாக்கிறது; சிறந்த குளோன் தேயிலைகள் பெரும்பாலும் மிகக் குறைந்த அளவில் உற்பத்தி செய்யப்படுகின்றன.",
+      description: "மிகவும் விரும்பப்படும் சில தேயிலைகள், விதையிலிருந்து வளர்க்கப்படுவதற்குப் பதிலாக, ஒரு விதிவிலக்கான தாய் புதரிலிருந்து பெருக்கப்பட்ட கிளைநடவுகளிலிருந்து குளோன் செடிகளாக வருகின்றன. குளோன் தேயிலை எவ்வாறு பெருக்கப்படுகிறது, ஏன் அதிக விலைக்கு விற்கப்படுகிறது என்பதை இந்த நிறுத்தம் விளக்குகிறது. தேயிலை ஆராய்ச்சி நிறுவனம் (TRI) வெவ்வேறு தேவைகளுக்காக குளோன் வகைகளை உருவாக்குகிறது — சில வறட்சி அல்லது மழைக்கு தாங்கும் தன்மைக்காகவும் அதிக விளைச்சலுக்காகவும், மற்றவை கைவினைச் சிறப்பு தேயிலைகளுக்குப் பயன்படும் சிவப்பு அல்லது பச்சை நுனி இளம் தளிர்களுக்காகவும். TRI 2023, TRI 2025, TRI 2026 போன்ற பரவலாக நடப்பட்ட, அதிக விளைச்சல் தரும் வகைகள் தோட்டங்களிலும் வீட்டுத் தோட்டங்களிலும் பொதுவானவை, அதே சமயம் அரிதான சிறப்பு வகைகள் பெரும்பாலும் தினசரி சாகுபடிக்குப் பதிலாக கைவினை தேயிலைக்காக பெரிய தோட்டங்களில் மட்டுமே வளர்க்கப்படுகின்றன. இந்த TRI எண்கள் ஆண்டுகளைப் போல தோன்றினாலும், அவை வெறும் ஒதுக்கப்பட்ட எண்களே, ஒவ்வொரு வகையும் வெளியிடப்பட்ட ஆண்டு அல்ல.",
+      keyPoints: "குளோன் பெருக்கம் ஒரு சிறந்த செடியின் சரியான பண்புகளை பாதுகாக்கிறது; சிறந்த குளோன் தேயிலைகள் பெரும்பாலும் மிகக் குறைந்த அளவில் உற்பத்தி செய்யப்படுகின்றன. சிவப்பு அல்லது பச்சை நுனி சிறப்பு வகைகளிலிருந்து பெறப்படும் தளிர்கள், கோல்டன் டிப்ஸ் மற்றும் சில்வர் டிப்ஸ் போன்ற அரிய தரங்களுக்காக கையால் பறிக்கப்படுகின்றன, மேலும் தோட்டங்கள் பொதுவாக சாதாரண பறிக்கப்பட்ட இலைகளை விட கிலோவுக்கு சுமார் 100 ரூபாய் அதிகமாக செலுத்துகின்றன.",
       duration: "5-10 நிமிடங்கள்",
     },
     "organic-fertilizer": {
@@ -751,7 +783,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "கைவினை தேயிலை தொழிற்சாலை",
-      description: "இயந்திரமயமாக்கப்பட்ட உற்பத்திக்கு கூடுதலாக, சில தேயிலை ஒவ்வொரு கட்டத்திலும் இயந்திரத்திற்குப் பதிலாக முழுவதுமாக கையால் செயலாக்கப்படுகிறது. கைவினை தேயிலை தொழிற்சாலை வரிசை உற்பத்தியிலிருந்து எவ்வாறு வேறுபடுகிறது என்பதை இந்த நிறுத்தம் விளக்குகிறது.",
+      description: "இயந்திரமயமாக்கப்பட்ட உற்பத்திக்கு கூடுதலாக, சில தேயிலை ஒவ்வொரு கட்டத்திலும் இயந்திரத்திற்குப் பதிலாக முழுவதுமாக கையால் செயலாக்கப்படுகிறது. தோட்டத்தின் கைவினைச் சிறப்புத் தரங்களில் பெரும்பாலானவை — தங்க முனை, வெள்ளி முனை, வெள்ளை தேயிலை, ஊதா தேயிலை, இளஞ்சிவப்பு தேயிலை, கையால் கட்டப்பட்ட ப்ளூமிங் தேயிலை, மற்றும் தாமரை தேயிலை போன்ற மலர் கலந்த கலவைகள் — முக்கிய கருப்பு தேயிலை தொழிற்சாலைக்குப் பதிலாக இங்கேயே முடிக்கப்படுகின்றன. கைவினை தேயிலை தொழிற்சாலை வரிசை உற்பத்தியிலிருந்து எவ்வாறு வேறுபடுகிறது என்பதை இந்த நிறுத்தம் விளக்குகிறது.",
       keyPoints: "கை சுருட்டல் மற்றும் கை செயலாக்கம் சிறிய தொகுதிகளை உருவாக்குகின்றன, இலைகளுக்கு இடையே அதிக மாறுபாட்டுடன், அவற்றின் தனித்துவமான தன்மைக்காக பெரும்பாலும் மதிக்கப்படுகின்றன.",
       duration: "10 நிமிடங்கள்",
     },
@@ -783,7 +815,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   it: {
     plucking: {
       name: "Raccolta",
-      description: "Ogni foglia inizia il suo percorso nel giardino del tè, dove i raccoglitori colgono a mano il germoglio e due foglie tenere da ogni ramoscello. Questo standard di raccolta fine è ciò che conferisce al tè di Ceylon il suo carattere delicato — le foglie più grossolane vengono lasciate sull'arbusto.",
+      description: "Ogni foglia inizia il suo percorso nel giardino del tè, dove i raccoglitori raccolgono a mano ogni germoglio fino a quello che il personale chiama 'deka hamara' — due foglie e mezzo — spesso tre e mezzo, anziché la rigida regola delle due foglie e un germoglio. Questo standard di raccolta fine è ciò che conferisce al tè di Ceylon il suo carattere delicato — le foglie più grossolane vengono lasciate sull'arbusto. Il numero esatto di foglie raccolte varia tra il tè nero e il tè verde.",
       keyPoints: "Viene utilizzata solo la crescita più giovane. La raccolta manuale protegge l'arbusto e seleziona le foglie con la più alta concentrazione di composti aromatici, qualcosa che le macchine non possono replicare a questo livello di qualità.",
       duration: "Le foglie vengono raccolte quotidianamente, tutto l'anno, e portate rapidamente in fabbrica entro poche ore per rimanere fresche.",
     },
@@ -813,8 +845,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "Selezione e Classificazione",
-      description: "Il tè essiccato viene setacciato attraverso una serie di setacci a maglie che lo separano per dimensione e forma della foglia in gradi come Orange Pekoe, Broken Orange Pekoe e Dust.",
-      keyPoints: "La classificazione non riguarda tanto la qualità quanto la dimensione delle particelle della foglia, che influisce sul tempo di infusione e sulla forza — è così che le fabbriche adattano il tè a diversi mercati e stili di preparazione.",
+      description: "Il tè verde e il tè nero partono entrambi dallo stesso arbusto e dalla stessa foglia — ciò che li differenzia realmente è la fermentazione (ossidazione), una fase che il tè nero attraversa mentre il tè verde la salta. La produzione di questa fabbrica è per lo più tè nero. Mentre la foglia essiccata passa attraverso i macchinari di selezione, viene separata in un solo passaggio in base alla parte del germoglio originale da cui proviene: la punta tenera, che si spezza facilmente, e le foglie più alte — solo circa il 2% di ogni germoglio — diventano FBOPF Extra Special, la qualità più pregiata e costosa, mentre la foglia più in basso diventa qualità solide come BOP e Pekoe. La foglia più matura e più bassa diventa Dust, e qualsiasi stelo o scarto inutilizzabile viene scartato come Refuse.",
+      keyPoints: "Il valore segue la posizione sul germoglio, non solo la dimensione della foglia — più la foglia è alta e tenera, più alta è la sua qualità e il suo prezzo. Il Dust, non la foglia pregiata, è ciò che di solito finisce nelle bustine di tè aromatizzate; le qualità più pregiate come il FBOPF Extra Special vengono raramente vendute localmente per via del loro valore sui mercati di esportazione.",
       duration: "La selezione avviene in modo continuo tramite macchinari e richiede circa 30-45 minuti per lotto.",
     },
     packing: {
@@ -825,17 +857,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Piantagione di Cannella",
-      sectionHeadings: ["L'Albero della Cannella", "Caratteristiche", "Benefici", "Prodotti al Tè alla Cannella"],
+      sectionHeadings: ["L'Albero della Cannella", "Caratteristiche", "Sbucciare la Cannella: Strumenti e Processo", "Benefici", "Prodotti al Tè alla Cannella"],
       sectionBodies: [
         "La Cinnamomum verum — venduta come 'vera cannella' o cannella di Ceylon — è un piccolo albero sempreverde della famiglia delle lauracee, originario dello Sri Lanka e dell'India meridionale. Ciò che conta commercialmente è la corteccia interna dell'albero: viene pelata, essiccata e arrotolata nei familiari bastoncini di cannella. Con un terreno ben drenato e piogge tropicali costanti, l'albero produce anche foglie e un olio essenziale apprezzato in tutto il mondo in cucina e nella medicina tradizionale.",
-        "Un albero di cannella maturo raggiunge circa 10-15 metri, con foglie lucide e ovali lunghe 7-18 centimetri, ciascuna con tre venature prominenti e un profumo speziato quando vengono schiacciate. Piccoli fiori da bianco-verdastri a gialli si raggruppano in pannocchie sciolte e lievemente profumate, formando poi una piccola drupa color viola scuro-nero lunga circa un centimetro, con un solo seme. Cresce meglio nella foresta pluviale tropicale umida, in condizioni calde e con terreno argilloso ben drenato.",
         "Uno sguardo rapido all'albero stesso:",
+        "I rami raccolti vengono lasciati riposare per circa un giorno affinché la corteccia si allenti prima di iniziare la sbucciatura — un'abilità tramandata attraverso generazioni di sbucciatori. Gli strumenti coinvolti sono semplici ma essenziali:",
         "Il valore della cannella va ben oltre la cucina:",
-        "La fabbrica produce due miscele premium di tè alla cannella, realizzate con cannella naturale dello Sri Lanka per un'esperienza pura e aromatica.",
+        "Anziché vendere tutta la sua cannella come spezia grezza, la fabbrica la utilizza anche come ingrediente a valore aggiunto nella propria gamma di tè — miscelandola in due tè alla cannella premium, realizzati con cannella naturale dello Sri Lanka per un'esperienza pura e aromatica. Più in generale, l'industria della cannella trasforma tipicamente la corteccia e le foglie anche in altri prodotti a valore aggiunto — olio di corteccia e di foglie per cucina, cosmetici e aromaterapia, cannella in polvere e oleoresina per uso alimentare.",
       ],
       itemHeadings: [
         [],
         ["Altezza", "Foglie", "Fiori", "Frutto", "Habitat"],
+        ["Kaththa (Coltello Grande)", "Gaana Kokaththa (Raschietto)", "Thalana Kokaththa (Coltello da Sbucciatura)", "Piththala Danda (Asta di Ottone)", "Kathura (Forbici)", "Angili Kopuwa (Protezione per le Dita)", "Asta di Misurazione"],
         ["Usi Culinari", "Proprietà Medicinali", "Importanza Ecologica"],
         ["Tè alla Cannella", "Tè alla Cannella Aromatizzato"],
       ],
@@ -849,6 +882,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Foresta pluviale tropicale, con condizioni calde e terreno argilloso ben drenato.",
         ],
         [
+          "Un grande coltello a forma di uncino usato per tagliare a misura i rami raccolti e spaccare la corteccia per il lungo prima che inizi il lavoro fine di sbucciatura.",
+          "Uno strumento uncinato con manico corto, passato lungo il ramo per raschiare via la sottile corteccia esterna ruvida prima che inizi la vera sbucciatura — 'gaanawa' significa 'raschiare' in singalese.",
+          "Una piccola lama curva usata per incidere la corteccia interna allentata lungo la sua lunghezza e sollevarla dal fusto legnoso in un'unica striscia — 'thalanawa' significa 'sbucciare' in singalese.",
+          "Un'asta metallica liscia e arrotondata infilata sotto la corteccia incisa per separarla delicatamente dal legno lungo tutta la lunghezza del ramo senza strapparla.",
+          "Usate per tagliare le strisce di corteccia sbucciata a una lunghezza uniforme prima di arrotolarle e farle essiccare.",
+          "Una protezione indossata sulle dita per proteggerle dai tagli durante l'uso prolungato degli affilati strumenti di sbucciatura.",
+          "Un'asta calibrata usata per misurare e segnare lunghezze uniformi mentre le strisce di corteccia vengono tagliate e preparate per l'arrotolamento.",
+        ],
+        [
           "Usata in piatti dolci e salati, bevande e prodotti da forno — la cannella di Ceylon ha un sapore più delicato e meno intenso rispetto alle varietà di cassia dalla corteccia più spessa, comunemente vendute in molti mercati.",
           "Possiede proprietà antiossidanti, antinfiammatorie e antimicrobiche, tradizionalmente usata per aiutare a regolare la glicemia, favorire la digestione e sostenere la salute del cuore; il suo olio essenziale ha una lunga storia nella medicina tradizionale e nell'aromaterapia.",
           "Gli alberi contribuiscono alla biodiversità delle foreste tropicali, forniscono nettare agli impollinatori e sostengono sistemi agroforestali che permettono agli agricoltori locali di coltivarla insieme ad altre colture in modo sostenibile.",
@@ -859,6 +901,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -946,8 +989,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Tè Artigianali Pregiati",
-      description: "Oltre al tè nero standard prodotto con foglie mature, la tenuta produce anche rari tè artigianali lavorati a mano da delicati germogli giovani e cultivar speciali. Silver Tips e Golden Tips sono tè estremamente rari raccolti a mano esclusivamente da germogli fogliari non ancora aperti. Il tè bianco è lavorato molto leggermente per un gusto sottile e naturalmente dolce, mentre i tè viola e rosa sono varietà speciali uniche ricche di antiossidanti naturali.",
-      keyPoints: "Questi pregiati tè artigianali vengono raccolti e lavorati in quantità molto più ridotte rispetto al tè nero standard, ed è proprio questo a renderli più rari e pregiati — chiedete al banco di degustazione per assaggiarli.",
+      description: "Oltre al tè nero standard, la tenuta produce anche rari tè artigianali lavorati a mano — per lo più rifiniti a mano nella separata Fabbrica del Tè Artigianale anziché sulla linea principale del tè nero, motivo per cui queste qualità sono chiamate anche 'Tè Artigianali Pregiati': è più vicino a un'arte che a una produzione di massa. Molti di essi provengono da un germoglio dalle sfumature viola, il cui colore deriva dall'antocianina. Il Golden Tip utilizza il germoglio completamente maturo di quella stessa pianta, mentre il Silver Tip utilizza il germoglio più chiaro e ancora immaturo della stessa pianta. Il tè bianco prende due foglie e mezzo dal germoglio, cotte al vapore e essiccate anziché fermentate e arrotolate come il tè nero, per un gusto molto leggermente lavorato e naturalmente dolce. I tè viola e rosa sono varietà speciali uniche, ricche di antiossidanti naturali, realizzate con un proprio processo separato. La tenuta crea anche miscele a valore aggiunto — come il tè infuso con fiori di loto — e il Blooming Tea legato a mano dagli stessi germogli.",
+      keyPoints: "Questi pregiati tè artigianali vengono raccolti e lavorati in quantità molto più ridotte rispetto al tè nero standard, ed è proprio questo a renderli più rari e pregiati — chiedete al banco di degustazione per assaggiarli. Per la maggior parte di queste qualità si può usare sia il germoglio dalle sfumature viola sia il normale germoglio verde, anche se la tenuta utilizza per lo più quello viola.",
       duration: "5 minuti",
     },
     "pahatharata-manufacturing": {
@@ -964,8 +1007,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "Tè Clonale",
-      description: "Alcuni dei tè più ricercati provengono da piante clonali — talee propagate da un unico arbusto madre eccezionale anziché coltivate da seme. Questa tappa spiega come viene propagato il tè clonale e perché può raggiungere un prezzo elevato.",
-      keyPoints: "La propagazione clonale preserva le caratteristiche esatte di una pianta pregiata; i migliori tè clonali sono spesso prodotti in quantità molto limitate.",
+      description: "Alcuni dei tè più ricercati provengono da piante clonali — talee propagate da un unico arbusto madre eccezionale anziché coltivate da seme. Questa tappa spiega come viene propagato il tè clonale e perché può raggiungere un prezzo elevato. Il Tea Research Institute (TRI) seleziona varietà clonali per esigenze diverse — alcune per la tolleranza alla siccità o alle piogge e per la resa elevata, altre per le caratteristiche gemme dalla punta rossa o verde apprezzate nei tè artigianali. Le varietà ad alta resa ampiamente coltivate, come TRI 2023, TRI 2025 e TRI 2026, sono comuni sia nelle piantagioni che negli orti domestici, mentre le varietà speciali più rare vengono coltivate soprattutto nelle grandi piantagioni per il tè lavorato a mano, anziché per la coltivazione quotidiana. Nonostante sembrino anni, questi numeri TRI sono semplicemente identificativi assegnati, non l'anno in cui ciascuna varietà è stata rilasciata.",
+      keyPoints: "La propagazione clonale preserva le caratteristiche esatte di una pianta pregiata; i migliori tè clonali sono spesso prodotti in quantità molto limitate. Le gemme delle varietà speciali dalla punta rossa o verde vengono raccolte a mano per qualità rare come i Golden Tips e i Silver Tips, e le piantagioni pagano in genere circa 100 rupie in più al chilo rispetto alle foglie raccolte normalmente.",
       duration: "5-10 minuti",
     },
     "organic-fertilizer": {
@@ -994,7 +1037,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "Fabbrica di Tè Artigianale",
-      description: "Accanto alla produzione meccanizzata, parte del tè viene lavorata interamente a mano in ogni fase. Questa tappa spiega cosa distingue il tè fatto a mano dalla produzione di linea in fabbrica.",
+      description: "Accanto alla produzione meccanizzata, parte del tè viene lavorata interamente a mano in ogni fase. La maggior parte delle qualità speciali artigianali della tenuta — Golden Tip, Silver Tip, tè bianco, tè viola, tè rosa, Blooming Tea legato a mano e miscele a base di fiori come il tè al loto — vengono rifinite qui anziché nella fabbrica principale del tè nero. Questa tappa spiega cosa distingue il tè fatto a mano dalla produzione di linea in fabbrica.",
       keyPoints: "L'arrotolamento e la lavorazione a mano producono lotti più piccoli con maggiore variazione tra le foglie, spesso apprezzati per il loro carattere distintivo.",
       duration: "10 minuti",
     },
@@ -1026,7 +1069,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   ar: {
     plucking: {
       name: "القطاف",
-      description: "تبدأ كل ورقة رحلتها في حديقة الشاي، حيث يقوم القطّافون بقطف البرعم وورقتين طريتين يدويًا من كل غصن. هذا المعيار الدقيق للقطاف هو ما يمنح شاي سيلان طابعه الرقيق — إذ تُترك الأوراق الأكثر خشونة على الشجيرة.",
+      description: "تبدأ كل ورقة في حديقة الشاي، حيث يقطف العمال يدويًا كل برعم حتى ما يسميه الموظفون 'ديكا هامارا' — ورقتان ونصف — وغالبًا ثلاث أوراق ونصف، بدلاً من القاعدة الصارمة المتمثلة في ورقتين وبرعم واحد. هذا المعيار الدقيق للقطف هو ما يمنح شاي سيلان طابعه الرقيق — إذ تُترك الأوراق الأكثر خشونة على الشجيرة. ويختلف العدد الدقيق للأوراق المقطوفة بين الشاي الأسود والشاي الأخضر.",
       keyPoints: "لا يُستخدم سوى النمو الأحدث. القطف اليدوي يحمي الشجيرة ويختار الأوراق ذات أعلى تركيز من مركبات النكهة، وهو أمر لا يمكن للآلات محاكاته عند هذا المستوى من الجودة.",
       duration: "تُقطف الأوراق يوميًا على مدار العام، وتُنقل بسرعة إلى المصنع خلال ساعات للحفاظ على نضارتها.",
     },
@@ -1056,8 +1099,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "الفرز والتصنيف",
-      description: "يُغربل الشاي المجفف عبر سلسلة من المناخل التي تفصله حسب حجم وشكل الورقة إلى درجات مثل Orange Pekoe وBroken Orange Pekoe وDust.",
-      keyPoints: "التصنيف لا يتعلق بالجودة بقدر ما يتعلق بحجم جزيئات الورقة، مما يؤثر على وقت التخمير والقوة — وهذه هي الطريقة التي تطابق بها المصانع الشاي مع الأسواق وأساليب التحضير المختلفة.",
+      description: "يبدأ كل من الشاي الأخضر والشاي الأسود من نفس الشجيرة ونفس الورقة تمامًا — وما يفصل بينهما فعليًا هو التخمّر (الأكسدة)، وهي خطوة يمر بها الشاي الأسود بينما يتجاوزها الشاي الأخضر. معظم إنتاج هذا المصنع هو الشاي الأسود. وبينما تمر الأوراق المجففة عبر آلات الفرز، يتم فصلها في مرة واحدة حسب الجزء الذي أتت منه من الغصن الأصلي: الطرف الطري سهل الكسر والأوراق العلوية — حوالي 2% فقط من كل غصن — تصبح FBOPF Extra Special، وهي أفضل الدرجات وأغلاها، بينما تصبح الأوراق الأبعد إلى الأسفل درجات متينة مثل BOP وPekoe. وتصبح الأوراق الأكثر نضجًا والأدنى درجة Dust، بينما تُستبعد أي سيقان وبقايا غير صالحة للاستخدام كـ Refuse.",
+      keyPoints: "تتبع القيمة موقع الورقة على الغصن، وليس حجم الورقة فقط — فكلما كانت الورقة أعلى وأكثر طراوة، ارتفعت درجتها وسعرها. درجة Dust، وليست الأوراق الفاخرة، هي ما ينتهي عادةً في أكياس الشاي المنكّهة؛ أما أفضل الدرجات مثل FBOPF Extra Special فنادرًا ما تُباع محليًا بسبب قيمتها العالية في أسواق التصدير.",
       duration: "يعمل الفرز باستمرار على الآلات ويستغرق حوالي 30 إلى 45 دقيقة لكل دفعة.",
     },
     packing: {
@@ -1068,17 +1111,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "مزرعة القرفة",
-      sectionHeadings: ["عن شجرة القرفة", "الخصائص", "الفوائد", "منتجات شاي القرفة"],
+      sectionHeadings: ["عن شجرة القرفة", "الخصائص", "تقشير القرفة: الأدوات والعملية", "الفوائد", "منتجات شاي القرفة"],
       sectionBodies: [
         "شجرة Cinnamomum verum — التي تُباع باسم 'القرفة الحقيقية' أو قرفة سيلان — هي شجرة صغيرة دائمة الخضرة من الفصيلة الغارية، موطنها الأصلي سريلانكا وجنوب الهند. ما يهم تجاريًا هو اللحاء الداخلي للشجرة: يُقشَّر ويُجفَّف ويُلف إلى عيدان القرفة المألوفة. ومع تربة جيدة الصرف وأمطار استوائية منتظمة، تنتج الشجرة أيضًا أوراقًا وزيتًا عطريًا يُقدَّر في الطهي والطب التقليدي حول العالم.",
-        "تصل شجرة القرفة الناضجة إلى ارتفاع يتراوح بين 10 و15 مترًا تقريبًا، بأوراق لامعة بيضاوية الشكل يتراوح طولها بين 7 و18 سم، تتميز كل ورقة بثلاثة عروق بارزة وتنبعث منها رائحة حريفة عند سحقها. تتجمع أزهار صغيرة يتراوح لونها من الأخضر المصفر إلى الأصفر في عناقيد فضفاضة خفيفة العطر، لتتكوّن لاحقًا ثمرة صغيرة بلون أرجواني داكن إلى أسود بطول سنتيمتر واحد تقريبًا تحتوي على بذرة واحدة. تنمو بشكل أفضل في الغابات الاستوائية دائمة الخضرة الرطبة، في أجواء دافئة وتربة طينية جيدة الصرف.",
         "نظرة سريعة على الشجرة نفسها:",
+        "تُترك الأفرع المحصودة لترتاح ليوم تقريبًا حتى تصبح اللحاء أكثر ليونة قبل بدء التقشير — وهي مهارة توارثتها أجيال من المقشرين. الأدوات المستخدمة بسيطة لكنها ضرورية:",
         "تتجاوز قيمة القرفة المطبخ بكثير:",
-        "ينتج المصنع مزيجين فاخرين من شاي القرفة، مصنوعين من قرفة سريلانكية طبيعية لتجربة نقية وعطرية.",
+        "بدلاً من بيع كل قرفتها كتوابل خام، يستخدمها المصنع أيضًا كمكون ذي قيمة مضافة في تشكيلة الشاي الخاصة به — بمزجها في مزيجين فاخرين من شاي القرفة، مصنوعين من قرفة سريلانكية طبيعية لتجربة نقية وعطرية. بشكل أعم، تحوّل صناعة القرفة عادةً اللحاء والأوراق أيضًا إلى منتجات أخرى ذات قيمة مضافة — زيت اللحاء والأوراق للطبخ ومستحضرات التجميل والعلاج بالروائح، ومسحوق القرفة المطحون، وراتنج الزيت الغذائي.",
       ],
       itemHeadings: [
         [],
         ["الارتفاع", "الأوراق", "الأزهار", "الثمار", "الموطن"],
+        ["كاثّا (سكين كبير)", "غانا كوكاثّا (الكاشطة)", "ثالانا كوكاثّا (سكين التقشير)", "بيثّالا داندا (قضيب النحاس الأصفر)", "كاثورا (المقص)", "أنجيلي كوبووا (واقي الأصابع)", "قضيب القياس"],
         ["الاستخدامات الطهوية", "الخصائص الطبية", "الأهمية البيئية"],
         ["شاي القرفة", "شاي القرفة المنكّه"],
       ],
@@ -1092,6 +1136,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "غابات استوائية دائمة الخضرة، بأجواء دافئة وتربة طينية جيدة الصرف.",
         ],
         [
+          "سكين كبير على شكل خطاف يُستخدم لقطع الأفرع المحصودة حسب الطول وشق اللحاء طوليًا قبل بدء أعمال التقشير الدقيقة.",
+          "أداة معقوفة ذات مقبض قصير تُمرَّر على طول الفرع لكشط اللحاء الخارجي الرقيق والخشن قبل بدء التقشير الفعلي — تعني كلمة 'غاناوا' في السينهالية 'الكشط'.",
+          "نصل صغير منحنٍ يُستخدم لشق اللحاء الداخلي المُرخى على طول امتداده ورفعه عن الساق الخشبية في شريط واحد — تعني كلمة 'ثالاناوا' في السينهالية 'التقشير'.",
+          "قضيب معدني أملس ومستدير يُدخل تحت اللحاء المشقوق لفصله بلطف عن الخشب على طول الفرع بالكامل دون تمزيقه.",
+          "يُستخدم لقص شرائط اللحاء المقشرة إلى طول موحد قبل لفها وتجفيفها.",
+          "غطاء واقٍ يُلبس على الأصابع للحماية من الجروح أثناء التعامل مع أدوات التقشير الحادة لساعات متواصلة.",
+          "قضيب مُعايَر يُستخدم لقياس وتحديد أطوال موحدة أثناء قص شرائط اللحاء وتحضيرها للف.",
+        ],
+        [
           "تُستخدم في الأطباق الحلوة والمالحة والمشروبات والمخبوزات — تتميز قرفة سيلان بنكهة أكثر اعتدالًا ورقة مقارنة بأصناف الكاسيا الأقوى والأكثر سماكة التي تُباع في العديد من الأسواق.",
           "تحمل خصائص مضادة للأكسدة ومضادة للالتهابات ومضادة للميكروبات، وتُستخدم تقليديًا للمساعدة في تنظيم سكر الدم ودعم الهضم وتعزيز صحة القلب؛ ولزيتها العطري تاريخ طويل في الطب التقليدي والعلاج بالروائح.",
           "تُسهم الأشجار في التنوع البيولوجي للغابات الاستوائية، وتوفر الرحيق للملقحات، وتدعم أنظمة الزراعة الحرجية التي تتيح للمزارعين المحليين زراعتها إلى جانب محاصيل أخرى بشكل مستدام.",
@@ -1102,6 +1155,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -1189,8 +1243,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "درجات الشاي الحرفي",
-      description: "بالإضافة إلى الشاي الأسود القياسي المصنوع من الأوراق الناضجة، تنتج المزرعة أيضًا أنواعًا نادرة من الشاي الحرفي المصنوع يدويًا من البراعم الصغيرة الرقيقة والأصناف المتخصصة. القمم الفضية والقمم الذهبية هي أنواع نادرة للغاية من الشاي تُقطف يدويًا حصريًا من براعم الأوراق غير المتفتحة. يُعالج الشاي الأبيض بخفة شديدة ليمنح مذاقًا لطيفًا وحلوًا بشكل طبيعي، بينما يُعد الشاي الأرجواني والوردي أصنافًا متخصصة فريدة غنية بمضادات الأكسدة الطبيعية.",
-      keyPoints: "تُقطف هذه الأنواع الحرفية وتُعالج بكميات أقل بكثير من الشاي الأسود القياسي، وهذا ما يجعلها أكثر ندرة وقيمة — اسأل عند طاولة التذوق لتجربتها.",
+      description: "بالإضافة إلى الشاي الأسود القياسي، تنتج المزرعة أيضًا أنواعًا نادرة من الشاي الحرفي المصنوع يدويًا — يُصنَّع معظمها يدويًا في مصنع الشاي اليدوي المنفصل بدلاً من خط الشاي الأسود الرئيسي، ولهذا تُسمى هذه الدرجات أيضًا 'درجات الشاي الحرفي': فهي أقرب إلى حرفة يدوية منها إلى إنتاج جماعي. يأتي الكثير منها من برعم مميز بلون أرجواني، يكتسب لونه من مادة الأنثوسيانين. يُستخدم لصنع القمة الذهبية البرعم الناضج تمامًا من ذلك النبات نفسه، بينما يُستخدم لصنع القمة الفضية البرعم الأفتح لونًا وغير الناضج بعد من النبات نفسه. يُؤخذ للشاي الأبيض ورقتان ونصف من البرعم، تُبخَّر وتُجفَّف بدلاً من التخمير واللف كما في الشاي الأسود، لتُنتج مذاقًا معالجًا بخفة شديدة وحلوًا بشكل طبيعي. الشاي الأرجواني والوردي أصناف متخصصة فريدة غنية بمضادات الأكسدة الطبيعية، تُصنع بعملية منفصلة خاصة بها. كما تُعِدّ المزرعة مزيجات ذات قيمة مضافة — مثل الشاي المنقوع بزهور اللوتس — وشاي Blooming Tea المربوط يدويًا من نفس البراعم.",
+      keyPoints: "تُقطف هذه الأنواع الحرفية وتُعالج بكميات أقل بكثير من الشاي الأسود القياسي، وهذا ما يجعلها أكثر ندرة وقيمة — اسأل عند طاولة التذوق لتجربتها. يمكن استخدام البرعم الأرجواني أو البرعم الأخضر العادي لمعظم هذه الدرجات، رغم أن المزرعة تستخدم في الغالب البرعم الأرجواني.",
       duration: "5 دقائق",
     },
     "pahatharata-manufacturing": {
@@ -1207,8 +1261,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "الشاي المستنسخ",
-      description: "تأتي بعض أكثر أنواع الشاي طلبًا من نباتات مستنسخة — عُقل مكاثرة من شجيرة أم واحدة استثنائية بدلاً من النمو من البذور. تتناول هذه المحطة كيفية إكثار الشاي المستنسخ ولماذا يمكن أن يحقق سعرًا مرتفعًا.",
-      keyPoints: "يحافظ الإكثار المستنسخ على الخصائص الدقيقة لنبات مميز؛ وغالبًا ما تُنتَج أفضل أنواع الشاي المستنسخ بكميات محدودة جدًا.",
+      description: "تأتي بعض أكثر أنواع الشاي طلبًا من نباتات مستنسخة — عُقل مكاثرة من شجيرة أم واحدة استثنائية بدلاً من النمو من البذور. تتناول هذه المحطة كيفية إكثار الشاي المستنسخ ولماذا يمكن أن يحقق سعرًا مرتفعًا. يربي معهد أبحاث الشاي (TRI) أصنافًا مستنسخة لتلبية احتياجات مختلفة — بعضها لتحمل الجفاف أو الأمطار وزيادة الإنتاجية، وبعضها الآخر من أجل البراعم الصغيرة المميزة ذات الطرف الأحمر أو الأخضر التي تُستخدم في أنواع الشاي الفاخرة المصنوعة يدويًا. الأصناف عالية الإنتاجية المزروعة على نطاق واسع مثل TRI 2023 وTRI 2025 وTRI 2026 شائعة في المزارع والحدائق المنزلية على حد سواء، في حين تُزرع الأصناف النادرة الخاصة غالبًا في المزارع الكبيرة لإنتاج الشاي المصنوع يدويًا بدلاً من الزراعة اليومية. وعلى الرغم من أن هذه الأرقام تبدو وكأنها سنوات، إلا أنها مجرد معرّفات مخصصة، وليست سنة إصدار كل صنف.",
+      keyPoints: "يحافظ الإكثار المستنسخ على الخصائص الدقيقة لنبات مميز؛ وغالبًا ما تُنتَج أفضل أنواع الشاي المستنسخ بكميات محدودة جدًا. تُقطف براعم الأصناف الخاصة ذات الطرف الأحمر أو الأخضر يدويًا لإنتاج درجات نادرة مثل القمم الذهبية والقمم الفضية، وعادةً ما تدفع المزارع حوالي 100 روبية إضافية لكل كيلوغرام مقارنة بالأوراق العادية المقطوفة.",
       duration: "5-10 دقائق",
     },
     "organic-fertilizer": {
@@ -1237,7 +1291,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "مصنع الشاي اليدوي",
-      description: "إلى جانب الإنتاج الآلي، تتم معالجة بعض الشاي يدويًا بالكامل في كل مرحلة. تتناول هذه المحطة ما يميز الشاي المصنوع يدويًا عن إنتاج خط المصنع.",
+      description: "إلى جانب الإنتاج الآلي، تتم معالجة بعض الشاي يدويًا بالكامل في كل مرحلة. تُصنَّع معظم درجات الشاي الحرفي الخاصة بالمزرعة — القمة الذهبية، القمة الفضية، الشاي الأبيض، الشاي الأرجواني، الشاي الوردي، شاي Blooming Tea المربوط يدويًا، والمزيجات المنكّهة بالزهور مثل شاي اللوتس — هنا بدلاً من مصنع الشاي الأسود الرئيسي. تتناول هذه المحطة ما يميز الشاي المصنوع يدويًا عن إنتاج خط المصنع.",
       keyPoints: "ينتج اللف والمعالجة اليدويان دفعات أصغر بتباين أكبر بين الأوراق، وغالبًا ما تُقدَّر لطابعها المميز.",
       duration: "10 دقائق",
     },
@@ -1269,7 +1323,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   ru: {
     plucking: {
       name: "Сбор листьев",
-      description: "Каждый лист начинает свой путь в чайном саду, где сборщики вручную собирают почку и два нежных листа с каждого побега. Именно этот стандарт тонкого сбора придаёт цейлонскому чаю его деликатный характер — более грубые листья остаются на кусте.",
+      description: "Каждый лист начинается на чайной плантации, где сборщики вручную обрывают каждый побег до того, что персонал называет «дека хамара» — два с половиной листа, — часто до трёх с половиной, а не строго по правилу «два листа и почка». Именно этот стандарт тонкого сбора придаёт цейлонскому чаю его деликатный характер — более грубые листья остаются на кусте. Точное количество собираемых листьев отличается для чёрного и зелёного чая.",
       keyPoints: "Используется только самая молодая поросль. Ручной сбор бережёт куст и позволяет отобрать листья с наивысшей концентрацией вкусовых веществ — то, что машины не могут повторить на таком уровне качества.",
       duration: "Листья собираются ежедневно круглый год и в течение нескольких часов доставляются на фабрику, чтобы сохранить свежесть.",
     },
@@ -1299,8 +1353,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "Сортировка и калибровка",
-      description: "Высушенный чай просеивается через серию сит, разделяющих его по размеру и форме листа на сорта, такие как Orange Pekoe, Broken Orange Pekoe и Dust.",
-      keyPoints: "Сортировка касается не столько качества, сколько размера частиц листа, что влияет на время заваривания и крепость — так фабрики подбирают чай под разные рынки и способы заваривания.",
+      description: "Зелёный и чёрный чай начинаются с одного и того же куста и листа — на самом деле их разделяет ферментация (окисление), этап, через который проходит чёрный чай, но который пропускает зелёный. Производство этой фабрики — преимущественно чёрный чай. Когда высушенный лист проходит через сортировочные машины, он разделяется за один проход в зависимости от того, с какой части исходного побега он взят: нежный, легко ломающийся кончик и самые верхние листья — всего около 2% каждого побега — становятся FBOPF Extra Special, лучшим и самым дорогим сортом, а лист ниже становится добротными сортами вроде BOP и Pekoe. Самый зрелый, нижний лист становится Dust, а любые непригодные стебли и обрезки выбрасываются как Refuse.",
+      keyPoints: "Ценность зависит от положения на побеге, а не только от размера листа — чем выше и нежнее лист, тем выше его сорт и цена. В ароматизированные чайные пакетики обычно попадает именно сорт Dust, а не премиальный лист; лучшие сорта, такие как FBOPF Extra Special, редко продаются внутри страны из-за их высокой стоимости на экспортных рынках.",
       duration: "Сортировка проводится непрерывно на оборудовании и занимает примерно 30–45 минут на партию.",
     },
     packing: {
@@ -1311,17 +1365,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Плантация корицы",
-      sectionHeadings: ["О коричном дереве", "Характеристики", "Польза", "Чайная продукция с корицей"],
+      sectionHeadings: ["О коричном дереве", "Характеристики", "Очистка корицы: инструменты и процесс", "Польза", "Чайная продукция с корицей"],
       sectionBodies: [
         "Cinnamomum verum — продаётся как «настоящая корица» или цейлонская корица — это небольшое вечнозелёное дерево семейства Лавровые, произрастающее в Шри-Ланке и Южной Индии. Коммерческую ценность представляет внутренняя кора дерева: её очищают, сушат и скручивают в привычные палочки корицы. При хорошо дренированной почве и стабильных тропических дождях дерево также даёт листья и эфирное масло, ценимые по всему миру в кулинарии и традиционной медицине.",
-        "Взрослое коричное дерево достигает примерно 10–15 метров в высоту, с блестящими овальными листьями длиной 7–18 см, на каждом из которых чётко видны три жилки, а при растирании ощущается пряный аромат. Мелкие зеленовато-белые или жёлтые цветки собраны в рыхлые слабо ароматные метёлки, из которых позже формируется небольшая тёмно-фиолетово-чёрная костянка длиной около сантиметра с одним семенем. Лучше всего дерево растёт во влажных тропических вечнозелёных лесах, в тёплых условиях на хорошо дренированной суглинистой почве.",
         "Коротко о самом дереве:",
+        "Собранным побегам дают отлежаться около суток, чтобы кора размягчилась перед началом очистки, — навык, передаваемый из поколения в поколение сборщиков. Используемые инструменты просты, но незаменимы:",
         "Польза корицы выходит далеко за пределы кухни:",
-        "Фабрика производит две премиальные смеси чая с корицей из натуральной шри-ланкийской корицы для чистого, ароматного вкуса.",
+        "Вместо того чтобы продавать всю свою корицу как сырую пряность, фабрика также использует её как продукт с добавленной стоимостью в собственном ассортименте чая — добавляя её в две премиальные смеси чая с корицей из натуральной шри-ланкийской корицы для чистого, ароматного вкуса. В более широком смысле, отрасль по производству корицы обычно превращает кору и листья и в другие продукты с добавленной стоимостью — масло коры и листьев для кулинарии, косметики и ароматерапии, молотую корицу и пищевой олеорезин.",
       ],
       itemHeadings: [
         [],
         ["Высота", "Листья", "Цветки", "Плод", "Среда обитания"],
+        ["Каттха (большой нож)", "Гаана Кокаттха (скребок)", "Талана Кокаттха (нож для чистки)", "Питтхала Данда (латунный стержень)", "Катхура (ножницы)", "Ангили Копува (защита для пальцев)", "Мерная рейка"],
         ["Кулинарное применение", "Лечебные свойства", "Экологическое значение"],
         ["Чай с корицей", "Ароматизированный чай с корицей"],
       ],
@@ -1335,6 +1390,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Влажный тропический вечнозелёный лес, тёплые условия и хорошо дренированная суглинистая почва.",
         ],
         [
+          "Большой нож в форме крюка, используемый для нарезки собранных побегов по длине и продольного раскалывания коры перед началом тонкой работы по очистке.",
+          "Крюкообразный инструмент с коротким черенком, которым проводят вдоль побега, чтобы соскоблить тонкую грубую наружную кору перед началом настоящей очистки — «гаанава» на сингальском означает «скоблить».",
+          "Небольшое изогнутое лезвие, которым надрезают размягчённую внутреннюю кору по всей длине и снимают её со древесного стебля единой полосой — «таланава» на сингальском означает «очищать».",
+          "Гладкий округлый металлический стержень, вводимый под надрезанную кору, чтобы бережно отделить её от древесины по всей длине побега, не разорвав.",
+          "Используются для обрезки очищенных полос коры до одинаковой длины перед скручиванием и сушкой.",
+          "Защитный чехол, надеваемый на пальцы для защиты от порезов при работе с острыми инструментами для очистки в течение долгих часов.",
+          "Калиброванный стержень, используемый для измерения и разметки одинаковой длины при нарезке и подготовке полос коры к скручиванию.",
+        ],
+        [
           "Используется в сладких и солёных блюдах, напитках и выпечке — цейлонская корица обладает более мягким, деликатным сладковатым вкусом по сравнению с более резкими сортами кассии с толстой корой, которые продаются на многих рынках.",
           "Обладает антиоксидантными, противовоспалительными и антимикробными свойствами, традиционно используется для регулирования уровня сахара в крови, улучшения пищеварения и поддержания здоровья сердца; её эфирное масло имеет долгую историю применения в традиционной медицине и ароматерапии.",
           "Деревья способствуют биоразнообразию тропических лесов, обеспечивают нектаром опылителей и поддерживают агролесоводческие системы, позволяющие местным фермерам устойчиво выращивать корицу вместе с другими культурами.",
@@ -1345,6 +1409,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -1432,8 +1497,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Ремесленные сорта чая",
-      description: "Помимо стандартного чёрного чая из зрелых листьев, поместье также производит редкие ремесленные сорта чая из нежных молодых почек и специальных культиваров. Серебряные и золотые типсы — чрезвычайно редкие сорта чая, собираемые вручную исключительно из нераспустившихся почек листьев. Белый чай проходит очень лёгкую обработку, придающую ему тонкий, естественно сладкий вкус, а фиолетовый и розовый чай — уникальные специальные сорта, богатые природными антиоксидантами.",
-      keyPoints: "Эти ремесленные сорта собираются и обрабатываются в гораздо меньших количествах, чем стандартный чёрный чай, что и делает их более редкими и ценными — спросите на дегустационной стойке, чтобы попробовать их.",
+      description: "Помимо стандартного чёрного чая, поместье также производит редкие ремесленные сорта чая — большинство из них дорабатывают вручную на отдельной Фабрике ручного чая, а не на основной линии чёрного чая, поэтому эти сорта и называют «ремесленными сортами чая»: это ближе к ремеслу, чем к массовому производству. Многие из них получают из характерного побега с фиолетовым оттенком, чей цвет связан с антоцианом. Golden Tip делают из полностью созревшей почки того же побега, а Silver Tip — из более светлой, ещё незрелой почки того же побега. Для белого чая берут два с половиной листа с побега, которые пропаривают и сушат, а не ферментируют и скручивают, как чёрный чай, что даёт очень легко обработанный, естественно сладкий вкус. Фиолетовый и розовый чай — уникальные специальные сорта, богатые природными антиоксидантами, изготавливаемые по собственному отдельному процессу. Поместье также создаёт смеси с добавленной ценностью — например, чай с цветками лотоса — и связанный вручную Blooming Tea из тех же побегов.",
+      keyPoints: "Эти ремесленные сорта собираются и обрабатываются в гораздо меньших количествах, чем стандартный чёрный чай, что и делает их более редкими и ценными — спросите на дегустационной стойке, чтобы попробовать их. Для большинства этих сортов можно использовать как побег с фиолетовым оттенком, так и обычный зелёный побег, хотя поместье чаще использует именно фиолетовый.",
       duration: "5 минут",
     },
     "pahatharata-manufacturing": {
@@ -1450,8 +1515,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "Клоновый чай",
-      description: "Некоторые из самых востребованных сортов чая получают из клоновых растений — черенков, размноженных от одного исключительного маточного куста, а не выращенных из семян. Эта остановка рассказывает о том, как размножают клоновый чай и почему он может стоить дорого.",
-      keyPoints: "Клоновое размножение сохраняет точные характеристики выдающегося растения; лучшие клоновые чаи часто производятся в очень ограниченных количествах.",
+      description: "Некоторые из самых востребованных сортов чая получают из клоновых растений — черенков, размноженных от одного исключительного маточного куста, а не выращенных из семян. Эта остановка рассказывает о том, как размножают клоновый чай и почему он может стоить дорого. Институт чайных исследований (TRI) выводит клоновые сорта для разных целей — одни для устойчивости к засухе или дождям и высокой урожайности, другие ради характерных красно- или зеленоконечных молодых почек, ценимых в ручном производстве элитного чая. Широко высаживаемые высокоурожайные сорта, такие как TRI 2023, TRI 2025 и TRI 2026, распространены как на плантациях, так и в приусадебных садах, тогда как более редкие специальные сорта в основном выращивают на крупных плантациях для чая ручной работы, а не для повседневного возделывания. Хотя эти номера TRI похожи на годы, на самом деле это просто присвоенные идентификаторы, а не год выпуска каждого сорта.",
+      keyPoints: "Клоновое размножение сохраняет точные характеристики выдающегося растения; лучшие клоновые чаи часто производятся в очень ограниченных количествах. Почки редких сортов с красными или зелёными кончиками собирают вручную для таких редких сортов, как Golden Tips и Silver Tips, и плантации обычно платят за них примерно на 100 рупий больше за килограмм, чем за обычный сорванный лист.",
       duration: "5–10 минут",
     },
     "organic-fertilizer": {
@@ -1480,7 +1545,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "Фабрика ручного чая",
-      description: "Наряду с механизированным производством часть чая полностью обрабатывается вручную на каждом этапе. Эта остановка рассказывает о том, чем ручной чай отличается от продукции конвейерного производства.",
+      description: "Наряду с механизированным производством часть чая полностью обрабатывается вручную на каждом этапе. Большинство ремесленных специальных сортов поместья — Golden Tip, Silver Tip, белый чай, фиолетовый чай, розовый чай, связанный вручную Blooming Tea и смеси с цветами, например чай с лотосом, — дорабатывают именно здесь, а не на основной фабрике чёрного чая. Эта остановка рассказывает о том, чем ручной чай отличается от продукции конвейерного производства.",
       keyPoints: "Ручное скручивание и ручная обработка дают меньшие партии с большей вариативностью между листьями, что часто ценится за их особый характер.",
       duration: "10 минут",
     },
@@ -1512,7 +1577,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   de: {
     plucking: {
       name: "Pflücken",
-      description: "Jedes Blatt beginnt im Teegarten, wo Pflückerinnen und Pflücker die Knospe und zwei zarte Blätter von jedem Trieb von Hand pflücken. Dieser feine Pflückstandard verleiht Ceylon-Tee seinen zarten Charakter — gröbere Blätter bleiben am Strauch.",
+      description: "Jedes Blatt beginnt im Teegarten, wo die Pflücker jeden Trieb von Hand bis zu dem pflücken, was das Personal 'deka hamara' nennt — zweieinhalb Blätter — oft dreieinhalb, statt der strengen Regel von zwei Blättern und einer Knospe. Dieser feine Pflückstandard verleiht Ceylon-Tee seinen zarten Charakter — gröbere Blätter bleiben am Strauch. Die genaue Anzahl der gepflückten Blätter unterscheidet sich zwischen Schwarztee und Grüntee.",
       keyPoints: "Es wird nur der jüngste Wuchs verwendet. Handpflücken schützt den Strauch und wählt die Blätter mit der höchsten Konzentration an Aromastoffen aus — etwas, das Maschinen auf diesem Qualitätsniveau nicht nachbilden können.",
       duration: "Die Blätter werden das ganze Jahr über täglich gepflückt und innerhalb weniger Stunden zur Fabrik gebracht, um frisch zu bleiben.",
     },
@@ -1542,8 +1607,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "Sortieren & Klassifizieren",
-      description: "Getrockneter Tee wird durch eine Reihe von Siebnetzen gesiebt, die ihn nach Blattgröße und -form in Sorten wie Orange Pekoe, Broken Orange Pekoe und Dust einteilen.",
-      keyPoints: "Beim Sortieren geht es weniger um Qualität als um die Partikelgröße des Blatts, die Brühzeit und Stärke beeinflusst — so passen Fabriken den Tee an verschiedene Märkte und Zubereitungsarten an.",
+      description: "Grüner Tee und Schwarzer Tee stammen beide vom selben Strauch und Blatt — was sie tatsächlich unterscheidet, ist die Fermentation (Oxidation), ein Schritt, den Schwarzer Tee durchläuft und Grüner Tee auslässt. Die Produktion dieser Fabrik besteht größtenteils aus Schwarzem Tee. Während das getrocknete Blatt die Sortiermaschinen durchläuft, wird es in einem einzigen Durchgang danach getrennt, aus welchem Teil des ursprünglichen Triebs es stammt: die zarte, leicht abbrechende Spitze und die obersten Blätter — nur etwa 2 % jedes Triebs — werden zu FBOPF Extra Special, der feinsten und teuersten Sorte, während weiter unten liegendes Blatt zu soliden Sorten wie BOP und Pekoe wird. Das reifste, unterste Blatt wird zu Dust, und alle unbrauchbaren Stängel und Reste werden als Refuse aussortiert.",
+      keyPoints: "Der Wert richtet sich nach der Position am Trieb, nicht nur nach der Blattgröße — je höher und zarter das Blatt, desto höher seine Sorte und sein Preis. Dust-Qualität, nicht das edle Blatt, landet meist in aromatisierten Teebeuteln; die feinsten Sorten wie FBOPF Extra Special werden wegen ihres Werts auf den Exportmärkten nur selten im Inland verkauft.",
       duration: "Das Sortieren läuft kontinuierlich auf Maschinen und dauert etwa 30 bis 45 Minuten pro Charge.",
     },
     packing: {
@@ -1554,17 +1619,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Zimtplantage",
-      sectionHeadings: ["Über den Zimtbaum", "Merkmale", "Vorteile", "Zimttee-Produkte"],
+      sectionHeadings: ["Über den Zimtbaum", "Merkmale", "Zimt Schälen: Werkzeuge und Ablauf", "Vorteile", "Zimttee-Produkte"],
       sectionBodies: [
         "Cinnamomum verum — verkauft als „echter Zimt“ oder Ceylon-Zimt — ist ein kleiner immergrüner Baum aus der Familie der Lorbeergewächse, beheimatet in Sri Lanka und Südindien. Kommerziell zählt vor allem die innere Rinde des Baums: Sie wird geschält, getrocknet und zu den bekannten Zimtstangen gerollt. Bei gut durchlässigem Boden und beständigem tropischem Regen liefert der Baum außerdem Blätter und ein ätherisches Öl, das weltweit in der Küche und in der traditionellen Medizin geschätzt wird.",
-        "Ein ausgewachsener Zimtbaum erreicht etwa 10 bis 15 Meter, mit glänzenden, ovalen Blättern von 7 bis 18 Zentimetern Länge, die jeweils drei markante Adern aufweisen und beim Zerreiben würzig duften. Kleine grünlich-weiße bis gelbe Blüten stehen in lockeren, leicht duftenden Rispen und bilden später eine kleine, dunkel violett-schwarze Steinfrucht von etwa einem Zentimeter Länge mit einem einzigen Samen. Am besten gedeiht er im feuchten, tropischen immergrünen Wald, bei warmen Bedingungen und gut durchlässigem, lehmigem Boden.",
         "Ein kurzer Blick auf den Baum selbst:",
+        "Die geernteten Triebe lässt man etwa einen Tag ruhen, damit sich die Rinde löst, bevor das Schälen beginnt — eine Fertigkeit, die über Generationen von Schälern weitergegeben wurde. Die dabei verwendeten Werkzeuge sind einfach, aber unverzichtbar:",
         "Der Wert von Zimt reicht weit über die Küche hinaus:",
-        "Die Fabrik stellt zwei Premium-Zimttee-Mischungen her, hergestellt aus natürlichem sri-lankischem Zimt für ein reines, aromatisches Erlebnis.",
+        "Statt seinen gesamten Zimt als Rohgewürz zu verkaufen, verwendet die Fabrik ihn auch als wertschöpfende Zutat in der eigenen Teereihe — sie mischt ihn in zwei Premium-Zimttee-Mischungen, hergestellt aus natürlichem sri-lankischem Zimt für ein reines, aromatisches Erlebnis. Allgemeiner betrachtet verarbeitet die Zimtindustrie Rinde und Blätter typischerweise auch zu anderen wertschöpfenden Produkten — Rinden- und Blattöl für Küche, Kosmetik und Aromatherapie, gemahlenem Zimtpulver und lebensmitteltauglichem Oleoresin.",
       ],
       itemHeadings: [
         [],
         ["Höhe", "Blätter", "Blüten", "Frucht", "Lebensraum"],
+        ["Kaththa (Großes Messer)", "Gaana Kokaththa (Schaber)", "Thalana Kokaththa (Schälmesser)", "Piththala Danda (Messingstab)", "Kathura (Schere)", "Angili Kopuwa (Fingerschutz)", "Messstab"],
         ["Kulinarische Verwendung", "Heilwirkungen", "Ökologische Bedeutung"],
         ["Zimttee", "Aromatisierter Zimttee"],
       ],
@@ -1578,6 +1644,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Feuchter, tropischer immergrüner Wald, mit warmen Bedingungen und gut durchlässigem, lehmigem Boden.",
         ],
         [
+          "Ein großes, hakenförmiges Messer, mit dem die geernteten Triebe auf Länge geschnitten und die Rinde der Länge nach aufgespalten wird, bevor die feine Schälarbeit beginnt.",
+          "Ein hakenförmiges Werkzeug mit kurzem Griff, das am Trieb entlanggezogen wird, um die dünne, raue äußere Rinde abzuschaben, bevor das eigentliche Schälen beginnt — 'gaanawa' bedeutet auf Singhalesisch 'schaben'.",
+          "Eine kleine, gebogene Klinge, mit der die gelockerte innere Rinde der Länge nach eingeritzt und in einem einzigen Streifen vom holzigen Stiel gelöst wird — 'thalanawa' bedeutet auf Singhalesisch 'schälen'.",
+          "Ein glatter, runder Metallstab, der unter die eingeritzte Rinde geschoben wird, um sie über die gesamte Länge des Triebs vorsichtig vom Holz zu lösen, ohne sie zu zerreißen.",
+          "Wird verwendet, um die geschälten Rindenstreifen auf eine einheitliche Länge zu schneiden, bevor sie gerollt und getrocknet werden.",
+          "Eine Schutzhülle, die über die Finger gezogen wird, um sie beim stundenlangen Umgang mit den scharfen Schälwerkzeugen vor Schnitten zu schützen.",
+          "Ein kalibrierter Stab, mit dem einheitliche Längen gemessen und markiert werden, während die Rindenstreifen zugeschnitten und für das Rollen vorbereitet werden.",
+        ],
+        [
           "Verwendet in süßen wie herzhaften Gerichten, Getränken und Gebäck — Ceylon-Zimt hat eine mildere, feinere Süße als die kräftigeren, dickrindigeren Cassia-Sorten, die auf vielen Märkten verkauft werden.",
           "Besitzt antioxidative, entzündungshemmende und antimikrobielle Eigenschaften, traditionell verwendet, um den Blutzucker zu regulieren, die Verdauung zu unterstützen und die Herzgesundheit zu fördern; sein ätherisches Öl hat eine lange Geschichte in der traditionellen Medizin und Aromatherapie.",
           "Die Bäume tragen zur Artenvielfalt tropischer Wälder bei, liefern Nektar für Bestäuber und stützen Agroforstsysteme, die es lokalen Bauern ermöglichen, Zimt nachhaltig neben anderen Kulturen anzubauen.",
@@ -1588,6 +1663,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -1675,8 +1751,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Handwerkliche Teesorten",
-      description: "Neben dem Standard-Schwarztee aus reifen Blättern stellt das Anwesen auch seltene, handgefertigte Spezialtees aus zarten jungen Knospen und speziellen Kultivaren her. Silver Tips und Golden Tips sind äußerst seltene Tees, die ausschließlich von Hand aus ungeöffneten Blattknospen gepflückt werden. Weißer Tee wird nur sehr leicht verarbeitet und bietet einen feinen, natürlich süßen Geschmack, während violette und rosa Tees einzigartige Spezialsorten sind, reich an natürlichen Antioxidantien.",
-      keyPoints: "Diese handwerklichen Sorten werden in deutlich geringeren Mengen gepflückt und verarbeitet als Standard-Schwarztee, was sie seltener und wertvoller macht — fragen Sie am Verkostungsstand, um sie zu probieren.",
+      description: "Neben dem Standard-Schwarztee stellt das Anwesen auch seltene, handgefertigte Spezialtees her — meist von Hand fertiggestellt in der separaten Handtee-Fabrik statt auf der Schwarztee-Hauptlinie, weshalb diese Sorten auch 'handwerkliche Teesorten' genannt werden: Es ist eher Handwerkskunst als Massenproduktion. Viele davon stammen von einem markanten violett getönten Trieb, dessen Farbe von Anthocyan kommt. Für Golden Tip wird die voll ausgereifte Knospe dieses Triebs verwendet, für Silver Tip die blassere, noch unreife Knospe desselben Triebs. Weißer Tee nimmt zweieinhalb Blätter vom Trieb, die gedämpft und getrocknet statt wie Schwarztee fermentiert und gerollt werden, für einen sehr leicht verarbeiteten, natürlich süßen Geschmack. Violette und rosa Tees sind einzigartige Spezialsorten, reich an natürlichen Antioxidantien, die in einem eigenen, separaten Verfahren hergestellt werden. Das Anwesen stellt zudem wertschöpfende Mischungen her — etwa mit Lotosblüten aromatisierten Tee — sowie von Hand gebundenen Blooming Tea aus denselben Trieben.",
+      keyPoints: "Diese handwerklichen Sorten werden in deutlich geringeren Mengen gepflückt und verarbeitet als Standard-Schwarztee, was sie seltener und wertvoller macht — fragen Sie am Verkostungsstand, um sie zu probieren. Für die meisten dieser Sorten kann sowohl der violett getönte als auch der gewöhnliche grüne Trieb verwendet werden, wobei das Anwesen meist den violetten nimmt.",
       duration: "5 Minuten",
     },
     "pahatharata-manufacturing": {
@@ -1693,8 +1769,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "Klontee",
-      description: "Einige der begehrtesten Tees stammen von Klonpflanzen — Stecklingen, die von einem einzigen außergewöhnlichen Mutterstrauch vermehrt wurden, statt aus Samen gezogen zu werden. Diese Station erklärt, wie Klontee vermehrt wird und warum er einen Höchstpreis erzielen kann.",
-      keyPoints: "Die Klonvermehrung bewahrt die exakten Eigenschaften einer erlesenen Pflanze; die besten Klontees werden oft nur in sehr begrenzten Mengen produziert.",
+      description: "Einige der begehrtesten Tees stammen von Klonpflanzen — Stecklingen, die von einem einzigen außergewöhnlichen Mutterstrauch vermehrt wurden, statt aus Samen gezogen zu werden. Diese Station erklärt, wie Klontee vermehrt wird und warum er einen Höchstpreis erzielen kann. Das Tea Research Institute (TRI) züchtet Klonsorten für unterschiedliche Zwecke — manche für Trocken- oder Regentoleranz und höheren Ertrag, andere wegen der charakteristischen rot- oder grünspitzigen jungen Blattknospen, die für handgefertigte Spezialtees geschätzt werden. Weit verbreitete, ertragreiche Sorten wie TRI 2023, TRI 2025 und TRI 2026 sind sowohl auf Plantagen als auch in Hausgärten verbreitet, während die selteneren Spezialsorten meist auf größeren Plantagen für handgefertigten Tee statt für den alltäglichen Anbau wachsen. Auch wenn diese TRI-Nummern wie Jahreszahlen wirken, sind es lediglich zugewiesene Kennungen und nicht das Jahr, in dem die jeweilige Sorte veröffentlicht wurde.",
+      keyPoints: "Die Klonvermehrung bewahrt die exakten Eigenschaften einer erlesenen Pflanze; die besten Klontees werden oft nur in sehr begrenzten Mengen produziert. Knospen der speziellen rot- oder grünspitzigen Sorten werden von Hand für seltene Qualitäten wie Golden Tips und Silver Tips gepflückt, wofür Plantagen in der Regel rund 100 Rupien mehr pro Kilogramm zahlen als für normal gepflücktes Blatt.",
       duration: "5-10 Minuten",
     },
     "organic-fertilizer": {
@@ -1723,7 +1799,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "Handgefertigte Teefabrik",
-      description: "Neben der mechanisierten Produktion wird ein Teil des Tees in jeder Phase vollständig von Hand verarbeitet. Diese Station zeigt, was handgefertigten Tee von der Fabriklinienproduktion unterscheidet.",
+      description: "Neben der mechanisierten Produktion wird ein Teil des Tees in jeder Phase vollständig von Hand verarbeitet. Die meisten handwerklichen Spezialsorten des Anwesens — Golden Tip, Silver Tip, Weißer Tee, violetter Tee, rosa Tee, von Hand gebundener Blooming Tea und mit Blüten aromatisierte Mischungen wie Lotustee — werden hier statt in der Schwarztee-Hauptfabrik fertiggestellt. Diese Station zeigt, was handgefertigten Tee von der Fabriklinienproduktion unterscheidet.",
       keyPoints: "Handrollen und Handverarbeitung ergeben kleinere Chargen mit mehr Variation zwischen den Blättern, die oft für ihren unverwechselbaren Charakter geschätzt werden.",
       duration: "10 Minuten",
     },
@@ -1755,7 +1831,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   es: {
     plucking: {
       name: "Recolección",
-      description: "Cada hoja comienza en el jardín de té, donde los recolectores recogen a mano el brote y dos hojas tiernas de cada brote. Este estándar de recolección fina es lo que le da al té de Ceilán su carácter delicado — las hojas más gruesas se dejan en el arbusto.",
+      description: "Cada hoja comienza en el jardín de té, donde los recolectores recogen a mano cada brote hasta lo que el personal llama 'deka hamara' — dos hojas y media — a menudo tres y media, en lugar de la estricta regla de dos hojas y un brote. Este estándar de recolección fina es lo que le da al té de Ceilán su carácter delicado — las hojas más gruesas se dejan en el arbusto. El número exacto de hojas recolectadas difiere entre el té negro y el té verde.",
       keyPoints: "Solo se utiliza el crecimiento más joven. La recolección manual protege el arbusto y selecciona las hojas con mayor concentración de compuestos de sabor, algo que las máquinas no pueden replicar a este nivel de calidad.",
       duration: "Las hojas se recolectan a diario, durante todo el año, y se llevan rápidamente a la fábrica en cuestión de horas para mantenerse frescas.",
     },
@@ -1785,8 +1861,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "Clasificación y Graduación",
-      description: "El té seco se tamiza a través de una serie de cribas de malla que lo separan por tamaño y forma de la hoja en grados como Orange Pekoe, Broken Orange Pekoe y Dust.",
-      keyPoints: "La clasificación no tiene tanto que ver con la calidad como con el tamaño de la partícula de la hoja, lo que afecta el tiempo de infusión y la fuerza — así es como las fábricas ajustan el té a distintos mercados y estilos de preparación.",
+      description: "El té verde y el té negro parten ambos del mismo arbusto y la misma hoja — lo que realmente los diferencia es la fermentación (oxidación), un paso por el que pasa el té negro y que el té verde se salta. La producción de esta fábrica es mayoritariamente té negro. Mientras la hoja seca pasa por la maquinaria de clasificación, se separa en un solo paso según de qué parte del brote original proviene: la punta tierna, que se rompe con facilidad, y las hojas más altas —solo un 2% aproximadamente de cada brote— se convierten en FBOPF Extra Special, el grado más fino y caro, mientras que la hoja más abajo se convierte en grados sólidos como BOP y Pekoe. La hoja más madura y más baja se convierte en Dust, y cualquier tallo o resto inservible se descarta como Refuse.",
+      keyPoints: "El valor depende de la posición en el brote, no solo del tamaño de la hoja — cuanto más alta y tierna es la hoja, mayor es su grado y precio. El grado Dust, no la hoja de primera calidad, es lo que suele terminar en las bolsitas de té aromatizadas; los grados más finos, como el FBOPF Extra Special, rara vez se venden localmente debido a su alto valor en los mercados de exportación.",
       duration: "La clasificación se realiza de forma continua con maquinaria y tarda entre 30 y 45 minutos por lote.",
     },
     packing: {
@@ -1797,17 +1873,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Plantación de Canela",
-      sectionHeadings: ["Sobre el Árbol de Canela", "Características", "Beneficios", "Productos de Té de Canela"],
+      sectionHeadings: ["Sobre el Árbol de Canela", "Características", "Pelado de la Canela: Herramientas y Proceso", "Beneficios", "Productos de Té de Canela"],
       sectionBodies: [
         "Cinnamomum verum —vendida como \"canela verdadera\" o canela de Ceilán— es un pequeño árbol de hoja perenne de la familia de las lauráceas, originario de Sri Lanka y el sur de la India. Lo que importa comercialmente es la corteza interna del árbol: se pela, se seca y se enrolla en los familiares rollos de canela. Con un suelo bien drenado y lluvias tropicales constantes, el árbol también produce hojas y un aceite esencial muy valorado en la cocina y la medicina tradicional de todo el mundo.",
-        "Un árbol de canela maduro alcanza entre 10 y 15 metros aproximadamente, con hojas brillantes y ovaladas de 7 a 18 centímetros de largo, cada una marcada por tres venas prominentes que desprenden un aroma especiado al aplastarlas. Pequeñas flores de color blanco verdoso a amarillo se agrupan en panículas sueltas y levemente fragantes, que luego forman una pequeña drupa de color púrpura oscuro a negro, de aproximadamente un centímetro, con una sola semilla. Crece mejor en bosques tropicales húmedos siempre verdes, en condiciones cálidas y suelo arcilloso bien drenado.",
         "Un vistazo rápido al árbol:",
+        "Los brotes cosechados se dejan reposar durante aproximadamente un día para que la corteza se afloje antes de comenzar el pelado — una habilidad transmitida a través de generaciones de peladores. Las herramientas utilizadas son sencillas pero esenciales:",
         "El valor de la canela va mucho más allá de la cocina:",
-        "La fábrica produce dos mezclas premium de té de canela, elaboradas con canela natural de Sri Lanka para una experiencia pura y aromática.",
+        "En lugar de vender toda su canela como especia cruda, la fábrica también la utiliza como ingrediente de valor añadido en su propia línea de té — incorporándola en dos mezclas premium de té de canela, elaboradas con canela natural de Sri Lanka para una experiencia pura y aromática. De forma más amplia, la industria de la canela suele transformar también la corteza y las hojas en otros productos de valor añadido — aceite de corteza y de hoja para cocina, cosmética y aromaterapia, canela molida en polvo y oleorresina de grado alimentario.",
       ],
       itemHeadings: [
         [],
         ["Altura", "Hojas", "Flores", "Fruto", "Hábitat"],
+        ["Kaththa (Cuchillo Grande)", "Gaana Kokaththa (Raspador)", "Thalana Kokaththa (Cuchillo de Pelar)", "Piththala Danda (Varilla de Latón)", "Kathura (Tijeras)", "Angili Kopuwa (Protector de Dedos)", "Varilla de Medición"],
         ["Usos Culinarios", "Propiedades Medicinales", "Importancia Ecológica"],
         ["Té de Canela", "Té de Canela Saborizado"],
       ],
@@ -1821,6 +1898,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Bosque tropical húmedo siempre verde, con condiciones cálidas y suelo arcilloso bien drenado.",
         ],
         [
+          "Un cuchillo grande en forma de gancho utilizado para cortar los brotes cosechados a la medida y partir la corteza a lo largo antes de que comience el trabajo fino de pelado.",
+          "Una herramienta en forma de gancho con mango corto que se pasa a lo largo del brote para raspar la fina y áspera corteza exterior antes de que comience el pelado real — 'gaanawa' significa 'raspar' en cingalés.",
+          "Una pequeña hoja curva utilizada para marcar la corteza interior aflojada a lo largo de su longitud y separarla del tallo leñoso en una sola tira — 'thalanawa' significa 'pelar' en cingalés.",
+          "Una varilla metálica lisa y redondeada que se introduce bajo la corteza marcada para separarla suavemente de la madera a lo largo de todo el brote sin desgarrarla.",
+          "Se usan para recortar las tiras de corteza pelada a una longitud uniforme antes de enrollarlas y secarlas.",
+          "Una funda protectora que se usa en los dedos para protegerlos de cortes al manejar las afiladas herramientas de pelado durante horas seguidas.",
+          "Una varilla calibrada utilizada para medir y marcar longitudes uniformes mientras las tiras de corteza se cortan y preparan para enrollarlas.",
+        ],
+        [
           "Se usa en platos dulces y salados, bebidas y productos horneados — la canela de Ceilán tiene un dulzor más suave y delicado que las variedades de casia, de corteza más gruesa y fuerte, que se venden en muchos mercados.",
           "Posee propiedades antioxidantes, antiinflamatorias y antimicrobianas, usada tradicionalmente para ayudar a regular el azúcar en sangre, favorecer la digestión y apoyar la salud del corazón; su aceite esencial tiene una larga historia en la medicina tradicional y la aromaterapia.",
           "Los árboles contribuyen a la biodiversidad de los bosques tropicales, proporcionan néctar a los polinizadores y sostienen sistemas agroforestales que permiten a los agricultores locales cultivarla junto a otros cultivos de forma sostenible.",
@@ -1831,6 +1917,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -1918,8 +2005,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Tés Artesanales de Alta Gama",
-      description: "Además del té negro estándar elaborado con hojas maduras, la finca también produce raros tés artesanales elaborados a mano a partir de delicados brotes jóvenes y cultivares especiales. Silver Tips y Golden Tips son tés extremadamente raros recolectados a mano exclusivamente de brotes de hojas sin abrir. El té blanco se procesa muy ligeramente para lograr un sabor sutil y naturalmente dulce, mientras que los tés morado y rosado son variedades especiales únicas ricas en antioxidantes naturales.",
-      keyPoints: "Estos grados artesanales se recolectan y procesan en cantidades mucho menores que el té negro estándar, lo que los hace más raros y apreciados — pregunte en el mostrador de degustación para probarlos.",
+      description: "Además del té negro estándar, la finca también produce raros tés artesanales elaborados a mano — la mayoría terminados a mano en la Fábrica de Té Artesanal, separada de la línea principal de té negro, razón por la cual estos grados también se llaman 'Tés Artesanales de Alta Gama': se parece más a una artesanía que a la producción en masa. Muchos de ellos provienen de un brote de tono morado distintivo, cuyo color proviene de la antocianina. El Golden Tip usa el brote completamente maduro de ese mismo brote, mientras que el Silver Tip usa el brote más pálido y aún inmaduro del mismo. El té blanco toma dos hojas y media del brote, cocidas al vapor y secadas en lugar de fermentadas y enrolladas como el té negro, para un sabor muy ligeramente procesado y naturalmente dulce. Los tés morado y rosado son variedades especiales únicas, ricas en antioxidantes naturales, elaboradas con su propio proceso separado. La finca también crea mezclas de valor añadido —como té infusionado con flores de loto— y Blooming Tea atado a mano a partir de los mismos brotes.",
+      keyPoints: "Estos grados artesanales se recolectan y procesan en cantidades mucho menores que el té negro estándar, lo que los hace más raros y apreciados — pregunte en el mostrador de degustación para probarlos. Para la mayoría de estos grados se puede usar tanto el brote de tono morado como el brote verde normal, aunque la finca suele usar el morado.",
       duration: "5 minutos",
     },
     "pahatharata-manufacturing": {
@@ -1936,8 +2023,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "Té Clonal",
-      description: "Algunos de los tés más codiciados provienen de plantas clonales — esquejes propagados de un único arbusto madre excepcional en lugar de crecer a partir de semilla. Esta parada explica cómo se propaga el té clonal y por qué puede alcanzar un precio elevado.",
-      keyPoints: "La propagación clonal conserva las características exactas de una planta destacada; los mejores tés clonales suelen producirse en cantidades muy limitadas.",
+      description: "Algunos de los tés más codiciados provienen de plantas clonales — esquejes propagados de un único arbusto madre excepcional en lugar de crecer a partir de semilla. Esta parada explica cómo se propaga el té clonal y por qué puede alcanzar un precio elevado. El Instituto de Investigación del Té (TRI) desarrolla variedades clonales para distintas necesidades — algunas para la tolerancia a la sequía o a la lluvia y un mayor rendimiento, otras por los característicos brotes jóvenes de punta roja o verde, apreciados en los tés artesanales elaborados a mano. Las variedades de alto rendimiento y ampliamente plantadas, como TRI 2023, TRI 2025 y TRI 2026, son comunes tanto en las plantaciones como en los huertos domésticos, mientras que las variedades especiales más raras se cultivan sobre todo en grandes plantaciones para té artesanal en lugar de para el cultivo cotidiano. Aunque parezcan años, estos números TRI son simplemente identificadores asignados, no el año en que se lanzó cada variedad.",
+      keyPoints: "La propagación clonal conserva las características exactas de una planta destacada; los mejores tés clonales suelen producirse en cantidades muy limitadas. Los brotes de las variedades especiales de punta roja o verde se recogen a mano para grados raros como los Golden Tips y los Silver Tips, y las plantaciones suelen pagar unas 100 rupias más por kilogramo que por las hojas recogidas normalmente.",
       duration: "5-10 minutos",
     },
     "organic-fertilizer": {
@@ -1966,7 +2053,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "Fábrica de Té Artesanal",
-      description: "Junto a la producción mecanizada, parte del té se procesa completamente a mano en cada etapa. Esta parada explica qué distingue al té hecho a mano de la producción en línea de fábrica.",
+      description: "Junto a la producción mecanizada, parte del té se procesa completamente a mano en cada etapa. La mayoría de los grados especiales artesanales de la finca —Golden Tip, Silver Tip, té blanco, té morado, té rosado, Blooming Tea atado a mano y mezclas con flores como el té de loto— se terminan aquí en lugar de en la fábrica principal de té negro. Esta parada explica qué distingue al té hecho a mano de la producción en línea de fábrica.",
       keyPoints: "El enrollado y procesamiento a mano producen lotes más pequeños con más variación entre hojas, a menudo apreciados por su carácter distintivo.",
       duration: "10 minutos",
     },
@@ -1998,7 +2085,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   fr: {
     plucking: {
       name: "Cueillette",
-      description: "Chaque feuille commence dans le jardin de thé, où les cueilleurs prélèvent à la main le bourgeon et deux jeunes feuilles de chaque pousse. Cette norme de cueillette fine est ce qui donne au thé de Ceylan son caractère délicat — les feuilles plus grossières restent sur le buisson.",
+      description: "Chaque feuille commence dans le jardin de thé, où les cueilleurs récoltent à la main chaque pousse jusqu'à ce que le personnel appelle « deka hamara » — deux feuilles et demie — souvent trois et demie, plutôt que la règle stricte des deux feuilles et un bourgeon. Cette norme de cueillette fine est ce qui donne au thé de Ceylan son caractère délicat — les feuilles plus grossières restent sur le buisson. Le nombre exact de feuilles cueillies diffère entre le thé noir et le thé vert.",
       keyPoints: "Seule la pousse la plus jeune est utilisée. La cueillette manuelle protège le buisson et sélectionne les feuilles à la plus forte concentration de composés aromatiques, ce que les machines ne peuvent reproduire à ce niveau de qualité.",
       duration: "Les feuilles sont cueillies quotidiennement, toute l'année, et acheminées à l'usine en quelques heures pour rester fraîches.",
     },
@@ -2028,8 +2115,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "Triage et Classification",
-      description: "Le thé séché est tamisé à travers une série de tamis qui le séparent par taille et forme de feuille en catégories telles que Orange Pekoe, Broken Orange Pekoe et Dust.",
-      keyPoints: "Le classement concerne moins la qualité que la taille des particules de feuille, ce qui affecte le temps d'infusion et la force — c'est ainsi que les usines adaptent le thé à différents marchés et styles d'infusion.",
+      description: "Le thé vert et le thé noir proviennent tous deux du même théier et de la même feuille — ce qui les distingue réellement, c'est la fermentation (oxydation), une étape que traverse le thé noir mais que le thé vert évite. La production de cette usine est majoritairement du thé noir. Lorsque la feuille séchée passe dans les machines de tri, elle est séparée en un seul passage selon la partie de la pousse d'origine dont elle provient : la pointe tendre, qui se casse facilement, et les feuilles du sommet — seulement environ 2 % de chaque pousse — deviennent du FBOPF Extra Special, la qualité la plus fine et la plus chère, tandis que la feuille plus bas devient des qualités solides comme le BOP et le Pekoe. La feuille la plus mûre, la plus basse, devient du Dust, et toute tige ou débris inutilisable est écarté en tant que Refuse.",
+      keyPoints: "La valeur dépend de la position sur la pousse, pas seulement de la taille de la feuille — plus la feuille est haute et tendre, plus sa qualité et son prix sont élevés. C'est la qualité Dust, et non la feuille de premier choix, qui se retrouve généralement dans les sachets de thé aromatisés ; les meilleures qualités comme le FBOPF Extra Special sont rarement vendues localement en raison de leur valeur sur les marchés d'exportation.",
       duration: "Le triage s'effectue en continu sur des machines et prend environ 30 à 45 minutes par lot.",
     },
     packing: {
@@ -2040,17 +2127,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Plantation de Cannelle",
-      sectionHeadings: ["À Propos du Cannelier", "Caractéristiques", "Bienfaits", "Produits de Thé à la Cannelle"],
+      sectionHeadings: ["À Propos du Cannelier", "Caractéristiques", "Éplucher la Cannelle : Outils et Processus", "Bienfaits", "Produits de Thé à la Cannelle"],
       sectionBodies: [
         "Le Cinnamomum verum — vendu sous le nom de « vraie cannelle » ou cannelle de Ceylan — est un petit arbre à feuilles persistantes de la famille des lauracées, originaire du Sri Lanka et du sud de l'Inde. Ce qui compte commercialement, c'est l'écorce interne de l'arbre : elle est pelée, séchée puis enroulée en bâtons de cannelle familiers. Avec un sol bien drainé et des pluies tropicales régulières, l'arbre fournit aussi des feuilles et une huile essentielle appréciées dans le monde entier en cuisine et en médecine traditionnelle.",
-        "Un cannelier adulte atteint environ 10 à 15 mètres, avec des feuilles ovales et brillantes de 7 à 18 centimètres de long, chacune marquée de trois nervures proéminentes et dégageant un parfum épicé lorsqu'on les froisse. De petites fleurs blanc verdâtre à jaunes se regroupent en panicules lâches et légèrement parfumées, formant ensuite une petite drupe violet foncé à noire d'environ un centimètre, contenant une seule graine. Il pousse le mieux en forêt tropicale humide et persistante, dans des conditions chaudes avec un sol argileux bien drainé.",
         "Un rapide aperçu de l'arbre lui-même :",
+        "Les pousses récoltées sont laissées au repos environ une journée pour que l'écorce se détache avant le début de l'épluchage — un savoir-faire transmis de génération en génération d'éplucheurs. Les outils utilisés sont simples mais essentiels :",
         "La valeur de la cannelle va bien au-delà de la cuisine :",
-        "L'usine produit deux mélanges premium de thé à la cannelle, élaborés à partir de cannelle naturelle du Sri Lanka pour une expérience pure et aromatique.",
+        "Plutôt que de vendre toute sa cannelle comme épice brute, l'usine l'utilise aussi comme ingrédient à valeur ajoutée dans sa propre gamme de thé — en l'intégrant à deux mélanges premium de thé à la cannelle, élaborés à partir de cannelle naturelle du Sri Lanka pour une expérience pure et aromatique. Plus largement, l'industrie de la cannelle transforme aussi généralement l'écorce et les feuilles en d'autres produits à valeur ajoutée — huile d'écorce et de feuille pour la cuisine, la cosmétique et l'aromathérapie, de la cannelle moulue en poudre et de l'oléorésine de qualité alimentaire.",
       ],
       itemHeadings: [
         [],
         ["Hauteur", "Feuilles", "Fleurs", "Fruit", "Habitat"],
+        ["Kaththa (Grand Couteau)", "Gaana Kokaththa (Grattoir)", "Thalana Kokaththa (Couteau à Éplucher)", "Piththala Danda (Tige en Laiton)", "Kathura (Ciseaux)", "Angili Kopuwa (Protège-doigts)", "Tige de Mesure"],
         ["Usages Culinaires", "Propriétés Médicinales", "Importance Écologique"],
         ["Thé à la Cannelle", "Thé à la Cannelle Aromatisé"],
       ],
@@ -2064,6 +2152,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Forêt tropicale humide et persistante, avec des conditions chaudes et un sol argileux bien drainé.",
         ],
         [
+          "Un grand couteau en forme de crochet utilisé pour couper les pousses récoltées à la bonne longueur et fendre l'écorce dans le sens de la longueur avant que ne commence le travail minutieux d'épluchage.",
+          "Un outil crochu à manche court, passé le long de la pousse pour racler la fine écorce externe rugueuse avant que l'épluchage proprement dit ne commence — « gaanawa » signifie « gratter » en cingalais.",
+          "Une petite lame courbe utilisée pour inciser l'écorce interne détachée sur toute sa longueur et la soulever de la tige ligneuse en une seule bande — « thalanawa » signifie « éplucher » en cingalais.",
+          "Une tige métallique lisse et arrondie insérée sous l'écorce incisée pour la séparer délicatement du bois sur toute la longueur de la pousse sans la déchirer.",
+          "Utilisés pour couper les bandes d'écorce épluchée à une longueur uniforme avant de les enrouler et de les sécher.",
+          "Une protection portée sur les doigts pour se prémunir des coupures lors de la manipulation des outils d'épluchage tranchants pendant des heures d'affilée.",
+          "Une tige calibrée utilisée pour mesurer et marquer des longueurs uniformes lorsque les bandes d'écorce sont coupées et préparées pour l'enroulage.",
+        ],
+        [
           "Utilisée dans les plats sucrés comme salés, les boissons et la pâtisserie — la cannelle de Ceylan a une douceur plus délicate que les variétés de cassia, à l'écorce plus épaisse et plus forte, vendues sur de nombreux marchés.",
           "Possède des propriétés antioxydantes, anti-inflammatoires et antimicrobiennes, traditionnellement utilisée pour aider à réguler la glycémie, favoriser la digestion et soutenir la santé cardiaque ; son huile essentielle a une longue histoire en médecine traditionnelle et en aromathérapie.",
           "Les arbres contribuent à la biodiversité des forêts tropicales, fournissent du nectar aux pollinisateurs et soutiennent des systèmes agroforestiers qui permettent aux agriculteurs locaux de la cultiver aux côtés d'autres cultures de manière durable.",
@@ -2074,6 +2171,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -2161,8 +2259,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Thés Artisanaux d'Exception",
-      description: "Outre le thé noir standard élaboré à partir de feuilles mûres, le domaine produit également de rares thés artisanaux façonnés à la main à partir de jeunes bourgeons délicats et de cultivars spéciaux. Les Silver Tips et Golden Tips sont des thés extrêmement rares, cueillis à la main exclusivement à partir de bourgeons de feuilles non ouverts. Le thé blanc est très légèrement transformé pour offrir une saveur subtile et naturellement sucrée, tandis que les thés violet et rose sont des variétés spéciales uniques, riches en antioxydants naturels.",
-      keyPoints: "Ces qualités artisanales sont cueillies et transformées en quantités bien plus faibles que le thé noir standard, ce qui les rend plus rares et plus prisées — demandez au comptoir de dégustation pour les goûter.",
+      description: "Outre le thé noir standard, le domaine produit également de rares thés artisanaux façonnés à la main — la plupart finis à la main à la Manufacture de Thé Artisanal, distincte de la ligne principale de thé noir, ce qui explique pourquoi ces qualités sont aussi appelées « Thés Artisanaux d'Exception » : c'est plus proche de l'artisanat que de la production de masse. Beaucoup d'entre eux proviennent d'une pousse à la teinte violette caractéristique, dont la couleur vient de l'anthocyane. Le Golden Tip utilise le bourgeon pleinement mûri de cette même pousse, tandis que le Silver Tip utilise le bourgeon plus pâle, encore immature, de la même pousse. Le thé blanc prend deux feuilles et demie de la pousse, cuites à la vapeur puis séchées plutôt que fermentées et roulées comme le thé noir, pour une saveur très légèrement transformée et naturellement sucrée. Les thés violet et rose sont des variétés spéciales uniques, riches en antioxydants naturels, élaborées selon leur propre procédé distinct. Le domaine élabore aussi des mélanges à valeur ajoutée — comme un thé infusé aux fleurs de lotus — ainsi qu'un Blooming Tea noué à la main à partir des mêmes pousses.",
+      keyPoints: "Ces qualités artisanales sont cueillies et transformées en quantités bien plus faibles que le thé noir standard, ce qui les rend plus rares et plus prisées — demandez au comptoir de dégustation pour les goûter. La pousse à teinte violette ou la pousse verte ordinaire peuvent être utilisées pour la plupart de ces qualités, bien que le domaine utilise le plus souvent la pousse violette.",
       duration: "5 minutes",
     },
     "pahatharata-manufacturing": {
@@ -2179,8 +2277,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "Thé Clonal",
-      description: "Certains des thés les plus recherchés proviennent de plants clonaux — des boutures propagées à partir d'un seul plant mère exceptionnel plutôt que cultivées à partir de graines. Cette étape explique comment le thé clonal est propagé et pourquoi il peut atteindre un prix élevé.",
-      keyPoints: "La propagation clonale préserve les caractéristiques exactes d'un plant remarquable ; les meilleurs thés clonaux sont souvent produits en quantités très limitées.",
+      description: "Certains des thés les plus recherchés proviennent de plants clonaux — des boutures propagées à partir d'un seul plant mère exceptionnel plutôt que cultivées à partir de graines. Cette étape explique comment le thé clonal est propagé et pourquoi il peut atteindre un prix élevé. Le Tea Research Institute (TRI) sélectionne des variétés clonales selon différents besoins — certaines pour la tolérance à la sécheresse ou à la pluie et un rendement plus élevé, d'autres pour les jeunes bourgeons caractéristiques à pointe rouge ou verte, prisés pour les thés artisanaux faits main. Les variétés à haut rendement largement plantées, comme TRI 2023, TRI 2025 et TRI 2026, sont courantes aussi bien dans les plantations que dans les jardins particuliers, tandis que les variétés spéciales plus rares sont surtout cultivées dans les grandes plantations pour le thé fait à la main plutôt que pour la culture courante. Bien qu'ils ressemblent à des années, ces numéros TRI sont simplement des identifiants attribués, et non l'année de sortie de chaque variété.",
+      keyPoints: "La propagation clonale préserve les caractéristiques exactes d'un plant remarquable ; les meilleurs thés clonaux sont souvent produits en quantités très limitées. Les bourgeons des variétés spéciales à pointe rouge ou verte sont cueillis à la main pour des qualités rares comme les Golden Tips et les Silver Tips, et les plantations paient généralement environ 100 roupies de plus par kilogramme que pour les feuilles cueillies normalement.",
       duration: "5-10 minutes",
     },
     "organic-fertilizer": {
@@ -2209,7 +2307,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "Fabrique de Thé Artisanal",
-      description: "Parallèlement à la production mécanisée, une partie du thé est entièrement transformée à la main à chaque étape. Cette étape explique ce qui distingue le thé fait main de la production en ligne d'usine.",
+      description: "Parallèlement à la production mécanisée, une partie du thé est entièrement transformée à la main à chaque étape. La plupart des qualités artisanales spéciales du domaine — Golden Tip, Silver Tip, thé blanc, thé violet, thé rose, Blooming Tea noué à la main et mélanges aux fleurs comme le thé au lotus — sont finies ici plutôt que dans l'usine principale de thé noir. Cette étape explique ce qui distingue le thé fait main de la production en ligne d'usine.",
       keyPoints: "Le roulage et le traitement à la main produisent des lots plus petits avec plus de variation entre les feuilles, souvent appréciés pour leur caractère distinctif.",
       duration: "10 minutes",
     },
@@ -2241,7 +2339,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   zh: {
     plucking: {
       name: "采摘",
-      description: "每一片茶叶都始于茶园，采摘工人从每根新梢上手工采摘一芽两叶。这种精细的采摘标准正是锡兰茶细腻风味的关键所在——较粗老的叶片会被留在茶树上。",
+      description: "每一片茶叶都始于茶园，采茶工会将每根新梢采到员工所称的\"deka hamara\"（两叶半）——常常是三叶半——而不是严格的\"一芽两叶\"标准。正是这种精细的采摘标准赋予了锡兰茶其细腻的特质——较粗老的叶片则留在茶树上。红茶与绿茶所采摘的确切叶片数量有所不同。",
       keyPoints: "只使用最嫩的新梢。手工采摘既保护茶树，又能挑选出风味物质浓度最高的叶片，这是机器在这种品质水平上无法替代的。",
       duration: "茶叶全年每日采摘，并在数小时内送往工厂以保持新鲜。",
     },
@@ -2271,8 +2369,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "分级筛选",
-      description: "干燥后的茶叶经过一系列筛网筛选，按叶片大小和形状分为橙黄白毫、碎橙黄白毫、茶末等级别。",
-      keyPoints: "分级主要关乎叶片颗粒大小，而非品质本身，这会影响冲泡时间和浓度——工厂借此为不同市场和冲泡方式匹配合适的茶叶。",
+      description: "绿茶和红茶其实都源自同一株茶树、同一片茶叶——真正让它们不同的是发酵（氧化）这道工序，红茶要经过发酵，而绿茶则跳过这一步。本厂的产量以红茶为主。干燥后的茶叶经过分级机械时，会一次性按照它在原始新梢上所处的位置被分开：柔嫩、易折断的芽尖和最上部的叶片——仅占每根新梢的约2%——会被制成FBOPF特级（FBOPF Extra Special），也就是最优质、最昂贵的等级，而更靠下的叶片则会制成BOP、Pekoe等扎实的等级。最成熟、最靠下的叶片会制成茶末（Dust），无法使用的茎梗和碎屑则作为废茶（Refuse）被剔除。",
+      keyPoints: "茶叶的价值取决于它在新梢上的位置，而不仅仅是叶片大小——叶片位置越高、越嫩，等级和价格就越高。通常出现在加香茶包里的并不是优质茶叶，而是茶末（Dust）等级；像FBOPF特级这样的顶级茶，由于在出口市场上价值极高，很少在本地销售。",
       duration: "分级在机器上连续进行，每批大约需要30至45分钟。",
     },
     packing: {
@@ -2283,17 +2381,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "肉桂种植园",
-      sectionHeadings: ["关于肉桂树", "特征", "益处", "肉桂茶产品"],
+      sectionHeadings: ["关于肉桂树", "特征", "剥取肉桂皮：工具与流程", "益处", "肉桂茶产品"],
       sectionBodies: [
         "肉桂（Cinnamomum verum）——又称“真肉桂”或锡兰肉桂——是樟科的一种小型常绿乔木，原产于斯里兰卡和印度南部。真正具有商业价值的是树的内层树皮：经过剥皮、晒干后卷成人们熟悉的肉桂卷。只要有排水良好的土壤和稳定的热带降雨，这种树还能提供树叶和精油，两者都在全球烹饪和传统医学中备受推崇。",
-        "成熟的肉桂树高约10至15米，叶片光亮呈椭圆形，长7至18厘米，每片叶子都有三条明显的主脉，揉搓后会散发辛香气味。淡绿白色至黄色的小花簇生成松散、略带香气的圆锥花序，随后结出约一厘米长、深紫至黑色的小核果，内含单一种子。它最适宜生长在湿润的热带常绿林中，喜温暖气候及排水良好的壤土。",
         "简单了解一下这种树本身：",
+        "采下的枝条要放置约一天，使树皮松动后才开始剥皮——这是历代剥皮工人传承下来的手艺。所用的工具简单却不可或缺：",
         "肉桂的价值远不止于厨房：",
-        "本厂出产两款高端肉桂茶，均以天然斯里兰卡肉桂精制而成，带来纯净芳香的品饮体验。",
+        "本厂并未将全部肉桂作为原料香料出售，还将其作为增值原料用于自有茶系列——将其调配成两款高端肉桂茶，均以天然斯里兰卡肉桂精制而成，带来纯净芳香的品饮体验。更广泛地说，肉桂行业通常还会把树皮和树叶加工成其他增值产品——用于烹饪、化妆品和芳香疗法的树皮油和叶油、肉桂粉，以及食品级油树脂。",
       ],
       itemHeadings: [
         [],
         ["高度", "叶片", "花朵", "果实", "生境"],
+        ["卡塔（大刀）", "加纳科卡塔（刮刀）", "塔拉纳科卡塔（剥皮刀）", "皮塔拉丹达（黄铜棒）", "卡图拉（剪刀）", "安吉利科普瓦（护指套）", "量尺"],
         ["食用价值", "药用价值", "生态意义"],
         ["肉桂茶", "风味肉桂茶"],
       ],
@@ -2307,6 +2406,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "湿润的热带常绿林，气候温暖，土壤排水良好且富含黏土。",
         ],
         [
+          "一种钩形大刀，用于将采下的枝条截成所需长度，并在进行精细剥皮工序前先沿树皮纵向劈开。",
+          "一种带短柄的钩形工具，沿枝条刮去薄而粗糙的外层树皮，之后才开始真正的剥皮——僧伽罗语中'gaanawa'意为'刮'。",
+          "一种小巧的弯刀，用来沿树皮长度划开已松动的内层树皮，并将其整条完整地从木质枝干上剥离下来——僧伽罗语中'thalanawa'意为'剥'。",
+          "一根光滑的圆形金属棒，从划开的树皮下方伸入，沿枝条全长将树皮与木质部分轻轻分离，而不使其撕裂。",
+          "用于将剥下的树皮条修剪成统一长度，之后再卷起晾干。",
+          "套在手指上的保护罩，用于长时间使用锋利的剥皮工具时防止割伤。",
+          "一种带刻度的量杆，用于在裁剪和准备卷制树皮条时测量并标记统一的长度。",
+        ],
+        [
           "广泛用于甜咸菜肴、饮品和烘焙食品中——与市面上常见的、树皮更厚更浓烈的桂皮品种相比，锡兰肉桂的甜味更为柔和细腻。",
           "具有抗氧化、抗炎和抗菌特性，传统上用于帮助调节血糖、促进消化和支持心脏健康；其精油在传统医学和芳香疗法中也有悠久的应用历史。",
           "这些树木有助于维持热带森林的生物多样性，为传粉昆虫提供花蜜，并支撑起让当地农民得以与其他作物一同可持续种植的农林复合系统。",
@@ -2317,6 +2425,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -2404,8 +2513,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "手工精品茶",
-      description: "除了用成熟茶叶制作的标准红茶外，庄园还出产以娇嫩嫩芽和特殊品种手工制作的稀有精品茶。银针与金针是极为稀有的茶，仅从未展开的叶芽中手工采摘而成。白茶经过极轻微的加工，呈现出淡雅、天然的甜味，而紫茶与粉茶则是富含天然抗氧化物的独特特色品种。",
-      keyPoints: "这些精品茶的采摘和加工数量远少于标准红茶，这正是它们更为稀有珍贵的原因——可在品茶柜台询问是否可以品尝。",
+      description: "除了标准红茶外，庄园还出产稀有的手工精品茶——这些茶大多在独立的手工制茶厂而非主要的红茶生产线上手工完成，因此这些等级也被称为「手工精品茶」：它更接近一门手艺，而非批量生产。其中许多都取自一种独特的紫色新梢，其颜色来自花青素。金针取自该新梢完全成熟的芽头，银针则取自同一新梢颜色更浅、尚未成熟的芽头。白茶取新梢上的两叶半，经蒸制、烘干而成，不像红茶那样经过发酵和揉捻，因此口感极轻微加工、带有天然甜味。紫茶与粉茶是富含天然抗氧化物的独特特色品种，各自采用自己独立的工艺制作。庄园还会制作增值调配茶——例如加入莲花的茶——以及用同样的新梢手工扎制而成的开花茶（Blooming Tea）。",
+      keyPoints: "这些精品茶的采摘和加工数量远少于标准红茶，这正是它们更为稀有珍贵的原因——可在品茶柜台询问是否可以品尝。这些等级中的大多数既可以用紫色新梢，也可以用普通绿色新梢制作，不过庄园大多使用紫色新梢。",
       duration: "5分钟",
     },
     "pahatharata-manufacturing": {
@@ -2422,8 +2531,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "克隆茶",
-      description: "一些备受追捧的茶叶来自克隆植株——通过扦插繁殖自单一优良母株，而非种子繁殖。本站介绍克隆茶的繁殖方式，以及它为何能卖出高价。",
-      keyPoints: "克隆繁殖能保留优良母株的确切特性；最优质的克隆茶往往产量非常有限。",
+      description: "一些备受追捧的茶叶来自克隆植株——通过扦插繁殖自单一优良母株，而非种子繁殖。本站介绍克隆茶的繁殖方式，以及它为何能卖出高价。茶叶研究所（TRI）针对不同需求培育克隆品种——有些是为了耐旱或耐雨并提高产量，有些则是为了那些红尖或绿尖的嫩芽，这类嫩芽备受手工特色茶的青睐。像TRI 2023、TRI 2025、TRI 2026这样广泛种植、高产的品种，在茶园和家庭园圃中都很常见；而更稀有的特色品种则大多种植在大型茶园中，用于手工制茶，而非日常种植。尽管这些TRI编号看起来像年份，但它们其实只是分配的编号，并非各品种发布的年份。",
+      keyPoints: "克隆繁殖能保留优良母株的确切特性；最优质的克隆茶往往产量非常有限。红尖或绿尖特色品种的嫩芽会被手工采摘，用于制作金毫（Golden Tips）、银毫（Silver Tips）等稀有茶品，茶园通常会为此多付约每公斤100卢比，高于普通采摘叶片的价格。",
       duration: "5-10分钟",
     },
     "organic-fertilizer": {
@@ -2452,7 +2561,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "手工制茶坊",
-      description: "除了机械化生产，部分茶叶从头到尾完全以手工方式加工。本站介绍手工茶与流水线生产茶的区别。",
+      description: "除了机械化生产，部分茶叶从头到尾完全以手工方式加工。庄园的大多数手工精品茶——金针、银针、白茶、紫茶、粉茶、手工扎制的开花茶，以及莲花茶等加花调配茶——都是在这里而非主红茶厂完成的。本站介绍手工茶与流水线生产茶的区别。",
       keyPoints: "手工揉捻与手工加工产量较小，叶片间差异更大，因其独特风味而备受珍视。",
       duration: "10分钟",
     },
@@ -2484,7 +2593,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
   ja: {
     plucking: {
       name: "摘採",
-      description: "すべての茶葉は茶園から始まります。摘み手が各新梢から芽と柔らかい葉2枚を手摘みします。この繊細な摘採基準こそが、セイロンティー特有の繊細な風味を生み出します——硬い葉は木に残されます。",
+      description: "すべての茶葉は茶園から始まります。摘み手はスタッフが「デカ・ハマラ」（葉2枚半）と呼ぶ基準まで、多くの場合は3枚半まで、厳格な「一芯二葉」のルールではなく、手摘みで各新芽を摘み取ります。この繊細な摘採基準こそがセイロンティーの繊細な個性を生み出しており、粗い葉は茶樹に残されます。摘み取る正確な葉の枚数は紅茶と緑茶で異なります。",
       keyPoints: "最も若い新芽のみが使用されます。手摘みは茶樹を保護し、風味成分の濃度が最も高い葉を選び取ります。これはこの品質レベルでは機械には再現できません。",
       duration: "茶葉は一年を通して毎日摘まれ、鮮度を保つため数時間以内に工場へ運ばれます。",
     },
@@ -2514,8 +2623,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     sorting: {
       name: "選別・格付け",
-      description: "乾燥した茶葉は一連の網目ふるいにかけられ、葉の大きさや形によってオレンジペコー、ブロークンオレンジペコー、ダストなどの等級に分けられます。",
-      keyPoints: "格付けは品質そのものというより、葉の粒の大きさに関するもので、これが抽出時間や濃さに影響します——こうして工場は異なる市場や淹れ方に合わせて紅茶を仕分けます。",
+      description: "緑茶と紅茶はどちらも同じ茶樹・同じ茶葉から作られます——両者を実際に分けているのは発酵（酸化）という工程で、紅茶はこれを経ますが、緑茶はこの工程を省きます。この工場の生産量の大部分は紅茶です。乾燥させた茶葉が選別機を通る際、元の新芽のどの部分から採れたかによって、一度の工程で分けられます：柔らかく簡単に折れる芽先と最上部の葉——各新芽のわずか約2％——はFBOPFエクストラスペシャルという、最高級で最も高価な等級になり、それより下の葉はBOPやペコーといったしっかりした等級になります。最も成熟した最下部の葉はダスト（Dust）になり、使用できない茎やくずはリフューズ（Refuse）として取り除かれます。",
+      keyPoints: "価値は葉の大きさだけでなく、新芽のどの位置にあったかによって決まります——葉が上部にあり柔らかいほど、等級も価格も高くなります。香り付けした紅茶ティーバッグに通常入っているのは高級茶葉ではなく、ダスト等級です。FBOPFエクストラスペシャルのような最高級茶は、輸出市場での価値が非常に高いため、国内で販売されることはめったにありません。",
       duration: "選別は機械で連続的に行われ、1バッチあたり約30〜45分かかります。",
     },
     packing: {
@@ -2526,17 +2635,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "シナモン農園",
-      sectionHeadings: ["シナモンの木について", "特徴", "効能", "シナモンティー製品"],
+      sectionHeadings: ["シナモンの木について", "特徴", "シナモンの皮剥き：道具と工程", "効能", "シナモンティー製品"],
       sectionBodies: [
         "「本物のシナモン」またはセイロンシナモンとして売られているCinnamomum verumは、クスノキ科の小さな常緑樹で、スリランカと南インドが原産です。商業的に重要なのは木の内側の樹皮で、これを剥いで乾燥させ、おなじみのシナモンスティックへと巻き上げます。水はけの良い土壌と安定した熱帯の降雨があれば、木は葉や精油も生み出し、どちらも世界中で料理や伝統医療に重宝されています。",
-        "成木のシナモンの木は高さ約10〜15メートルに達し、光沢のある楕円形の葉は長さ7〜18センチで、それぞれに3本の目立つ葉脈があり、揉むとスパイシーな香りを放ちます。小さな緑白色から黄色の花はゆるやかで淡い香りの円錐花序に咲き、後に長さ約1センチの濃い紫がかった黒色の核果となり、中に種子を一つ含みます。湿潤な熱帯常緑林で、暖かく水はけの良い粘土質の土壌がある環境が最も適しています。",
         "木そのものについて簡単にご紹介します：",
+        "収穫した枝は、皮を剥き始める前に樹皮が緩むよう、約1日休ませます——これは代々の皮剥き職人によって受け継がれてきた技術です。使用する道具はシンプルですが欠かせません。",
         "シナモンの価値は台所にとどまりません：",
-        "工場では、天然のスリランカ産シナモンを使用した2種類のプレミアムシナモンティーを製造しており、純粋で香り高い味わいをお楽しみいただけます。",
+        "工場では、収穫したシナモンのすべてを原料香辛料として販売するのではなく、自社の紅茶ラインナップにおける付加価値素材としても活用しています——天然のスリランカ産シナモンを使用した2種類のプレミアムシナモンティーにブレンドし、純粋で香り高い味わいをお届けしています。より広く見ると、シナモン産業では通常、樹皮や葉を他の付加価値製品にも加工します——料理、化粧品、アロマセラピー用の樹皮油・葉油、粉末シナモン、食品グレードのオレオレジンなどです。",
       ],
       itemHeadings: [
         [],
         ["高さ", "葉", "花", "果実", "生育環境"],
+        ["カッタ（大型ナイフ）", "ガーナ・コカッタ（削り具）", "タラナ・コカッタ（皮剥きナイフ）", "ピッタラ・ダンダ（真鍮棒）", "カトゥラ（はさみ）", "アンギリ・コプワ（指カバー）", "計測棒"],
         ["料理での利用", "薬用効果", "生態学的な重要性"],
         ["シナモンティー", "フレーバードシナモンティー"],
       ],
@@ -2550,6 +2660,15 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "湿潤な熱帯常緑林で、暖かく水はけの良い粘土質の土壌を好みます。",
         ],
         [
+          "収穫した枝を必要な長さに切り、本格的な皮剥き作業を始める前に樹皮を縦方向に割るために使う、フック状の大きなナイフです。",
+          "本格的な皮剥きを始める前に、枝に沿って引いて薄くざらついた外皮を削り取る、短い柄の付いたフック状の道具です——シンハラ語で「gaanawa」は「削る」を意味します。",
+          "緩んだ内側の樹皮をその長さに沿って切り込み、木質の茎から一本の帯状にはがし取るために使う、小さく湾曲した刃物です——シンハラ語で「thalanawa」は「剥く」を意味します。",
+          "切り込みを入れた樹皮の下に差し込み、枝の全長にわたって樹皮を破らずに木部からそっと分離させるための、滑らかで丸みを帯びた金属の棒です。",
+          "剥いた樹皮を巻いて乾燥させる前に、均一な長さに切りそろえるために使います。",
+          "何時間も鋭い皮剥き道具を扱う際、切り傷から指を守るために装着する保護カバーです。",
+          "樹皮を切って巻く準備をする際に、均一な長さを測って印を付けるために使う目盛り付きの棒です。",
+        ],
+        [
           "甘い料理にも塩気のある料理にも、飲み物や焼き菓子にも使われます——セイロンシナモンは、多くの市場で売られている、より樹皮が厚く強い味のカシア種に比べて、穏やかで繊細な甘みを持っています。",
           "抗酸化、抗炎症、抗菌作用があり、血糖値の調整、消化の促進、心臓の健康維持を助けるものとして伝統的に用いられてきました。その精油も伝統医療やアロマセラピーにおいて長い歴史を持っています。",
           "木々は熱帯林の生物多様性に貢献し、送粉者に蜜を提供し、地元の農家が他の作物と共に持続可能に栽培できる農林複合システムを支えています。",
@@ -2560,6 +2679,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
       ],
       itemTags: [
+        [],
         [],
         [],
         [],
@@ -2647,8 +2767,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "職人技の高級茶",
-      description: "成熟した茶葉から作られる標準的な紅茶に加えて、この農園では繊細な若芽と特別な品種から作られる希少な手作りの高級茶も生産しています。シルバーティップスとゴールデンティップスは、開いていない葉芽だけから手摘みされる非常に希少な茶です。白茶は非常に軽く加工され、繊細で自然な甘みを持つ味わいを生み出し、パープルティーとピンクティーは天然の抗酸化物質が豊富な独特な特別品種です。",
-      keyPoints: "これらの職人技の茶は、標準的な紅茶よりもはるかに少ない量で摘み取られ加工されるため、より希少で貴重なものとなっています——試飲カウンターでお尋ねください。",
+      description: "標準的な紅茶に加えて、この農園では希少な手作りの高級茶も生産しています——その多くは紅茶の主生産ラインではなく、別棟の手工茶工場で手作業により仕上げられます。これが「職人技の高級茶」とも呼ばれる理由で、大量生産というより工芸に近いものです。これらの多くは特徴的な紫がかった新芽から作られ、その色はアントシアニンによるものです。ゴールデンティップスにはその新芽の完全に成熟した芽を、シルバーティップスには同じ新芽のまだ未熟で色の薄い芽を使用します。白茶は新芽から葉2枚半を摘み取り、紅茶のように発酵・揉捻するのではなく、蒸してから乾燥させることで、非常に軽く加工された自然な甘みのある味わいに仕上げます。パープルティーとピンクティーは天然の抗酸化物質が豊富な独特な特別品種で、それぞれ独自の工程で作られます。この農園では、蓮の花を使ったお茶などの付加価値ブレンドや、同じ新芽から手作業で結び上げるブルーミングティーも作られています。",
+      keyPoints: "これらの職人技の茶は、標準的な紅茶よりもはるかに少ない量で摘み取られ加工されるため、より希少で貴重なものとなっています——試飲カウンターでお尋ねください。これらの等級のほとんどには、紫がかった新芽と通常の緑の新芽のどちらも使用できますが、農園では主に紫がかった新芽を使用しています。",
       duration: "5分",
     },
     "pahatharata-manufacturing": {
@@ -2665,8 +2785,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "clonal-tea": {
       name: "クローン茶",
-      description: "最も人気のある茶の一部は、種からではなく、単一の優れた親株から挿し木で増やされたクローン株から作られます。このストップでは、クローン茶がどのように増殖され、なぜ高値がつくのかを紹介します。",
-      keyPoints: "クローン繁殖は優れた親株の特性をそのまま保持します。最高級のクローン茶は生産量が非常に限られていることが多いです。",
+      description: "最も人気のある茶の一部は、種からではなく、単一の優れた親株から挿し木で増やされたクローン株から作られます。このストップでは、クローン茶がどのように増殖され、なぜ高値がつくのかを紹介します。茶業研究所（TRI）は、目的に応じてさまざまなクローン品種を育成しています——干ばつや雨への耐性、高い収量を目的としたもの、あるいは手作りの特選茶に珍重される赤色または緑色の芽先を持つ品種などです。TRI 2023、TRI 2025、TRI 2026のような広く植えられている高収量品種は、大農園でも家庭の庭でも一般的ですが、より希少な特選品種は主に大規模農園で、日常栽培ではなく手作り茶のために栽培されています。これらのTRI番号は年号のように見えますが、実際には単に割り当てられた識別番号であり、各品種が発表された年ではありません。",
+      keyPoints: "クローン繁殖は優れた親株の特性をそのまま保持します。最高級のクローン茶は生産量が非常に限られていることが多いです。赤色または緑色の芽先を持つ特選品種の芽は、ゴールデンティップスやシルバーティップスといった希少な等級のために手摘みされ、農園では通常、標準的に摘まれた葉よりも1キログラムあたり約100ルピー多く支払われます。",
       duration: "5〜10分",
     },
     "organic-fertilizer": {
@@ -2695,7 +2815,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "handmade-factory": {
       name: "手作り紅茶工房",
-      description: "機械化された生産と並行して、一部の茶はすべての工程が機械を使わず完全に手作業で加工されます。このストップでは、手作りの茶が工場ラインでの生産とどう違うかを紹介します。",
+      description: "機械化された生産と並行して、一部の茶はすべての工程が機械を使わず完全に手作業で加工されます。農園の職人技高級茶のほとんど——ゴールデンティップス、シルバーティップス、白茶、パープルティー、ピンクティー、手作業で結ぶブルーミングティー、蓮茶のような花を使ったブレンド——は、紅茶の主工場ではなくここで仕上げられます。このストップでは、手作りの茶が工場ラインでの生産とどう違うかを紹介します。",
       keyPoints: "手揉みと手作業による加工は、少量生産で葉ごとの個性が出やすく、その独特な風味がしばしば珍重されます。",
       duration: "10分",
     },
