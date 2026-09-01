@@ -542,8 +542,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "පොල් වත්ත",
-      description: "බොහෝ ශ්‍රී ලාංකික වතුවල තේ අසල පොල් ගස් වගා කරනු ලැබේ, එමගින් ඵල, තෙල්, සහ දේපළ පුරාම භාවිතා කරන ද්‍රව්‍ය සපයයි. මෙම නැවතුම වතුයායේ පොල් වගා කරන, නෙළන, සහ භාවිතා කරන ආකාරය ගැන කියා දෙයි.",
-      keyPoints: "එක් පොල් ගසක් දශක ගණනාවක් ඵල දරා ගත හැකි අතර, එහි සෑම කොටසක්ම පාහේ — ගෙඩිය, කොපු, කටුව, සහ ලැලි — ක්‍රියාත්මක වතුයායක යම් අයුරකින් භාවිතා වේ.",
+      heroTagline: "'ජීවන වෘක්ෂය' — වෙරළබඩ යෝධයෙකි, එහි කිසිවක්ම පාහේ අපතේ නොයයි.",
+      sectionHeadings: ["පොල් ගස පිළිබඳ", "ලක්ෂණ", "භාවිත සහ ප්‍රතිලාභ"],
+      sectionBodies: [
+        "පොල් ගස (Cocos nucifera) — Arecaceae පවුලට අයත් උස් ගසකි, ලොව පුරා නිවර්තන වෙරළබඩ ප්‍රදේශවල පුළුල් ලෙස වගා කෙරේ. 'ජීවන වෘක්ෂය' ලෙස හඳුන්වන මෙහි සෑම කොටසක්ම ප්‍රයෝජනවත් වේ — පෝෂ්‍යදායී ගෙඩිය සහ ප්‍රාණවත් වතුරේ සිට ලීය, කොළ, සහ තන්තු දක්වා. මෙම ගස වැලි සහිත, හොඳින් ජලය බැස යන පසෙහි වර්ධනය වන අතර ඉහළ ලවණතාවයට ඔරොත්තු දිය හැකි බැවින් වෙරළබඩ ප්‍රදේශවල සුලභය.",
+        "ගස පිළිබඳ කෙටි විස්තරයක්:",
+        "පොල් ගසේ වටිනාකම ගෙඩියට වඩා බොහෝ දුරට විහිදේ:",
+      ],
+      itemHeadings: [
+        [],
+        ["උස", "කොළ", "මල්", "ඵලය", "වාසස්ථානය"],
+        ["ආහාර පිසීමේ භාවිතය", "ඖෂධීය ගුණාංග", "පාරිසරික වැදගත්කම"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "මීටර් 30ක් තෙක් උසැති වේ.",
+          "විශාල, පිහාටු හැඩැති කොළ, මීටර් 4ත් 6ත් අතර දිග.",
+          "අතු බෙදුණු මල් පොකුරුවල පිහිටි කුඩා, කහ පැහැති මල්.",
+          "තන්තුමය කොපුවක් සහ සුදු මඤ්ඤොක්කා සහ පොල් වතුර වට කරගත් තද කටුවක් සහිත විශාල, එක්-බීජ ගෙඩියකි (පොල් ගෙඩිය).",
+          "නිවර්තන වෙරළබඩ ප්‍රදේශ; සම්පූර්ණ හිරු එළිය සහිත වැලි, ලවණ පසෙහි වර්ධනය වේ.",
+        ],
+        [
+          "පොල් වතුර ප්‍රාණවත් පානයක් වන අතර, සුදු මඤ්ඤොක්කා (කොප්පරා) ආහාර පිසීමට, පිසීමට, සහ තෙල් උපුටා ගැනීමට භාවිතා කරයි; පොල් කිරි සහ ක්‍රීම් නිවර්තන ආහාර පිසීමේදී අත්‍යවශ්‍යය.",
+          "පොල් තෙල්හි ක්ෂුද්‍ර ජීවී විරෝධී සහ තෙතමනය සපයන ගුණාංග ඇත; පොල් වතුර තෙතමනය සපයන අතර විද්‍යුත් විච්ඡේදක බහුල වන අතර වකුගඩු හා හෘද සෞඛ්‍යයට සහාය වේ.",
+          "පොල් ගස් වෙරළබඩ පස ස්ථායීකරණය කිරීමට සහ ඛාදනය වැළැක්වීමට උපකාරී වේ; ඒවා බොහෝ වෙරළබඩ ජීවීන්ට සෙවන සහ වාසස්ථානය සපයන අතර දේශීය පරිසර පද්ධතිවලට සහාය වේ.",
+        ],
+      ],
       duration: "මිනිත්තු 5-10",
     },
     introduction: {
@@ -833,8 +858,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "தென்னை வயல்",
-      description: "பல இலங்கை தோட்டங்களில் தேயிலையுடன் தென்னை மரங்கள் வளர்க்கப்படுகின்றன, இது பழம், எண்ணெய் மற்றும் தோட்டம் முழுவதும் பயன்படுத்தப்படும் பொருட்களை வழங்குகிறது. தென்னை தோட்டத்தில் எவ்வாறு வளர்க்கப்பட்டு, அறுவடை செய்யப்பட்டு, பயன்படுத்தப்படுகிறது என்பதை இந்த நிறுத்தம் விளக்குகிறது.",
-      keyPoints: "ஒரு தென்னை மரம் பல தசாப்தங்களாக பழம் தரக்கூடியது, மேலும் அதன் ஏறத்தாழ ஒவ்வொரு பகுதியும் — பழம், நார்ப்பட்டை, ஓடு, மற்றும் ஓலைகள் — இயங்கும் தோட்டத்தில் ஏதோ ஒரு வகையில் பயன்படுத்தப்படுகிறது.",
+      heroTagline: "'உயிர் மரம்' — கடலோர ராட்சதன், இதில் எதுவும் வீணாவதில்லை.",
+      sectionHeadings: ["தென்னை மரத்தைப் பற்றி", "பண்புகள்", "பயன்கள் மற்றும் நன்மைகள்"],
+      sectionBodies: [
+        "Cocos nucifera — தென்னை மரம் — Arecaceae குடும்பத்தைச் சேர்ந்த உயரமான பனை, உலகம் முழுவதும் வெப்பமண்டல கடலோரப் பகுதிகளில் பரவலாக பயிரிடப்படுகிறது. 'உயிர் மரம்' என அழைக்கப்படும் இதன் ஒவ்வொரு பகுதியும் பயனுள்ளதாக இருக்கிறது — சத்தான பழம் மற்றும் புத்துணர்ச்சியூட்டும் நீரிலிருந்து அதன் மரம், இலைகள், நார் வரை. இந்த மரம் மணல் நிறைந்த, நன்கு வடிகட்டும் மண்ணில் செழித்து வளர்கிறது, அதிக உப்புத்தன்மையையும் தாங்கக்கூடியது, இதனால் கடலோரங்களில் பொதுவானது.",
+        "பனையைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+        "தென்னை பனையின் மதிப்பு பழத்தைத் தாண்டி விரிவடைகிறது:",
+      ],
+      itemHeadings: [
+        [],
+        ["உயரம்", "இலைகள்", "பூக்கள்", "பழம்", "வாழ்விடம்"],
+        ["சமையல் பயன்பாடு", "மருத்துவ பண்புகள்", "சுற்றுச்சூழல் முக்கியத்துவம்"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "30 மீட்டர் வரை உயரம்.",
+          "பெரிய, இறகு போன்ற ஓலைகள், 4 முதல் 6 மீட்டர் வரை நீளம்.",
+          "கிளைத்த மஞ்சரிகளில் அமைந்த சிறிய, மஞ்சள் நிற பூக்கள்.",
+          "நார்ச்சத்துள்ள தோலையும் வெள்ளை சதை மற்றும் தேங்காய் நீரை உள்ளடக்கிய கடினமான ஓட்டையும் கொண்ட ஒரு விதை கொண்ட பெரிய கனி (தேங்காய்).",
+          "வெப்பமண்டல கடலோரப் பகுதிகள்; முழு சூரிய ஒளியுடன் மணல், உப்பு மண்ணில் செழிக்கிறது.",
+        ],
+        [
+          "தேங்காய் நீர் ஒரு புத்துணர்ச்சியூட்டும் பானமாகும், மேலும் வெள்ளை சதை (கொப்பரா) சமையல், பேக்கிங், மற்றும் எண்ணெய் பிரித்தெடுத்தலுக்குப் பயன்படுத்தப்படுகிறது; தேங்காய் பால் மற்றும் கிரீம் வெப்பமண்டல உணவு வகைகளில் இன்றியமையாதவை.",
+          "தேங்காய் எண்ணெயில் நுண்ணுயிர் எதிர்ப்பு மற்றும் ஈரப்பதமூட்டும் பண்புகள் உள்ளன; தேங்காய் நீர் நீரேற்றமூட்டுவதுடன் எலக்ட்ரோலைட்டுகள் நிறைந்தது, சிறுநீரகம் மற்றும் இதய ஆரோக்கியத்திற்கு உதவுகிறது.",
+          "தென்னை மரங்கள் கடலோர மண்ணை உறுதிப்படுத்தவும் அரிப்பைத் தடுக்கவும் உதவுகின்றன; அவை பல கடலோர உயிரினங்களுக்கு நிழலும் வாழ்விடமும் வழங்கி உள்ளூர் சுற்றுச்சூழல் அமைப்புகளுக்கு ஆதரவளிக்கின்றன.",
+        ],
+      ],
       duration: "5-10 நிமிடங்கள்",
     },
     introduction: {
@@ -1124,8 +1174,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Campo di Cocco",
-      description: "Le palme da cocco vengono coltivate in molte tenute dello Sri Lanka accanto al tè, fornendo frutta, olio e materiali usati in tutta la proprietà. Questa tappa spiega come il cocco viene coltivato, raccolto e utilizzato nella tenuta.",
-      keyPoints: "Una singola palma da cocco può produrre frutti per decenni, e quasi ogni sua parte — il frutto, la buccia fibrosa, il guscio e le foglie — viene utilizzata in qualche modo in una tenuta attiva.",
+      heroTagline: "L'\"Albero della Vita\" — un gigante costiero di cui non si spreca quasi nulla.",
+      sectionHeadings: ["La Palma da Cocco", "Caratteristiche", "Usi e Benefici"],
+      sectionBodies: [
+        "Cocos nucifera — la palma da cocco — è una palma alta della famiglia delle Arecaceae, ampiamente coltivata nelle regioni costiere tropicali di tutto il mondo. Conosciuta come l'\"Albero della Vita\", ogni sua parte è utile — dal frutto nutriente e dall'acqua rinfrescante al legno, alle foglie e alle fibre. L'albero prospera in terreni sabbiosi e ben drenati e può resistere ad alta salinità, il che lo rende comune lungo le coste.",
+        "Uno sguardo rapido alla palma stessa:",
+        "Il valore della palma da cocco va ben oltre il frutto stesso:",
+      ],
+      itemHeadings: [
+        [],
+        ["Altezza", "Foglie", "Fiori", "Frutto", "Habitat"],
+        ["Usi Culinari", "Proprietà Medicinali", "Importanza Ecologica"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Alta fino a 30 metri.",
+          "Grandi fronde piumose, lunghe dai 4 ai 6 metri.",
+          "Fiori piccoli e giallastri disposti in infiorescenze ramificate.",
+          "Una grande drupa monoseme (la noce di cocco) con una buccia fibrosa e un guscio duro che racchiude la polpa bianca e l'acqua di cocco.",
+          "Aree costiere tropicali; prospera in terreni sabbiosi e salini con piena esposizione al sole.",
+        ],
+        [
+          "L'acqua di cocco è una bevanda rinfrescante, e la polpa bianca (copra) è usata in cucina, nella panificazione e nell'estrazione dell'olio; il latte e la crema di cocco sono essenziali nelle cucine tropicali.",
+          "L'olio di cocco ha proprietà antimicrobiche e idratanti; l'acqua di cocco idrata ed è ricca di elettroliti, a sostegno della salute renale e cardiaca.",
+          "Le palme da cocco aiutano a stabilizzare i suoli costieri e a prevenire l'erosione; forniscono ombra e habitat a numerosi organismi costieri e sostengono gli ecosistemi locali.",
+        ],
+      ],
       duration: "5-10 minuti",
     },
     introduction: {
@@ -1415,8 +1490,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "حقل جوز الهند",
-      description: "تُزرع أشجار جوز الهند في العديد من مزارع سريلانكا إلى جانب الشاي، وتوفر الثمار والزيت والمواد المستخدمة في جميع أنحاء الممتلكات. تتناول هذه المحطة كيفية زراعة جوز الهند وحصاده واستخدامه في المزرعة.",
-      keyPoints: "يمكن لنخلة جوز الهند الواحدة أن تثمر لعقود، ويُستخدم كل جزء منها تقريبًا — الثمرة والقشرة الليفية والقشرة الصلبة والأوراق — بطريقة ما في مزرعة عاملة.",
+      heroTagline: "«شجرة الحياة» — عملاق ساحلي لا يكاد يُهدر منه شيء.",
+      sectionHeadings: ["عن شجرة جوز الهند", "الخصائص", "الاستخدامات والفوائد"],
+      sectionBodies: [
+        "جوز الهند (Cocos nucifera) نخلة طويلة تنتمي إلى الفصيلة النخيلية، تُزرع على نطاق واسع في المناطق الساحلية الاستوائية حول العالم. تُعرف بـ«شجرة الحياة»، إذ يُستفاد من كل جزء منها — من ثمرتها المغذية ومائها المنعش إلى خشبها وأوراقها وأليافها. تزدهر هذه الشجرة في التربة الرملية جيدة التصريف وتتحمل الملوحة العالية، مما يجعلها شائعة على طول السواحل.",
+        "نظرة سريعة على النخلة نفسها:",
+        "تتجاوز قيمة نخلة جوز الهند الثمرة نفسها إلى حد بعيد:",
+      ],
+      itemHeadings: [
+        [],
+        ["الارتفاع", "الأوراق", "الأزهار", "الثمرة", "الموطن"],
+        ["الاستخدامات الغذائية", "الخصائص الطبية", "الأهمية البيئية"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "يصل ارتفاعها إلى 30 مترًا.",
+          "سعف كبيرة ريشية الشكل، يتراوح طولها بين 4 و6 أمتار.",
+          "أزهار صغيرة مائلة للصفرة تنمو في نورات متفرعة.",
+          "ثمرة كبيرة أحادية البذرة (جوزة الهند) ذات قشرة ليفية وقشرة صلبة تحيط باللب الأبيض وماء جوز الهند.",
+          "المناطق الساحلية الاستوائية؛ تزدهر في التربة الرملية المالحة تحت أشعة الشمس الكاملة.",
+        ],
+        [
+          "ماء جوز الهند مشروب منعش، ويُستخدم اللب الأبيض (النارجيل المجفف) في الطهي والخَبز واستخلاص الزيت؛ ويُعد حليب وكريمة جوز الهند من العناصر الأساسية في المطابخ الاستوائية.",
+          "يتمتع زيت جوز الهند بخصائص مضادة للميكروبات ومرطبة؛ وماء جوز الهند مرطب وغني بالإلكتروليتات، ما يدعم صحة الكلى والقلب.",
+          "تساعد أشجار جوز الهند على تثبيت التربة الساحلية ومنع التآكل؛ وتوفر الظل والموطن للعديد من الكائنات الساحلية وتدعم النظم البيئية المحلية.",
+        ],
+      ],
       duration: "5-10 دقائق",
     },
     introduction: {
@@ -1706,8 +1806,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Кокосовое поле",
-      description: "Кокосовые пальмы выращивают на многих плантациях Шри-Ланки рядом с чаем — они дают плоды, масло и материалы, используемые по всей территории. Эта остановка рассказывает о том, как кокос выращивают, собирают и используют на плантации.",
-      keyPoints: "Одна кокосовая пальма может плодоносить десятилетиями, и почти каждая её часть — мякоть плода, волокнистая оболочка, скорлупа и листья — находит применение на действующей плантации.",
+      heroTagline: "«Дерево жизни» — прибрежный гигант, у которого почти ничего не пропадает даром.",
+      sectionHeadings: ["О кокосовой пальме", "Характеристики", "Применение и польза"],
+      sectionBodies: [
+        "Cocos nucifera — кокосовая пальма — высокая пальма семейства Арековые, широко культивируемая в тропических прибрежных регионах по всему миру. Известная как «дерево жизни», она полезна каждой своей частью — от питательного плода и освежающей воды до древесины, листьев и волокна. Дерево хорошо растёт на песчаных, хорошо дренированных почвах и выдерживает высокую засолённость, поэтому оно так распространено вдоль побережий.",
+        "Краткий обзор самой пальмы:",
+        "Ценность кокосовой пальмы выходит далеко за рамки самого плода:",
+      ],
+      itemHeadings: [
+        [],
+        ["Высота", "Листья", "Цветки", "Плод", "Среда обитания"],
+        ["Кулинарное применение", "Лекарственные свойства", "Экологическое значение"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "До 30 метров высотой.",
+          "Крупные перистые листья длиной от 4 до 6 метров.",
+          "Мелкие желтоватые цветки, собранные в разветвлённые соцветия.",
+          "Крупная однокостянка (кокосовый орех) с волокнистой шелухой и твёрдой скорлупой, скрывающей белую мякоть и кокосовую воду.",
+          "Тропические прибрежные районы; хорошо растёт на песчаных, солёных почвах при полном солнечном освещении.",
+        ],
+        [
+          "Кокосовая вода — освежающий напиток, а белая мякоть (копра) используется в кулинарии, выпечке и для производства масла; кокосовое молоко и сливки незаменимы в тропической кухне.",
+          "Кокосовое масло обладает антимикробными и увлажняющими свойствами; кокосовая вода увлажняет организм и богата электролитами, поддерживая здоровье почек и сердца.",
+          "Кокосовые пальмы помогают стабилизировать прибрежные почвы и предотвращать эрозию; они дают тень и среду обитания множеству прибрежных организмов и поддерживают местные экосистемы.",
+        ],
+      ],
       duration: "5–10 минут",
     },
     introduction: {
@@ -1997,8 +2122,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Kokosnussfeld",
-      description: "Kokospalmen werden auf vielen Plantagen Sri Lankas neben Tee angebaut und liefern Früchte, Öl und Materialien, die im gesamten Anwesen verwendet werden. Diese Station zeigt, wie Kokosnüsse auf der Plantage angebaut, geerntet und genutzt werden.",
-      keyPoints: "Eine einzelne Kokospalme kann jahrzehntelang Früchte tragen, und fast jeder Teil davon — die Frucht, die faserige Hülle, die Schale und die Blätter — findet auf einem arbeitenden Anwesen irgendeine Verwendung.",
+      heroTagline: "Der „Baum des Lebens“ — ein Küstenriese, bei dem fast nichts verschwendet wird.",
+      sectionHeadings: ["Über die Kokospalme", "Merkmale", "Verwendung und Nutzen"],
+      sectionBodies: [
+        "Cocos nucifera — die Kokospalme — ist eine hohe Palme aus der Familie der Arecaceae, die weltweit in tropischen Küstenregionen weit verbreitet angebaut wird. Als „Baum des Lebens“ bekannt, ist jeder Teil von ihr nützlich — von der nahrhaften Frucht und dem erfrischenden Wasser bis hin zu Holz, Blättern und Fasern. Der Baum gedeiht auf sandigen, gut durchlässigen Böden und verträgt hohe Salzgehalte, weshalb er entlang von Küsten so verbreitet ist.",
+        "Ein kurzer Blick auf die Palme selbst:",
+        "Der Wert der Kokospalme geht weit über die Frucht selbst hinaus:",
+      ],
+      itemHeadings: [
+        [],
+        ["Höhe", "Blätter", "Blüten", "Frucht", "Lebensraum"],
+        ["Kulinarische Nutzung", "Medizinische Eigenschaften", "Ökologische Bedeutung"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Bis zu 30 Meter hoch.",
+          "Große, federartige Wedel, 4 bis 6 Meter lang.",
+          "Kleine, gelbliche Blüten in verzweigten Blütenständen.",
+          "Eine große, einsamige Steinfrucht (die Kokosnuss) mit faseriger Schale und harter Schale, die das weiße Fruchtfleisch und das Kokoswasser umschließt.",
+          "Tropische Küstengebiete; gedeiht auf sandigen, salzigen Böden bei voller Sonneneinstrahlung.",
+        ],
+        [
+          "Kokoswasser ist ein erfrischendes Getränk, und das weiße Fruchtfleisch (Kopra) wird zum Kochen, Backen und zur Ölgewinnung verwendet; Kokosmilch und -sahne sind in der tropischen Küche unverzichtbar.",
+          "Kokosöl hat antimikrobielle und feuchtigkeitsspendende Eigenschaften; Kokoswasser spendet Flüssigkeit und ist reich an Elektrolyten, was die Nieren- und Herzgesundheit unterstützt.",
+          "Kokospalmen helfen, Küstenböden zu stabilisieren und Erosion vorzubeugen; sie bieten zahlreichen Küstenorganismen Schatten und Lebensraum und unterstützen lokale Ökosysteme.",
+        ],
+      ],
       duration: "5-10 Minuten",
     },
     introduction: {
@@ -2288,8 +2438,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Campo de Cocoteros",
-      description: "Los cocoteros se cultivan en muchas fincas de Sri Lanka junto al té, aportando fruta, aceite y materiales que se usan por toda la propiedad. Esta parada explica cómo se cultiva, cosecha y utiliza el coco en la finca.",
-      keyPoints: "Una sola palmera de coco puede dar frutos durante décadas, y casi todas sus partes —la fruta, la cáscara fibrosa, la cáscara dura y las hojas— tienen algún uso en una finca en funcionamiento.",
+      heroTagline: "El «Árbol de la Vida» — un gigante costero del que casi nada se desperdicia.",
+      sectionHeadings: ["Sobre la Palma de Coco", "Características", "Usos y Beneficios"],
+      sectionBodies: [
+        "Cocos nucifera —la palmera de coco— es una palmera alta de la familia Arecaceae, ampliamente cultivada en regiones costeras tropicales de todo el mundo. Conocida como el «Árbol de la Vida», todas sus partes son útiles —desde su fruto nutritivo y su agua refrescante hasta su madera, hojas y fibra. El árbol prospera en suelos arenosos bien drenados y puede resistir una alta salinidad, lo que lo hace común a lo largo de las costas.",
+        "Un vistazo rápido a la palmera:",
+        "El valor de la palmera de coco va mucho más allá del propio fruto:",
+      ],
+      itemHeadings: [
+        [],
+        ["Altura", "Hojas", "Flores", "Fruto", "Hábitat"],
+        ["Usos Culinarios", "Propiedades Medicinales", "Importancia Ecológica"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Hasta 30 metros de altura.",
+          "Grandes frondas plumosas, de 4 a 6 metros de largo.",
+          "Flores pequeñas y amarillentas dispuestas en inflorescencias ramificadas.",
+          "Una drupa grande de una sola semilla (el coco) con una cáscara fibrosa y una cubierta dura que encierra la pulpa blanca y el agua de coco.",
+          "Áreas costeras tropicales; prospera en suelos arenosos y salinos con plena exposición al sol.",
+        ],
+        [
+          "El agua de coco es una bebida refrescante, y la pulpa blanca (copra) se usa para cocinar, hornear y extraer aceite; la leche y la crema de coco son esenciales en las cocinas tropicales.",
+          "El aceite de coco tiene propiedades antimicrobianas e hidratantes; el agua de coco hidrata y es rica en electrolitos, favoreciendo la salud renal y cardíaca.",
+          "Las palmeras de coco ayudan a estabilizar los suelos costeros y a prevenir la erosión; proporcionan sombra y hábitat a numerosos organismos costeros y sostienen los ecosistemas locales.",
+        ],
+      ],
       duration: "5-10 minutos",
     },
     introduction: {
@@ -2579,8 +2754,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Champ de Cocotiers",
-      description: "Les cocotiers sont cultivés aux côtés du thé dans de nombreuses plantations sri-lankaises, fournissant fruits, huile et matériaux utilisés dans toute la propriété. Cette étape explique comment le coco est cultivé, récolté et utilisé sur la plantation.",
-      keyPoints: "Un seul cocotier peut porter des fruits pendant des décennies, et presque chaque partie — le fruit, la bourre, la coque et les feuilles — est utilisée d'une manière ou d'une autre sur une plantation en activité.",
+      heroTagline: "L'« Arbre de Vie » — un géant côtier dont presque rien ne se perd.",
+      sectionHeadings: ["À propos du Cocotier", "Caractéristiques", "Usages et Bienfaits"],
+      sectionBodies: [
+        "Cocos nucifera — le cocotier — est un grand palmier de la famille des Arecaceae, largement cultivé dans les régions côtières tropicales du monde entier. Connu comme l'« Arbre de Vie », chacune de ses parties est utile — de son fruit nourrissant et de son eau rafraîchissante à son bois, ses feuilles et ses fibres. L'arbre prospère dans les sols sableux et bien drainés et peut résister à une forte salinité, ce qui le rend courant le long des côtes.",
+        "Un aperçu rapide du palmier lui-même :",
+        "La valeur du cocotier va bien au-delà du fruit lui-même :",
+      ],
+      itemHeadings: [
+        [],
+        ["Hauteur", "Feuilles", "Fleurs", "Fruit", "Habitat"],
+        ["Usages Culinaires", "Propriétés Médicinales", "Importance Écologique"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Jusqu'à 30 mètres de haut.",
+          "Grandes frondes plumeuses, longues de 4 à 6 mètres.",
+          "Petites fleurs jaunâtres disposées en inflorescences ramifiées.",
+          "Une grande drupe à une seule graine (la noix de coco) avec une bourre fibreuse et une coque dure renfermant la chair blanche et l'eau de coco.",
+          "Zones côtières tropicales ; prospère dans les sols sableux et salins en plein soleil.",
+        ],
+        [
+          "L'eau de coco est une boisson rafraîchissante, et la chair blanche (coprah) est utilisée en cuisine, en pâtisserie et pour l'extraction d'huile ; le lait et la crème de coco sont essentiels dans les cuisines tropicales.",
+          "L'huile de coco a des propriétés antimicrobiennes et hydratantes ; l'eau de coco hydrate et est riche en électrolytes, favorisant la santé rénale et cardiaque.",
+          "Les cocotiers aident à stabiliser les sols côtiers et à prévenir l'érosion ; ils offrent ombre et habitat à de nombreux organismes côtiers et soutiennent les écosystèmes locaux.",
+        ],
+      ],
       duration: "5-10 minutes",
     },
     introduction: {
@@ -2870,8 +3070,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "椰园",
-      description: "许多斯里兰卡庄园会在茶树旁种植椰子树，为庄园提供果实、椰油以及各种用途的原料。本站介绍椰子在庄园中如何种植、采收和利用。",
-      keyPoints: "一棵椰子树可以连续结果数十年，其几乎每一部分——果肉、椰壳外皮、硬壳和椰叶——在庄园的日常运作中都能派上用场。",
+      heroTagline: "「生命之树」——一种几乎全身都不会被浪费的海岸巨树。",
+      sectionHeadings: ["关于椰子树", "特征", "用途与益处"],
+      sectionBodies: [
+        "椰子树（Cocos nucifera）是棕榈科的一种高大棕榈树，广泛种植于世界各地的热带沿海地区。被誉为「生命之树」，它的每一部分都物尽其用——从营养丰富的果实、清凉解渴的椰子水，到木材、叶片与纤维。这种树在排水良好的沙质土壤中长势良好，并能耐受高盐分，因此在海岸线一带十分常见。",
+        "棕榈树本身的简要介绍：",
+        "椰子树的价值远不止果实本身：",
+      ],
+      itemHeadings: [
+        [],
+        ["株高", "叶片", "花朵", "果实", "栖息地"],
+        ["食用价值", "药用特性", "生态重要性"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "株高可达30米。",
+          "大型羽状叶片，长4至6米。",
+          "小型淡黄色花朵，排列成分枝花序。",
+          "一种大型单籽核果（椰子），外覆纤维状果皮，内有坚硬果壳，包裹着白色果肉与椰子水。",
+          "热带沿海地区；在阳光充足、排水良好的沙质盐碱地中长势良好。",
+        ],
+        [
+          "椰子水是一种清凉饮品，白色果肉（椰干）可用于烹饪、烘焙及榨油；椰奶与椰浆是热带菜肴中不可或缺的食材。",
+          "椰子油具有抗菌与保湿特性；椰子水能补充水分并富含电解质，有助于肾脏与心脏健康。",
+          "椰子树有助于稳固海岸土壤、防止水土流失；它们为众多沿海生物提供遮荫与栖息地，支持当地生态系统。",
+        ],
+      ],
       duration: "5-10分钟",
     },
     introduction: {
@@ -3161,8 +3386,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "ココナッツ畑",
-      description: "多くのスリランカの農園では、茶とともにココナッツヤシが栽培されており、果実、油、そして敷地内で使われるさまざまな資材を提供しています。このストップでは、ココナッツが農園でどのように栽培・収穫・利用されるかを紹介します。",
-      keyPoints: "一本のココナッツヤシは数十年にわたって実をつけ続けることができ、果肉・外皮・殻・葉といったほぼすべての部分が、稼働中の農園内で何らかの形で利用されています。",
+      heroTagline: "「生命の木」——ほとんど無駄になる部分がない、海岸の巨木。",
+      sectionHeadings: ["ココナッツヤシについて", "特徴", "用途と効能"],
+      sectionBodies: [
+        "ココナッツヤシ（Cocos nucifera）はヤシ科に属する背の高いヤシで、世界中の熱帯沿岸地域で広く栽培されています。「生命の木」として知られ、その全ての部分が役立ちます——栄養豊富な果実や爽やかなココナッツウォーターから、木材、葉、繊維まで。この木は水はけのよい砂質の土壤でよく育ち、高い塩分にも耐えられるため、海岸沿いでよく見られます。",
+        "ヤシそのものを簡単に見てみましょう：",
+        "ココナッツヤシの価値は、果実そのものだけにとどまりません：",
+      ],
+      itemHeadings: [
+        [],
+        ["高さ", "葉", "花", "果実", "生息地"],
+        ["食用としての利用", "薬用効果", "生態学的重要性"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "高さ30メートルに達する。",
+          "大きな羽根状の葉で、長さ4〜6メートル。",
+          "分枝した花序に咲く、小さく黄色がかった花。",
+          "繊維質の果皮と硬い殻を持つ大きな一種子の核果（ココナッツ）で、白い果肉とココナッツウォーターを包む。",
+          "熱帯沿岸地域。十分な日照のある砂質の塩性土壌でよく育つ。",
+        ],
+        [
+          "ココナッツウォーターは爽やかな飲み物で、白い果肉（コプラ）は料理、製菓、搾油に利用される。ココナッツミルクとクリームは熱帯料理に欠かせない。",
+          "ココナッツオイルには抗菌作用と保湿作用がある。ココナッツウォーターは水分補給になり、電解質が豊富で、腎臓と心臓の健康を支える。",
+          "ココナッツヤシは沿岸の土壌を安定させ、浸食を防ぐのに役立つ。数多くの沿岸生物に日陰と生息地を提供し、地域の生態系を支えている。",
+        ],
+      ],
       duration: "5〜10分",
     },
     introduction: {
