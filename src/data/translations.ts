@@ -20,10 +20,11 @@ import type { StationTranslation } from "./stations";
  * The "plucking", "sorting", and "handmade-factory" stations' English text
  * became real on 2026-08-31 (sourced from on-site video dialogue
  * transcripts — see stations.ts), and "artisanal-tea-grades" (already real
- * since 2026-08-28) was substantially expanded the same day. All of these
- * per-language `description`/`keyPoints` strings are still plain machine
- * translations of that text, not reviewed by a native speaker, same caveat
- * as above.
+ * since 2026-08-28) was substantially expanded the same day. The new
+ * "pruning" and "polytunnel" stations' English text is likewise real,
+ * sourced the same way on 2026-09-01. All of these per-language
+ * `description`/`keyPoints` strings are still plain machine translations of
+ * that text, not reviewed by a native speaker, same caveat as above.
  *
  * Don't treat any of this as print-ready for real visitors until a native
  * speaker has checked it — especially Sinhala/Tamil/Arabic/Chinese/Japanese,
@@ -313,38 +314,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "මැලවීම",
-      description: "නැවුම් කොළ දිගු තට්ටු ඔස්සේ තුනී ලෙස පතුරුවා තබනු ලැබේ, එහිදී වාතය කොළ හරහා ගමන් කරමින් තෙතමනය ක්‍රමයෙන් ඉවත් කරයි. කොළය මෘදු හා නම්‍යශීලී වන අතර, පොඩි නොවී රෝල් කිරීමට සූදානම් වේ.",
+      description: "නැවුම් කොළ දිගු තට්ටු ඔස්සේ තුනී ලෙස පතුරුවා තබනු ලැබේ, එහිදී විශාල පංකා භාවිතා කර වාතය බලෙන් කොළ හරහා යැවීමෙන් තෙතමනය ක්‍රමයෙන් ඉවත් කරයි — වතුයාය 'නවීන' මැලවීමේ ක්‍රියාවලිය ලෙස හඳුන්වන්නේ මෙයයි. කොළය මෘදු හා නම්‍යශීලී වන අතර, පොඩි නොවී රෝල් කිරීමට සූදානම් වේ.",
       keyPoints: "මැලවීම කොළය පුරා තෙතමනය සමාන කරන අතර, ස්වාභාවික එන්සයිම වලට පසුව තේවල සුවඳ හා වර්ණය නිර්මාණය කරන රසායනික වෙනස්කම් ආරම්භ කිරීමට ඉඩ සලසයි.",
       duration: "මෙම අදියර සාමාන්‍යයෙන් තෙතමනය සහ වාතාශ්‍රය මත පදනම්ව පැය 12 සිට 17 දක්වා ගතවේ.",
     },
     rolling: {
       name: "රෝල් කිරීම",
-      description: "මැලවුණු කොළ රෝල් යන්ත්‍ර හරහා ගමන් කරන අතර, එය කොළයේ සෛල බිත්ති ඇඹරී බිඳ දමා, එහි ගැබ්ව ඇති යුෂ හා තෙල් නිදහස් කරයි. මෙහිදී කොළයේ හැඩය සහ තේවල ශක්තිය සකස් වේ.",
+      description: "මැලවුණු කොළ රෝල් යන්ත්‍ර හරහා ගමන් කරන අතර, එය කොළයේ සෛල බිත්ති ඇඹරී බිඳ දමා, එහි ගැබ්ව ඇති යුෂ හා තෙල් නිදහස් කර, කොළය කුඩා අංශු බවට කඩා දමයි. මෙහිදී කොළයේ හැඩය සහ තේවල ශක්තිය සකස් වේ.",
       keyPoints: "සෛල බිත්ති බිඳ දැමීම එන්සයිම ඔක්සිජනයට නිරාවරණය කරයි, එමගින් ඔක්සිකරණය ආරම්භ කරයි. කොළ රෝල් කරන ශක්තිය සහ කාලය අවසන් තේවල ශක්තිය සහ පෙනුම හැඩගස්වයි.",
       duration: "රෝල් කිරීම සාමාන්‍යයෙන් මිනිත්තු 45 සිට පැයක් දක්වා, බොහෝ විට කිහිප වතාවක් සිදු කෙරේ.",
     },
     fermentation: {
       name: "පැසවීම (ඔක්සිකරණය)",
-      description: "රෝල් කරන ලද කොළ සිසිල්, තෙත් කාමරයක පතුරුවා ඔක්සිකරණය වීමට තබනු ලැබේ. කොළ පැහැ කොළ ක්‍රමයෙන් තඹ පැහැති දුඹුරු පැහැයට හැරෙන අතර, කළු තේ හා සම්බන්ධ වර්ණය, ශරීරය සහ සුවඳ වර්ධනය කරයි.",
-      keyPoints: "රසය සඳහා වඩාත්ම වැදගත් පියවර මෙයයි. කාලය නිවැරදිව තීරණය කළ යුතුය — ඉතා අඩු නම් තේ තුනී වන අතර, ඉතා වැඩි නම් එය පැතලි හා අහඹු වේ.",
-      duration: "ඔක්සිකරණය සමීපව පාලනය කරනු ලබන අතර සාමාන්‍යයෙන් පැය 1.5 සිට 3 දක්වා පවතී.",
+      description: "රෝල් කරන ලද කොළ සිසිල්, තෙත් කාමරයක පතුරුවා ඔක්සිකරණය වීමට තබනු ලැබේ, ප්‍රතික්‍රියාව සිදුවීමට ප්‍රමාණවත් ආර්ද්‍රතාවයක් පවත්වා ගැනීමට හියුමිඩියෆයර් එකක් භාවිතා කරමින්. කොළ පැහැ කොළ ක්‍රමයෙන් තඹ පැහැති දුඹුරු පැහැයට හැරෙන අතර, කළු තේ හා සම්බන්ධ වර්ණය, ශරීරය සහ සුවඳ වර්ධනය කරයි — මුළුමනින්ම ස්වාභාවික ඔක්සිකරණයෙන්, කිසිදු පාට හෝ රසායනික ද්‍රව්‍ය එකතු නොකර.",
+      keyPoints: "රසය සඳහා වඩාත්ම වැදගත් පියවර මෙයයි. කාලය නිවැරදිව තීරණය කළ යුතුය — ඉතා අඩු නම් තේ තුනී වන අතර, ඉතා වැඩි නම් එය පැතලි හා අහඹු වේ. මෙතනදී මෙහි නිපදවන තේ වර්ග වෙන් වන්නේද මෙයිනි: කළු තේ මැලවීම, රෝල් කිරීම, පැසවීම, පසුව පිලුස්සීම යන අනුපිළිවෙලින් යන අතර, හරිත තේ පැසවීම සම්පූර්ණයෙන්ම මඟහරින අතර (මැලවීම, රෝල් කිරීම, වියලීම පමණි) සහ එය මෘදු වන අතර, බොහෝ විට එහි සුමට, ඖෂධීය ලක්ෂණය නිසා පානය කරනු ලැබේ; සුදු තේ මැලවීම සහ පැසවීම යන දෙකම මඟහරිමින්, නැවුම් කොළවල සිට කෙලින්ම වාෂ්ප කිරීම හා වියලීම දක්වා යයි. මෙම කර්මාන්තශාලාව ඔලොන්ග් තේ නිපදවන්නේ නැත, එය මාර්ගෝපදේශකයා විස්තර කරන්නේ කළු තේ වැනිම පැසුණු වර්ගයක් ලෙසින්, යන්ත්‍ර මගින් රෝල් කිරීම වෙනුවට නැවත නැවත වාෂ්ප කිරීම හා අතින් බුරුසු කිරීම මගින් සාදන ලද එකක් ලෙසිනි.",
+      duration: "මෙම කර්මාන්තශාලාවේදී, තත්ත්වයන් අනුව පැසවීම සාමාන්‍යයෙන් පැය 1.5 සිට 2.5 දක්වා ගතවන අතර ඉන් පසු කොළ වියලීමට ගෙන යනු ලැබේ.",
     },
     drying: {
       name: "වියලීම (පිලුස්සීම)",
-      description: "ඔක්සිකරණය වූ කොළ උණුසුම් වාතාශ්‍රය සහිත වියලනවලින් ගමන් කරන අතර, ඒවා ක්ෂණිකව ඔක්සිකරණය නවත්වා තේවල ලක්ෂණය රඳවා ගනී. අනෙක් පැත්තෙන් පිටවෙන්නේ හුරුපුරුදු කළු, කරකෙළින් තේ කොළයයි.",
+      description: "ඔක්සිකරණය වූ කොළ — වාර්තා වන අන්දමට අංශක සෙල්සියස් 240ක් පමණ උෂ්ණත්වයකින් ක්‍රියාත්මක වන — උණුසුම් වාතාශ්‍රය සහිත වියලනවලින් ගමන් කරන අතර, ඒවා ක්ෂණිකව ඔක්සිකරණය නවත්වා තේවල ලක්ෂණය රඳවා ගනී. අනෙක් පැත්තෙන් පිටවෙන්නේ හුරුපුරුදු කළු, කරකෙළින් තේ කොළයයි. අමුත්තන් වහාම උණුසුම දැනගනී — එය කර්මාන්තශාලා තට්ටුවේ ඇති උණුසුම්ම නැවතුම්වලින් එකකි.",
       keyPoints: "පිලුස්සීම නිවැරදි මොහොතේදීම රසායනික වෙනස්කම් නවත්වන අතර තෙතමනය 2-3% පමණට අඩු කරයි, එය ගබඩා කිරීම හා ප්‍රවාහනය අතරතුර තේ නැවුම්ව තබා ගැනීමට අත්‍යවශ්‍ය වේ.",
       duration: "කොළ ප්‍රවේශමෙන් පාලනය කළ උෂ්ණත්වවලදී මිනිත්තු 20ක් පමණ තුළ වියලනය හරහා ගමන් කරයි.",
     },
     sorting: {
       name: "වර්ග කිරීම හා ශ්‍රේණිගත කිරීම",
-      description: "හරිත තේ (Green Tea) සහ කළු තේ (Black Tea) දෙකම පටන් ගන්නේ එකම පඳුරෙන් හා එකම කොළවලින්මය — ඒවා සැබවින්ම වෙන් කරන්නේ පැසවීම (ෆර්මන්ටේෂන්/ඔක්සිකරණය) නම් අදියරයි, එය කළු තේ හරහා යන නමුත් හරිත තේ මඟ හරින අදියරකි. මෙම කර්මාන්තශාලාවේ නිෂ්පාදනයෙන් වැඩි හරියක් කළු තේය. වියළි කොළ ශ්‍රේණිගත කිරීමේ යන්ත්‍රය හරහා යන විට, එය එක් වරකින්ම එහි ආරම්භක අංකුරයේ කුමන කොටසින් ආවාද යන්න අනුව වෙන් කරනු ලැබේ: මෘදු, පහසුවෙන් කැඩෙන තුඩුව සහ ඉහළම කොළ — එක් එක් අංකුරයෙන් 2%ක් පමණි — FBOPF Extra Special බවට පත් වේ, එය හොඳම හා මිල අධික ම ශ්‍රේණියයි, එසේම යටින් තව දුරටත් ඇති කොළ BOP සහ Pekoe වැනි ශක්තිමත් ශ්‍රේණි බවට පත් වේ. වඩාත් මෝරු, පහළම කොළ Dust බවට පත් වන අතර, පාවිච්චි කළ නොහැකි නටු හා කැබලි Refuse ලෙස ඉවත් කරනු ලැබේ.",
+      description: "හරිත තේ (Green Tea) සහ කළු තේ (Black Tea) දෙකම පටන් ගන්නේ එකම පඳුරෙන් හා එකම කොළවලින්මය — ඒවා සැබවින්ම වෙන් කරන්නේ පැසවීම (ෆර්මන්ටේෂන්/ඔක්සිකරණය) නම් අදියරයි, එය කළු තේ හරහා යන නමුත් හරිත තේ මඟ හරින අදියරකි. මෙම කර්මාන්තශාලාවේ නිෂ්පාදනයෙන් වැඩි හරියක් කළු තේය. වියළි කොළ ශ්‍රේණිගත කිරීමේ යන්ත්‍රය හරහා යන විට, එය එක් වරකින්ම එහි ආරම්භක අංකුරයේ කුමන කොටසින් ආවාද යන්න අනුව වෙන් කරනු ලැබේ: මෘදු, පහසුවෙන් කැඩෙන තුඩුව සහ ඉහළම කොළ — එක් එක් අංකුරයෙන් 2%ක් පමණි — FBOPF Extra Special බවට පත් වේ, එය හොඳම හා මිල අධික ම ශ්‍රේණියයි, එසේම යටින් තව දුරටත් ඇති කොළ BOP සහ Pekoe වැනි ශක්තිමත් ශ්‍රේණි බවට පත් වේ. වඩාත් මෝරු, පහළම කොළ Dust බවට පත් වන අතර, පාවිච්චි කළ නොහැකි නටු හා කැබලි Refuse ලෙස ඉවත් කරනු ලැබේ. එම ශ්‍රේණිගත කිරීමේ යන්ත්‍රයේ, කොළ සහ මල් වැනි අංශු වෙන් හඳුනාගත හැකි කැමරා පද්ධතියක් සහිත වර්ණ වෙන්කරණයක් ඇතුළත් වන අතර, එයට අයත් නොවන ඕනෑම දෙයක් පෙරා දමයි. විවිධ දැල් ප්‍රමාණයේ පෙරහන් කිහිප වතාවක්ම කොටස් ප්‍රමාණය අනුව තවදුරටත් වෙන් කරන අතර, විද්‍යුත් ස්ථිති වෙන්කරණයක් ඉතිරි වන දුඹුරු පැහැති නටු කැබලිවලට රෝලර් මත ආරෝපණයක් ලබා දී ඒවා වෙන් කර ගැනීමට ඉඩ සලසයි — මෙහි කිසිදු පාටක් හෝ ලක්ෂණයක් තීන්ත හෝ එකතු කළ ද්‍රව්‍ය වලින් නොව, ස්වාභාවික සැකසුමෙන් පමණි.",
       keyPoints: "වටිනාකම රැඳී පවතින්නේ අංකුරයේ ස්ථානය මතය, කොළයේ ප්‍රමාණය මත පමණක් නොවේ — කොළය ඉහළින් හා මෘදු වන තරමට, එහි ශ්‍රේණියත් මිලත් වැඩි වේ. සාමාන්‍යයෙන් රස එකතු කළ තේ බෑග් වල අඩංගු වන්නේ උසස් තත්ත්වයේ කොළ නොව Dust ශ්‍රේණියයි; FBOPF Extra Special වැනි හොඳම ශ්‍රේණි ඒවායේ අපනයන වෙළඳපොළ අගය නිසා දේශීයව විකිණෙන්නේ කලාතුරකිනි.",
       duration: "වර්ග කිරීම යන්ත්‍ර මත අඛණ්ඩව ක්‍රියාත්මක වන අතර, එක් කණ්ඩායමකට මිනිත්තු 30 සිට 45 දක්වා ගතවේ.",
     },
     packing: {
       name: "පැක් කිරීම",
-      description: "ශ්‍රේණිගත කළ තේ බර කරනු ලබන අතර, තත්ත්වය සඳහා රස බලා, තෙතමන-සුරක්ෂිත ඇසුරුම් හෝ තේ පෙට්ටිවලට මුද්‍රා තබනු ලැබේ, මෙම කර්මාන්තශාලාවේ සිට ලොව පුරා කෝප්ප වෙත ගමන් කිරීමට සූදානම්ව.",
-      keyPoints: "වායු නොගමන් ඇසුරුම තේ තෙතමනයෙන් සහ ගඳ සුවඳවලින් ආරක්ෂා කරන අතර, ක්‍රියාවලියේ සෑම පෙර අදියරකදීම ප්‍රවේශමෙන් ගොඩනගන ලද රසය රඳවා ගනී.",
+      description: "ශ්‍රේණිගත කළ තේ බර කරනු ලබන අතර, තත්ත්වය සඳහා රස බලා, ඇලුමිනියම් තීරු කඩදාසියෙන් ආස්තරණය කළ, කර්මාන්තශාලාවේ නම සහ ලාංඡනය, ලියාපදිංචි අංකය, සිලෝන් තේ සංකේතය, සහ ආහාර සුරක්ෂිතතා සහතිකය මුද්‍රණය කර ඇති තෙතමන-සුරක්ෂිත ඇසුරුම්වලට මුද්‍රා තබනු ලැබේ. පැක් කිරීමේ ප්‍රදේශයේ නිමකළ ශ්‍රේණි කිහිපයක් එකිනෙකා අසල දක්නට ලැබේ — Dust (බොහෝ දුරට තේ බෑග් සඳහා), OP1, Pekoe, BOP (Broken Orange Pekoe), සහ OP (Orange Pekoe) — OP1 සහ OP විශේෂයෙන් අරාබි භාෂාව කතා කරන වෙළඳපොළවල ජනප්‍රිය වන අතර, Pekoe රුසියාවේ සහ ඉරානයේ හොඳින් ප්‍රසිද්ධය. සෘජුවම අපනයනය කරනවා වෙනුවට, කර්මාන්තශාලාව සිය නිමකළ තේ කොළොම්බෝ තේ වෙන්දේසිය හරහා විකුණන අතර, එහිදී මිලදී ගන්නන් ඔවුන්ට අවශ්‍ය ශ්‍රේණි මිලදී ගනී.",
+      keyPoints: "වායු නොගමන් ඇසුරුම තේ තෙතමනයෙන් සහ ගඳ සුවඳවලින් ආරක්ෂා කරන අතර, ක්‍රියාවලියේ සෑම පෙර අදියරකදීම ප්‍රවේශමෙන් ගොඩනගන ලද රසය රඳවා ගනී. සෘජුවම අපනයනය කරනවා වෙනුවට කොළොම්බෝ තේ වෙන්දේසිය හරහා විකිණීම යන්නෙන් අදහස් වන්නේ, ඉදිරි ජාත්‍යන්තර නැව්ගත කිරීම හසුරුවන්නේ කර්මාන්තශාලාව නොව බාහිර මිලදී ගන්නන් බවයි.",
       duration: "අවසාන කණ්ඩායම ශ්‍රේණිගත කරන දිනයේම පැක් කර නැව්ගත කිරීමට සූදානම් වේ.",
     },
     cinnamon: {
@@ -481,7 +482,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "අත්කම් තේ ශ්‍රේණි",
-      description: "සාමාන්‍ය කළු තේවලට අමතරව, වතුයාය දුර්ලභ, අතින් සකසන ලද අත්කම් තේ ද නිපදවයි — මේවා බොහෝ දුරට ප්‍රධාන කළු තේ නිෂ්පාදන මාර්ගයේ නොව, වෙනම 'අතින් සකසන තේ කර්මාන්තශාලාවේදී' අතින් නිම කරනු ලබයි; එබැවින්ම මෙම ශ්‍රේණි 'අත්කම් තේ ශ්‍රේණි' ලෙසද හඳුන්වනු ලබන්නේ — එය කර්මාන්ත නිෂ්පාදනයකට වඩා අත්කම් කලාවකට ආසන්නය. මේවායින් බොහොමයක් හටගන්නේ සුවිශේෂී දම් පැහැති අංකුරයකින් වන අතර, එහි වර්ණය ලැබෙන්නේ ඇන්තොසයනින් නිසාය. රන් තුඩුව (Golden Tip) සඳහා එම අංකුරයේම මුහුකුරා ගිය අංකුරය භාවිතා කරන අතර, රිදී තුඩුව (Silver Tip) සඳහා එම අංකුරයේම තවත් නොමුහුකුරා, ලා පැහැති අංකුරය භාවිතා කරයි. සුදු තේ (White Tea) අංකුරයෙන් කොළ දෙක හමාරක් ගෙන, එය කළු තේ මෙන් පැසවා රෝල් කිරීම වෙනුවට වාෂ්ප කර වියලනු ලැබේ, එමගින් ඉතා සැහැල්ලුවෙන් සකසන ලද, ස්වාභාවිකව මිහිරි රසයක් ලැබේ. දම් හා රෝස තේ ස්වාභාවික ප්‍රතිඔක්සිකාරක බහුල සුවිශේෂී විශේෂ වර්ග වන අතර, ඒවා තමන්ගේම වෙනම ක්‍රියාවලියකින් සකසනු ලැබේ. වතුයාය නෙළුම් මල් වැනි ද්‍රව්‍ය එකතු කර අගය එකතු කළ මිශ්‍රණ ද, එම අංකුරවලින්ම අතින් බැඳි බ්ලූමින් තේ (Blooming Tea) ද නිපදවයි.",
+      description: "සාමාන්‍ය කළු තේවලට අමතරව, වතුයාය දුර්ලභ, අතින් සකසන ලද අත්කම් තේ ද නිපදවයි — මේවා බොහෝ දුරට ප්‍රධාන කළු තේ නිෂ්පාදන මාර්ගයේ නොව, වෙනම 'අතින් සකසන තේ කර්මාන්තශාලාවේදී' අතින් නිම කරනු ලබයි; එබැවින්ම මෙම ශ්‍රේණි 'අත්කම් තේ ශ්‍රේණි' ලෙසද හඳුන්වනු ලබන්නේ — එය කර්මාන්ත නිෂ්පාදනයකට වඩා අත්කම් කලාවකට ආසන්නය. මේවායින් බොහොමයක් හටගන්නේ සුවිශේෂී දම් පැහැති අංකුරයකින් වන අතර, එහි වර්ණය ලැබෙන්නේ ඇන්තොසයනින් නිසාය. රන් තුඩුව (Golden Tip) සඳහා එම අංකුරයේම මුහුකුරා ගිය අංකුරය භාවිතා කරන අතර, රිදී තුඩුව (Silver Tip) සඳහා එම අංකුරයේම තවත් නොමුහුකුරා, ලා පැහැති අංකුරය භාවිතා කරයි. සුදු තේ (White Tea) අංකුරයෙන් කොළ දෙක හමාරක් ගෙන, මැලවීම සම්පූර්ණයෙන්ම මඟහැර — කළු තේ මෙන් පැසවා රෝල් කිරීම වෙනුවට වාෂ්ප කර වියලනු ලැබේ — එමගින් ඉතා සැහැල්ලුවෙන් සකසන ලද, ස්වාභාවිකව මිහිරි රසයක් ලැබේ. දම් හා රෝස තේ ස්වාභාවික ප්‍රතිඔක්සිකාරක බහුල සුවිශේෂී විශේෂ වර්ග වන අතර, ඒවා තමන්ගේම වෙනම ක්‍රියාවලියකින් සකසනු ලැබේ. වතුයාය නෙළුම් මල් වැනි ද්‍රව්‍ය එකතු කර අගය එකතු කළ මිශ්‍රණ ද, එම අංකුරවලින්ම අතින් බැඳි බ්ලූමින් තේ (Blooming Tea) ද නිපදවයි.",
       keyPoints: "මෙම අත්කම් ශ්‍රේණි සාමාන්‍ය කළු තේට වඩා බෙහෙවින් අඩු ප්‍රමාණවලින් නෙළා සකසනු ලබන අතර, එය ඒවා දුර්ලභ හා අගය කරන කරුණ වේ — රස බැලීමේ කවුන්ටරයේ මෙය රස බැලීමට ඉල්ලා සිටින්න. මෙම ශ්‍රේණි බොහොමයක් සඳහා දම් පැහැති අංකුරය හෝ සාමාන්‍ය කොළ අංකුරය යන දෙකම භාවිතා කළ හැකි වුවත්, වතුයාය බොහෝ විට භාවිතා කරන්නේ දම් පැහැති අංකුරයයි.",
       duration: "මිනිත්තු 5",
     },
@@ -523,7 +524,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "තේ කර්මාන්තශාලාව",
-      description: "ප්‍රධාන කර්මාන්තශාලා ගොඩනැගිල්ල, නෙළන ලද කොළ මැලවීමේ සිට පැක් කිරීම දක්වා නිමි තේ බවට පත් වන ස්ථානයයි. මෙම නැවතුම ක්‍රියාත්මක වන කර්මාන්තශාලා තට්ටුව සහ එක් එක් අදියරේ භාවිතා කරන උපකරණ පිළිබඳ දළ විශ්ලේෂණයකි.",
+      description: "ප්‍රධාන කර්මාන්තශාලා ගොඩනැගිල්ල, නෙළන ලද කොළ මැලවීමේ සිට පැක් කිරීම දක්වා නිමි තේ බවට පත් වන ස්ථානයයි. මෙම නැවතුම ක්‍රියාත්මක වන කර්මාන්තශාලා තට්ටුව සහ එක් එක් අදියරේ භාවිතා කරන උපකරණ පිළිබඳ දළ විශ්ලේෂණයකි — මැලවීම, රෝල් කිරීම, පැසවීම (ඔක්සිකරණය), වියලීම, තේ වෙන් කිරීම (ශ්‍රේණිගත කිරීම), සහ අවසන් පැක් කිරීම, එම අනුපිළිවෙලින්ම.",
       keyPoints: "ක්‍රියාත්මක තේ කර්මාන්තශාලාවක්, සෑම දිනකම කොළ ප්‍රමාණයට සමීපව සමමුහුර්තව, මැලවීමේ සිට පැක් කිරීම දක්වා සම්පූර්ණ අනුපිළිවෙල එකම වහලක් යටතේ ක්‍රියාත්මක කරයි.",
       duration: "මිනිත්තු 10-15",
     },
@@ -557,6 +558,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "කිතුල් හකුරු එහි පොහොසත් කැරමල් රසය නිසා අගය කරනු ලබන අතර, ශ්‍රී ලාංකික අතුරුපස සඳහා ප්‍රධාන රසකාරකයකි; එම පැණියෙන්ම රා පැසවීමට හෝ ආසවනය කර අරක්කු බවට පත් කළ හැක.",
       duration: "මිනිත්තු 5-10",
     },
+    pruning: {
+      name: "කප්පාදුව",
+      description: "කප්පාදුව කිරීමට පෙර, වහාම කැපීම වෙනුවට, වතුයාය හිතාමතාම තේ පඳුර යම් කාලයක් වර්ධනය වීමට ඉඩ හරියි — අලුත් වර්ධනය සම්පූර්ණයෙන් එන්නට ඉඩ දී, පඳුරට පෝෂණය රැස් කර ගැනීමට ඉඩ සලසයි. එම රැස්වීම සම්පූර්ණ වූ පසුව පමණක් කප්පාදුව ආරම්භ කරයි, එවිට පඳුර දණහිස උසට පමණ කපා දමනු ලැබේ.",
+      keyPoints: "තත්ත්වය නොසලකා නිශ්චිත කාලසටහනකට කප්පාදු කිරීම වෙනුවට, පළමුව පඳුරට වර්ධනය වීමට ඉඩ දීම, කැපීමට පෙර පෝෂණය උඩට ගෙන යාමට ශාකයට කාලය ලබා දෙයි.",
+      duration: "මිනිත්තු 5",
+    },
+    polytunnel: {
+      name: "පොලිටනල් සහ හරිතාගාරය",
+      description: "දැනට පවතින හරිතාගාරයට අමතරව, වතුයාය තවම භාවිතයට නොගත් පොලිටනලයක් සකසමින් සිටී — එය තවමත් ඉදිකරමින් පවතී — බෙල් පෙපර්, තක්කාලි වැනි එළවළු වගා කිරීම සඳහා. එය ක්‍රියාත්මක වූ පසු, විලා හෝ කැබනාවේ නවාතැන් ගන්නා අමුත්තන්ට මෙහි වගා කරන එළවළු තමන් විසින්ම නැවුම්ව නෙළා ගැනීමට හැකි වනු ඇත.",
+      keyPoints: "පොලිටනලය තවමත් නිෂ්පාදනයේ නොව ඉදිකිරීමේ අවධියේ පවතින බැවින්, තවම නෙළීමට කිසිවක් නැත — එය ක්‍රියාත්මක වූ පසු නැවත පරීක්ෂා කරන්න.",
+      duration: "මිනිත්තු 5",
+    },
   },
   ta: {
     plucking: {
@@ -567,38 +580,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "வதங்கல்",
-      description: "புதிய இலைகள் நீண்ட தொட்டிகளில் மெல்லிய அடுக்காக பரப்பப்படுகின்றன, அதன் வழியாக காற்று செலுத்தப்பட்டு ஈரப்பதத்தை படிப்படியாக நீக்குகிறது. இலை மென்மையாகவும் நெகிழக்கூடியதாகவும் மாறி, உடையாமல் உருட்டுவதற்குத் தயாராகிறது.",
+      description: "புதிய இலைகள் நீண்ட தொட்டிகளில் மெல்லிய அடுக்காக பரப்பப்படுகின்றன, அங்கு பெரிய மின்விசிறிகள் காற்றை வலுக்கட்டாயமாக செலுத்தி ஈரப்பதத்தை படிப்படியாக நீக்குகின்றன — தோட்டம் இதை 'நவீன' வதங்கல் செயல்முறை என்று அழைக்கிறது. இலை மென்மையாகவும் நெகிழக்கூடியதாகவும் மாறி, உடையாமல் உருட்டுவதற்குத் தயாராகிறது.",
       keyPoints: "வதங்கல் இலை முழுவதும் ஈரப்பதத்தை சமன்படுத்துகிறது, மேலும் இயற்கை நொதிகள் பின்னர் தேயிலையின் நறுமணத்தையும் நிறத்தையும் உருவாக்கும் வேதியியல் மாற்றங்களைத் தொடங்க அனுமதிக்கிறது.",
       duration: "இந்த நிலை பொதுவாக ஈரப்பதம் மற்றும் காற்றோட்டத்தைப் பொறுத்து 12 முதல் 17 மணி நேரம் வரை எடுக்கும்.",
     },
     rolling: {
       name: "உருட்டுதல்",
-      description: "வதங்கிய இலைகள் உருட்டும் இயந்திரங்கள் வழியாகச் செல்கின்றன, அவை இலையின் செல் சுவர்களை முறுக்கி உடைத்து, அதனுள் பூட்டப்பட்ட சாறுகளையும் எண்ணெய்களையும் வெளியிடுகின்றன. இங்குதான் இலையின் வடிவமும் தேயிலையின் வலிமையும் உருவாகின்றன.",
+      description: "வதங்கிய இலைகள் உருட்டும் இயந்திரங்கள் வழியாகச் செல்கின்றன, அவை இலையின் செல் சுவர்களை முறுக்கி உடைத்து, அதனுள் பூட்டப்பட்ட சாறுகளையும் எண்ணெய்களையும் வெளியிட்டு, இலையை சிறிய துகள்களாக உடைக்கின்றன. இங்குதான் இலையின் வடிவமும் தேயிலையின் வலிமையும் உருவாகின்றன.",
       keyPoints: "செல் சுவர்களை உடைப்பது நொதிகளை ஆக்ஸிஜனுக்கு வெளிப்படுத்தி, ஆக்சிஜனேற்றத்தைத் தொடங்குகிறது. இலை எவ்வளவு கடினமாகவும் நீண்ட நேரமும் உருட்டப்படுகிறது என்பது இறுதி தேயிலையின் வலிமையையும் தோற்றத்தையும் தீர்மானிக்கிறது.",
       duration: "உருட்டுதல் பொதுவாக 45 நிமிடங்கள் முதல் ஒரு மணி நேரம் வரை, பெரும்பாலும் பல முறை நடைபெறும்.",
     },
     fermentation: {
       name: "நொதித்தல் (ஆக்சிஜனேற்றம்)",
-      description: "உருட்டப்பட்ட இலை குளிர்ந்த, ஈரப்பதமான அறையில் பரப்பப்பட்டு ஆக்சிஜனேற்றமடைய விடப்படுகிறது. பச்சை இலை படிப்படியாக செம்பு நிற பழுப்பு நிறமாக மாறி, கருப்பு தேயிலையுடன் தொடர்புடைய நிறம், வலிமை மற்றும் நறுமணத்தை உருவாக்குகிறது.",
-      keyPoints: "சுவைக்கு இது மிக முக்கியமான படி. நேரம் துல்லியமாக மதிப்பிடப்பட வேண்டும் — மிகக் குறைவாக இருந்தால் தேயிலை மெலிதாகவும், அதிகமாக இருந்தால் தட்டையாகவும் மந்தமாகவும் மாறும்.",
-      duration: "ஆக்சிஜனேற்றம் நெருக்கமாகக் கண்காணிக்கப்படுகிறது, பொதுவாக 1.5 முதல் 3 மணி நேரம் வரை நீடிக்கும்.",
+      description: "உருட்டப்பட்ட இலை குளிர்ந்த, ஈரப்பதமான அறையில் பரப்பப்பட்டு ஆக்சிஜனேற்றமடைய விடப்படுகிறது, வினை நடைபெற போதுமான ஈரப்பதத்தை பராமரிக்க ஈரப்பதமூட்டி பயன்படுத்தப்படுகிறது. பச்சை இலை படிப்படியாக செம்பு நிற பழுப்பு நிறமாக மாறி, கருப்பு தேயிலையுடன் தொடர்புடைய நிறம், வலிமை மற்றும் நறுமணத்தை உருவாக்குகிறது — முற்றிலும் இயற்கையான ஆக்சிஜனேற்றத்தால் மட்டுமே, எந்த சாயமும் சேர்க்கப்படுவதில்லை.",
+      keyPoints: "சுவைக்கு இது மிக முக்கியமான படி. நேரம் துல்லியமாக மதிப்பிடப்பட வேண்டும் — மிகக் குறைவாக இருந்தால் தேயிலை மெலிதாகவும், அதிகமாக இருந்தால் தட்டையாகவும் மந்தமாகவும் மாறும். இங்கு தயாரிக்கப்படும் தேயிலை வகைகளை வேறுபடுத்துவதும் இதுவே: கருப்பு தேயிலை வதங்கல், உருட்டுதல், நொதித்தல், பின்னர் சுடுதல் என்ற வரிசையில் செல்கிறது, பச்சை தேயிலை நொதித்தலை முழுவதுமாகத் தவிர்க்கிறது (வதங்கல், உருட்டுதல், உலர்த்துதல் மட்டும்) மேலும் அது மென்மையானது — பெரும்பாலும் அதன் மென்மையான, மருத்துவ குணத்திற்காகவே அருந்தப்படுகிறது; வெள்ளை தேயிலை வதங்கலையும் நொதித்தலையும் இரண்டையும் தவிர்த்து, புதிய இலையிலிருந்து நேரடியாக ஆவியில் வேகவைத்து உலர்த்துவதற்குச் செல்கிறது. இந்த தொழிற்சாலை ஊலோங் தேயிலையை தயாரிப்பதில்லை, அதை வழிகாட்டி விவரிப்பது கருப்பு தேயிலையைப் போன்ற ஒரு நொதிக்கப்பட்ட வகையாகவே, இயந்திர உருட்டலுக்குப் பதிலாக மீண்டும் மீண்டும் ஆவியில் வேகவைத்தல் மற்றும் கையால் தேய்த்தல் மூலம் தயாரிக்கப்படுவதாகும்.",
+      duration: "இந்த தொழிற்சாலையில், நிலைமைகளைப் பொறுத்து நொதித்தல் பொதுவாக 1.5 முதல் 2.5 மணி நேரம் வரை எடுக்கும், அதன் பிறகு இலை உலர்த்தும் நிலைக்குச் செல்கிறது.",
     },
     drying: {
       name: "உலர்த்துதல் (சுடுதல்)",
-      description: "ஆக்சிஜனேற்றமடைந்த இலை சூடான காற்று உலர்த்திகள் வழியாகச் சென்று, ஆக்சிஜனேற்றத்தை உடனடியாக நிறுத்தி தேயிலையின் தன்மையை பூட்டுகிறது. மறுமுனையில் வெளிவருவது நமக்குப் பரிச்சயமான கருப்பு, மொறுமொறுப்பான தேயிலை இலையாகும்.",
+      description: "ஆக்சிஜனேற்றமடைந்த இலை — வெளியிடப்பட்ட தகவலின்படி சுமார் 240°C வெப்பநிலையில் இயங்கும் — சூடான காற்று உலர்த்திகள் வழியாகச் சென்று, ஆக்சிஜனேற்றத்தை உடனடியாக நிறுத்தி தேயிலையின் தன்மையை பூட்டுகிறது. மறுமுனையில் வெளிவருவது நமக்குப் பரிச்சயமான கருப்பு, மொறுமொறுப்பான தேயிலை இலையாகும். பார்வையாளர்கள் உடனடியாக வெப்பத்தை உணர்கிறார்கள் — இது தொழிற்சாலை தளத்தில் மிக வெப்பமான இடங்களில் ஒன்று.",
       keyPoints: "சுடுதல் சரியான நேரத்தில் வேதியியல் மாற்றங்களை நிறுத்தி, ஈரப்பதத்தை சுமார் 2-3% ஆகக் குறைக்கிறது, இது சேமிப்பு மற்றும் ஏற்றுமதியின் போது தேயிலை புத்துணர்ச்சியாக இருக்க அவசியமானது.",
       duration: "இலை கவனமாகக் கட்டுப்படுத்தப்பட்ட வெப்பநிலைகளில் சுமார் 20 நிமிடங்களில் உலர்த்தியின் வழியாகச் செல்கிறது.",
     },
     sorting: {
       name: "வகைப்படுத்தல் மற்றும் தரப்படுத்தல்",
-      description: "பச்சை தேயிலையும் கருப்பு தேயிலையும் இரண்டும் ஒரே புதரிலும் ஒரே இலையிலுமே தொடங்குகின்றன — அவற்றை உண்மையில் வேறுபடுத்துவது நொதித்தல் (ஃபெர்மென்டேஷன்/ஆக்சிஜனேற்றம்) எனும் படிநிலையே, இது கருப்பு தேயிலை கடந்து செல்லும் ஆனால் பச்சை தேயிலை தவிர்க்கும் ஒரு படிநிலை. இந்த தொழிற்சாலையின் உற்பத்தியில் பெரும்பகுதி கருப்பு தேயிலையே. காய்ந்த இலை தரம் பிரிக்கும் இயந்திரங்கள் வழியாகச் செல்லும்போது, அது ஒரே பாஸில் அசல் தளிரின் எந்தப் பகுதியிலிருந்து வந்தது என்பதன் அடிப்படையில் பிரிக்கப்படுகிறது: மென்மையான, எளிதில் முறியும் நுனியும் மேல் இலைகளும் — ஒவ்வொரு தளிரிலும் சுமார் 2% மட்டுமே — FBOPF Extra Special என்ற சிறந்த மற்றும் அதிக விலையுள்ள தரமாக மாறுகிறது, அதே சமயம் கீழே உள்ள இலை BOP மற்றும் Pekoe போன்ற உறுதியான தரங்களாக மாறுகிறது. மிகவும் முதிர்ந்த, கீழ்மட்ட இலை Dust ஆக மாறுகிறது, மேலும் பயன்படுத்த முடியாத தண்டுகளும் துண்டுகளும் Refuse ஆக அகற்றப்படுகின்றன.",
+      description: "பச்சை தேயிலையும் கருப்பு தேயிலையும் இரண்டும் ஒரே புதரிலும் ஒரே இலையிலுமே தொடங்குகின்றன — அவற்றை உண்மையில் வேறுபடுத்துவது நொதித்தல் (ஃபெர்மென்டேஷன்/ஆக்சிஜனேற்றம்) எனும் படிநிலையே, இது கருப்பு தேயிலை கடந்து செல்லும் ஆனால் பச்சை தேயிலை தவிர்க்கும் ஒரு படிநிலை. இந்த தொழிற்சாலையின் உற்பத்தியில் பெரும்பகுதி கருப்பு தேயிலையே. காய்ந்த இலை தரம் பிரிக்கும் இயந்திரங்கள் வழியாகச் செல்லும்போது, அது ஒரே பாஸில் அசல் தளிரின் எந்தப் பகுதியிலிருந்து வந்தது என்பதன் அடிப்படையில் பிரிக்கப்படுகிறது: மென்மையான, எளிதில் முறியும் நுனியும் மேல் இலைகளும் — ஒவ்வொரு தளிரிலும் சுமார் 2% மட்டுமே — FBOPF Extra Special என்ற சிறந்த மற்றும் அதிக விலையுள்ள தரமாக மாறுகிறது, அதே சமயம் கீழே உள்ள இலை BOP மற்றும் Pekoe போன்ற உறுதியான தரங்களாக மாறுகிறது. மிகவும் முதிர்ந்த, கீழ்மட்ட இலை Dust ஆக மாறுகிறது, மேலும் பயன்படுத்த முடியாத தண்டுகளும் துண்டுகளும் Refuse ஆக அகற்றப்படுகின்றன. அந்த தரம் பிரிக்கும் இயந்திரங்களில், இலை மற்றும் மலர் போன்ற துகள்களை வேறுபடுத்தி அறியக்கூடிய கேமரா அமைப்புடன் கூடிய நிற பிரிப்பான் அடங்கியுள்ளது, இது பொருந்தாத எதையும் வடிகட்டி அகற்றுகிறது. வெவ்வேறு வலைப்பின்னல் அளவுகள் கொண்ட சல்லடைகள் பல கட்டங்களில் துகள்களை அளவின் அடிப்படையில் மேலும் பிரிக்கின்றன, மேலும் ஒரு நிலைமின் பிரிப்பான் மீதமுள்ள பழுப்பு நிற தண்டு துகள்களுக்கு உருளைகளில் நிலைமின் சார்ஜ் கொடுத்து அவற்றை பிரித்தெடுக்க அனுமதிக்கிறது — இதில் எந்த நிறமும் தன்மையும் சாயங்கள் அல்லது சேர்க்கைப் பொருட்களிலிருந்து வருவதில்லை, இயற்கையான செயலாக்கத்தால் மட்டுமே.",
       keyPoints: "மதிப்பு தளிரின் நிலையைப் பொறுத்தே இருக்கிறது, இலையின் அளவை மட்டும் அல்ல — இலை எவ்வளவு உயரமாகவும் மென்மையாகவும் இருக்கிறதோ, அதன் தரமும் விலையும் அவ்வளவு அதிகம். சுவை சேர்க்கப்பட்ட தேநீர் பைகளில் பொதுவாக இருப்பது உயர்தர இலை அல்ல, Dust தரமே; FBOPF Extra Special போன்ற சிறந்த தரங்கள் அவற்றின் ஏற்றுமதி சந்தை மதிப்பு காரணமாக உள்நாட்டில் அரிதாகவே விற்கப்படுகின்றன.",
       duration: "வகைப்படுத்தல் இயந்திரங்களில் தொடர்ச்சியாக நடைபெறுகிறது, ஒரு தொகுதிக்கு சுமார் 30 முதல் 45 நிமிடங்கள் ஆகும்.",
     },
     packing: {
       name: "பொதிசெய்தல்",
-      description: "தரப்படுத்தப்பட்ட தேயிலை நிறுக்கப்பட்டு, தரத்தைச் சரிபார்க்க சுவைபார்க்கப்பட்டு, ஈரப்பத எதிர்ப்பு பொதிகள் அல்லது தேயிலை பெட்டிகளில் மூடப்பட்டு, இந்த தொழிற்சாலையிலிருந்து உலகெங்கிலும் உள்ள கோப்பைகளுக்குச் செல்லத் தயாராக இருக்கிறது.",
-      keyPoints: "காற்று புகா பொதிசெய்தல் தேயிலையை ஈரப்பதம் மற்றும் வாசனைகளிலிருந்து பாதுகாக்கிறது, செயல்முறையின் ஒவ்வொரு முந்தைய கட்டத்திலும் கவனமாக உருவாக்கப்பட்ட சுவையைப் பாதுகாக்கிறது.",
+      description: "தரப்படுத்தப்பட்ட தேயிலை நிறுக்கப்பட்டு, தரத்தைச் சரிபார்க்க சுவைபார்க்கப்பட்டு, அலுமினியம் தகடு உள்பட்டையாகக் கொண்ட, தொழிற்சாலையின் பெயர் மற்றும் லோகோ, பதிவு எண், இலங்கை தேயிலை சின்னம், மற்றும் உணவு பாதுகாப்பு சான்றிதழ் அச்சிடப்பட்ட ஈரப்பத எதிர்ப்பு பொதிகளில் மூடப்படுகிறது. பொதிசெய்யும் பகுதியில் பல முடிக்கப்பட்ட தரங்கள் அருகருகே காணப்படுகின்றன — Dust (பெரும்பாலும் தேநீர் பைகளுக்கு), OP1, Pekoe, BOP (Broken Orange Pekoe), மற்றும் OP (Orange Pekoe) — OP1 மற்றும் OP குறிப்பாக அரபு மொழி பேசும் சந்தைகளில் பிரபலமானவை, Pekoe ரஷ்யா மற்றும் ஈரானில் நன்கு அறியப்பட்டது. நேரடியாக ஏற்றுமதி செய்வதற்குப் பதிலாக, தொழிற்சாலை தனது முடிக்கப்பட்ட தேயிலையை கொழும்பு தேயிலை ஏலத்தின் மூலம் விற்கிறது, அங்கு வாங்குபவர்கள் தங்களுக்குத் தேவையான தரங்களை வாங்குகிறார்கள்.",
+      keyPoints: "காற்று புகா பொதிசெய்தல் தேயிலையை ஈரப்பதம் மற்றும் வாசனைகளிலிருந்து பாதுகாக்கிறது, செயல்முறையின் ஒவ்வொரு முந்தைய கட்டத்திலும் கவனமாக உருவாக்கப்பட்ட சுவையைப் பாதுகாக்கிறது. நேரடியாக ஏற்றுமதி செய்வதற்குப் பதிலாக கொழும்பு தேயிலை ஏலத்தின் மூலம் விற்பது என்பது, தொழிற்சாலை அல்ல, வெளி வாங்குபவர்களே இறுதி சர்வதேச அனுப்புதலை கையாளுகிறார்கள் என்பதாகும்.",
       duration: "இறுதித் தொகுதி தரப்படுத்தப்பட்ட அன்றே பொதிசெய்யப்பட்டு அனுப்புதலுக்குத் தயாராகிறது.",
     },
     cinnamon: {
@@ -735,7 +748,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "கைவினை தேயிலை தரங்கள்",
-      description: "நிலையான கருப்பு தேயிலைக்கு கூடுதலாக, தோட்டம் அரிதான, கைவினைத் தேயிலைகளையும் தயாரிக்கிறது — இவை பெரும்பாலும் முக்கிய கருப்பு தேயிலை உற்பத்தி வரிசையில் அல்லாமல், தனியான 'கைவினை தேயிலை தொழிற்சாலையில்' கையால் முடிக்கப்படுகின்றன; அதனாலேயே இந்த தரங்கள் 'கைவினை தேயிலை தரங்கள்' என்றும் அழைக்கப்படுகின்றன — இது வெகுஜன உற்பத்தியை விட ஒரு கைவினைக் கலைக்கு நெருக்கமானது. இவற்றில் பெரும்பாலானவை ஒரு தனித்துவமான ஊதா நிற தளிரிலிருந்து வருகின்றன, அதன் நிறம் ஆந்தோசயனின் என்பதிலிருந்து கிடைக்கிறது. தங்க முனைக்கு அதே தளிரின் முழுமையாக முதிர்ந்த மொட்டு பயன்படுத்தப்படுகிறது, வெள்ளி முனைக்கு அதே தளிரின் இன்னும் முதிராத, வெளிர் நிற மொட்டு பயன்படுத்தப்படுகிறது. வெள்ளை தேயிலைக்கு தளிரிலிருந்து இரண்டரை இலைகள் எடுக்கப்பட்டு, கருப்பு தேயிலை போல நொதிக்க வைத்து உருட்டுவதற்குப் பதிலாக ஆவியில் வேகவைத்து உலர்த்தப்படுகிறது, இதனால் மிக லேசாக செயலாக்கப்பட்ட, இயற்கையாக இனிமையான சுவை கிடைக்கிறது. ஊதா மற்றும் இளஞ்சிவப்பு தேயிலைகள் இயற்கை ஆக்ஸிஜனேற்ற எதிர்ப்பிகள் நிறைந்த தனித்துவமான சிறப்பு வகைகளாகும், அவை தங்கள் சொந்த தனி செயல்முறையில் தயாரிக்கப்படுகின்றன. தோட்டம் தாமரை மலர் போன்றவற்றைச் சேர்த்து மதிப்புக் கூட்டப்பட்ட கலவைகளையும், அதே தளிர்களிலிருந்து கையால் கட்டப்பட்ட ப்ளூமிங் தேயிலையும் தயாரிக்கிறது.",
+      description: "நிலையான கருப்பு தேயிலைக்கு கூடுதலாக, தோட்டம் அரிதான, கைவினைத் தேயிலைகளையும் தயாரிக்கிறது — இவை பெரும்பாலும் முக்கிய கருப்பு தேயிலை உற்பத்தி வரிசையில் அல்லாமல், தனியான 'கைவினை தேயிலை தொழிற்சாலையில்' கையால் முடிக்கப்படுகின்றன; அதனாலேயே இந்த தரங்கள் 'கைவினை தேயிலை தரங்கள்' என்றும் அழைக்கப்படுகின்றன — இது வெகுஜன உற்பத்தியை விட ஒரு கைவினைக் கலைக்கு நெருக்கமானது. இவற்றில் பெரும்பாலானவை ஒரு தனித்துவமான ஊதா நிற தளிரிலிருந்து வருகின்றன, அதன் நிறம் ஆந்தோசயனின் என்பதிலிருந்து கிடைக்கிறது. தங்க முனைக்கு அதே தளிரின் முழுமையாக முதிர்ந்த மொட்டு பயன்படுத்தப்படுகிறது, வெள்ளி முனைக்கு அதே தளிரின் இன்னும் முதிராத, வெளிர் நிற மொட்டு பயன்படுத்தப்படுகிறது. வெள்ளை தேயிலைக்கு தளிரிலிருந்து இரண்டரை இலைகள் எடுக்கப்பட்டு, வதங்கல் நிலையை முழுவதுமாகத் தவிர்த்து — கருப்பு தேயிலை போல நொதிக்க வைத்து உருட்டுவதற்குப் பதிலாக ஆவியில் வேகவைத்து உலர்த்தப்படுகிறது — இதனால் மிக லேசாக செயலாக்கப்பட்ட, இயற்கையாக இனிமையான சுவை கிடைக்கிறது. ஊதா மற்றும் இளஞ்சிவப்பு தேயிலைகள் இயற்கை ஆக்ஸிஜனேற்ற எதிர்ப்பிகள் நிறைந்த தனித்துவமான சிறப்பு வகைகளாகும், அவை தங்கள் சொந்த தனி செயல்முறையில் தயாரிக்கப்படுகின்றன. தோட்டம் தாமரை மலர் போன்றவற்றைச் சேர்த்து மதிப்புக் கூட்டப்பட்ட கலவைகளையும், அதே தளிர்களிலிருந்து கையால் கட்டப்பட்ட ப்ளூமிங் தேயிலையும் தயாரிக்கிறது.",
       keyPoints: "இந்த கைவினைத் தரங்கள் நிலையான கருப்பு தேயிலையை விட மிகக் குறைந்த அளவில் பறிக்கப்பட்டு செயலாக்கப்படுகின்றன, இதுவே அவற்றை அரிதானதாகவும் மதிப்புமிக்கதாகவும் ஆக்குகிறது — சுவை பார்க்கும் கவுண்டரில் இவற்றை சுவைக்க கேளுங்கள். இந்த தரங்களில் பெரும்பாலானவற்றிற்கு ஊதா நிற தளிர் அல்லது சாதாரண பச்சை தளிர் இரண்டையும் பயன்படுத்தலாம் என்றாலும், தோட்டம் பெரும்பாலும் ஊதா நிற தளிரையே பயன்படுத்துகிறது.",
       duration: "5 நிமிடங்கள்",
     },
@@ -777,7 +790,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "தேயிலை தொழிற்சாலை",
-      description: "பறிக்கப்பட்ட இலை வாடுதல் முதல் பொதிசெய்தல் வரை முடிக்கப்பட்ட தேயிலையாக மாற்றப்படும் இடம் முதன்மை தொழிற்சாலை கட்டிடமாகும். இயங்கும் தொழிற்சாலை தளத்தையும் ஒவ்வொரு கட்டத்திலும் பயன்படுத்தப்படும் உபகரணங்களையும் இந்த நிறுத்தம் மேலோட்டமாக விளக்குகிறது.",
+      description: "பறிக்கப்பட்ட இலை வாடுதல் முதல் பொதிசெய்தல் வரை முடிக்கப்பட்ட தேயிலையாக மாற்றப்படும் இடம் முதன்மை தொழிற்சாலை கட்டிடமாகும். இயங்கும் தொழிற்சாலை தளத்தையும் ஒவ்வொரு கட்டத்திலும் பயன்படுத்தப்படும் உபகரணங்களையும் இந்த நிறுத்தம் மேலோட்டமாக விளக்குகிறது — வதங்கல், உருட்டுதல், நொதித்தல் (ஆக்சிஜனேற்றம்), உலர்த்துதல், தேயிலை பிரித்தல் (தரப்படுத்தல்), மற்றும் இறுதி பொதிசெய்தல், அந்த வரிசையில்.",
       keyPoints: "இயங்கும் தேயிலை தொழிற்சாலை ஒரு கூரையின் கீழ் வாடுதல் முதல் பொதிசெய்தல் வரையிலான முழு வரிசையையும் இயக்குகிறது, தினசரி இலை வரவுக்கு நெருக்கமாக நேரம் ஒத்திசைக்கப்படுகிறது.",
       duration: "10-15 நிமிடங்கள்",
     },
@@ -811,6 +824,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "கிதுள் வெல்லம் அதன் வளமான கேரமல் சுவைக்காக மதிக்கப்படுகிறது மற்றும் இலங்கை இனிப்புகளில் முக்கிய இனிப்பு பொருளாகும்; அதே சாறு புளிக்க வைக்கப்பட்டு கள்ளாகவோ அல்லது வடிகட்டி அரக்காகவோ மாற்றப்படலாம்.",
       duration: "5-10 நிமிடங்கள்",
     },
+    pruning: {
+      name: "கத்தரித்தல்",
+      description: "கத்தரிப்பதற்கு முன், உடனடியாக வெட்டுவதற்குப் பதிலாக, தோட்டம் வேண்டுமென்றே தேயிலைப் புதரை ஒரு காலத்திற்கு வளர விடுகிறது — புதிய வளர்ச்சி முழுமையாக வர அனுமதித்து, புதர் ஊட்டச்சத்தை சேகரிக்க வைக்கிறது. அந்த சேகரிப்பு முழுமையானதும் மட்டுமே கத்தரித்தல் தொடங்குகிறது, புதரை தோராயமாக முழங்கால் உயரத்திற்கு வெட்டுகிறது.",
+      keyPoints: "நிலைமையைப் பொருட்படுத்தாமல் ஒரு நிலையான அட்டவணையில் கத்தரிப்பதற்குப் பதிலாக, முதலில் புதரை வளர விடுவது, வெட்டப்படுவதற்கு முன் ஊட்டச்சத்தை மேலே செலுத்த தாவரத்திற்கு நேரம் அளிக்கிறது.",
+      duration: "5 நிமிடங்கள்",
+    },
+    polytunnel: {
+      name: "பாலிடன்னல் மற்றும் பசுமை இல்லம்",
+      description: "ஏற்கனவே உள்ள பசுமை இல்லத்துடன், தோட்டம் இன்னும் பயன்பாட்டில் இல்லாத ஒரு பாலிடன்னலை அமைத்து வருகிறது — அது இன்னும் கட்டி முடிக்கப்பட்டு வருகிறது — மணி மிளகாய், தக்காளி போன்ற காய்கறிகளை வளர்ப்பதற்காக. அது இயங்கத் தொடங்கியதும், வில்லா அல்லது கபானாவில் தங்கும் விருந்தினர்கள் இங்கு வளர்க்கப்படும் காய்கறிகளை நேரடியாக பறித்துக் கொள்ள முடியும்.",
+      keyPoints: "பாலிடன்னல் இன்னும் உற்பத்தியில் இல்லை, கட்டுமான கட்டத்திலேயே உள்ளது, எனவே இப்போது பறிக்க எதுவும் இல்லை — அது செயல்படத் தொடங்கியதும் மீண்டும் பாருங்கள்.",
+      duration: "5 நிமிடங்கள்",
+    },
   },
   it: {
     plucking: {
@@ -821,38 +846,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Appassimento",
-      description: "Le foglie fresche vengono stese in strati sottili su lunghe vasche attraverso cui viene fatta passare aria, eliminando gradualmente l'umidità. La foglia diventa flessibile e malleabile, pronta per l'arrotolamento senza rompersi.",
+      description: "Le foglie fresche vengono stese in strati sottili su lunghe vasche, dove grandi ventole spingono l'aria attraverso di esse per eliminare gradualmente l'umidità — ciò che la tenuta chiama il processo di appassimento 'moderno'. La foglia diventa flessibile e malleabile, pronta per l'arrotolamento senza rompersi.",
       keyPoints: "L'appassimento uniforma l'umidità in tutta la foglia e permette agli enzimi naturali di avviare i cambiamenti chimici che in seguito creeranno l'aroma e il colore del tè.",
       duration: "Questa fase dura in genere dalle 12 alle 17 ore, a seconda dell'umidità e della circolazione dell'aria.",
     },
     rolling: {
       name: "Arrotolamento",
-      description: "Le foglie appassite passano attraverso macchine arrotolatrici che torcono e rompono le pareti cellulari della foglia, rilasciando i succhi e gli oli racchiusi al loro interno. È qui che si formano la forma della foglia e la forza del tè.",
+      description: "Le foglie appassite passano attraverso macchine arrotolatrici che torcono e rompono le pareti cellulari della foglia, rilasciando i succhi e gli oli racchiusi al loro interno e riducendola in piccole particelle. È qui che si formano la forma della foglia e la forza del tè.",
       keyPoints: "La rottura delle pareti cellulari espone gli enzimi all'ossigeno, avviando l'ossidazione. Quanto forte e quanto a lungo viene arrotolata la foglia determina la forza e l'aspetto finale del tè.",
       duration: "L'arrotolamento dura solitamente dai 45 minuti a un'ora, spesso in più passaggi.",
     },
     fermentation: {
       name: "Fermentazione (Ossidazione)",
-      description: "La foglia arrotolata viene stesa in una stanza fresca e umida e lasciata ossidare. La foglia verde diventa gradualmente di un colore bruno ramato mentre sviluppa il colore, il corpo e l'aroma associati al tè nero.",
-      keyPoints: "Questo è il passaggio più importante per il sapore. Il tempo deve essere valutato con precisione — troppo poco e il tè risulta debole, troppo e diventa piatto e opaco.",
-      duration: "L'ossidazione è controllata attentamente e dura generalmente dalle 1,5 alle 3 ore.",
+      description: "La foglia arrotolata viene stesa in una stanza fresca e umida e lasciata ossidare, con un umidificatore che mantiene l'aria abbastanza umida perché la reazione avvenga. La foglia verde diventa gradualmente di un colore bruno ramato mentre sviluppa il colore, il corpo e l'aroma associati al tè nero — interamente grazie all'ossidazione naturale, senza coloranti o additivi.",
+      keyPoints: "Questo è il passaggio più importante per il sapore. Il tempo deve essere valutato con precisione — troppo poco e il tè risulta debole, troppo e diventa piatto e opaco. È anche ciò che distingue i tipi di tè prodotti qui: il tè nero segue appassimento, arrotolamento, fermentazione, poi tostatura, mentre il tè verde salta completamente la fermentazione (solo appassimento, arrotolamento, essiccazione) ed è più delicato — bevuto soprattutto per il suo carattere più mite e quasi medicinale; il tè bianco salta sia l'appassimento sia la fermentazione, passando direttamente dalla foglia fresca alla cottura a vapore e all'essiccazione. La fabbrica non produce tè Oolong, che la guida descrive come uno stile fermentato simile al tè nero, ottenuto con ripetute cotture a vapore e spazzolatura a mano anziché con l'arrotolamento meccanico.",
+      duration: "In questa fabbrica, la fermentazione dura generalmente da 1,5 a 2,5 ore a seconda delle condizioni, prima che la foglia passi all'essiccazione.",
     },
     drying: {
       name: "Essiccazione (Tostatura)",
-      description: "La foglia ossidata passa attraverso essiccatori ad aria calda che arrestano istantaneamente l'ossidazione e fissano il carattere del tè. Ciò che esce dall'altra parte è la nota foglia di tè nera e croccante.",
+      description: "La foglia ossidata passa attraverso essiccatori ad aria calda — che secondo quanto riportato funzionano a circa 240°C — che arrestano istantaneamente l'ossidazione e fissano il carattere del tè. Ciò che esce dall'altra parte è la nota foglia di tè nera e croccante. I visitatori notano subito il calore — è una delle zone più calde di tutto il reparto produttivo.",
       keyPoints: "La tostatura ferma i cambiamenti chimici nel momento esatto e riduce l'umidità a circa il 2-3%, il che è essenziale affinché il tè rimanga fresco durante la conservazione e la spedizione.",
       duration: "La foglia passa attraverso l'essiccatore in circa 20 minuti a temperature accuratamente controllate.",
     },
     sorting: {
       name: "Selezione e Classificazione",
-      description: "Il tè verde e il tè nero partono entrambi dallo stesso arbusto e dalla stessa foglia — ciò che li differenzia realmente è la fermentazione (ossidazione), una fase che il tè nero attraversa mentre il tè verde la salta. La produzione di questa fabbrica è per lo più tè nero. Mentre la foglia essiccata passa attraverso i macchinari di selezione, viene separata in un solo passaggio in base alla parte del germoglio originale da cui proviene: la punta tenera, che si spezza facilmente, e le foglie più alte — solo circa il 2% di ogni germoglio — diventano FBOPF Extra Special, la qualità più pregiata e costosa, mentre la foglia più in basso diventa qualità solide come BOP e Pekoe. La foglia più matura e più bassa diventa Dust, e qualsiasi stelo o scarto inutilizzabile viene scartato come Refuse.",
+      description: "Il tè verde e il tè nero partono entrambi dallo stesso arbusto e dalla stessa foglia — ciò che li differenzia realmente è la fermentazione (ossidazione), una fase che il tè nero attraversa mentre il tè verde la salta. La produzione di questa fabbrica è per lo più tè nero. Mentre la foglia essiccata passa attraverso i macchinari di selezione, viene separata in un solo passaggio in base alla parte del germoglio originale da cui proviene: la punta tenera, che si spezza facilmente, e le foglie più alte — solo circa il 2% di ogni germoglio — diventano FBOPF Extra Special, la qualità più pregiata e costosa, mentre la foglia più in basso diventa qualità solide come BOP e Pekoe. La foglia più matura e più bassa diventa Dust, e qualsiasi stelo o scarto inutilizzabile viene scartato come Refuse. Quel macchinario di selezione include un separatore di colore con un sistema di telecamere in grado di distinguere particelle come foglie e fiori, filtrando via tutto ciò che non dovrebbe esserci. Setacci di diverse dimensioni di maglia separano ulteriormente le particelle per dimensione in più passaggi, e un separatore elettrostatico carica staticamente su rulli gli eventuali residui di stelo marroni così da poterli allontanare — nessun colore o carattere deriva da coloranti o additivi, solo dalla lavorazione naturale.",
       keyPoints: "Il valore segue la posizione sul germoglio, non solo la dimensione della foglia — più la foglia è alta e tenera, più alta è la sua qualità e il suo prezzo. Il Dust, non la foglia pregiata, è ciò che di solito finisce nelle bustine di tè aromatizzate; le qualità più pregiate come il FBOPF Extra Special vengono raramente vendute localmente per via del loro valore sui mercati di esportazione.",
       duration: "La selezione avviene in modo continuo tramite macchinari e richiede circa 30-45 minuti per lotto.",
     },
     packing: {
       name: "Confezionamento",
-      description: "Il tè classificato viene pesato, degustato per verificarne la qualità e sigillato in confezioni a prova di umidità o casse da tè, pronto per viaggiare da questa fabbrica alle tazze di tutto il mondo.",
-      keyPoints: "Il confezionamento ermetico protegge il tè dall'umidità e dagli odori, preservando il sapore costruito con cura in ogni fase precedente del processo.",
+      description: "Il tè classificato viene pesato, degustato per verificarne la qualità e sigillato in confezioni a prova di umidità rivestite di foglio d'alluminio, stampate con il nome e il logo della fabbrica, il numero di registrazione, il Simbolo del Tè di Ceylon e il suo certificato di sicurezza alimentare. Nell'area di confezionamento si trovano fianco a fianco diverse qualità finite — Dust (destinato principalmente alle bustine di tè), OP1, Pekoe, BOP (Broken Orange Pekoe) e OP (Orange Pekoe) — con OP1 e OP particolarmente apprezzati nei mercati di lingua araba e il Pekoe ben noto in Russia e Iran. Anziché esportare direttamente, la fabbrica vende il proprio tè finito tramite l'Asta del Tè di Colombo, dove gli acquirenti comprano le qualità di cui hanno bisogno.",
+      keyPoints: "Il confezionamento ermetico protegge il tè dall'umidità e dagli odori, preservando il sapore costruito con cura in ogni fase precedente del processo. Vendere tramite l'Asta del Tè di Colombo anziché esportare direttamente significa che sono gli acquirenti esterni, non la fabbrica stessa, a occuparsi della spedizione internazionale successiva.",
       duration: "Il lotto finale viene confezionato e pronto per la spedizione lo stesso giorno in cui viene classificato.",
     },
     cinnamon: {
@@ -989,7 +1014,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Tè Artigianali Pregiati",
-      description: "Oltre al tè nero standard, la tenuta produce anche rari tè artigianali lavorati a mano — per lo più rifiniti a mano nella separata Fabbrica del Tè Artigianale anziché sulla linea principale del tè nero, motivo per cui queste qualità sono chiamate anche 'Tè Artigianali Pregiati': è più vicino a un'arte che a una produzione di massa. Molti di essi provengono da un germoglio dalle sfumature viola, il cui colore deriva dall'antocianina. Il Golden Tip utilizza il germoglio completamente maturo di quella stessa pianta, mentre il Silver Tip utilizza il germoglio più chiaro e ancora immaturo della stessa pianta. Il tè bianco prende due foglie e mezzo dal germoglio, cotte al vapore e essiccate anziché fermentate e arrotolate come il tè nero, per un gusto molto leggermente lavorato e naturalmente dolce. I tè viola e rosa sono varietà speciali uniche, ricche di antiossidanti naturali, realizzate con un proprio processo separato. La tenuta crea anche miscele a valore aggiunto — come il tè infuso con fiori di loto — e il Blooming Tea legato a mano dagli stessi germogli.",
+      description: "Oltre al tè nero standard, la tenuta produce anche rari tè artigianali lavorati a mano — per lo più rifiniti a mano nella separata Fabbrica del Tè Artigianale anziché sulla linea principale del tè nero, motivo per cui queste qualità sono chiamate anche 'Tè Artigianali Pregiati': è più vicino a un'arte che a una produzione di massa. Molti di essi provengono da un germoglio dalle sfumature viola, il cui colore deriva dall'antocianina. Il Golden Tip utilizza il germoglio completamente maturo di quella stessa pianta, mentre il Silver Tip utilizza il germoglio più chiaro e ancora immaturo della stessa pianta. Il tè bianco prende due foglie e mezzo dal germoglio e salta completamente l'appassimento — cotte al vapore e essiccate anziché fermentate e arrotolate come il tè nero — per un gusto molto leggermente lavorato e naturalmente dolce. I tè viola e rosa sono varietà speciali uniche, ricche di antiossidanti naturali, realizzate con un proprio processo separato. La tenuta crea anche miscele a valore aggiunto — come il tè infuso con fiori di loto — e il Blooming Tea legato a mano dagli stessi germogli.",
       keyPoints: "Questi pregiati tè artigianali vengono raccolti e lavorati in quantità molto più ridotte rispetto al tè nero standard, ed è proprio questo a renderli più rari e pregiati — chiedete al banco di degustazione per assaggiarli. Per la maggior parte di queste qualità si può usare sia il germoglio dalle sfumature viola sia il normale germoglio verde, anche se la tenuta utilizza per lo più quello viola.",
       duration: "5 minuti",
     },
@@ -1031,7 +1056,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "La Fabbrica del Tè",
-      description: "L'edificio principale della fabbrica è dove la foglia raccolta viene trasformata in tè finito, dall'appassimento fino al confezionamento. Questa tappa offre una panoramica del piano di fabbrica in funzione e delle attrezzature usate in ogni fase.",
+      description: "L'edificio principale della fabbrica è dove la foglia raccolta viene trasformata in tè finito, dall'appassimento fino al confezionamento. Questa tappa offre una panoramica del piano di fabbrica in funzione e delle attrezzature usate in ogni fase — appassimento, arrotolamento, fermentazione (ossidazione), essiccazione, selezione del tè (classificazione) e confezionamento finale, in quest'ordine.",
       keyPoints: "Una fabbrica del tè in funzione esegue l'intera sequenza dall'appassimento al confezionamento sotto lo stesso tetto, sincronizzata da vicino con l'arrivo giornaliero delle foglie.",
       duration: "10-15 minuti",
     },
@@ -1065,6 +1090,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Il jaggery di kithul è apprezzato per il suo ricco sapore simile al caramello ed è un dolcificante base nei dolci dello Sri Lanka; la stessa linfa può anche essere fermentata in toddy o distillata in arrack.",
       duration: "5-10 minuti",
     },
+    pruning: {
+      name: "Potatura",
+      description: "Prima della potatura, la tenuta lascia deliberatamente crescere la pianta di tè per un periodo anziché tagliarla subito — lasciando che la nuova crescita si sviluppi completamente in modo che la pianta accumuli nutrimento. Solo una volta completato questo accumulo inizia la potatura, che taglia la pianta fino a un'altezza di circa il ginocchio.",
+      keyPoints: "Lasciare prima crescere la pianta, anziché potarla secondo un programma fisso indipendentemente dalle condizioni, dà alla pianta il tempo di convogliare il nutrimento verso l'alto prima di essere tagliata.",
+      duration: "5 minuti",
+    },
+    polytunnel: {
+      name: "Serra e Tunnel Coltivazione",
+      description: "Accanto a una serra già esistente, la tenuta sta allestendo un tunnel di coltivazione non ancora in uso — è ancora in fase di realizzazione — per coltivare verdure come peperoni e pomodori. Una volta operativo, gli ospiti che soggiornano nella villa o nel cabana potranno raccogliere da soli le verdure fresche coltivate qui.",
+      keyPoints: "Il tunnel di coltivazione è ancora in costruzione e non è già in produzione, quindi per ora non c'è nulla da raccogliere — tornate a controllare una volta operativo.",
+      duration: "5 minuti",
+    },
   },
   ar: {
     plucking: {
@@ -1075,38 +1112,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "الذبول",
-      description: "تُفرش الأوراق الطازجة بطبقة رقيقة على أحواض طويلة يُمرَّر عبرها الهواء، مما يزيل الرطوبة تدريجيًا. تصبح الورقة مرنة وطيّعة، جاهزة للف دون أن تتكسر.",
+      description: "تُفرش الأوراق الطازجة بطبقة رقيقة على أحواض طويلة، حيث تدفع مراوح كبيرة الهواء عبرها لإزالة الرطوبة تدريجيًا — وهو ما تسميه المزرعة عملية الذبول 'الحديثة'. تصبح الورقة مرنة وطيّعة، جاهزة للف دون أن تتكسر.",
       keyPoints: "يوازن الذبول الرطوبة عبر الورقة ويسمح للإنزيمات الطبيعية ببدء التغيرات الكيميائية التي ستشكل لاحقًا نكهة الشاي ولونه.",
       duration: "تستغرق هذه المرحلة عادة من 12 إلى 17 ساعة، حسب الرطوبة وتدفق الهواء.",
     },
     rolling: {
       name: "اللف",
-      description: "تمر الأوراق الذابلة عبر آلات اللف التي تلوي وتكسر جدران خلايا الورقة، مما يحرر العصائر والزيوت المحبوسة بداخلها. هنا يتشكل شكل الورقة وقوة الشاي.",
+      description: "تمر الأوراق الذابلة عبر آلات اللف التي تلوي وتكسر جدران خلايا الورقة، مما يحرر العصائر والزيوت المحبوسة بداخلها ويكسر الورقة إلى جزيئات صغيرة. هنا يتشكل شكل الورقة وقوة الشاي.",
       keyPoints: "كسر جدران الخلايا يعرّض الإنزيمات للأكسجين، مما يبدأ عملية الأكسدة. تحدد شدة ومدة اللف قوة الشاي النهائي ومظهره.",
       duration: "يستمر اللف عادة من 45 دقيقة إلى ساعة، وغالبًا على عدة مراحل.",
     },
     fermentation: {
       name: "التخمير (الأكسدة)",
-      description: "تُفرش الأوراق الملفوفة في غرفة باردة ورطبة وتُترك لتتأكسد. تتحول الورقة الخضراء تدريجيًا إلى لون بني نحاسي مع تطور اللون والقوام والنكهة المرتبطة بالشاي الأسود.",
-      keyPoints: "هذه هي الخطوة الأهم لتحديد النكهة. يجب ضبط التوقيت بدقة — فإذا كان قصيرًا جدًا يصبح الشاي خفيفًا، وإذا طال أكثر من اللازم يصبح باهتًا وباردًا.",
-      duration: "تُراقَب الأكسدة عن كثب وتستمر عادة من 1.5 إلى 3 ساعات.",
+      description: "تُفرش الأوراق الملفوفة في غرفة باردة ورطبة وتُترك لتتأكسد، مع استخدام جهاز ترطيب للحفاظ على رطوبة الهواء الكافية لحدوث التفاعل. تتحول الورقة الخضراء تدريجيًا إلى لون بني نحاسي مع تطور اللون والقوام والنكهة المرتبطة بالشاي الأسود — وذلك كله من الأكسدة الطبيعية فقط، دون أي أصباغ أو إضافات.",
+      keyPoints: "هذه هي الخطوة الأهم لتحديد النكهة. يجب ضبط التوقيت بدقة — فإذا كان قصيرًا جدًا يصبح الشاي خفيفًا، وإذا طال أكثر من اللازم يصبح باهتًا وباردًا. وهذا أيضًا ما يفصل بين أنواع الشاي المصنوعة هنا: يمر الشاي الأسود بمراحل الذبول ثم اللف ثم التخمير ثم التحميص، بينما يتجاوز الشاي الأخضر التخمير تمامًا (ذبول ولف وتجفيف فقط) ويكون أكثر اعتدالًا — ويُشرب غالبًا لطابعه الألطف وشبه العلاجي؛ أما الشاي الأبيض فيتجاوز كلًا من الذبول والتخمير، منتقلاً مباشرة من الورقة الطازجة إلى التبخير والتجفيف. لا ينتج هذا المصنع شاي الأولونغ، الذي يصفه المرشد بأنه نوع مخمّر يشبه الشاي الأسود، يُصنع عبر تبخير وتفريش متكررين يدويًا بدلاً من اللف الآلي.",
+      duration: "في هذا المصنع، يستغرق التخمير عادةً من 1.5 إلى 2.5 ساعة حسب الظروف، قبل أن تنتقل الورقة إلى مرحلة التجفيف.",
     },
     drying: {
       name: "التجفيف (التحميص)",
-      description: "تمر الورقة المؤكسدة عبر مجففات الهواء الساخن التي توقف الأكسدة فورًا وتحافظ على طابع الشاي. وما يخرج في النهاية هو ورقة الشاي السوداء المقرمشة المعروفة.",
+      description: "تمر الورقة المؤكسدة عبر مجففات الهواء الساخن — التي تعمل حسب ما ذُكر عند حرارة تبلغ حوالي 240 درجة مئوية — والتي توقف الأكسدة فورًا وتحافظ على طابع الشاي. وما يخرج في النهاية هو ورقة الشاي السوداء المقرمشة المعروفة. يلاحظ الزوار الحرارة فورًا — فهذه من أكثر المناطق سخونة في أرضية المصنع.",
       keyPoints: "يوقف التحميص التغيرات الكيميائية في اللحظة المناسبة تمامًا ويقلل الرطوبة إلى حوالي 2-3%، وهو أمر أساسي لبقاء الشاي طازجًا أثناء التخزين والشحن.",
       duration: "تمر الورقة عبر المجفف في حوالي 20 دقيقة عند درجات حرارة مضبوطة بعناية.",
     },
     sorting: {
       name: "الفرز والتصنيف",
-      description: "يبدأ كل من الشاي الأخضر والشاي الأسود من نفس الشجيرة ونفس الورقة تمامًا — وما يفصل بينهما فعليًا هو التخمّر (الأكسدة)، وهي خطوة يمر بها الشاي الأسود بينما يتجاوزها الشاي الأخضر. معظم إنتاج هذا المصنع هو الشاي الأسود. وبينما تمر الأوراق المجففة عبر آلات الفرز، يتم فصلها في مرة واحدة حسب الجزء الذي أتت منه من الغصن الأصلي: الطرف الطري سهل الكسر والأوراق العلوية — حوالي 2% فقط من كل غصن — تصبح FBOPF Extra Special، وهي أفضل الدرجات وأغلاها، بينما تصبح الأوراق الأبعد إلى الأسفل درجات متينة مثل BOP وPekoe. وتصبح الأوراق الأكثر نضجًا والأدنى درجة Dust، بينما تُستبعد أي سيقان وبقايا غير صالحة للاستخدام كـ Refuse.",
+      description: "يبدأ كل من الشاي الأخضر والشاي الأسود من نفس الشجيرة ونفس الورقة تمامًا — وما يفصل بينهما فعليًا هو التخمّر (الأكسدة)، وهي خطوة يمر بها الشاي الأسود بينما يتجاوزها الشاي الأخضر. معظم إنتاج هذا المصنع هو الشاي الأسود. وبينما تمر الأوراق المجففة عبر آلات الفرز، يتم فصلها في مرة واحدة حسب الجزء الذي أتت منه من الغصن الأصلي: الطرف الطري سهل الكسر والأوراق العلوية — حوالي 2% فقط من كل غصن — تصبح FBOPF Extra Special، وهي أفضل الدرجات وأغلاها، بينما تصبح الأوراق الأبعد إلى الأسفل درجات متينة مثل BOP وPekoe. وتصبح الأوراق الأكثر نضجًا والأدنى درجة Dust، بينما تُستبعد أي سيقان وبقايا غير صالحة للاستخدام كـ Refuse. وتشمل آلات الفرز هذه فارزًا لونيًا مزودًا بنظام كاميرات يمكنه التمييز بين جزيئات مثل الأوراق والزهور، ليُرشّح أي شيء لا ينبغي أن يكون موجودًا. كما تفصل مناخل ذات فتحات بأحجام مختلفة الجزيئات حسب الحجم عبر عدة مراحل، بينما يمنح فاصل كهرساكن أي بقايا سيقان بنية شحنة ساكنة على أسطوانات ليتم سحبها جانبًا — ولا يأتي أي من هذا اللون أو الطابع من أصباغ أو إضافات، بل من المعالجة الطبيعية فقط.",
       keyPoints: "تتبع القيمة موقع الورقة على الغصن، وليس حجم الورقة فقط — فكلما كانت الورقة أعلى وأكثر طراوة، ارتفعت درجتها وسعرها. درجة Dust، وليست الأوراق الفاخرة، هي ما ينتهي عادةً في أكياس الشاي المنكّهة؛ أما أفضل الدرجات مثل FBOPF Extra Special فنادرًا ما تُباع محليًا بسبب قيمتها العالية في أسواق التصدير.",
       duration: "يعمل الفرز باستمرار على الآلات ويستغرق حوالي 30 إلى 45 دقيقة لكل دفعة.",
     },
     packing: {
       name: "التعبئة",
-      description: "يُوزن الشاي المصنَّف ويُذاق للتحقق من جودته، ثم يُختم في عبوات مقاومة للرطوبة أو صناديق شاي، جاهزًا للانتقال من هذا المصنع إلى الأكواب حول العالم.",
-      keyPoints: "التعبئة المحكمة تحمي الشاي من الرطوبة والروائح، وتحافظ على النكهة التي تشكّلت بعناية عبر كل مرحلة سابقة من العملية.",
+      description: "يُوزن الشاي المصنَّف ويُذاق للتحقق من جودته، ثم يُختم في عبوات مقاومة للرطوبة مبطّنة برقائق الألومنيوم، مطبوع عليها اسم المصنع وشعاره، ورقم تسجيله، ورمز شاي سيلان، وشهادة سلامته الغذائية. منطقة التعبئة هي المكان الذي تُعرض فيه عدة درجات نهائية جنبًا إلى جنب — Dust (المخصصة أساسًا لأكياس الشاي)، وOP1، وPekoe، وBOP (بروكن أورانج بيكو)، وOP (أورانج بيكو) — مع رواج خاص لـ OP1 وOP في الأسواق الناطقة بالعربية، وشهرة Pekoe في روسيا وإيران. وبدلاً من التصدير المباشر، يبيع المصنع شايه النهائي عبر مزاد كولومبو للشاي، حيث يشتري المشترون الدرجات التي يحتاجونها.",
+      keyPoints: "التعبئة المحكمة تحمي الشاي من الرطوبة والروائح، وتحافظ على النكهة التي تشكّلت بعناية عبر كل مرحلة سابقة من العملية. البيع عبر مزاد كولومبو للشاي بدلاً من التصدير المباشر يعني أن المشترين الخارجيين، وليس المصنع نفسه، هم من يتولون الشحن الدولي اللاحق.",
       duration: "يُعبَّأ الدفعة النهائية وتكون جاهزة للشحن في نفس يوم تصنيفها.",
     },
     cinnamon: {
@@ -1243,7 +1280,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "درجات الشاي الحرفي",
-      description: "بالإضافة إلى الشاي الأسود القياسي، تنتج المزرعة أيضًا أنواعًا نادرة من الشاي الحرفي المصنوع يدويًا — يُصنَّع معظمها يدويًا في مصنع الشاي اليدوي المنفصل بدلاً من خط الشاي الأسود الرئيسي، ولهذا تُسمى هذه الدرجات أيضًا 'درجات الشاي الحرفي': فهي أقرب إلى حرفة يدوية منها إلى إنتاج جماعي. يأتي الكثير منها من برعم مميز بلون أرجواني، يكتسب لونه من مادة الأنثوسيانين. يُستخدم لصنع القمة الذهبية البرعم الناضج تمامًا من ذلك النبات نفسه، بينما يُستخدم لصنع القمة الفضية البرعم الأفتح لونًا وغير الناضج بعد من النبات نفسه. يُؤخذ للشاي الأبيض ورقتان ونصف من البرعم، تُبخَّر وتُجفَّف بدلاً من التخمير واللف كما في الشاي الأسود، لتُنتج مذاقًا معالجًا بخفة شديدة وحلوًا بشكل طبيعي. الشاي الأرجواني والوردي أصناف متخصصة فريدة غنية بمضادات الأكسدة الطبيعية، تُصنع بعملية منفصلة خاصة بها. كما تُعِدّ المزرعة مزيجات ذات قيمة مضافة — مثل الشاي المنقوع بزهور اللوتس — وشاي Blooming Tea المربوط يدويًا من نفس البراعم.",
+      description: "بالإضافة إلى الشاي الأسود القياسي، تنتج المزرعة أيضًا أنواعًا نادرة من الشاي الحرفي المصنوع يدويًا — يُصنَّع معظمها يدويًا في مصنع الشاي اليدوي المنفصل بدلاً من خط الشاي الأسود الرئيسي، ولهذا تُسمى هذه الدرجات أيضًا 'درجات الشاي الحرفي': فهي أقرب إلى حرفة يدوية منها إلى إنتاج جماعي. يأتي الكثير منها من برعم مميز بلون أرجواني، يكتسب لونه من مادة الأنثوسيانين. يُستخدم لصنع القمة الذهبية البرعم الناضج تمامًا من ذلك النبات نفسه، بينما يُستخدم لصنع القمة الفضية البرعم الأفتح لونًا وغير الناضج بعد من النبات نفسه. يُؤخذ للشاي الأبيض ورقتان ونصف من البرعم مع تخطي مرحلة الذبول تمامًا — إذ تُبخَّر وتُجفَّف بدلاً من التخمير واللف كما في الشاي الأسود — لتُنتج مذاقًا معالجًا بخفة شديدة وحلوًا بشكل طبيعي. الشاي الأرجواني والوردي أصناف متخصصة فريدة غنية بمضادات الأكسدة الطبيعية، تُصنع بعملية منفصلة خاصة بها. كما تُعِدّ المزرعة مزيجات ذات قيمة مضافة — مثل الشاي المنقوع بزهور اللوتس — وشاي Blooming Tea المربوط يدويًا من نفس البراعم.",
       keyPoints: "تُقطف هذه الأنواع الحرفية وتُعالج بكميات أقل بكثير من الشاي الأسود القياسي، وهذا ما يجعلها أكثر ندرة وقيمة — اسأل عند طاولة التذوق لتجربتها. يمكن استخدام البرعم الأرجواني أو البرعم الأخضر العادي لمعظم هذه الدرجات، رغم أن المزرعة تستخدم في الغالب البرعم الأرجواني.",
       duration: "5 دقائق",
     },
@@ -1285,7 +1322,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "مصنع الشاي",
-      description: "المصنع الرئيسي هو المكان الذي تتحول فيه الأوراق المقطوفة إلى شاي جاهز، من الذبول إلى التعبئة. تقدم هذه المحطة نظرة عامة على أرضية المصنع العاملة والمعدات المستخدمة في كل مرحلة.",
+      description: "المصنع الرئيسي هو المكان الذي تتحول فيه الأوراق المقطوفة إلى شاي جاهز، من الذبول إلى التعبئة. تقدم هذه المحطة نظرة عامة على أرضية المصنع العاملة والمعدات المستخدمة في كل مرحلة — الذبول، اللف، التخمير (الأكسدة)، التجفيف، فرز الشاي (التصنيف)، والتعبئة النهائية، بهذا الترتيب.",
       keyPoints: "يدير مصنع الشاي العامل التسلسل الكامل من الذبول إلى التعبئة تحت سقف واحد، بتوقيت دقيق مع كمية الأوراق الواردة يوميًا.",
       duration: "10-15 دقيقة",
     },
@@ -1319,6 +1356,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "يُقدَّر جاجري الكيثول لنكهته الغنية الشبيهة بالكراميل، وهو مُحلٍّ أساسي في الحلويات السريلانكية؛ كما يمكن تخمير النسغ نفسه لصنع التودي أو تقطيره لصنع الأراك.",
       duration: "5-10 دقائق",
     },
+    pruning: {
+      name: "التقليم",
+      description: "قبل التقليم، تترك المزرعة شجيرة الشاي عمدًا لتنمو لفترة بدلاً من تقليمها فورًا — بحيث يكتمل النمو الجديد تمامًا لتتمكن الشجيرة من تجميع الغذاء. ولا يبدأ التقليم إلا بعد اكتمال هذا التجمع، حيث تُقلَّم الشجيرة حتى ارتفاع الركبة تقريبًا.",
+      keyPoints: "ترك الشجيرة تنمو أولًا، بدلاً من تقليمها وفق جدول ثابت بغض النظر عن حالتها، يمنح النبات وقتًا لتوجيه الغذاء إلى الأعلى قبل تقليمه.",
+      duration: "5 دقائق",
+    },
+    polytunnel: {
+      name: "النفق البلاستيكي والبيت الزجاجي",
+      description: "إلى جانب بيت زجاجي قائم بالفعل، تعمل المزرعة على إعداد نفق بلاستيكي (بولي تانل) لم يُستخدم بعد — لا يزال قيد الإنشاء — لزراعة خضروات مثل الفلفل الحلو والطماطم. وبمجرد تشغيله، سيتمكن الضيوف المقيمون في الفيلا أو الكبانا من قطف الخضروات الطازجة المزروعة هنا بأنفسهم.",
+      keyPoints: "لا يزال النفق البلاستيكي قيد الإنشاء وليس قيد الإنتاج بعد، فلا يوجد شيء لقطفه الآن — عودوا للاطلاع بمجرد تشغيله.",
+      duration: "5 دقائق",
+    },
   },
   ru: {
     plucking: {
@@ -1329,38 +1378,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Завяливание",
-      description: "Свежие листья тонким слоем раскладываются на длинных желобах, через которые продувается воздух, постепенно удаляющий влагу. Лист становится мягким и податливым, готовым к скручиванию без повреждений.",
+      description: "Свежие листья тонким слоем раскладываются на длинных желобах, где мощные вентиляторы прогоняют через них воздух, постепенно удаляя влагу — это то, что на плантации называют «современным» способом завяливания. Лист становится мягким и податливым, готовым к скручиванию без повреждений.",
       keyPoints: "Завяливание выравнивает влажность по всему листу и позволяет природным ферментам начать химические изменения, которые впоследствии создадут аромат и цвет чая.",
       duration: "Этот этап обычно занимает от 12 до 17 часов в зависимости от влажности и циркуляции воздуха.",
     },
     rolling: {
       name: "Скручивание",
-      description: "Завяленный лист проходит через скручивающие машины, которые скручивают и разрушают клеточные стенки листа, высвобождая заключённые в них соки и масла. Именно здесь формируются форма листа и крепость чая.",
+      description: "Завяленный лист проходит через скручивающие машины, которые скручивают и разрушают клеточные стенки листа, высвобождая заключённые в них соки и масла и разбивая лист на мелкие частицы. Именно здесь формируются форма листа и крепость чая.",
       keyPoints: "Разрушение клеточных стенок открывает доступ кислорода к ферментам, запуская окисление. От силы и продолжительности скручивания зависят крепость и внешний вид готового чая.",
       duration: "Скручивание обычно длится от 45 минут до часа, часто в несколько проходов.",
     },
     fermentation: {
       name: "Ферментация (окисление)",
-      description: "Скрученный лист раскладывают в прохладном влажном помещении и оставляют окисляться. Зелёный лист постепенно приобретает медно-коричневый оттенок, развивая цвет, насыщенность и аромат, характерные для чёрного чая.",
-      keyPoints: "Это самый важный этап для формирования вкуса. Время нужно определять точно — если недостаточно, чай получится слабым, если слишком долго — плоским и невыразительным.",
-      duration: "Окисление тщательно контролируется и обычно длится от 1,5 до 3 часов.",
+      description: "Скрученный лист раскладывают в прохладном влажном помещении и оставляют окисляться; увлажнитель поддерживает воздух достаточно влажным, чтобы реакция прошла как нужно. Зелёный лист постепенно приобретает медно-коричневый оттенок, развивая цвет, насыщенность и аромат, характерные для чёрного чая — исключительно за счёт естественного окисления, без красителей и добавок.",
+      keyPoints: "Это самый важный этап для формирования вкуса. Время нужно определять точно — если недостаточно, чай получится слабым, если слишком долго — плоским и невыразительным. Именно это и отличает виды чая, которые здесь производят: чёрный чай проходит завяливание, скручивание, ферментацию, затем обжарку, а зелёный чай полностью пропускает ферментацию (только завяливание, скручивание и сушка) и получается более мягким — его пьют в основном за более нежный, почти лечебный характер; белый чай пропускает и завяливание, и ферментацию, отправляясь прямо со свежего листа на пропаривание и сушку. Улун на этой фабрике не производят — экскурсовод описывает его как ферментированный сорт, похожий на чёрный чай, который делают путём многократного пропаривания и ручного растирания вместо машинного скручивания.",
+      duration: "На этой фабрике ферментация обычно занимает от 1,5 до 2,5 часа в зависимости от условий, после чего лист отправляется на сушку.",
     },
     drying: {
       name: "Сушка (обжарка)",
-      description: "Окислённый лист проходит через сушилки горячего воздуха, которые мгновенно останавливают окисление и закрепляют характер чая. На выходе получается знакомый чёрный, хрустящий чайный лист.",
+      description: "Окислённый лист проходит через сушилки горячего воздуха — работающие, по имеющимся данным, при температуре около 240°C, — которые мгновенно останавливают окисление и закрепляют характер чая. На выходе получается знакомый чёрный, хрустящий чайный лист. Посетители сразу же ощущают жар — это один из самых горячих участков на всей фабрике.",
       keyPoints: "Обжарка останавливает химические изменения в нужный момент и снижает влажность примерно до 2–3%, что необходимо для сохранения свежести чая при хранении и транспортировке.",
       duration: "Лист проходит через сушилку примерно за 20 минут при тщательно контролируемой температуре.",
     },
     sorting: {
       name: "Сортировка и калибровка",
-      description: "Зелёный и чёрный чай начинаются с одного и того же куста и листа — на самом деле их разделяет ферментация (окисление), этап, через который проходит чёрный чай, но который пропускает зелёный. Производство этой фабрики — преимущественно чёрный чай. Когда высушенный лист проходит через сортировочные машины, он разделяется за один проход в зависимости от того, с какой части исходного побега он взят: нежный, легко ломающийся кончик и самые верхние листья — всего около 2% каждого побега — становятся FBOPF Extra Special, лучшим и самым дорогим сортом, а лист ниже становится добротными сортами вроде BOP и Pekoe. Самый зрелый, нижний лист становится Dust, а любые непригодные стебли и обрезки выбрасываются как Refuse.",
+      description: "Зелёный и чёрный чай начинаются с одного и того же куста и листа — на самом деле их разделяет ферментация (окисление), этап, через который проходит чёрный чай, но который пропускает зелёный. Производство этой фабрики — преимущественно чёрный чай. Когда высушенный лист проходит через сортировочные машины, он разделяется за один проход в зависимости от того, с какой части исходного побега он взят: нежный, легко ломающийся кончик и самые верхние листья — всего около 2% каждого побега — становятся FBOPF Extra Special, лучшим и самым дорогим сортом, а лист ниже становится добротными сортами вроде BOP и Pekoe. Самый зрелый, нижний лист становится Dust, а любые непригодные стебли и обрезки выбрасываются как Refuse. В состав этого сортировочного оборудования входит цветовой сепаратор с камерной системой, способной отличать такие частицы, как лист и цветок, отфильтровывая всё лишнее. Сита с разным размером ячеек дополнительно разделяют частицы по размеру за несколько проходов, а электростатический сепаратор заряжает оставшиеся коричневые обрезки стеблей статическим электричеством на роликах, чтобы их можно было отвести в сторону — ни цвет, ни характер чая не получены за счёт красителей или добавок, только естественной обработкой.",
       keyPoints: "Ценность зависит от положения на побеге, а не только от размера листа — чем выше и нежнее лист, тем выше его сорт и цена. В ароматизированные чайные пакетики обычно попадает именно сорт Dust, а не премиальный лист; лучшие сорта, такие как FBOPF Extra Special, редко продаются внутри страны из-за их высокой стоимости на экспортных рынках.",
       duration: "Сортировка проводится непрерывно на оборудовании и занимает примерно 30–45 минут на партию.",
     },
     packing: {
       name: "Упаковка",
-      description: "Отсортированный чай взвешивают, дегустируют для проверки качества и запечатывают во влагонепроницаемую упаковку или чайные ящики, готовые к отправке с этой фабрики в чашки по всему миру.",
-      keyPoints: "Герметичная упаковка защищает чай от влаги и посторонних запахов, сохраняя вкус, тщательно сформированный на всех предыдущих этапах процесса.",
+      description: "Отсортированный чай взвешивают, дегустируют для проверки качества и запечатывают во влагонепроницаемую упаковку с алюминиевой фольгированной подкладкой, с напечатанными названием и логотипом фабрики, регистрационным номером, символом цейлонского чая и сертификатом пищевой безопасности. В зоне упаковки бок о бок представлены несколько готовых сортов — Dust (в основном для чайных пакетиков), OP1, Pekoe, BOP (Broken Orange Pekoe) и OP (Orange Pekoe), при этом OP1 и OP особенно популярны на арабоязычных рынках, а Pekoe хорошо известен в России и Иране. Вместо прямого экспорта фабрика продаёт свой готовый чай через Коломбский чайный аукцион, где покупатели приобретают нужные им сорта.",
+      keyPoints: "Герметичная упаковка защищает чай от влаги и посторонних запахов, сохраняя вкус, тщательно сформированный на всех предыдущих этапах процесса. Продажа через Коломбский чайный аукцион вместо прямого экспорта означает, что дальнейшей международной отправкой занимаются внешние покупатели, а не сама фабрика.",
       duration: "Финальная партия упаковывается и готова к отправке в тот же день, когда проходит сортировку.",
     },
     cinnamon: {
@@ -1497,7 +1546,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Ремесленные сорта чая",
-      description: "Помимо стандартного чёрного чая, поместье также производит редкие ремесленные сорта чая — большинство из них дорабатывают вручную на отдельной Фабрике ручного чая, а не на основной линии чёрного чая, поэтому эти сорта и называют «ремесленными сортами чая»: это ближе к ремеслу, чем к массовому производству. Многие из них получают из характерного побега с фиолетовым оттенком, чей цвет связан с антоцианом. Golden Tip делают из полностью созревшей почки того же побега, а Silver Tip — из более светлой, ещё незрелой почки того же побега. Для белого чая берут два с половиной листа с побега, которые пропаривают и сушат, а не ферментируют и скручивают, как чёрный чай, что даёт очень легко обработанный, естественно сладкий вкус. Фиолетовый и розовый чай — уникальные специальные сорта, богатые природными антиоксидантами, изготавливаемые по собственному отдельному процессу. Поместье также создаёт смеси с добавленной ценностью — например, чай с цветками лотоса — и связанный вручную Blooming Tea из тех же побегов.",
+      description: "Помимо стандартного чёрного чая, поместье также производит редкие ремесленные сорта чая — большинство из них дорабатывают вручную на отдельной Фабрике ручного чая, а не на основной линии чёрного чая, поэтому эти сорта и называют «ремесленными сортами чая»: это ближе к ремеслу, чем к массовому производству. Многие из них получают из характерного побега с фиолетовым оттенком, чей цвет связан с антоцианом. Golden Tip делают из полностью созревшей почки того же побега, а Silver Tip — из более светлой, ещё незрелой почки того же побега. Для белого чая берут два с половиной листа с побега и полностью пропускают завяливание — их пропаривают и сушат, а не ферментируют и скручивают, как чёрный чай, — что даёт очень легко обработанный, естественно сладкий вкус. Фиолетовый и розовый чай — уникальные специальные сорта, богатые природными антиоксидантами, изготавливаемые по собственному отдельному процессу. Поместье также создаёт смеси с добавленной ценностью — например, чай с цветками лотоса — и связанный вручную Blooming Tea из тех же побегов.",
       keyPoints: "Эти ремесленные сорта собираются и обрабатываются в гораздо меньших количествах, чем стандартный чёрный чай, что и делает их более редкими и ценными — спросите на дегустационной стойке, чтобы попробовать их. Для большинства этих сортов можно использовать как побег с фиолетовым оттенком, так и обычный зелёный побег, хотя поместье чаще использует именно фиолетовый.",
       duration: "5 минут",
     },
@@ -1539,7 +1588,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "Чайная фабрика",
-      description: "В главном здании фабрики собранный лист превращается в готовый чай — от завяливания до упаковки. Эта остановка даёт общее представление о работающем цехе фабрики и оборудовании, используемом на каждом этапе.",
+      description: "В главном здании фабрики собранный лист превращается в готовый чай — от завяливания до упаковки. Эта остановка даёт общее представление о работающем цехе фабрики и оборудовании, используемом на каждом этапе — завяливание, скручивание, ферментация (окисление), сушка, сортировка чая (калибровка) и финальная упаковка, именно в этом порядке.",
       keyPoints: "Работающая чайная фабрика выполняет всю последовательность от завяливания до упаковки под одной крышей, тесно синхронизированную с ежедневным поступлением листа.",
       duration: "10–15 минут",
     },
@@ -1573,6 +1622,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Джаггери из китула ценится за насыщенный карамельный вкус и является основным подсластителем в шри-ланкийских десертах; тот же сок можно также сбраживать в тодди или перегонять в арак.",
       duration: "5–10 минут",
     },
+    pruning: {
+      name: "Обрезка",
+      description: "Перед обрезкой поместье намеренно оставляет чайный куст расти в течение некоторого времени, вместо того чтобы сразу его обрезать — новому приросту дают полностью развиться, чтобы куст накопил питательные вещества. Обрезка начинается только после того, как это накопление завершено, и куст обрезают примерно до высоты колена.",
+      keyPoints: "Позволяя кусту сначала подрасти, а не обрезая его по фиксированному графику независимо от состояния, растению дают время направить питательные вещества вверх перед обрезкой.",
+      duration: "5 минут",
+    },
+    polytunnel: {
+      name: "Тоннель и теплица",
+      description: "Наряду с уже существующей теплицей, поместье устанавливает плёночный тоннель, который пока не используется — он всё ещё строится — для выращивания овощей, таких как болгарский перец и помидоры. Когда он заработает, гости, проживающие на вилле или в бунгало, смогут сами собирать свежие овощи, выращенные здесь.",
+      keyPoints: "Тоннель пока находится в стадии строительства, а не в эксплуатации, поэтому собирать пока нечего — загляните снова, когда он заработает.",
+      duration: "5 минут",
+    },
   },
   de: {
     plucking: {
@@ -1583,38 +1644,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Welken",
-      description: "Frische Blätter werden dünn auf langen Trögen ausgebreitet, durch die Luft geleitet wird, die stetig Feuchtigkeit entzieht. Das Blatt wird welk und geschmeidig und ist bereit zum Rollen, ohne zu zerbrechen.",
+      description: "Frische Blätter werden dünn auf langen Trögen ausgebreitet, durch die große Ventilatoren Luft pressen, um stetig Feuchtigkeit zu entziehen — was das Anwesen den 'modernen' Welkeprozess nennt. Das Blatt wird welk und geschmeidig und ist bereit zum Rollen, ohne zu zerbrechen.",
       keyPoints: "Das Welken gleicht die Feuchtigkeit im Blatt aus und lässt natürliche Enzyme die chemischen Veränderungen beginnen, die später Aroma und Farbe des Tees erzeugen.",
       duration: "Diese Phase dauert je nach Luftfeuchtigkeit und Luftzirkulation typischerweise 12 bis 17 Stunden.",
     },
     rolling: {
       name: "Rollen",
-      description: "Welkes Blatt durchläuft Rollmaschinen, die die Zellwände des Blattes verdrehen und aufbrechen und so die darin eingeschlossenen Säfte und Öle freisetzen. Hier entstehen die Form des Blattes und die Kraft des Tees.",
+      description: "Welkes Blatt durchläuft Rollmaschinen, die die Zellwände des Blattes verdrehen und aufbrechen, so die darin eingeschlossenen Säfte und Öle freisetzen und das Blatt in kleine Partikel zerlegen. Hier entstehen die Form des Blattes und die Kraft des Tees.",
       keyPoints: "Das Aufbrechen der Zellwände setzt Enzyme dem Sauerstoff aus und leitet die Oxidation ein. Wie stark und wie lange das Blatt gerollt wird, bestimmt Stärke und Aussehen des fertigen Tees.",
       duration: "Das Rollen dauert meist 45 Minuten bis eine Stunde, oft in mehreren Durchgängen.",
     },
     fermentation: {
       name: "Fermentation (Oxidation)",
-      description: "Gerolltes Blatt wird in einem kühlen, feuchten Raum ausgebreitet und zur Oxidation stehen gelassen. Das grüne Blatt verfärbt sich allmählich kupferbraun, während sich Farbe, Körper und Aroma des Schwarztees entwickeln.",
-      keyPoints: "Dies ist der wichtigste Schritt für den Geschmack. Das Timing muss präzise beurteilt werden — zu wenig, und der Tee ist dünn, zu viel, und er wird flach und fade.",
-      duration: "Die Oxidation wird eng überwacht und dauert im Allgemeinen 1,5 bis 3 Stunden.",
+      description: "Gerolltes Blatt wird in einem kühlen, feuchten Raum ausgebreitet und zur Oxidation stehen gelassen; ein Luftbefeuchter hält die Luft feucht genug, damit die Reaktion ablaufen kann. Das grüne Blatt verfärbt sich allmählich kupferbraun, während sich Farbe, Körper und Aroma des Schwarztees entwickeln — ausschließlich durch natürliche Oxidation, ohne Farbstoffe oder Zusätze.",
+      keyPoints: "Dies ist der wichtigste Schritt für den Geschmack. Das Timing muss präzise beurteilt werden — zu wenig, und der Tee ist dünn, zu viel, und er wird flach und fade. Genau das unterscheidet auch die hier hergestellten Teesorten: Schwarzer Tee durchläuft Welken, Rollen, Fermentation, dann Darren, während Grüner Tee die Fermentation vollständig auslässt (nur Welken, Rollen, Trocknen) und milder ist — er wird meist wegen seines sanfteren, fast medizinischen Charakters getrunken; Weißer Tee lässt sowohl Welken als auch Fermentation aus und geht direkt vom frischen Blatt zum Dämpfen und Trocknen über. Oolong-Tee wird in dieser Fabrik nicht hergestellt — der Guide beschreibt ihn als eine dem Schwarztee ähnliche fermentierte Sorte, die durch wiederholtes Dämpfen und Handbürsten statt maschinelles Rollen entsteht.",
+      duration: "In dieser Fabrik dauert die Fermentation je nach Bedingungen meist 1,5 bis 2,5 Stunden, bevor das Blatt zum Trocknen weitergeht.",
     },
     drying: {
       name: "Trocknen (Darren)",
-      description: "Das oxidierte Blatt durchläuft Heißlufttrockner, die die Oxidation sofort stoppen und den Charakter des Tees festhalten. Am anderen Ende kommt das bekannte schwarze, knackige Teeblatt heraus.",
+      description: "Das oxidierte Blatt durchläuft Heißlufttrockner — die Berichten zufolge bei etwa 240 °C arbeiten —, die die Oxidation sofort stoppen und den Charakter des Tees festhalten. Am anderen Ende kommt das bekannte schwarze, knackige Teeblatt heraus. Besucher spüren die Hitze sofort — es ist einer der heißesten Bereiche auf dem Fabrikboden.",
       keyPoints: "Das Darren stoppt die chemischen Veränderungen genau im richtigen Moment und reduziert die Feuchtigkeit auf etwa 2–3 %, was für die Frischhaltung des Tees bei Lagerung und Versand unerlässlich ist.",
       duration: "Das Blatt durchläuft den Trockner bei sorgfältig kontrollierten Temperaturen in etwa 20 Minuten.",
     },
     sorting: {
       name: "Sortieren & Klassifizieren",
-      description: "Grüner Tee und Schwarzer Tee stammen beide vom selben Strauch und Blatt — was sie tatsächlich unterscheidet, ist die Fermentation (Oxidation), ein Schritt, den Schwarzer Tee durchläuft und Grüner Tee auslässt. Die Produktion dieser Fabrik besteht größtenteils aus Schwarzem Tee. Während das getrocknete Blatt die Sortiermaschinen durchläuft, wird es in einem einzigen Durchgang danach getrennt, aus welchem Teil des ursprünglichen Triebs es stammt: die zarte, leicht abbrechende Spitze und die obersten Blätter — nur etwa 2 % jedes Triebs — werden zu FBOPF Extra Special, der feinsten und teuersten Sorte, während weiter unten liegendes Blatt zu soliden Sorten wie BOP und Pekoe wird. Das reifste, unterste Blatt wird zu Dust, und alle unbrauchbaren Stängel und Reste werden als Refuse aussortiert.",
+      description: "Grüner Tee und Schwarzer Tee stammen beide vom selben Strauch und Blatt — was sie tatsächlich unterscheidet, ist die Fermentation (Oxidation), ein Schritt, den Schwarzer Tee durchläuft und Grüner Tee auslässt. Die Produktion dieser Fabrik besteht größtenteils aus Schwarzem Tee. Während das getrocknete Blatt die Sortiermaschinen durchläuft, wird es in einem einzigen Durchgang danach getrennt, aus welchem Teil des ursprünglichen Triebs es stammt: die zarte, leicht abbrechende Spitze und die obersten Blätter — nur etwa 2 % jedes Triebs — werden zu FBOPF Extra Special, der feinsten und teuersten Sorte, während weiter unten liegendes Blatt zu soliden Sorten wie BOP und Pekoe wird. Das reifste, unterste Blatt wird zu Dust, und alle unbrauchbaren Stängel und Reste werden als Refuse aussortiert. Zu dieser Sortiermaschinerie gehört ein Farbseparator mit Kamerasystem, der Partikel wie Blätter und Blüten unterscheiden kann und alles herausfiltert, was nicht dazugehört. Siebe mit unterschiedlichen Maschenweiten trennen die Partikel in mehreren Durchgängen weiter nach Größe, und ein elektrostatischer Separator lädt verbliebene braune Stängelreste auf Walzen elektrisch auf, damit sie ausgeschieden werden können — weder Farbe noch Charakter stammen von Farbstoffen oder Zusätzen, sondern allein von der natürlichen Verarbeitung.",
       keyPoints: "Der Wert richtet sich nach der Position am Trieb, nicht nur nach der Blattgröße — je höher und zarter das Blatt, desto höher seine Sorte und sein Preis. Dust-Qualität, nicht das edle Blatt, landet meist in aromatisierten Teebeuteln; die feinsten Sorten wie FBOPF Extra Special werden wegen ihres Werts auf den Exportmärkten nur selten im Inland verkauft.",
       duration: "Das Sortieren läuft kontinuierlich auf Maschinen und dauert etwa 30 bis 45 Minuten pro Charge.",
     },
     packing: {
       name: "Verpacken",
-      description: "Sortierter Tee wird gewogen, zur Qualitätsprüfung verkostet und in feuchtigkeitsdichte Verpackungen oder Teekisten versiegelt, bereit, von dieser Fabrik aus in Tassen auf der ganzen Welt zu gelangen.",
-      keyPoints: "Luftdichte Verpackung schützt den Tee vor Feuchtigkeit und Gerüchen und bewahrt den Geschmack, der in jeder vorherigen Phase des Prozesses sorgfältig aufgebaut wurde.",
+      description: "Sortierter Tee wird gewogen, zur Qualitätsprüfung verkostet und in feuchtigkeitsdichte, mit Aluminiumfolie ausgekleidete Verpackungen versiegelt, bedruckt mit dem Namen und Logo der Fabrik, ihrer Registrierungsnummer, dem Ceylon-Tee-Symbol und ihrem Lebensmittelsicherheitszertifikat. Im Verpackungsbereich stehen mehrere fertige Sorten nebeneinander — Dust (vor allem für Teebeutel), OP1, Pekoe, BOP (Broken Orange Pekoe) und OP (Orange Pekoe) —, wobei OP1 und OP besonders in arabischsprachigen Märkten beliebt sind und Pekoe in Russland und im Iran bekannt ist. Statt direkt zu exportieren, verkauft die Fabrik ihren fertigen Tee über die Colombo-Tee-Auktion, wo Käufer die von ihnen benötigten Sorten erwerben.",
+      keyPoints: "Luftdichte Verpackung schützt den Tee vor Feuchtigkeit und Gerüchen und bewahrt den Geschmack, der in jeder vorherigen Phase des Prozesses sorgfältig aufgebaut wurde. Der Verkauf über die Colombo-Tee-Auktion statt des direkten Exports bedeutet, dass externe Käufer und nicht die Fabrik selbst den weiteren internationalen Versand übernehmen.",
       duration: "Die letzte Charge wird noch am Tag der Klassifizierung verpackt und versandbereit gemacht.",
     },
     cinnamon: {
@@ -1751,7 +1812,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Handwerkliche Teesorten",
-      description: "Neben dem Standard-Schwarztee stellt das Anwesen auch seltene, handgefertigte Spezialtees her — meist von Hand fertiggestellt in der separaten Handtee-Fabrik statt auf der Schwarztee-Hauptlinie, weshalb diese Sorten auch 'handwerkliche Teesorten' genannt werden: Es ist eher Handwerkskunst als Massenproduktion. Viele davon stammen von einem markanten violett getönten Trieb, dessen Farbe von Anthocyan kommt. Für Golden Tip wird die voll ausgereifte Knospe dieses Triebs verwendet, für Silver Tip die blassere, noch unreife Knospe desselben Triebs. Weißer Tee nimmt zweieinhalb Blätter vom Trieb, die gedämpft und getrocknet statt wie Schwarztee fermentiert und gerollt werden, für einen sehr leicht verarbeiteten, natürlich süßen Geschmack. Violette und rosa Tees sind einzigartige Spezialsorten, reich an natürlichen Antioxidantien, die in einem eigenen, separaten Verfahren hergestellt werden. Das Anwesen stellt zudem wertschöpfende Mischungen her — etwa mit Lotosblüten aromatisierten Tee — sowie von Hand gebundenen Blooming Tea aus denselben Trieben.",
+      description: "Neben dem Standard-Schwarztee stellt das Anwesen auch seltene, handgefertigte Spezialtees her — meist von Hand fertiggestellt in der separaten Handtee-Fabrik statt auf der Schwarztee-Hauptlinie, weshalb diese Sorten auch 'handwerkliche Teesorten' genannt werden: Es ist eher Handwerkskunst als Massenproduktion. Viele davon stammen von einem markanten violett getönten Trieb, dessen Farbe von Anthocyan kommt. Für Golden Tip wird die voll ausgereifte Knospe dieses Triebs verwendet, für Silver Tip die blassere, noch unreife Knospe desselben Triebs. Weißer Tee nimmt zweieinhalb Blätter vom Trieb und lässt das Welken vollständig aus — gedämpft und getrocknet statt wie Schwarztee fermentiert und gerollt — für einen sehr leicht verarbeiteten, natürlich süßen Geschmack. Violette und rosa Tees sind einzigartige Spezialsorten, reich an natürlichen Antioxidantien, die in einem eigenen, separaten Verfahren hergestellt werden. Das Anwesen stellt zudem wertschöpfende Mischungen her — etwa mit Lotosblüten aromatisierten Tee — sowie von Hand gebundenen Blooming Tea aus denselben Trieben.",
       keyPoints: "Diese handwerklichen Sorten werden in deutlich geringeren Mengen gepflückt und verarbeitet als Standard-Schwarztee, was sie seltener und wertvoller macht — fragen Sie am Verkostungsstand, um sie zu probieren. Für die meisten dieser Sorten kann sowohl der violett getönte als auch der gewöhnliche grüne Trieb verwendet werden, wobei das Anwesen meist den violetten nimmt.",
       duration: "5 Minuten",
     },
@@ -1793,7 +1854,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "Die Teefabrik",
-      description: "Im Hauptfabrikgebäude wird gepflücktes Blatt vom Welken bis zur Verpackung zu fertigem Tee verarbeitet. Diese Station bietet einen Überblick über die arbeitende Fabrikhalle und die in jeder Phase verwendeten Geräte.",
+      description: "Im Hauptfabrikgebäude wird gepflücktes Blatt vom Welken bis zur Verpackung zu fertigem Tee verarbeitet. Diese Station bietet einen Überblick über die arbeitende Fabrikhalle und die in jeder Phase verwendeten Geräte — Welken, Rollen, Fermentation (Oxidation), Trocknen, Teetrennung (Klassifizierung) und abschließendes Verpacken, in dieser Reihenfolge.",
       keyPoints: "Eine arbeitende Teefabrik führt die gesamte Abfolge vom Welken bis zur Verpackung unter einem Dach durch, eng abgestimmt auf den täglichen Blattertrag.",
       duration: "10-15 Minuten",
     },
@@ -1827,6 +1888,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Kithul-Jaggery wird für seinen reichen, karamellartigen Geschmack geschätzt und ist ein wichtiges Süßungsmittel in sri-lankischen Desserts; derselbe Saft kann auch zu Toddy vergoren oder zu Arrak destilliert werden.",
       duration: "5-10 Minuten",
     },
+    pruning: {
+      name: "Beschneiden",
+      description: "Vor dem Beschneiden lässt das Anwesen den Teestrauch bewusst eine Zeit lang weiterwachsen, anstatt ihn sofort zurückzuschneiden — der neue Trieb darf sich vollständig entwickeln, damit der Strauch Nährstoffe aufbaut. Erst wenn dieser Aufbau abgeschlossen ist, beginnt das Beschneiden, bei dem der Strauch auf etwa Kniehöhe zurückgeschnitten wird.",
+      keyPoints: "Den Strauch zunächst wachsen zu lassen, anstatt ihn nach einem festen Zeitplan unabhängig vom Zustand zu beschneiden, gibt der Pflanze Zeit, Nährstoffe nach oben zu leiten, bevor sie zurückgeschnitten wird.",
+      duration: "5 Minuten",
+    },
+    polytunnel: {
+      name: "Folientunnel & Gewächshaus",
+      description: "Neben einem bereits bestehenden Gewächshaus richtet das Anwesen einen Folientunnel ein, der noch nicht in Betrieb ist — er befindet sich noch im Aufbau — zum Anbau von Gemüse wie Paprika und Tomaten. Sobald er in Betrieb ist, können Gäste, die in der Villa oder im Cabana übernachten, das hier angebaute Gemüse selbst frisch pflücken.",
+      keyPoints: "Der Folientunnel befindet sich noch im Bau und ist noch nicht in Produktion, es gibt also noch nichts zu pflücken — schauen Sie wieder vorbei, sobald er in Betrieb ist.",
+      duration: "5 Minuten",
+    },
   },
   es: {
     plucking: {
@@ -1837,38 +1910,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Marchitado",
-      description: "Las hojas frescas se extienden en capas finas sobre largos canales por los que se hace circular aire, eliminando gradualmente la humedad. La hoja se vuelve flexible y maleable, lista para el enrollado sin quebrarse.",
+      description: "Las hojas frescas se extienden en capas finas sobre largos canales, donde grandes ventiladores fuerzan el paso del aire para eliminar gradualmente la humedad — lo que la finca llama el proceso de marchitado 'moderno'. La hoja se vuelve flexible y maleable, lista para el enrollado sin quebrarse.",
       keyPoints: "El marchitado uniforma la humedad en toda la hoja y permite que las enzimas naturales comiencen los cambios químicos que más tarde crearán el aroma y el color del té.",
       duration: "Esta etapa suele durar de 12 a 17 horas, dependiendo de la humedad y la circulación de aire.",
     },
     rolling: {
       name: "Enrollado",
-      description: "Las hojas marchitas pasan por máquinas enrolladoras que retuercen y rompen las paredes celulares de la hoja, liberando los jugos y aceites encerrados en su interior. Aquí es donde se forman la forma de la hoja y la fuerza del té.",
+      description: "Las hojas marchitas pasan por máquinas enrolladoras que retuercen y rompen las paredes celulares de la hoja, liberando los jugos y aceites encerrados en su interior y reduciéndola a pequeñas partículas. Aquí es donde se forman la forma de la hoja y la fuerza del té.",
       keyPoints: "Al romper las paredes celulares, las enzimas quedan expuestas al oxígeno, iniciando la oxidación. La intensidad y duración del enrollado determinan la fuerza y el aspecto final del té.",
       duration: "El enrollado suele durar entre 45 minutos y una hora, a menudo en varias pasadas.",
     },
     fermentation: {
       name: "Fermentación (Oxidación)",
-      description: "La hoja enrollada se extiende en una sala fresca y húmeda y se deja oxidar. La hoja verde se va tornando de un color cobrizo a medida que desarrolla el color, cuerpo y aroma propios del té negro.",
-      keyPoints: "Este es el paso más importante para el sabor. El tiempo debe calcularse con precisión — muy poco y el té queda ligero, demasiado y se vuelve plano y sin vida.",
-      duration: "La oxidación se controla estrechamente y generalmente dura entre 1,5 y 3 horas.",
+      description: "La hoja enrollada se extiende en una sala fresca y húmeda y se deja oxidar, con un humidificador que mantiene el aire lo bastante húmedo para que ocurra la reacción. La hoja verde se va tornando de un color cobrizo a medida que desarrolla el color, cuerpo y aroma propios del té negro — todo ello por oxidación natural, sin tintes ni aditivos.",
+      keyPoints: "Este es el paso más importante para el sabor. El tiempo debe calcularse con precisión — muy poco y el té queda ligero, demasiado y se vuelve plano y sin vida. Esto es también lo que diferencia los tipos de té que se elaboran aquí: el té negro sigue marchitado, enrollado, fermentación y luego tostado, mientras que el té verde se salta la fermentación por completo (solo marchitado, enrollado y secado) y es más suave — se bebe sobre todo por su carácter más ligero y casi medicinal; el té blanco se salta tanto el marchitado como la fermentación, pasando directamente de la hoja fresca al vapor y al secado. Esta fábrica no produce té Oolong, que el guía describe como un tipo fermentado similar al té negro, elaborado mediante vaporizado y cepillado a mano repetidos en lugar de enrollado mecánico.",
+      duration: "En esta fábrica, la fermentación suele durar entre 1,5 y 2,5 horas según las condiciones, antes de que la hoja pase al secado.",
     },
     drying: {
       name: "Secado (Tostado)",
-      description: "La hoja oxidada pasa por secadoras de aire caliente que detienen la oxidación al instante y fijan el carácter del té. Lo que sale al otro extremo es la conocida hoja de té negra y crujiente.",
+      description: "La hoja oxidada pasa por secadoras de aire caliente —que, según se indica, funcionan a unos 240 °C— que detienen la oxidación al instante y fijan el carácter del té. Lo que sale al otro extremo es la conocida hoja de té negra y crujiente. Los visitantes notan el calor de inmediato — es una de las zonas más calurosas de toda la planta.",
       keyPoints: "El tostado detiene los cambios químicos en el momento exacto y reduce la humedad a aproximadamente un 2-3%, algo esencial para que el té se mantenga fresco durante el almacenamiento y el transporte.",
       duration: "La hoja pasa por el secador en unos 20 minutos, a temperaturas cuidadosamente controladas.",
     },
     sorting: {
       name: "Clasificación y Graduación",
-      description: "El té verde y el té negro parten ambos del mismo arbusto y la misma hoja — lo que realmente los diferencia es la fermentación (oxidación), un paso por el que pasa el té negro y que el té verde se salta. La producción de esta fábrica es mayoritariamente té negro. Mientras la hoja seca pasa por la maquinaria de clasificación, se separa en un solo paso según de qué parte del brote original proviene: la punta tierna, que se rompe con facilidad, y las hojas más altas —solo un 2% aproximadamente de cada brote— se convierten en FBOPF Extra Special, el grado más fino y caro, mientras que la hoja más abajo se convierte en grados sólidos como BOP y Pekoe. La hoja más madura y más baja se convierte en Dust, y cualquier tallo o resto inservible se descarta como Refuse.",
+      description: "El té verde y el té negro parten ambos del mismo arbusto y la misma hoja — lo que realmente los diferencia es la fermentación (oxidación), un paso por el que pasa el té negro y que el té verde se salta. La producción de esta fábrica es mayoritariamente té negro. Mientras la hoja seca pasa por la maquinaria de clasificación, se separa en un solo paso según de qué parte del brote original proviene: la punta tierna, que se rompe con facilidad, y las hojas más altas —solo un 2% aproximadamente de cada brote— se convierten en FBOPF Extra Special, el grado más fino y caro, mientras que la hoja más abajo se convierte en grados sólidos como BOP y Pekoe. La hoja más madura y más baja se convierte en Dust, y cualquier tallo o resto inservible se descarta como Refuse. Esa maquinaria de clasificación incluye un separador de color con sistema de cámaras capaz de distinguir partículas como hojas y flores, filtrando cualquier cosa que no deba estar ahí. Unos tamices de distinto tamaño de malla separan además las partículas por tamaño en varias pasadas, y un separador electrostático carga eléctricamente sobre rodillos los restos de tallo marrones que quedan para poder retirarlos — ni el color ni el carácter provienen de tintes o aditivos, solo del procesamiento natural.",
       keyPoints: "El valor depende de la posición en el brote, no solo del tamaño de la hoja — cuanto más alta y tierna es la hoja, mayor es su grado y precio. El grado Dust, no la hoja de primera calidad, es lo que suele terminar en las bolsitas de té aromatizadas; los grados más finos, como el FBOPF Extra Special, rara vez se venden localmente debido a su alto valor en los mercados de exportación.",
       duration: "La clasificación se realiza de forma continua con maquinaria y tarda entre 30 y 45 minutos por lote.",
     },
     packing: {
       name: "Empaquetado",
-      description: "El té clasificado se pesa, se cata para verificar su calidad y se sella en envases a prueba de humedad o cajas de té, listo para viajar desde esta fábrica hasta tazas de todo el mundo.",
-      keyPoints: "El envasado hermético protege el té de la humedad y los olores, preservando el sabor que se construyó cuidadosamente a lo largo de cada etapa anterior del proceso.",
+      description: "El té clasificado se pesa, se cata para verificar su calidad y se sella en envases a prueba de humedad forrados con papel de aluminio, impresos con el nombre y logotipo de la fábrica, su número de registro, el Símbolo del Té de Ceilán y su certificado de seguridad alimentaria. En la zona de empaquetado se ven varios grados terminados uno junto a otro — Dust (destinado principalmente a las bolsitas de té), OP1, Pekoe, BOP (Broken Orange Pekoe) y OP (Orange Pekoe) —, siendo OP1 y OP especialmente populares en los mercados de habla árabe y el Pekoe muy conocido en Rusia e Irán. En lugar de exportar directamente, la fábrica vende su té terminado a través de la Subasta de Té de Colombo, donde los compradores adquieren los grados que necesitan.",
+      keyPoints: "El envasado hermético protege el té de la humedad y los olores, preservando el sabor que se construyó cuidadosamente a lo largo de cada etapa anterior del proceso. Vender a través de la Subasta de Té de Colombo en lugar de exportar directamente significa que son compradores externos, y no la propia fábrica, quienes gestionan el envío internacional posterior.",
       duration: "El lote final se empaqueta y queda listo para su despacho el mismo día en que se clasifica.",
     },
     cinnamon: {
@@ -2005,7 +2078,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Tés Artesanales de Alta Gama",
-      description: "Además del té negro estándar, la finca también produce raros tés artesanales elaborados a mano — la mayoría terminados a mano en la Fábrica de Té Artesanal, separada de la línea principal de té negro, razón por la cual estos grados también se llaman 'Tés Artesanales de Alta Gama': se parece más a una artesanía que a la producción en masa. Muchos de ellos provienen de un brote de tono morado distintivo, cuyo color proviene de la antocianina. El Golden Tip usa el brote completamente maduro de ese mismo brote, mientras que el Silver Tip usa el brote más pálido y aún inmaduro del mismo. El té blanco toma dos hojas y media del brote, cocidas al vapor y secadas en lugar de fermentadas y enrolladas como el té negro, para un sabor muy ligeramente procesado y naturalmente dulce. Los tés morado y rosado son variedades especiales únicas, ricas en antioxidantes naturales, elaboradas con su propio proceso separado. La finca también crea mezclas de valor añadido —como té infusionado con flores de loto— y Blooming Tea atado a mano a partir de los mismos brotes.",
+      description: "Además del té negro estándar, la finca también produce raros tés artesanales elaborados a mano — la mayoría terminados a mano en la Fábrica de Té Artesanal, separada de la línea principal de té negro, razón por la cual estos grados también se llaman 'Tés Artesanales de Alta Gama': se parece más a una artesanía que a la producción en masa. Muchos de ellos provienen de un brote de tono morado distintivo, cuyo color proviene de la antocianina. El Golden Tip usa el brote completamente maduro de ese mismo brote, mientras que el Silver Tip usa el brote más pálido y aún inmaduro del mismo. El té blanco toma dos hojas y media del brote y se salta el marchitado por completo — cocidas al vapor y secadas en lugar de fermentadas y enrolladas como el té negro — para un sabor muy ligeramente procesado y naturalmente dulce. Los tés morado y rosado son variedades especiales únicas, ricas en antioxidantes naturales, elaboradas con su propio proceso separado. La finca también crea mezclas de valor añadido —como té infusionado con flores de loto— y Blooming Tea atado a mano a partir de los mismos brotes.",
       keyPoints: "Estos grados artesanales se recolectan y procesan en cantidades mucho menores que el té negro estándar, lo que los hace más raros y apreciados — pregunte en el mostrador de degustación para probarlos. Para la mayoría de estos grados se puede usar tanto el brote de tono morado como el brote verde normal, aunque la finca suele usar el morado.",
       duration: "5 minutos",
     },
@@ -2047,7 +2120,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "La Fábrica de Té",
-      description: "El edificio principal de la fábrica es donde la hoja recolectada se convierte en té terminado, desde el marchitado hasta el envasado. Esta parada ofrece una visión general de la planta de la fábrica en funcionamiento y el equipo utilizado en cada etapa.",
+      description: "El edificio principal de la fábrica es donde la hoja recolectada se convierte en té terminado, desde el marchitado hasta el envasado. Esta parada ofrece una visión general de la planta de la fábrica en funcionamiento y el equipo utilizado en cada etapa — marchitado, enrollado, fermentación (oxidación), secado, separación del té (clasificación) y envasado final, en ese orden.",
       keyPoints: "Una fábrica de té en funcionamiento ejecuta toda la secuencia de marchitado a envasado bajo un mismo techo, sincronizada de cerca con la cantidad de hoja recibida cada día.",
       duration: "10-15 minutos",
     },
@@ -2081,6 +2154,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "El jaggery de kithul se aprecia por su intenso sabor a caramelo y es un edulcorante básico en los postres de Sri Lanka; la misma savia también puede fermentarse en toddy o destilarse en arrack.",
       duration: "5-10 minutos",
     },
+    pruning: {
+      name: "Poda",
+      description: "Antes de la poda, la finca deja deliberadamente que el arbusto de té crezca durante un tiempo en lugar de cortarlo de inmediato — dejando que el nuevo crecimiento se desarrolle por completo para que el arbusto acumule nutrientes. Solo una vez completada esa acumulación comienza la poda, que corta el arbusto hasta una altura aproximada de la rodilla.",
+      keyPoints: "Dejar que el arbusto crezca primero, en lugar de podarlo según un calendario fijo sin importar su estado, le da a la planta tiempo para dirigir los nutrientes hacia arriba antes de ser cortada.",
+      duration: "5 minutos",
+    },
+    polytunnel: {
+      name: "Túnel de Cultivo e Invernadero",
+      description: "Junto a un invernadero ya existente, la finca está instalando un túnel de cultivo que aún no está en uso — todavía se está construyendo — para cultivar hortalizas como pimientos y tomates. Una vez que esté en funcionamiento, los huéspedes alojados en la villa o el cabana podrán recoger ellos mismos verduras recién cultivadas aquí.",
+      keyPoints: "El túnel de cultivo todavía está en construcción y no está en producción todavía, así que por ahora no hay nada que recoger — vuelva a consultar una vez que esté operativo.",
+      duration: "5 minutos",
+    },
   },
   fr: {
     plucking: {
@@ -2091,38 +2176,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Flétrissage",
-      description: "Les feuilles fraîches sont étalées en fine couche sur de longs bacs à travers lesquels de l'air est aspiré, éliminant progressivement l'humidité. La feuille devient souple et malléable, prête pour le roulage sans se briser.",
+      description: "Les feuilles fraîches sont étalées en fine couche sur de longs bacs, où de grands ventilateurs poussent l'air à travers elles pour éliminer progressivement l'humidité — ce que le domaine appelle le flétrissage 'moderne'. La feuille devient souple et malléable, prête pour le roulage sans se briser.",
       keyPoints: "Le flétrissage uniformise l'humidité dans la feuille et permet aux enzymes naturelles d'amorcer les changements chimiques qui créeront plus tard l'arôme et la couleur du thé.",
       duration: "Cette étape dure généralement de 12 à 17 heures, selon l'humidité et la circulation de l'air.",
     },
     rolling: {
       name: "Roulage",
-      description: "Les feuilles flétries passent dans des machines à rouler qui tordent et brisent les parois cellulaires de la feuille, libérant les jus et huiles qui y sont enfermés. C'est là que se forment la forme de la feuille et la force du thé.",
+      description: "Les feuilles flétries passent dans des machines à rouler qui tordent et brisent les parois cellulaires de la feuille, libérant les jus et huiles qui y sont enfermés et réduisant la feuille en petites particules. C'est là que se forment la forme de la feuille et la force du thé.",
       keyPoints: "La rupture des parois cellulaires expose les enzymes à l'oxygène, déclenchant l'oxydation. L'intensité et la durée du roulage déterminent la force et l'aspect final du thé.",
       duration: "Le roulage dure généralement de 45 minutes à une heure, souvent en plusieurs passages.",
     },
     fermentation: {
       name: "Fermentation (Oxydation)",
-      description: "La feuille roulée est étalée dans une pièce fraîche et humide et laissée à oxyder. La feuille verte devient progressivement brun cuivré à mesure qu'elle développe la couleur, le corps et l'arôme associés au thé noir.",
-      keyPoints: "C'est l'étape la plus importante pour la saveur. Le minutage doit être jugé avec précision — trop peu et le thé est fade, trop et il devient plat et terne.",
-      duration: "L'oxydation est étroitement contrôlée et dure généralement de 1,5 à 3 heures.",
+      description: "La feuille roulée est étalée dans une pièce fraîche et humide et laissée à oxyder, un humidificateur maintenant l'air suffisamment humide pour que la réaction se produise. La feuille verte devient progressivement brun cuivré à mesure qu'elle développe la couleur, le corps et l'arôme associés au thé noir — entièrement grâce à l'oxydation naturelle, sans colorant ni additif.",
+      keyPoints: "C'est l'étape la plus importante pour la saveur. Le minutage doit être jugé avec précision — trop peu et le thé est fade, trop et il devient plat et terne. C'est aussi ce qui distingue les types de thé fabriqués ici : le thé noir suit flétrissage, roulage, fermentation, puis torréfaction, tandis que le thé vert évite entièrement la fermentation (flétrissage, roulage, séchage seulement) et est plus doux — surtout bu pour son caractère plus léger, presque médicinal ; le thé blanc évite à la fois le flétrissage et la fermentation, passant directement de la feuille fraîche à la cuisson à la vapeur puis au séchage. L'usine ne produit pas de thé Oolong, que le guide décrit comme un style fermenté proche du thé noir, obtenu par des cuissons à la vapeur et des brossages à la main répétés plutôt que par un roulage mécanique.",
+      duration: "Dans cette usine, la fermentation dure généralement de 1,5 à 2,5 heures selon les conditions, avant que la feuille ne passe au séchage.",
     },
     drying: {
       name: "Séchage (Torréfaction)",
-      description: "La feuille oxydée passe dans des séchoirs à air chaud qui arrêtent instantanément l'oxydation et figent le caractère du thé. Ce qui en ressort est la feuille de thé noire et croustillante bien connue.",
+      description: "La feuille oxydée passe dans des séchoirs à air chaud — qui, d'après ce qui a été indiqué, fonctionnent à environ 240 °C — qui arrêtent instantanément l'oxydation et figent le caractère du thé. Ce qui en ressort est la feuille de thé noire et croustillante bien connue. Les visiteurs remarquent immédiatement la chaleur — c'est l'une des zones les plus chaudes de tout l'atelier.",
       keyPoints: "La torréfaction arrête les changements chimiques au moment exact et réduit l'humidité à environ 2-3 %, ce qui est essentiel pour que le thé reste frais pendant le stockage et l'expédition.",
       duration: "La feuille passe dans le séchoir en environ 20 minutes, à des températures soigneusement contrôlées.",
     },
     sorting: {
       name: "Triage et Classification",
-      description: "Le thé vert et le thé noir proviennent tous deux du même théier et de la même feuille — ce qui les distingue réellement, c'est la fermentation (oxydation), une étape que traverse le thé noir mais que le thé vert évite. La production de cette usine est majoritairement du thé noir. Lorsque la feuille séchée passe dans les machines de tri, elle est séparée en un seul passage selon la partie de la pousse d'origine dont elle provient : la pointe tendre, qui se casse facilement, et les feuilles du sommet — seulement environ 2 % de chaque pousse — deviennent du FBOPF Extra Special, la qualité la plus fine et la plus chère, tandis que la feuille plus bas devient des qualités solides comme le BOP et le Pekoe. La feuille la plus mûre, la plus basse, devient du Dust, et toute tige ou débris inutilisable est écarté en tant que Refuse.",
+      description: "Le thé vert et le thé noir proviennent tous deux du même théier et de la même feuille — ce qui les distingue réellement, c'est la fermentation (oxydation), une étape que traverse le thé noir mais que le thé vert évite. La production de cette usine est majoritairement du thé noir. Lorsque la feuille séchée passe dans les machines de tri, elle est séparée en un seul passage selon la partie de la pousse d'origine dont elle provient : la pointe tendre, qui se casse facilement, et les feuilles du sommet — seulement environ 2 % de chaque pousse — deviennent du FBOPF Extra Special, la qualité la plus fine et la plus chère, tandis que la feuille plus bas devient des qualités solides comme le BOP et le Pekoe. La feuille la plus mûre, la plus basse, devient du Dust, et toute tige ou débris inutilisable est écarté en tant que Refuse. Ces machines de tri comprennent un séparateur de couleur doté d'un système de caméras capable de distinguer des particules telles que les feuilles et les fleurs, filtrant tout ce qui n'a pas sa place. Des tamis de différentes tailles de maille séparent ensuite les particules par taille sur plusieurs passages, et un séparateur électrostatique charge électriquement sur des rouleaux les résidus de tiges brunes restants afin de pouvoir les écarter — ni la couleur ni le caractère ne proviennent de colorants ou d'additifs, seulement du traitement naturel.",
       keyPoints: "La valeur dépend de la position sur la pousse, pas seulement de la taille de la feuille — plus la feuille est haute et tendre, plus sa qualité et son prix sont élevés. C'est la qualité Dust, et non la feuille de premier choix, qui se retrouve généralement dans les sachets de thé aromatisés ; les meilleures qualités comme le FBOPF Extra Special sont rarement vendues localement en raison de leur valeur sur les marchés d'exportation.",
       duration: "Le triage s'effectue en continu sur des machines et prend environ 30 à 45 minutes par lot.",
     },
     packing: {
       name: "Emballage",
-      description: "Le thé classé est pesé, dégusté pour en vérifier la qualité, puis scellé dans un emballage étanche à l'humidité ou des caisses à thé, prêt à voyager de cette usine jusqu'aux tasses du monde entier.",
-      keyPoints: "L'emballage hermétique protège le thé de l'humidité et des odeurs, préservant la saveur soigneusement élaborée à chaque étape précédente du processus.",
+      description: "Le thé classé est pesé, dégusté pour en vérifier la qualité, puis scellé dans un emballage étanche à l'humidité doublé de papier aluminium, imprimé du nom et du logo de l'usine, de son numéro d'enregistrement, du Symbole du Thé de Ceylan et de son certificat de sécurité alimentaire. Dans la zone d'emballage se trouvent côte à côte plusieurs qualités finies — Dust (destiné principalement aux sachets de thé), OP1, Pekoe, BOP (Broken Orange Pekoe) et OP (Orange Pekoe) —, l'OP1 et l'OP étant particulièrement appréciés sur les marchés arabophones et le Pekoe bien connu en Russie et en Iran. Plutôt que d'exporter directement, l'usine vend son thé fini par le biais de la Vente aux enchères de thé de Colombo, où les acheteurs se procurent les qualités dont ils ont besoin.",
+      keyPoints: "L'emballage hermétique protège le thé de l'humidité et des odeurs, préservant la saveur soigneusement élaborée à chaque étape précédente du processus. Vendre par le biais de la Vente aux enchères de thé de Colombo plutôt que d'exporter directement signifie que ce sont des acheteurs extérieurs, et non l'usine elle-même, qui gèrent l'expédition internationale ultérieure.",
       duration: "Le lot final est emballé et prêt à être expédié le jour même de son classement.",
     },
     cinnamon: {
@@ -2259,7 +2344,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "Thés Artisanaux d'Exception",
-      description: "Outre le thé noir standard, le domaine produit également de rares thés artisanaux façonnés à la main — la plupart finis à la main à la Manufacture de Thé Artisanal, distincte de la ligne principale de thé noir, ce qui explique pourquoi ces qualités sont aussi appelées « Thés Artisanaux d'Exception » : c'est plus proche de l'artisanat que de la production de masse. Beaucoup d'entre eux proviennent d'une pousse à la teinte violette caractéristique, dont la couleur vient de l'anthocyane. Le Golden Tip utilise le bourgeon pleinement mûri de cette même pousse, tandis que le Silver Tip utilise le bourgeon plus pâle, encore immature, de la même pousse. Le thé blanc prend deux feuilles et demie de la pousse, cuites à la vapeur puis séchées plutôt que fermentées et roulées comme le thé noir, pour une saveur très légèrement transformée et naturellement sucrée. Les thés violet et rose sont des variétés spéciales uniques, riches en antioxydants naturels, élaborées selon leur propre procédé distinct. Le domaine élabore aussi des mélanges à valeur ajoutée — comme un thé infusé aux fleurs de lotus — ainsi qu'un Blooming Tea noué à la main à partir des mêmes pousses.",
+      description: "Outre le thé noir standard, le domaine produit également de rares thés artisanaux façonnés à la main — la plupart finis à la main à la Manufacture de Thé Artisanal, distincte de la ligne principale de thé noir, ce qui explique pourquoi ces qualités sont aussi appelées « Thés Artisanaux d'Exception » : c'est plus proche de l'artisanat que de la production de masse. Beaucoup d'entre eux proviennent d'une pousse à la teinte violette caractéristique, dont la couleur vient de l'anthocyane. Le Golden Tip utilise le bourgeon pleinement mûri de cette même pousse, tandis que le Silver Tip utilise le bourgeon plus pâle, encore immature, de la même pousse. Le thé blanc prend deux feuilles et demie de la pousse et évite entièrement le flétrissage — cuites à la vapeur puis séchées plutôt que fermentées et roulées comme le thé noir — pour une saveur très légèrement transformée et naturellement sucrée. Les thés violet et rose sont des variétés spéciales uniques, riches en antioxydants naturels, élaborées selon leur propre procédé distinct. Le domaine élabore aussi des mélanges à valeur ajoutée — comme un thé infusé aux fleurs de lotus — ainsi qu'un Blooming Tea noué à la main à partir des mêmes pousses.",
       keyPoints: "Ces qualités artisanales sont cueillies et transformées en quantités bien plus faibles que le thé noir standard, ce qui les rend plus rares et plus prisées — demandez au comptoir de dégustation pour les goûter. La pousse à teinte violette ou la pousse verte ordinaire peuvent être utilisées pour la plupart de ces qualités, bien que le domaine utilise le plus souvent la pousse violette.",
       duration: "5 minutes",
     },
@@ -2301,7 +2386,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "La Fabrique de Thé",
-      description: "Le bâtiment principal de l'usine est l'endroit où la feuille cueillie devient du thé fini, du flétrissage jusqu'à l'emballage. Cette étape offre un aperçu de l'atelier de production et des équipements utilisés à chaque étape.",
+      description: "Le bâtiment principal de l'usine est l'endroit où la feuille cueillie devient du thé fini, du flétrissage jusqu'à l'emballage. Cette étape offre un aperçu de l'atelier de production et des équipements utilisés à chaque étape — flétrissage, roulage, fermentation (oxydation), séchage, triage du thé (classification) et emballage final, dans cet ordre.",
       keyPoints: "Une usine de thé en activité fait fonctionner toute la séquence du flétrissage à l'emballage sous un même toit, en synchronisation étroite avec l'arrivée quotidienne des feuilles.",
       duration: "10-15 minutes",
     },
@@ -2335,6 +2420,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Le jaggery de kithul est apprécié pour sa saveur riche proche du caramel et constitue un édulcorant de base dans les desserts sri-lankais ; la même sève peut aussi être fermentée en toddy ou distillée en arrack.",
       duration: "5-10 minutes",
     },
+    pruning: {
+      name: "Taille",
+      description: "Avant la taille, le domaine laisse délibérément le théier pousser pendant un certain temps plutôt que de le couper immédiatement — en laissant la nouvelle pousse se développer pleinement afin que l'arbuste accumule des réserves nutritives. La taille ne commence qu'une fois cette accumulation terminée, en coupant l'arbuste jusqu'à une hauteur d'environ le genou.",
+      keyPoints: "Laisser d'abord l'arbuste pousser, plutôt que de le tailler selon un calendrier fixe sans tenir compte de son état, donne à la plante le temps d'acheminer les nutriments vers le haut avant d'être coupée.",
+      duration: "5 minutes",
+    },
+    polytunnel: {
+      name: "Tunnel de Culture et Serre",
+      description: "Aux côtés d'une serre déjà existante, le domaine met en place un tunnel de culture qui n'est pas encore utilisé — il est encore en construction — pour cultiver des légumes tels que des poivrons et des tomates. Une fois opérationnel, les hôtes séjournant à la villa ou au cabana pourront cueillir eux-mêmes des légumes fraîchement cultivés ici.",
+      keyPoints: "Le tunnel de culture est encore en construction plutôt qu'en production, donc il n'y a rien à cueillir pour l'instant — revenez consulter une fois qu'il sera opérationnel.",
+      duration: "5 minutes",
+    },
   },
   zh: {
     plucking: {
@@ -2345,38 +2442,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "萎凋",
-      description: "新鲜茶叶被薄薄地摊放在长长的萎凋槽中，空气持续穿过茶叶带走水分。叶片逐渐变得柔软有韧性，可以进行揉捻而不会破碎。",
+      description: "新鲜茶叶被薄薄地摊放在长长的萎凋槽中，大型风扇会强制送风穿过茶叶，持续带走水分——这就是庄园所称的“现代”萎凋工艺。叶片逐渐变得柔软有韧性，可以进行揉捻而不会破碎。",
       keyPoints: "萎凋使叶片水分均匀分布，并使天然酶开始引发日后形成茶叶香气和色泽的化学变化。",
       duration: "此阶段通常需要12至17小时，具体取决于湿度和通风情况。",
     },
     rolling: {
       name: "揉捻",
-      description: "萎凋后的茶叶通过揉捻机，扭转并破坏叶片的细胞壁，释放出锁在其中的汁液和精油。茶叶的外形和茶汤的浓度就在此阶段形成。",
+      description: "萎凋后的茶叶通过揉捻机，扭转并破坏叶片的细胞壁，释放出锁在其中的汁液和精油，并将茶叶揉碎成细小的颗粒。茶叶的外形和茶汤的浓度就在此阶段形成。",
       keyPoints: "破坏细胞壁使酶暴露于氧气中，从而引发氧化。揉捻的力度和时长决定了成品茶的浓度和外观。",
       duration: "揉捻通常持续45分钟到一小时，往往需要多次进行。",
     },
     fermentation: {
       name: "发酵（氧化）",
-      description: "揉捻后的茶叶被摊放在凉爽潮湿的房间中进行氧化。绿色的叶片逐渐变成古铜色，形成红茶特有的色泽、口感和香气。",
-      keyPoints: "这是决定风味最关键的一步。时间把控必须精准——氧化不足茶汤会寡淡，氧化过度则会使茶汤变得平淡无味。",
-      duration: "氧化过程受到严格控制，通常持续1.5至3小时。",
+      description: "揉捻后的茶叶被摊放在凉爽潮湿的房间中进行氧化，并用加湿器维持足够的空气湿度以使反应顺利进行。绿色的叶片逐渐变成古铜色，形成红茶特有的色泽、口感和香气——这完全来自天然氧化，不含任何染色剂或添加剂。",
+      keyPoints: "这是决定风味最关键的一步。时间把控必须精准——氧化不足茶汤会寡淡，氧化过度则会使茶汤变得平淡无味。这也是本厂各类茶叶的区别所在：红茶依次经过萎凋、揉捻、发酵，再到烘焙；绿茶则完全跳过发酵（只经过萎凋、揉捻、干燥），口感更温和——主要因其更柔和、近乎药用的特质而被饮用；白茶则跳过萎凋和发酵这两道工序，直接从鲜叶进入蒸制和干燥。本厂不生产乌龙茶，导游将其描述为一种类似红茶的发酵茶，通过反复蒸制和手工揉搓而非机械揉捻制成。",
+      duration: "在本厂，发酵通常需要1.5至2.5小时，具体取决于条件，之后茶叶便进入干燥工序。",
     },
     drying: {
       name: "干燥（烘焙）",
-      description: "氧化后的茶叶通过热风干燥机，瞬间停止氧化并锁住茶叶的特质。出来的便是我们熟悉的乌黑、干脆的茶叶。",
+      description: "氧化后的茶叶通过热风干燥机——据称运行温度约为240°C——瞬间停止氧化并锁住茶叶的特质。出来的便是我们熟悉的乌黑、干脆的茶叶。参观者会立刻感受到高温——这是整个厂区中最热的区域之一。",
       keyPoints: "烘焙在恰当的时刻停止化学变化，并将水分降至约2-3%，这对茶叶在储存和运输过程中保持新鲜至关重要。",
       duration: "茶叶在精确控温下通过烘干机大约需要20分钟。",
     },
     sorting: {
       name: "分级筛选",
-      description: "绿茶和红茶其实都源自同一株茶树、同一片茶叶——真正让它们不同的是发酵（氧化）这道工序，红茶要经过发酵，而绿茶则跳过这一步。本厂的产量以红茶为主。干燥后的茶叶经过分级机械时，会一次性按照它在原始新梢上所处的位置被分开：柔嫩、易折断的芽尖和最上部的叶片——仅占每根新梢的约2%——会被制成FBOPF特级（FBOPF Extra Special），也就是最优质、最昂贵的等级，而更靠下的叶片则会制成BOP、Pekoe等扎实的等级。最成熟、最靠下的叶片会制成茶末（Dust），无法使用的茎梗和碎屑则作为废茶（Refuse）被剔除。",
+      description: "绿茶和红茶其实都源自同一株茶树、同一片茶叶——真正让它们不同的是发酵（氧化）这道工序，红茶要经过发酵，而绿茶则跳过这一步。本厂的产量以红茶为主。干燥后的茶叶经过分级机械时，会一次性按照它在原始新梢上所处的位置被分开：柔嫩、易折断的芽尖和最上部的叶片——仅占每根新梢的约2%——会被制成FBOPF特级（FBOPF Extra Special），也就是最优质、最昂贵的等级，而更靠下的叶片则会制成BOP、Pekoe等扎实的等级。最成熟、最靠下的叶片会制成茶末（Dust），无法使用的茎梗和碎屑则作为废茶（Refuse）被剔除。这套分级机械还包括一台配备摄像系统的色选机，能够区分茶叶与花瓣等杂物颗粒，并将不属于成品的杂质过滤掉。不同网孔尺寸的筛网还会经过多道工序按颗粒大小进一步分离，静电分离器则会让残留的褐色茎梗碎屑在滚筒上带上静电，从而被吸走分离——这些色泽与特质都不是来自染色剂或添加剂，而完全来自天然加工。",
       keyPoints: "茶叶的价值取决于它在新梢上的位置，而不仅仅是叶片大小——叶片位置越高、越嫩，等级和价格就越高。通常出现在加香茶包里的并不是优质茶叶，而是茶末（Dust）等级；像FBOPF特级这样的顶级茶，由于在出口市场上价值极高，很少在本地销售。",
       duration: "分级在机器上连续进行，每批大约需要30至45分钟。",
     },
     packing: {
       name: "包装",
-      description: "分级后的茶叶经过称重和品质品鉴，密封装入防潮包装或茶箱，准备从工厂运往世界各地的茶杯中。",
-      keyPoints: "密封包装可防止茶叶受潮和串味，保留此前每个工序精心塑造出的风味。",
+      description: "分级后的茶叶经过称重和品质品鉴，密封装入衬有铝箔、印有工厂名称与标志、注册编号、锡兰茶标志及食品安全证书的防潮包装。包装区可以看到多个成品等级并排陈列——茶末（Dust，主要用于茶包）、OP1、Pekoe、BOP（碎橙白毫，Broken Orange Pekoe）以及OP（橙白毫，Orange Pekoe）——其中OP1和OP在阿拉伯语市场尤其受欢迎，Pekoe则在俄罗斯和伊朗广为人知。本厂并不直接出口，而是通过科伦坡茶叶拍卖会出售成品茶，由买家在拍卖会上选购所需的等级。",
+      keyPoints: "密封包装可防止茶叶受潮和串味，保留此前每个工序精心塑造出的风味。通过科伦坡茶叶拍卖会而非直接出口销售，意味着后续的国际运输由外部买家而非工厂本身来处理。",
       duration: "最后一批茶叶在分级当天即可完成包装，准备发货。",
     },
     cinnamon: {
@@ -2513,7 +2610,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "手工精品茶",
-      description: "除了标准红茶外，庄园还出产稀有的手工精品茶——这些茶大多在独立的手工制茶厂而非主要的红茶生产线上手工完成，因此这些等级也被称为「手工精品茶」：它更接近一门手艺，而非批量生产。其中许多都取自一种独特的紫色新梢，其颜色来自花青素。金针取自该新梢完全成熟的芽头，银针则取自同一新梢颜色更浅、尚未成熟的芽头。白茶取新梢上的两叶半，经蒸制、烘干而成，不像红茶那样经过发酵和揉捻，因此口感极轻微加工、带有天然甜味。紫茶与粉茶是富含天然抗氧化物的独特特色品种，各自采用自己独立的工艺制作。庄园还会制作增值调配茶——例如加入莲花的茶——以及用同样的新梢手工扎制而成的开花茶（Blooming Tea）。",
+      description: "除了标准红茶外，庄园还出产稀有的手工精品茶——这些茶大多在独立的手工制茶厂而非主要的红茶生产线上手工完成，因此这些等级也被称为「手工精品茶」：它更接近一门手艺，而非批量生产。其中许多都取自一种独特的紫色新梢，其颜色来自花青素。金针取自该新梢完全成熟的芽头，银针则取自同一新梢颜色更浅、尚未成熟的芽头。白茶取新梢上的两叶半，完全跳过萎凋——经蒸制、烘干而成，不像红茶那样经过发酵和揉捻——因此口感极轻微加工、带有天然甜味。紫茶与粉茶是富含天然抗氧化物的独特特色品种，各自采用自己独立的工艺制作。庄园还会制作增值调配茶——例如加入莲花的茶——以及用同样的新梢手工扎制而成的开花茶（Blooming Tea）。",
       keyPoints: "这些精品茶的采摘和加工数量远少于标准红茶，这正是它们更为稀有珍贵的原因——可在品茶柜台询问是否可以品尝。这些等级中的大多数既可以用紫色新梢，也可以用普通绿色新梢制作，不过庄园大多使用紫色新梢。",
       duration: "5分钟",
     },
@@ -2555,7 +2652,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "茶厂",
-      description: "主厂房是采摘下来的茶叶经萎凋直至包装制成成品茶的地方。本站概览工厂车间及各阶段所用的设备。",
+      description: "主厂房是采摘下来的茶叶经萎凋直至包装制成成品茶的地方。本站概览工厂车间及各阶段所用的设备——依次为萎凋、揉捻、发酵（氧化）、干燥、茶叶分选（分级）以及最终包装。",
       keyPoints: "一座运转中的茶厂在同一屋檐下完成从萎凋到包装的全部流程，并需与每日采摘量紧密配合。",
       duration: "10-15分钟",
     },
@@ -2589,6 +2686,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "基图尔贾格里糖因浓郁的焦糖风味而备受推崇，是斯里兰卡甜点中的基本甜味剂；同样的树液也可以发酵成托迪酒或蒸馏成亚力酒。",
       duration: "5-10分钟",
     },
+    pruning: {
+      name: "修剪",
+      description: "在修剪之前，庄园会特意让茶树先生长一段时间，而不是立刻剪短——让新梢充分长出，使茶树积累养分。只有在这种养分积累完成之后，才会开始修剪，将茶树剪至大约膝盖的高度。",
+      keyPoints: "让茶树先自然生长，而不是不顾其状态按固定时间表修剪，可以让茶树有时间在被剪短之前把养分向上输送。",
+      duration: "5分钟",
+    },
+    polytunnel: {
+      name: "塑料大棚与温室",
+      description: "除了现有的温室外，庄园正在搭建一个尚未投入使用的塑料大棚——目前仍在建设中——用于种植灯笼椒、番茄等蔬菜。一旦投入使用，入住别墅或小木屋的客人将能够亲自新鲜采摘这里种植的蔬菜。",
+      keyPoints: "塑料大棚目前仍处于建设阶段，尚未投入生产，所以暂时还没有蔬菜可采——待其投入使用后请再次查看。",
+      duration: "5分钟",
+    },
   },
   ja: {
     plucking: {
@@ -2599,38 +2708,38 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "萎凋",
-      description: "生葉は長い萎凋槽に薄く広げられ、空気が通されて水分が徐々に取り除かれます。葉は次第にしなやかになり、崩れることなく揉捻できる状態になります。",
+      description: "生葉は長い萎凋槽に薄く広げられ、大型の送風機で強制的に風を通すことで水分が徐々に取り除かれます——農園ではこれを「モダン」萎凋プロセスと呼んでいます。葉は次第にしなやかになり、崩れることなく揉捻できる状態になります。",
       keyPoints: "萎凋は葉全体の水分を均一にし、天然の酵素が、後に紅茶の香りと色を生み出す化学変化を始めるきっかけとなります。",
       duration: "この工程には通常、湿度と通風にもよりますが12〜17時間かかります。",
     },
     rolling: {
       name: "揉捻",
-      description: "萎凋した茶葉は揉捻機にかけられ、葉の細胞壁がねじられて破壊され、内部に閉じ込められていた液汁と油分が放出されます。ここで茶葉の形と紅茶の濃さが形作られます。",
+      description: "萎凋した茶葉は揉捻機にかけられ、葉の細胞壁がねじられて破壊され、内部に閉じ込められていた液汁と油分が放出されるとともに、茶葉が細かい粒子に砕かれます。ここで茶葉の形と紅茶の濃さが形作られます。",
       keyPoints: "細胞壁が破壊されることで酵素が酸素にさらされ、酸化が始まります。どれだけ強く、どれだけ長く揉むかが、最終的な紅茶の濃さと外観を決定します。",
       duration: "揉捻は通常45分から1時間ほど行われ、複数回に分けて行われることが多いです。",
     },
     fermentation: {
       name: "発酵（酸化）",
-      description: "揉捻された茶葉は涼しく湿度の高い部屋に広げられ、酸化させられます。緑色の葉は次第に銅色がかった茶色に変わり、紅茶特有の色、コク、香りを発達させます。",
-      keyPoints: "これは風味にとって最も重要な工程です。タイミングは正確に見極める必要があります——短すぎると水っぽくなり、長すぎると平板で鈍い味になります。",
-      duration: "酸化は厳密に管理され、通常1.5〜3時間続きます。",
+      description: "揉捻された茶葉は涼しく湿度の高い部屋に広げられ、酸化させられます。加湿器によって反応が進むのに十分な湿度が保たれます。緑色の葉は次第に銅色がかった茶色に変わり、紅茶特有の色、コク、香りを発達させます——これはすべて天然の酸化によるもので、着色料や添加物は一切使用されません。",
+      keyPoints: "これは風味にとって最も重要な工程です。タイミングは正確に見極める必要があります——短すぎると水っぽくなり、長すぎると平板で鈍い味になります。これはまた、ここで作られる茶の種類を分けるものでもあります——紅茶は萎凋、揉捻、発酵、そして火入れという順序をたどりますが、緑茶は発酵を完全に省き（萎凋、揉捻、乾燥のみ）、より穏やかな味わいとなり、主にその優しく薬用的な性質のために飲まれます。白茶は萎凋と発酵の両方を省き、生葉から直接蒸し、乾燥させます。この工場ではウーロン茶は作っていません——ガイドはこれを、機械による揉捻の代わりに蒸しと手もみを繰り返して作る、紅茶に似た発酵茶として説明しています。",
+      duration: "この工場では、条件によって発酵は通常1.5〜2.5時間かかり、その後茶葉は乾燥工程へ進みます。",
     },
     drying: {
       name: "乾燥（火入れ）",
-      description: "酸化した茶葉は熱風乾燥機を通り、酸化を瞬時に止めて紅茶の特性を閉じ込めます。出てくるのは、おなじみの黒く、パリッとした茶葉です。",
+      description: "酸化した茶葉は熱風乾燥機を通り——伝えられるところでは約240°Cで稼働しているといいます——酸化を瞬時に止めて紅茶の特性を閉じ込めます。出てくるのは、おなじみの黒く、パリッとした茶葉です。見学者はすぐに熱気に気づきます——工場内でも屈指の暑さのエリアです。",
       keyPoints: "火入れはまさに適切な瞬間に化学変化を止め、水分を約2〜3%まで減らします。これは保管・輸送中に紅茶の鮮度を保つために不可欠です。",
       duration: "茶葉は厳密に管理された温度で、約20分かけて乾燥機を通過します。",
     },
     sorting: {
       name: "選別・格付け",
-      description: "緑茶と紅茶はどちらも同じ茶樹・同じ茶葉から作られます——両者を実際に分けているのは発酵（酸化）という工程で、紅茶はこれを経ますが、緑茶はこの工程を省きます。この工場の生産量の大部分は紅茶です。乾燥させた茶葉が選別機を通る際、元の新芽のどの部分から採れたかによって、一度の工程で分けられます：柔らかく簡単に折れる芽先と最上部の葉——各新芽のわずか約2％——はFBOPFエクストラスペシャルという、最高級で最も高価な等級になり、それより下の葉はBOPやペコーといったしっかりした等級になります。最も成熟した最下部の葉はダスト（Dust）になり、使用できない茎やくずはリフューズ（Refuse）として取り除かれます。",
+      description: "緑茶と紅茶はどちらも同じ茶樹・同じ茶葉から作られます——両者を実際に分けているのは発酵（酸化）という工程で、紅茶はこれを経ますが、緑茶はこの工程を省きます。この工場の生産量の大部分は紅茶です。乾燥させた茶葉が選別機を通る際、元の新芽のどの部分から採れたかによって、一度の工程で分けられます：柔らかく簡単に折れる芽先と最上部の葉——各新芽のわずか約2％——はFBOPFエクストラスペシャルという、最高級で最も高価な等級になり、それより下の葉はBOPやペコーといったしっかりした等級になります。最も成熟した最下部の葉はダスト（Dust）になり、使用できない茎やくずはリフューズ（Refuse）として取り除かれます。この選別機には、葉と花などの粒子を見分けられるカメラシステムを備えたカラーセパレーターが組み込まれており、混入すべきでないものを取り除きます。さまざまな網目の大きさのふるいが、複数の工程でさらに粒子を大きさ別に分け、静電分離機がローラー上で残った茶色い茎の破片に静電気を帯びさせて取り除きます——この色や特性はいずれも着色料や添加物によるものではなく、すべて天然の加工によるものです。",
       keyPoints: "価値は葉の大きさだけでなく、新芽のどの位置にあったかによって決まります——葉が上部にあり柔らかいほど、等級も価格も高くなります。香り付けした紅茶ティーバッグに通常入っているのは高級茶葉ではなく、ダスト等級です。FBOPFエクストラスペシャルのような最高級茶は、輸出市場での価値が非常に高いため、国内で販売されることはめったにありません。",
       duration: "選別は機械で連続的に行われ、1バッチあたり約30〜45分かかります。",
     },
     packing: {
       name: "梱包",
-      description: "格付けされた茶葉は計量され、品質を確認するために試飲された後、防湿包装や茶箱に密封され、この工場から世界中のカップへと旅立つ準備が整います。",
-      keyPoints: "気密包装は茶葉を湿気やにおいから守り、それまでの工程で丁寧に作り上げられた風味を保ちます。",
+      description: "格付けされた茶葉は計量され、品質を確認するために試飲された後、アルミ箔で裏打ちされ、工場名とロゴ、登録番号、セイロンティーシンボル、食品安全認証が印刷された防湿包装に密封されます。梱包エリアには、いくつもの完成した等級が並んでいます——ダスト（主にティーバッグ用）、OP1、ペコー、BOP（ブロークンオレンジペコー）、OP（オレンジペコー）——OP1とOPは特にアラビア語圏の市場で人気があり、ペコーはロシアやイランでよく知られています。工場は直接輸出するのではなく、完成した茶をコロンボ紅茶オークションを通じて販売し、そこでバイヤーが必要な等級を買い付けます。",
+      keyPoints: "気密包装は茶葉を湿気やにおいから守り、それまでの工程で丁寧に作り上げられた風味を保ちます。直接輸出する代わりにコロンボ紅茶オークションを通じて販売するということは、その後の国際輸送を担うのは工場自身ではなく外部のバイヤーであることを意味します。",
       duration: "最終ロットは格付けされた当日のうちに梱包され、出荷準備が整います。",
     },
     cinnamon: {
@@ -2767,7 +2876,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "artisanal-tea-grades": {
       name: "職人技の高級茶",
-      description: "標準的な紅茶に加えて、この農園では希少な手作りの高級茶も生産しています——その多くは紅茶の主生産ラインではなく、別棟の手工茶工場で手作業により仕上げられます。これが「職人技の高級茶」とも呼ばれる理由で、大量生産というより工芸に近いものです。これらの多くは特徴的な紫がかった新芽から作られ、その色はアントシアニンによるものです。ゴールデンティップスにはその新芽の完全に成熟した芽を、シルバーティップスには同じ新芽のまだ未熟で色の薄い芽を使用します。白茶は新芽から葉2枚半を摘み取り、紅茶のように発酵・揉捻するのではなく、蒸してから乾燥させることで、非常に軽く加工された自然な甘みのある味わいに仕上げます。パープルティーとピンクティーは天然の抗酸化物質が豊富な独特な特別品種で、それぞれ独自の工程で作られます。この農園では、蓮の花を使ったお茶などの付加価値ブレンドや、同じ新芽から手作業で結び上げるブルーミングティーも作られています。",
+      description: "標準的な紅茶に加えて、この農園では希少な手作りの高級茶も生産しています——その多くは紅茶の主生産ラインではなく、別棟の手工茶工場で手作業により仕上げられます。これが「職人技の高級茶」とも呼ばれる理由で、大量生産というより工芸に近いものです。これらの多くは特徴的な紫がかった新芽から作られ、その色はアントシアニンによるものです。ゴールデンティップスにはその新芽の完全に成熟した芽を、シルバーティップスには同じ新芽のまだ未熟で色の薄い芽を使用します。白茶は新芽から葉2枚半を摘み取り、萎凋の工程を完全に省いて——紅茶のように発酵・揉捻するのではなく、蒸してから乾燥させることで——非常に軽く加工された自然な甘みのある味わいに仕上げます。パープルティーとピンクティーは天然の抗酸化物質が豊富な独特な特別品種で、それぞれ独自の工程で作られます。この農園では、蓮の花を使ったお茶などの付加価値ブレンドや、同じ新芽から手作業で結び上げるブルーミングティーも作られています。",
       keyPoints: "これらの職人技の茶は、標準的な紅茶よりもはるかに少ない量で摘み取られ加工されるため、より希少で貴重なものとなっています——試飲カウンターでお尋ねください。これらの等級のほとんどには、紫がかった新芽と通常の緑の新芽のどちらも使用できますが、農園では主に紫がかった新芽を使用しています。",
       duration: "5分",
     },
@@ -2809,7 +2918,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "紅茶工場",
-      description: "本館の工場は、摘み取られた茶葉が萎凋から梱包まで経て仕上げの紅茶になる場所です。このストップでは、稼働中の工場フロアと各工程で使われる設備を概観します。",
+      description: "本館の工場は、摘み取られた茶葉が萎凋から梱包まで経て仕上げの紅茶になる場所です。このストップでは、稼働中の工場フロアと各工程で使われる設備を概観します——萎凋、揉捻、発酵（酸化）、乾燥、茶葉選別（格付け）、そして最終梱包の順です。",
       keyPoints: "稼働中の紅茶工場は、萎凋から梱包までの全工程を一つの屋根の下で行い、毎日の茶葉の搬入量に合わせて緊密にタイミングを調整します。",
       duration: "10〜15分",
     },
@@ -2842,6 +2951,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       description: "キトゥルヤシの花茎から採取した樹液を煮詰めて作られるのが、スリランカ伝統の未精製糖ジャガリーです。このストップでは、農園で樹液がどのように採取され、ジャガリーへと加工されるかを紹介します。",
       keyPoints: "キトゥルジャガリーは濃厚なキャラメルのような風味で知られ、スリランカのデザートに欠かせない甘味料です。同じ樹液はトディ酒として発酵させたり、蒸留してアラックにすることもできます。",
       duration: "5〜10分",
+    },
+    pruning: {
+      name: "剪定",
+      description: "剪定を行う前に、農園ではすぐに刈り込むのではなく、あえて一定期間茶樹を伸ばすままにしておきます——新しい芽が十分に育つようにすることで、茶樹に養分を蓄えさせるためです。この養分の蓄積が完了して初めて剪定が始まり、茶樹はおよそ膝の高さまで刈り込まれます。",
+      keyPoints: "状態に関係なく決まった予定で剪定するのではなく、まず茶樹を伸ばすままにしておくことで、刈り込まれる前に養分を上へ送る時間を植物に与えます。",
+      duration: "5分",
+    },
+    polytunnel: {
+      name: "ビニールハウスと温室",
+      description: "既存の温室に加えて、農園ではまだ使用されていないビニールハウス（ポリトンネル）を設置しています——現在も建設中です——パプリカやトマトなどの野菜を栽培する予定です。稼働を開始すれば、ヴィラやカバナに滞在するゲストは、ここで栽培された野菜を自分で新鮮なうちに収穫できるようになります。",
+      keyPoints: "このビニールハウスはまだ稼働しておらず建設中のため、今のところ収穫できるものはありません——稼働開始後にまたご確認ください。",
+      duration: "5分",
     },
   },
 };
