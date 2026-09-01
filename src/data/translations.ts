@@ -488,8 +488,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "තේ නිෂ්පාදනය (පහත රට)",
-      description: "පහත රට වතු, දුර අභ්‍යන්තර උස් රට වතුවලට වඩා වෙනස් ලෙස තේ සකසයි. මෙම නැවතුම පහත රටේදී සිදු කරන නෙළීම, CTC සැකසීම, සහ ශ්‍රේණිගත කිරීම ගැන කියා දෙයි.",
-      keyPoints: "CTC (Crush-Tear-Curl) කොළ යාන්ත්‍රිකව කුඩා, ඝන කැටිති බවට සකසන අතර, එමගින් පහත රට සිලෝන් තේවලට ලක්ෂණවත් ශක්තිමත් හා තියුණු රසය ලැබේ.",
+      description: "පහත රට ('පහත රට') වතු, මෙම වතුය මෙන්ම, දුර අභ්‍යන්තර උස් රට වතුවලට වඩා වෙනස් ලෙස තේ සකසයි — මෙම චාරිකාවේ මීට පෙර අදියරෙන් අදියර ආවරණය කළ වතුයායේම නිෂ්පාදන ක්‍රියාවලිය එය තහවුරු කරයි: මෙහි රෝල් කිරීම කොළය සම්පූර්ණ සාම්ප්‍රදායික කොළයක් ලෙස ඇඹරීම වෙනුවට කුඩා, ඝන අංශු බවට කඩා දමයි, එය CTC (Crush-Tear-Curl) සැකසීමේ ලාක්ෂණික ලක්ෂණයයි. මෙම නැවතුම එම පහත රට ප්‍රවේශය නෙළීම, සැකසීම, සහ ශ්‍රේණිගත කිරීම සඳහා අදහස් කරන්නේ කුමක්ද යන්න පිළිබඳ කෙටි සාරාංශයකි.",
+      keyPoints: "CTC (Crush-Tear-Curl) කොළ යාන්ත්‍රිකව කුඩා, ඝන කැටිති බවට සකසන අතර, එමගින් පහත රට සිලෝන් තේවලට ලක්ෂණවත් ශක්තිමත් හා තියුණු රසය ලැබේ — මෙම චාරිකාවේ මීට පෙර රෝල් කිරීම හා ශ්‍රේණිගත කිරීමේ නැවතුම්වල දුටු එම කොළ අංශුමය.",
       duration: "මිනිත්තු 10-15",
     },
     "organic-cultivation": {
@@ -754,8 +754,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "தேயிலை உற்பத்தி (பஹத்தரட)",
-      description: "தாழ்வான நாட்டு ('பஹத்தரட') தோட்டங்கள், உள்நாட்டு உயர் தோட்டங்களிலிருந்து வேறுபட்ட முறையில் தேயிலையை செயலாக்குகின்றன. தாழ்வான நாட்டில் செய்யப்படும் பறித்தல், CTC செயலாக்கம், மற்றும் தரம் பிரித்தல் ஆகியவற்றை இந்த நிறுத்தம் விளக்குகிறது.",
-      keyPoints: "CTC (நசுக்கு-கிழி-சுருட்டு) இலையை இயந்திர முறையில் சிறிய, அடர்த்தியான துகள்களாக செயலாக்குகிறது, இது தாழ்வான நாட்டு இலங்கை தேயிலைக்கு பிரத்தியேகமான வலிமையான, தெளிவான சுவையை உருவாக்குகிறது.",
+      description: "தாழ்வான நாட்டு ('பஹத்தரட') தோட்டங்கள், இந்த தோட்டத்தைப் போலவே, உள்நாட்டு உயர் தோட்டங்களிலிருந்து வேறுபட்ட முறையில் தேயிலையை செயலாக்குகின்றன — இந்த சுற்றுலாவில் முன்னதாக படிப்படியாக விளக்கப்பட்ட தோட்டத்தின் சொந்த உற்பத்தி செயல்முறையே இதை உறுதிப்படுத்துகிறது: இங்கு உருட்டுதல் இலையை முழுமையான பாரம்பரிய இலையாக முறுக்குவதற்குப் பதிலாக சிறிய, அடர்த்தியான துகள்களாக உடைக்கிறது, இதுவே CTC (நசுக்கு-கிழி-சுருட்டு) செயலாக்கத்தின் அடையாள அம்சமாகும். தாழ்வான நாட்டு அணுகுமுறை பறித்தல், செயலாக்கம், மற்றும் தரம் பிரித்தலுக்கு என்ன அர்த்தம் என்பதற்கான ஒரு சுருக்கமான மறுபார்வையே இந்த நிறுத்தம்.",
+      keyPoints: "CTC (நசுக்கு-கிழி-சுருட்டு) இலையை இயந்திர முறையில் சிறிய, அடர்த்தியான துகள்களாக செயலாக்குகிறது, இது தாழ்வான நாட்டு இலங்கை தேயிலைக்கு பிரத்தியேகமான வலிமையான, தெளிவான சுவையை உருவாக்குகிறது — இந்த சுற்றுலாவில் முன்னதாக உருட்டுதல் மற்றும் தரப்படுத்தல் நிறுத்தங்களில் கண்ட அதே இலைத் துகள்கள்தான் இவை.",
       duration: "10-15 நிமிடங்கள்",
     },
     "organic-cultivation": {
@@ -1020,8 +1020,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Lavorazione del Tè (Pahatharata)",
-      description: "Le tenute delle pianure ('Pahatharata') lavorano il tè in modo diverso rispetto alle tenute d'alta quota più nell'entroterra. Questa tappa copre la raccolta, la lavorazione CTC e la classificazione come praticate nelle pianure.",
-      keyPoints: "Il CTC (Crush-Tear-Curl) lavora meccanicamente la foglia in granuli piccoli e densi, producendo il carattere forte e vivace per cui è noto il tè di Ceylon delle pianure.",
+      description: "Le tenute delle pianure ('Pahatharata') come questa lavorano il tè in modo diverso rispetto alle tenute d'alta quota più nell'entroterra — e il processo di lavorazione della tenuta stessa, illustrato fase per fase in precedenza in questo tour, lo conferma: qui l'arrotolamento riduce la foglia in piccole particelle dense anziché arrotolarla in foglie intere in stile ortodosso, il tratto distintivo della lavorazione CTC (Crush-Tear-Curl). Questa tappa è un rapido riepilogo di cosa significhi questo approccio delle pianure per la raccolta, la lavorazione e la classificazione.",
+      keyPoints: "Il CTC (Crush-Tear-Curl) lavora meccanicamente la foglia in granuli piccoli e densi, producendo il carattere forte e vivace per cui è noto il tè di Ceylon delle pianure — le stesse particelle di foglia viste prima alle tappe di arrotolamento e selezione di questo tour.",
       duration: "10-15 minuti",
     },
     "organic-cultivation": {
@@ -1286,8 +1286,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "تصنيع الشاي (باهاتارتا)",
-      description: "تعالج مزارع الأراضي المنخفضة ('باهاتارتا') الشاي بشكل مختلف عن مزارع الأراضي المرتفعة الداخلية. تغطي هذه المحطة القطف ومعالجة CTC والفرز كما تُمارَس في الأراضي المنخفضة.",
-      keyPoints: "تعالج طريقة CTC (السحق-التمزيق-اللف) الأوراق آليًا إلى حبيبات صغيرة كثيفة، مما ينتج الطابع القوي والمنعش الذي يشتهر به شاي سيلان من الأراضي المنخفضة.",
+      description: "تعالج مزارع الأراضي المنخفضة ('باهاتارتا')، مثل هذه المزرعة، الشاي بشكل مختلف عن مزارع الأراضي المرتفعة الداخلية — وتؤكد ذلك عملية التصنيع الخاصة بالمزرعة نفسها، التي تناولتها المحطات السابقة في هذه الجولة مرحلةً تلو الأخرى: يُحوَّل اللف هنا الورقة إلى جزيئات صغيرة وكثيفة بدلاً من لفها إلى ورقة أرثوذكسية كاملة، وهي السمة المميزة لمعالجة CTC (السحق-التمزيق-اللف). هذه المحطة عبارة عن ملخص سريع لما يعنيه نهج الأراضي المنخفضة هذا بالنسبة للقطف والمعالجة والفرز.",
+      keyPoints: "تعالج طريقة CTC (السحق-التمزيق-اللف) الأوراق آليًا إلى حبيبات صغيرة كثيفة، مما ينتج الطابع القوي والمنعش الذي يشتهر به شاي سيلان من الأراضي المنخفضة — وهي نفس جزيئات الأوراق التي شوهدت سابقًا في محطتي اللف والفرز في هذه الجولة.",
       duration: "10-15 دقيقة",
     },
     "organic-cultivation": {
@@ -1552,8 +1552,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Производство чая (Пахатарата)",
-      description: "Низинные («Пахатарата») плантации обрабатывают чай иначе, чем высокогорные плантации дальше вглубь острова. Эта остановка охватывает сбор листа, CTC-обработку и сортировку, как это делается в низине.",
-      keyPoints: "CTC (Crush-Tear-Curl — «дробление-разрыв-скручивание») механически превращает лист в мелкие плотные гранулы, придавая низинному цейлонскому чаю характерную крепость и резкость.",
+      description: "Низинные («Пахатарата») плантации, как эта, обрабатывают чай иначе, чем высокогорные плантации дальше вглубь острова, — и собственный производственный процесс поместья, показанный этап за этапом ранее в этом туре, подтверждает это: скручивание здесь превращает лист в мелкие плотные частицы, а не скручивает его в цельный ортодоксальный лист — отличительная черта CTC-обработки (Crush-Tear-Curl). Эта остановка — краткое резюме того, что означает такой низинный подход для сбора листа, обработки и сортировки.",
+      keyPoints: "CTC (Crush-Tear-Curl — «дробление-разрыв-скручивание») механически превращает лист в мелкие плотные гранулы, придавая низинному цейлонскому чаю характерную крепость и резкость — те же самые частицы листа, что были видны ранее на остановках скручивания и сортировки в этом туре.",
       duration: "10–15 минут",
     },
     "organic-cultivation": {
@@ -1818,8 +1818,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Teeherstellung (Pahatharata)",
-      description: "Tiefland-Plantagen ('Pahatharata') verarbeiten Tee anders als Hochlandplantagen weiter im Landesinneren. Diese Station behandelt Pflücken, CTC-Verarbeitung und Sortierung, wie sie im Tiefland durchgeführt werden.",
-      keyPoints: "CTC (Crush-Tear-Curl) verarbeitet das Blatt maschinell zu kleinen, dichten Granulaten und erzeugt den kräftigen, spritzigen Charakter, für den Tiefland-Ceylon-Tee bekannt ist.",
+      description: "Tiefland-Plantagen ('Pahatharata') wie diese verarbeiten Tee anders als Hochlandplantagen weiter im Landesinneren — und der eigene Herstellungsprozess des Anwesens, der zuvor auf dieser Tour Schritt für Schritt gezeigt wurde, bestätigt das: Das Rollen zerkleinert das Blatt hier zu kleinen, dichten Partikeln, statt es zu einem ganzen orthodoxen Blatt zu rollen — das Kennzeichen der CTC-Verarbeitung (Crush-Tear-Curl). Diese Station fasst kurz zusammen, was dieser Tiefland-Ansatz für Pflücken, Verarbeitung und Sortierung bedeutet.",
+      keyPoints: "CTC (Crush-Tear-Curl) verarbeitet das Blatt maschinell zu kleinen, dichten Granulaten und erzeugt den kräftigen, spritzigen Charakter, für den Tiefland-Ceylon-Tee bekannt ist — dieselben Blattpartikel, die zuvor an den Stationen Rollen und Sortieren auf dieser Tour zu sehen waren.",
       duration: "10-15 Minuten",
     },
     "organic-cultivation": {
@@ -2084,8 +2084,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Fabricación de Té (Pahatharata)",
-      description: "Las fincas de tierras bajas ('Pahatharata') procesan el té de forma diferente a las fincas de tierras altas más hacia el interior. Esta parada cubre la recolección, el procesamiento CTC y la clasificación tal como se hacen en las tierras bajas.",
-      keyPoints: "El CTC (Crush-Tear-Curl, o triturar-desgarrar-enrollar) procesa mecánicamente la hoja en gránulos pequeños y densos, produciendo el carácter fuerte y vivo por el que se conoce el té ceilanés de tierras bajas.",
+      description: "Las fincas de tierras bajas ('Pahatharata') como esta procesan el té de forma diferente a las fincas de tierras altas más hacia el interior — y el propio proceso de fabricación de la finca, cubierto etapa por etapa anteriormente en este recorrido, lo confirma: aquí el enrollado reduce la hoja a partículas pequeñas y densas en lugar de enrollarla en hoja entera al estilo ortodoxo, el sello distintivo del procesamiento CTC (Crush-Tear-Curl). Esta parada es un resumen rápido de lo que ese enfoque de tierras bajas significa para la recolección, el procesamiento y la clasificación.",
+      keyPoints: "El CTC (Crush-Tear-Curl, o triturar-desgarrar-enrollar) procesa mecánicamente la hoja en gránulos pequeños y densos, produciendo el carácter fuerte y vivo por el que se conoce el té ceilanés de tierras bajas — las mismas partículas de hoja vistas antes en las paradas de enrollado y clasificación de este recorrido.",
       duration: "10-15 minutos",
     },
     "organic-cultivation": {
@@ -2350,8 +2350,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Fabrication du Thé (Pahatharata)",
-      description: "Les plantations de basses terres (« Pahatharata ») transforment le thé différemment des plantations de hautes terres situées plus à l'intérieur des terres. Cette étape couvre la cueillette, le traitement CTC et le triage tels qu'ils sont pratiqués dans les basses terres.",
-      keyPoints: "Le CTC (Crush-Tear-Curl) transforme mécaniquement la feuille en granulés petits et denses, produisant le caractère fort et vif pour lequel le thé de Ceylan des basses terres est connu.",
+      description: "Les plantations de basses terres (« Pahatharata ») comme celle-ci transforment le thé différemment des plantations de hautes terres situées plus à l'intérieur des terres — et le propre procédé de fabrication du domaine, présenté étape par étape plus tôt dans ce parcours, le confirme : ici, le roulage réduit la feuille en petites particules denses plutôt que de la rouler en feuille entière façon orthodoxe, la marque distinctive du procédé CTC (Crush-Tear-Curl). Cette étape est un rapide résumé de ce que cette approche des basses terres signifie pour la cueillette, la transformation et le triage.",
+      keyPoints: "Le CTC (Crush-Tear-Curl) transforme mécaniquement la feuille en granulés petits et denses, produisant le caractère fort et vif pour lequel le thé de Ceylan des basses terres est connu — les mêmes particules de feuille observées plus tôt aux étapes du roulage et du triage de ce parcours.",
       duration: "10-15 minutes",
     },
     "organic-cultivation": {
@@ -2616,8 +2616,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "低地茶制作（Pahatharata）",
-      description: "低地（“Pahatharata”）庄园的制茶方式与内陆高地庄园不同。本站介绍低地采茶、CTC加工与分级的流程。",
-      keyPoints: "CTC（压碎-撕裂-揉卷）通过机械方式将茶叶加工成细小紧实的颗粒，造就了低地锡兰红茶浓烈爽口的特点。",
+      description: "像本庄园这样的低地（“Pahatharata”）庄园的制茶方式与内陆高地庄园不同——本次游览中此前逐一介绍过的庄园自身生产流程正印证了这一点：这里的揉捻是将茶叶揉碎成细小紧实的颗粒，而不是像正统工艺那样揉成完整的茶叶，这正是CTC（压碎-撕裂-揉卷）加工的标志性特征。本站是对低地这种方式在采茶、加工与分级方面所代表意义的简要回顾。",
+      keyPoints: "CTC（压碎-撕裂-揉卷）通过机械方式将茶叶加工成细小紧实的颗粒，造就了低地锡兰红茶浓烈爽口的特点——正是本次游览此前在揉捻和分级站点所见到的那种茶叶颗粒。",
       duration: "10-15分钟",
     },
     "organic-cultivation": {
@@ -2882,8 +2882,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "紅茶製造（パハタラタ）",
-      description: "低地（「パハタラタ」）の農園は、内陸の高地農園とは異なる方法で茶を加工します。このストップでは、低地での摘採、CTC加工、選別について紹介します。",
-      keyPoints: "CTC（クラッシュ・ティア・カール）は茶葉を機械的に小さく密な粒状に加工し、低地セイロン紅茶特有の力強くキレのある風味を生み出します。",
+      description: "この農園のような低地（「パハタラタ」）の農園は、内陸の高地農園とは異なる方法で茶を加工します——このツアーで先ほど段階ごとに紹介した農園自体の製造工程が、まさにそれを裏付けています。ここでの揉捻は、正統派の紅茶のように葉を丸ごと巻き上げるのではなく、小さく密な粒状に砕きます。これはCTC（クラッシュ・ティア・カール）加工の特徴です。このストップでは、この低地方式が摘採、加工、選別にとって何を意味するのかを簡単に振り返ります。",
+      keyPoints: "CTC（クラッシュ・ティア・カール）は茶葉を機械的に小さく密な粒状に加工し、低地セイロン紅茶特有の力強くキレのある風味を生み出します——このツアーで先ほど揉捻や選別のストップで見た、まさにあの茶葉の粒です。",
       duration: "10〜15分",
     },
     "organic-cultivation": {
