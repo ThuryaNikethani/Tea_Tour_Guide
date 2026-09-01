@@ -92,6 +92,15 @@ import kithulTreeImg from "../assets/kithul/kithul-tree.jpg";
 import kithulLeavesImg from "../assets/kithul/kithul-leaves.jpg";
 import kithulInflorescence1Img from "../assets/kithul/kithul-inflorescence-1.jpg";
 import kithulInflorescence2Img from "../assets/kithul/kithul-inflorescence-2.jpg";
+// Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
+// but NOT the estate's own photography — generic Cocos nucifera photography,
+// not photos of this estate's own trees. See the provenance note near the
+// "coconut-field" station below for why these were used anyway and which of
+// the site's ten images were skipped.
+import coconutPlantationImg from "../assets/coconut/coconut-plantation.avif";
+import coconutInflorescenceImg from "../assets/coconut/coconut-inflorescence.jpg";
+import coconutClusterImg from "../assets/coconut/coconut-cluster.png";
+import coconutKingClusterImg from "../assets/coconut/coconut-king-cluster.jpg";
 // Real photos from the factory's own ginger plantation and product line.
 import gingerPlantImg from "../assets/ginger/ginger-plant.jpg";
 import gingerRhizomeImg from "../assets/ginger/ginger-rhizome.jpg";
@@ -537,6 +546,23 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * Elaeocarpus serratus); this is treated as a leftover template artifact,
  * not evidence about the images' actual subject, which the page's own
  * heading and body text unambiguously identify as Caryota urens.
+ * The "coconut-field" station was upgraded the same way on 2026-09-01,
+ * sourced from the factory's own coconut microsite (coconut-atf.netlify.app)
+ * — rewritten rather than copied verbatim, using the same rich-station
+ * format again at the user's request. Its facts are general Cocos nucifera
+ * botany and product knowledge (height, leaf/flower/fruit description,
+ * habitat, culinary/medicinal/ecological uses) rather than anything
+ * specific to this estate's own coconut palms. Photo provenance: the same
+ * caution applies as "jaggery-palm" — these are not the estate's own
+ * photography. Two of the site's ten images carry visible baked-in
+ * credits (a "Let's Grow Florida" watermark, and a faint stock-agency mark
+ * resembling a photo-agency imprint) and were excluded; the four actually
+ * used (coconut-plantation, coconut-inflorescence, coconut-cluster,
+ * coconut-king-cluster) carry no visible credit. A fifth otherwise-strong
+ * candidate — a specific, plausibly-genuine shot of coconut seedlings in
+ * nursery beds — was left out not for provenance reasons but simply for
+ * file size (14MB unprocessed). Swap in real estate photography here first
+ * if it ever becomes available.
  */
 export const STATIONS: Station[] = [
   {
@@ -1079,12 +1105,38 @@ export const STATIONS: Station[] = [
     name: "Coconut Field",
     shortName: "Coconut Field",
     icon: "Palmtree",
-    verified: false,
-    description:
-      "Coconut palms are grown across many Sri Lankan estates alongside tea, providing fruit, oil, and materials used throughout the property. This stop covers how coconut is grown, harvested, and used on the estate.",
-    keyPoints:
-      "A single coconut palm can bear fruit for decades, and nearly every part of it — the fruit, husk, shell, and leaves — is put to some use on a working estate.",
-    duration: "5-10 minutes",
+    verified: true,
+    lastVerified: "2026-09-01",
+    heroTagline: "The 'Tree of Life' — a coastal giant where almost nothing goes to waste.",
+    sections: [
+      {
+        heading: "About the Coconut Tree",
+        image: coconutPlantationImg,
+        body: "Cocos nucifera — the coconut tree — is a tall palm in the Arecaceae family, widely cultivated across tropical coastal regions worldwide. Known as the 'Tree of Life', every part of it is useful — from its nutritious fruit and refreshing water to its wood, leaves, and fibre. The tree thrives in sandy, well-drained soils and can withstand high salinity, making it common along coastlines.",
+      },
+      {
+        heading: "Characteristics",
+        image: coconutInflorescenceImg,
+        body: "A quick look at the palm itself:",
+        items: [
+          { heading: "Height", body: "Up to 30 metres tall." },
+          { heading: "Leaves", body: "Large, feather-like fronds, 4 to 6 metres long." },
+          { heading: "Flowers", body: "Small, yellowish flowers arranged in branched inflorescences." },
+          { heading: "Fruit", body: "A large, one-seeded drupe (the coconut) with a fibrous husk and hard shell enclosing white flesh and coconut water." },
+          { heading: "Habitat", body: "Tropical coastal areas; thrives in sandy, saline soils with full sunlight." },
+        ],
+      },
+      {
+        heading: "Uses and Benefits",
+        image: [coconutClusterImg, coconutKingClusterImg],
+        body: "The coconut palm's value goes well beyond the fruit itself:",
+        items: [
+          { heading: "Culinary Uses", body: "Coconut water is a refreshing drink, and the white flesh (copra) is used in cooking, baking, and oil extraction; coconut milk and cream are essential in tropical cuisines." },
+          { heading: "Medicinal Properties", body: "Coconut oil has antimicrobial and moisturising properties; coconut water is hydrating and rich in electrolytes, supporting kidney and heart health." },
+          { heading: "Ecological Importance", body: "Coconut trees help stabilise coastal soils and prevent erosion; they provide shade and habitat for numerous coastal organisms and support local ecosystems." },
+        ],
+      },
+    ],
   },
   {
     id: "jaggery-palm",
