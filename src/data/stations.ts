@@ -494,6 +494,29 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * for milk tea. One aside from the transcript — a Jaffna-style pouring
  * custom the guide mentioned — was left out as a cultural tangent rather
  * than a tea-production fact relevant to this stop.
+ * The "jaggery-palm" station was upgraded from a generic placeholder to
+ * `verified: true` on 2026-09-01, sourced from the factory's own kithul
+ * microsite (kithul-aft.netlify.app) — rewritten rather than copied
+ * verbatim. Unlike the cinnamon/ginger/bee microsites used earlier, this
+ * source's photos were all excluded rather than added: two of the ten
+ * carry visible third-party stock-photo credits ("Nature's Beauty
+ * Creations Ltd, Sri Lanka" and photographer "Aruna Yasapalitha"), and none
+ * of the ten show any actual tapping or boiling process — all are generic
+ * tree photography (parks, roadsides, gardens) consistent with a stock
+ * source rather than the estate's own documentation, unlike the bee site's
+ * photos, which the user confirmed were their own. The page's alt text
+ * mislabels several images as "Weralu" (a different tree entirely,
+ * Elaeocarpus serratus); this is treated as a leftover template artifact,
+ * not evidence about the images' actual subject, which the page's own
+ * heading and body text unambiguously identify as Caryota urens. The
+ * site's facts are general Caryota urens botany and product knowledge
+ * (height, leaf/flower/fruit description, habitat, sap tapped into treacle
+ * or jaggery, toddy, and arrack, pith into sago-like starch, traditional
+ * medicinal use, and root-based erosion control) rather than anything
+ * specific to how this estate itself taps or processes kithul — no
+ * estate-specific process detail (frequency, tools, volumes) was available
+ * to add, so `description`/`keyPoints` stay at the level of confirmed
+ * general fact rather than guessing at the estate's own procedure.
  */
 export const STATIONS: Station[] = [
   {
@@ -1049,11 +1072,12 @@ export const STATIONS: Station[] = [
     name: "Jaggery Palm (Kithul)",
     shortName: "Jaggery Palm",
     icon: "Droplet",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-09-01",
     description:
-      "Sap tapped from the flower stalks of the kithul palm is boiled down into jaggery, a traditional Sri Lankan unrefined sugar. This stop covers how the sap is collected and processed into jaggery on the estate.",
+      "The kithul palm (Caryota urens) is a fishtail palm — named for the ragged, fish-tail-shaped leaflets on its large bipinnate leaves — that grows 12 to 20 metres tall in tropical rainforest, moist valleys, and shaded hill slopes across Sri Lanka and South India. Its most valuable product is the sweet sap tapped from its flower stalks, which is boiled down into traditional kithul treacle and jaggery, a rich, caramel-like unrefined sugar; the same sap can also be fermented into toddy or distilled into arrack, and the tree's inner pith can be processed into a sago-like starch.",
     keyPoints:
-      "Kithul jaggery is prized for its rich, caramel-like flavor and is a staple sweetener in Sri Lankan desserts; the same sap can also be fermented into toddy or distilled into arrack.",
+      "The kithul palm's creamy-white flowers are borne in long, hanging clusters from the top of the trunk downward; its small round fruit isn't edible, since its surface carries irritating crystals. Kithul treacle is considered a natural energy booster in Sri Lankan tradition and is used to support digestion and reduce fatigue, and beyond its culinary and medicinal uses, the palm's deep root system helps prevent soil erosion and supports watershed stability on hilly, wet terrain.",
     duration: "5-10 minutes",
   },
   {
