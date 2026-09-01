@@ -3,6 +3,7 @@ import {
   ArrowRight,
   Bookmark,
   Bug,
+  Carrot,
   CheckCheck,
   CheckCircle2,
   Citrus,
@@ -25,6 +26,7 @@ import {
   QrCode,
   Recycle,
   RotateCw,
+  Scissors,
   Sparkles,
   Sprout,
   TreePine,
@@ -76,6 +78,8 @@ const STATION_ICONS: Record<string, LucideIcon> = {
   Droplet,
   Bug,
   Sparkles,
+  Scissors,
+  Carrot,
 };
 
 export function AllStations() {
