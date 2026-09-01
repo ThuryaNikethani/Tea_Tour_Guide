@@ -82,6 +82,16 @@ import cinnamonPlantationImg from "../assets/cinnamon/cinnamon-plantation.jpg";
 import cinnamonLeavesImg from "../assets/cinnamon/cinnamon-leaves.webp";
 import cinnamonTeaBoxImg from "../assets/cinnamon/cinnamon-tea-box.jpg";
 import flavouredCinnamonTeaImg from "../assets/cinnamon/flavoured-cinnamon-tea.jpg";
+// Sourced from the factory's own kithul microsite (kithul-aft.netlify.app),
+// but NOT the estate's own photography — generic Caryota urens photography
+// (parks, roadsides, gardens), not photos of this estate's own trees or its
+// tapping/boiling process. See the provenance note near the "jaggery-palm"
+// station below for why these were used anyway and which of the site's ten
+// images were skipped.
+import kithulTreeImg from "../assets/kithul/kithul-tree.jpg";
+import kithulLeavesImg from "../assets/kithul/kithul-leaves.jpg";
+import kithulInflorescence1Img from "../assets/kithul/kithul-inflorescence-1.jpg";
+import kithulInflorescence2Img from "../assets/kithul/kithul-inflorescence-2.jpg";
 // Real photos from the factory's own ginger plantation and product line.
 import gingerPlantImg from "../assets/ginger/ginger-plant.jpg";
 import gingerRhizomeImg from "../assets/ginger/ginger-rhizome.jpg";
@@ -497,26 +507,36 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * The "jaggery-palm" station was upgraded from a generic placeholder to
  * `verified: true` on 2026-09-01, sourced from the factory's own kithul
  * microsite (kithul-aft.netlify.app) — rewritten rather than copied
- * verbatim. Unlike the cinnamon/ginger/bee microsites used earlier, this
- * source's photos were all excluded rather than added: two of the ten
- * carry visible third-party stock-photo credits ("Nature's Beauty
- * Creations Ltd, Sri Lanka" and photographer "Aruna Yasapalitha"), and none
- * of the ten show any actual tapping or boiling process — all are generic
- * tree photography (parks, roadsides, gardens) consistent with a stock
- * source rather than the estate's own documentation, unlike the bee site's
- * photos, which the user confirmed were their own. The page's alt text
- * mislabels several images as "Weralu" (a different tree entirely,
- * Elaeocarpus serratus); this is treated as a leftover template artifact,
- * not evidence about the images' actual subject, which the page's own
- * heading and body text unambiguously identify as Caryota urens. The
- * site's facts are general Caryota urens botany and product knowledge
+ * verbatim, using the same `sections`/`items` rich-station format as
+ * "cinnamon" and "ginger-turmeric" (About / Characteristics / Uses and
+ * Benefits), at the user's explicit request to match "cinnamon"'s layout.
+ * The site's facts are general Caryota urens botany and product knowledge
  * (height, leaf/flower/fruit description, habitat, sap tapped into treacle
  * or jaggery, toddy, and arrack, pith into sago-like starch, traditional
  * medicinal use, and root-based erosion control) rather than anything
  * specific to how this estate itself taps or processes kithul — no
- * estate-specific process detail (frequency, tools, volumes) was available
- * to add, so `description`/`keyPoints` stay at the level of confirmed
- * general fact rather than guessing at the estate's own procedure.
+ * estate-specific process detail (frequency, tools, volumes) or product
+ * photos were available, so unlike "cinnamon"/"ginger-turmeric" there's no
+ * tools-and-process section or a closing tea-products section here.
+ * Photo provenance is deliberately flagged here, unlike the cinnamon/
+ * ginger/bee microsites: this source's images are NOT the estate's own —
+ * all ten are generic Caryota urens photography (parks, roadsides,
+ * gardens), none show any actual tapping or boiling process, and two of
+ * the ten carry visible baked-in third-party stock-photo credits ("Nature's
+ * Beauty Creations Ltd, Sri Lanka" and photographer "Aruna Yasapalitha").
+ * The user was shown this and explicitly chose to use the site's photos
+ * anyway rather than wait for real estate photography or ship the station
+ * text-only. The four actually used (kithul-tree, kithul-leaves,
+ * kithul-inflorescence-1/2) were picked from the site's ten specifically
+ * because they carry no visible credit text, consistent with this
+ * project's standing practice of dropping any image with a legible
+ * third-party name baked into the pixels (see the cinnamon "Whetstone" and
+ * ginger dreamstime-watermark exclusions above) — swap in real estate
+ * photography here first if it ever becomes available. The page's alt text
+ * also mislabels several images as "Weralu" (a different tree entirely,
+ * Elaeocarpus serratus); this is treated as a leftover template artifact,
+ * not evidence about the images' actual subject, which the page's own
+ * heading and body text unambiguously identify as Caryota urens.
  */
 export const STATIONS: Station[] = [
   {
@@ -1074,11 +1094,36 @@ export const STATIONS: Station[] = [
     icon: "Droplet",
     verified: true,
     lastVerified: "2026-09-01",
-    description:
-      "The kithul palm (Caryota urens) is a fishtail palm — named for the ragged, fish-tail-shaped leaflets on its large bipinnate leaves — that grows 12 to 20 metres tall in tropical rainforest, moist valleys, and shaded hill slopes across Sri Lanka and South India. Its most valuable product is the sweet sap tapped from its flower stalks, which is boiled down into traditional kithul treacle and jaggery, a rich, caramel-like unrefined sugar; the same sap can also be fermented into toddy or distilled into arrack, and the tree's inner pith can be processed into a sago-like starch.",
-    keyPoints:
-      "The kithul palm's creamy-white flowers are borne in long, hanging clusters from the top of the trunk downward; its small round fruit isn't edible, since its surface carries irritating crystals. Kithul treacle is considered a natural energy booster in Sri Lankan tradition and is used to support digestion and reduce fatigue, and beyond its culinary and medicinal uses, the palm's deep root system helps prevent soil erosion and supports watershed stability on hilly, wet terrain.",
-    duration: "5-10 minutes",
+    heroTagline: "From a towering fishtail palm to Sri Lanka's traditional treacle and jaggery.",
+    sections: [
+      {
+        heading: "About the Kithul Palm",
+        image: kithulTreeImg,
+        body: "Caryota urens — the kithul palm, or fishtail palm — is a tall, graceful palm found across Sri Lanka, India, and other tropical Asian countries, valued for its multipurpose use. Its most notable product is the sweet sap tapped from its flower stalks, which is boiled down to produce traditional kithul treacle and jaggery. The tree is also known for its strong, fibrous trunk and beautiful fishtail-shaped leaves.",
+      },
+      {
+        heading: "Characteristics",
+        image: kithulLeavesImg,
+        body: "A quick look at the palm itself:",
+        items: [
+          { heading: "Height", body: "12 to 20 metres tall." },
+          { heading: "Leaves", body: "Large, bipinnate leaves with fishtail-shaped leaflets, 3 to 5 metres long." },
+          { heading: "Flowers", body: "Creamy-white flowers borne in long, hanging clusters from the top of the trunk downward." },
+          { heading: "Fruit", body: "Small, round fruit with irritating crystals on its surface; not edible." },
+          { heading: "Habitat", body: "Tropical rainforest, moist valleys, and shaded hill slopes of Sri Lanka and South India." },
+        ],
+      },
+      {
+        heading: "Uses and Benefits",
+        image: [kithulInflorescence1Img, kithulInflorescence2Img],
+        body: "The kithul palm's value goes well beyond its treacle and jaggery:",
+        items: [
+          { heading: "Culinary Uses", body: "The sweet sap is boiled to produce kithul treacle and jaggery, traditional Sri Lankan sweeteners; the same sap can also be fermented into toddy or distilled into arrack, and the inner pith can yield a sago-like starch." },
+          { heading: "Medicinal Properties", body: "Kithul treacle is considered a natural energy booster in Sri Lankan tradition and is believed to have antioxidant and anti-inflammatory properties; the sap is used in traditional medicine to support digestion and reduce fatigue." },
+          { heading: "Ecological Importance", body: "The kithul palm supports biodiversity by providing habitat and shade in tropical forests; its deep roots help prevent soil erosion in hilly, wet regions and contribute to watershed stability." },
+        ],
+      },
+    ],
   },
   {
     id: "pruning",
