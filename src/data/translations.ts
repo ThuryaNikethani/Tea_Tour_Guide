@@ -554,8 +554,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "කිතුල් හකුරු",
-      description: "කිතුල් ගස (Caryota urens) මසුන්-වල් හැඩැති කොළ (fishtail palm) විශේෂයකි — එහි විශාල පිננේට් කොළවල කැඩුණු, මාළු වලට සමාන කොළ කැබලි නිසා එම නම ලැබී ඇත — එය ශ්‍රී ලංකාවේ සහ දකුණු ඉන්දියාවේ නිවර්තන වර්ෂාවනාන්තර, තෙත් නිම්න, සහ සෙවන සහිත කඳුකර බෑවුම්වල මීටර් 12ත් 20ත් අතර උසට වැඩේ. එහි වඩාත්ම වටිනා නිෂ්පාදනය වන්නේ එහි මල් කරලවලින් උරාගන්නා පැණි වන අතර, එය උතුරුවා සාම්ප්‍රදායික කිතුල් පැණි සහ හකුරු — පොහොසත්, කැරමල් රසැති අශෝධිත සීනියක් — බවට පත් කරනු ලැබේ; එම පැණියෙන්ම රා පැසවීමට හෝ ආසවනය කර අරක්කු බවට පත් කළ හැකි අතර, ගසේ අභ්‍යන්තර හරය සාගු වැනි පිටි බවට සැකසිය හැක.",
-      keyPoints: "කිතුල් ගසේ ක්‍රීම් පැහැති සුදු මල් කඳේ මුදුනේ සිට පහළට එල්ලෙන දිගු පොකුරු වශයෙන් හටගනී; එහි කුඩා වටකුරු ගෙඩිය කෑමට සුදුසු නොවේ, මන්ද එහි මතුපිට කුපිත කරන ස්ඵටික ඇති බැවිනි. කිතුල් පැණි ශ්‍රී ලාංකික සම්ප්‍රදායේ ස්වාභාවික ශක්ති වර්ධකයක් ලෙස සලකනු ලබන අතර ආහාර දිරවීමට උපකාර වීමට සහ තෙහෙට්ටුව අඩු කිරීමට භාවිතා කරයි; ආහාරමය හා ඖෂධීය භාවිතයන්ට අමතරව, ගසේ ගැඹුරු මුල් පද්ධතිය කඳුකර, තෙත් භූමියේ පස ඛාදනය වැළැක්වීමට සහ ජලාශ ස්ථායීතාවයට උපකාරී වේ.",
+      heroTagline: "උස් මසුන්-වල් කොළයකින් ශ්‍රී ලංකාවේ සාම්ප්‍රදායික පැණි සහ හකුරු දක්වා.",
+      sectionHeadings: ["කිතුල් ගස පිළිබඳ", "ලක්ෂණ", "භාවිත සහ ප්‍රතිලාභ"],
+      sectionBodies: [
+        "කිතුල් ගස (Caryota urens) — මසුන්-වල් හැඩැති කොළය — ශ්‍රී ලංකාව, ඉන්දියාව, සහ අනෙකුත් නිවර්තන ආසියානු රටවල දක්නට ලැබෙන උස් සහ අලංකාර ගසකි, එහි බහුකාර්ය භාවිතය නිසා අගය කරනු ලැබේ. එහි වඩාත්ම කැපී පෙනෙන නිෂ්පාදනය වන්නේ එහි මල් කරලවලින් උරාගන්නා පැණි වන අතර, එය උතුරුවා සාම්ප්‍රදායික කිතුල් පැණි සහ හකුරු නිෂ්පාදනය කිරීමට භාවිතා කරයි. මෙම ගස එහි ශක්තිමත්, තන්තුමය කඳ සහ අලංකාර මසුන්-වල් හැඩැති කොළ සඳහාද ප්‍රසිද්ධය.",
+        "ගස පිළිබඳ කෙටි විස්තරයක්:",
+        "කිතුල් ගසේ වටිනාකම එහි පැණි සහ හකුරුවලට වඩා බොහෝ දුරට විහිදේ:",
+      ],
+      itemHeadings: [
+        [],
+        ["උස", "කොළ", "මල්", "ඵලය", "වාසස්ථානය"],
+        ["ආහාර පිසීමේ භාවිතය", "ඖෂධීය ගුණාංග", "පාරිසරික වැදගත්කම"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "මීටර් 12ත් 20ත් අතර උසැති වේ.",
+          "විශාල, පිනේට් කොළ මසුන්-වල් හැඩැති කොළ කැබලි සහිතව, මීටර් 3ත් 5ත් අතර දිග.",
+          "ක්‍රීම් පැහැති සුදු මල් කඳේ මුදුනේ සිට පහළට එල්ලෙන දිගු පොකුරු වශයෙන් හටගනී.",
+          "කුඩා, වටකුරු ගෙඩිය එහි මතුපිට කුපිත කරන ස්ඵටික සහිතව; කෑමට සුදුසු නොවේ.",
+          "ශ්‍රී ලංකාවේ සහ දකුණු ඉන්දියාවේ නිවර්තන වර්ෂාවනාන්තර, තෙත් නිම්න, සහ සෙවන සහිත කඳුකර බෑවුම්.",
+        ],
+        [
+          "පැණි උතුරුවා සාම්ප්‍රදායික ශ්‍රී ලාංකික රසකාරක වන කිතුල් පැණි සහ හකුරු නිපදවනු ලැබේ; එම පැණියෙන්ම රා පැසවීමට හෝ ආසවනය කර අරක්කු බවට පත් කළ හැකි අතර, අභ්‍යන්තර හරයෙන් සාගු වැනි පිටියක් ලබාගත හැක.",
+          "කිතුල් පැණි ශ්‍රී ලාංකික සම්ප්‍රදායේ ස්වාභාවික ශක්ති වර්ධකයක් ලෙස සලකනු ලබන අතර ප්‍රතිඔක්සිකාරක හා ප්‍රති-ගිනි අවුලුවන ගුණාංග ඇතැයි විශ්වාස කෙරේ; පැණි ආහාර දිරවීමට උපකාර වීමට සහ තෙහෙට්ටුව අඩු කිරීමට සාම්ප්‍රදායික ඖෂධයේ භාවිතා කරයි.",
+          "කිතුල් ගස නිවර්තන වනාන්තරවල වාසස්ථානය සහ සෙවන සැපයීමෙන් ජෛව විවිධත්වයට සහාය වේ; එහි ගැඹුරු මුල් කඳුකර, තෙත් ප්‍රදේශවල පස ඛාදනය වැළැක්වීමට උපකාර වන අතර ජලාශ ස්ථායීතාවයට දායක වේ.",
+        ],
+      ],
       duration: "මිනිත්තු 5-10",
     },
     pruning: {
@@ -820,8 +845,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "கிதுள் வெல்லம்",
-      description: "கிதுள் பனை (Caryota urens) ஒரு மீன்-வால் பனை வகையாகும் — அதன் பெரிய இரட்டைப் பட்டைவிரி இலைகளில் காணப்படும் கிழிந்த, மீன்-வால் வடிவ இலைத்துண்டுகள் காரணமாக இப்பெயர் பெற்றது — இது இலங்கை மற்றும் தென்னிந்தியா முழுவதும் வெப்பமண்டல மழைக்காடுகள், ஈரமான பள்ளத்தாக்குகள், மற்றும் நிழல் மலைச் சரிவுகளில் 12 முதல் 20 மீட்டர் வரை உயரமாக வளர்கிறது. இதன் மிக மதிப்புமிக்க விளைபொருள் அதன் பூக்கும் தண்டுகளிலிருந்து சேகரிக்கப்படும் இனிப்புச் சாறு ஆகும், இது காய்ச்சப்பட்டு பாரம்பரிய கிதுள் பாகு மற்றும் வெல்லமாக — வளமான, கேரமல் போன்ற சுத்திகரிக்கப்படாத சர்க்கரையாக — மாற்றப்படுகிறது; அதே சாறு புளிக்க வைக்கப்பட்டு கள்ளாகவோ அல்லது வடிகட்டி அரக்காகவோ மாற்றப்படலாம், மேலும் மரத்தின் உள் கூழ் சாகுவை ஒத்த மாவாக மாற்றப்படலாம்.",
-      keyPoints: "கிதுள் பனையின் கிரீம் நிற வெள்ளை பூக்கள் தண்டின் உச்சியிலிருந்து கீழ்நோக்கி தொங்கும் நீண்ட கொத்துகளாக உருவாகின்றன; அதன் சிறிய வட்டமான பழம் உண்ணத் தகுதியற்றது, ஏனெனில் அதன் மேற்பரப்பில் எரிச்சலூட்டும் படிகங்கள் உள்ளன. கிதுள் பாகு இலங்கை பாரம்பரியத்தில் ஒரு இயற்கை ஆற்றல் ஊக்கியாகக் கருதப்படுகிறது, மேலும் செரிமானத்திற்கு உதவவும் சோர்வைக் குறைக்கவும் பயன்படுத்தப்படுகிறது; சமையல் மற்றும் மருத்துவப் பயன்பாடுகளுக்கு அப்பால், மரத்தின் ஆழமான வேர் அமைப்பு மலைப்பாங்கான, ஈரமான நிலப்பரப்பில் மண் அரிப்பைத் தடுக்கவும் நீர்நிலைப் பாதுகாப்பை ஆதரிக்கவும் உதவுகிறது.",
+      heroTagline: "உயரமான மீன்-வால் பனையிலிருந்து இலங்கையின் பாரம்பரிய பாகு மற்றும் வெல்லம் வரை.",
+      sectionHeadings: ["கிதுள் பனையைப் பற்றி", "பண்புகள்", "பயன்கள் மற்றும் நன்மைகள்"],
+      sectionBodies: [
+        "Caryota urens — கிதுள் பனை, அல்லது மீன்-வால் பனை — இலங்கை, இந்தியா, மற்றும் பிற வெப்பமண்டல ஆசிய நாடுகள் முழுவதும் காணப்படும் உயரமான, அழகிய பனையாகும், இதன் பல்நோக்கு பயன்பாட்டிற்காக மதிக்கப்படுகிறது. இதன் மிகவும் குறிப்பிடத்தக்க விளைபொருள் அதன் பூக்கும் தண்டுகளிலிருந்து சேகரிக்கப்படும் இனிப்புச் சாறு ஆகும், இது காய்ச்சப்பட்டு பாரம்பரிய கிதுள் பாகு மற்றும் வெல்லத்தை உருவாக்குகிறது. இந்த மரம் அதன் வலிமையான, நார்ச்சத்துள்ள தண்டு மற்றும் அழகிய மீன்-வால் வடிவ இலைகளுக்காகவும் அறியப்படுகிறது.",
+        "பனையைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+        "கிதுள் பனையின் மதிப்பு அதன் பாகு மற்றும் வெல்லத்தைத் தாண்டி விரிவடைகிறது:",
+      ],
+      itemHeadings: [
+        [],
+        ["உயரம்", "இலைகள்", "பூக்கள்", "பழம்", "வாழ்விடம்"],
+        ["சமையல் பயன்பாடு", "மருத்துவ பண்புகள்", "சுற்றுச்சூழல் முக்கியத்துவம்"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "12 முதல் 20 மீட்டர் வரை உயரம்.",
+          "பெரிய, இரட்டைப் பட்டைவிரி இலைகள் மீன்-வால் வடிவ இலைத்துண்டுகளுடன், 3 முதல் 5 மீட்டர் வரை நீளம்.",
+          "க்ரீம் நிற வெள்ளை பூக்கள் தண்டின் உச்சியிலிருந்து கீழ்நோக்கி தொங்கும் நீண்ட கொத்துகளாக உருவாகின்றன.",
+          "சிறிய, வட்டமான பழம் அதன் மேற்பரப்பில் எரிச்சலூட்டும் படிகங்களுடன்; உண்ணத் தகுதியற்றது.",
+          "இலங்கை மற்றும் தென்னிந்தியாவின் வெப்பமண்டல மழைக்காடுகள், ஈரமான பள்ளத்தாக்குகள், மற்றும் நிழல் மலைச் சரிவுகள்.",
+        ],
+        [
+          "இனிப்புச் சாறு காய்ச்சப்பட்டு பாரம்பரிய இலங்கை இனிப்பு பொருட்களான கிதுள் பாகு மற்றும் வெல்லம் தயாரிக்கப்படுகிறது; அதே சாறு புளிக்க வைக்கப்பட்டு கள்ளாகவோ அல்லது வடிகட்டி அரக்காகவோ மாற்றப்படலாம், மேலும் உள் கூழிலிருந்து சாகுவை ஒத்த மாவைப் பெறலாம்.",
+          "கிதுள் பாகு இலங்கை பாரம்பரியத்தில் ஒரு இயற்கை ஆற்றல் ஊக்கியாகக் கருதப்படுகிறது, மேலும் ஆக்ஸிஜனேற்ற எதிர்ப்பு மற்றும் அழற்சி எதிர்ப்பு பண்புகளைக் கொண்டிருப்பதாக நம்பப்படுகிறது; இச்சாறு செரிமானத்திற்கு உதவவும் சோர்வைக் குறைக்கவும் பாரம்பரிய மருத்துவத்தில் பயன்படுத்தப்படுகிறது.",
+          "கிதுள் பனை வெப்பமண்டல காடுகளில் வாழ்விடம் மற்றும் நிழலை வழங்குவதன் மூலம் பல்லுயிர் பெருக்கத்திற்கு உதவுகிறது; அதன் ஆழமான வேர்கள் மலைப்பாங்கான, ஈரமான பகுதிகளில் மண் அரிப்பைத் தடுக்க உதவுகின்றன மற்றும் நீர்நிலைப் பாதுகாப்பிற்கு பங்களிக்கின்றன.",
+        ],
+      ],
       duration: "5-10 நிமிடங்கள்",
     },
     pruning: {
@@ -1086,8 +1136,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "Palma da Jaggery (Kithul)",
-      description: "La palma kithul (Caryota urens) è una palma dalle foglie a coda di pesce — così chiamata per le foglioline frastagliate, a forma di coda di pesce, delle sue grandi foglie bipennate — che cresce dai 12 ai 20 metri di altezza nella foresta pluviale tropicale, nelle valli umide e sui pendii collinari ombreggiati dello Sri Lanka e dell'India meridionale. Il suo prodotto più prezioso è la linfa dolce raccolta dagli steli fiorali, che viene fatta bollire fino a diventare il tradizionale sciroppo e jaggery di kithul, uno zucchero grezzo ricco, dal sapore simile al caramello; la stessa linfa può anche essere fermentata in toddy o distillata in arrack, e il midollo interno dell'albero può essere lavorato in un amido simile al sago.",
-      keyPoints: "I fiori bianco crema della palma kithul si formano in lunghi grappoli pendenti, dalla cima del tronco verso il basso; il suo piccolo frutto rotondo non è commestibile, poiché la sua superficie contiene cristalli irritanti. Lo sciroppo di kithul è considerato nella tradizione dello Sri Lanka un energizzante naturale ed è usato per favorire la digestione e ridurre la stanchezza; oltre ai suoi usi culinari e medicinali, il sistema radicale profondo della palma aiuta a prevenire l'erosione del suolo e sostiene la stabilità dei bacini idrici nei terreni collinari e umidi.",
+      heroTagline: "Da un'imponente palma dalle foglie a coda di pesce allo sciroppo e al jaggery tradizionali dello Sri Lanka.",
+      sectionHeadings: ["La Palma Kithul", "Caratteristiche", "Usi e Benefici"],
+      sectionBodies: [
+        "Caryota urens — la palma kithul, o palma dalle foglie a coda di pesce — è una palma alta ed elegante presente in Sri Lanka, India e altri paesi tropicali asiatici, apprezzata per il suo uso multiplo. Il suo prodotto più noto è la linfa dolce raccolta dagli steli fiorali, che viene fatta bollire per produrre il tradizionale sciroppo e jaggery di kithul. L'albero è noto anche per il suo tronco robusto e fibroso e le sue belle foglie a forma di coda di pesce.",
+        "Uno sguardo rapido alla palma stessa:",
+        "Il valore della palma kithul va ben oltre il suo sciroppo e jaggery:",
+      ],
+      itemHeadings: [
+        [],
+        ["Altezza", "Foglie", "Fiori", "Frutto", "Habitat"],
+        ["Usi Culinari", "Proprietà Medicinali", "Importanza Ecologica"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Alta dai 12 ai 20 metri.",
+          "Grandi foglie bipennate con foglioline a forma di coda di pesce, lunghe dai 3 ai 5 metri.",
+          "Fiori bianco crema portati in lunghi grappoli pendenti, dalla cima del tronco verso il basso.",
+          "Frutto piccolo e rotondo con cristalli irritanti sulla superficie; non commestibile.",
+          "Foresta pluviale tropicale, valli umide e pendii collinari ombreggiati dello Sri Lanka e dell'India meridionale.",
+        ],
+        [
+          "La linfa dolce viene fatta bollire per produrre lo sciroppo e il jaggery di kithul, dolcificanti tradizionali dello Sri Lanka; la stessa linfa può anche essere fermentata in toddy o distillata in arrack, e il midollo interno può fornire un amido simile al sago.",
+          "Lo sciroppo di kithul è considerato nella tradizione dello Sri Lanka un energizzante naturale e si ritiene abbia proprietà antiossidanti e antinfiammatorie; la linfa è usata nella medicina tradizionale per favorire la digestione e ridurre la stanchezza.",
+          "La palma kithul sostiene la biodiversità fornendo habitat e ombra nelle foreste tropicali; le sue radici profonde aiutano a prevenire l'erosione del suolo nelle regioni collinari e umide e contribuiscono alla stabilità dei bacini idrici.",
+        ],
+      ],
       duration: "5-10 minuti",
     },
     pruning: {
@@ -1352,8 +1427,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "نخيل الجاجري (كيثول)",
-      description: "نخيل الكيثول (Caryota urens) هو نوع من نخيل ذيل السمك — سُمي بهذا الاسم بسبب وريقاته الممزقة الشبيهة بذيل السمك على أوراقه الريشية المزدوجة الكبيرة — وينمو حتى ارتفاع يتراوح بين 12 و20 مترًا في الغابات المطيرة الاستوائية والوديان الرطبة والمنحدرات الجبلية المظللة في جميع أنحاء سريلانكا وجنوب الهند. أثمن منتجاته هو النسغ الحلو المستخرج من سيقان أزهاره، والذي يُغلى ليتحول إلى دبس ودراجري الكيثول التقليديين، وهو سكر خام غني بنكهة تشبه الكراميل؛ ويمكن أيضًا تخمير النسغ نفسه لصنع التودي أو تقطيره لصنع الأراك، كما يمكن معالجة لُب الشجرة الداخلي ليتحول إلى نشا شبيه بالساغو.",
-      keyPoints: "تنمو أزهار نخيل الكيثول البيضاء الكريمية في عناقيد طويلة متدلية من أعلى الجذع نحو الأسفل؛ أما ثمرته الصغيرة المستديرة فغير صالحة للأكل، إذ يحتوي سطحها على بلورات مهيّجة. يُعتبر دبس الكيثول في التقاليد السريلانكية مقويًا طبيعيًا للطاقة ويُستخدم لدعم عملية الهضم وتقليل التعب؛ وإلى جانب استخداماته في الطهي والطب، يساعد نظام جذور الشجرة العميق على منع تآكل التربة ودعم استقرار مستجمعات المياه في التضاريس الجبلية الرطبة.",
+      heroTagline: "من نخلة ذيل السمك الشامخة إلى دبس وجاجري سريلانكا التقليديين.",
+      sectionHeadings: ["عن نخيل الكيثول", "الخصائص", "الاستخدامات والفوائد"],
+      sectionBodies: [
+        "نخيل الكيثول (Caryota urens)، أو نخيل ذيل السمك، هو نخيل طويل وأنيق يوجد في جميع أنحاء سريلانكا والهند ودول آسيوية استوائية أخرى، ويُقدَّر لاستخداماته المتعددة. أبرز منتجاته هو النسغ الحلو المستخرج من سيقان أزهاره، والذي يُغلى لإنتاج دبس وجاجري الكيثول التقليديين. تشتهر الشجرة أيضًا بجذعها القوي الليفي وأوراقها الجميلة الشبيهة بذيل السمك.",
+        "نظرة سريعة على النخلة نفسها:",
+        "تتجاوز قيمة نخيل الكيثول دبسه وجاجريه إلى حد بعيد:",
+      ],
+      itemHeadings: [
+        [],
+        ["الارتفاع", "الأوراق", "الأزهار", "الثمرة", "الموطن"],
+        ["الاستخدامات الغذائية", "الخصائص الطبية", "الأهمية البيئية"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "يتراوح ارتفاعه بين 12 و20 مترًا.",
+          "أوراق ريشية مزدوجة كبيرة ذات وريقات شبيهة بذيل السمك، يتراوح طولها بين 3 و5 أمتار.",
+          "أزهار بيضاء كريمية تنمو في عناقيد طويلة متدلية من أعلى الجذع نحو الأسفل.",
+          "ثمرة صغيرة مستديرة تحتوي سطحها على بلورات مهيّجة؛ غير صالحة للأكل.",
+          "الغابات المطيرة الاستوائية والوديان الرطبة والمنحدرات الجبلية المظللة في سريلانكا وجنوب الهند.",
+        ],
+        [
+          "يُغلى النسغ الحلو لإنتاج دبس وجاجري الكيثول، وهما محلّيان تقليديان في سريلانكا؛ ويمكن أيضًا تخمير النسغ نفسه لصنع التودي أو تقطيره لصنع الأراك، كما يمكن أن يوفر اللب الداخلي نشا شبيهًا بالساغو.",
+          "يُعتبر دبس الكيثول في التقاليد السريلانكية مقويًا طبيعيًا للطاقة ويُعتقد أن له خصائص مضادة للأكسدة ومضادة للالتهابات؛ ويُستخدم النسغ في الطب التقليدي لدعم الهضم وتقليل التعب.",
+          "يدعم نخيل الكيثول التنوع البيولوجي من خلال توفير الموطن والظل في الغابات الاستوائية؛ وتساعد جذوره العميقة على منع تآكل التربة في المناطق الجبلية الرطبة وتسهم في استقرار مستجمعات المياه.",
+        ],
+      ],
       duration: "5-10 دقائق",
     },
     pruning: {
@@ -1618,8 +1718,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "Пальма Джаггери (Китул)",
-      description: "Пальма китул (Caryota urens) — это рыбохвостая пальма, названная так из-за рваных, похожих на рыбий хвост листочков на её крупных дважды перистых листьях; она вырастает высотой от 12 до 20 метров во влажных тропических лесах, сырых долинах и затенённых горных склонах Шри-Ланки и Южной Индии. Её самый ценный продукт — сладкий сок, собираемый из цветоносов, который вываривается до состояния традиционной китульской патоки и джаггери — насыщенного неочищенного сахара с карамельным вкусом; тот же сок можно также сбраживать в тодди или перегонять в арак, а внутреннюю сердцевину дерева можно перерабатывать в крахмал, похожий на саго.",
-      keyPoints: "Кремово-белые цветки пальмы китул образуют длинные свисающие соцветия, растущие от верхушки ствола вниз; её мелкие круглые плоды несъедобны, поскольку на их поверхности есть раздражающие кристаллы. В шри-ланкийской традиции китульская патока считается природным источником энергии и используется для улучшения пищеварения и снижения усталости; помимо кулинарного и лекарственного применения, глубокая корневая система пальмы помогает предотвращать эрозию почвы и поддерживает устойчивость водосборов на холмистой, влажной местности.",
+      heroTagline: "От высокой рыбохвостой пальмы до традиционной шри-ланкийской патоки и джаггери.",
+      sectionHeadings: ["О пальме китул", "Характеристики", "Применение и польза"],
+      sectionBodies: [
+        "Caryota urens — пальма китул, или рыбохвостая пальма — это высокая, изящная пальма, встречающаяся в Шри-Ланке, Индии и других тропических странах Азии, ценимая за разностороннее применение. Её самый заметный продукт — сладкий сок, собираемый из цветоносов, который вываривается до традиционной китульской патоки и джаггери. Дерево также известно своим крепким, волокнистым стволом и красивыми, похожими на рыбий хвост листьями.",
+        "Краткий обзор самой пальмы:",
+        "Ценность пальмы китул выходит далеко за рамки её патоки и джаггери:",
+      ],
+      itemHeadings: [
+        [],
+        ["Высота", "Листья", "Цветки", "Плод", "Среда обитания"],
+        ["Кулинарное применение", "Лекарственные свойства", "Экологическое значение"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "От 12 до 20 метров высотой.",
+          "Крупные дважды перистые листья с похожими на рыбий хвост листочками, длиной от 3 до 5 метров.",
+          "Кремово-белые цветки образуют длинные свисающие соцветия, растущие от верхушки ствола вниз.",
+          "Мелкий круглый плод с раздражающими кристаллами на поверхности; несъедобен.",
+          "Тропические дождевые леса, сырые долины и затенённые горные склоны Шри-Ланки и Южной Индии.",
+        ],
+        [
+          "Сладкий сок вываривается до состояния китульской патоки и джаггери — традиционных шри-ланкийских подсластителей; тот же сок можно также сбраживать в тодди или перегонять в арак, а внутренняя сердцевина может давать крахмал, похожий на саго.",
+          "В шри-ланкийской традиции китульская патока считается природным источником энергии и, как считается, обладает антиоксидантными и противовоспалительными свойствами; сок используется в традиционной медицине для улучшения пищеварения и снижения усталости.",
+          "Пальма китул поддерживает биоразнообразие, обеспечивая среду обитания и тень в тропических лесах; её глубокие корни помогают предотвращать эрозию почвы в холмистых, влажных регионах и способствуют устойчивости водосборов.",
+        ],
+      ],
       duration: "5–10 минут",
     },
     pruning: {
@@ -1884,8 +2009,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "Jaggery-Palme (Kithul)",
-      description: "Die Kithul-Palme (Caryota urens) ist eine Fischschwanzpalme — benannt nach den zerfransten, fischschwanzförmigen Fiederblättchen ihrer großen doppelt gefiederten Blätter —, die in tropischem Regenwald, feuchten Tälern und schattigen Hügelhängen in ganz Sri Lanka und Südindien 12 bis 20 Meter hoch wächst. Ihr wertvollstes Produkt ist der süße Saft, der aus ihren Blütenstielen gewonnen wird und zu traditionellem Kithul-Sirup und Jaggery eingekocht wird, einem reichhaltigen, unraffinierten Zucker mit Karamellgeschmack; derselbe Saft kann auch zu Toddy vergoren oder zu Arrak destilliert werden, und das innere Mark des Baumes lässt sich zu einer sagoartigen Stärke verarbeiten.",
-      keyPoints: "Die cremeweißen Blüten der Kithul-Palme bilden lange, hängende Trauben, die von der Stammspitze abwärts wachsen; ihre kleine, runde Frucht ist nicht essbar, da ihre Oberfläche reizende Kristalle trägt. Kithul-Sirup gilt in der sri-lankischen Tradition als natürlicher Energiespender und wird zur Unterstützung der Verdauung und zur Verringerung von Müdigkeit eingesetzt; über den kulinarischen und medizinischen Nutzen hinaus hilft das tiefe Wurzelsystem der Palme, Bodenerosion vorzubeugen, und trägt zur Stabilität der Wassereinzugsgebiete in hügeligem, feuchtem Gelände bei.",
+      heroTagline: "Von einer hoch aufragenden Fischschwanzpalme zu Sri Lankas traditionellem Sirup und Jaggery.",
+      sectionHeadings: ["Über die Kithul-Palme", "Merkmale", "Verwendung und Nutzen"],
+      sectionBodies: [
+        "Caryota urens — die Kithul-Palme oder Fischschwanzpalme — ist eine hohe, elegante Palme, die in Sri Lanka, Indien und anderen tropischen asiatischen Ländern vorkommt und für ihre vielseitige Nutzung geschätzt wird. Ihr bemerkenswertestes Produkt ist der süße Saft, der aus ihren Blütenstielen gewonnen wird und zu traditionellem Kithul-Sirup und Jaggery eingekocht wird. Der Baum ist außerdem für seinen kräftigen, faserigen Stamm und seine schönen fischschwanzförmigen Blätter bekannt.",
+        "Ein kurzer Blick auf die Palme selbst:",
+        "Der Wert der Kithul-Palme geht weit über ihren Sirup und Jaggery hinaus:",
+      ],
+      itemHeadings: [
+        [],
+        ["Höhe", "Blätter", "Blüten", "Frucht", "Lebensraum"],
+        ["Kulinarische Nutzung", "Medizinische Eigenschaften", "Ökologische Bedeutung"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "12 bis 20 Meter hoch.",
+          "Große, doppelt gefiederte Blätter mit fischschwanzförmigen Fiederblättchen, 3 bis 5 Meter lang.",
+          "Cremeweiße Blüten in langen, hängenden Trauben, die von der Stammspitze abwärts wachsen.",
+          "Kleine, runde Frucht mit reizenden Kristallen auf der Oberfläche; nicht essbar.",
+          "Tropischer Regenwald, feuchte Täler und schattige Hügelhänge in Sri Lanka und Südindien.",
+        ],
+        [
+          "Der süße Saft wird zu Kithul-Sirup und Jaggery eingekocht, traditionellen sri-lankischen Süßungsmitteln; derselbe Saft kann auch zu Toddy vergoren oder zu Arrak destilliert werden, und das innere Mark kann eine sagoartige Stärke liefern.",
+          "Kithul-Sirup gilt in der sri-lankischen Tradition als natürlicher Energiespender und soll antioxidative und entzündungshemmende Eigenschaften besitzen; der Saft wird in der traditionellen Medizin zur Unterstützung der Verdauung und zur Verringerung von Müdigkeit eingesetzt.",
+          "Die Kithul-Palme unterstützt die Biodiversität, indem sie Lebensraum und Schatten in tropischen Wäldern bietet; ihre tiefen Wurzeln helfen, Bodenerosion in hügeligen, feuchten Regionen vorzubeugen, und tragen zur Stabilität der Wassereinzugsgebiete bei.",
+        ],
+      ],
       duration: "5-10 Minuten",
     },
     pruning: {
@@ -2150,8 +2300,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "Palma de Jaggery (Kithul)",
-      description: "La palma kithul (Caryota urens) es una palma de cola de pez —llamada así por los foliolos desgarrados, con forma de cola de pez, de sus grandes hojas bipinnadas— que crece entre 12 y 20 metros de altura en la selva tropical, valles húmedos y laderas de colinas sombreadas de Sri Lanka y el sur de la India. Su producto más valioso es la savia dulce extraída de sus tallos florales, que se hierve hasta convertirse en la tradicional melaza y jaggery de kithul, un azúcar sin refinar de sabor intenso a caramelo; la misma savia también puede fermentarse en toddy o destilarse en arrack, y la médula interior del árbol puede procesarse en un almidón similar al sagú.",
-      keyPoints: "Las flores blanco cremoso de la palma kithul crecen en largos racimos colgantes desde la parte superior del tronco hacia abajo; su pequeño fruto redondo no es comestible, ya que su superficie contiene cristales irritantes. La melaza de kithul se considera en la tradición de Sri Lanka un estimulante energético natural y se usa para favorecer la digestión y reducir la fatiga; más allá de sus usos culinarios y medicinales, el profundo sistema de raíces de la palma ayuda a prevenir la erosión del suelo y contribuye a la estabilidad de las cuencas hidrográficas en terrenos montañosos y húmedos.",
+      heroTagline: "De una imponente palma de cola de pez a la melaza y el jaggery tradicionales de Sri Lanka.",
+      sectionHeadings: ["Sobre la Palma Kithul", "Características", "Usos y Beneficios"],
+      sectionBodies: [
+        "Caryota urens —la palma kithul, o palma de cola de pez— es una palma alta y elegante que se encuentra en Sri Lanka, India y otros países tropicales de Asia, apreciada por su uso multipropósito. Su producto más destacado es la savia dulce extraída de sus tallos florales, que se hierve para producir la tradicional melaza y jaggery de kithul. El árbol también es conocido por su tronco fuerte y fibroso y sus hermosas hojas con forma de cola de pez.",
+        "Un vistazo rápido a la palma:",
+        "El valor de la palma kithul va mucho más allá de su melaza y jaggery:",
+      ],
+      itemHeadings: [
+        [],
+        ["Altura", "Hojas", "Flores", "Fruto", "Hábitat"],
+        ["Usos Culinarios", "Propiedades Medicinales", "Importancia Ecológica"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Entre 12 y 20 metros de altura.",
+          "Hojas grandes y bipinnadas con foliolos con forma de cola de pez, de 3 a 5 metros de largo.",
+          "Flores blanco cremoso que crecen en largos racimos colgantes desde la parte superior del tronco hacia abajo.",
+          "Fruto pequeño y redondo con cristales irritantes en la superficie; no comestible.",
+          "Selva tropical, valles húmedos y laderas de colinas sombreadas de Sri Lanka y el sur de la India.",
+        ],
+        [
+          "La savia dulce se hierve para producir la melaza y el jaggery de kithul, edulcorantes tradicionales de Sri Lanka; la misma savia también puede fermentarse en toddy o destilarse en arrack, y la médula interior puede producir un almidón similar al sagú.",
+          "La melaza de kithul se considera en la tradición de Sri Lanka un estimulante energético natural y se cree que tiene propiedades antioxidantes y antiinflamatorias; la savia se usa en la medicina tradicional para favorecer la digestión y reducir la fatiga.",
+          "La palma kithul favorece la biodiversidad al proporcionar hábitat y sombra en los bosques tropicales; sus raíces profundas ayudan a prevenir la erosión del suelo en regiones montañosas y húmedas y contribuyen a la estabilidad de las cuencas hidrográficas.",
+        ],
+      ],
       duration: "5-10 minutos",
     },
     pruning: {
@@ -2416,8 +2591,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "Palmier à Jaggery (Kithul)",
-      description: "Le palmier kithul (Caryota urens) est un palmier à queue de poisson — ainsi nommé pour les folioles déchiquetées, en forme de queue de poisson, de ses grandes feuilles bipennées — qui pousse de 12 à 20 mètres de haut dans la forêt tropicale humide, les vallées humides et les versants de collines ombragés du Sri Lanka et du sud de l'Inde. Son produit le plus précieux est la sève sucrée récoltée sur ses tiges florales, qui est bouillie jusqu'à devenir le sirop et le jaggery de kithul traditionnels, un sucre non raffiné riche, au goût de caramel ; la même sève peut aussi être fermentée en toddy ou distillée en arrack, et la moelle intérieure de l'arbre peut être transformée en un amidon proche du sagou.",
-      keyPoints: "Les fleurs blanc crème du palmier kithul se forment en longues grappes pendantes, du sommet du tronc vers le bas ; son petit fruit rond n'est pas comestible, car sa surface porte des cristaux irritants. Le sirop de kithul est considéré, dans la tradition sri-lankaise, comme un tonique énergétique naturel et est utilisé pour favoriser la digestion et réduire la fatigue ; au-delà de ses usages culinaires et médicinaux, le système racinaire profond du palmier aide à prévenir l'érosion des sols et soutient la stabilité des bassins versants sur les terrains vallonnés et humides.",
+      heroTagline: "D'un imposant palmier à queue de poisson au sirop et au jaggery traditionnels du Sri Lanka.",
+      sectionHeadings: ["À propos du Palmier Kithul", "Caractéristiques", "Usages et Bienfaits"],
+      sectionBodies: [
+        "Caryota urens — le palmier kithul, ou palmier à queue de poisson — est un palmier grand et élégant que l'on trouve au Sri Lanka, en Inde et dans d'autres pays tropicaux d'Asie, apprécié pour ses usages multiples. Son produit le plus notable est la sève sucrée récoltée sur ses tiges florales, qui est bouillie pour produire le sirop et le jaggery de kithul traditionnels. L'arbre est également connu pour son tronc solide et fibreux et ses belles feuilles en forme de queue de poisson.",
+        "Un aperçu rapide du palmier lui-même :",
+        "La valeur du palmier kithul va bien au-delà de son sirop et de son jaggery :",
+      ],
+      itemHeadings: [
+        [],
+        ["Hauteur", "Feuilles", "Fleurs", "Fruit", "Habitat"],
+        ["Usages Culinaires", "Propriétés Médicinales", "Importance Écologique"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "De 12 à 20 mètres de haut.",
+          "Grandes feuilles bipennées aux folioles en forme de queue de poisson, longues de 3 à 5 mètres.",
+          "Fleurs blanc crème portées en longues grappes pendantes, du sommet du tronc vers le bas.",
+          "Petit fruit rond portant des cristaux irritants à sa surface ; non comestible.",
+          "Forêt tropicale humide, vallées humides et versants de collines ombragés du Sri Lanka et du sud de l'Inde.",
+        ],
+        [
+          "La sève sucrée est bouillie pour produire le sirop et le jaggery de kithul, des édulcorants traditionnels sri-lankais ; la même sève peut aussi être fermentée en toddy ou distillée en arrack, et la moelle intérieure peut fournir un amidon proche du sagou.",
+          "Le sirop de kithul est considéré, dans la tradition sri-lankaise, comme un tonique énergétique naturel et on lui attribue des propriétés antioxydantes et anti-inflammatoires ; la sève est utilisée en médecine traditionnelle pour favoriser la digestion et réduire la fatigue.",
+          "Le palmier kithul soutient la biodiversité en offrant habitat et ombre dans les forêts tropicales ; ses racines profondes aident à prévenir l'érosion des sols dans les régions vallonnées et humides et contribuent à la stabilité des bassins versants.",
+        ],
+      ],
       duration: "5-10 minutes",
     },
     pruning: {
@@ -2682,8 +2882,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "基图尔糖棕（贾格里糖）",
-      description: "基图尔棕榈（Caryota urens）是一种「鱼尾棕榈」——因其大型二回羽状叶上参差不齐、形似鱼尾的小叶而得名——生长于斯里兰卡及南印度各地的热带雨林、湿润山谷及有遮荫的山坡，株高可达12至20米。其最珍贵的产物是从花梗中采集的甜树液，经熬煮后制成传统的基图尔糖浆与贾格里糖，一种浓郁、带焦糖风味的未精炼糖；同样的树液也可以发酵成托迪酒或蒸馏成亚力酒，树干内部的髓心还可加工成类似西谷米的淀粉。",
-      keyPoints: "基图尔棕榈的乳白色花朵呈长长的下垂花穗，从树干顶端向下依次开放；其果实虽小巧浑圆，却不可食用，因为表面带有刺激性的结晶。在斯里兰卡传统中，基图尔糖浆被视为天然的滋补品，用以帮助消化、缓解疲劳；除了饮食与药用价值外，这种棕榈树深长的根系还有助于防止水土流失，并在多山、潮湿的地形中维护流域的稳定性。",
+      heroTagline: "从高耸的鱼尾棕榈到斯里兰卡传统的糖浆与贾格里糖。",
+      sectionHeadings: ["关于基图尔棕榈", "特征", "用途与益处"],
+      sectionBodies: [
+        "基图尔棕榈（Caryota urens），又称鱼尾棕榈，是一种高大优雅的棕榈树，广泛分布于斯里兰卡、印度及其他热带亚洲国家，因其多种用途而备受重视。其最著名的产物是从花梗中采集的甜树液，经熬煮后制成传统的基图尔糖浆与贾格里糖。这种树还以其粗壮的纤维状树干和美丽的鱼尾状叶片而闻名。",
+        "棕榈树本身的简要介绍：",
+        "基图尔棕榈的价值远不止其糖浆与贾格里糖：",
+      ],
+      itemHeadings: [
+        [],
+        ["株高", "叶片", "花朵", "果实", "栖息地"],
+        ["食用价值", "药用特性", "生态重要性"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "株高12至20米。",
+          "大型二回羽状叶，小叶呈鱼尾状，长3至5米。",
+          "乳白色花朵呈长长的下垂花穗，从树干顶端向下依次开放。",
+          "果实小巧浑圆，表面带有刺激性结晶；不可食用。",
+          "斯里兰卡及南印度的热带雨林、湿润山谷及有遮荫的山坡。",
+        ],
+        [
+          "甜树液经熬煮后制成基图尔糖浆与贾格里糖，均为斯里兰卡传统甜味剂；同样的树液也可以发酵成托迪酒或蒸馏成亚力酒，树干内部的髓心还可提取类似西谷米的淀粉。",
+          "在斯里兰卡传统中，基图尔糖浆被视为天然滋补品，据信具有抗氧化和抗炎特性；树液在传统医学中用于帮助消化、缓解疲劳。",
+          "基图尔棕榈通过为热带森林提供栖息地和遮荫，支持生物多样性；其深长的根系有助于防止多山潮湿地区的水土流失，并有助于维护流域的稳定性。",
+        ],
+      ],
       duration: "5-10分钟",
     },
     pruning: {
@@ -2948,8 +3173,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "jaggery-palm": {
       name: "キトゥルヤシ（ジャガリー）",
-      description: "キトゥルヤシ（Caryota urens）は「フィッシュテールパーム」と呼ばれるヤシの一種で、大きな二回羽状複葉にある、魚の尾のようにギザギザした小葉に由来する名前です。スリランカと南インド各地の熱帯雨林、湿った谷、日陰の丘陵斜面で、高さ12〜20メートルほどに育ちます。最も価値のある産物は花茎から採取される甘い樹液で、これを煮詰めて伝統的なキトゥルシロップとジャガリー——濃厚でキャラメルのような風味を持つ未精製糖——に加工します。同じ樹液はトディ酒として発酵させたり、蒸留してアラックにすることもでき、木の内部の髄はサゴでんぷんのような澱粉に加工することもできます。",
-      keyPoints: "キトゥルヤシのクリーム色がかった白い花は、幹の上部から下に向かって長く垂れ下がる房状に咲きます。小さく丸い果実は食用にはならず、その表面には刺激性のある結晶が含まれています。キトゥルシロップはスリランカの伝統において天然の活力剤とされ、消化を助け疲労を軽減するために用いられます。食用・薬用としての用途に加え、このヤシの深い根系は、丘陵地の湿った地形での土壌浸食を防ぎ、流域の安定性を支える役割も果たしています。",
+      heroTagline: "そびえ立つフィッシュテールパームから、スリランカ伝統のシロップとジャガリーへ。",
+      sectionHeadings: ["キトゥルヤシについて", "特徴", "用途と効能"],
+      sectionBodies: [
+        "キトゥルヤシ（Caryota urens）——キトゥルパーム、またはフィッシュテールパーム——は、スリランカ、インド、その他の熱帯アジア諸国に分布する背が高く優美なヤシで、その多目的な利用価値で重宝されています。最も注目すべき産物は花茎から採取される甘い樹液で、これを煮詰めて伝統的なキトゥルシロップとジャガリーを作ります。この木はまた、頑丈な繊維質の幹と美しい魚の尾のような形の葉でも知られています。",
+        "ヤシそのものを簡単に見てみましょう：",
+        "キトゥルヤシの価値は、シロップとジャガリーだけにとどまりません：",
+      ],
+      itemHeadings: [
+        [],
+        ["高さ", "葉", "花", "果実", "生息地"],
+        ["食用としての利用", "薬用効果", "生態学的重要性"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "高さ12〜20メートル。",
+          "大きな二回羽状複葉で、魚の尾のような形の小葉を持ち、長さ3〜5メートル。",
+          "クリーム色がかった白い花が、幹の上部から下に向かって長く垂れ下がる房状に咲く。",
+          "小さく丸い果実で、表面に刺激性のある結晶を持つ。食用にはならない。",
+          "スリランカと南インドの熱帯雨林、湿った谷、日陰の丘陵斜面。",
+        ],
+        [
+          "甘い樹液を煮詰めて、スリランカの伝統的な甘味料であるキトゥルシロップとジャガリーを作る。同じ樹液はトディ酒として発酵させたり、蒸留してアラックにすることもでき、内部の髄からはサゴでんぷんのような澱粉が得られる。",
+          "キトゥルシロップはスリランカの伝統において天然の活力剤とされ、抗酸化作用や抗炎症作用があると信じられている。樹液は伝統医学において消化を助け、疲労を軽減するために用いられる。",
+          "キトゥルヤシは熱帯林に生息地と日陰を提供することで生物多様性を支えている。その深い根系は、丘陵地の湿った地域での土壌浸食を防ぐのに役立ち、流域の安定性にも寄与している。",
+        ],
+      ],
       duration: "5〜10分",
     },
     pruning: {
