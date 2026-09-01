@@ -278,6 +278,100 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * against Athukorala's own actual
  * process. Swap in real, factory-specific content for those as soon as it's
  * available.
+ * The "pruning" station was added new on 2026-09-01 (there was no existing
+ * station covering tea bush pruning), sourced from a short on-site video
+ * dialogue in which estate staff explain that the bush is deliberately left
+ * to grow out before pruning starts, letting nourishment build up in the
+ * bush first — that's the one fact in the dialogue, so the content stays
+ * brief rather than padding it out with unconfirmed detail (e.g. how long
+ * the rest period lasts, or how often the estate prunes, aren't mentioned
+ * and weren't guessed at). Added `verified: true` since it's sourced the
+ * same way as plucking/sorting/artisanal-tea-grades this week. Appended at
+ * the end of the array with `order: 26` rather than renumbering nearby
+ * stations, since existing `order` values are already non-sequential
+ * relative to array position (e.g. "turmeric" is order 23 but sits right
+ * after "ginger-turmeric," order 11) — order numbers appear to be assigned
+ * once and kept stable rather than re-sorted when new stations are added.
+ * The user separately confirmed on 2026-09-01 that pruned bushes are cut
+ * back to roughly knee height, added as a closing clause on `description`.
+ * The "polytunnel" station was likewise added new on 2026-09-01 (no
+ * existing station covered it), sourced two ways: an on-site video dialogue
+ * confirms the estate has a greenhouse already and is setting up a
+ * polytunnel that isn't in use yet, planned for bell peppers, tomatoes, and
+ * similar vegetables; the guest-experience angle — that villa/cabana guests
+ * will be able to freshly pick vegetables grown here — was stated directly
+ * by the user, not the dialogue, and is written in future tense since the
+ * polytunnel isn't operational yet. `order: 27`, appended at the end for
+ * the same reason as "pruning" above.
+ * On 2026-09-01 the user supplied a transcript of a full guided walkthrough
+ * of the main factory floor, which upgraded six stations at once —
+ * "tea-factory" (the overview), "withering", "rolling", "fermentation",
+ * "drying", and "packing" — all to `verified: true` ("sorting" was already
+ * verified from the 2026-08-31 tea-grades dialogue and just got one more
+ * sentence added). Specifics added: withering uses large fans and is what
+ * staff call the "modern" process; rolling breaks the leaf into small
+ * particles as well as twisting it; fermentation here specifically takes
+ * about 1.5 hours (replacing the generic 1.5–3 hour placeholder range);
+ * drying is noticeably hot on the factory floor; the grading machinery
+ * includes a camera-based colour separator that distinguishes leaf from
+ * flower and other debris; and the packing area shows real grades side by
+ * side — Dust for tea bags, OP1, Pekoe, BOP, and OP — with OP1/OP popular in
+ * Arabic-speaking markets and Pekoe in Russia/Iran, packed in foil-lined
+ * bags printed with the company's logo, registration number, the Ceylon Tea
+ * Symbol, and its food certificate. The transcript also corrected a wrong
+ * assumption in the old "packing" placeholder text, which implied the
+ * factory ships tea "around the world" directly — the guide states plainly
+ * that they don't export directly, selling instead through the Colombo Tea
+ * Auction to buyers who handle export themselves. One transcription
+ * artifact was silently corrected rather than reproduced: the ASR heard the
+ * company name as "Oakray Tea Factory," which is obviously a mishearing of
+ * "Athukorala Tea Factory" — the name used consistently everywhere else in
+ * this app and confirmed by the guide's own mention of "ATF," the Ceylon
+ * Tea Symbol, and the food certificate in the same breath.
+ * A second, longer factory-floor transcript (also 2026-09-01, a different
+ * guided walkthrough) added more detail on top of the above:
+ * - "fermentation": adds that a humidifier keeps the room's air moist enough
+ *   for oxidation to proceed, and that the colour comes from natural
+ *   oxidation only — no dyes or added colour, a point the guide states
+ *   explicitly later in the same tour. Its `duration` changed from a flat
+ *   "about 1.5 hours" to a "1.5 to 2.5 hours" range: this second dialogue
+ *   states 2.5 hours for the same step. Rather than picking one transcript
+ *   over the other, both real, guide-stated figures are kept as a range,
+ *   consistent with `keyPoints` already saying timing "has to be judged
+ *   precisely" — i.e. it varies by batch. `keyPoints` also gained a
+ *   step-by-step comparison of the tea types made here: black tea
+ *   (withering → rolling → fermentation → firing) vs. green tea (withering
+ *   → rolling → drying, no fermentation, described as milder and mostly
+ *   drunk for its medicinal character) vs. white tea (skips both withering
+ *   and fermentation, straight from fresh leaf to steaming and drying).
+ *   Oolong tea is mentioned only as something this factory does NOT make —
+ *   the guide describes it, unprompted by a visitor question, as a
+ *   black-tea-like fermented style made by repeated steaming and
+ *   hand-brushing rather than machine rolling; kept as a brief aside since
+ *   it's explicitly not part of this factory's own process.
+ * - "artisanal-tea-grades": the White Tea clause was tightened to say it
+ *   "skips withering entirely," matching this transcript's more explicit
+ *   description of the White Tea process; `lastVerified` bumped to
+ *   2026-09-01.
+ * - "drying": adds a specific temperature, "around 240°C," for the firing
+ *   dryer. Provenance note: this figure was stated by the visitor, not the
+ *   guide — the guide's reply ("What they say about that is...") was cut
+ *   off in the transcript before confirming or correcting it. Treated as
+ *   real but slightly lower-confidence than guide-stated facts, phrased as
+ *   "reportedly" rather than asserted outright.
+ * - "sorting": adds two more real pieces of grading machinery beyond the
+ *   camera-based colour separator already documented: sieves of different
+ *   mesh sizes separating particles by size across multiple passes, and an
+ *   electrostatic separator that charges leftover brown stalk fragments on
+ *   rollers so they can be pulled aside. Also adds the guide's explicit
+ *   confirmation, in response to a visitor's direct question, that no dyes
+ *   or artificial colour are used anywhere in the process.
+ * The transcript's Stage 1 (leaf-crushing/rolling overview) and parts of
+ * Stage 3 weren't specific enough to add — vague phrases like "two rollers
+ * needed for the back process" and an unfinished exchange about whether
+ * firing "creates" the golden colour weren't clear enough to state as fact,
+ * so nothing was added from those parts rather than guessing at their
+ * meaning.
  */
 export const STATIONS: Station[] = [
   {
@@ -419,9 +513,10 @@ export const STATIONS: Station[] = [
     name: "Withering",
     shortName: "Wither",
     icon: "Wind",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-09-01",
     description:
-      "Fresh leaves are spread thinly across long troughs where air is drawn through them, steadily removing moisture. The leaf turns limp and pliable, ready for rolling without shattering.",
+      "Fresh leaves are spread thinly across long troughs, where large fans force air through them to steadily remove moisture — what the estate calls the 'modern' withering process. The leaf turns limp and pliable, ready for rolling without shattering.",
     keyPoints:
       "Withering evens out moisture across the leaf and lets natural enzymes begin the chemical changes that will later create the tea's aroma and colour.",
     duration: "This stage typically takes 12 to 17 hours, depending on humidity and airflow.",
@@ -432,9 +527,10 @@ export const STATIONS: Station[] = [
     name: "Rolling",
     shortName: "Roll",
     icon: "RotateCw",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-09-01",
     description:
-      "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside. This is where the leaf's shape and the tea's strength are formed.",
+      "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
     keyPoints:
       "Breaking the cell walls exposes enzymes to oxygen, kicking off oxidation. How hard and how long the leaf is rolled shapes the final tea's strength and appearance.",
     duration: "Rolling usually runs for 45 minutes to an hour, often in multiple passes.",
@@ -445,12 +541,13 @@ export const STATIONS: Station[] = [
     name: "Fermentation (Oxidation)",
     shortName: "Ferment",
     icon: "FlaskConical",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-09-01",
     description:
-      "Rolled leaf is spread out in a cool, humid room and left to oxidise. The green leaf gradually turns a coppery brown as it develops the colour, body, and aroma associated with black tea.",
+      "Rolled leaf is spread out in a cool, humid room and left to oxidise, with a humidifier keeping the air moist enough for the reaction to happen. The green leaf gradually turns a coppery brown as it develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
     keyPoints:
-      "This is the single most important step for flavour. Timing has to be judged precisely — too little and the tea is thin, too much and it turns flat and dull.",
-    duration: "Oxidation is controlled closely and generally lasts 1.5 to 3 hours.",
+      "This is the single most important step for flavour. Timing has to be judged precisely — too little and the tea is thin, too much and it turns flat and dull. It's also what separates the tea types made here: black tea goes withering, rolling, fermentation, then firing, while green tea skips fermentation entirely (withering, rolling, drying only) and is milder — mostly drunk for its gentler, more medicinal character; white tea skips both withering and fermentation, going straight from fresh leaf to steaming and drying. The factory doesn't produce Oolong tea, which the guide describes as a black-tea-like fermented style made by repeated steaming and hand-brushing rather than machine rolling.",
+    duration: "At this factory, fermentation typically takes 1.5 to 2.5 hours depending on conditions, before the leaf moves on to drying.",
   },
   {
     id: "drying",
@@ -458,9 +555,10 @@ export const STATIONS: Station[] = [
     name: "Drying (Firing)",
     shortName: "Dry",
     icon: "Flame",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-09-01",
     description:
-      "The oxidised leaf passes through hot-air dryers that halt oxidation instantly and lock in the tea's character. What comes out the other end is the familiar black, crisp tea leaf.",
+      "The oxidised leaf passes through hot-air dryers — reportedly running at around 240°C — that halt oxidation instantly and lock in the tea's character. What comes out the other end is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
     keyPoints:
       "Firing stops the chemical changes at exactly the right moment and reduces moisture to about 2-3%, which is essential for the tea to stay fresh during storage and shipping.",
     duration: "Leaf passes through the dryer in around 20 minutes at carefully controlled temperatures.",
@@ -472,9 +570,9 @@ export const STATIONS: Station[] = [
     shortName: "Sort",
     icon: "Filter",
     verified: true,
-    lastVerified: "2026-08-31",
+    lastVerified: "2026-09-01",
     description:
-      "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse.",
+      "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse. That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong. Sieves of different mesh sizes further separate particles by size over several passes, and an electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside — none of this colour or character comes from dyes or additives, only natural processing.",
     keyPoints:
       "Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
     duration: "Sorting runs continuously on machinery and takes roughly 30 to 45 minutes per batch.",
@@ -485,11 +583,12 @@ export const STATIONS: Station[] = [
     name: "Packing",
     shortName: "Pack",
     icon: "Package",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-09-01",
     description:
-      "Graded tea is weighed, tasted for quality, and sealed into moisture-proof packaging or tea chests, ready to travel from this factory to cups around the world.",
+      "Graded tea is weighed, tasted for quality, and sealed into moisture-proof packaging lined with aluminium foil, printed with the factory's name and logo, its registration number, the Ceylon Tea Symbol, and its food safety certificate. The packing area is where several finished grades sit side by side — Dust (destined mainly for tea bags), OP1, Pekoe, BOP (Broken Orange Pekoe), and OP (Orange Pekoe) — with OP1 and OP especially popular across Arabic-speaking markets and Pekoe well known in Russia and Iran. Rather than exporting directly, the factory sells its finished tea through the Colombo Tea Auction, where buyers purchase whichever grades they need.",
     keyPoints:
-      "Airtight packing protects the tea from moisture and odours, preserving the flavour that was carefully built through every earlier stage of the process.",
+      "Airtight packing protects the tea from moisture and odours, preserving the flavour that was carefully built through every earlier stage of the process. Selling through the Colombo Tea Auction rather than exporting directly means outside buyers, not the factory itself, handle onward international shipment.",
     duration: "The final batch is packed and ready for dispatch the same day it's graded.",
   },
   {
@@ -679,9 +778,9 @@ export const STATIONS: Station[] = [
     shortName: "Artisanal Teas",
     icon: "Sparkles",
     verified: true,
-    lastVerified: "2026-08-31",
+    lastVerified: "2026-09-01",
     description:
-      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot, whose colour comes from anthocyanin. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud. White tea takes two and a half leaves from the shoot, steamed and dried rather than fermented and rolled like black tea, for a very lightly processed, naturally sweet taste. Purple and pink teas are unique specialty varieties, rich in natural antioxidants, made by their own separate process. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
+      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot, whose colour comes from anthocyanin. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste. Purple and pink teas are unique specialty varieties, rich in natural antioxidants, made by their own separate process. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
     keyPoints:
       "These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
     duration: "5 minutes",
@@ -772,9 +871,10 @@ export const STATIONS: Station[] = [
     name: "The Tea Factory",
     shortName: "Tea Factory",
     icon: "Factory",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-09-01",
     description:
-      "The main factory building is where plucked leaf is turned into finished tea, from withering through to packing. This stop is an overview of the working factory floor and the equipment used at each stage.",
+      "The main factory building is where plucked leaf is turned into finished tea, from withering through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order.",
     keyPoints:
       "A working tea factory runs the full withering-to-packing sequence under one roof, timed closely with each day's leaf intake.",
     duration: "10-15 minutes",
@@ -831,6 +931,34 @@ export const STATIONS: Station[] = [
     keyPoints:
       "Kithul jaggery is prized for its rich, caramel-like flavor and is a staple sweetener in Sri Lankan desserts; the same sap can also be fermented into toddy or distilled into arrack.",
     duration: "5-10 minutes",
+  },
+  {
+    id: "pruning",
+    order: 26,
+    name: "Pruning",
+    shortName: "Pruning",
+    icon: "Scissors",
+    verified: true,
+    lastVerified: "2026-09-01",
+    description:
+      "Before pruning, the estate deliberately leaves the tea bush to grow out for a period rather than cutting it back right away — letting new growth come in fully so the bush builds up nourishment. Only once that build-up is complete does pruning begin, cutting the bush back down to roughly knee height.",
+    keyPoints:
+      "Letting the bush grow out first, rather than pruning on a fixed schedule regardless of condition, gives the plant time to channel nourishment upward before it's cut back.",
+    duration: "5 minutes",
+  },
+  {
+    id: "polytunnel",
+    order: 27,
+    name: "Polytunnel & Greenhouse",
+    shortName: "Polytunnel",
+    icon: "Carrot",
+    verified: true,
+    lastVerified: "2026-09-01",
+    description:
+      "Alongside an existing greenhouse, the estate is setting up a polytunnel that isn't in use yet — it's still being built out — for growing vegetables such as bell peppers and tomatoes. Once it's up and running, guests staying at the villa or cabana will be able to freshly pick vegetables grown here themselves.",
+    keyPoints:
+      "The polytunnel is still under construction rather than already in production, so there's nothing to pick just yet — check back once it's operational.",
+    duration: "5 minutes",
   },
 ];
 
