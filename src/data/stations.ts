@@ -442,6 +442,58 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * traditional firewood-fired, one electric — each with 34 trays, used for
  * tea right after rolling and confirmed again (ginger, cardamom) as the
  * same dryers used for other small-batch products.
+ * A seventh transcript (2026-09-01, at the tea center) built out that
+ * station from a one-line generic placeholder to `verified: true`, and along
+ * the way resolved two questions earlier entries in this comment had left
+ * open. First, the Purple Tea fermentation question: the fourth transcript's
+ * guide had self-corrected mid-sentence to "not fermented, straight to
+ * drying," which was recorded as-is at the time. This seventh, separate
+ * dialogue states — clearly and deliberately, contrasted directly against
+ * White Tea's "skips withering and fermentation" process and Pink Tea's own
+ * — that Purple Tea goes through the full black-tea process: withering,
+ * rolling, and fermenting. Given a choice between an ambiguous verbal
+ * stumble and a later, explicit, contrastive explanation, the latter is
+ * trusted; "artisanal-tea-grades" and "handmade-factory" were both updated
+ * to move Purple Tea into the fermented category, reversing the earlier
+ * placement. Second, Pink Tea's process — undocumented since the
+ * 2026-08-31 dialogue only said it was covered "at the handmade tea
+ * factory" without actually explaining it — is now answered: Pink Tea
+ * starts out colourless like White Tea, and only turns pink once a couple
+ * of drops of lime are added, the citrus triggering a colour change in the
+ * same anthocyanin pigment that gives the purple-hued shoot its colour; a
+ * couple of drops of honey are also typical, and it's recommended served as
+ * iced tea. The purple-hued shoot itself finally got a specific ID, TRI
+ * 2043, a Tea Research Institute clone — the same clone number already
+ * listed among the "nursery" station's unrelated trial-plot cultivars, now
+ * confirmed as the one behind Golden Tip, Silver Tip, Pink Tea, Purple Tea,
+ * and White Tea. On "handmade-factory", the generic "hand-rolled black-tea
+ * ring" item from the fourth transcript was given its real name, Flower
+ * Chakra, alongside a second small-batch specialty, Tea Coin — both limited
+ * to about 25g per person per day by hand, hence their expense. For the tea
+ * center itself: a tasting/QC panel checks batches for defects
+ * (over-fermentation, under-fermentation, scorching) not just here but
+ * whenever tea moves to the local market or comes in for packing, tasting
+ * by a wine-tasting-style method (smell, then a slurp to draw air across the
+ * tongue, spitting rather than swallowing, up to 50 teas a day) though
+ * visitors are welcome to actually drink what they sample; Flower Chakra and
+ * Tea Coin are displayed here and, unlike standard once-boiled black tea,
+ * can be re-infused up to three times at about 80°C rather than boiling
+ * (roughly 2, 5, and 8 minutes per steep); proper brewing takes 2.5–3
+ * minutes covered, not a quick dip; BOPF and BOPF Special are the
+ * everyday-local grades, while Dust and Dust 1 never go to export and are
+ * what typically ends up, with added colouring, in cheap supermarket tea
+ * bags (blended with bought-in tea, unlike this estate's own unblended
+ * output); the finest grades (FF Extra Special, FF Special, FBOP) are only
+ * about 1% of the harvest and sell around $25/100g against $5–6/200g for
+ * bulkier OPA/OP; white tip particles add sweetness and skew toward European
+ * buyers, while Arabic markets prefer a stronger cup; and beyond tea, the
+ * estate blends its own tea (~90%) with local herbs (~10%) — gotukola,
+ * heenbovitiya, moringa — and makes Masala (a seven-spice recipe naming
+ * cardamom, cinnamon, ginger, and black pepper, the rest kept secret by the
+ * guide), Cinnamon, and Ginger spice teas, with masala or BOP recommended
+ * for milk tea. One aside from the transcript — a Jaffna-style pouring
+ * custom the guide mentioned — was left out as a cultural tangent rather
+ * than a tea-production fact relevant to this stop.
  */
 export const STATIONS: Station[] = [
   {
@@ -850,7 +902,7 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot, whose colour comes from anthocyanin. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste. Purple tea skips fermentation entirely and goes straight to drying, much like white tea; pink tea is another unique specialty variety, both rich in natural antioxidants. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
+      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot — TRI 2043, a Tea Research Institute clone — whose colour comes from anthocyanin. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting. Pink tea starts out essentially colourless like white tea, and only turns pink once a couple of drops of lime are added — the citrus triggers a colour change in the same anthocyanin pigment that gives the shoot its hue; it also takes well to a couple of drops of honey and is recommended served as iced tea. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
     keyPoints:
       "These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
     duration: "5 minutes",
@@ -961,7 +1013,7 @@ export const STATIONS: Station[] = [
     description:
       "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; the building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato). This stop covers what distinguishes hand-made tea from factory-line production.",
     keyPoints:
-      "Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour) and non-fermented ones like White Tea and Purple Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive item made here is a hand-rolled black-tea ring using about two shoots each — a single person can hand-roll only around 25 grams a day, which is why it's so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
+      "Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
     duration: "10 minutes",
   },
   {
@@ -970,11 +1022,12 @@ export const STATIONS: Station[] = [
     name: "Tea Center",
     shortName: "Tea Center",
     icon: "Coffee",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-09-01",
     description:
-      "The tour ends at the tea center, where visitors can taste different grades of tea and pick up favourites to take home. This stop covers what to expect from the tasting session.",
+      "The tour ends at the tea center, where a tasting panel checks every batch — not just here, but earlier too, whenever tea leaves the main factory for the local market or comes in for packing — for defects like over-fermentation, under-fermentation, or scorching, discarding anything that fails before it's sold. On display here are two more small-batch specialties from the handmade factory, Flower Chakra and Tea Coin. Artisanal teas like these can be re-infused up to three times using water heated to about 80°C rather than boiling — roughly 2, 5, and 8 minutes per steep with fresh hot water each time — unlike standard black tea, which is brewed once at full boiling point.",
     keyPoints:
-      "Tasting sessions typically compare a few different grades or styles side by side, so visitors can taste the difference the earlier stops describe.",
+      "Tasting follows a method similar to wine tasting — smelling first, then slurping to pull the tea across the taste buds on the sides of the tongue with a draw of air; the panel spits rather than swallows while tasting up to 50 teas a day, though visitors are welcome to actually drink what they try. Properly brewed black tea needs about 2.5 to 3 minutes of covered steeping, not just a quick dip. BOPF and BOPF Special are the grades most Sri Lankans actually drink day to day; Dust and Dust 1, the lowest grades, are never sent to export markets and are what typically ends up — with added colouring — in cheap supermarket tea bags, which is why the colour appears the instant they're dipped rather than after a proper steep. Much of what's sold in supermarkets is also blended with cheaper tea bought in from elsewhere, unlike the estate's own unblended, single-origin teas. The very finest grades — FF Extra Special, FF Special, FBOP — come from only about 1% of the harvest, the most immature part of the bud, and sell for around $25 per 100g; bulkier grades like OPA and OP run closer to $5-6 per 200g. The white tip particles visible in the finest grades add extra sweetness and mostly go to European buyers, while Arabic markets tend to prefer a stronger cup. Beyond tea, the estate blends its own green and black tea (about 90%) with local herbs (about 10%) — gotukola, heenbovitiya, and moringa — and makes Masala, Cinnamon, and Ginger spice teas from its own spices; the masala recipe uses seven Sri Lankan spices, including cardamom, cinnamon, ginger, and black pepper (the rest a kept secret), and masala or BOP tea is what's recommended for milk tea.",
     duration: "10-15 minutes",
   },
   {
