@@ -372,6 +372,27 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * firing "creates" the golden colour weren't clear enough to state as fact,
  * so nothing was added from those parts rather than guessing at their
  * meaning.
+ * A third transcript (2026-09-01, in the packing/export area) added more to
+ * "packing": a new grade name, SFOPE1 ("Flowery Tippy" — the tip pieces
+ * from the very top of the shoot, prized more for delicate character than
+ * strength); that bag weight varies by grade because a fixed-size bag
+ * holds more of a dense grade like Dust (~58kg) than a bulkier one like OPE
+ * (~30kg); and a fuller, more accurate export picture than the earlier
+ * placeholder's "sells through the Colombo Tea Auction" line — mostly the
+ * factory hands finished tea to Colombo brokers (real, clearly-stated names
+ * Forbes & Walker, Akbar Brothers, and Finlays came up) who bring it to
+ * auction for buyers, who often re-export it under their own brand after
+ * adding further value, but direct export under the Athukorala name itself
+ * does happen too, for occasional special buyer orders (a China buyer was
+ * given as an example). `keyPoints` gained the market-matching point: which
+ * part of the shoot a grade comes from is matched to each export market's
+ * palate (e.g. Arabic-speaking markets requesting specific grades), and the
+ * finest export grades aren't part of everyday local drinking habits.
+ * One transcription detail was deliberately left out rather than guessed
+ * at: a second broker name, heard as "Barclays," doesn't match any known
+ * Colombo tea broker clearly enough to confidently correct (unlike the
+ * earlier "Oakray" → "Athukorala" fix, there's no strong same-sentence
+ * corroboration here), so only the clearly-stated names were kept.
  */
 export const STATIONS: Station[] = [
   {
@@ -586,9 +607,9 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "Graded tea is weighed, tasted for quality, and sealed into moisture-proof packaging lined with aluminium foil, printed with the factory's name and logo, its registration number, the Ceylon Tea Symbol, and its food safety certificate. The packing area is where several finished grades sit side by side — Dust (destined mainly for tea bags), OP1, Pekoe, BOP (Broken Orange Pekoe), and OP (Orange Pekoe) — with OP1 and OP especially popular across Arabic-speaking markets and Pekoe well known in Russia and Iran. Rather than exporting directly, the factory sells its finished tea through the Colombo Tea Auction, where buyers purchase whichever grades they need.",
+      "Graded tea is weighed, tasted for quality, and sealed into moisture-proof packaging lined with aluminium foil, printed with the factory's name and logo, its registration number, the Ceylon Tea Symbol, and its food safety certificate. The packing area is where several finished grades sit side by side — Dust (destined mainly for tea bags), OP1, Pekoe, BOP (Broken Orange Pekoe), and OP (Orange Pekoe) — with OP1 and OP especially popular across Arabic-speaking markets and Pekoe well known in Russia and Iran. The rarest and most valuable grade made here is SFOPE1, a 'Flowery Tippy' grade named for the pale, silvery tip pieces it contains from the very top of the shoot — prized more for its delicate character than raw strength. Bag weights vary by grade too: a fixed-size bag holds far more of a fine, dense grade like Dust (around 58kg) than a bulkier, leafier grade like OPE (around 30kg). Mostly, the factory hands its finished tea to Colombo tea brokers — names like Forbes & Walker, Akbar Brothers, and Finlays came up — who bring it to the Colombo Tea Auction, where buyers purchase it and often export it under their own brand after adding further value; direct export under the Athukorala name itself does happen too, but mainly for occasional special orders from overseas buyers.",
     keyPoints:
-      "Airtight packing protects the tea from moisture and odours, preserving the flavour that was carefully built through every earlier stage of the process. Selling through the Colombo Tea Auction rather than exporting directly means outside buyers, not the factory itself, handle onward international shipment.",
+      "Airtight packing protects the tea from moisture and odours, preserving the flavour that was carefully built through every earlier stage of the process. Different countries want different things from their tea — some prefer a strong, astringent cup, others don't — so which part of the shoot a grade comes from is effectively matched to each export market's palate; Arabic-speaking markets, for instance, specifically request grades that aren't part of everyday drinking habits back home. Selling mostly through brokers rather than exporting directly means outside buyers usually handle onward international shipment and branding.",
     duration: "The final batch is packed and ready for dispatch the same day it's graded.",
   },
   {
