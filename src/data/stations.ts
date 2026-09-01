@@ -393,6 +393,26 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * Colombo tea broker clearly enough to confidently correct (unlike the
  * earlier "Oakray" → "Athukorala" fix, there's no strong same-sentence
  * corroboration here), so only the clearly-stated names were kept.
+ * A fourth transcript (2026-09-01, filmed inside the Handmade Tea Factory
+ * itself) filled in process detail for "handmade-factory": withering there
+ * uses a small trough with natural airflow (not the main factory's forced
+ * fans), monitored with a hygrometer, down to roughly 50% moisture; leaf is
+ * then hand-rolled on a tray by feel, though small mechanical "mini
+ * rollers" substitute for hand-rolling on bulk orders since hand-rolling
+ * alone can't keep pace. It also named a new specialty product, "Vita
+ * Glow," made from the green-hued shoot's bud (distinct from Golden/Silver
+ * Tip's purple-hued shoot), and — importantly — finally answered a question
+ * left open on 2026-08-31: the guide initially says Purple Tea is
+ * fermented, then immediately self-corrects to "not fermented, straight to
+ * drying," matching White Tea's process. The corrected statement is what's
+ * recorded here; `artisanal-tea-grades`'s Purple Tea clause was updated to
+ * match, and its Pink Tea process remains undocumented since this
+ * transcript didn't cover it either. Also added: a specific hand-rolled
+ * black-tea "ring" item (about two shoots per ring, ~25g per person per
+ * day, hence its expense) that's mostly bought as a souvenir by wealthy
+ * overseas tea enthusiasts rather than used for everyday local drinking —
+ * consistent with the export-market-mismatch theme already documented on
+ * "packing".
  */
 export const STATIONS: Station[] = [
   {
@@ -801,7 +821,7 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot, whose colour comes from anthocyanin. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste. Purple and pink teas are unique specialty varieties, rich in natural antioxidants, made by their own separate process. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
+      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot, whose colour comes from anthocyanin. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste. Purple tea skips fermentation entirely and goes straight to drying, much like white tea; pink tea is another unique specialty variety, both rich in natural antioxidants. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
     keyPoints:
       "These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
     duration: "5 minutes",
@@ -907,11 +927,11 @@ export const STATIONS: Station[] = [
     shortName: "Handmade Factory",
     icon: "HandHeart",
     verified: true,
-    lastVerified: "2026-08-31",
+    lastVerified: "2026-09-01",
     description:
-      "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. This stop covers what distinguishes hand-made tea from factory-line production.",
+      "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. This stop covers what distinguishes hand-made tea from factory-line production.",
     keyPoints:
-      "Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character.",
+      "Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour) and non-fermented ones like White Tea and Purple Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive item made here is a hand-rolled black-tea ring using about two shoots each — a single person can hand-roll only around 25 grams a day, which is why it's so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking.",
     duration: "10 minutes",
   },
   {
