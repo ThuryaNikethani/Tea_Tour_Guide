@@ -314,26 +314,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "මැලවීම",
-      description: "නැවුම් කොළ දිගු තට්ටු ඔස්සේ තුනී ලෙස පතුරුවා තබනු ලැබේ, එහිදී විශාල පංකා භාවිතා කර වාතය බලෙන් කොළ හරහා යැවීමෙන් තෙතමනය ක්‍රමයෙන් ඉවත් කරයි — වතුයාය 'නවීන' මැලවීමේ ක්‍රියාවලිය ලෙස හඳුන්වන්නේ මෙයයි. කොළය මෘදු හා නම්‍යශීලී වන අතර, පොඩි නොවී රෝල් කිරීමට සූදානම් වේ, මෙම ක්‍රියාවලියේදී එහි මුල් තෙතමනයෙන් 45%ක් පමණ අහිමි වී ඇති තත්ත්වයෙන්.",
+      description: "කෙතින් පැමිණෙන කොළ මුලින්ම දිනපතා අස්වැන්න වාර්තා කිරීම සඳහා බර කරනු ලබන අතර, පසුව අඩි එකක් පමණ ගැඹුරැති දිගු තට්ටු ඔස්සේ තුනී ලෙස පතුරුවා තබනු ලැබේ, එහිදී විශාල පංකා භාවිතා කර වාතය බලෙන් කොළ හරහා යැවීමෙන් තෙතමනය ක්‍රමයෙන් ඉවත් කරයි — වතුයාය 'නවීන' මැලවීමේ ක්‍රියාවලිය ලෙස හඳුන්වන්නේ මෙයයි. තෙතමනය නෙළීමේදී පවතින 75%ක් පමණ සිට කොළය මෘදු හා නම්‍යශීලී වී, පොඩි නොවී රෝල් කිරීමට සූදානම් වන විට 45%ක් පමණට අඩු වේ. මැළවුණු කොළ රෝල් කිරීමට යැවීමට පෙර නැවත බර කරනු ලැබේ.",
       keyPoints: "මැලවීම කොළය පුරා තෙතමනය සමාන කරන අතර, ස්වාභාවික එන්සයිම වලට පසුව තේවල සුවඳ හා වර්ණය නිර්මාණය කරන රසායනික වෙනස්කම් ආරම්භ කිරීමට ඉඩ සලසයි.",
       duration: "මෙම අදියර සාමාන්‍යයෙන් තෙතමනය සහ වාතාශ්‍රය මත පදනම්ව පැය 10 සිට 12 දක්වා ගතවේ.",
     },
     rolling: {
       name: "රෝල් කිරීම",
       description: "මැලවුණු කොළ රෝල් යන්ත්‍ර හරහා ගමන් කරන අතර, එය කොළයේ සෛල බිත්ති ඇඹරී බිඳ දමා, එහි ගැබ්ව ඇති යුෂ හා තෙල් නිදහස් කර, කොළය කුඩා අංශු බවට කඩා දමයි. මෙහිදී කොළයේ හැඩය සහ තේවල ශක්තිය සකස් වේ.",
-      keyPoints: "සෛල බිත්ති බිඳ දැමීම එන්සයිම ඔක්සිජනයට නිරාවරණය කරයි, එමගින් ඔක්සිකරණය ආරම්භ කරයි. කොළ රෝල් කරන ශක්තිය සහ කාලය අවසන් තේවල ශක්තිය සහ පෙනුම හැඩගස්වයි.",
+      keyPoints: "සෛල බිත්ති බිඳ දැමීම එන්සයිම ඔක්සිජනයට නිරාවරණය කරයි, එමගින් ඔක්සිකරණය ආරම්භ කරයි. කොළ රෝල් කරන ශක්තිය සහ කාලය අවසන් තේවල ශක්තිය සහ පෙනුම හැඩගස්වයි. කිහිප වතාවක් සිදු කරන රෝල් කිරීම්වලින් පළමුවැන්න, මෘදු 'පෙර-සකස් කිරීමේ' රෝල් එකකි, එහි අරමුණ තද ලෙස රෝල් කිරීමට පෙර කොළයේම යුෂවලින් අඹරන ලද අංශු ආවරණය කිරීමයි.",
       duration: "රෝල් කිරීම සාමාන්‍යයෙන් මිනිත්තු 45 සිට පැයක් දක්වා, බොහෝ විට කිහිප වතාවක් සිදු කෙරේ.",
     },
     fermentation: {
       name: "පැසවීම (ඔක්සිකරණය)",
-      description: "රෝල් කරන ලද කොළ සිසිල්, තෙත් කාමරයක පතුරුවා ඔක්සිකරණය වීමට තබනු ලැබේ, ප්‍රතික්‍රියාව සිදුවීමට ප්‍රමාණවත් ආර්ද්‍රතාවයක් පවත්වා ගැනීමට හියුමිඩියෆයර් එකක් භාවිතා කරමින්. කොළ පැහැ කොළ ක්‍රමයෙන් තඹ පැහැති දුඹුරු පැහැයට හැරෙන අතර, කළු තේ හා සම්බන්ධ වර්ණය, ශරීරය සහ සුවඳ වර්ධනය කරයි — මුළුමනින්ම ස්වාභාවික ඔක්සිකරණයෙන්, කිසිදු පාට හෝ රසායනික ද්‍රව්‍ය එකතු නොකර.",
+      description: "රෝල් කරන ලද කොළ අංශක සෙල්සියස් 25ත් 30ත් අතර උෂ්ණත්වයක් පවත්වන සිසිල්, තෙත් කාමරයක පතුරුවා ඔක්සිකරණය වීමට තබනු ලැබේ, ප්‍රතික්‍රියාව සිදුවීමට ප්‍රමාණවත් ආර්ද්‍රතාවයක් පවත්වා ගැනීමට හියුමිඩියෆයර් එකක් භාවිතා කරමින්. කොළ පැහැ කොළ ක්‍රමයෙන් තඹ පැහැති දුඹුරු පැහැයට හැරෙන අතර, කළු තේ හා සම්බන්ධ වර්ණය, ශරීරය සහ සුවඳ වර්ධනය කරයි — මුළුමනින්ම ස්වාභාවික ඔක්සිකරණයෙන්, කිසිදු පාට හෝ රසායනික ද්‍රව්‍ය එකතු නොකර.",
       keyPoints: "රසය සඳහා වඩාත්ම වැදගත් පියවර මෙයයි. කාලය නිවැරදිව තීරණය කළ යුතුය — ඉතා අඩු නම් තේ තුනී වන අතර, ඉතා වැඩි නම් එය පැතලි හා අහඹු වේ. මෙතනදී මෙහි නිපදවන තේ වර්ග වෙන් වන්නේද මෙයිනි: කළු තේ මැලවීම, රෝල් කිරීම, පැසවීම, පසුව පිලුස්සීම යන අනුපිළිවෙලින් යන අතර, හරිත තේ පැසවීම සම්පූර්ණයෙන්ම මඟහරින අතර (මැලවීම, රෝල් කිරීම, වියලීම පමණි) සහ එය මෘදු වන අතර, බොහෝ විට එහි සුමට, ඖෂධීය ලක්ෂණය නිසා පානය කරනු ලැබේ; සුදු තේ මැලවීම සහ පැසවීම යන දෙකම මඟහරිමින්, නැවුම් කොළවල සිට කෙලින්ම වාෂ්ප කිරීම හා වියලීම දක්වා යයි. මෙම කර්මාන්තශාලාව ඔලොන්ග් තේ නිපදවන්නේ නැත, එය මාර්ගෝපදේශකයා විස්තර කරන්නේ කළු තේ වැනිම පැසුණු වර්ගයක් ලෙසින්, යන්ත්‍ර මගින් රෝල් කිරීම වෙනුවට නැවත නැවත වාෂ්ප කිරීම හා අතින් බුරුසු කිරීම මගින් සාදන ලද එකක් ලෙසිනි.",
       duration: "මෙම කර්මාන්තශාලාවේදී, තත්ත්වයන් අනුව පැසවීම සාමාන්‍යයෙන් පැය 1.5 සිට 2.5 දක්වා ගතවන අතර ඉන් පසු කොළ වියලීමට ගෙන යනු ලැබේ.",
     },
     drying: {
       name: "වියලීම (පිලුස්සීම)",
       description: "ඔක්සිකරණය වූ කොළ — වාර්තා වන අන්දමට අංශක සෙල්සියස් 240ක් පමණ උෂ්ණත්වයකින් ක්‍රියාත්මක වන — උණුසුම් වාතාශ්‍රය සහිත වියලනවලින් ගමන් කරන අතර, ඒවා ක්ෂණිකව ඔක්සිකරණය නවත්වා තේවල ලක්ෂණය රඳවා ගනී. අනෙක් පැත්තෙන් පිටවෙන්නේ හුරුපුරුදු කළු, කරකෙළින් තේ කොළයයි. අමුත්තන් වහාම උණුසුම දැනගනී — එය කර්මාන්තශාලා තට්ටුවේ ඇති උණුසුම්ම නැවතුම්වලින් එකකි.",
-      keyPoints: "පිලුස්සීම නිවැරදි මොහොතේදීම රසායනික වෙනස්කම් නවත්වන අතර තෙතමනය 2-3% පමණට අඩු කරයි, එය ගබඩා කිරීම හා ප්‍රවාහනය අතරතුර තේ නැවුම්ව තබා ගැනීමට අත්‍යවශ්‍ය වේ.",
+      keyPoints: "පිලුස්සීම නිවැරදි මොහොතේදීම රසායනික වෙනස්කම් නවත්වන අතර තෙතමනය 45-50% පමණ සිට 2-3% පමණට අඩු කරයි, එය ගබඩා කිරීම හා ප්‍රවාහනය අතරතුර තේ නැවුම්ව තබා ගැනීමට අත්‍යවශ්‍ය වේ.",
       duration: "කොළ ප්‍රවේශමෙන් පාලනය කළ උෂ්ණත්වවලදී මිනිත්තු 20ක් පමණ තුළ වියලනය හරහා ගමන් කරයි.",
     },
     sorting: {
@@ -524,8 +524,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "තේ කර්මාන්තශාලාව",
-      description: "ප්‍රධාන කර්මාන්තශාලා ගොඩනැගිල්ල, නෙළන ලද කොළ මැලවීමේ සිට පැක් කිරීම දක්වා නිමි තේ බවට පත් වන ස්ථානයයි. මෙම නැවතුම ක්‍රියාත්මක වන කර්මාන්තශාලා තට්ටුව සහ එක් එක් අදියරේ භාවිතා කරන උපකරණ පිළිබඳ දළ විශ්ලේෂණයකි — මැලවීම, රෝල් කිරීම, පැසවීම (ඔක්සිකරණය), වියලීම, තේ වෙන් කිරීම (ශ්‍රේණිගත කිරීම), සහ අවසන් පැක් කිරීම, එම අනුපිළිවෙලින්ම.",
-      keyPoints: "ක්‍රියාත්මක තේ කර්මාන්තශාලාවක්, සෑම දිනකම කොළ ප්‍රමාණයට සමීපව සමමුහුර්තව, මැලවීමේ සිට පැක් කිරීම දක්වා සම්පූර්ණ අනුපිළිවෙල එකම වහලක් යටතේ ක්‍රියාත්මක කරයි. සනීපාරක්ෂක ප්‍රමිතීන්ට අනුකූලව, කර්මාන්තශාලා තට්ටුව නරඹන අමුත්තන්ගෙන් හිසකෙස් දැලක්, මුඛ ආවරණයක්, සහ ආරක්ෂිත පාවහන් පැළඳීමට ඉල්ලා සිටිනු ලැබේ.",
+      description: "ප්‍රධාන කර්මාන්තශාලා ගොඩනැගිල්ල, නෙළන ලද කොළ බර කිරීමේ සිට පැක් කිරීම දක්වා නිමි තේ බවට පත් වන ස්ථානයයි. මෙම නැවතුම ක්‍රියාත්මක වන කර්මාන්තශාලා තට්ටුව සහ එක් එක් අදියරේ භාවිතා කරන උපකරණ පිළිබඳ දළ විශ්ලේෂණයකි — බර කිරීම, මැලවීම, රෝල් කිරීම, පැසවීම (ඔක්සිකරණය), වියලීම, තේ වෙන් කිරීම (ශ්‍රේණිගත කිරීම), සහ අවසන් පැක් කිරීම, එම අනුපිළිවෙලින්ම.",
+      keyPoints: "ක්‍රියාත්මක තේ කර්මාන්තශාලාවක්, සෑම දිනකම කොළ ප්‍රමාණයට සමීපව සමමුහුර්තව, බර කිරීමේ සිට පැක් කිරීම දක්වා සම්පූර්ණ අනුපිළිවෙල එකම වහලක් යටතේ ක්‍රියාත්මක කරයි — දිනපතා අස්වැන්න වාර්තා කිරීම සඳහා පැමිණෙන කොළ පළමුව බර කරනු ලැබේ. සනීපාරක්ෂක ප්‍රමිතීන්ට අනුකූලව, කර්මාන්තශාලා තට්ටුව නරඹන අමුත්තන්ගෙන් හිසකෙස් දැලක්, මුඛ ආවරණයක්, සහ ආරක්ෂිත පාවහන් පැළඳීමට ඉල්ලා සිටිනු ලැබේ.",
       duration: "මිනිත්තු 10-15",
     },
     "handmade-factory": {
@@ -630,26 +630,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "வதங்கல்",
-      description: "புதிய இலைகள் நீண்ட தொட்டிகளில் மெல்லிய அடுக்காக பரப்பப்படுகின்றன, அங்கு பெரிய மின்விசிறிகள் காற்றை வலுக்கட்டாயமாக செலுத்தி ஈரப்பதத்தை படிப்படியாக நீக்குகின்றன — தோட்டம் இதை 'நவீன' வதங்கல் செயல்முறை என்று அழைக்கிறது. இலை மென்மையாகவும் நெகிழக்கூடியதாகவும் மாறி, உடையாமல் உருட்டுவதற்குத் தயாராகிறது, இச்செயல்பாட்டின் போது அதன் அசல் ஈரப்பதத்தில் சுமார் 45% இழந்த நிலையில்.",
+      description: "வயலிலிருந்து வரும் இலை முதலில் அன்றைய அறுவடையை பதிவு செய்ய எடைபோடப்படுகிறது, பின்னர் சுமார் ஒரு அடி ஆழமுள்ள நீண்ட தொட்டிகளில் மெல்லிய அடுக்காக பரப்பப்படுகின்றன, அங்கு பெரிய மின்விசிறிகள் காற்றை வலுக்கட்டாயமாக செலுத்தி ஈரப்பதத்தை படிப்படியாக நீக்குகின்றன — தோட்டம் இதை 'நவீன' வதங்கல் செயல்முறை என்று அழைக்கிறது. பறிக்கும் போது சுமார் 75% ஆக இருக்கும் ஈரப்பதம், இலை மென்மையாகவும் நெகிழக்கூடியதாகவும் மாறி, உடையாமல் உருட்டுவதற்குத் தயாரான நிலையில் சுமார் 45% ஆக குறைகிறது. வதங்கிய இலை உருட்டுதலுக்குச் செல்வதற்கு முன் மீண்டும் எடைபோடப்படுகிறது.",
       keyPoints: "வதங்கல் இலை முழுவதும் ஈரப்பதத்தை சமன்படுத்துகிறது, மேலும் இயற்கை நொதிகள் பின்னர் தேயிலையின் நறுமணத்தையும் நிறத்தையும் உருவாக்கும் வேதியியல் மாற்றங்களைத் தொடங்க அனுமதிக்கிறது.",
       duration: "இந்த நிலை பொதுவாக ஈரப்பதம் மற்றும் காற்றோட்டத்தைப் பொறுத்து 10 முதல் 12 மணி நேரம் வரை எடுக்கும்.",
     },
     rolling: {
       name: "உருட்டுதல்",
       description: "வதங்கிய இலைகள் உருட்டும் இயந்திரங்கள் வழியாகச் செல்கின்றன, அவை இலையின் செல் சுவர்களை முறுக்கி உடைத்து, அதனுள் பூட்டப்பட்ட சாறுகளையும் எண்ணெய்களையும் வெளியிட்டு, இலையை சிறிய துகள்களாக உடைக்கின்றன. இங்குதான் இலையின் வடிவமும் தேயிலையின் வலிமையும் உருவாகின்றன.",
-      keyPoints: "செல் சுவர்களை உடைப்பது நொதிகளை ஆக்ஸிஜனுக்கு வெளிப்படுத்தி, ஆக்சிஜனேற்றத்தைத் தொடங்குகிறது. இலை எவ்வளவு கடினமாகவும் நீண்ட நேரமும் உருட்டப்படுகிறது என்பது இறுதி தேயிலையின் வலிமையையும் தோற்றத்தையும் தீர்மானிக்கிறது.",
+      keyPoints: "செல் சுவர்களை உடைப்பது நொதிகளை ஆக்ஸிஜனுக்கு வெளிப்படுத்தி, ஆக்சிஜனேற்றத்தைத் தொடங்குகிறது. இலை எவ்வளவு கடினமாகவும் நீண்ட நேரமும் உருட்டப்படுகிறது என்பது இறுதி தேயிலையின் வலிமையையும் தோற்றத்தையும் தீர்மானிக்கிறது. பல சுற்றுகளில் முதலாவது, மென்மையான 'முன்-தயாரிப்பு' உருட்டல், இறுக்கமாக உருட்டுவதற்கு முன் முறுக்கப்பட்ட துகள்களை இலையின் சொந்த சாற்றால் மூடுவதை நோக்கமாகக் கொண்டது.",
       duration: "உருட்டுதல் பொதுவாக 45 நிமிடங்கள் முதல் ஒரு மணி நேரம் வரை, பெரும்பாலும் பல முறை நடைபெறும்.",
     },
     fermentation: {
       name: "நொதித்தல் (ஆக்சிஜனேற்றம்)",
-      description: "உருட்டப்பட்ட இலை குளிர்ந்த, ஈரப்பதமான அறையில் பரப்பப்பட்டு ஆக்சிஜனேற்றமடைய விடப்படுகிறது, வினை நடைபெற போதுமான ஈரப்பதத்தை பராமரிக்க ஈரப்பதமூட்டி பயன்படுத்தப்படுகிறது. பச்சை இலை படிப்படியாக செம்பு நிற பழுப்பு நிறமாக மாறி, கருப்பு தேயிலையுடன் தொடர்புடைய நிறம், வலிமை மற்றும் நறுமணத்தை உருவாக்குகிறது — முற்றிலும் இயற்கையான ஆக்சிஜனேற்றத்தால் மட்டுமே, எந்த சாயமும் சேர்க்கப்படுவதில்லை.",
+      description: "உருட்டப்பட்ட இலை 25 முதல் 30°C வரை வெப்பநிலையில் வைக்கப்பட்ட குளிர்ந்த, ஈரப்பதமான அறையில் பரப்பப்பட்டு ஆக்சிஜனேற்றமடைய விடப்படுகிறது, வினை நடைபெற போதுமான ஈரப்பதத்தை பராமரிக்க ஈரப்பதமூட்டி பயன்படுத்தப்படுகிறது. பச்சை இலை படிப்படியாக செம்பு நிற பழுப்பு நிறமாக மாறி, கருப்பு தேயிலையுடன் தொடர்புடைய நிறம், வலிமை மற்றும் நறுமணத்தை உருவாக்குகிறது — முற்றிலும் இயற்கையான ஆக்சிஜனேற்றத்தால் மட்டுமே, எந்த சாயமும் சேர்க்கப்படுவதில்லை.",
       keyPoints: "சுவைக்கு இது மிக முக்கியமான படி. நேரம் துல்லியமாக மதிப்பிடப்பட வேண்டும் — மிகக் குறைவாக இருந்தால் தேயிலை மெலிதாகவும், அதிகமாக இருந்தால் தட்டையாகவும் மந்தமாகவும் மாறும். இங்கு தயாரிக்கப்படும் தேயிலை வகைகளை வேறுபடுத்துவதும் இதுவே: கருப்பு தேயிலை வதங்கல், உருட்டுதல், நொதித்தல், பின்னர் சுடுதல் என்ற வரிசையில் செல்கிறது, பச்சை தேயிலை நொதித்தலை முழுவதுமாகத் தவிர்க்கிறது (வதங்கல், உருட்டுதல், உலர்த்துதல் மட்டும்) மேலும் அது மென்மையானது — பெரும்பாலும் அதன் மென்மையான, மருத்துவ குணத்திற்காகவே அருந்தப்படுகிறது; வெள்ளை தேயிலை வதங்கலையும் நொதித்தலையும் இரண்டையும் தவிர்த்து, புதிய இலையிலிருந்து நேரடியாக ஆவியில் வேகவைத்து உலர்த்துவதற்குச் செல்கிறது. இந்த தொழிற்சாலை ஊலோங் தேயிலையை தயாரிப்பதில்லை, அதை வழிகாட்டி விவரிப்பது கருப்பு தேயிலையைப் போன்ற ஒரு நொதிக்கப்பட்ட வகையாகவே, இயந்திர உருட்டலுக்குப் பதிலாக மீண்டும் மீண்டும் ஆவியில் வேகவைத்தல் மற்றும் கையால் தேய்த்தல் மூலம் தயாரிக்கப்படுவதாகும்.",
       duration: "இந்த தொழிற்சாலையில், நிலைமைகளைப் பொறுத்து நொதித்தல் பொதுவாக 1.5 முதல் 2.5 மணி நேரம் வரை எடுக்கும், அதன் பிறகு இலை உலர்த்தும் நிலைக்குச் செல்கிறது.",
     },
     drying: {
       name: "உலர்த்துதல் (சுடுதல்)",
       description: "ஆக்சிஜனேற்றமடைந்த இலை — வெளியிடப்பட்ட தகவலின்படி சுமார் 240°C வெப்பநிலையில் இயங்கும் — சூடான காற்று உலர்த்திகள் வழியாகச் சென்று, ஆக்சிஜனேற்றத்தை உடனடியாக நிறுத்தி தேயிலையின் தன்மையை பூட்டுகிறது. மறுமுனையில் வெளிவருவது நமக்குப் பரிச்சயமான கருப்பு, மொறுமொறுப்பான தேயிலை இலையாகும். பார்வையாளர்கள் உடனடியாக வெப்பத்தை உணர்கிறார்கள் — இது தொழிற்சாலை தளத்தில் மிக வெப்பமான இடங்களில் ஒன்று.",
-      keyPoints: "சுடுதல் சரியான நேரத்தில் வேதியியல் மாற்றங்களை நிறுத்தி, ஈரப்பதத்தை சுமார் 2-3% ஆகக் குறைக்கிறது, இது சேமிப்பு மற்றும் ஏற்றுமதியின் போது தேயிலை புத்துணர்ச்சியாக இருக்க அவசியமானது.",
+      keyPoints: "சுடுதல் சரியான நேரத்தில் வேதியியல் மாற்றங்களை நிறுத்தி, ஈரப்பதத்தை சுமார் 45-50% இலிருந்து 2-3% ஆகக் குறைக்கிறது, இது சேமிப்பு மற்றும் ஏற்றுமதியின் போது தேயிலை புத்துணர்ச்சியாக இருக்க அவசியமானது.",
       duration: "இலை கவனமாகக் கட்டுப்படுத்தப்பட்ட வெப்பநிலைகளில் சுமார் 20 நிமிடங்களில் உலர்த்தியின் வழியாகச் செல்கிறது.",
     },
     sorting: {
@@ -840,8 +840,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "தேயிலை தொழிற்சாலை",
-      description: "பறிக்கப்பட்ட இலை வாடுதல் முதல் பொதிசெய்தல் வரை முடிக்கப்பட்ட தேயிலையாக மாற்றப்படும் இடம் முதன்மை தொழிற்சாலை கட்டிடமாகும். இயங்கும் தொழிற்சாலை தளத்தையும் ஒவ்வொரு கட்டத்திலும் பயன்படுத்தப்படும் உபகரணங்களையும் இந்த நிறுத்தம் மேலோட்டமாக விளக்குகிறது — வதங்கல், உருட்டுதல், நொதித்தல் (ஆக்சிஜனேற்றம்), உலர்த்துதல், தேயிலை பிரித்தல் (தரப்படுத்தல்), மற்றும் இறுதி பொதிசெய்தல், அந்த வரிசையில்.",
-      keyPoints: "இயங்கும் தேயிலை தொழிற்சாலை ஒரு கூரையின் கீழ் வாடுதல் முதல் பொதிசெய்தல் வரையிலான முழு வரிசையையும் இயக்குகிறது, தினசரி இலை வரவுக்கு நெருக்கமாக நேரம் ஒத்திசைக்கப்படுகிறது. ஆலை தளத்தை பார்வையிடும் விருந்தினர்கள் சுகாதார தரநிலைகளுக்கு இணங்க தலைமுடி வலை, முகக்கவசம், மற்றும் பாதுகாப்பு காலணிகள் அணிய வேண்டும் என்று கேட்டுக்கொள்ளப்படுகிறார்கள்.",
+      description: "பறிக்கப்பட்ட இலை எடைபோடுதல் முதல் பொதிசெய்தல் வரை முடிக்கப்பட்ட தேயிலையாக மாற்றப்படும் இடம் முதன்மை தொழிற்சாலை கட்டிடமாகும். இயங்கும் தொழிற்சாலை தளத்தையும் ஒவ்வொரு கட்டத்திலும் பயன்படுத்தப்படும் உபகரணங்களையும் இந்த நிறுத்தம் மேலோட்டமாக விளக்குகிறது — எடைபோடுதல், வாடுதல், உருட்டுதல், நொதித்தல் (ஆக்சிஜனேற்றம்), உலர்த்துதல், தேயிலை பிரித்தல் (தரப்படுத்தல்), மற்றும் இறுதி பொதிசெய்தல், அந்த வரிசையில்.",
+      keyPoints: "இயங்கும் தேயிலை தொழிற்சாலை ஒரு கூரையின் கீழ் எடைபோடுதல் முதல் பொதிசெய்தல் வரையிலான முழு வரிசையையும் இயக்குகிறது, தினசரி இலை வரவுக்கு நெருக்கமாக நேரம் ஒத்திசைக்கப்படுகிறது — அன்றைய அறுவடையை பதிவு செய்ய வரும் இலை முதலில் எடைபோடப்படுகிறது. ஆலை தளத்தை பார்வையிடும் விருந்தினர்கள் சுகாதார தரநிலைகளுக்கு இணங்க தலைமுடி வலை, முகக்கவசம், மற்றும் பாதுகாப்பு காலணிகள் அணிய வேண்டும் என்று கேட்டுக்கொள்ளப்படுகிறார்கள்.",
       duration: "10-15 நிமிடங்கள்",
     },
     "handmade-factory": {
@@ -946,26 +946,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Appassimento",
-      description: "Le foglie fresche vengono stese in strati sottili su lunghe vasche, dove grandi ventole spingono l'aria attraverso di esse per eliminare gradualmente l'umidità — ciò che la tenuta chiama il processo di appassimento 'moderno'. La foglia diventa flessibile e malleabile, pronta per l'arrotolamento senza rompersi, dopo aver perso circa il 45% della sua umidità originale nel processo.",
+      description: "La foglia appena arrivata dal campo viene prima pesata per registrare il raccolto del giorno, poi stesa in strati sottili su lunghe vasche profonde circa un piede, dove grandi ventole spingono l'aria attraverso di essa per eliminare gradualmente l'umidità — ciò che la tenuta chiama il processo di appassimento 'moderno'. L'umidità scende da circa il 75% alla raccolta a circa il 45% quando la foglia diventa flessibile e malleabile, pronta per l'arrotolamento senza rompersi. La foglia appassita viene pesata di nuovo prima di passare all'arrotolamento.",
       keyPoints: "L'appassimento uniforma l'umidità in tutta la foglia e permette agli enzimi naturali di avviare i cambiamenti chimici che in seguito creeranno l'aroma e il colore del tè.",
       duration: "Questa fase dura in genere dalle 10 alle 12 ore, a seconda dell'umidità e della circolazione dell'aria.",
     },
     rolling: {
       name: "Arrotolamento",
       description: "Le foglie appassite passano attraverso macchine arrotolatrici che torcono e rompono le pareti cellulari della foglia, rilasciando i succhi e gli oli racchiusi al loro interno e riducendola in piccole particelle. È qui che si formano la forma della foglia e la forza del tè.",
-      keyPoints: "La rottura delle pareti cellulari espone gli enzimi all'ossigeno, avviando l'ossidazione. Quanto forte e quanto a lungo viene arrotolata la foglia determina la forza e l'aspetto finale del tè.",
+      keyPoints: "La rottura delle pareti cellulari espone gli enzimi all'ossigeno, avviando l'ossidazione. Quanto forte e quanto a lungo viene arrotolata la foglia determina la forza e l'aspetto finale del tè. Il primo dei diversi passaggi, una delicata arrotolatura di 'precondizionamento', serve a ricoprire le particelle attorcigliate con i succhi della foglia stessa prima dell'arrotolamento più energico.",
       duration: "L'arrotolamento dura solitamente dai 45 minuti a un'ora, spesso in più passaggi.",
     },
     fermentation: {
       name: "Fermentazione (Ossidazione)",
-      description: "La foglia arrotolata viene stesa in una stanza fresca e umida e lasciata ossidare, con un umidificatore che mantiene l'aria abbastanza umida perché la reazione avvenga. La foglia verde diventa gradualmente di un colore bruno ramato mentre sviluppa il colore, il corpo e l'aroma associati al tè nero — interamente grazie all'ossidazione naturale, senza coloranti o additivi.",
+      description: "La foglia arrotolata viene stesa in una stanza fresca e umida mantenuta a circa 25-30°C e lasciata ossidare, con un umidificatore che mantiene l'aria abbastanza umida perché la reazione avvenga. La foglia verde diventa gradualmente di un colore bruno ramato mentre sviluppa il colore, il corpo e l'aroma associati al tè nero — interamente grazie all'ossidazione naturale, senza coloranti o additivi.",
       keyPoints: "Questo è il passaggio più importante per il sapore. Il tempo deve essere valutato con precisione — troppo poco e il tè risulta debole, troppo e diventa piatto e opaco. È anche ciò che distingue i tipi di tè prodotti qui: il tè nero segue appassimento, arrotolamento, fermentazione, poi tostatura, mentre il tè verde salta completamente la fermentazione (solo appassimento, arrotolamento, essiccazione) ed è più delicato — bevuto soprattutto per il suo carattere più mite e quasi medicinale; il tè bianco salta sia l'appassimento sia la fermentazione, passando direttamente dalla foglia fresca alla cottura a vapore e all'essiccazione. La fabbrica non produce tè Oolong, che la guida descrive come uno stile fermentato simile al tè nero, ottenuto con ripetute cotture a vapore e spazzolatura a mano anziché con l'arrotolamento meccanico.",
       duration: "In questa fabbrica, la fermentazione dura generalmente da 1,5 a 2,5 ore a seconda delle condizioni, prima che la foglia passi all'essiccazione.",
     },
     drying: {
       name: "Essiccazione (Tostatura)",
       description: "La foglia ossidata passa attraverso essiccatori ad aria calda — che secondo quanto riportato funzionano a circa 240°C — che arrestano istantaneamente l'ossidazione e fissano il carattere del tè. Ciò che esce dall'altra parte è la nota foglia di tè nera e croccante. I visitatori notano subito il calore — è una delle zone più calde di tutto il reparto produttivo.",
-      keyPoints: "La tostatura ferma i cambiamenti chimici nel momento esatto e riduce l'umidità a circa il 2-3%, il che è essenziale affinché il tè rimanga fresco durante la conservazione e la spedizione.",
+      keyPoints: "La tostatura ferma i cambiamenti chimici nel momento esatto e riduce l'umidità da circa il 45-50% a circa il 2-3%, il che è essenziale affinché il tè rimanga fresco durante la conservazione e la spedizione.",
       duration: "La foglia passa attraverso l'essiccatore in circa 20 minuti a temperature accuratamente controllate.",
     },
     sorting: {
@@ -1156,8 +1156,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "La Fabbrica del Tè",
-      description: "L'edificio principale della fabbrica è dove la foglia raccolta viene trasformata in tè finito, dall'appassimento fino al confezionamento. Questa tappa offre una panoramica del piano di fabbrica in funzione e delle attrezzature usate in ogni fase — appassimento, arrotolamento, fermentazione (ossidazione), essiccazione, selezione del tè (classificazione) e confezionamento finale, in quest'ordine.",
-      keyPoints: "Una fabbrica del tè in funzione esegue l'intera sequenza dall'appassimento al confezionamento sotto lo stesso tetto, sincronizzata da vicino con l'arrivo giornaliero delle foglie. Ai visitatori che percorrono il piano di fabbrica viene chiesto di indossare una retina per capelli, una mascherina e calzature protettive, in linea con gli standard igienici della struttura.",
+      description: "L'edificio principale della fabbrica è dove la foglia raccolta viene trasformata in tè finito, dalla pesatura fino al confezionamento. Questa tappa offre una panoramica del piano di fabbrica in funzione e delle attrezzature usate in ogni fase — pesatura, appassimento, arrotolamento, fermentazione (ossidazione), essiccazione, selezione del tè (classificazione) e confezionamento finale, in quest'ordine.",
+      keyPoints: "Una fabbrica del tè in funzione esegue l'intera sequenza dalla pesatura al confezionamento sotto lo stesso tetto, sincronizzata da vicino con l'arrivo giornaliero delle foglie — la foglia in arrivo viene pesata per registrare il raccolto del giorno prima che inizi la lavorazione. Ai visitatori che percorrono il piano di fabbrica viene chiesto di indossare una retina per capelli, una mascherina e calzature protettive, in linea con gli standard igienici della struttura.",
       duration: "10-15 minuti",
     },
     "handmade-factory": {
@@ -1262,26 +1262,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "الذبول",
-      description: "تُفرش الأوراق الطازجة بطبقة رقيقة على أحواض طويلة، حيث تدفع مراوح كبيرة الهواء عبرها لإزالة الرطوبة تدريجيًا — وهو ما تسميه المزرعة عملية الذبول 'الحديثة'. تصبح الورقة مرنة وطيّعة، جاهزة للف دون أن تتكسر، بعد أن تفقد نحو 45% من رطوبتها الأصلية خلال هذه العملية.",
+      description: "تُوزن الأوراق القادمة من الحقل أولاً لتسجيل محصول اليوم، ثم تُفرش بطبقة رقيقة على أحواض طويلة يبلغ عمقها نحو قدم واحدة، حيث تدفع مراوح كبيرة الهواء عبرها لإزالة الرطوبة تدريجيًا — وهو ما تسميه المزرعة عملية الذبول 'الحديثة'. تنخفض الرطوبة من نحو 75% عند القطف إلى نحو 45% عندما تصبح الورقة مرنة وطيّعة، جاهزة للف دون أن تتكسر. تُوزن الأوراق الذابلة مرة أخرى قبل الانتقال إلى مرحلة اللف.",
       keyPoints: "يوازن الذبول الرطوبة عبر الورقة ويسمح للإنزيمات الطبيعية ببدء التغيرات الكيميائية التي ستشكل لاحقًا نكهة الشاي ولونه.",
       duration: "تستغرق هذه المرحلة عادة من 10 إلى 12 ساعة، حسب الرطوبة وتدفق الهواء.",
     },
     rolling: {
       name: "اللف",
       description: "تمر الأوراق الذابلة عبر آلات اللف التي تلوي وتكسر جدران خلايا الورقة، مما يحرر العصائر والزيوت المحبوسة بداخلها ويكسر الورقة إلى جزيئات صغيرة. هنا يتشكل شكل الورقة وقوة الشاي.",
-      keyPoints: "كسر جدران الخلايا يعرّض الإنزيمات للأكسجين، مما يبدأ عملية الأكسدة. تحدد شدة ومدة اللف قوة الشاي النهائي ومظهره.",
+      keyPoints: "كسر جدران الخلايا يعرّض الإنزيمات للأكسجين، مما يبدأ عملية الأكسدة. تحدد شدة ومدة اللف قوة الشاي النهائي ومظهره. أولى هذه المراحل المتعددة هي لفة تمهيدية لطيفة، والغرض منها تغليف الجزيئات الملتوية بعصارة الورقة نفسها قبل اللف الأقوى الذي يليها.",
       duration: "يستمر اللف عادة من 45 دقيقة إلى ساعة، وغالبًا على عدة مراحل.",
     },
     fermentation: {
       name: "التخمير (الأكسدة)",
-      description: "تُفرش الأوراق الملفوفة في غرفة باردة ورطبة وتُترك لتتأكسد، مع استخدام جهاز ترطيب للحفاظ على رطوبة الهواء الكافية لحدوث التفاعل. تتحول الورقة الخضراء تدريجيًا إلى لون بني نحاسي مع تطور اللون والقوام والنكهة المرتبطة بالشاي الأسود — وذلك كله من الأكسدة الطبيعية فقط، دون أي أصباغ أو إضافات.",
+      description: "تُفرش الأوراق الملفوفة في غرفة باردة ورطبة تُحفظ عند درجة حرارة تتراوح بين 25 و30 درجة مئوية وتُترك لتتأكسد، مع استخدام جهاز ترطيب للحفاظ على رطوبة الهواء الكافية لحدوث التفاعل. تتحول الورقة الخضراء تدريجيًا إلى لون بني نحاسي مع تطور اللون والقوام والنكهة المرتبطة بالشاي الأسود — وذلك كله من الأكسدة الطبيعية فقط، دون أي أصباغ أو إضافات.",
       keyPoints: "هذه هي الخطوة الأهم لتحديد النكهة. يجب ضبط التوقيت بدقة — فإذا كان قصيرًا جدًا يصبح الشاي خفيفًا، وإذا طال أكثر من اللازم يصبح باهتًا وباردًا. وهذا أيضًا ما يفصل بين أنواع الشاي المصنوعة هنا: يمر الشاي الأسود بمراحل الذبول ثم اللف ثم التخمير ثم التحميص، بينما يتجاوز الشاي الأخضر التخمير تمامًا (ذبول ولف وتجفيف فقط) ويكون أكثر اعتدالًا — ويُشرب غالبًا لطابعه الألطف وشبه العلاجي؛ أما الشاي الأبيض فيتجاوز كلًا من الذبول والتخمير، منتقلاً مباشرة من الورقة الطازجة إلى التبخير والتجفيف. لا ينتج هذا المصنع شاي الأولونغ، الذي يصفه المرشد بأنه نوع مخمّر يشبه الشاي الأسود، يُصنع عبر تبخير وتفريش متكررين يدويًا بدلاً من اللف الآلي.",
       duration: "في هذا المصنع، يستغرق التخمير عادةً من 1.5 إلى 2.5 ساعة حسب الظروف، قبل أن تنتقل الورقة إلى مرحلة التجفيف.",
     },
     drying: {
       name: "التجفيف (التحميص)",
       description: "تمر الورقة المؤكسدة عبر مجففات الهواء الساخن — التي تعمل حسب ما ذُكر عند حرارة تبلغ حوالي 240 درجة مئوية — والتي توقف الأكسدة فورًا وتحافظ على طابع الشاي. وما يخرج في النهاية هو ورقة الشاي السوداء المقرمشة المعروفة. يلاحظ الزوار الحرارة فورًا — فهذه من أكثر المناطق سخونة في أرضية المصنع.",
-      keyPoints: "يوقف التحميص التغيرات الكيميائية في اللحظة المناسبة تمامًا ويقلل الرطوبة إلى حوالي 2-3%، وهو أمر أساسي لبقاء الشاي طازجًا أثناء التخزين والشحن.",
+      keyPoints: "يوقف التحميص التغيرات الكيميائية في اللحظة المناسبة تمامًا ويقلل الرطوبة من حوالي 45-50% إلى حوالي 2-3%، وهو أمر أساسي لبقاء الشاي طازجًا أثناء التخزين والشحن.",
       duration: "تمر الورقة عبر المجفف في حوالي 20 دقيقة عند درجات حرارة مضبوطة بعناية.",
     },
     sorting: {
@@ -1472,8 +1472,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "مصنع الشاي",
-      description: "المصنع الرئيسي هو المكان الذي تتحول فيه الأوراق المقطوفة إلى شاي جاهز، من الذبول إلى التعبئة. تقدم هذه المحطة نظرة عامة على أرضية المصنع العاملة والمعدات المستخدمة في كل مرحلة — الذبول، اللف، التخمير (الأكسدة)، التجفيف، فرز الشاي (التصنيف)، والتعبئة النهائية، بهذا الترتيب.",
-      keyPoints: "يدير مصنع الشاي العامل التسلسل الكامل من الذبول إلى التعبئة تحت سقف واحد، بتوقيت دقيق مع كمية الأوراق الواردة يوميًا. يُطلب من الزوار الذين يجولون في أرضية المصنع ارتداء غطاء للشعر وكمامة وحذاء واقٍ، تماشيًا مع معايير النظافة في المنشأة.",
+      description: "المصنع الرئيسي هو المكان الذي تتحول فيه الأوراق المقطوفة إلى شاي جاهز، من الوزن إلى التعبئة. تقدم هذه المحطة نظرة عامة على أرضية المصنع العاملة والمعدات المستخدمة في كل مرحلة — الوزن، الذبول، اللف، التخمير (الأكسدة)، التجفيف، فرز الشاي (التصنيف)، والتعبئة النهائية، بهذا الترتيب.",
+      keyPoints: "يدير مصنع الشاي العامل التسلسل الكامل من الوزن إلى التعبئة تحت سقف واحد، بتوقيت دقيق مع كمية الأوراق الواردة يوميًا — تُوزن الأوراق الواردة عند وصولها لتسجيل محصول اليوم قبل بدء المعالجة. يُطلب من الزوار الذين يجولون في أرضية المصنع ارتداء غطاء للشعر وكمامة وحذاء واقٍ، تماشيًا مع معايير النظافة في المنشأة.",
       duration: "10-15 دقيقة",
     },
     "handmade-factory": {
@@ -1578,26 +1578,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Завяливание",
-      description: "Свежие листья тонким слоем раскладываются на длинных желобах, где мощные вентиляторы прогоняют через них воздух, постепенно удаляя влагу — это то, что на плантации называют «современным» способом завяливания. Лист становится мягким и податливым, готовым к скручиванию без повреждений, потеряв за это время около 45% исходной влаги.",
+      description: "Лист, поступающий с плантации, сначала взвешивают, чтобы зафиксировать дневной сбор, затем тонким слоем раскладывают на длинных желобах глубиной примерно в фут, где мощные вентиляторы прогоняют через него воздух, постепенно удаляя влагу — это то, что на плантации называют «современным» способом завяливания. Влажность снижается примерно с 75% при сборе до примерно 45%, когда лист становится мягким и податливым, готовым к скручиванию без повреждений. Увядший лист снова взвешивают перед тем, как отправить его на скручивание.",
       keyPoints: "Завяливание выравнивает влажность по всему листу и позволяет природным ферментам начать химические изменения, которые впоследствии создадут аромат и цвет чая.",
       duration: "Этот этап обычно занимает от 10 до 12 часов в зависимости от влажности и циркуляции воздуха.",
     },
     rolling: {
       name: "Скручивание",
       description: "Завяленный лист проходит через скручивающие машины, которые скручивают и разрушают клеточные стенки листа, высвобождая заключённые в них соки и масла и разбивая лист на мелкие частицы. Именно здесь формируются форма листа и крепость чая.",
-      keyPoints: "Разрушение клеточных стенок открывает доступ кислорода к ферментам, запуская окисление. От силы и продолжительности скручивания зависят крепость и внешний вид готового чая.",
+      keyPoints: "Разрушение клеточных стенок открывает доступ кислорода к ферментам, запуская окисление. От силы и продолжительности скручивания зависят крепость и внешний вид готового чая. Первый из нескольких проходов — мягкое «предварительное» скручивание — призван покрыть скрученные частицы соком самого листа перед более интенсивным скручиванием.",
       duration: "Скручивание обычно длится от 45 минут до часа, часто в несколько проходов.",
     },
     fermentation: {
       name: "Ферментация (окисление)",
-      description: "Скрученный лист раскладывают в прохладном влажном помещении и оставляют окисляться; увлажнитель поддерживает воздух достаточно влажным, чтобы реакция прошла как нужно. Зелёный лист постепенно приобретает медно-коричневый оттенок, развивая цвет, насыщенность и аромат, характерные для чёрного чая — исключительно за счёт естественного окисления, без красителей и добавок.",
+      description: "Скрученный лист раскладывают в прохладном влажном помещении, поддерживаемом при температуре около 25–30°C, и оставляют окисляться; увлажнитель поддерживает воздух достаточно влажным, чтобы реакция прошла как нужно. Зелёный лист постепенно приобретает медно-коричневый оттенок, развивая цвет, насыщенность и аромат, характерные для чёрного чая — исключительно за счёт естественного окисления, без красителей и добавок.",
       keyPoints: "Это самый важный этап для формирования вкуса. Время нужно определять точно — если недостаточно, чай получится слабым, если слишком долго — плоским и невыразительным. Именно это и отличает виды чая, которые здесь производят: чёрный чай проходит завяливание, скручивание, ферментацию, затем обжарку, а зелёный чай полностью пропускает ферментацию (только завяливание, скручивание и сушка) и получается более мягким — его пьют в основном за более нежный, почти лечебный характер; белый чай пропускает и завяливание, и ферментацию, отправляясь прямо со свежего листа на пропаривание и сушку. Улун на этой фабрике не производят — экскурсовод описывает его как ферментированный сорт, похожий на чёрный чай, который делают путём многократного пропаривания и ручного растирания вместо машинного скручивания.",
       duration: "На этой фабрике ферментация обычно занимает от 1,5 до 2,5 часа в зависимости от условий, после чего лист отправляется на сушку.",
     },
     drying: {
       name: "Сушка (обжарка)",
       description: "Окислённый лист проходит через сушилки горячего воздуха — работающие, по имеющимся данным, при температуре около 240°C, — которые мгновенно останавливают окисление и закрепляют характер чая. На выходе получается знакомый чёрный, хрустящий чайный лист. Посетители сразу же ощущают жар — это один из самых горячих участков на всей фабрике.",
-      keyPoints: "Обжарка останавливает химические изменения в нужный момент и снижает влажность примерно до 2–3%, что необходимо для сохранения свежести чая при хранении и транспортировке.",
+      keyPoints: "Обжарка останавливает химические изменения в нужный момент и снижает влажность примерно с 45–50% до 2–3%, что необходимо для сохранения свежести чая при хранении и транспортировке.",
       duration: "Лист проходит через сушилку примерно за 20 минут при тщательно контролируемой температуре.",
     },
     sorting: {
@@ -1788,8 +1788,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "Чайная фабрика",
-      description: "В главном здании фабрики собранный лист превращается в готовый чай — от завяливания до упаковки. Эта остановка даёт общее представление о работающем цехе фабрики и оборудовании, используемом на каждом этапе — завяливание, скручивание, ферментация (окисление), сушка, сортировка чая (калибровка) и финальная упаковка, именно в этом порядке.",
-      keyPoints: "Работающая чайная фабрика выполняет всю последовательность от завяливания до упаковки под одной крышей, тесно синхронизированную с ежедневным поступлением листа. Посетителям, осматривающим цех фабрики, предлагается надеть сетку для волос, маску и защитную обувь — в соответствии с санитарными нормами предприятия.",
+      description: "В главном здании фабрики собранный лист превращается в готовый чай — от взвешивания до упаковки. Эта остановка даёт общее представление о работающем цехе фабрики и оборудовании, используемом на каждом этапе — взвешивание, завяливание, скручивание, ферментация (окисление), сушка, сортировка чая (калибровка) и финальная упаковка, именно в этом порядке.",
+      keyPoints: "Работающая чайная фабрика выполняет всю последовательность от взвешивания до упаковки под одной крышей, тесно синхронизированную с ежедневным поступлением листа — поступающий лист взвешивают при прибытии, чтобы зафиксировать дневной сбор, прежде чем начинается обработка. Посетителям, осматривающим цех фабрики, предлагается надеть сетку для волос, маску и защитную обувь — в соответствии с санитарными нормами предприятия.",
       duration: "10–15 минут",
     },
     "handmade-factory": {
@@ -1894,26 +1894,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Welken",
-      description: "Frische Blätter werden dünn auf langen Trögen ausgebreitet, durch die große Ventilatoren Luft pressen, um stetig Feuchtigkeit zu entziehen — was das Anwesen den 'modernen' Welkeprozess nennt. Das Blatt wird welk und geschmeidig und ist bereit zum Rollen, ohne zu zerbrechen, nachdem es dabei rund 45 % seiner ursprünglichen Feuchtigkeit verloren hat.",
+      description: "Das vom Feld ankommende Blatt wird zunächst gewogen, um die Tagesernte zu erfassen, dann dünn auf langen, etwa einen Fuß tiefen Trögen ausgebreitet, durch die große Ventilatoren Luft pressen, um stetig Feuchtigkeit zu entziehen — was das Anwesen den 'modernen' Welkeprozess nennt. Die Feuchtigkeit sinkt von rund 75 % beim Pflücken auf etwa 45 %, wenn das Blatt welk und geschmeidig wird und bereit zum Rollen ist, ohne zu zerbrechen. Das gewelkte Blatt wird erneut gewogen, bevor es zum Rollen weitergeht.",
       keyPoints: "Das Welken gleicht die Feuchtigkeit im Blatt aus und lässt natürliche Enzyme die chemischen Veränderungen beginnen, die später Aroma und Farbe des Tees erzeugen.",
       duration: "Diese Phase dauert je nach Luftfeuchtigkeit und Luftzirkulation typischerweise 10 bis 12 Stunden.",
     },
     rolling: {
       name: "Rollen",
       description: "Welkes Blatt durchläuft Rollmaschinen, die die Zellwände des Blattes verdrehen und aufbrechen, so die darin eingeschlossenen Säfte und Öle freisetzen und das Blatt in kleine Partikel zerlegen. Hier entstehen die Form des Blattes und die Kraft des Tees.",
-      keyPoints: "Das Aufbrechen der Zellwände setzt Enzyme dem Sauerstoff aus und leitet die Oxidation ein. Wie stark und wie lange das Blatt gerollt wird, bestimmt Stärke und Aussehen des fertigen Tees.",
+      keyPoints: "Das Aufbrechen der Zellwände setzt Enzyme dem Sauerstoff aus und leitet die Oxidation ein. Wie stark und wie lange das Blatt gerollt wird, bestimmt Stärke und Aussehen des fertigen Tees. Der erste von mehreren Durchgängen, ein sanftes 'Vorroll', soll die verdrehten Partikel mit dem eigenen Saft des Blattes überziehen, bevor kräftigeres Rollen folgt.",
       duration: "Das Rollen dauert meist 45 Minuten bis eine Stunde, oft in mehreren Durchgängen.",
     },
     fermentation: {
       name: "Fermentation (Oxidation)",
-      description: "Gerolltes Blatt wird in einem kühlen, feuchten Raum ausgebreitet und zur Oxidation stehen gelassen; ein Luftbefeuchter hält die Luft feucht genug, damit die Reaktion ablaufen kann. Das grüne Blatt verfärbt sich allmählich kupferbraun, während sich Farbe, Körper und Aroma des Schwarztees entwickeln — ausschließlich durch natürliche Oxidation, ohne Farbstoffe oder Zusätze.",
+      description: "Gerolltes Blatt wird in einem kühlen, feuchten Raum ausgebreitet, der bei etwa 25 bis 30 °C gehalten wird, und zur Oxidation stehen gelassen; ein Luftbefeuchter hält die Luft feucht genug, damit die Reaktion ablaufen kann. Das grüne Blatt verfärbt sich allmählich kupferbraun, während sich Farbe, Körper und Aroma des Schwarztees entwickeln — ausschließlich durch natürliche Oxidation, ohne Farbstoffe oder Zusätze.",
       keyPoints: "Dies ist der wichtigste Schritt für den Geschmack. Das Timing muss präzise beurteilt werden — zu wenig, und der Tee ist dünn, zu viel, und er wird flach und fade. Genau das unterscheidet auch die hier hergestellten Teesorten: Schwarzer Tee durchläuft Welken, Rollen, Fermentation, dann Darren, während Grüner Tee die Fermentation vollständig auslässt (nur Welken, Rollen, Trocknen) und milder ist — er wird meist wegen seines sanfteren, fast medizinischen Charakters getrunken; Weißer Tee lässt sowohl Welken als auch Fermentation aus und geht direkt vom frischen Blatt zum Dämpfen und Trocknen über. Oolong-Tee wird in dieser Fabrik nicht hergestellt — der Guide beschreibt ihn als eine dem Schwarztee ähnliche fermentierte Sorte, die durch wiederholtes Dämpfen und Handbürsten statt maschinelles Rollen entsteht.",
       duration: "In dieser Fabrik dauert die Fermentation je nach Bedingungen meist 1,5 bis 2,5 Stunden, bevor das Blatt zum Trocknen weitergeht.",
     },
     drying: {
       name: "Trocknen (Darren)",
       description: "Das oxidierte Blatt durchläuft Heißlufttrockner — die Berichten zufolge bei etwa 240 °C arbeiten —, die die Oxidation sofort stoppen und den Charakter des Tees festhalten. Am anderen Ende kommt das bekannte schwarze, knackige Teeblatt heraus. Besucher spüren die Hitze sofort — es ist einer der heißesten Bereiche auf dem Fabrikboden.",
-      keyPoints: "Das Darren stoppt die chemischen Veränderungen genau im richtigen Moment und reduziert die Feuchtigkeit auf etwa 2–3 %, was für die Frischhaltung des Tees bei Lagerung und Versand unerlässlich ist.",
+      keyPoints: "Das Darren stoppt die chemischen Veränderungen genau im richtigen Moment und reduziert die Feuchtigkeit von etwa 45–50 % auf etwa 2–3 %, was für die Frischhaltung des Tees bei Lagerung und Versand unerlässlich ist.",
       duration: "Das Blatt durchläuft den Trockner bei sorgfältig kontrollierten Temperaturen in etwa 20 Minuten.",
     },
     sorting: {
@@ -2104,8 +2104,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "Die Teefabrik",
-      description: "Im Hauptfabrikgebäude wird gepflücktes Blatt vom Welken bis zur Verpackung zu fertigem Tee verarbeitet. Diese Station bietet einen Überblick über die arbeitende Fabrikhalle und die in jeder Phase verwendeten Geräte — Welken, Rollen, Fermentation (Oxidation), Trocknen, Teetrennung (Klassifizierung) und abschließendes Verpacken, in dieser Reihenfolge.",
-      keyPoints: "Eine arbeitende Teefabrik führt die gesamte Abfolge vom Welken bis zur Verpackung unter einem Dach durch, eng abgestimmt auf den täglichen Blattertrag. Besucher, die die Fabrikhalle besichtigen, werden gebeten, gemäß den Hygienestandards des Betriebs ein Haarnetz, einen Mundschutz und Schutzschuhe zu tragen.",
+      description: "Im Hauptfabrikgebäude wird gepflücktes Blatt vom Wiegen bis zur Verpackung zu fertigem Tee verarbeitet. Diese Station bietet einen Überblick über die arbeitende Fabrikhalle und die in jeder Phase verwendeten Geräte — Wiegen, Welken, Rollen, Fermentation (Oxidation), Trocknen, Teetrennung (Klassifizierung) und abschließendes Verpacken, in dieser Reihenfolge.",
+      keyPoints: "Eine arbeitende Teefabrik führt die gesamte Abfolge vom Wiegen bis zur Verpackung unter einem Dach durch, eng abgestimmt auf den täglichen Blattertrag — ankommendes Blatt wird bei der Anlieferung gewogen, um die Tagesernte zu erfassen, bevor die Verarbeitung beginnt. Besucher, die die Fabrikhalle besichtigen, werden gebeten, gemäß den Hygienestandards des Betriebs ein Haarnetz, einen Mundschutz und Schutzschuhe zu tragen.",
       duration: "10-15 Minuten",
     },
     "handmade-factory": {
@@ -2210,26 +2210,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Marchitado",
-      description: "Las hojas frescas se extienden en capas finas sobre largos canales, donde grandes ventiladores fuerzan el paso del aire para eliminar gradualmente la humedad — lo que la finca llama el proceso de marchitado 'moderno'. La hoja se vuelve flexible y maleable, lista para el enrollado sin quebrarse, tras perder alrededor del 45% de su humedad original en el proceso.",
+      description: "La hoja recién llegada del campo se pesa primero para registrar la cosecha del día, y luego se extiende en capas finas sobre largos canales de aproximadamente un pie de profundidad, donde grandes ventiladores fuerzan el paso del aire para eliminar gradualmente la humedad — lo que la finca llama el proceso de marchitado 'moderno'. La humedad baja de alrededor del 75% en la recolección a cerca del 45% cuando la hoja se vuelve flexible y maleable, lista para el enrollado sin quebrarse. La hoja marchitada se pesa de nuevo antes de pasar al enrollado.",
       keyPoints: "El marchitado uniforma la humedad en toda la hoja y permite que las enzimas naturales comiencen los cambios químicos que más tarde crearán el aroma y el color del té.",
       duration: "Esta etapa suele durar de 10 a 12 horas, dependiendo de la humedad y la circulación de aire.",
     },
     rolling: {
       name: "Enrollado",
       description: "Las hojas marchitas pasan por máquinas enrolladoras que retuercen y rompen las paredes celulares de la hoja, liberando los jugos y aceites encerrados en su interior y reduciéndola a pequeñas partículas. Aquí es donde se forman la forma de la hoja y la fuerza del té.",
-      keyPoints: "Al romper las paredes celulares, las enzimas quedan expuestas al oxígeno, iniciando la oxidación. La intensidad y duración del enrollado determinan la fuerza y el aspecto final del té.",
+      keyPoints: "Al romper las paredes celulares, las enzimas quedan expuestas al oxígeno, iniciando la oxidación. La intensidad y duración del enrollado determinan la fuerza y el aspecto final del té. La primera de varias pasadas, un suave enrollado de 'preacondicionamiento', busca cubrir las partículas retorcidas con el propio jugo de la hoja antes de un enrollado más firme.",
       duration: "El enrollado suele durar entre 45 minutos y una hora, a menudo en varias pasadas.",
     },
     fermentation: {
       name: "Fermentación (Oxidación)",
-      description: "La hoja enrollada se extiende en una sala fresca y húmeda y se deja oxidar, con un humidificador que mantiene el aire lo bastante húmedo para que ocurra la reacción. La hoja verde se va tornando de un color cobrizo a medida que desarrolla el color, cuerpo y aroma propios del té negro — todo ello por oxidación natural, sin tintes ni aditivos.",
+      description: "La hoja enrollada se extiende en una sala fresca y húmeda, mantenida a unos 25-30°C, y se deja oxidar, con un humidificador que mantiene el aire lo bastante húmedo para que ocurra la reacción. La hoja verde se va tornando de un color cobrizo a medida que desarrolla el color, cuerpo y aroma propios del té negro — todo ello por oxidación natural, sin tintes ni aditivos.",
       keyPoints: "Este es el paso más importante para el sabor. El tiempo debe calcularse con precisión — muy poco y el té queda ligero, demasiado y se vuelve plano y sin vida. Esto es también lo que diferencia los tipos de té que se elaboran aquí: el té negro sigue marchitado, enrollado, fermentación y luego tostado, mientras que el té verde se salta la fermentación por completo (solo marchitado, enrollado y secado) y es más suave — se bebe sobre todo por su carácter más ligero y casi medicinal; el té blanco se salta tanto el marchitado como la fermentación, pasando directamente de la hoja fresca al vapor y al secado. Esta fábrica no produce té Oolong, que el guía describe como un tipo fermentado similar al té negro, elaborado mediante vaporizado y cepillado a mano repetidos en lugar de enrollado mecánico.",
       duration: "En esta fábrica, la fermentación suele durar entre 1,5 y 2,5 horas según las condiciones, antes de que la hoja pase al secado.",
     },
     drying: {
       name: "Secado (Tostado)",
       description: "La hoja oxidada pasa por secadoras de aire caliente —que, según se indica, funcionan a unos 240 °C— que detienen la oxidación al instante y fijan el carácter del té. Lo que sale al otro extremo es la conocida hoja de té negra y crujiente. Los visitantes notan el calor de inmediato — es una de las zonas más calurosas de toda la planta.",
-      keyPoints: "El tostado detiene los cambios químicos en el momento exacto y reduce la humedad a aproximadamente un 2-3%, algo esencial para que el té se mantenga fresco durante el almacenamiento y el transporte.",
+      keyPoints: "El tostado detiene los cambios químicos en el momento exacto y reduce la humedad de aproximadamente un 45-50% a un 2-3%, algo esencial para que el té se mantenga fresco durante el almacenamiento y el transporte.",
       duration: "La hoja pasa por el secador en unos 20 minutos, a temperaturas cuidadosamente controladas.",
     },
     sorting: {
@@ -2420,8 +2420,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "La Fábrica de Té",
-      description: "El edificio principal de la fábrica es donde la hoja recolectada se convierte en té terminado, desde el marchitado hasta el envasado. Esta parada ofrece una visión general de la planta de la fábrica en funcionamiento y el equipo utilizado en cada etapa — marchitado, enrollado, fermentación (oxidación), secado, separación del té (clasificación) y envasado final, en ese orden.",
-      keyPoints: "Una fábrica de té en funcionamiento ejecuta toda la secuencia de marchitado a envasado bajo un mismo techo, sincronizada de cerca con la cantidad de hoja recibida cada día. A los visitantes que recorren la planta de la fábrica se les pide que usen una redecilla para el cabello, una mascarilla y calzado protector, conforme a las normas de higiene de la instalación.",
+      description: "El edificio principal de la fábrica es donde la hoja recolectada se convierte en té terminado, desde el pesaje hasta el envasado. Esta parada ofrece una visión general de la planta de la fábrica en funcionamiento y el equipo utilizado en cada etapa — pesaje, marchitado, enrollado, fermentación (oxidación), secado, separación del té (clasificación) y envasado final, en ese orden.",
+      keyPoints: "Una fábrica de té en funcionamiento ejecuta toda la secuencia de pesaje a envasado bajo un mismo techo, sincronizada de cerca con la cantidad de hoja recibida cada día — la hoja que llega se pesa a su llegada para registrar la cosecha del día antes de que comience el procesamiento. A los visitantes que recorren la planta de la fábrica se les pide que usen una redecilla para el cabello, una mascarilla y calzado protector, conforme a las normas de higiene de la instalación.",
       duration: "10-15 minutos",
     },
     "handmade-factory": {
@@ -2526,26 +2526,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Flétrissage",
-      description: "Les feuilles fraîches sont étalées en fine couche sur de longs bacs, où de grands ventilateurs poussent l'air à travers elles pour éliminer progressivement l'humidité — ce que le domaine appelle le flétrissage 'moderne'. La feuille devient souple et malléable, prête pour le roulage sans se briser, après avoir perdu environ 45 % de son humidité d'origine au cours du processus.",
+      description: "La feuille arrivant des champs est d'abord pesée pour consigner la récolte du jour, puis étalée en fine couche sur de longs bacs profonds d'environ un pied, où de grands ventilateurs poussent l'air à travers elle pour éliminer progressivement l'humidité — ce que le domaine appelle le flétrissage 'moderne'. L'humidité passe d'environ 75 % à la cueillette à environ 45 % lorsque la feuille devient souple et malléable, prête pour le roulage sans se briser. La feuille flétrie est pesée à nouveau avant de passer au roulage.",
       keyPoints: "Le flétrissage uniformise l'humidité dans la feuille et permet aux enzymes naturelles d'amorcer les changements chimiques qui créeront plus tard l'arôme et la couleur du thé.",
       duration: "Cette étape dure généralement de 10 à 12 heures, selon l'humidité et la circulation de l'air.",
     },
     rolling: {
       name: "Roulage",
       description: "Les feuilles flétries passent dans des machines à rouler qui tordent et brisent les parois cellulaires de la feuille, libérant les jus et huiles qui y sont enfermés et réduisant la feuille en petites particules. C'est là que se forment la forme de la feuille et la force du thé.",
-      keyPoints: "La rupture des parois cellulaires expose les enzymes à l'oxygène, déclenchant l'oxydation. L'intensité et la durée du roulage déterminent la force et l'aspect final du thé.",
+      keyPoints: "La rupture des parois cellulaires expose les enzymes à l'oxygène, déclenchant l'oxydation. L'intensité et la durée du roulage déterminent la force et l'aspect final du thé. Le premier de plusieurs passages, un roulage de 'préconditionnement' tout en douceur, vise à enrober les particules torsadées du propre jus de la feuille avant un roulage plus ferme.",
       duration: "Le roulage dure généralement de 45 minutes à une heure, souvent en plusieurs passages.",
     },
     fermentation: {
       name: "Fermentation (Oxydation)",
-      description: "La feuille roulée est étalée dans une pièce fraîche et humide et laissée à oxyder, un humidificateur maintenant l'air suffisamment humide pour que la réaction se produise. La feuille verte devient progressivement brun cuivré à mesure qu'elle développe la couleur, le corps et l'arôme associés au thé noir — entièrement grâce à l'oxydation naturelle, sans colorant ni additif.",
+      description: "La feuille roulée est étalée dans une pièce fraîche et humide maintenue à environ 25-30°C et laissée à oxyder, un humidificateur maintenant l'air suffisamment humide pour que la réaction se produise. La feuille verte devient progressivement brun cuivré à mesure qu'elle développe la couleur, le corps et l'arôme associés au thé noir — entièrement grâce à l'oxydation naturelle, sans colorant ni additif.",
       keyPoints: "C'est l'étape la plus importante pour la saveur. Le minutage doit être jugé avec précision — trop peu et le thé est fade, trop et il devient plat et terne. C'est aussi ce qui distingue les types de thé fabriqués ici : le thé noir suit flétrissage, roulage, fermentation, puis torréfaction, tandis que le thé vert évite entièrement la fermentation (flétrissage, roulage, séchage seulement) et est plus doux — surtout bu pour son caractère plus léger, presque médicinal ; le thé blanc évite à la fois le flétrissage et la fermentation, passant directement de la feuille fraîche à la cuisson à la vapeur puis au séchage. L'usine ne produit pas de thé Oolong, que le guide décrit comme un style fermenté proche du thé noir, obtenu par des cuissons à la vapeur et des brossages à la main répétés plutôt que par un roulage mécanique.",
       duration: "Dans cette usine, la fermentation dure généralement de 1,5 à 2,5 heures selon les conditions, avant que la feuille ne passe au séchage.",
     },
     drying: {
       name: "Séchage (Torréfaction)",
       description: "La feuille oxydée passe dans des séchoirs à air chaud — qui, d'après ce qui a été indiqué, fonctionnent à environ 240 °C — qui arrêtent instantanément l'oxydation et figent le caractère du thé. Ce qui en ressort est la feuille de thé noire et croustillante bien connue. Les visiteurs remarquent immédiatement la chaleur — c'est l'une des zones les plus chaudes de tout l'atelier.",
-      keyPoints: "La torréfaction arrête les changements chimiques au moment exact et réduit l'humidité à environ 2-3 %, ce qui est essentiel pour que le thé reste frais pendant le stockage et l'expédition.",
+      keyPoints: "La torréfaction arrête les changements chimiques au moment exact et réduit l'humidité d'environ 45-50 % à environ 2-3 %, ce qui est essentiel pour que le thé reste frais pendant le stockage et l'expédition.",
       duration: "La feuille passe dans le séchoir en environ 20 minutes, à des températures soigneusement contrôlées.",
     },
     sorting: {
@@ -2736,8 +2736,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "La Fabrique de Thé",
-      description: "Le bâtiment principal de l'usine est l'endroit où la feuille cueillie devient du thé fini, du flétrissage jusqu'à l'emballage. Cette étape offre un aperçu de l'atelier de production et des équipements utilisés à chaque étape — flétrissage, roulage, fermentation (oxydation), séchage, triage du thé (classification) et emballage final, dans cet ordre.",
-      keyPoints: "Une usine de thé en activité fait fonctionner toute la séquence du flétrissage à l'emballage sous un même toit, en synchronisation étroite avec l'arrivée quotidienne des feuilles. Les visiteurs qui parcourent l'atelier de production sont priés de porter une charlotte, un masque et des chaussures de protection, conformément aux normes d'hygiène de l'établissement.",
+      description: "Le bâtiment principal de l'usine est l'endroit où la feuille cueillie devient du thé fini, de la pesée jusqu'à l'emballage. Cette étape offre un aperçu de l'atelier de production et des équipements utilisés à chaque étape — pesée, flétrissage, roulage, fermentation (oxydation), séchage, triage du thé (classification) et emballage final, dans cet ordre.",
+      keyPoints: "Une usine de thé en activité fait fonctionner toute la séquence de la pesée à l'emballage sous un même toit, en synchronisation étroite avec l'arrivée quotidienne des feuilles — la feuille reçue est pesée à son arrivée pour consigner la récolte du jour avant que la transformation ne commence. Les visiteurs qui parcourent l'atelier de production sont priés de porter une charlotte, un masque et des chaussures de protection, conformément aux normes d'hygiène de l'établissement.",
       duration: "10-15 minutes",
     },
     "handmade-factory": {
@@ -2842,26 +2842,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "萎凋",
-      description: "新鲜茶叶被薄薄地摊放在长长的萎凋槽中，大型风扇会强制送风穿过茶叶，持续带走水分——这就是庄园所称的“现代”萎凋工艺。叶片逐渐变得柔软有韧性，可以进行揉捻而不会破碎，这一过程中大约会流失原有水分的45%。",
+      description: "从茶园运来的茶叶会先称重以记录当日采收量，然后薄薄地摊放在约一英尺深的长萎凋槽中，大型风扇会强制送风穿过茶叶，持续带走水分——这就是庄园所称的“现代”萎凋工艺。水分含量从采摘时的约75%降至叶片变得柔软有韧性、可进行揉捻而不会破碎时的约45%。萎凋后的茶叶在送去揉捻之前会再次称重。",
       keyPoints: "萎凋使叶片水分均匀分布，并使天然酶开始引发日后形成茶叶香气和色泽的化学变化。",
       duration: "此阶段通常需要10至12小时，具体取决于湿度和通风情况。",
     },
     rolling: {
       name: "揉捻",
       description: "萎凋后的茶叶通过揉捻机，扭转并破坏叶片的细胞壁，释放出锁在其中的汁液和精油，并将茶叶揉碎成细小的颗粒。茶叶的外形和茶汤的浓度就在此阶段形成。",
-      keyPoints: "破坏细胞壁使酶暴露于氧气中，从而引发氧化。揉捻的力度和时长决定了成品茶的浓度和外观。",
+      keyPoints: "破坏细胞壁使酶暴露于氧气中，从而引发氧化。揉捻的力度和时长决定了成品茶的浓度和外观。多次揉捻中的第一次是轻柔的“预处理”揉捻，目的是让扭转成形的茶叶颗粒先裹上茶叶自身的汁液，再进行更用力的揉捻。",
       duration: "揉捻通常持续45分钟到一小时，往往需要多次进行。",
     },
     fermentation: {
       name: "发酵（氧化）",
-      description: "揉捻后的茶叶被摊放在凉爽潮湿的房间中进行氧化，并用加湿器维持足够的空气湿度以使反应顺利进行。绿色的叶片逐渐变成古铜色，形成红茶特有的色泽、口感和香气——这完全来自天然氧化，不含任何染色剂或添加剂。",
+      description: "揉捻后的茶叶被摊放在保持25至30°C的凉爽潮湿房间中进行氧化，并用加湿器维持足够的空气湿度以使反应顺利进行。绿色的叶片逐渐变成古铜色，形成红茶特有的色泽、口感和香气——这完全来自天然氧化，不含任何染色剂或添加剂。",
       keyPoints: "这是决定风味最关键的一步。时间把控必须精准——氧化不足茶汤会寡淡，氧化过度则会使茶汤变得平淡无味。这也是本厂各类茶叶的区别所在：红茶依次经过萎凋、揉捻、发酵，再到烘焙；绿茶则完全跳过发酵（只经过萎凋、揉捻、干燥），口感更温和——主要因其更柔和、近乎药用的特质而被饮用；白茶则跳过萎凋和发酵这两道工序，直接从鲜叶进入蒸制和干燥。本厂不生产乌龙茶，导游将其描述为一种类似红茶的发酵茶，通过反复蒸制和手工揉搓而非机械揉捻制成。",
       duration: "在本厂，发酵通常需要1.5至2.5小时，具体取决于条件，之后茶叶便进入干燥工序。",
     },
     drying: {
       name: "干燥（烘焙）",
       description: "氧化后的茶叶通过热风干燥机——据称运行温度约为240°C——瞬间停止氧化并锁住茶叶的特质。出来的便是我们熟悉的乌黑、干脆的茶叶。参观者会立刻感受到高温——这是整个厂区中最热的区域之一。",
-      keyPoints: "烘焙在恰当的时刻停止化学变化，并将水分降至约2-3%，这对茶叶在储存和运输过程中保持新鲜至关重要。",
+      keyPoints: "烘焙在恰当的时刻停止化学变化，并将水分从约45-50%降至约2-3%，这对茶叶在储存和运输过程中保持新鲜至关重要。",
       duration: "茶叶在精确控温下通过烘干机大约需要20分钟。",
     },
     sorting: {
@@ -3052,8 +3052,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "茶厂",
-      description: "主厂房是采摘下来的茶叶经萎凋直至包装制成成品茶的地方。本站概览工厂车间及各阶段所用的设备——依次为萎凋、揉捻、发酵（氧化）、干燥、茶叶分选（分级）以及最终包装。",
-      keyPoints: "一座运转中的茶厂在同一屋檐下完成从萎凋到包装的全部流程，并需与每日采摘量紧密配合。按照工厂的卫生标准，参观车间的访客需佩戴发网、口罩，并穿着防护鞋。",
+      description: "主厂房是采摘下来的茶叶经称重直至包装制成成品茶的地方。本站概览工厂车间及各阶段所用的设备——依次为称重、萎凋、揉捻、发酵（氧化）、干燥、茶叶分选（分级）以及最终包装。",
+      keyPoints: "一座运转中的茶厂在同一屋檐下完成从称重到包装的全部流程，并需与每日采摘量紧密配合——运抵的茶叶会先称重以记录当日采收量，然后才开始加工。按照工厂的卫生标准，参观车间的访客需佩戴发网、口罩，并穿着防护鞋。",
       duration: "10-15分钟",
     },
     "handmade-factory": {
@@ -3158,26 +3158,26 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "萎凋",
-      description: "生葉は長い萎凋槽に薄く広げられ、大型の送風機で強制的に風を通すことで水分が徐々に取り除かれます——農園ではこれを「モダン」萎凋プロセスと呼んでいます。葉は次第にしなやかになり、崩れることなく揉捻できる状態になります。この工程で元の水分の約45%が失われます。",
+      description: "畑から届いた生葉はまずその日の収穫量を記録するために計量され、その後深さ約30センチの長い萎凋槽に薄く広げられ、大型の送風機で強制的に風を通すことで水分が徐々に取り除かれます——農園ではこれを「モダン」萎凋プロセスと呼んでいます。水分は摘み取り時の約75%から、葉が次第にしなやかになり崩れることなく揉捻できる状態になる頃には約45%まで減少します。萎凋を終えた葉は揉捻に送られる前に再び計量されます。",
       keyPoints: "萎凋は葉全体の水分を均一にし、天然の酵素が、後に紅茶の香りと色を生み出す化学変化を始めるきっかけとなります。",
       duration: "この工程には通常、湿度と通風にもよりますが10〜12時間かかります。",
     },
     rolling: {
       name: "揉捻",
       description: "萎凋した茶葉は揉捻機にかけられ、葉の細胞壁がねじられて破壊され、内部に閉じ込められていた液汁と油分が放出されるとともに、茶葉が細かい粒子に砕かれます。ここで茶葉の形と紅茶の濃さが形作られます。",
-      keyPoints: "細胞壁が破壊されることで酵素が酸素にさらされ、酸化が始まります。どれだけ強く、どれだけ長く揉むかが、最終的な紅茶の濃さと外観を決定します。",
+      keyPoints: "細胞壁が破壊されることで酵素が酸素にさらされ、酸化が始まります。どれだけ強く、どれだけ長く揉むかが、最終的な紅茶の濃さと外観を決定します。複数回行われる揉捻のうち最初の一回は「予備揉捻」と呼ばれる優しい揉み方で、しっかりとした揉捻に入る前に、ねじれた茶葉の粒子を葉自身の液汁で覆うことを目的としています。",
       duration: "揉捻は通常45分から1時間ほど行われ、複数回に分けて行われることが多いです。",
     },
     fermentation: {
       name: "発酵（酸化）",
-      description: "揉捻された茶葉は涼しく湿度の高い部屋に広げられ、酸化させられます。加湿器によって反応が進むのに十分な湿度が保たれます。緑色の葉は次第に銅色がかった茶色に変わり、紅茶特有の色、コク、香りを発達させます——これはすべて天然の酸化によるもので、着色料や添加物は一切使用されません。",
+      description: "揉捻された茶葉は25〜30°Cに保たれた涼しく湿度の高い部屋に広げられ、酸化させられます。加湿器によって反応が進むのに十分な湿度が保たれます。緑色の葉は次第に銅色がかった茶色に変わり、紅茶特有の色、コク、香りを発達させます——これはすべて天然の酸化によるもので、着色料や添加物は一切使用されません。",
       keyPoints: "これは風味にとって最も重要な工程です。タイミングは正確に見極める必要があります——短すぎると水っぽくなり、長すぎると平板で鈍い味になります。これはまた、ここで作られる茶の種類を分けるものでもあります——紅茶は萎凋、揉捻、発酵、そして火入れという順序をたどりますが、緑茶は発酵を完全に省き（萎凋、揉捻、乾燥のみ）、より穏やかな味わいとなり、主にその優しく薬用的な性質のために飲まれます。白茶は萎凋と発酵の両方を省き、生葉から直接蒸し、乾燥させます。この工場ではウーロン茶は作っていません——ガイドはこれを、機械による揉捻の代わりに蒸しと手もみを繰り返して作る、紅茶に似た発酵茶として説明しています。",
       duration: "この工場では、条件によって発酵は通常1.5〜2.5時間かかり、その後茶葉は乾燥工程へ進みます。",
     },
     drying: {
       name: "乾燥（火入れ）",
       description: "酸化した茶葉は熱風乾燥機を通り——伝えられるところでは約240°Cで稼働しているといいます——酸化を瞬時に止めて紅茶の特性を閉じ込めます。出てくるのは、おなじみの黒く、パリッとした茶葉です。見学者はすぐに熱気に気づきます——工場内でも屈指の暑さのエリアです。",
-      keyPoints: "火入れはまさに適切な瞬間に化学変化を止め、水分を約2〜3%まで減らします。これは保管・輸送中に紅茶の鮮度を保つために不可欠です。",
+      keyPoints: "火入れはまさに適切な瞬間に化学変化を止め、水分を約45〜50%から約2〜3%まで減らします。これは保管・輸送中に紅茶の鮮度を保つために不可欠です。",
       duration: "茶葉は厳密に管理された温度で、約20分かけて乾燥機を通過します。",
     },
     sorting: {
@@ -3368,8 +3368,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "紅茶工場",
-      description: "本館の工場は、摘み取られた茶葉が萎凋から梱包まで経て仕上げの紅茶になる場所です。このストップでは、稼働中の工場フロアと各工程で使われる設備を概観します——萎凋、揉捻、発酵（酸化）、乾燥、茶葉選別（格付け）、そして最終梱包の順です。",
-      keyPoints: "稼働中の紅茶工場は、萎凋から梱包までの全工程を一つの屋根の下で行い、毎日の茶葉の搬入量に合わせて緊密にタイミングを調整します。工場フロアを見学する訪問者は、施設の衛生基準に従い、ヘアネット、マスク、保護シューズの着用をお願いしています。",
+      description: "本館の工場は、摘み取られた茶葉が計量から梱包まで経て仕上げの紅茶になる場所です。このストップでは、稼働中の工場フロアと各工程で使われる設備を概観します——計量、萎凋、揉捻、発酵（酸化）、乾燥、茶葉選別（格付け）、そして最終梱包の順です。",
+      keyPoints: "稼働中の紅茶工場は、計量から梱包までの全工程を一つの屋根の下で行い、毎日の茶葉の搬入量に合わせて緊密にタイミングを調整します——搬入された茶葉はまず計量され、その日の収穫量が記録されてから加工が始まります。工場フロアを見学する訪問者は、施設の衛生基準に従い、ヘアネット、マスク、保護シューズの着用をお願いしています。",
       duration: "10〜15分",
     },
     "handmade-factory": {
