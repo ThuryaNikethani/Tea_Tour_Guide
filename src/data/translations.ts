@@ -445,8 +445,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     turmeric: {
       name: "කහ වගාව",
-      description: "බොහෝ ශ්‍රී ලාංකික වතුවල ඉඟුරු සහ තේ අසල කහ වගා කරනු ලැබේ. මෙම නැවතුම මුල් කඳ වගා කරන, නෙළන, සහ ආහාර පිසීමේ සහ සාම්ප්‍රදායික වෛද්‍ය විද්‍යාවේ භාවිතා කරන ආකාරය ගැන කියා දෙයි.",
-      keyPoints: "ඉඟුරු මෙන්ම, කහ ද කොළ නෙළනවා වෙනුවට මුල හාරා නෙළනු ලබන මූල භෝගයකි, කුළුබඩුවක් ලෙසත් සාම්ප්‍රදායික ආයුර්වේද වෛද්‍ය විද්‍යාවේ භාවිතය සඳහාත් අගය කරනු ලැබේ.",
+      heroTagline: "බිමේ රන්වන් මුල් කඳකින් කුළුබඩුවක්, වර්ණකයක්, සහ ඖෂධ භාණ්ඩයක් දක්වා.",
+      sectionHeadings: ["කහ ශාකය පිළිබඳ", "ලක්ෂණ", "භාවිත සහ ප්‍රතිලාභ"],
+      sectionBodies: [
+        "කහ ශාකය (Curcuma longa) — දකුණු ආසියාවට ආවේණික, ඉඟුරු පවුලට (Zingiberaceae) අයත් බහුවාර්ෂික පැළෑටියකි. එය ප්‍රධාන වශයෙන් වගා කරනු ලබන්නේ එහි මුල් කඳ සඳහා වන අතර, ඒවා තම්බා, වියලා, කහ පැහැති කුඩු බවට අඹරනු ලැබේ — එයයි කහ ලෙස හැඳින්වෙන්නේ. මෙම ශාකය උණුසුම්, තෙත් දේශගුණයන්හි, හොඳින් ජලය බැස යන සරු පසෙහි වර්ධනය වන අතර, සියවස් ගණනාවක් තිස්සේ කුළුබඩුවක්, ස්වාභාවික වර්ණකයක්, සහ සාම්ප්‍රදායික ඖෂධයක් ලෙස අගය කර ඇත.",
+        "ශාකය පිළිබඳ කෙටි විස්තරයක්:",
+        "කහ ශාකයේ වටිනාකම එහි මුල් කඳේ වර්ණයට වඩා බොහෝ දුරට විහිදේ:",
+      ],
+      itemHeadings: [
+        [],
+        ["උස", "කොළ", "මල්", "ඵලය", "වාසස්ථානය"],
+        ["ආහාර පිසීමේ භාවිතය", "ඖෂධීය ගුණාංග", "පාරිසරික වැදගත්කම"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "මීටරයක් තෙක් උසැති වේ.",
+          "විශාල, දීප්තිමත් කොළ පැහැති, දිගටි කොළ, මුල් කඳේ පාදයෙන් දිගු දඬු සහිතව හටගනී.",
+          "කොළ පැහැති කොවුලෙන් වට වූ ඝන, කේතුාකාර කරලවල පිහිටි ලා කහ සිට සුදු දක්වා මල්.",
+          "බීජ බොහොමයක් අඩංගු කුඩා, වියළි කැප්සියුලයකි; වගා කරන ලද ශාකවල කලාතුරකින් දක්නට ලැබේ.",
+          "මධ්‍යස්ථ වර්ෂාපතනයක් සහ අර්ධ සෙවනක් සහිත නිවර්තන සහ අර්ධ නිවර්තන ප්‍රදේශ.",
+        ],
+        [
+          "ව්‍යංජන, සුප්, බත් ආහාර, සහ සෝස් සඳහා කුළුබඩුවක් ලෙස පුළුල්ව භාවිතා වන කහ, ආහාරවලට උණුසුම්, පස් රසැති රසයක් සහ රන්වන් වර්ණයක් ලබා දෙන අතර, කහ කිරි සහ කහ තේ වැනි පාන වර්ග සඳහාද භාවිතා වේ.",
+          "කහෙහි ශක්තිමත් ප්‍රතිඔක්සිකාරක හා ප්‍රති-ගිනි අවුලුවන ගුණාංග සහිත ස්වාභාවික සංයෝගයක් වන කර්කියුමින් අඩංගු වන අතර, සන්ධි සෞඛ්‍යයට උපකාර වීමට, ආහාර දිරවීමට, ප්‍රතිශක්තිකරණය වැඩි දියුණු කිරීමට, සහ සම සෞඛ්‍යය ප්‍රවර්ධනය කිරීමට සාම්ප්‍රදායිකව භාවිතා කරයි.",
+          "කහ වගාව තිරසාර ගොවිතැනට සහාය වේ — එහි ඝන පත්‍ර ස්කන්ධය පස ඛාදනය අඩු කිරීමට උපකාරී වන අතර, පස් සෞඛ්‍යය සහ ජෛව විවිධත්වය වැඩි දියුණු කිරීම සඳහා එය බොහෝ විට අනෙකුත් ශාක සමඟ අන්තර් වගා කරනු ලැබේ.",
+        ],
+      ],
       duration: "මිනිත්තු 5-10",
     },
     bee: {
@@ -760,9 +785,34 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       ],
     },
     turmeric: {
-      name: "மஞ்சள் தோட்டம்",
-      description: "பல இலங்கை தோட்டங்களில் இஞ்சி மற்றும் தேயிலை அருகில் மஞ்சள் வளர்க்கப்படுகிறது. இந்த நிறுத்தம் வேர்த்தண்டு எவ்வாறு வளர்க்கப்பட்டு, அறுவடை செய்யப்பட்டு, சமையலிலும் பாரம்பரிய மருத்துவத்திலும் பயன்படுத்தப்படுகிறது என்பதை விளக்குகிறது.",
-      keyPoints: "இஞ்சியைப் போலவே, மஞ்சளும் இலைகளைப் பறிப்பதற்குப் பதிலாக வேரைத் தோண்டி அறுவடை செய்யப்படும் ஒரு வேர்த்தண்டு பயிராகும், மசாலாவாகவும் பாரம்பரிய ஆயுர்வேத மருத்துவத்திலும் மதிக்கப்படுகிறது.",
+      name: "மஞ்சள் சாகுபடி",
+      heroTagline: "மண்ணில் உள்ள தங்க வண்ண கிழங்கிலிருந்து மசாலா, சாயம், மற்றும் மருந்துப் பொருள் வரை.",
+      sectionHeadings: ["மஞ்சள் தாவரத்தைப் பற்றி", "பண்புகள்", "பயன்கள் மற்றும் நன்மைகள்"],
+      sectionBodies: [
+        "மஞ்சள் தாவரம் (Curcuma longa) — தென்னாசியாவை பூர்வீகமாகக் கொண்ட, இஞ்சி குடும்பமான Zingiberaceae-க்கு சொந்தமான ஒரு பல்லாண்டு மூலிகையாகும். இது முதன்மையாக அதன் கிழங்குகளுக்காக பயிரிடப்படுகிறது, அவை வேகவைக்கப்பட்டு, உலர்த்தப்பட்டு, பிரகாசமான மஞ்சள் நிற தூளாக அரைக்கப்படுகின்றன — இதுவே மஞ்சள் எனப்படுகிறது. இந்த தாவரம் வெப்பமான, ஈரப்பதமான காலநிலைகளில், நன்கு வடிகட்டும் வளமான மண்ணில் செழித்து வளர்கிறது, மேலும் நூற்றாண்டுகளாக ஒரு மசாலாப் பொருளாகவும், இயற்கை சாயமாகவும், பாரம்பரிய மருந்தாகவும் மதிக்கப்பட்டு வருகிறது.",
+        "தாவரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+        "மஞ்சள் தாவரத்தின் மதிப்பு அதன் கிழங்கின் நிறத்தைத் தாண்டி விரிவடைகிறது:",
+      ],
+      itemHeadings: [
+        [],
+        ["உயரம்", "இலைகள்", "பூக்கள்", "பழம்", "வாழ்விடம்"],
+        ["சமையல் பயன்பாடு", "மருத்துவ பண்புகள்", "சுற்றுச்சூழல் முக்கியத்துவம்"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "1 மீட்டர் வரை உயரம்.",
+          "பெரிய, பிரகாசமான பச்சை, நீள்வட்ட இலைகள், கிழங்கின் அடிப்பகுதியிலிருந்து நீண்ட தண்டுகளுடன் தோன்றும்.",
+          "பச்சை காம்புகளால் சூழப்பட்ட அடர்த்தியான, கூம்பு வடிவ கொத்துகளில் அமைந்த வெளிர் மஞ்சள் முதல் வெள்ளை நிற பூக்கள்.",
+          "ஏராளமான விதைகளைக் கொண்ட ஒரு சிறிய, உலர் காய்; பயிரிடப்பட்ட தாவரங்களில் அரிதாகவே காணப்படும்.",
+          "மிதமான மழைப்பொழிவு மற்றும் பகுதி நிழலுடன் கூடிய வெப்பமண்டல மற்றும் துணை வெப்பமண்டல பகுதிகள்.",
+        ],
+        [
+          "கறிகள், சூப்கள், அரிசி உணவுகள், மற்றும் சாஸ்களில் மசாலாப் பொருளாக பரவலாகப் பயன்படுத்தப்படும் மஞ்சள், உணவுகளுக்கு சூடான, மண் வாசனையுள்ள சுவையையும் தங்க நிறத்தையும் அளிக்கிறது, மேலும் மஞ்சள் பால் மற்றும் மஞ்சள் தேநீர் போன்ற பானங்களிலும் பயன்படுத்தப்படுகிறது.",
+          "வலிமையான ஆக்ஸிஜனேற்ற எதிர்ப்பு மற்றும் அழற்சி எதிர்ப்பு பண்புகளைக் கொண்ட இயற்கை சேர்மமான கர்குமினை மஞ்சளில் உள்ளது, இது மூட்டு ஆரோக்கியத்தை ஆதரிக்கவும், செரிமானத்திற்கு உதவவும், நோய் எதிர்ப்பு சக்தியை மேம்படுத்தவும், சருமத்தை ஆரோக்கியமாக வைத்திருக்கவும் பாரம்பரியமாகப் பயன்படுத்தப்படுகிறது.",
+          "மஞ்சள் சாகுபடி நிலையான விவசாயத்திற்கு ஆதரவளிக்கிறது — அதன் அடர்த்தியான இலைகள் மண் அரிப்பைக் குறைக்க உதவுகின்றன, மேலும் மண் ஆரோக்கியத்தையும் பல்லுயிர் பெருக்கத்தையும் மேம்படுத்த இது பெரும்பாலும் பிற தாவரங்களுடன் இடைப்பயிராக பயிரிடப்படுகிறது.",
+        ],
+      ],
       duration: "5-10 நிமிடங்கள்",
     },
     bee: {
@@ -1077,8 +1127,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     turmeric: {
       name: "Piantagione di Curcuma",
-      description: "La curcuma viene coltivata accanto allo zenzero e al tè in molte tenute dello Sri Lanka. Questa tappa spiega come il rizoma viene coltivato, raccolto e utilizzato in cucina e nella medicina tradizionale.",
-      keyPoints: "Come lo zenzero, la curcuma è una coltura di rizoma raccolta dissotterrando la radice anziché cogliendo foglie, apprezzata sia come spezia sia per il suo uso nella medicina ayurvedica tradizionale.",
+      heroTagline: "Da un rizoma dorato nel terreno a spezia, colorante naturale e rimedio della tradizione.",
+      sectionHeadings: ["La Pianta di Curcuma", "Caratteristiche", "Usi e Benefici"],
+      sectionBodies: [
+        "Curcuma longa — la pianta di curcuma — è un'erba perenne della famiglia dello zenzero, le Zingiberaceae, originaria dell'Asia meridionale. Viene coltivata principalmente per i suoi rizomi, che vengono bolliti, essiccati e macinati fino a ottenere la polvere gialla brillante nota come curcuma. La pianta prospera in climi caldi e umidi con terreno fertile e ben drenato, ed è apprezzata da secoli come spezia, colorante naturale e medicina tradizionale.",
+        "Uno sguardo rapido alla pianta stessa:",
+        "Il valore della pianta di curcuma va ben oltre il colore del suo rizoma:",
+      ],
+      itemHeadings: [
+        [],
+        ["Altezza", "Foglie", "Fiori", "Frutto", "Habitat"],
+        ["Usi Culinari", "Proprietà Medicinali", "Importanza Ecologica"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Alta fino a 1 metro.",
+          "Foglie grandi, verde brillante, oblunghe, con lunghi piccioli che spuntano dalla base del rizoma.",
+          "Fiori dal giallo pallido al bianco, disposti in dense spighe coniche circondate da brattee verdi.",
+          "Una piccola capsula secca contenente numerosi semi; raramente visibile sulle piante coltivate.",
+          "Regioni tropicali e subtropicali con piogge moderate e ombra parziale.",
+        ],
+        [
+          "Ampiamente usata come spezia in curry, zuppe, piatti di riso e salse, la curcuma dona un sapore caldo e terroso e un colore dorato ai cibi, ed è usata anche in bevande come il latte alla curcuma e il tè alla curcuma.",
+          "La curcuma contiene curcumina, un composto naturale con forti proprietà antiossidanti e antinfiammatorie, tradizionalmente usato per sostenere la salute delle articolazioni, favorire la digestione, rafforzare le difese immunitarie e promuovere il benessere della pelle.",
+          "La coltivazione della curcuma sostiene l'agricoltura sostenibile — il suo fogliame fitto aiuta a ridurre l'erosione del suolo, e la pianta viene spesso coltivata in consociazione con altre per migliorare la salute del suolo e la biodiversità.",
+        ],
+      ],
       duration: "5-10 minuti",
     },
     bee: {
@@ -1393,8 +1468,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     turmeric: {
       name: "مزرعة الكركم",
-      description: "يُزرع الكركم إلى جانب الزنجبيل والشاي في العديد من مزارع سريلانكا. تتناول هذه المحطة كيفية زراعة الجذمور وحصاده واستخدامه في الطهي والطب التقليدي.",
-      keyPoints: "مثل الزنجبيل، الكركم محصول جذري يُحصد بحفر الجذر بدلاً من قطف الأوراق، ويُقدَّر كتوابل وفي الطب الأيورفيدي التقليدي.",
+      heroTagline: "من جذمور ذهبي في التربة إلى توابل وصبغة ودواء تقليدي.",
+      sectionHeadings: ["عن نبات الكركم", "الخصائص", "الاستخدامات والفوائد"],
+      sectionBodies: [
+        "نبات الكركم (Curcuma longa) عشبة معمرة من الفصيلة الزنجبيلية، موطنها الأصلي جنوب آسيا. يُزرع بشكل رئيسي من أجل جذاميره التي تُغلى وتُجفَّف وتُطحن لتتحول إلى المسحوق الأصفر اللامع المعروف بالكركم. تزدهر هذه النبتة في المناخات الدافئة الرطبة وفي التربة الخصبة جيدة التصريف، وتُقدَّر منذ قرون كتوابل وصبغة طبيعية ودواء تقليدي.",
+        "نظرة سريعة على النبات نفسه:",
+        "تتجاوز قيمة نبات الكركم لون جذموره إلى حد بعيد:",
+      ],
+      itemHeadings: [
+        [],
+        ["الارتفاع", "الأوراق", "الأزهار", "الثمرة", "الموطن"],
+        ["الاستخدامات الغذائية", "الخصائص الطبية", "الأهمية البيئية"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "يصل ارتفاعه إلى متر واحد.",
+          "أوراق كبيرة، خضراء زاهية، مستطيلة، ذات أعناق طويلة تنمو من قاعدة الجذمور.",
+          "أزهار من الأصفر الباهت إلى الأبيض، تنمو في سنابل كثيفة مخروطية الشكل محاطة بقنابع خضراء.",
+          "ثمرة صغيرة جافة تحتوي على بذور عديدة؛ نادرًا ما تُشاهد في النباتات المزروعة.",
+          "المناطق الاستوائية وشبه الاستوائية ذات الأمطار المعتدلة والظل الجزئي.",
+        ],
+        [
+          "يُستخدم الكركم على نطاق واسع كتوابل في الكاري والحساء وأطباق الأرز والصلصات، إذ يضفي نكهة دافئة ترابية ولونًا ذهبيًا على الطعام، ويُستخدم أيضًا في مشروبات مثل حليب الكركم وشاي الكركم.",
+          "يحتوي الكركم على الكركمين، وهو مركب طبيعي ذو خصائص قوية مضادة للأكسدة ومضادة للالتهابات، يُستخدم تقليديًا لدعم صحة المفاصل، ومساعدة الهضم، وتعزيز المناعة، ودعم صحة البشرة.",
+          "تدعم زراعة الكركم الزراعة المستدامة — إذ تساعد أوراقه الكثيفة على تقليل تآكل التربة، وغالبًا ما تُزرع النبتة مع نباتات أخرى لتحسين صحة التربة والتنوع البيولوجي.",
+        ],
+      ],
       duration: "5-10 دقائق",
     },
     bee: {
@@ -1709,8 +1809,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     turmeric: {
       name: "Плантация куркумы",
-      description: "Куркума выращивается рядом с имбирём и чаем на многих плантациях Шри-Ланки. Эта остановка рассказывает о том, как выращивают, собирают и используют это корневище в кулинарии и традиционной медицине.",
-      keyPoints: "Как и имбирь, куркума — это корневищная культура, которую собирают, выкапывая корень, а не срывая листья; она ценится как пряность и в традиционной аюрведической медицине.",
+      heroTagline: "От золотистого корневища в земле до специи, красителя и средства народной медицины.",
+      sectionHeadings: ["О растении куркумы", "Характеристики", "Применение и польза"],
+      sectionBodies: [
+        "Куркума длинная (Curcuma longa) — многолетнее травянистое растение семейства имбирных (Zingiberaceae), родом из Южной Азии. Её выращивают в первую очередь ради корневищ, которые варят, сушат и перемалывают в ярко-жёлтый порошок, известный как куркума. Растение хорошо растёт в тёплом влажном климате на плодородных, хорошо дренированных почвах и веками ценится как пряность, натуральный краситель и средство традиционной медицины.",
+        "Краткий обзор самого растения:",
+        "Ценность куркумы выходит далеко за рамки цвета её корневища:",
+      ],
+      itemHeadings: [
+        [],
+        ["Высота", "Листья", "Цветки", "Плод", "Среда обитания"],
+        ["Кулинарное применение", "Лекарственные свойства", "Экологическое значение"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "До 1 метра высотой.",
+          "Крупные, ярко-зелёные, продолговатые листья с длинными черешками, отрастающие от основания корневища.",
+          "Бледно-жёлтые или белые цветки, собранные в плотные конические колосья, окружённые зелёными прицветниками.",
+          "Мелкая сухая коробочка с многочисленными семенами; на культивируемых растениях встречается редко.",
+          "Тропические и субтропические регионы с умеренными осадками и частичной тенью.",
+        ],
+        [
+          "Широко используемая как пряность в карри, супах, рисовых блюдах и соусах, куркума придаёт пище тёплый, землистый вкус и золотистый цвет, а также используется в напитках, таких как куркумовое молоко и куркумовый чай.",
+          "Куркума содержит куркумин — природное соединение с сильными антиоксидантными и противовоспалительными свойствами, традиционно используемое для поддержки здоровья суставов, улучшения пищеварения, укрепления иммунитета и здоровья кожи.",
+          "Выращивание куркумы способствует устойчивому земледелию — её густая листва помогает уменьшить эрозию почвы, а само растение часто выращивают в смешанных посадках с другими культурами для улучшения здоровья почвы и биоразнообразия.",
+        ],
+      ],
       duration: "5–10 минут",
     },
     bee: {
@@ -2024,9 +2149,34 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       ],
     },
     turmeric: {
-      name: "Kurkumaplantage",
-      description: "Kurkuma wird auf vielen Plantagen Sri Lankas neben Ingwer und Tee angebaut. Diese Station zeigt, wie das Rhizom angebaut, geerntet und in Küche und traditioneller Medizin verwendet wird.",
-      keyPoints: "Wie Ingwer ist Kurkuma eine Rhizom-Kultur, die durch Ausgraben der Wurzel statt durch Blattpflücken geerntet wird, geschätzt sowohl als Gewürz als auch in der traditionellen ayurvedischen Medizin.",
+      name: "Kurkuma-Plantage",
+      heroTagline: "Von einem goldenen Rhizom im Boden zu Gewürz, Farbstoff und traditionellem Heilmittel.",
+      sectionHeadings: ["Über die Kurkumapflanze", "Merkmale", "Verwendung und Nutzen"],
+      sectionBodies: [
+        "Curcuma longa — die Kurkumapflanze — ist eine mehrjährige Staude aus der Ingwerfamilie (Zingiberaceae) mit Ursprung in Südasien. Sie wird hauptsächlich wegen ihrer Rhizome angebaut, die gekocht, getrocknet und zu dem leuchtend gelben Pulver namens Kurkuma gemahlen werden. Die Pflanze gedeiht in warmem, feuchtem Klima auf gut durchlässigem, fruchtbarem Boden und wird seit Jahrhunderten als Gewürz, natürlicher Farbstoff und traditionelles Heilmittel geschätzt.",
+        "Ein kurzer Blick auf die Pflanze selbst:",
+        "Der Wert der Kurkumapflanze geht weit über die Farbe ihres Rhizoms hinaus:",
+      ],
+      itemHeadings: [
+        [],
+        ["Höhe", "Blätter", "Blüten", "Frucht", "Lebensraum"],
+        ["Kulinarische Nutzung", "Medizinische Eigenschaften", "Ökologische Bedeutung"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Bis zu 1 Meter hoch.",
+          "Große, leuchtend grüne, längliche Blätter mit langen Stielen, die aus der Basis des Rhizoms wachsen.",
+          "Blassgelbe bis weiße Blüten in dichten, kegelförmigen Ähren, umgeben von grünen Hochblättern.",
+          "Eine kleine, trockene Kapsel mit zahlreichen Samen; bei Kulturpflanzen selten zu sehen.",
+          "Tropische und subtropische Regionen mit mäßigem Niederschlag und Halbschatten.",
+        ],
+        [
+          "Kurkuma wird häufig als Gewürz in Currys, Suppen, Reisgerichten und Saucen verwendet, verleiht Speisen einen warmen, erdigen Geschmack und eine goldene Farbe und wird auch in Getränken wie Kurkuma-Milch und Kurkuma-Tee eingesetzt.",
+          "Kurkuma enthält Curcumin, eine natürliche Verbindung mit starken antioxidativen und entzündungshemmenden Eigenschaften, die traditionell zur Unterstützung der Gelenkgesundheit, der Verdauung, der Immunabwehr und des Hautwohlbefindens eingesetzt wird.",
+          "Der Kurkumaanbau unterstützt nachhaltige Landwirtschaft — sein dichtes Laub hilft, Bodenerosion zu verringern, und die Pflanze wird oft zusammen mit anderen Kulturen angebaut, um Bodengesundheit und Biodiversität zu verbessern.",
+        ],
+      ],
       duration: "5-10 Minuten",
     },
     bee: {
@@ -2341,8 +2491,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     turmeric: {
       name: "Plantación de Cúrcuma",
-      description: "La cúrcuma se cultiva junto al jengibre y al té en muchas fincas de Sri Lanka. Esta parada explica cómo se cultiva, cosecha y utiliza el rizoma en la cocina y la medicina tradicional.",
-      keyPoints: "Como el jengibre, la cúrcuma es un cultivo de rizoma cosechado desenterrando la raíz en lugar de recogiendo hojas, apreciado tanto como especia como en la medicina ayurvédica tradicional.",
+      heroTagline: "De un rizoma dorado en la tierra a una especia, un tinte y un remedio tradicional.",
+      sectionHeadings: ["Sobre la Planta de Cúrcuma", "Características", "Usos y Beneficios"],
+      sectionBodies: [
+        "La cúrcuma (Curcuma longa) es una hierba perenne de la familia del jengibre, las Zingiberaceae, originaria del sur de Asia. Se cultiva principalmente por sus rizomas, que se hierven, se secan y se muelen hasta obtener el polvo amarillo brillante conocido como cúrcuma. La planta prospera en climas cálidos y húmedos con suelo fértil y bien drenado, y se ha valorado durante siglos como especia, tinte natural y remedio tradicional.",
+        "Un vistazo rápido a la planta:",
+        "El valor de la planta de cúrcuma va mucho más allá del color de su rizoma:",
+      ],
+      itemHeadings: [
+        [],
+        ["Altura", "Hojas", "Flores", "Fruto", "Hábitat"],
+        ["Usos Culinarios", "Propiedades Medicinales", "Importancia Ecológica"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Hasta 1 metro de altura.",
+          "Hojas grandes, de un verde brillante, oblongas, con tallos largos que emergen de la base del rizoma.",
+          "Flores de amarillo pálido a blanco, dispuestas en espigas cónicas densas rodeadas de brácteas verdes.",
+          "Una pequeña cápsula seca con numerosas semillas; rara vez se ve en las plantas cultivadas.",
+          "Regiones tropicales y subtropicales con lluvias moderadas y sombra parcial.",
+        ],
+        [
+          "Ampliamente usada como especia en curris, sopas, platos de arroz y salsas, la cúrcuma aporta un sabor cálido y terroso y un color dorado a los alimentos, y también se usa en bebidas como la leche de cúrcuma y el té de cúrcuma.",
+          "La cúrcuma contiene curcumina, un compuesto natural con fuertes propiedades antioxidantes y antiinflamatorias, usado tradicionalmente para favorecer la salud articular, ayudar a la digestión, reforzar la inmunidad y promover el bienestar de la piel.",
+          "El cultivo de la cúrcuma favorece la agricultura sostenible —su follaje denso ayuda a reducir la erosión del suelo, y la planta suele cultivarse junto a otras para mejorar la salud del suelo y la biodiversidad.",
+        ],
+      ],
       duration: "5-10 minutos",
     },
     bee: {
@@ -2657,8 +2832,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     turmeric: {
       name: "Plantation de Curcuma",
-      description: "Le curcuma est cultivé aux côtés du gingembre et du thé dans de nombreuses plantations sri-lankaises. Cette étape explique comment le rhizome est cultivé, récolté et utilisé en cuisine et en médecine traditionnelle.",
-      keyPoints: "Comme le gingembre, le curcuma est une culture de rhizome récoltée en déterrant la racine plutôt qu'en cueillant des feuilles, apprécié à la fois comme épice et dans la médecine ayurvédique traditionnelle.",
+      heroTagline: "D'un rhizome doré dans le sol à une épice, un colorant et un remède traditionnel.",
+      sectionHeadings: ["À propos du Curcuma", "Caractéristiques", "Usages et Bienfaits"],
+      sectionBodies: [
+        "Curcuma longa — le curcuma — est une plante herbacée vivace de la famille du gingembre, les Zingiberaceae, originaire d'Asie du Sud. Il est principalement cultivé pour ses rhizomes, qui sont bouillis, séchés puis moulus en une poudre jaune vif connue sous le nom de curcuma. La plante prospère sous des climats chauds et humides, dans un sol fertile et bien drainé, et est appréciée depuis des siècles comme épice, colorant naturel et remède traditionnel.",
+        "Un aperçu rapide de la plante elle-même :",
+        "La valeur du curcuma va bien au-delà de la couleur de son rhizome :",
+      ],
+      itemHeadings: [
+        [],
+        ["Hauteur", "Feuilles", "Fleurs", "Fruit", "Habitat"],
+        ["Usages Culinaires", "Propriétés Médicinales", "Importance Écologique"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "Jusqu'à 1 mètre de haut.",
+          "Grandes feuilles oblongues, vert vif, aux longs pétioles émergeant de la base du rhizome.",
+          "Fleurs jaune pâle à blanches, disposées en épis denses et coniques entourés de bractées vertes.",
+          "Une petite capsule sèche contenant de nombreuses graines ; rarement observée sur les plants cultivés.",
+          "Régions tropicales et subtropicales à pluviométrie modérée et ombre partielle.",
+        ],
+        [
+          "Largement utilisé comme épice dans les currys, soupes, plats de riz et sauces, le curcuma apporte une saveur chaude et terreuse ainsi qu'une couleur dorée aux aliments, et sert aussi dans des boissons comme le lait au curcuma et le thé au curcuma.",
+          "Le curcuma contient de la curcumine, un composé naturel aux propriétés antioxydantes et anti-inflammatoires marquées, traditionnellement utilisé pour soutenir la santé des articulations, favoriser la digestion, renforcer l'immunité et améliorer le bien-être de la peau.",
+          "La culture du curcuma soutient une agriculture durable — son feuillage dense aide à réduire l'érosion des sols, et la plante est souvent cultivée en association avec d'autres pour améliorer la santé du sol et la biodiversité.",
+        ],
+      ],
       duration: "5-10 minutes",
     },
     bee: {
@@ -2973,8 +3173,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     turmeric: {
       name: "姜黄种植园",
-      description: "许多斯里兰卡庄园会在生姜和茶树旁间种姜黄。本站介绍这种根茎作物的种植、采收方式，以及在烹饪和传统医学中的用途。",
-      keyPoints: "与生姜一样，姜黄也是一种根茎作物，通过挖掘根部而非采摘叶片来收获，既是香料，也在传统阿育吠陀医学中受到重视。",
+      heroTagline: "从地下的金黄根茎，到调味料、染料与传统药材。",
+      sectionHeadings: ["关于姜黄", "特征", "用途与益处"],
+      sectionBodies: [
+        "姜黄（Curcuma longa）是姜科多年生草本植物，原产于南亚。主要因其根茎而被种植，根茎经煮沸、晒干、磨成粉后即为人们熟知的鲜黄色姜黄粉。这种植物在温暖潮湿、排水良好且土壤肥沃的环境中长势良好，数百年来一直被视为香料、天然染料与传统药材而备受重视。",
+        "植株本身的简要介绍：",
+        "姜黄的价值远不止其根茎的色泽：",
+      ],
+      itemHeadings: [
+        [],
+        ["株高", "叶片", "花朵", "果实", "栖息地"],
+        ["食用价值", "药用特性", "生态重要性"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "株高可达1米。",
+          "大型鲜绿色长圆形叶片，从根茎基部长出，带有长长的叶柄。",
+          "淡黄色至白色的花朵，密集排列成锥形花穗，外围有绿色苞片包裹。",
+          "内含大量种子的小型干燥蒴果；在栽培植株上较为少见。",
+          "降雨适中、有部分遮荫的热带及亚热带地区。",
+        ],
+        [
+          "姜黄被广泛用作咖喱、汤品、米饭料理及酱汁中的香料，为食物增添温暖的泥土芳香与金黄色泽，也用于姜黄奶、姜黄茶等饮品中。",
+          "姜黄含有姜黄素，这是一种具有强抗氧化和抗炎特性的天然化合物，传统上用于支持关节健康、帮助消化、增强免疫力，并promote皮肤健康。",
+          "姜黄种植有助于可持续农业——其茂密的叶片有助于减少水土流失，且常与其他作物间作，以改善土壤健康和生物多样性。",
+        ],
+      ],
       duration: "5-10分钟",
     },
     bee: {
@@ -3289,8 +3514,33 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     turmeric: {
       name: "ターメリック農園",
-      description: "スリランカの多くの農園では、ショウガや茶と並んでウコンが栽培されています。このストップでは、この根茎がどのように栽培・収穫され、料理や伝統医学に利用されるかを紹介します。",
-      keyPoints: "ショウガと同様、ウコンも葉ではなく根を掘り出して収穫する根茎作物で、香辛料として、また伝統的なアーユルヴェーダ医学において重宝されています。",
+      heroTagline: "地中の黄金色の根茎から、香辛料、染料、そして伝統薬まで。",
+      sectionHeadings: ["ターメリックについて", "特徴", "用途と効能"],
+      sectionBodies: [
+        "ウコン（Curcuma longa）は、ショウガ科（Zingiberaceae）に属する多年草で、南アジア原産です。主に根茎のために栽培され、その根茎は煮て乾燥させたのち挽かれ、ターメリックとして知られる鮮やかな黄色の粉になります。この植物は温暖で湿度の高い気候の、水はけのよい肥沃な土壌でよく育ち、何世紀にもわたって香辛料、天然染料、伝統薬として重宝されてきました。",
+        "植物そのものを簡単に見てみましょう：",
+        "ターメリックの価値は、根茎の色だけにとどまりません：",
+      ],
+      itemHeadings: [
+        [],
+        ["高さ", "葉", "花", "果実", "生息地"],
+        ["食用としての利用", "薬用効果", "生態学的重要性"],
+      ],
+      itemBodies: [
+        [],
+        [
+          "高さ1メートルほどになる。",
+          "大きく鮮やかな緑色の長楕円形の葉で、根茎の基部から長い葉柄とともに伸びる。",
+          "淡黄色から白色の花が、緑色の苞に囲まれた密な円錐形の穂状に咲く。",
+          "多数の種子を含む小さな乾燥した蒴果だが、栽培された株ではめったに見られない。",
+          "適度な降雨と半日陰のある熱帯・亜熱帯地域。",
+        ],
+        [
+          "カレー、スープ、米料理、ソースなどに香辛料として広く使われるターメリックは、料理に温かみのある土っぽい風味と黄金色を加え、ターメリックミルクやターメリックティーなどの飲み物にも使われる。",
+          "ターメリックには強い抗酸化作用と抗炎症作用を持つ天然化合物クルクミンが含まれており、伝統的に関節の健康を支え、消化を助け、免疫力を高め、肌の健康を促進するために用いられてきた。",
+          "ターメリックの栽培は持続可能な農業を支えている——その密生した葉は土壌浸食を減らすのに役立ち、土壌の健康と生物多様性を高めるために他の作物と混植されることも多い。",
+        ],
+      ],
       duration: "5〜10分",
     },
     bee: {
