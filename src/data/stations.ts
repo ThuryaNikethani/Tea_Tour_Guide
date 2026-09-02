@@ -577,6 +577,36 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * the station's text changed. If a written transcript of its dialogue is
  * supplied later, fold any new facts in the same way as the other on-site
  * video transcripts documented above.
+ * An eighth transcript (2026-09-02, a broader introductory walkthrough
+ * covering the estate's welcome, the tea garden, factory entry, and a
+ * quick pass through several process stages) added a handful of new,
+ * non-duplicating facts and was checked carefully against everything
+ * already documented above to avoid restating the same ground twice.
+ * "introduction" gained two real details this transcript was the first to
+ * state explicitly: that the estate sits specifically within the Ruhuna
+ * growing region (previously only described more broadly as "low-country"),
+ * and the traditional Sinhala greeting "Ayubowan" ("may you live long")
+ * used to welcome visitors, sometimes in person by the estate's own
+ * chairman. One transcription artifact was corrected here, consistent with
+ * the earlier "Oakray" → "Athukorala" fix: the chairman introduces himself
+ * as "Anura, Chairman of Anura Athukorala Group Limited," which reads as
+ * ASR duplicating his given name — recorded here as "Anura Athukorala,"
+ * matching the company name used consistently everywhere else in this app.
+ * "tea-factory" gained one new visitor-facing detail: guests touring the
+ * factory floor are asked to wear a hairnet, mask, and protective
+ * footwear. "withering" gained a real, specific moisture-loss figure
+ * (around 45%) that wasn't previously stated, and its duration was
+ * corrected from a generic 12–17 hour placeholder (never actually sourced
+ * from a transcript, despite the station otherwise being verified) to this
+ * transcript's real, guide-stated 10–12 hours. Everything else in the
+ * transcript — the seven growing regions, the young-leaf/mother-leaf
+ * plucking distinction, rolling's cell-wall/enzyme description, the
+ * fermentation timing and black/green/white comparison, the drying room's
+ * heat, and the "everything weighed" packing detail — restates facts
+ * already documented in detail above from earlier transcripts, so nothing
+ * further was added for those to avoid duplicating existing content; the
+ * brief, undemonstrated tasting-lesson clip at the end wasn't specific
+ * enough to add anything to "tea-center" either.
  */
 export const STATIONS: Station[] = [
   {
@@ -591,7 +621,7 @@ export const STATIONS: Station[] = [
     description:
       "Since the early 1800s, the name \"Ceylon\" has been synonymous with tea. The history of Ceylon tea runs back to the British rule in Sri Lanka over two hundred years ago. The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. A few years later, more tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
     keyPoints:
-      "The story of Ceylon tea started on a 19-acre plot of land in Kandy as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa. High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker — this estate is a low-country, or 'Pahatharata,' producer.",
+      "The story of Ceylon tea started on a 19-acre plot of land in Kandy as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa. High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker — this estate is a low-country, or 'Pahatharata,' producer, sitting within the Ruhuna growing region specifically. Visitors are traditionally welcomed with 'Ayubowan' — a Sinhala greeting meaning 'may you live long' — sometimes in person by the estate's own chairman, Anura Athukorala.",
     duration: "5-10 minutes",
   },
   {
@@ -721,10 +751,10 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "Fresh leaves are spread thinly across long troughs, where large fans force air through them to steadily remove moisture — what the estate calls the 'modern' withering process. The leaf turns limp and pliable, ready for rolling without shattering.",
+      "Fresh leaves are spread thinly across long troughs, where large fans force air through them to steadily remove moisture — what the estate calls the 'modern' withering process. The leaf turns limp and pliable, ready for rolling without shattering, having lost around 45% of its original moisture along the way.",
     keyPoints:
       "Withering evens out moisture across the leaf and lets natural enzymes begin the chemical changes that will later create the tea's aroma and colour.",
-    duration: "This stage typically takes 12 to 17 hours, depending on humidity and airflow.",
+    duration: "This stage typically takes 10 to 12 hours, depending on humidity and airflow.",
   },
   {
     id: "rolling",
@@ -1083,7 +1113,7 @@ export const STATIONS: Station[] = [
     description:
       "The main factory building is where plucked leaf is turned into finished tea, from withering through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order.",
     keyPoints:
-      "A working tea factory runs the full withering-to-packing sequence under one roof, timed closely with each day's leaf intake.",
+      "A working tea factory runs the full withering-to-packing sequence under one roof, timed closely with each day's leaf intake. Visitors touring the factory floor are asked to wear a hairnet, a mask, and protective footwear, in line with the facility's hygiene standards.",
     duration: "10-15 minutes",
   },
   {
