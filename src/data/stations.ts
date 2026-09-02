@@ -315,13 +315,18 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * back to roughly knee height, added as a closing clause on `description`.
  * The "polytunnel" station was likewise added new on 2026-09-01 (no
  * existing station covered it), sourced two ways: an on-site video dialogue
- * confirms the estate has a greenhouse already and is setting up a
- * polytunnel that isn't in use yet, planned for bell peppers, tomatoes, and
- * similar vegetables; the guest-experience angle — that villa/cabana guests
- * will be able to freshly pick vegetables grown here — was stated directly
- * by the user, not the dialogue, and is written in future tense since the
- * polytunnel isn't operational yet. `order: 27`, appended at the end for
- * the same reason as "pruning" above.
+ * confirms the estate has a greenhouse already and is building a
+ * polytunnel, planned for bell peppers, tomatoes, and similar vegetables;
+ * the guest-experience angle — that villa/cabana guests will be able to
+ * freshly pick vegetables grown here — was stated directly by the user,
+ * not the dialogue. Written in forward-looking "once complete" language
+ * rather than present tense, since the polytunnel isn't operational yet,
+ * but deliberately avoids an apologetic "nothing to see yet, check back
+ * later" framing — this is a public-facing tour site, not an internal
+ * status page, so the copy stays positive and promotional while still not
+ * claiming it's already in use (revised 2026-09-02 after the user flagged
+ * the original wording as unsuitable for a live site). `order: 27`,
+ * appended at the end for the same reason as "pruning" above.
  * On 2026-09-01 the user supplied a transcript of a full guided walkthrough
  * of the main factory floor, which upgraded six stations at once —
  * "tea-factory" (the overview), "withering", "rolling", "fermentation",
@@ -1200,9 +1205,9 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "Alongside an existing greenhouse, the estate is setting up a polytunnel that isn't in use yet — it's still being built out — for growing vegetables such as bell peppers and tomatoes. Once it's up and running, guests staying at the villa or cabana will be able to freshly pick vegetables grown here themselves.",
+      "Alongside an existing greenhouse, the estate is building a polytunnel for growing vegetables such as bell peppers and tomatoes. Once complete, guests staying at the villa or cabana will be able to freshly pick vegetables grown right here themselves.",
     keyPoints:
-      "The polytunnel is still under construction rather than already in production, so there's nothing to pick just yet — check back once it's operational.",
+      "The polytunnel is part of the estate's push toward growing more of its own produce on-site, with harvest-your-own vegetables planned as a perk for villa and cabana guests.",
     duration: "5 minutes",
   },
 ];
