@@ -664,6 +664,34 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * grading machinery (vibrating mesh screens attracting stalk and fibre)
  * was left out too, since it restates — in less specific terms — the
  * sieves and electrostatic separator already documented on "sorting".
+ * An eleventh source (2026-09-02, a narration covering green, artisanal,
+ * purple, and white tea) added a few safe, non-conflicting details after
+ * careful checking, and deliberately excluded more than it added.
+ * "artisanal-tea-grades" gained three things: TRI 2043 is a low-yielding
+ * cultivar, which is why not every Sri Lankan estate grows it; a flavour
+ * profile for Purple Tea (closer to oolong — lighter than black tea but
+ * less vegetal than green tea — comparatively low in caffeine, naturally
+ * rich in antioxidants); and tasting notes for White Tea (pale liquor,
+ * velvety texture, floral aroma) alongside its already-documented natural
+ * sweetness. "handmade-factory" gained the rest of its green tea process,
+ * completing the previously-cut-off "steams and presses" description:
+ * after steaming, the leaf rests outside to shed surface moisture, then is
+ * hand-rolled to draw out colour, strength, aroma, and taste, before a
+ * final dry (timing varies by producer). Two things from this source were
+ * deliberately left out. First, its detailed Purple Tea manufacturing
+ * steps — withering, steaming, hand-rolling, a second dry, then a final
+ * dry — contradict the full withering/rolling/fermenting process already
+ * established for Purple Tea from the seventh (tea-center) transcript,
+ * which was itself a deliberate, on-site, contrastive correction of an
+ * earlier ambiguous source; this eleventh source reads as general
+ * knowledge about Sri Lankan purple tea rather than a claim about this
+ * estate specifically, so the more specific, already-reconciled account
+ * was kept and this source's conflicting process was not used. Second,
+ * its specific disease-related health claims for Purple Tea (protection
+ * against cancer and neurodegenerative disease, reversing UV damage) were
+ * left out as too strong to state as fact on a public site without
+ * clinical backing; only the safe, general antioxidant/caffeine framing
+ * was kept.
  */
 export const STATIONS: Station[] = [
   {
@@ -1073,7 +1101,7 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot — TRI 2043, a Tea Research Institute clone — whose colour comes from anthocyanin. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting. Pink tea starts out essentially colourless like white tea, and only turns pink once a couple of drops of lime are added — the citrus triggers a colour change in the same anthocyanin pigment that gives the shoot its hue; it also takes well to a couple of drops of honey and is recommended served as iced tea. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
+      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot — TRI 2043, a Tea Research Institute clone — whose colour comes from anthocyanin; it's a low-yielding cultivar, which is why not every Sri Lankan estate grows it. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste, with a pale liquor, a velvety texture, and a floral aroma. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting — for a flavour closer to oolong: lighter than black tea but less vegetal than green tea, comparatively low in caffeine, and naturally rich in antioxidants. Pink tea starts out essentially colourless like white tea, and only turns pink once a couple of drops of lime are added — the citrus triggers a colour change in the same anthocyanin pigment that gives the shoot its hue; it also takes well to a couple of drops of honey and is recommended served as iced tea. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
     keyPoints:
       "These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
     duration: "5 minutes",
@@ -1182,7 +1210,7 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; the building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato). This stop covers what distinguishes hand-made tea from factory-line production.",
+      "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; once steamed, the leaf rests outside to shed the surface moisture left by steaming, then is hand-rolled to curl it and draw out its colour, strength, aroma, and taste, before a final pass through the dryer, with drying time varying from one small producer to the next. The building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato). This stop covers what distinguishes hand-made tea from factory-line production.",
     keyPoints:
       "Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
     duration: "10 minutes",
