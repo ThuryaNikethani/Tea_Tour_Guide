@@ -607,6 +607,33 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * further was added for those to avoid duplicating existing content; the
  * brief, undemonstrated tasting-lesson clip at the end wasn't specific
  * enough to add anything to "tea-center" either.
+ * A ninth source (2026-09-02, a general narrated overview of Sri Lankan
+ * tea) supplied two real historical facts precise enough to enrich
+ * "introduction" without contradicting what was already there: the
+ * Assam/Calcutta experimental crops mentioned generically before now have
+ * a year, 1839; and the station's existing "19-acre plot in Kandy...
+ * diversification experiment" line now names who planted it and when —
+ * the Scottish former coffee planter James Taylor, in 1867, at the
+ * Loolecondera Estate. That 1867 date sits comfortably alongside the
+ * station's existing 1869-coffee-rust narrative rather than conflicting
+ * with it: Taylor's planting was the pioneering trial, while the 1869
+ * blight is what pushed the industry into mass conversion two years
+ * later. The source's three-tier geographic classification (up-country/
+ * "Udarata", mid-country/"Medarata", low-country/"Pahatharata") was also
+ * added alongside the existing low-country mention, since it complements
+ * rather than duplicates the elevation-based high-grown/low-grown
+ * framing already there. Two other claims from the same source were
+ * deliberately left out for conflicting with better, already-verified
+ * information: its "six principal regions" list (omitting Sabaragamuwa)
+ * is less complete than this station's existing, real seven-region list,
+ * and its generic "two leaves and a bud" plucking claim is exactly the
+ * textbook rule the "plucking" station's on-site dialogue already
+ * explicitly says this estate does not strictly follow (deka hamara,
+ * two and a half to three and a half leaves). Its remaining content —
+ * general commentary on tea's cultural significance, the black/green/
+ * white tea overview, artisanal and flavoured tea trends, and black tea's
+ * BOP1/OP1 grade naming — restates ground already covered in detail
+ * elsewhere in this file, so nothing further was added from it.
  */
 export const STATIONS: Station[] = [
   {
@@ -619,9 +646,9 @@ export const STATIONS: Station[] = [
     lastVerified: "2026-08-26",
     virtualTourUrl: "https://ceylonteatourism.com/",
     description:
-      "Since the early 1800s, the name \"Ceylon\" has been synonymous with tea. The history of Ceylon tea runs back to the British rule in Sri Lanka over two hundred years ago. The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. A few years later, more tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
+      "Since the early 1800s, the name \"Ceylon\" has been synonymous with tea. The history of Ceylon tea runs back to the British rule in Sri Lanka over two hundred years ago. The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. In 1839, further tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
     keyPoints:
-      "The story of Ceylon tea started on a 19-acre plot of land in Kandy as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa. High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker — this estate is a low-country, or 'Pahatharata,' producer, sitting within the Ruhuna growing region specifically. Visitors are traditionally welcomed with 'Ayubowan' — a Sinhala greeting meaning 'may you live long' — sometimes in person by the estate's own chairman, Anura Athukorala.",
+      "The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa. High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker — this estate is a low-country, or 'Pahatharata,' producer, sitting within the Ruhuna growing region specifically, one of Ceylon tea's three geographic classifications alongside up-country ('Udarata') and mid-country ('Medarata'). Visitors are traditionally welcomed with 'Ayubowan' — a Sinhala greeting meaning 'may you live long' — sometimes in person by the estate's own chairman, Anura Athukorala.",
     duration: "5-10 minutes",
   },
   {
