@@ -314,9 +314,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "මැලවීම",
-      description: "නැවුම් කොළ දිගු තට්ටු ඔස්සේ තුනී ලෙස පතුරුවා තබනු ලැබේ, එහිදී විශාල පංකා භාවිතා කර වාතය බලෙන් කොළ හරහා යැවීමෙන් තෙතමනය ක්‍රමයෙන් ඉවත් කරයි — වතුයාය 'නවීන' මැලවීමේ ක්‍රියාවලිය ලෙස හඳුන්වන්නේ මෙයයි. කොළය මෘදු හා නම්‍යශීලී වන අතර, පොඩි නොවී රෝල් කිරීමට සූදානම් වේ.",
+      description: "නැවුම් කොළ දිගු තට්ටු ඔස්සේ තුනී ලෙස පතුරුවා තබනු ලැබේ, එහිදී විශාල පංකා භාවිතා කර වාතය බලෙන් කොළ හරහා යැවීමෙන් තෙතමනය ක්‍රමයෙන් ඉවත් කරයි — වතුයාය 'නවීන' මැලවීමේ ක්‍රියාවලිය ලෙස හඳුන්වන්නේ මෙයයි. කොළය මෘදු හා නම්‍යශීලී වන අතර, පොඩි නොවී රෝල් කිරීමට සූදානම් වේ, මෙම ක්‍රියාවලියේදී එහි මුල් තෙතමනයෙන් 45%ක් පමණ අහිමි වී ඇති තත්ත්වයෙන්.",
       keyPoints: "මැලවීම කොළය පුරා තෙතමනය සමාන කරන අතර, ස්වාභාවික එන්සයිම වලට පසුව තේවල සුවඳ හා වර්ණය නිර්මාණය කරන රසායනික වෙනස්කම් ආරම්භ කිරීමට ඉඩ සලසයි.",
-      duration: "මෙම අදියර සාමාන්‍යයෙන් තෙතමනය සහ වාතාශ්‍රය මත පදනම්ව පැය 12 සිට 17 දක්වා ගතවේ.",
+      duration: "මෙම අදියර සාමාන්‍යයෙන් තෙතමනය සහ වාතාශ්‍රය මත පදනම්ව පැය 10 සිට 12 දක්වා ගතවේ.",
     },
     rolling: {
       name: "රෝල් කිරීම",
@@ -525,7 +525,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "තේ කර්මාන්තශාලාව",
       description: "ප්‍රධාන කර්මාන්තශාලා ගොඩනැගිල්ල, නෙළන ලද කොළ මැලවීමේ සිට පැක් කිරීම දක්වා නිමි තේ බවට පත් වන ස්ථානයයි. මෙම නැවතුම ක්‍රියාත්මක වන කර්මාන්තශාලා තට්ටුව සහ එක් එක් අදියරේ භාවිතා කරන උපකරණ පිළිබඳ දළ විශ්ලේෂණයකි — මැලවීම, රෝල් කිරීම, පැසවීම (ඔක්සිකරණය), වියලීම, තේ වෙන් කිරීම (ශ්‍රේණිගත කිරීම), සහ අවසන් පැක් කිරීම, එම අනුපිළිවෙලින්ම.",
-      keyPoints: "ක්‍රියාත්මක තේ කර්මාන්තශාලාවක්, සෑම දිනකම කොළ ප්‍රමාණයට සමීපව සමමුහුර්තව, මැලවීමේ සිට පැක් කිරීම දක්වා සම්පූර්ණ අනුපිළිවෙල එකම වහලක් යටතේ ක්‍රියාත්මක කරයි.",
+      keyPoints: "ක්‍රියාත්මක තේ කර්මාන්තශාලාවක්, සෑම දිනකම කොළ ප්‍රමාණයට සමීපව සමමුහුර්තව, මැලවීමේ සිට පැක් කිරීම දක්වා සම්පූර්ණ අනුපිළිවෙල එකම වහලක් යටතේ ක්‍රියාත්මක කරයි. සනීපාරක්ෂක ප්‍රමිතීන්ට අනුකූලව, කර්මාන්තශාලා තට්ටුව නරඹන අමුත්තන්ගෙන් හිසකෙස් දැලක්, මුඛ ආවරණයක්, සහ ආරක්ෂිත පාවහන් පැළඳීමට ඉල්ලා සිටිනු ලැබේ.",
       duration: "මිනිත්තු 10-15",
     },
     "handmade-factory": {
@@ -574,7 +574,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "සිලෝන් තේ හැඳින්වීම",
       description: "1800 ගණන්වල මුල් භාගයේ සිට 'සිලෝන්' යන නම තේ සමඟ සමාන පදයක් වී ඇත. සිලෝන් තේවල ඉතිහාසය වසර දෙසීයකට වඩා පෙර ශ්‍රී ලංකාවේ බ්‍රිතාන්‍ය පාලන සමය දක්වා දිව යයි. ශ්‍රී ලංකාවේ වාර්තාගත පළමු තේ පැළය 1824 දී පැමිණි අතර, එවකට බ්‍රිතාන්‍යයන් චීනයෙන් තේ පැළයක් ගෙන එමින් එය පේරාදෙණියේ රාජකීය උද්භිද උද්‍යානයේ වාණිජමය නොවන භාවිතය සඳහා සිටුවන ලදී. වසර කිහිපයකට පසුව, පර්යේෂණාත්මක වගාව සඳහා ආසාම් සහ කල්කටාවෙන් තවත් තේ බෝග ගෙන එන ලදී. කෙසේ වුවද, ශ්‍රී ලංකාවේ තේ වතු වගාවේ සැබෑ ආරම්භය සිදු වූයේ දූපතේ එකම සාර්ථක කර්මාන්තය වූ කෝපි කර්මාන්තයේ අවසානය හේතුවෙනි: 1869 දී, ශ්‍රී ලංකාවේ සමෘද්ධිමත් කෝපි වතු 'කෝපි කුණුවීම' නම් නව ශාක රෝගයකට ගොදුරු වූ අතර, එහි ප්‍රතිඵලයක් ලෙස ශ්‍රී ලංකාවේ කෝපි ව්‍යාපාරය දශකයකටත් අඩු කාලයක් තුළ සම්පූර්ණයෙන් විනාශ විය. මෙසේ ශ්‍රී ලංකාවේ තේ ව්‍යාප්ත වගාව ආරම්භ විය.",
-      keyPoints: "සිලෝන් තේවල කතාව ආරම්භ වූයේ මහනුවරදී අක්කර 19ක ඉඩමක විවිධාංගීකරණ පරීක්ෂණයක කොටසක් ලෙසිනි. වසර ගණනාවක් තුළ, එය ශ්‍රී ලංකාවේ තේ වගා කරන ප්‍රදේශ හතක් දක්වා වර්ධනය විය, ඒවා නම් මහනුවර, ඌව, රුහුණ (දකුණ), උඩපුස්සැල්ලාව, නුවරඑළිය, දිඹුල, සහ සබරගමුව. උස් රට තේ (මීටර් 1,200 ට වඩා ඉහළින්, නුවරඑළිය සහ ඌව වැනි) සියුම් හා සුවඳවත් වන අතර, පහත රට තේ (මීටර් 600 ට වඩා පහළින්, මෙහි නිපදවන ලෙස) සාමාන්‍යයෙන් ශක්තිමත් හා තද පැහැති වේ — මෙම වතුයාය පහත රට, හෙවත් 'පහත්තරට,' නිෂ්පාදකයෙකි.",
+      keyPoints: "සිලෝන් තේවල කතාව ආරම්භ වූයේ මහනුවරදී අක්කර 19ක ඉඩමක විවිධාංගීකරණ පරීක්ෂණයක කොටසක් ලෙසිනි. වසර ගණනාවක් තුළ, එය ශ්‍රී ලංකාවේ තේ වගා කරන ප්‍රදේශ හතක් දක්වා වර්ධනය විය, ඒවා නම් මහනුවර, ඌව, රුහුණ (දකුණ), උඩපුස්සැල්ලාව, නුවරඑළිය, දිඹුල, සහ සබරගමුව. උස් රට තේ (මීටර් 1,200 ට වඩා ඉහළින්, නුවරඑළිය සහ ඌව වැනි) සියුම් හා සුවඳවත් වන අතර, පහත රට තේ (මීටර් 600 ට වඩා පහළින්, මෙහි නිපදවන ලෙස) සාමාන්‍යයෙන් ශක්තිමත් හා තද පැහැති වේ — මෙම වතුයාය පහත රට, හෙවත් 'පහත්තරට,' නිෂ්පාදකයෙකි, විශේෂයෙන්ම රුහුණ තේ වගා කලාපය තුළ පිහිටා ඇත. අමුත්තන් සාම්ප්‍රදායිකව 'ආයුබෝවන්' — 'දීර්ඝායුෂ අත්වේවා' යන අර්ථය දෙන සිංහල ආචාර වචනයෙන් — පිළිගනු ලබන අතර, සමහර විට එය වතුයායේම සභාපති අනුර අතුකෝරළ විසින් පෞද්ගලිකව සිදු කරනු ලැබේ.",
       duration: "මිනිත්තු 5-10",
     },
     "jaggery-palm": {
@@ -630,9 +630,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "வதங்கல்",
-      description: "புதிய இலைகள் நீண்ட தொட்டிகளில் மெல்லிய அடுக்காக பரப்பப்படுகின்றன, அங்கு பெரிய மின்விசிறிகள் காற்றை வலுக்கட்டாயமாக செலுத்தி ஈரப்பதத்தை படிப்படியாக நீக்குகின்றன — தோட்டம் இதை 'நவீன' வதங்கல் செயல்முறை என்று அழைக்கிறது. இலை மென்மையாகவும் நெகிழக்கூடியதாகவும் மாறி, உடையாமல் உருட்டுவதற்குத் தயாராகிறது.",
+      description: "புதிய இலைகள் நீண்ட தொட்டிகளில் மெல்லிய அடுக்காக பரப்பப்படுகின்றன, அங்கு பெரிய மின்விசிறிகள் காற்றை வலுக்கட்டாயமாக செலுத்தி ஈரப்பதத்தை படிப்படியாக நீக்குகின்றன — தோட்டம் இதை 'நவீன' வதங்கல் செயல்முறை என்று அழைக்கிறது. இலை மென்மையாகவும் நெகிழக்கூடியதாகவும் மாறி, உடையாமல் உருட்டுவதற்குத் தயாராகிறது, இச்செயல்பாட்டின் போது அதன் அசல் ஈரப்பதத்தில் சுமார் 45% இழந்த நிலையில்.",
       keyPoints: "வதங்கல் இலை முழுவதும் ஈரப்பதத்தை சமன்படுத்துகிறது, மேலும் இயற்கை நொதிகள் பின்னர் தேயிலையின் நறுமணத்தையும் நிறத்தையும் உருவாக்கும் வேதியியல் மாற்றங்களைத் தொடங்க அனுமதிக்கிறது.",
-      duration: "இந்த நிலை பொதுவாக ஈரப்பதம் மற்றும் காற்றோட்டத்தைப் பொறுத்து 12 முதல் 17 மணி நேரம் வரை எடுக்கும்.",
+      duration: "இந்த நிலை பொதுவாக ஈரப்பதம் மற்றும் காற்றோட்டத்தைப் பொறுத்து 10 முதல் 12 மணி நேரம் வரை எடுக்கும்.",
     },
     rolling: {
       name: "உருட்டுதல்",
@@ -841,7 +841,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "தேயிலை தொழிற்சாலை",
       description: "பறிக்கப்பட்ட இலை வாடுதல் முதல் பொதிசெய்தல் வரை முடிக்கப்பட்ட தேயிலையாக மாற்றப்படும் இடம் முதன்மை தொழிற்சாலை கட்டிடமாகும். இயங்கும் தொழிற்சாலை தளத்தையும் ஒவ்வொரு கட்டத்திலும் பயன்படுத்தப்படும் உபகரணங்களையும் இந்த நிறுத்தம் மேலோட்டமாக விளக்குகிறது — வதங்கல், உருட்டுதல், நொதித்தல் (ஆக்சிஜனேற்றம்), உலர்த்துதல், தேயிலை பிரித்தல் (தரப்படுத்தல்), மற்றும் இறுதி பொதிசெய்தல், அந்த வரிசையில்.",
-      keyPoints: "இயங்கும் தேயிலை தொழிற்சாலை ஒரு கூரையின் கீழ் வாடுதல் முதல் பொதிசெய்தல் வரையிலான முழு வரிசையையும் இயக்குகிறது, தினசரி இலை வரவுக்கு நெருக்கமாக நேரம் ஒத்திசைக்கப்படுகிறது.",
+      keyPoints: "இயங்கும் தேயிலை தொழிற்சாலை ஒரு கூரையின் கீழ் வாடுதல் முதல் பொதிசெய்தல் வரையிலான முழு வரிசையையும் இயக்குகிறது, தினசரி இலை வரவுக்கு நெருக்கமாக நேரம் ஒத்திசைக்கப்படுகிறது. ஆலை தளத்தை பார்வையிடும் விருந்தினர்கள் சுகாதார தரநிலைகளுக்கு இணங்க தலைமுடி வலை, முகக்கவசம், மற்றும் பாதுகாப்பு காலணிகள் அணிய வேண்டும் என்று கேட்டுக்கொள்ளப்படுகிறார்கள்.",
       duration: "10-15 நிமிடங்கள்",
     },
     "handmade-factory": {
@@ -890,7 +890,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "இலங்கை தேயிலைக்கு அறிமுகம்",
       description: "1800களின் ஆரம்பத்தில் இருந்தே 'சிலோன்' என்ற பெயர் தேயிலையுடன் ஒத்ததாக இருந்து வருகிறது. இலங்கை தேயிலையின் வரலாறு, இலங்கையில் பிரிட்டிஷ் ஆட்சியின் காலத்திற்கு, இருநூறு ஆண்டுகளுக்கும் மேலாக முன்னதாகச் செல்கிறது. இலங்கையில் பதிவு செய்யப்பட்ட முதல் தேயிலைச் செடி 1824 இல் வந்தது, அப்போது ஆங்கிலேயர்கள் சீனாவிலிருந்து ஒரு தேயிலைச் செடியைக் கொண்டு வந்து பேராதனையின் அரச தாவரவியல் பூங்காவில் வணிகரீதியற்ற பயன்பாட்டுக்காக நட்டனர். சில ஆண்டுகளுக்குப் பிறகு, சோதனை நடவுக்காக அசாம் மற்றும் கல்கத்தாவிலிருந்து மேலும் தேயிலைப் பயிர்கள் கொண்டு வரப்பட்டன. இருப்பினும், இலங்கையில் தேயிலைத் தோட்டங்களின் உண்மையான தோற்றம், தீவின் ஒரே வெற்றிகரமான தொழிலான காபித் தொழிலின் முடிவின் விளைவாகவே ஏற்பட்டது: 1869 இல், இலங்கையின் செழிப்பான காபித் தோட்டங்கள் 'காபி துரு' எனும் புதிய தாவர நோயால் தாக்கப்பட்டு, அதன் விளைவாக இலங்கையின் காபி தொழில் ஒரு தசாப்தத்திற்குள் முற்றிலும் அழிந்தது. இவ்வாறே இலங்கையில் தேயிலையின் பாரிய சாகுபடி தொடங்கியது.",
-      keyPoints: "சிலோன் தேயிலையின் கதை கண்டியில் 19 ஏக்கர் நிலத்தில் ஒரு பல்வகைப்படுத்தல் சோதனையின் ஒரு பகுதியாகத் தொடங்கியது. ஆண்டுகள் செல்ல செல்ல, அது இலங்கையின் ஏழு தேயிலை வளரும் பிராந்தியங்களாக வளர்ந்தது, அவையாவன: கண்டி, ஊவா, ருஹுணா (தெற்கு), உடபுசெல்லாவா, நுவரெலியா, டிம்புலா, மற்றும் சபரகமுவா. உயர்நில தேயிலை (சுமார் 1,200 மீட்டருக்கு மேல், நுவரெலியா மற்றும் ஊவா போன்றவை) மென்மையானதாகவும் நறுமணமிக்கதாகவும் இருக்கும்; தாழ்நில தேயிலை (சுமார் 600 மீட்டருக்குக் கீழ், இங்கு உற்பத்தி செய்யப்படுவது போல்) பொதுவாக அதிக வலிமையும் அடர் நிறமும் கொண்டது — இந்த தோட்டம் ஒரு தாழ்நில, அல்லது 'பஹத்தரட' உற்பத்தியாளர் ஆகும்.",
+      keyPoints: "சிலோன் தேயிலையின் கதை கண்டியில் 19 ஏக்கர் நிலத்தில் ஒரு பல்வகைப்படுத்தல் சோதனையின் ஒரு பகுதியாகத் தொடங்கியது. ஆண்டுகள் செல்ல செல்ல, அது இலங்கையின் ஏழு தேயிலை வளரும் பிராந்தியங்களாக வளர்ந்தது, அவையாவன: கண்டி, ஊவா, ருஹுணா (தெற்கு), உடபுசெல்லாவா, நுவரெலியா, டிம்புலா, மற்றும் சபரகமுவா. உயர்நில தேயிலை (சுமார் 1,200 மீட்டருக்கு மேல், நுவரெலியா மற்றும் ஊவா போன்றவை) மென்மையானதாகவும் நறுமணமிக்கதாகவும் இருக்கும்; தாழ்நில தேயிலை (சுமார் 600 மீட்டருக்குக் கீழ், இங்கு உற்பத்தி செய்யப்படுவது போல்) பொதுவாக அதிக வலிமையும் அடர் நிறமும் கொண்டது — இந்த தோட்டம் ஒரு தாழ்நில, அல்லது 'பஹத்தரட' உற்பத்தியாளர் ஆகும், குறிப்பாக ருஹுணா தேயிலை வளரும் பிராந்தியத்தில் அமைந்துள்ளது. விருந்தினர்கள் பாரம்பரியமாக 'ஆயுபோவன்' — 'நீடூழி வாழ்க' என்று பொருள்படும் சிங்கள வாழ்த்துச் சொல் — மூலம் வரவேற்கப்படுகிறார்கள், சில வேளைகளில் தோட்டத்தின் சொந்த தலைவர் அனுர அதுகோரளவால் நேரடியாகவே.",
       duration: "5-10 நிமிடங்கள்",
     },
     "jaggery-palm": {
@@ -946,9 +946,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Appassimento",
-      description: "Le foglie fresche vengono stese in strati sottili su lunghe vasche, dove grandi ventole spingono l'aria attraverso di esse per eliminare gradualmente l'umidità — ciò che la tenuta chiama il processo di appassimento 'moderno'. La foglia diventa flessibile e malleabile, pronta per l'arrotolamento senza rompersi.",
+      description: "Le foglie fresche vengono stese in strati sottili su lunghe vasche, dove grandi ventole spingono l'aria attraverso di esse per eliminare gradualmente l'umidità — ciò che la tenuta chiama il processo di appassimento 'moderno'. La foglia diventa flessibile e malleabile, pronta per l'arrotolamento senza rompersi, dopo aver perso circa il 45% della sua umidità originale nel processo.",
       keyPoints: "L'appassimento uniforma l'umidità in tutta la foglia e permette agli enzimi naturali di avviare i cambiamenti chimici che in seguito creeranno l'aroma e il colore del tè.",
-      duration: "Questa fase dura in genere dalle 12 alle 17 ore, a seconda dell'umidità e della circolazione dell'aria.",
+      duration: "Questa fase dura in genere dalle 10 alle 12 ore, a seconda dell'umidità e della circolazione dell'aria.",
     },
     rolling: {
       name: "Arrotolamento",
@@ -1157,7 +1157,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "La Fabbrica del Tè",
       description: "L'edificio principale della fabbrica è dove la foglia raccolta viene trasformata in tè finito, dall'appassimento fino al confezionamento. Questa tappa offre una panoramica del piano di fabbrica in funzione e delle attrezzature usate in ogni fase — appassimento, arrotolamento, fermentazione (ossidazione), essiccazione, selezione del tè (classificazione) e confezionamento finale, in quest'ordine.",
-      keyPoints: "Una fabbrica del tè in funzione esegue l'intera sequenza dall'appassimento al confezionamento sotto lo stesso tetto, sincronizzata da vicino con l'arrivo giornaliero delle foglie.",
+      keyPoints: "Una fabbrica del tè in funzione esegue l'intera sequenza dall'appassimento al confezionamento sotto lo stesso tetto, sincronizzata da vicino con l'arrivo giornaliero delle foglie. Ai visitatori che percorrono il piano di fabbrica viene chiesto di indossare una retina per capelli, una mascherina e calzature protettive, in linea con gli standard igienici della struttura.",
       duration: "10-15 minuti",
     },
     "handmade-factory": {
@@ -1206,7 +1206,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Introduzione al Tè di Ceylon",
       description: "Fin dall'inizio del 1800, il nome \"Ceylon\" è stato sinonimo di tè. La storia del tè di Ceylon risale al dominio britannico in Sri Lanka, oltre duecento anni fa. La prima pianta di tè registrata in Sri Lanka arrivò nel 1824, quando gli inglesi portarono una pianta di tè dalla Cina e la piantarono nel Giardino Botanico Reale di Peradeniya per uso non commerciale. Qualche anno dopo, altre colture di tè arrivarono da Assam e Calcutta a scopo sperimentale. La vera nascita delle piantagioni di tè in Sri Lanka, tuttavia, fu il risultato del declino dell'unica industria di successo dell'isola, quella del caffè: nel 1869 le fiorenti piantagioni di caffè dello Sri Lanka furono colpite da una nuova malattia delle piante chiamata ruggine del caffè, e di conseguenza l'industria del caffè in Sri Lanka fu spazzata via in meno di un decennio. Ebbe così inizio la coltivazione di massa del tè in Sri Lanka.",
-      keyPoints: "La storia del tè di Ceylon iniziò su un terreno di 19 acri a Kandy, come parte di un esperimento di diversificazione. Nel corso degli anni, si sviluppò nelle sette regioni tè dello Sri Lanka, che comprendono Kandy, Uva, Ruhuna (Sud), Udapussellawa, Nuwara Eliya, Dimbula e Sabaragamuwa. Il tè d'alta quota (sopra circa 1.200 m, come a Nuwara Eliya e Uva) tende a essere delicato e aromatico; il tè di pianura (sotto circa 600 m, come quello prodotto qui) è generalmente più forte e scuro — questa tenuta è una produttrice di pianura, o 'Pahatharata.'",
+      keyPoints: "La storia del tè di Ceylon iniziò su un terreno di 19 acri a Kandy, come parte di un esperimento di diversificazione. Nel corso degli anni, si sviluppò nelle sette regioni tè dello Sri Lanka, che comprendono Kandy, Uva, Ruhuna (Sud), Udapussellawa, Nuwara Eliya, Dimbula e Sabaragamuwa. Il tè d'alta quota (sopra circa 1.200 m, come a Nuwara Eliya e Uva) tende a essere delicato e aromatico; il tè di pianura (sotto circa 600 m, come quello prodotto qui) è generalmente più forte e scuro — questa tenuta è una produttrice di pianura, o 'Pahatharata,' situata in particolare nella regione tè di Ruhuna. I visitatori vengono tradizionalmente accolti con 'Ayubowan' — un saluto singalese che significa 'possa tu vivere a lungo' — talvolta di persona dal presidente stesso della tenuta, Anura Athukorala.",
       duration: "5-10 minuti",
     },
     "jaggery-palm": {
@@ -1262,9 +1262,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "الذبول",
-      description: "تُفرش الأوراق الطازجة بطبقة رقيقة على أحواض طويلة، حيث تدفع مراوح كبيرة الهواء عبرها لإزالة الرطوبة تدريجيًا — وهو ما تسميه المزرعة عملية الذبول 'الحديثة'. تصبح الورقة مرنة وطيّعة، جاهزة للف دون أن تتكسر.",
+      description: "تُفرش الأوراق الطازجة بطبقة رقيقة على أحواض طويلة، حيث تدفع مراوح كبيرة الهواء عبرها لإزالة الرطوبة تدريجيًا — وهو ما تسميه المزرعة عملية الذبول 'الحديثة'. تصبح الورقة مرنة وطيّعة، جاهزة للف دون أن تتكسر، بعد أن تفقد نحو 45% من رطوبتها الأصلية خلال هذه العملية.",
       keyPoints: "يوازن الذبول الرطوبة عبر الورقة ويسمح للإنزيمات الطبيعية ببدء التغيرات الكيميائية التي ستشكل لاحقًا نكهة الشاي ولونه.",
-      duration: "تستغرق هذه المرحلة عادة من 12 إلى 17 ساعة، حسب الرطوبة وتدفق الهواء.",
+      duration: "تستغرق هذه المرحلة عادة من 10 إلى 12 ساعة، حسب الرطوبة وتدفق الهواء.",
     },
     rolling: {
       name: "اللف",
@@ -1473,7 +1473,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "مصنع الشاي",
       description: "المصنع الرئيسي هو المكان الذي تتحول فيه الأوراق المقطوفة إلى شاي جاهز، من الذبول إلى التعبئة. تقدم هذه المحطة نظرة عامة على أرضية المصنع العاملة والمعدات المستخدمة في كل مرحلة — الذبول، اللف، التخمير (الأكسدة)، التجفيف، فرز الشاي (التصنيف)، والتعبئة النهائية، بهذا الترتيب.",
-      keyPoints: "يدير مصنع الشاي العامل التسلسل الكامل من الذبول إلى التعبئة تحت سقف واحد، بتوقيت دقيق مع كمية الأوراق الواردة يوميًا.",
+      keyPoints: "يدير مصنع الشاي العامل التسلسل الكامل من الذبول إلى التعبئة تحت سقف واحد، بتوقيت دقيق مع كمية الأوراق الواردة يوميًا. يُطلب من الزوار الذين يجولون في أرضية المصنع ارتداء غطاء للشعر وكمامة وحذاء واقٍ، تماشيًا مع معايير النظافة في المنشأة.",
       duration: "10-15 دقيقة",
     },
     "handmade-factory": {
@@ -1522,7 +1522,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "مقدمة عن شاي سيلان",
       description: "منذ أوائل القرن التاسع عشر، أصبح اسم \"سيلان\" مرادفًا للشاي. يعود تاريخ شاي سيلان إلى الحكم البريطاني في سريلانكا، منذ أكثر من مئتي عام. وصلت أول شجرة شاي مسجلة في سريلانكا عام 1824، عندما أحضر البريطانيون شجرة شاي من الصين وزرعوها في حديقة بيرادينيا النباتية الملكية للاستخدام غير التجاري. وبعد بضع سنوات، وصلت المزيد من محاصيل الشاي من آسام وكلكتا لأغراض تجريبية. غير أن الميلاد الفعلي لمزارع الشاي في سريلانكا جاء نتيجة زوال صناعة البن، وهي الصناعة الناجحة الوحيدة في الجزيرة آنذاك: ففي عام 1869، أصيبت مزارع البن المزدهرة في سريلانكا بمرض نباتي جديد يُدعى صدأ البن، ونتيجة لذلك، انهارت صناعة البن في سريلانكا تمامًا خلال أقل من عقد. وهكذا بدأت الزراعة الواسعة للشاي في سريلانكا.",
-      keyPoints: "بدأت قصة شاي سيلان على مساحة 19 فدانًا في كاندي كجزء من تجربة لتنويع المحاصيل. وعلى مر السنين، تطورت لتصبح مناطق سريلانكا السبع لزراعة الشاي، والتي تشمل: كاندي، وأوفا، وروهونا (الجنوب)، وأودابوسيلاوا، ونوارا إليا، وديمبولا، وساباراغاموا. يميل شاي الأراضي المرتفعة (فوق حوالي 1,200 متر، كما في نوارا إليا وأوفا) إلى أن يكون رقيقًا وعطريًا؛ بينما شاي الأراضي المنخفضة (أقل من حوالي 600 متر، كما يُنتج هنا) عادة ما يكون أقوى وأغمق — هذه المزرعة منتجة للأراضي المنخفضة، أو 'باهاتارتا.'",
+      keyPoints: "بدأت قصة شاي سيلان على مساحة 19 فدانًا في كاندي كجزء من تجربة لتنويع المحاصيل. وعلى مر السنين، تطورت لتصبح مناطق سريلانكا السبع لزراعة الشاي، والتي تشمل: كاندي، وأوفا، وروهونا (الجنوب)، وأودابوسيلاوا، ونوارا إليا، وديمبولا، وساباراغاموا. يميل شاي الأراضي المرتفعة (فوق حوالي 1,200 متر، كما في نوارا إليا وأوفا) إلى أن يكون رقيقًا وعطريًا؛ بينما شاي الأراضي المنخفضة (أقل من حوالي 600 متر، كما يُنتج هنا) عادة ما يكون أقوى وأغمق — هذه المزرعة منتجة للأراضي المنخفضة، أو 'باهاتارتا،' وتقع تحديدًا ضمن منطقة روهونا لزراعة الشاي. يُرحَّب بالزوار تقليديًا بعبارة 'أيوبوان' — وهي تحية سنهالية تعني 'أطال الله عمرك' — وأحيانًا شخصيًا من قِبل رئيس المزرعة نفسه، أنورا أتوكورالا.",
       duration: "5-10 دقائق",
     },
     "jaggery-palm": {
@@ -1578,9 +1578,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Завяливание",
-      description: "Свежие листья тонким слоем раскладываются на длинных желобах, где мощные вентиляторы прогоняют через них воздух, постепенно удаляя влагу — это то, что на плантации называют «современным» способом завяливания. Лист становится мягким и податливым, готовым к скручиванию без повреждений.",
+      description: "Свежие листья тонким слоем раскладываются на длинных желобах, где мощные вентиляторы прогоняют через них воздух, постепенно удаляя влагу — это то, что на плантации называют «современным» способом завяливания. Лист становится мягким и податливым, готовым к скручиванию без повреждений, потеряв за это время около 45% исходной влаги.",
       keyPoints: "Завяливание выравнивает влажность по всему листу и позволяет природным ферментам начать химические изменения, которые впоследствии создадут аромат и цвет чая.",
-      duration: "Этот этап обычно занимает от 12 до 17 часов в зависимости от влажности и циркуляции воздуха.",
+      duration: "Этот этап обычно занимает от 10 до 12 часов в зависимости от влажности и циркуляции воздуха.",
     },
     rolling: {
       name: "Скручивание",
@@ -1789,7 +1789,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "Чайная фабрика",
       description: "В главном здании фабрики собранный лист превращается в готовый чай — от завяливания до упаковки. Эта остановка даёт общее представление о работающем цехе фабрики и оборудовании, используемом на каждом этапе — завяливание, скручивание, ферментация (окисление), сушка, сортировка чая (калибровка) и финальная упаковка, именно в этом порядке.",
-      keyPoints: "Работающая чайная фабрика выполняет всю последовательность от завяливания до упаковки под одной крышей, тесно синхронизированную с ежедневным поступлением листа.",
+      keyPoints: "Работающая чайная фабрика выполняет всю последовательность от завяливания до упаковки под одной крышей, тесно синхронизированную с ежедневным поступлением листа. Посетителям, осматривающим цех фабрики, предлагается надеть сетку для волос, маску и защитную обувь — в соответствии с санитарными нормами предприятия.",
       duration: "10–15 минут",
     },
     "handmade-factory": {
@@ -1838,7 +1838,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Введение в цейлонский чай",
       description: "С начала 1800-х годов название «Цейлон» стало синонимом чая. История цейлонского чая восходит к британскому правлению в Шри-Ланке, более двухсот лет назад. Первое зарегистрированное чайное растение в Шри-Ланке появилось в 1824 году, когда британцы привезли чайный куст из Китая и высадили его в Королевском ботаническом саду Перадении для некоммерческого использования. Несколько лет спустя из Ассама и Калькутты были завезены новые чайные культуры для экспериментальной посадки. Однако подлинное рождение чайных плантаций на Шри-Ланке стало результатом упадка единственной успешной на тот момент отрасли острова — кофейной: в 1869 году процветавшие кофейные плантации Шри-Ланки поразила новая болезнь растений под названием кофейная ржавчина, в результате чего кофейная отрасль на острове была уничтожена менее чем за десятилетие. Так началось массовое возделывание чая на Шри-Ланке.",
-      keyPoints: "История цейлонского чая началась с участка в 19 акров в Канди как часть эксперимента по диверсификации. С годами он вырос в семь чаепроизводящих регионов Шри-Ланки, к которым относятся: Канди, Ува, Рухуна (Юг), Удапуссельлава, Нувара-Элия, Димбула и Сабарагамува. Высокогорный чай (выше примерно 1200 м, как в Нувара-Элии и Уве) обычно нежный и ароматный; низинный чай (ниже примерно 600 м, как здесь) обычно крепче и темнее — эта плантация относится к низинным производителям, или «Пахатарата».",
+      keyPoints: "История цейлонского чая началась с участка в 19 акров в Канди как часть эксперимента по диверсификации. С годами он вырос в семь чаепроизводящих регионов Шри-Ланки, к которым относятся: Канди, Ува, Рухуна (Юг), Удапуссельлава, Нувара-Элия, Димбула и Сабарагамува. Высокогорный чай (выше примерно 1200 м, как в Нувара-Элии и Уве) обычно нежный и ароматный; низинный чай (ниже примерно 600 м, как здесь) обычно крепче и темнее — эта плантация относится к низинным производителям, или «Пахатарата», и находится именно в чаепроизводящем регионе Рухуна. Гостей традиционно приветствуют словом «Аюбован» — сингальским приветствием, означающим «долгих лет жизни», — иногда лично сам председатель поместья, Анура Атукорала.",
       duration: "5–10 минут",
     },
     "jaggery-palm": {
@@ -1894,9 +1894,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Welken",
-      description: "Frische Blätter werden dünn auf langen Trögen ausgebreitet, durch die große Ventilatoren Luft pressen, um stetig Feuchtigkeit zu entziehen — was das Anwesen den 'modernen' Welkeprozess nennt. Das Blatt wird welk und geschmeidig und ist bereit zum Rollen, ohne zu zerbrechen.",
+      description: "Frische Blätter werden dünn auf langen Trögen ausgebreitet, durch die große Ventilatoren Luft pressen, um stetig Feuchtigkeit zu entziehen — was das Anwesen den 'modernen' Welkeprozess nennt. Das Blatt wird welk und geschmeidig und ist bereit zum Rollen, ohne zu zerbrechen, nachdem es dabei rund 45 % seiner ursprünglichen Feuchtigkeit verloren hat.",
       keyPoints: "Das Welken gleicht die Feuchtigkeit im Blatt aus und lässt natürliche Enzyme die chemischen Veränderungen beginnen, die später Aroma und Farbe des Tees erzeugen.",
-      duration: "Diese Phase dauert je nach Luftfeuchtigkeit und Luftzirkulation typischerweise 12 bis 17 Stunden.",
+      duration: "Diese Phase dauert je nach Luftfeuchtigkeit und Luftzirkulation typischerweise 10 bis 12 Stunden.",
     },
     rolling: {
       name: "Rollen",
@@ -2105,7 +2105,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "Die Teefabrik",
       description: "Im Hauptfabrikgebäude wird gepflücktes Blatt vom Welken bis zur Verpackung zu fertigem Tee verarbeitet. Diese Station bietet einen Überblick über die arbeitende Fabrikhalle und die in jeder Phase verwendeten Geräte — Welken, Rollen, Fermentation (Oxidation), Trocknen, Teetrennung (Klassifizierung) und abschließendes Verpacken, in dieser Reihenfolge.",
-      keyPoints: "Eine arbeitende Teefabrik führt die gesamte Abfolge vom Welken bis zur Verpackung unter einem Dach durch, eng abgestimmt auf den täglichen Blattertrag.",
+      keyPoints: "Eine arbeitende Teefabrik führt die gesamte Abfolge vom Welken bis zur Verpackung unter einem Dach durch, eng abgestimmt auf den täglichen Blattertrag. Besucher, die die Fabrikhalle besichtigen, werden gebeten, gemäß den Hygienestandards des Betriebs ein Haarnetz, einen Mundschutz und Schutzschuhe zu tragen.",
       duration: "10-15 Minuten",
     },
     "handmade-factory": {
@@ -2154,7 +2154,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Einführung in Ceylon-Tee",
       description: "Seit Anfang der 1800er-Jahre ist der Name „Ceylon“ ein Synonym für Tee. Die Geschichte des Ceylon-Tees reicht bis in die Zeit der britischen Kolonialherrschaft in Sri Lanka zurück, vor über zweihundert Jahren. Die erste in Sri Lanka verzeichnete Teepflanze traf 1824 ein, als die Briten eine Teepflanze aus China mitbrachten und sie im Königlichen Botanischen Garten von Peradeniya zu nichtkommerziellen Zwecken pflanzten. Einige Jahre später folgten weitere Teekulturen aus Assam und Kalkutta zu Versuchszwecken. Die eigentliche Geburtsstunde der Teeplantagen in Sri Lanka war jedoch das Ergebnis des Niedergangs der einzigen bis dahin erfolgreichen Industrie der Insel, der Kaffeeindustrie: 1869 wurden die blühenden Kaffeeplantagen Sri Lankas von einer neuen Pflanzenkrankheit namens Kaffeerost befallen, wodurch die Kaffeeindustrie Sri Lankas innerhalb weniger als eines Jahrzehnts ausgelöscht wurde. So begann der großflächige Teeanbau in Sri Lanka.",
-      keyPoints: "Die Geschichte des Ceylon-Tees begann auf einer 19 Acres großen Fläche in Kandy im Rahmen eines Diversifizierungsexperiments. Im Laufe der Jahre wuchs sie zu Sri Lankas sieben Tee-Anbauregionen heran, zu denen Kandy, Uva, Ruhuna (Süden), Udapussellawa, Nuwara Eliya, Dimbula und Sabaragamuwa zählen. Hochlandtee (oberhalb von etwa 1.200 m, wie in Nuwara Eliya und Uva) ist tendenziell fein und aromatisch; Tieflandtee (unterhalb von etwa 600 m, wie hier produziert) ist typischerweise kräftiger und dunkler — dieses Anwesen ist ein Tiefland-, oder 'Pahatharata'-Produzent.",
+      keyPoints: "Die Geschichte des Ceylon-Tees begann auf einer 19 Acres großen Fläche in Kandy im Rahmen eines Diversifizierungsexperiments. Im Laufe der Jahre wuchs sie zu Sri Lankas sieben Tee-Anbauregionen heran, zu denen Kandy, Uva, Ruhuna (Süden), Udapussellawa, Nuwara Eliya, Dimbula und Sabaragamuwa zählen. Hochlandtee (oberhalb von etwa 1.200 m, wie in Nuwara Eliya und Uva) ist tendenziell fein und aromatisch; Tieflandtee (unterhalb von etwa 600 m, wie hier produziert) ist typischerweise kräftiger und dunkler — dieses Anwesen ist ein Tiefland-, oder 'Pahatharata'-Produzent, und liegt speziell in der Tee-Anbauregion Ruhuna. Besucher werden traditionell mit 'Ayubowan' begrüßt — einem singhalesischen Gruß, der 'mögest du lange leben' bedeutet —, manchmal persönlich vom Vorsitzenden des Anwesens selbst, Anura Athukorala.",
       duration: "5-10 Minuten",
     },
     "jaggery-palm": {
@@ -2210,9 +2210,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Marchitado",
-      description: "Las hojas frescas se extienden en capas finas sobre largos canales, donde grandes ventiladores fuerzan el paso del aire para eliminar gradualmente la humedad — lo que la finca llama el proceso de marchitado 'moderno'. La hoja se vuelve flexible y maleable, lista para el enrollado sin quebrarse.",
+      description: "Las hojas frescas se extienden en capas finas sobre largos canales, donde grandes ventiladores fuerzan el paso del aire para eliminar gradualmente la humedad — lo que la finca llama el proceso de marchitado 'moderno'. La hoja se vuelve flexible y maleable, lista para el enrollado sin quebrarse, tras perder alrededor del 45% de su humedad original en el proceso.",
       keyPoints: "El marchitado uniforma la humedad en toda la hoja y permite que las enzimas naturales comiencen los cambios químicos que más tarde crearán el aroma y el color del té.",
-      duration: "Esta etapa suele durar de 12 a 17 horas, dependiendo de la humedad y la circulación de aire.",
+      duration: "Esta etapa suele durar de 10 a 12 horas, dependiendo de la humedad y la circulación de aire.",
     },
     rolling: {
       name: "Enrollado",
@@ -2421,7 +2421,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "La Fábrica de Té",
       description: "El edificio principal de la fábrica es donde la hoja recolectada se convierte en té terminado, desde el marchitado hasta el envasado. Esta parada ofrece una visión general de la planta de la fábrica en funcionamiento y el equipo utilizado en cada etapa — marchitado, enrollado, fermentación (oxidación), secado, separación del té (clasificación) y envasado final, en ese orden.",
-      keyPoints: "Una fábrica de té en funcionamiento ejecuta toda la secuencia de marchitado a envasado bajo un mismo techo, sincronizada de cerca con la cantidad de hoja recibida cada día.",
+      keyPoints: "Una fábrica de té en funcionamiento ejecuta toda la secuencia de marchitado a envasado bajo un mismo techo, sincronizada de cerca con la cantidad de hoja recibida cada día. A los visitantes que recorren la planta de la fábrica se les pide que usen una redecilla para el cabello, una mascarilla y calzado protector, conforme a las normas de higiene de la instalación.",
       duration: "10-15 minutos",
     },
     "handmade-factory": {
@@ -2470,7 +2470,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Introducción al Té de Ceilán",
       description: "Desde principios del siglo XIX, el nombre \"Ceilán\" ha sido sinónimo de té. La historia del té de Ceilán se remonta al dominio británico en Sri Lanka, hace más de doscientos años. La primera planta de té registrada en Sri Lanka llegó en 1824, cuando los británicos trajeron una planta de té desde China y la plantaron en el Jardín Botánico Real de Peradeniya para uso no comercial. Unos años después, llegaron más cultivos de té desde Assam y Calcuta con fines experimentales. Sin embargo, el verdadero nacimiento de las plantaciones de té en Sri Lanka fue el resultado del declive de la única industria exitosa de la isla hasta entonces, la del café: en 1869, las florecientes plantaciones de café de Sri Lanka fueron golpeadas por una nueva enfermedad vegetal llamada roya del café, y como resultado, la industria cafetalera de Sri Lanka fue arrasada en menos de una década. Así comenzó el cultivo masivo de té en Sri Lanka.",
-      keyPoints: "La historia del té de Ceilán comenzó en un terreno de 19 acres en Kandy, como parte de un experimento de diversificación. Con los años, se convirtió en las siete regiones productoras de té de Sri Lanka, que incluyen Kandy, Uva, Ruhuna (Sur), Udapussellawa, Nuwara Eliya, Dimbula y Sabaragamuwa. El té de tierras altas (por encima de aproximadamente 1.200 m, como en Nuwara Eliya y Uva) tiende a ser delicado y aromático; el té de tierras bajas (por debajo de unos 600 m, como el que se produce aquí) suele ser más fuerte y oscuro — esta finca es una productora de tierras bajas, o 'Pahatharata.'",
+      keyPoints: "La historia del té de Ceilán comenzó en un terreno de 19 acres en Kandy, como parte de un experimento de diversificación. Con los años, se convirtió en las siete regiones productoras de té de Sri Lanka, que incluyen Kandy, Uva, Ruhuna (Sur), Udapussellawa, Nuwara Eliya, Dimbula y Sabaragamuwa. El té de tierras altas (por encima de aproximadamente 1.200 m, como en Nuwara Eliya y Uva) tiende a ser delicado y aromático; el té de tierras bajas (por debajo de unos 600 m, como el que se produce aquí) suele ser más fuerte y oscuro — esta finca es una productora de tierras bajas, o 'Pahatharata', situada específicamente en la región productora de té de Ruhuna. Tradicionalmente se recibe a los visitantes con 'Ayubowan' —un saludo cingalés que significa 'que vivas muchos años'—, a veces en persona por el propio presidente de la finca, Anura Athukorala.",
       duration: "5-10 minutos",
     },
     "jaggery-palm": {
@@ -2526,9 +2526,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "Flétrissage",
-      description: "Les feuilles fraîches sont étalées en fine couche sur de longs bacs, où de grands ventilateurs poussent l'air à travers elles pour éliminer progressivement l'humidité — ce que le domaine appelle le flétrissage 'moderne'. La feuille devient souple et malléable, prête pour le roulage sans se briser.",
+      description: "Les feuilles fraîches sont étalées en fine couche sur de longs bacs, où de grands ventilateurs poussent l'air à travers elles pour éliminer progressivement l'humidité — ce que le domaine appelle le flétrissage 'moderne'. La feuille devient souple et malléable, prête pour le roulage sans se briser, après avoir perdu environ 45 % de son humidité d'origine au cours du processus.",
       keyPoints: "Le flétrissage uniformise l'humidité dans la feuille et permet aux enzymes naturelles d'amorcer les changements chimiques qui créeront plus tard l'arôme et la couleur du thé.",
-      duration: "Cette étape dure généralement de 12 à 17 heures, selon l'humidité et la circulation de l'air.",
+      duration: "Cette étape dure généralement de 10 à 12 heures, selon l'humidité et la circulation de l'air.",
     },
     rolling: {
       name: "Roulage",
@@ -2737,7 +2737,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "La Fabrique de Thé",
       description: "Le bâtiment principal de l'usine est l'endroit où la feuille cueillie devient du thé fini, du flétrissage jusqu'à l'emballage. Cette étape offre un aperçu de l'atelier de production et des équipements utilisés à chaque étape — flétrissage, roulage, fermentation (oxydation), séchage, triage du thé (classification) et emballage final, dans cet ordre.",
-      keyPoints: "Une usine de thé en activité fait fonctionner toute la séquence du flétrissage à l'emballage sous un même toit, en synchronisation étroite avec l'arrivée quotidienne des feuilles.",
+      keyPoints: "Une usine de thé en activité fait fonctionner toute la séquence du flétrissage à l'emballage sous un même toit, en synchronisation étroite avec l'arrivée quotidienne des feuilles. Les visiteurs qui parcourent l'atelier de production sont priés de porter une charlotte, un masque et des chaussures de protection, conformément aux normes d'hygiène de l'établissement.",
       duration: "10-15 minutes",
     },
     "handmade-factory": {
@@ -2786,7 +2786,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Introduction au Thé de Ceylan",
       description: "Depuis le début des années 1800, le nom « Ceylan » est synonyme de thé. L'histoire du thé de Ceylan remonte à la domination britannique au Sri Lanka, il y a plus de deux cents ans. Le premier théier recensé au Sri Lanka est arrivé en 1824, lorsque les Britanniques ont rapporté un théier de Chine et l'ont planté dans le Jardin Botanique Royal de Peradeniya à des fins non commerciales. Quelques années plus tard, d'autres cultures de thé sont arrivées d'Assam et de Calcutta à des fins expérimentales. La véritable naissance des plantations de thé au Sri Lanka résulte cependant du déclin de l'unique industrie prospère de l'île jusqu'alors, celle du café : en 1869, les florissantes plantations de café du Sri Lanka ont été frappées par une nouvelle maladie végétale appelée rouille du caféier, ce qui a anéanti l'industrie caféière du Sri Lanka en moins d'une décennie. C'est ainsi qu'a commencé la culture massive du thé au Sri Lanka.",
-      keyPoints: "L'histoire du thé de Ceylan a commencé sur un terrain de 19 acres à Kandy, dans le cadre d'une expérience de diversification. Au fil des années, elle s'est développée pour devenir les sept régions théicoles du Sri Lanka, parmi lesquelles Kandy, Uva, Ruhuna (Sud), Udapussellawa, Nuwara Eliya, Dimbula et Sabaragamuwa. Le thé de hautes terres (au-dessus d'environ 1 200 m, comme à Nuwara Eliya et Uva) tend à être délicat et aromatique ; le thé de basses terres (en dessous d'environ 600 m, comme celui produit ici) est généralement plus fort et plus foncé — cette plantation est une productrice de basses terres, ou « Pahatharata ».",
+      keyPoints: "L'histoire du thé de Ceylan a commencé sur un terrain de 19 acres à Kandy, dans le cadre d'une expérience de diversification. Au fil des années, elle s'est développée pour devenir les sept régions théicoles du Sri Lanka, parmi lesquelles Kandy, Uva, Ruhuna (Sud), Udapussellawa, Nuwara Eliya, Dimbula et Sabaragamuwa. Le thé de hautes terres (au-dessus d'environ 1 200 m, comme à Nuwara Eliya et Uva) tend à être délicat et aromatique ; le thé de basses terres (en dessous d'environ 600 m, comme celui produit ici) est généralement plus fort et plus foncé — cette plantation est une productrice de basses terres, ou « Pahatharata », située précisément dans la région théicole de Ruhuna. Les visiteurs sont traditionnellement accueillis par « Ayubowan » — une salutation cingalaise signifiant « puissiez-vous vivre longtemps » —, parfois en personne par le président du domaine lui-même, Anura Athukorala.",
       duration: "5-10 minutes",
     },
     "jaggery-palm": {
@@ -2842,9 +2842,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "萎凋",
-      description: "新鲜茶叶被薄薄地摊放在长长的萎凋槽中，大型风扇会强制送风穿过茶叶，持续带走水分——这就是庄园所称的“现代”萎凋工艺。叶片逐渐变得柔软有韧性，可以进行揉捻而不会破碎。",
+      description: "新鲜茶叶被薄薄地摊放在长长的萎凋槽中，大型风扇会强制送风穿过茶叶，持续带走水分——这就是庄园所称的“现代”萎凋工艺。叶片逐渐变得柔软有韧性，可以进行揉捻而不会破碎，这一过程中大约会流失原有水分的45%。",
       keyPoints: "萎凋使叶片水分均匀分布，并使天然酶开始引发日后形成茶叶香气和色泽的化学变化。",
-      duration: "此阶段通常需要12至17小时，具体取决于湿度和通风情况。",
+      duration: "此阶段通常需要10至12小时，具体取决于湿度和通风情况。",
     },
     rolling: {
       name: "揉捻",
@@ -3053,7 +3053,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "茶厂",
       description: "主厂房是采摘下来的茶叶经萎凋直至包装制成成品茶的地方。本站概览工厂车间及各阶段所用的设备——依次为萎凋、揉捻、发酵（氧化）、干燥、茶叶分选（分级）以及最终包装。",
-      keyPoints: "一座运转中的茶厂在同一屋檐下完成从萎凋到包装的全部流程，并需与每日采摘量紧密配合。",
+      keyPoints: "一座运转中的茶厂在同一屋檐下完成从萎凋到包装的全部流程，并需与每日采摘量紧密配合。按照工厂的卫生标准，参观车间的访客需佩戴发网、口罩，并穿着防护鞋。",
       duration: "10-15分钟",
     },
     "handmade-factory": {
@@ -3102,7 +3102,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "锡兰茶导览",
       description: "自19世纪初以来，“锡兰”这个名字便与茶叶密不可分。锡兰茶的历史可追溯至斯里兰卡的英国殖民统治时期，距今已有两百多年。斯里兰卡有记录的第一株茶树出现于1824年，当时英国人从中国带来一株茶树，种植在佩拉德尼亚皇家植物园内作非商业用途。几年后，又有更多茶叶作物从阿萨姆和加尔各答引入进行试种。然而，斯里兰卡茶园的真正诞生，源于该岛当时唯一成功产业——咖啡业的衰落：1869年，斯里兰卡繁荣的咖啡种植园遭受一种名为咖啡锈病的新植物病害侵袭，致使斯里兰卡的咖啡产业在不到十年间彻底覆灭。斯里兰卡的大规模茶叶种植由此拉开序幕。",
-      keyPoints: "锡兰茶的故事始于康提一块19英亩土地上的多元化种植试验。历经岁月，它发展成斯里兰卡如今的七大产茶区，包括：康提、乌瓦、鲁哈纳（南部）、乌达普塞拉瓦、努沃勒埃利耶、丁布拉和萨伯拉加姆瓦。高地茶（海拔约1200米以上，如努沃勒埃利耶和乌瓦地区）通常口感细腻、香气高扬；低地茶（海拔约600米以下，如本庄园所产）则通常更为浓烈、色泽更深——本庄园属于低地（“Pahatharata”）茶产区。",
+      keyPoints: "锡兰茶的故事始于康提一块19英亩土地上的多元化种植试验。历经岁月，它发展成斯里兰卡如今的七大产茶区，包括：康提、乌瓦、鲁哈纳（南部）、乌达普塞拉瓦、努沃勒埃利耶、丁布拉和萨伯拉加姆瓦。高地茶（海拔约1200米以上，如努沃勒埃利耶和乌瓦地区）通常口感细腻、香气高扬；低地茶（海拔约600米以下，如本庄园所产）则通常更为浓烈、色泽更深——本庄园属于低地（“Pahatharata”）茶产区，具体位于鲁哈纳产茶区内。访客通常会以「Ayubowan」——一句意为「愿您长寿」的僧伽罗语问候语——受到迎接，有时还会由庄园主席阿努拉·阿图科拉拉（Anura Athukorala）亲自接待。",
       duration: "5-10分钟",
     },
     "jaggery-palm": {
@@ -3158,9 +3158,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     withering: {
       name: "萎凋",
-      description: "生葉は長い萎凋槽に薄く広げられ、大型の送風機で強制的に風を通すことで水分が徐々に取り除かれます——農園ではこれを「モダン」萎凋プロセスと呼んでいます。葉は次第にしなやかになり、崩れることなく揉捻できる状態になります。",
+      description: "生葉は長い萎凋槽に薄く広げられ、大型の送風機で強制的に風を通すことで水分が徐々に取り除かれます——農園ではこれを「モダン」萎凋プロセスと呼んでいます。葉は次第にしなやかになり、崩れることなく揉捻できる状態になります。この工程で元の水分の約45%が失われます。",
       keyPoints: "萎凋は葉全体の水分を均一にし、天然の酵素が、後に紅茶の香りと色を生み出す化学変化を始めるきっかけとなります。",
-      duration: "この工程には通常、湿度と通風にもよりますが12〜17時間かかります。",
+      duration: "この工程には通常、湿度と通風にもよりますが10〜12時間かかります。",
     },
     rolling: {
       name: "揉捻",
@@ -3369,7 +3369,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "tea-factory": {
       name: "紅茶工場",
       description: "本館の工場は、摘み取られた茶葉が萎凋から梱包まで経て仕上げの紅茶になる場所です。このストップでは、稼働中の工場フロアと各工程で使われる設備を概観します——萎凋、揉捻、発酵（酸化）、乾燥、茶葉選別（格付け）、そして最終梱包の順です。",
-      keyPoints: "稼働中の紅茶工場は、萎凋から梱包までの全工程を一つの屋根の下で行い、毎日の茶葉の搬入量に合わせて緊密にタイミングを調整します。",
+      keyPoints: "稼働中の紅茶工場は、萎凋から梱包までの全工程を一つの屋根の下で行い、毎日の茶葉の搬入量に合わせて緊密にタイミングを調整します。工場フロアを見学する訪問者は、施設の衛生基準に従い、ヘアネット、マスク、保護シューズの着用をお願いしています。",
       duration: "10〜15分",
     },
     "handmade-factory": {
@@ -3418,7 +3418,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "セイロンティー入門",
       description: "1800年代初頭以来、「セイロン」という名前は紅茶の代名詞となってきました。セイロンティーの歴史は、200年以上前のスリランカにおける英国統治の時代にまでさかのぼります。スリランカで記録された最初の茶樹は1824年に到来しました。当時イギリス人が中国から茶樹を持ち込み、非営利用途としてペラデニヤ王立植物園に植えたのです。数年後には、試験栽培のためにアッサムやカルカッタからさらに茶の苗が運ばれました。しかし、スリランカにおける茶園の真の誕生は、当時島で唯一成功していたコーヒー産業の衰退の結果でした。1869年、スリランカの繁栄していたコーヒー農園はコーヒーさび病と呼ばれる新たな植物の病気に襲われ、その結果、スリランカのコーヒー産業は10年足らずで壊滅しました。こうしてスリランカでの茶の大規模栽培が始まったのです。",
-      keyPoints: "セイロンティーの物語は、キャンディの19エーカーの土地で行われた多角化実験として始まりました。長い年月を経て、それはスリランカの7つの茶産地へと発展しました。キャンディ、ウバ、ルフナ（南部）、ウダプッセラワ、ヌワラエリヤ、ディンブラ、サバラガムワです。高地茶（ヌワラエリヤやウバなど、標高約1,200m以上）は繊細で香り高い傾向があり、低地茶（ここで生産されるような標高約600m未満）は一般により力強く色が濃くなります——この農園は低地（「パハタラタ」）産地です。",
+      keyPoints: "セイロンティーの物語は、キャンディの19エーカーの土地で行われた多角化実験として始まりました。長い年月を経て、それはスリランカの7つの茶産地へと発展しました。キャンディ、ウバ、ルフナ（南部）、ウダプッセラワ、ヌワラエリヤ、ディンブラ、サバラガムワです。高地茶（ヌワラエリヤやウバなど、標高約1,200m以上）は繊細で香り高い傾向があり、低地茶（ここで生産されるような標高約600m未満）は一般により力強く色が濃くなります——この農園は低地（「パハタラタ」）産地です——特にルフナ茶産地に位置しています。訪問者は伝統的に「アーユボーワン」——「長寿を」という意味のシンハラ語の挨拶——で迎えられ、時には農園の会長であるアヌラ・アトゥコララ氏自らが直接出迎えることもあります。",
       duration: "5〜10分",
     },
     "jaggery-palm": {
