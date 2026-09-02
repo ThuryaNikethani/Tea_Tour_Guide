@@ -92,6 +92,14 @@ import kithulTreeImg from "../assets/kithul/kithul-tree.jpg";
 import kithulLeavesImg from "../assets/kithul/kithul-leaves.jpg";
 import kithulInflorescence1Img from "../assets/kithul/kithul-inflorescence-1.jpg";
 import kithulInflorescence2Img from "../assets/kithul/kithul-inflorescence-2.jpg";
+// Sourced from the factory's own turmeric microsite (tumeric-atf.netlify.app,
+// note the site's own spelling) — real photos of the estate's Curcuma longa
+// crop, none carrying any visible third-party credit. See the provenance
+// note near the "turmeric" station below.
+import turmericPlantImg from "../assets/turmeric/turmeric-plant.jpg";
+import turmericFlowerImg from "../assets/turmeric/turmeric-flower.webp";
+import turmericRhizomeImg from "../assets/turmeric/turmeric-rhizome.webp";
+import turmericFieldImg from "../assets/turmeric/turmeric-field.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -720,6 +728,21 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * poetic outro ("the soul of a nation captured in every drop") was not
  * used anywhere — it's marketing language, not a verifiable fact, and
  * doesn't fit this site's factual tone.
+ * The "turmeric" station was upgraded from a generic placeholder to
+ * `verified: true` on 2026-09-02, sourced from the factory's own turmeric
+ * microsite (tumeric-atf.netlify.app — note the site's own spelling of
+ * "tumeric," not this app's) — rewritten rather than copied verbatim,
+ * using the same rich `sections`/`items` format as "cinnamon",
+ * "jaggery-palm", and "coconut-field". Unlike those last two, none of
+ * this source's ten photos carried any visible third-party credit or
+ * watermark, so the four used here (turmeric-plant, turmeric-flower,
+ * turmeric-rhizome, turmeric-field) were picked purely for how well they
+ * illustrate the station's sections, with no provenance exclusions
+ * needed. As with "jaggery-palm" and "coconut-field", the site's facts are
+ * general Curcuma longa botany and product knowledge rather than anything
+ * specific to how this estate itself grows or processes turmeric — no
+ * estate-specific detail was available, so the content stays at the level
+ * of confirmed general fact.
  */
 export const STATIONS: Station[] = [
   {
@@ -1073,11 +1096,38 @@ export const STATIONS: Station[] = [
     name: "Turmeric Plantation",
     shortName: "Turmeric",
     icon: "Leaf",
-    verified: false,
-    description:
-      "Turmeric is grown alongside ginger and tea on many Sri Lankan estates. This stop covers how the rhizome is grown, harvested, and used in cooking and traditional medicine.",
-    keyPoints:
-      "Like ginger, turmeric is a rhizome crop harvested by digging up the root rather than picking leaves, valued both as a spice and for its use in traditional Ayurvedic medicine.",
+    verified: true,
+    lastVerified: "2026-09-02",
+    heroTagline: "From a golden rhizome in the ground to a spice, dye, and medicine cabinet staple.",
+    sections: [
+      {
+        heading: "About the Turmeric Plant",
+        image: turmericPlantImg,
+        body: "Curcuma longa — the turmeric plant — is a perennial herb in the ginger family, Zingiberaceae, native to South Asia. It's grown chiefly for its rhizomes, which are boiled, dried, and ground into the bright yellow powder known as turmeric. The plant thrives in warm, humid climates with well-drained, fertile soil, and has been valued for centuries as a spice, a natural dye, and a traditional medicine.",
+      },
+      {
+        heading: "Characteristics",
+        image: turmericFlowerImg,
+        body: "A quick look at the plant itself:",
+        items: [
+          { heading: "Height", body: "Up to 1 metre tall." },
+          { heading: "Leaves", body: "Large, bright green, oblong leaves with long stalks emerging from the rhizome base." },
+          { heading: "Flowers", body: "Pale yellow to white flowers arranged in dense, conical spikes surrounded by green bracts." },
+          { heading: "Fruit", body: "A small, dry capsule containing numerous seeds; rarely seen on cultivated plants." },
+          { heading: "Habitat", body: "Tropical and subtropical regions with moderate rainfall and partial shade." },
+        ],
+      },
+      {
+        heading: "Uses and Benefits",
+        image: [turmericRhizomeImg, turmericFieldImg],
+        body: "The turmeric plant's value goes well beyond its rhizome's colour:",
+        items: [
+          { heading: "Culinary Uses", body: "Widely used as a spice in curries, soups, rice dishes, and sauces, turmeric adds a warm, earthy flavour and golden colour to food, and is also used in beverages such as turmeric milk and turmeric tea." },
+          { heading: "Medicinal Properties", body: "Turmeric contains curcumin, a natural compound with strong antioxidant and anti-inflammatory properties, traditionally used to support joint health, aid digestion, boost immunity, and promote skin wellness." },
+          { heading: "Ecological Importance", body: "Turmeric cultivation supports sustainable agriculture — its dense foliage helps reduce soil erosion, and the plant is often intercropped with others to improve soil health and biodiversity." },
+        ],
+      },
+    ],
     duration: "5-10 minutes",
   },
   {
