@@ -634,6 +634,36 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * white tea overview, artisanal and flavoured tea trends, and black tea's
  * BOP1/OP1 grade naming — restates ground already covered in detail
  * elsewhere in this file, so nothing further was added from it.
+ * A tenth source (2026-09-02, an audio narration walking through the
+ * manufacturing stages in sequence) added several precise, non-duplicating
+ * details, again checked against everything already documented first.
+ * "tea-factory" and "withering" both gained a step not previously
+ * mentioned: incoming leaf is weighed on arrival to log the day's harvest
+ * before withering begins, and the withered leaf is weighed again before
+ * moving on to rolling — the overview's process list now opens with
+ * "weighing" accordingly. "withering" also gained the trough's physical
+ * depth (roughly a foot) and a clearer moisture figure: leaf arrives at
+ * about 75% moisture and leaves withering at roughly 45%, replacing the
+ * vaguer "lost around 45% of its original moisture" phrasing from the
+ * eighth transcript with the same underlying fact stated more precisely.
+ * This source's own withering-duration figure ("8 to 18 hours, depending
+ * on weather") was NOT used to replace the existing 10-12 hour duration,
+ * since that figure came from an on-site guide speaking about this
+ * specific estate, while this narration reads as general industry
+ * knowledge rather than an Athukorala-specific claim — kept as the more
+ * specific, authoritative source. "rolling" gained the name and purpose of
+ * the first of its several passes, a gentle "pre-conditioning" roll meant
+ * to coat the twisted particles in the leaf's own juices before firmer
+ * rolling follows. "fermentation" gained a temperature figure, held around
+ * 25-30°C, not previously stated. "drying" gained the moisture level
+ * entering the dryer (around 45-50%, consistent with withering's own
+ * ~45% exit figure) alongside the already-documented ~2-3% it leaves at.
+ * A biochemistry aside about tannins and oxidizing enzymes producing
+ * "brown products" was deliberately left out as too imprecise a
+ * simplification to state as fact, and the source's description of the
+ * grading machinery (vibrating mesh screens attracting stalk and fibre)
+ * was left out too, since it restates — in less specific terms — the
+ * sieves and electrostatic separator already documented on "sorting".
  */
 export const STATIONS: Station[] = [
   {
@@ -778,7 +808,7 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "Fresh leaves are spread thinly across long troughs, where large fans force air through them to steadily remove moisture — what the estate calls the 'modern' withering process. The leaf turns limp and pliable, ready for rolling without shattering, having lost around 45% of its original moisture along the way.",
+      "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs roughly a foot deep, where large fans force air through it to steadily remove moisture — what the estate calls the 'modern' withering process. Moisture drops from around 75% at plucking to roughly 45% by the time the leaf turns limp and pliable, ready for rolling without shattering. The withered leaf is weighed again before it moves on to rolling.",
     keyPoints:
       "Withering evens out moisture across the leaf and lets natural enzymes begin the chemical changes that will later create the tea's aroma and colour.",
     duration: "This stage typically takes 10 to 12 hours, depending on humidity and airflow.",
@@ -794,7 +824,7 @@ export const STATIONS: Station[] = [
     description:
       "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
     keyPoints:
-      "Breaking the cell walls exposes enzymes to oxygen, kicking off oxidation. How hard and how long the leaf is rolled shapes the final tea's strength and appearance.",
+      "Breaking the cell walls exposes enzymes to oxygen, kicking off oxidation. How hard and how long the leaf is rolled shapes the final tea's strength and appearance. The first of several passes, a gentle 'pre-conditioning' roll, is meant to coat the twisted particles in the leaf's own juices before firmer rolling follows.",
     duration: "Rolling usually runs for 45 minutes to an hour, often in multiple passes.",
   },
   {
@@ -806,7 +836,7 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "Rolled leaf is spread out in a cool, humid room and left to oxidise, with a humidifier keeping the air moist enough for the reaction to happen. The green leaf gradually turns a coppery brown as it develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
+      "Rolled leaf is spread out in a cool, humid room held at around 25 to 30°C and left to oxidise, with a humidifier keeping the air moist enough for the reaction to happen. The green leaf gradually turns a coppery brown as it develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
     keyPoints:
       "This is the single most important step for flavour. Timing has to be judged precisely — too little and the tea is thin, too much and it turns flat and dull. It's also what separates the tea types made here: black tea goes withering, rolling, fermentation, then firing, while green tea skips fermentation entirely (withering, rolling, drying only) and is milder — mostly drunk for its gentler, more medicinal character; white tea skips both withering and fermentation, going straight from fresh leaf to steaming and drying. The factory doesn't produce Oolong tea, which the guide describes as a black-tea-like fermented style made by repeated steaming and hand-brushing rather than machine rolling.",
     duration: "At this factory, fermentation typically takes 1.5 to 2.5 hours depending on conditions, before the leaf moves on to drying.",
@@ -822,7 +852,7 @@ export const STATIONS: Station[] = [
     description:
       "The oxidised leaf passes through hot-air dryers — reportedly running at around 240°C — that halt oxidation instantly and lock in the tea's character. What comes out the other end is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
     keyPoints:
-      "Firing stops the chemical changes at exactly the right moment and reduces moisture to about 2-3%, which is essential for the tea to stay fresh during storage and shipping.",
+      "Firing stops the chemical changes at exactly the right moment and reduces moisture from around 45-50% down to about 2-3%, which is essential for the tea to stay fresh during storage and shipping.",
     duration: "Leaf passes through the dryer in around 20 minutes at carefully controlled temperatures.",
   },
   {
@@ -1138,9 +1168,9 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-01",
     description:
-      "The main factory building is where plucked leaf is turned into finished tea, from withering through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order.",
+      "The main factory building is where plucked leaf is turned into finished tea, from weighing through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — weighing, withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order.",
     keyPoints:
-      "A working tea factory runs the full withering-to-packing sequence under one roof, timed closely with each day's leaf intake. Visitors touring the factory floor are asked to wear a hairnet, a mask, and protective footwear, in line with the facility's hygiene standards.",
+      "A working tea factory runs the full weighing-to-packing sequence under one roof, timed closely with each day's leaf intake — incoming leaf is weighed on arrival to log the day's harvest before processing begins. Visitors touring the factory floor are asked to wear a hairnet, a mask, and protective footwear, in line with the facility's hygiene standards.",
     duration: "10-15 minutes",
   },
   {
