@@ -568,6 +568,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * nursery beds — was left out not for provenance reasons but simply for
  * file size (14MB unprocessed). Swap in real estate photography here first
  * if it ever becomes available.
+ * A real video of the estate's own cinnamon peeling process ("ATF
+ * CINNAMON.mp4", supplied by the user on 2026-09-02) was added to the
+ * "cinnamon" station as `processVideo`, playing after the last section —
+ * the same slot the "nursery" station's process video already uses. Only
+ * the video itself was added; no new facts were transcribed from its audio
+ * (no speech-to-text tooling is available in this environment), so none of
+ * the station's text changed. If a written transcript of its dialogue is
+ * supplied later, fold any new facts in the same way as the other on-site
+ * video transcripts documented above.
  */
 export const STATIONS: Station[] = [
   {
@@ -856,6 +865,7 @@ export const STATIONS: Station[] = [
         ],
       },
     ],
+    processVideo: "/videos/cinnamon-peeling-process.mp4",
   },
   {
     id: "ginger-turmeric",
