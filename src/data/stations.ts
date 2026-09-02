@@ -743,6 +743,25 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * specific to how this estate itself grows or processes turmeric — no
  * estate-specific detail was available, so the content stays at the level
  * of confirmed general fact.
+ * "organic-cultivation" was corrected and upgraded to `verified: true` on
+ * 2026-09-02 following a direct clarification from the estate: there is no
+ * separate organic tea plot. "Organic cultivation" here refers specifically
+ * to the estate's organic growing of TRI 2043 — the same low-yielding,
+ * anthocyanin-rich purple-shoot cultivar (referred to by the estate as
+ * "china tea") also grown for the specialty grades documented in
+ * "artisanal-tea-grades". The station describes the plant directly rather
+ * than just pointing to that other stop, since a visitor may reach this
+ * station first; the facts stated are the same low-yield/purple-shoot/
+ * anthocyanin/Golden-Tip-Silver-Tip details established there, just
+ * self-contained here instead of assumed already-seen. This wording was
+ * revised again the same day after catching a real conflict: the
+ * "nursery" station's "Tea Cultivars" section already describes its own
+ * TRI 2043 as an unproven trial specimen not yet cleared for planting out
+ * at scale, which flatly contradicted this station's original claim that
+ * TRI 2043 "is grown here." Resolved by distinguishing the two: mature,
+ * organically-grown TRI 2043 bushes already exist and already supply the
+ * specialty grades, separate from the younger trial cuttings still being
+ * evaluated in the nursery for future expansion.
  */
 export const STATIONS: Station[] = [
   {
@@ -1204,11 +1223,12 @@ export const STATIONS: Station[] = [
     name: "Organic Tea Cultivation",
     shortName: "Organic Tea",
     icon: "Recycle",
-    verified: false,
+    verified: true,
+    lastVerified: "2026-09-02",
     description:
-      "Organic cultivation avoids synthetic pesticides and fertilizers. This stop covers what sets an organic tea plot apart from conventional cultivation.",
+      "The tea cultivar grown organically at this estate is TRI 2043, a China-type cultivar bred by the Tea Research Institute and known for a purple-hued shoot coloured by the pigment anthocyanin instead of the usual green. Mature TRI 2043 bushes here, grown without synthetic pesticides or fertilisers, already supply specialty grades like Golden Tip, Silver Tip, White Tea, Purple Tea, and Pink Tea. That's different from the younger TRI 2043 cuttings back at the nursery — those are still being trialled and haven't been cleared for planting at scale yet.",
     keyPoints:
-      "Organic certification typically requires several years of chemical-free cultivation before a plot can be certified, and yields are often lower than conventional plots.",
+      "TRI 2043 is naturally low-yielding, which is why the specialty grades made from it stay so limited in supply. Organic certification itself generally requires several years of chemical-free cultivation before a plot can be certified, with yields running lower than on conventionally managed land throughout.",
     duration: "5-10 minutes",
   },
   {
