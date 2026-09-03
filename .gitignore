@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Local scratch output from dev-server/build/lint runs redirected to a file
+*_out.txt
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
