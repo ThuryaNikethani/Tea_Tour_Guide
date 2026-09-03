@@ -43,6 +43,17 @@ import type { StationTranslation } from "./stations";
  * prose in the file) rather than every string, to avoid touching text that
  * already read fine and risking introducing new errors. The rest of the
  * file still carries the same not-native-reviewed caveat as above.
+ *
+ * "unique-fruits" was upgraded from a generic placeholder to `verified: true`
+ * on 2026-09-03, sourced from the factory's own dragon fruit microsite
+ * (dragon-fruit-atf.netlify.app), and translated into all 10 languages
+ * through three different shapes the same day as stations.ts evolved:
+ * simple description/keyPoints, then a single rich station with sequential
+ * sections, and finally the current `fruits` gallery shape — an intro
+ * section plus `fruitNames`/`fruitSectionHeadings`/`fruitSectionBodies`/
+ * `fruitItemHeadings`/`fruitItemBodies`, each indexed [fruitIndex][...] to
+ * match `StationTranslation`'s new fruit-gallery fields. See stations.ts
+ * for the full reasoning.
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -558,9 +569,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "ශ්‍රී ලංකාවේ අනන්‍ය පලතුරු",
-      description: "ශ්‍රී ලංකාවේ දේශගුණය, වෙනත් තැන්වල සුලභ නොවන පලතුරු රැසකට හිතකර වේ. මෙම නැවතුම, තේ සහ අනෙකුත් වතු බෝගවලට යාබදව බොහෝ විට වගා කරන දූපතේ සුවිශේෂී පලතුරු වර්ග කිහිපයක් හඳුන්වා දෙයි.",
-      keyPoints: "ශ්‍රී ලංකාවේ පලතුරු වර්ග, එහි මෝසම් බලපෑමට ලක් වූ නිවර්තන දේශගුණය සහ විවිධ උස මට්ටම්වල සියවස් ගණනාවක වගාවේ ඉතිහාසය පිළිබිඹු කරයි.",
-      duration: "මිනිත්තු 5",
+      heroTagline: "දූපතේම වගා කරන එහි වඩාත්ම කැපී පෙනෙන බෝගවලින් සමහරක් වෙත සමීපව බැලීමක්.",
+      sectionHeadings: ["ශ්‍රී ලංකාවේ පලතුරු","පලතුරු හඳුනා ගන්න"],
+      sectionBodies: [
+        "ශ්‍රී ලංකාවේ දේශගුණය වෙනත් තැන්වල සුලභ නොවන පලතුරු රැසකට හිතකර වන අතර, ඒවායින් බොහොමයක් තේ සහ අනෙකුත් වතු බෝග අසලම වගා කරනු ලැබේ. මෙහි වගා කරන එකක් වඩාත් සමීපව බැලීමට පහත පලතුරක් තෝරන්න.",
+        "සම්පූර්ණ විස්තර බැලීමට පලතුරක් තෝරන්න:",
+      ],
+      fruitNames: ["ඩ්‍රැගන් ෆෘට්"],
+      fruitSectionHeadings: [["ඩ්‍රැගන් ෆෘට් ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"]],
+      fruitSectionBodies: [
+        [
+          "ඩ්‍රැගන් ෆෘට් ශාකය, විද්‍යාත්මකව Hylocereus undatus ලෙස හඳුන්වන — පිටායා (Pitaya) හෝ ස්ට්‍රෝබෙරි පෙයාර්ස් ලෙසද හැඳින්වේ — මධ්‍යම හා දකුණු ඇමරිකාවට ආවේණික, නමුත් වතුයාය ඇතුළුව දැන් ලොව පුරා උණුසුම් දේශගුණයන්හි වගා කරන නගින කැක්ටස් ශාකයකි. කණුවක ආධාරයෙන් හික්මවූ එහි ත්‍රිකෝණාකාර, කටු සහිත, මාංශල කොළ පැහැති කඳන් මීටර් 5 සිට 10 දක්වා වර්ධනය විය හැක. එහි විශාල සුදු මල් රාත්‍රියේ පමණක් පිපී උදෑසන වන විට නැවත වැසෙන අතර, එයට 'රාත්‍රියේ රැජින' යන අන්වර්ථ නාමය ලබා දී ඇත.",
+          "ශාකය පිළිබඳ කෙටි විස්තරයක්:",
+          "ඩ්‍රැගන් ෆෘට් හි වටිනාකම එහි විස්මිත පෙනුමට වඩා බොහෝ දුරට විහිදේ:",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["වර්ධන ස්වභාවය","කඳන්","මල්","ඵලය","වාසස්ථානය"],
+          ["ආහාර පිසීමේ භාවිතය","ඖෂධීය ගුණාංග","පාරිසරික වැදගත්කම"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "ආධාරයක් සමඟින් මීටර් 5 සිට 10 දක්වා වර්ධනය විය හැකි නගින හෝ වැල් ස්වභාවයක් ඇති කැක්ටස් ශාකයකි.",
+            "දාර දිගේ කුඩා කටු සහිත ත්‍රිකෝණාකාර, කොළ පැහැති, මාංශල කඳන්.",
+            "සෙන්ටිමීටර් 30ක් දක්වා දිග විශාල, සුදු, සුවඳවත්, රාත්‍රියේ පිපෙන මල්.",
+            "දීප්ත රෝස හෝ රතු පැහැති සම සහිතව සහ කුඩා කළු බීජවලින් පිරුණු සුදු හෝ රතු පල්ප සහිත ඩිම්බාකාර හෝ පෙයාර්ස් හැඩැති ඵලයකි.",
+            "නිවර්තන සහ අර්ධ නිවර්තන දේශගුණයන්; හොඳින් ජලය බැස යන වැලි හෝ මැටිමය පසක් සහ පූර්ණ හිරු එළිය කැමති වේ.",
+          ],
+          [
+            "නැවුම්ව අනුභව කරන, පළතුරු සලාද, smoothies, සහ අතුරුපසවලට එකතු කරන, හෝ යුෂ හා ජෑම් බවට සකසන — එහි මෘදු මිහිරි රසය සහ කැළතෙන වයනය එය නැවුම් නිවර්තන රසවින්දනයක් බවට පත් කරයි.",
+            "ප්‍රතිඔක්සිකාරක, විටමින් C, සහ තන්තු බහුල ඩ්‍රැගන් ෆෘට්, ප්‍රතිශක්තිකරණ සෞඛ්‍යයට, ආහාර දිරවීමට, සහ සම නීරෝගී භාවයට උපකාරී වේ; එහි බීජවලද හෘද සෞඛ්‍යයට හිතකර මේද අම්ල අඩංගු වේ.",
+            "එහි මල් වවුලන් හා සලබයන් වැනි රාත්‍රිකාලීන පරාග කාරකයන්ට මකරන්දය සපයන අතර, එහි නියඟයට ඔරොත්තු දීමේ හැකියාව වියලි ප්‍රදේශවල තිරසාර ගොවිතැනට සහාය වේ.",
+          ],
+        ],
+      ],
+      duration: "මිනිත්තු 10-15",
     },
     "tea-factory": {
       name: "තේ කර්මාන්තශාලාව",
@@ -901,9 +949,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "இலங்கையின் தனித்துவமான பழங்கள்",
-      description: "இலங்கையின் காலநிலை மற்ற இடங்களில் பொதுவாகக் காணப்படாத பல பழங்களை ஆதரிக்கிறது. தேயிலை மற்றும் பிற தோட்டப் பயிர்களுடன் பெரும்பாலும் வளர்க்கப்படும் தீவின் சிறப்பியல்பு பழ வகைகள் சிலவற்றை இந்த நிறுத்தம் அறிமுகப்படுத்துகிறது.",
-      keyPoints: "இலங்கையின் பழ வகைகள் அதன் பருவமழையால் பாதிக்கப்பட்ட வெப்பமண்டல காலநிலையையும், வெவ்வேறு உயர மண்டலங்களில் நூற்றாண்டுகளாக நடைபெற்ற சாகுபடியையும் பிரதிபலிக்கின்றன.",
-      duration: "5 நிமிடங்கள்",
+      heroTagline: "தீவே சொந்தமாக வளர்க்கும் அதன் மிகவும் குறிப்பிடத்தக்க பயிர்களில் சிலவற்றை நெருக்கமாகப் பார்ப்போம்.",
+      sectionHeadings: ["இலங்கையின் பழங்கள்","பழங்களை அறிந்துகொள்ளுங்கள்"],
+      sectionBodies: [
+        "இலங்கையின் காலநிலை மற்ற இடங்களில் பொதுவாகக் காணப்படாத பரந்த அளவிலான பழங்களுக்கு ஏற்றது, அவற்றில் பல தேயிலை மற்றும் பிற தோட்ட பயிர்களுக்கு அருகிலேயே பயிரிடப்படுகின்றன. இங்கு வளர்க்கப்படும் ஒன்றை நெருக்கமாகப் பார்க்க கீழே ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்.",
+        "முழு விவரங்களைப் பார்க்க ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்:",
+      ],
+      fruitNames: ["டிராகன் ஃப்ரூட்"],
+      fruitSectionHeadings: [["டிராகன் ஃப்ரூட் செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"]],
+      fruitSectionBodies: [
+        [
+          "டிராகன் ஃப்ரூட் செடி, அறிவியல் பூர்வமாக Hylocereus undatus எனப்படும் — பிடயா அல்லது ஸ்ட்ராபெரி பேர் என்றும் அழைக்கப்படுகிறது — மத்திய மற்றும் தென் அமெரிக்காவை பூர்வீகமாகக் கொண்ட ஏறும் கற்றாழை வகைச் செடியாகும், இப்போது இந்த தோட்டம் உட்பட உலகம் முழுவதும் வெப்பமான காலநிலைகளில் வளர்க்கப்படுகிறது. ஒரு தூணின் ஆதரவுடன் பயிரிடப்படும் இதன் மூன்று-பக்க, முள் கொண்ட, சதைப்பற்றுள்ள பச்சை தண்டுகள் 5 முதல் 10 மீட்டர் வரை வளரக்கூடியவை. இதன் பெரிய வெள்ளை மலர்கள் இரவில் மட்டுமே மலர்ந்து காலையில் மீண்டும் மூடிக்கொள்கின்றன, இதனால் இதற்கு 'இரவின் ராணி' என்ற செல்லப்பெயர் கிடைத்துள்ளது.",
+          "செடியைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+          "டிராகன் ஃப்ரூட்டின் மதிப்பு அதன் அற்புதமான தோற்றத்தை தாண்டி விரிவடைகிறது:",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["வளர்ச்சி முறை","தண்டுகள்","மலர்கள்","பழம்","வாழ்விடம்"],
+          ["சமையல் பயன்கள்","மருத்துவ பண்புகள்","சூழலியல் முக்கியத்துவம்"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "ஆதரவுடன் 5 முதல் 10 மீட்டர் வரை வளரக்கூடிய ஏறும் அல்லது படரும் கற்றாழை வகைச் செடி.",
+            "விளிம்புகளில் சிறிய முட்கள் கொண்ட மூன்று-பக்க, பச்சை, சதைப்பற்றுள்ள தண்டுகள்.",
+            "30 சென்டிமீட்டர் வரை நீளமுள்ள பெரிய, வெள்ளை, நறுமணமுள்ள, இரவில் மலரும் மலர்கள்.",
+            "பிரகாசமான இளஞ்சிவப்பு அல்லது சிவப்பு தோலுடனும், சிறிய கருப்பு விதைகள் நிறைந்த வெள்ளை அல்லது சிவப்பு சதையுடனும் கூடிய நீள்வட்ட அல்லது பேரிக்காய் வடிவ பழம்.",
+            "வெப்பமண்டல மற்றும் துணை வெப்பமண்டல காலநிலைகள்; நன்கு வடிகட்டும் மணல் அல்லது களிமண் மண்ணையும் முழு சூரிய ஒளியையும் விரும்புகிறது.",
+          ],
+          [
+            "புதியதாக உண்ணப்படுகிறது, பழ சாலட், ஸ்மூத்திகள், இனிப்புகளில் சேர்க்கப்படுகிறது, அல்லது சாறுகள் மற்றும் ஜாம்களாக மாற்றப்படுகிறது — இதன் மென்மையான இனிப்பு சுவையும் மொறுமொறுப்பான அமைப்பும் இதை புத்துணர்ச்சியூட்டும் வெப்பமண்டல உணவாக்குகிறது.",
+            "ஆக்ஸிஜனேற்ற எதிர்ப்பான்கள், வைட்டமின் C, மற்றும் நார்ச்சத்து நிறைந்த டிராகன் ஃப்ரூட், நோய் எதிர்ப்பு சக்தி, செரிமானம், மற்றும் தோல் ஆரோக்கியத்திற்கு உதவுகிறது; இதன் விதைகளில் இதய ஆரோக்கியத்திற்கு நல்ல கொழுப்பு அமிலங்கள் உள்ளன.",
+            "இதன் மலர்கள் வௌவால்கள் மற்றும் அந்துப்பூச்சிகள் போன்ற இரவு நேர மகரந்தச் சேர்க்கையாளர்களுக்கு தேன் அளிக்கின்றன, மேலும் இதன் வறட்சி தாங்கும் திறன் வறண்ட பகுதிகளில் நிலையான விவசாயத்திற்கு உதவுகிறது.",
+          ],
+        ],
+      ],
+      duration: "10-15 நிமிடங்கள்",
     },
     "tea-factory": {
       name: "தேயிலை தொழிற்சாலை",
@@ -1244,9 +1329,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "Frutti Unici dello Sri Lanka",
-      description: "Il clima dello Sri Lanka favorisce una gamma di frutti non comunemente visti altrove. Questa tappa presenta alcune delle varietà di frutta distintive dell'isola, spesso coltivate accanto al tè e ad altre colture della tenuta.",
-      keyPoints: "Le varietà di frutta dello Sri Lanka riflettono il suo clima tropicale influenzato dal monsone e secoli di coltivazione a diverse quote.",
-      duration: "5 minuti",
+      heroTagline: "Dall'orto dell'isola a uno sguardo più da vicino su alcune delle sue colture più sorprendenti.",
+      sectionHeadings: ["Frutti dello Sri Lanka","Scopri i Frutti"],
+      sectionBodies: [
+        "Il clima dello Sri Lanka favorisce un'ampia varietà di frutti poco comuni altrove, molti dei quali coltivati proprio accanto al tè e ad altre colture della tenuta. Scegli un frutto qui sotto per scoprirne di più su uno coltivato qui.",
+        "Seleziona un frutto per vederne tutti i dettagli:",
+      ],
+      fruitNames: ["Frutto del Drago"],
+      fruitSectionHeadings: [["Il Frutto del Drago","Caratteristiche","Usi e Benefici"]],
+      fruitSectionBodies: [
+        [
+          "Hylocereus undatus — la pianta del frutto del drago, nota anche come pitaya o pera fragola — è un cactus rampicante originario dell'America Centrale e Meridionale, oggi coltivato in climi caldi in tutto il mondo, compresa questa tenuta. Allevato su un sostegno, i suoi fusti verdi, carnosi, spinosi e a sezione triangolare possono raggiungere i 5-10 metri. I suoi grandi fiori bianchi sbocciano solo di notte e si richiudono al mattino, il che gli è valso il soprannome di 'Regina della Notte'.",
+          "Uno sguardo rapido alla pianta stessa:",
+          "Il valore del frutto del drago va ben oltre il suo aspetto sorprendente:",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["Portamento","Fusti","Fiori","Frutto","Habitat"],
+          ["Usi Culinari","Proprietà Medicinali","Importanza Ecologica"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "Un cactus rampicante o strisciante che può raggiungere i 5-10 metri con un sostegno.",
+            "Fusti verdi, carnosi, a sezione triangolare, con piccole spine lungo i bordi.",
+            "Fiori grandi, bianchi, profumati, che sbocciano di notte, lunghi fino a 30 centimetri.",
+            "Frutto ovale o a forma di pera, con buccia rosa o rossa brillante e polpa bianca o rossa punteggiata di minuscoli semi neri.",
+            "Climi tropicali e subtropicali; predilige un terreno sabbioso o argilloso ben drenato e piena esposizione al sole.",
+          ],
+          [
+            "Si mangia fresco, si aggiunge a insalate di frutta, frullati e dessert, oppure si trasforma in succhi e marmellate — il suo sapore delicatamente dolce e la consistenza croccante lo rendono un rinfrescante piacere tropicale.",
+            "Ricco di antiossidanti, vitamina C e fibre, il frutto del drago sostiene il sistema immunitario, la digestione e la vitalità della pelle; i suoi semi contengono acidi grassi benefici per il cuore.",
+            "I suoi fiori forniscono nettare a impollinatori notturni come pipistrelli e falene, e la sua resistenza alla siccità sostiene un'agricoltura sostenibile nelle regioni aride.",
+          ],
+        ],
+      ],
+      duration: "10-15 minuti",
     },
     "tea-factory": {
       name: "La Fabbrica del Tè",
@@ -1587,9 +1709,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "فواكه سريلانكا الفريدة",
-      description: "يدعم مناخ سريلانكا مجموعة من الفواكه غير الشائعة في أماكن أخرى. تُقدِّم هذه المحطة بعض أصناف الفاكهة المميزة في الجزيرة، والتي غالبًا ما تُزرع إلى جانب الشاي ومحاصيل المزرعة الأخرى.",
-      keyPoints: "تعكس أصناف الفاكهة في سريلانكا مناخها الاستوائي المتأثر بالرياح الموسمية وقرونًا من الزراعة عبر مناطق ارتفاع مختلفة.",
-      duration: "5 دقائق",
+      heroTagline: "من بساتين الجزيرة نفسها إلى نظرة أقرب على بعض محاصيلها الأكثر لفتًا للانتباه.",
+      sectionHeadings: ["فواكه سريلانكا","تعرف على الفواكه"],
+      sectionBodies: [
+        "يدعم مناخ سريلانكا مجموعة واسعة من الفواكه غير الشائعة في أماكن أخرى، ويُزرع الكثير منها إلى جانب الشاي ومحاصيل المزرعة الأخرى مباشرة. اختر فاكهة أدناه لتلقي نظرة أقرب على واحدة تُزرع هنا.",
+        "اختر فاكهة لعرض تفاصيلها الكاملة:",
+      ],
+      fruitNames: ["فاكهة التنين"],
+      fruitSectionHeadings: [["عن نبات فاكهة التنين","الخصائص","الاستخدامات والفوائد"]],
+      fruitSectionBodies: [
+        [
+          "نبات فاكهة التنين، المعروف علميًا باسم Hylocereus undatus — ويُسمى أيضًا البيتايا أو كمثرى الفراولة — هو صبار متسلق موطنه الأصلي أمريكا الوسطى والجنوبية، يُزرع الآن في المناخات الدافئة حول العالم، بما في ذلك هذه المزرعة. وبدعم من عمود، يمكن أن تصل سيقانه الخضراء اللحمية الشائكة ثلاثية الأضلاع إلى 5-10 أمتار. تتفتح أزهاره البيضاء الكبيرة ليلاً فقط وتنغلق مجددًا بحلول الصباح، مما أكسبها لقب 'ملكة الليل'.",
+          "نظرة سريعة على النبات نفسه:",
+          "تتجاوز قيمة فاكهة التنين مظهرها اللافت بكثير:",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["طريقة النمو","السيقان","الأزهار","الثمرة","الموطن"],
+          ["الاستخدامات الطهوية","الخصائص الطبية","الأهمية البيئية"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "صبار متسلق أو زاحف يمكن أن يصل إلى 5-10 أمتار بدعامة.",
+            "سيقان خضراء لحمية ثلاثية الأضلاع مع أشواك صغيرة على طول الحواف.",
+            "أزهار كبيرة بيضاء عطرية تتفتح ليلاً ويصل طولها إلى 30 سنتيمترًا.",
+            "ثمرة بيضاوية أو كمثرية الشكل بقشرة وردية أو حمراء زاهية ولب أبيض أو أحمر مليء ببذور سوداء صغيرة.",
+            "المناخات الاستوائية وشبه الاستوائية؛ تفضل تربة رملية أو طينية جيدة التصريف وأشعة شمس كاملة.",
+          ],
+          [
+            "تؤكل طازجة، وتُضاف إلى سلطات الفاكهة والعصائر المخفوقة والحلويات، أو تُحوَّل إلى عصائر ومربيات — مذاقها الحلو الخفيف وقوامها المقرمش يجعلانها طعامًا استوائيًا منعشًا.",
+            "غنية بمضادات الأكسدة وفيتامين C والألياف، تدعم فاكهة التنين صحة المناعة والهضم وحيوية البشرة؛ كما تحتوي بذورها على أحماض دهنية مفيدة للقلب.",
+            "توفر أزهارها الرحيق لملقحات ليلية مثل الخفافيش والعث، كما أن تحملها للجفاف يدعم الزراعة المستدامة في المناطق القاحلة.",
+          ],
+        ],
+      ],
+      duration: "10-15 دقيقة",
     },
     "tea-factory": {
       name: "مصنع الشاي",
@@ -1930,9 +2089,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "Уникальные фрукты Шри-Ланки",
-      description: "Климат Шри-Ланки благоприятствует множеству фруктов, редко встречающихся в других местах. Эта остановка знакомит с некоторыми характерными фруктами острова, которые часто выращивают рядом с чаем и другими плантационными культурами.",
-      keyPoints: "Разнообразие фруктов Шри-Ланки отражает её тропический, подверженный муссонам климат и столетия культивирования на разных высотах.",
-      duration: "5 минут",
+      heroTagline: "От собственных садов острова к более близкому знакомству с некоторыми из его самых ярких культур.",
+      sectionHeadings: ["Фрукты Шри-Ланки","Знакомство с фруктами"],
+      sectionBodies: [
+        "Климат Шри-Ланки благоприятствует широкому разнообразию фруктов, редко встречающихся в других местах, многие из которых выращиваются прямо рядом с чаем и другими плантационными культурами. Выберите фрукт ниже, чтобы поближе познакомиться с одним из тех, что выращивают здесь.",
+        "Выберите фрукт, чтобы увидеть полную информацию о нём:",
+      ],
+      fruitNames: ["Драконий фрукт"],
+      fruitSectionHeadings: [["О растении драконий фрукт","Характеристики","Применение и польза"]],
+      fruitSectionBodies: [
+        [
+          "Hylocereus undatus — растение драконьего фрукта, также известное как питайя или земляничная груша, — это лазающий кактус, родом из Центральной и Южной Америки, теперь выращиваемый в тёплых климатических зонах по всему миру, включая это поместье. Выращиваемые с опорой на столб, его трёхгранные, колючие, мясистые зелёные стебли могут достигать 5–10 метров. Его крупные белые цветки распускаются только ночью и снова закрываются к утру, за что растение получило прозвище «королева ночи».",
+          "Краткий обзор самого растения:",
+          "Ценность драконьего фрукта выходит далеко за рамки его эффектного вида:",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["Форма роста","Стебли","Цветки","Плод","Среда обитания"],
+          ["Кулинарное применение","Лечебные свойства","Экологическое значение"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "Лазающий или вьющийся кактус, достигающий 5–10 метров с опорой.",
+            "Трёхгранные, зелёные, мясистые стебли с небольшими шипами по краям.",
+            "Крупные, белые, ароматные, распускающиеся ночью цветки длиной до 30 сантиметров.",
+            "Овальный или грушевидный плод с ярко-розовой или красной кожурой и белой или красной мякотью, усеянной крошечными чёрными семенами.",
+            "Тропический и субтропический климат; предпочитает хорошо дренированную песчаную или суглинистую почву и полное солнце.",
+          ],
+          [
+            "Едят свежим, добавляют во фруктовые салаты, смузи и десерты или перерабатывают в соки и джемы — его слегка сладкий вкус и хрустящая текстура делают его освежающим тропическим лакомством.",
+            "Богатый антиоксидантами, витамином C и клетчаткой, драконий фрукт поддерживает иммунитет, пищеварение и здоровье кожи; его семена содержат полезные для сердца жирные кислоты.",
+            "Его цветки дают нектар ночным опылителям, таким как летучие мыши и мотыльки, а его засухоустойчивость поддерживает устойчивое земледелие в засушливых регионах.",
+          ],
+        ],
+      ],
+      duration: "10–15 минут",
     },
     "tea-factory": {
       name: "Чайная фабрика",
@@ -2273,9 +2469,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "Einzigartige Früchte Sri Lankas",
-      description: "Das Klima Sri Lankas begünstigt eine Reihe von Früchten, die anderswo selten zu finden sind. Diese Station stellt einige der charakteristischen Fruchtsorten der Insel vor, die oft neben Tee und anderen Plantagenkulturen angebaut werden.",
-      keyPoints: "Die Fruchtsorten Sri Lankas spiegeln sein tropisches, monsunbeeinflusstes Klima und Jahrhunderte des Anbaus in unterschiedlichen Höhenlagen wider.",
-      duration: "5 Minuten",
+      heroTagline: "Von den eigenen Obstgärten der Insel zu einem genaueren Blick auf einige ihrer auffälligsten Kulturen.",
+      sectionHeadings: ["Früchte Sri Lankas","Die Früchte entdecken"],
+      sectionBodies: [
+        "Das Klima Sri Lankas begünstigt eine breite Palette an Früchten, die anderswo selten zu finden sind, viele davon direkt neben Tee und anderen Plantagenkulturen angebaut. Wählen Sie unten eine Frucht aus, um sich eine hier angebaute genauer anzusehen.",
+        "Wählen Sie eine Frucht aus, um alle Details dazu zu sehen:",
+      ],
+      fruitNames: ["Drachenfrucht"],
+      fruitSectionHeadings: [["Über die Drachenfrucht-Pflanze","Merkmale","Verwendung und Vorteile"]],
+      fruitSectionBodies: [
+        [
+          "Hylocereus undatus — die Drachenfrucht-Pflanze, auch als Pitaya oder Erdbeerbirne bekannt — ist ein kletternder Kaktus, der ursprünglich aus Mittel- und Südamerika stammt und heute weltweit in warmen Klimazonen angebaut wird, auch auf diesem Anwesen. An einem Stützpfahl gezogen, können ihre dreikantigen, stacheligen, fleischigen grünen Triebe 5 bis 10 Meter erreichen. Ihre großen weißen Blüten öffnen sich nur nachts und schließen sich bis zum Morgen wieder, was ihr den Beinamen 'Königin der Nacht' eingebracht hat.",
+          "Ein kurzer Blick auf die Pflanze selbst:",
+          "Der Wert der Drachenfrucht geht weit über ihr auffälliges Erscheinungsbild hinaus:",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["Wuchsform","Triebe","Blüten","Frucht","Lebensraum"],
+          ["Kulinarische Verwendung","Medizinische Eigenschaften","Ökologische Bedeutung"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "Ein kletternder oder rankender Kaktus, der mit Stütze 5 bis 10 Meter erreichen kann.",
+            "Dreikantige, grüne, fleischige Triebe mit kleinen Stacheln entlang der Kanten.",
+            "Große, weiße, duftende, nachts blühende Blüten von bis zu 30 Zentimetern Länge.",
+            "Ovale oder birnenförmige Frucht mit leuchtend rosa oder roter Schale und weißem oder rotem Fruchtfleisch, gesprenkelt mit winzigen schwarzen Kernen.",
+            "Tropisches und subtropisches Klima; bevorzugt gut durchlässigen sandigen oder lehmigen Boden und volle Sonne.",
+          ],
+          [
+            "Wird frisch gegessen, zu Obstsalaten, Smoothies und Desserts hinzugefügt oder zu Säften und Marmeladen verarbeitet — ihr leicht süßer Geschmack und ihre knackige Textur machen sie zu einem erfrischenden tropischen Genuss.",
+            "Reich an Antioxidantien, Vitamin C und Ballaststoffen, unterstützt die Drachenfrucht Immunsystem, Verdauung und Hautvitalität; ihre Kerne enthalten herzgesunde Fettsäuren.",
+            "Ihre Blüten liefern Nektar für nächtliche Bestäuber wie Fledermäuse und Nachtfalter, und ihre Trockenheitstoleranz unterstützt nachhaltige Landwirtschaft in trockenen Regionen.",
+          ],
+        ],
+      ],
+      duration: "10-15 Minuten",
     },
     "tea-factory": {
       name: "Die Teefabrik",
@@ -2616,9 +2849,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "Frutas Únicas de Sri Lanka",
-      description: "El clima de Sri Lanka favorece una variedad de frutas que no se ven comúnmente en otros lugares. Esta parada presenta algunas de las variedades de fruta distintivas de la isla, a menudo cultivadas junto al té y otros cultivos de la finca.",
-      keyPoints: "Las variedades de fruta de Sri Lanka reflejan su clima tropical, influenciado por el monzón, y siglos de cultivo en diferentes zonas de altitud.",
-      duration: "5 minutos",
+      heroTagline: "De los propios huertos de la isla a una mirada más de cerca a algunos de sus cultivos más llamativos.",
+      sectionHeadings: ["Frutas de Sri Lanka","Descubre las Frutas"],
+      sectionBodies: [
+        "El clima de Sri Lanka favorece una amplia variedad de frutas poco comunes en otros lugares, muchas de ellas cultivadas justo junto al té y otros cultivos de la finca. Elige una fruta a continuación para ver más de cerca una de las que se cultivan aquí.",
+        "Selecciona una fruta para ver todos sus detalles:",
+      ],
+      fruitNames: ["Fruta del Dragón"],
+      fruitSectionHeadings: [["Sobre la Planta de la Fruta del Dragón","Características","Usos y Beneficios"]],
+      fruitSectionBodies: [
+        [
+          "Hylocereus undatus — la planta de la fruta del dragón, también conocida como pitaya o pera fresa — es un cactus trepador originario de Centroamérica y Sudamérica, hoy cultivado en climas cálidos de todo el mundo, incluida esta finca. Guiada sobre un poste de soporte, sus tallos verdes, carnosos, espinosos y de sección triangular pueden alcanzar los 5 a 10 metros. Sus grandes flores blancas se abren solo de noche y vuelven a cerrarse por la mañana, lo que le ha valido el apodo de 'Reina de la Noche'.",
+          "Una mirada rápida a la planta en sí:",
+          "El valor de la fruta del dragón va mucho más allá de su llamativo aspecto:",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["Hábito de Crecimiento","Tallos","Flores","Fruto","Hábitat"],
+          ["Usos Culinarios","Propiedades Medicinales","Importancia Ecológica"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "Un cactus trepador o rastrero que puede alcanzar los 5 a 10 metros con soporte.",
+            "Tallos verdes, carnosos, de sección triangular, con pequeñas espinas a lo largo de los bordes.",
+            "Flores grandes, blancas, fragantes, que florecen de noche, de hasta 30 centímetros de largo.",
+            "Fruto ovalado o en forma de pera, con piel rosa o roja brillante y pulpa blanca o roja salpicada de diminutas semillas negras.",
+            "Climas tropicales y subtropicales; prefiere suelo arenoso o arcilloso bien drenado y pleno sol.",
+          ],
+          [
+            "Se come fresca, se añade a ensaladas de frutas, batidos y postres, o se procesa en jugos y mermeladas — su sabor ligeramente dulce y su textura crujiente la convierten en un refrescante placer tropical.",
+            "Rica en antioxidantes, vitamina C y fibra, la fruta del dragón favorece la inmunidad, la digestión y la vitalidad de la piel; sus semillas contienen ácidos grasos beneficiosos para el corazón.",
+            "Sus flores proporcionan néctar a polinizadores nocturnos como murciélagos y polillas, y su tolerancia a la sequía favorece la agricultura sostenible en regiones áridas.",
+          ],
+        ],
+      ],
+      duration: "10-15 minutos",
     },
     "tea-factory": {
       name: "La Fábrica de Té",
@@ -2959,9 +3229,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "Fruits Uniques du Sri Lanka",
-      description: "Le climat du Sri Lanka favorise une gamme de fruits peu courants ailleurs. Cette étape présente certaines des variétés de fruits distinctives de l'île, souvent cultivées aux côtés du thé et d'autres cultures de la plantation.",
-      keyPoints: "Les variétés de fruits du Sri Lanka reflètent son climat tropical influencé par la mousson et des siècles de culture à différentes altitudes.",
-      duration: "5 minutes",
+      heroTagline: "Des vergers de l'île elle-même à un regard plus attentif sur certaines de ses cultures les plus frappantes.",
+      sectionHeadings: ["Fruits du Sri Lanka","Découvrir les Fruits"],
+      sectionBodies: [
+        "Le climat du Sri Lanka favorise une large variété de fruits peu courants ailleurs, dont beaucoup sont cultivés juste à côté du thé et d'autres cultures de la plantation. Choisissez un fruit ci-dessous pour découvrir de plus près l'un de ceux cultivés ici.",
+        "Sélectionnez un fruit pour voir tous ses détails :",
+      ],
+      fruitNames: ["Fruit du Dragon"],
+      fruitSectionHeadings: [["À propos du Fruit du Dragon","Caractéristiques","Usages et Bienfaits"]],
+      fruitSectionBodies: [
+        [
+          "Hylocereus undatus — le fruit du dragon, aussi appelé pitaya ou poire-fraise — est un cactus grimpant originaire d'Amérique centrale et du Sud, aujourd'hui cultivé sous climat chaud partout dans le monde, y compris sur ce domaine. Conduites sur un poteau de soutien, ses tiges vertes, charnues, épineuses et à section triangulaire peuvent atteindre 5 à 10 mètres. Ses grandes fleurs blanches ne s'ouvrent que la nuit et se referment le matin, ce qui lui a valu le surnom de 'Reine de la Nuit'.",
+          "Un rapide aperçu de la plante elle-même :",
+          "La valeur du fruit du dragon va bien au-delà de son apparence saisissante :",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["Port de Croissance","Tiges","Fleurs","Fruit","Habitat"],
+          ["Usages Culinaires","Propriétés Médicinales","Importance Écologique"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "Un cactus grimpant ou rampant pouvant atteindre 5 à 10 mètres avec un support.",
+            "Tiges vertes, charnues, à section triangulaire, avec de petites épines le long des bords.",
+            "Grandes fleurs blanches parfumées, s'épanouissant la nuit, pouvant atteindre 30 centimètres de long.",
+            "Fruit ovale ou en forme de poire, à la peau rose ou rouge vif et à la chair blanche ou rouge, mouchetée de minuscules graines noires.",
+            "Climats tropicaux et subtropicaux ; préfère un sol sableux ou argileux bien drainé et le plein soleil.",
+          ],
+          [
+            "Se mange frais, s'ajoute aux salades de fruits, aux smoothies et aux desserts, ou se transforme en jus et confitures — son goût légèrement sucré et sa texture croquante en font une friandise tropicale rafraîchissante.",
+            "Riche en antioxydants, en vitamine C et en fibres, le fruit du dragon favorise l'immunité, la digestion et la vitalité de la peau ; ses graines contiennent des acides gras bons pour le cœur.",
+            "Ses fleurs fournissent du nectar aux pollinisateurs nocturnes comme les chauves-souris et les papillons de nuit, et sa tolérance à la sécheresse favorise une agriculture durable dans les régions arides.",
+          ],
+        ],
+      ],
+      duration: "10-15 minutes",
     },
     "tea-factory": {
       name: "La Fabrique de Thé",
@@ -3302,9 +3609,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "斯里兰卡特色水果",
-      description: "斯里兰卡的气候孕育了许多其他地方少见的水果品种。本站介绍岛上常与茶树等作物一同种植的一些特色水果。",
-      keyPoints: "斯里兰卡的水果品种反映了其受季风影响的热带气候，以及不同海拔地区数百年的栽培历史。",
-      duration: "5分钟",
+      heroTagline: "从岛屿自己的果园出发，近距离了解其中一些最引人注目的作物。",
+      sectionHeadings: ["斯里兰卡的水果","认识水果"],
+      sectionBodies: [
+        "斯里兰卡的气候孕育了种类繁多、其他地方少见的水果，其中许多就种植在茶树和其他庄园作物旁边。请从下方选择一种水果，近距离了解这里种植的一种水果。",
+        "选择一种水果查看完整详情：",
+      ],
+      fruitNames: ["火龙果"],
+      fruitSectionHeadings: [["关于火龙果","特征","用途与益处"]],
+      fruitSectionBodies: [
+        [
+          "火龙果植株，学名Hylocereus undatus，也叫红龙果或草莓梨，是一种原产于中美洲和南美洲的攀援仙人掌，如今在世界各地温暖气候地区广泛种植，包括这座庄园。借助支撑柱攀爬生长，其三棱形、带刺、肉质的绿色茎可长到5到10米。它硕大的白色花朵只在夜间绽放，清晨便重新闭合，因此得名「夜之女王」。",
+          "简单了解一下这种植物：",
+          "火龙果的价值远不止于它引人注目的外观：",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["生长习性","茎","花朵","果实","生境"],
+          ["烹饪用途","药用价值","生态重要性"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "一种借助支撑物可长到5到10米的攀援或蔓生仙人掌。",
+            "三棱形、绿色、肉质的茎，边缘带有小刺。",
+            "硕大、白色、芳香、夜间开花，长度可达30厘米。",
+            "椭圆形或梨形果实，外皮呈鲜艳的粉红色或红色，内里是白色或红色果肉，点缀着细小的黑籽。",
+            "热带和亚热带气候；偏好排水良好的沙质或壤质土壤及充足的阳光。",
+          ],
+          [
+            "可生吃，也可加入水果沙拉、奶昔和甜点中，或加工成果汁和果酱——其略带甜味的口感和爽脆的质地使其成为清爽的热带美味。",
+            "火龙果富含抗氧化物质、维生素C和膳食纤维，有助于增强免疫力、促进消化和改善肌肤活力；其种子还含有对心脏有益的脂肪酸。",
+            "它的花朵为蝙蝠和飞蛾等夜行传粉者提供花蜜，其耐旱特性也有助于在干旱地区实现可持续农业发展。",
+          ],
+        ],
+      ],
+      duration: "10-15分钟",
     },
     "tea-factory": {
       name: "茶厂",
@@ -3645,9 +3989,46 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "unique-fruits": {
       name: "スリランカ固有の果物",
-      description: "スリランカの気候は、他の地域ではあまり見られない果物を育みます。このストップでは、茶などの農園作物と共に栽培されることが多い、島の特徴的な果物の一部を紹介します。",
-      keyPoints: "スリランカの果物の多様性は、モンスーンの影響を受ける熱帯気候と、標高の異なる地域での何世紀にもわたる栽培の歴史を反映しています。",
-      duration: "5分",
+      heroTagline: "島自体の果樹園から、その中でも特に印象的な作物のいくつかを詳しく見てみましょう。",
+      sectionHeadings: ["スリランカの果物","果物を見てみましょう"],
+      sectionBodies: [
+        "スリランカの気候は、他の地域ではあまり見られない幅広い種類の果物を育みますが、その多くは茶などの農園作物のすぐそばで栽培されています。ここで栽培されている果物を詳しく見るには、以下から一つ選んでください。",
+        "果物を選ぶと詳細が表示されます：",
+      ],
+      fruitNames: ["ドラゴンフルーツ"],
+      fruitSectionHeadings: [["ドラゴンフルーツの植物について","特徴","用途と効能"]],
+      fruitSectionBodies: [
+        [
+          "ドラゴンフルーツの植物、学名Hylocereus undatusは、ピタヤやストロベリーペアーとも呼ばれ、中央アメリカと南アメリカ原産のつる性サボテンで、現在はこの農園を含む世界中の温暖な気候で栽培されています。支柱に沿って育てられ、その三稜形でとげのある多肉質の緑色の茎は5〜10メートルまで育ちます。その大きな白い花は夜にだけ咲き、朝には再び閉じてしまうことから「夜の女王」という愛称がついています。",
+          "この植物についての簡単な紹介：",
+          "ドラゴンフルーツの価値は、その印象的な見た目をはるかに超えています：",
+        ],
+      ],
+      fruitItemHeadings: [
+        [
+          [],
+          ["成長習性","茎","花","果実","生育環境"],
+          ["料理での利用","薬効","生態学的重要性"],
+        ],
+      ],
+      fruitItemBodies: [
+        [
+          [],
+          [
+            "支柱があれば5〜10メートルまで育つつる性・登はん性のサボテン。",
+            "縁に小さなとげのある三稜形で肉厚な緑色の茎。",
+            "夜に咲く、大きく白い香り高い花で、長さは30センチメートルに達する。",
+            "鮮やかなピンクまたは赤い皮を持ち、小さな黒い種が散らばる白または赤の果肉を含む、楕円形または洋梨形の果実。",
+            "熱帯および亜熱帯気候。水はけの良い砂質または壌土と十分な日照を好む。",
+          ],
+          [
+            "生で食べるほか、フルーツサラダ、スムージー、デザートに加えたり、ジュースやジャムに加工したりします——ほんのり甘い味わいとシャキシャキした食感が、爽やかな南国の味わいを生み出します。",
+            "抗酸化物質、ビタミンC、食物繊維が豊富なドラゴンフルーツは、免疫力、消化、肌の健康を支えます。種子には心臓に良い脂肪酸も含まれています。",
+            "その花はコウモリや蛾といった夜行性の花粉媒介者に蜜を提供し、乾燥への耐性は乾燥地域での持続可能な農業を支えています。",
+          ],
+        ],
+      ],
+      duration: "10〜15分",
     },
     "tea-factory": {
       name: "紅茶工場",
