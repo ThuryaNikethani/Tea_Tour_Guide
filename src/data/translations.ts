@@ -54,6 +54,13 @@ import type { StationTranslation } from "./stations";
  * `fruitItemHeadings`/`fruitItemBodies`, each indexed [fruitIndex][...] to
  * match `StationTranslation`'s new fruit-gallery fields. See stations.ts
  * for the full reasoning.
+ *
+ * A second fruit, pineapple, was added to the gallery on 2026-09-03 and
+ * translated the same way, appending index 1 to fruitNames/
+ * fruitSectionHeadings/fruitSectionBodies/fruitItemHeadings/fruitItemBodies.
+ * Pineapple's fourth section (a real tea product, unlike dragon fruit)
+ * introduced `fruitItemTags`, indexed [fruitIndex][sectionIndex][itemIndex]
+ * the same way, for that section's product tags line.
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -575,13 +582,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "ශ්‍රී ලංකාවේ දේශගුණය වෙනත් තැන්වල සුලභ නොවන පලතුරු රැසකට හිතකර වන අතර, ඒවායින් බොහොමයක් තේ සහ අනෙකුත් වතු බෝග අසලම වගා කරනු ලැබේ. මෙහි වගා කරන එකක් වඩාත් සමීපව බැලීමට පහත පලතුරක් තෝරන්න.",
         "සම්පූර්ණ විස්තර බැලීමට පලතුරක් තෝරන්න:",
       ],
-      fruitNames: ["ඩ්‍රැගන් ෆෘට්"],
-      fruitSectionHeadings: [["ඩ්‍රැගන් ෆෘට් ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"]],
+      fruitNames: ["ඩ්‍රැගන් ෆෘට්","අන්නාසි"],
+      fruitSectionHeadings: [
+        ["ඩ්‍රැගන් ෆෘට් ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
+        ["අන්නාසි ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ","අන්නාසි තේ නිෂ්පාදන"],
+      ],
       fruitSectionBodies: [
         [
           "ඩ්‍රැගන් ෆෘට් ශාකය, විද්‍යාත්මකව Hylocereus undatus ලෙස හඳුන්වන — පිටායා (Pitaya) හෝ ස්ට්‍රෝබෙරි පෙයාර්ස් ලෙසද හැඳින්වේ — මධ්‍යම හා දකුණු ඇමරිකාවට ආවේණික, නමුත් වතුයාය ඇතුළුව දැන් ලොව පුරා උණුසුම් දේශගුණයන්හි වගා කරන නගින කැක්ටස් ශාකයකි. කණුවක ආධාරයෙන් හික්මවූ එහි ත්‍රිකෝණාකාර, කටු සහිත, මාංශල කොළ පැහැති කඳන් මීටර් 5 සිට 10 දක්වා වර්ධනය විය හැක. එහි විශාල සුදු මල් රාත්‍රියේ පමණක් පිපී උදෑසන වන විට නැවත වැසෙන අතර, එයට 'රාත්‍රියේ රැජින' යන අන්වර්ථ නාමය ලබා දී ඇත.",
           "ශාකය පිළිබඳ කෙටි විස්තරයක්:",
           "ඩ්‍රැගන් ෆෘට් හි වටිනාකම එහි විස්මිත පෙනුමට වඩා බොහෝ දුරට විහිදේ:",
+        ],
+        [
+          "අන්නාසි (Ananas comosus) — Bromeliaceae පවුලට අයත් නිවර්තන පලතුරු ශාකයකි, දකුණු ඇමරිකාවට ආවේණික නමුත් දැන් වතුයාය ඇතුළුව ලොව පුරා නිවර්තන හා අර්ධ නිවර්තන ප්‍රදේශවල පුළුල් ලෙස වගා කෙරේ. මෙම ශාකය කටු සහිත කඩුව-හැඩැති කොළ වලින් සමන්විත රෝසෙට් එකක් මධ්‍ය කඳක් වටා සාදන අතර, එයින් සුවිශේෂී ඵලය නිපදවනු ලැබේ. එය උණුසුම්, තෙත් දේශගුණයන්හි, හොඳින් ජලය බැස යන පසෙහි වර්ධනය වන අතර, එහි මිහිරි, ඇඹුල් රසය සඳහා අගය කරනු ලැබේ.",
+          "ශාකය පිළිබඳ කෙටි විස්තරයක්:",
+          "අන්නාසි හි වටිනාකම එහි මිහිරි පල්පයට වඩා බොහෝ දුරට විහිදේ:",
+          "කර්මාන්තශාලාව අන්නාසිද එහිම තේ පරාසයේ අගය එකතු කළ අමුද්‍රව්‍යයක් ලෙස භාවිතා කරයි, ස්වාභාවික අන්නාසි සාරය සහ උසස් තත්ත්වයේ සිලෝන් තේ කොළ වලින් සකසන ලද උසස් රස එකතු කළ තේ එකකට එය මිශ්‍ර කරමින්.",
         ],
       ],
       fruitItemHeadings: [
@@ -590,25 +606,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["වර්ධන ස්වභාවය","කඳන්","මල්","ඵලය","වාසස්ථානය"],
           ["ආහාර පිසීමේ භාවිතය","ඖෂධීය ගුණාංග","පාරිසරික වැදගත්කම"],
         ],
+        [
+          [],
+          ["උස","කොළ","මල්","ඵලය","වාසස්ථානය"],
+          ["ආහාර පිසීමේ භාවිතය","ඖෂධීය ගුණාංග","පාරිසරික වැදගත්කම"],
+          ["අන්නාසි රස එකතු කළ තේ"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "ආධාරයක් සමඟින් මීටර් 5 සිට 10 දක්වා වර්ධනය විය හැකි නගින හෝ වැල් ස්වභාවයක් ඇති කැක්ටස් ශාකයකි.",
-            "දාර දිගේ කුඩා කටු සහිත ත්‍රිකෝණාකාර, කොළ පැහැති, මාංශල කඳන්.",
-            "සෙන්ටිමීටර් 30ක් දක්වා දිග විශාල, සුදු, සුවඳවත්, රාත්‍රියේ පිපෙන මල්.",
-            "දීප්ත රෝස හෝ රතු පැහැති සම සහිතව සහ කුඩා කළු බීජවලින් පිරුණු සුදු හෝ රතු පල්ප සහිත ඩිම්බාකාර හෝ පෙයාර්ස් හැඩැති ඵලයකි.",
-            "නිවර්තන සහ අර්ධ නිවර්තන දේශගුණයන්; හොඳින් ජලය බැස යන වැලි හෝ මැටිමය පසක් සහ පූර්ණ හිරු එළිය කැමති වේ.",
-          ],
-          [
-            "නැවුම්ව අනුභව කරන, පළතුරු සලාද, smoothies, සහ අතුරුපසවලට එකතු කරන, හෝ යුෂ හා ජෑම් බවට සකසන — එහි මෘදු මිහිරි රසය සහ කැළතෙන වයනය එය නැවුම් නිවර්තන රසවින්දනයක් බවට පත් කරයි.",
-            "ප්‍රතිඔක්සිකාරක, විටමින් C, සහ තන්තු බහුල ඩ්‍රැගන් ෆෘට්, ප්‍රතිශක්තිකරණ සෞඛ්‍යයට, ආහාර දිරවීමට, සහ සම නීරෝගී භාවයට උපකාරී වේ; එහි බීජවලද හෘද සෞඛ්‍යයට හිතකර මේද අම්ල අඩංගු වේ.",
-            "එහි මල් වවුලන් හා සලබයන් වැනි රාත්‍රිකාලීන පරාග කාරකයන්ට මකරන්දය සපයන අතර, එහි නියඟයට ඔරොත්තු දීමේ හැකියාව වියලි ප්‍රදේශවල තිරසාර ගොවිතැනට සහාය වේ.",
-          ],
+          ["ආධාරයක් සමඟින් මීටර් 5 සිට 10 දක්වා වර්ධනය විය හැකි නගින හෝ වැල් ස්වභාවයක් ඇති කැක්ටස් ශාකයකි.","දාර දිගේ කුඩා කටු සහිත ත්‍රිකෝණාකාර, කොළ පැහැති, මාංශල කඳන්.","සෙන්ටිමීටර් 30ක් දක්වා දිග විශාල, සුදු, සුවඳවත්, රාත්‍රියේ පිපෙන මල්.","දීප්ත රෝස හෝ රතු පැහැති සම සහිතව සහ කුඩා කළු බීජවලින් පිරුණු සුදු හෝ රතු පල්ප සහිත ඩිම්බාකාර හෝ පෙයාර්ස් හැඩැති ඵලයකි.","නිවර්තන සහ අර්ධ නිවර්තන දේශගුණයන්; හොඳින් ජලය බැස යන වැලි හෝ මැටිමය පසක් සහ පූර්ණ හිරු එළිය කැමති වේ."],
+          ["නැවුම්ව අනුභව කරන, පළතුරු සලාද, smoothies, සහ අතුරුපසවලට එකතු කරන, හෝ යුෂ හා ජෑම් බවට සකසන — එහි මෘදු මිහිරි රසය සහ කැළතෙන වයනය එය නැවුම් නිවර්තන රසවින්දනයක් බවට පත් කරයි.","ප්‍රතිඔක්සිකාරක, විටමින් C, සහ තන්තු බහුල ඩ්‍රැගන් ෆෘට්, ප්‍රතිශක්තිකරණ සෞඛ්‍යයට, ආහාර දිරවීමට, සහ සම නීරෝගී භාවයට උපකාරී වේ; එහි බීජවලද හෘද සෞඛ්‍යයට හිතකර මේද අම්ල අඩංගු වේ.","එහි මල් වවුලන් හා සලබයන් වැනි රාත්‍රිකාලීන පරාග කාරකයන්ට මකරන්දය සපයන අතර, එහි නියඟයට ඔරොත්තු දීමේ හැකියාව වියලි ප්‍රදේශවල තිරසාර ගොවිතැනට සහාය වේ."],
+        ],
+        [
+          [],
+          ["මීටර් 1 සිට 1.5 දක්වා උසැති වේ.","කටු දාර සහිත දිග, කඩුව-හැඩැති, ශක්තිමත් කොළ, ඝන රෝසෙට් එකක් සාදමින්.","පසුව ඵලය සෑදීමට එකට එකතු වන සංයුක්ත සර්පිලාකාර පොකුරක සකසන ලද කුඩා දම් හෝ රතු පැහැති මල්.","එකට එකතු වූ බෙරි වලින් සැදුණු, මුහුකුරා ගිය විට රන්වන්-කහ පැහැති, කටු සහිත කොළ පොකුරකින් ඔටුනු පළඳන සංයුක්ත ඵලයකි.","සම්පූර්ණ හිරු එළිය සහ හොඳින් ජලය බැස යන වැලි හෝ මැටිමය පසක් සහිත නිවර්තන හා අර්ධ නිවර්තන දේශගුණයන්."],
+          ["නැවුම්ව අනුභව කරන, යුෂ සාදන, හෝ ආහාර, අතුරුපස, සහ පාන වර්ග සඳහා භාවිතා කරයි; ජෑම්, රසකැවිලි, සහ පීසා හෝ සලාද එකතු කිරීමකට ලෙසද බහුලව භාවිතා වේ.","විටමින් C, මැංගනීස්, සහ බ්‍රොමලේන් එන්සයිමයෙන් පොහොසත් අන්නාසි, ආහාර දිරවීමට උපකාරී වන අතර, ප්‍රතිශක්තිකරණය වැඩි දියුණු කරයි, සහ දැවිල්ල අඩු කිරීමට උපකාරී වේ.","එහි වගාව පස් සංරක්ෂණයට හා කෘෂි-වන ක්‍රමවලට සහාය වේ; ශාකයේ ඝන පත්‍ර ස්කන්ධය ඛාදනය වැළැක්වීමට උපකාරී වන අතර, එහි උප-නිෂ්පාදන සත්ව ආහාර හා කොම්පෝස්ට් සෑදීම සඳහා භාවිතා කළ හැක."],
+          ["පරිණත අන්නාසි වල මිහිරි බව සිලෝන් කළු තේවල මෘදු පොහොසත් බව සමඟ ඒකාබද්ධ කරන නිවර්තන කසායක්, පලතුරු රසය සහ තේ උණුසුම අතර සමතුලිතතාවයක් ලබා දෙන — උණුසුම් හෝ අයිස් තේ ලෙස රසවත් වේ."],
         ],
       ],
-      duration: "මිනිත්තු 10-15",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["ස්වාභාවිකව රසකාරක එකතු කළ | මෘදු සහ නැවුම් | උසස් තත්ත්වය"],
+        ],
+      ],
+            duration: "මිනිත්තු 10-15",
     },
     "tea-factory": {
       name: "තේ කර්මාන්තශාලාව",
@@ -955,13 +986,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "இலங்கையின் காலநிலை மற்ற இடங்களில் பொதுவாகக் காணப்படாத பரந்த அளவிலான பழங்களுக்கு ஏற்றது, அவற்றில் பல தேயிலை மற்றும் பிற தோட்ட பயிர்களுக்கு அருகிலேயே பயிரிடப்படுகின்றன. இங்கு வளர்க்கப்படும் ஒன்றை நெருக்கமாகப் பார்க்க கீழே ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்.",
         "முழு விவரங்களைப் பார்க்க ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்:",
       ],
-      fruitNames: ["டிராகன் ஃப்ரூட்"],
-      fruitSectionHeadings: [["டிராகன் ஃப்ரூட் செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"]],
+      fruitNames: ["டிராகன் ஃப்ரூட்","அன்னாசி"],
+      fruitSectionHeadings: [
+        ["டிராகன் ஃப்ரூட் செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
+        ["அன்னாசி செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்","அன்னாசி தேநீர் பொருட்கள்"],
+      ],
       fruitSectionBodies: [
         [
           "டிராகன் ஃப்ரூட் செடி, அறிவியல் பூர்வமாக Hylocereus undatus எனப்படும் — பிடயா அல்லது ஸ்ட்ராபெரி பேர் என்றும் அழைக்கப்படுகிறது — மத்திய மற்றும் தென் அமெரிக்காவை பூர்வீகமாகக் கொண்ட ஏறும் கற்றாழை வகைச் செடியாகும், இப்போது இந்த தோட்டம் உட்பட உலகம் முழுவதும் வெப்பமான காலநிலைகளில் வளர்க்கப்படுகிறது. ஒரு தூணின் ஆதரவுடன் பயிரிடப்படும் இதன் மூன்று-பக்க, முள் கொண்ட, சதைப்பற்றுள்ள பச்சை தண்டுகள் 5 முதல் 10 மீட்டர் வரை வளரக்கூடியவை. இதன் பெரிய வெள்ளை மலர்கள் இரவில் மட்டுமே மலர்ந்து காலையில் மீண்டும் மூடிக்கொள்கின்றன, இதனால் இதற்கு 'இரவின் ராணி' என்ற செல்லப்பெயர் கிடைத்துள்ளது.",
           "செடியைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
           "டிராகன் ஃப்ரூட்டின் மதிப்பு அதன் அற்புதமான தோற்றத்தை தாண்டி விரிவடைகிறது:",
+        ],
+        [
+          "அன்னாசி (Ananas comosus) — Bromeliaceae குடும்பத்தைச் சேர்ந்த வெப்பமண்டல பழம் தரும் தாவரமாகும், தென் அமெரிக்காவை பூர்வீகமாகக் கொண்டது, இப்போது இந்த தோட்டம் உட்பட உலகம் முழுவதும் வெப்பமண்டல மற்றும் துணை வெப்பமண்டல பகுதிகளில் பரவலாக வளர்க்கப்படுகிறது. இந்த செடி முள் கொண்ட, வாள் வடிவ இலைகளின் ஒரு வட்டத்தை மைய தண்டைச் சுற்றி உருவாக்குகிறது, இது சிறப்பியல்பு பழத்தை உற்பத்தி செய்கிறது. இது சூடான, ஈரப்பதமான காலநிலைகளில், நன்கு வடிகட்டும் மண்ணில் செழிக்கிறது, மேலும் இதன் இனிப்பு, காரமான சுவைக்காக மதிக்கப்படுகிறது.",
+          "செடியைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+          "அன்னாசியின் மதிப்பு அதன் இனிப்பு சதையை தாண்டி விரிவடைகிறது:",
+          "தோட்டம் அன்னாசியையும் தனது தேநீர் வரம்பில் மதிப்புக்கூட்டப்பட்ட பொருளாகப் பயன்படுத்துகிறது, இயற்கை அன்னாசி சாரமும் சிறந்த சிலோன் தேயிலை இலைகளும் கொண்டு தயாரிக்கப்பட்ட ஒரு உயர்தர சுவை சேர்க்கப்பட்ட தேநீருடன் அதைக் கலக்கிறது.",
         ],
       ],
       fruitItemHeadings: [
@@ -970,25 +1010,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["வளர்ச்சி முறை","தண்டுகள்","மலர்கள்","பழம்","வாழ்விடம்"],
           ["சமையல் பயன்கள்","மருத்துவ பண்புகள்","சூழலியல் முக்கியத்துவம்"],
         ],
+        [
+          [],
+          ["உயரம்","இலைகள்","மலர்கள்","பழம்","வாழ்விடம்"],
+          ["சமையல் பயன்கள்","மருத்துவ பண்புகள்","சூழலியல் முக்கியத்துவம்"],
+          ["அன்னாசி சுவை சேர்க்கப்பட்ட தேநீர்"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "ஆதரவுடன் 5 முதல் 10 மீட்டர் வரை வளரக்கூடிய ஏறும் அல்லது படரும் கற்றாழை வகைச் செடி.",
-            "விளிம்புகளில் சிறிய முட்கள் கொண்ட மூன்று-பக்க, பச்சை, சதைப்பற்றுள்ள தண்டுகள்.",
-            "30 சென்டிமீட்டர் வரை நீளமுள்ள பெரிய, வெள்ளை, நறுமணமுள்ள, இரவில் மலரும் மலர்கள்.",
-            "பிரகாசமான இளஞ்சிவப்பு அல்லது சிவப்பு தோலுடனும், சிறிய கருப்பு விதைகள் நிறைந்த வெள்ளை அல்லது சிவப்பு சதையுடனும் கூடிய நீள்வட்ட அல்லது பேரிக்காய் வடிவ பழம்.",
-            "வெப்பமண்டல மற்றும் துணை வெப்பமண்டல காலநிலைகள்; நன்கு வடிகட்டும் மணல் அல்லது களிமண் மண்ணையும் முழு சூரிய ஒளியையும் விரும்புகிறது.",
-          ],
-          [
-            "புதியதாக உண்ணப்படுகிறது, பழ சாலட், ஸ்மூத்திகள், இனிப்புகளில் சேர்க்கப்படுகிறது, அல்லது சாறுகள் மற்றும் ஜாம்களாக மாற்றப்படுகிறது — இதன் மென்மையான இனிப்பு சுவையும் மொறுமொறுப்பான அமைப்பும் இதை புத்துணர்ச்சியூட்டும் வெப்பமண்டல உணவாக்குகிறது.",
-            "ஆக்ஸிஜனேற்ற எதிர்ப்பான்கள், வைட்டமின் C, மற்றும் நார்ச்சத்து நிறைந்த டிராகன் ஃப்ரூட், நோய் எதிர்ப்பு சக்தி, செரிமானம், மற்றும் தோல் ஆரோக்கியத்திற்கு உதவுகிறது; இதன் விதைகளில் இதய ஆரோக்கியத்திற்கு நல்ல கொழுப்பு அமிலங்கள் உள்ளன.",
-            "இதன் மலர்கள் வௌவால்கள் மற்றும் அந்துப்பூச்சிகள் போன்ற இரவு நேர மகரந்தச் சேர்க்கையாளர்களுக்கு தேன் அளிக்கின்றன, மேலும் இதன் வறட்சி தாங்கும் திறன் வறண்ட பகுதிகளில் நிலையான விவசாயத்திற்கு உதவுகிறது.",
-          ],
+          ["ஆதரவுடன் 5 முதல் 10 மீட்டர் வரை வளரக்கூடிய ஏறும் அல்லது படரும் கற்றாழை வகைச் செடி.","விளிம்புகளில் சிறிய முட்கள் கொண்ட மூன்று-பக்க, பச்சை, சதைப்பற்றுள்ள தண்டுகள்.","30 சென்டிமீட்டர் வரை நீளமுள்ள பெரிய, வெள்ளை, நறுமணமுள்ள, இரவில் மலரும் மலர்கள்.","பிரகாசமான இளஞ்சிவப்பு அல்லது சிவப்பு தோலுடனும், சிறிய கருப்பு விதைகள் நிறைந்த வெள்ளை அல்லது சிவப்பு சதையுடனும் கூடிய நீள்வட்ட அல்லது பேரிக்காய் வடிவ பழம்.","வெப்பமண்டல மற்றும் துணை வெப்பமண்டல காலநிலைகள்; நன்கு வடிகட்டும் மணல் அல்லது களிமண் மண்ணையும் முழு சூரிய ஒளியையும் விரும்புகிறது."],
+          ["புதியதாக உண்ணப்படுகிறது, பழ சாலட், ஸ்மூத்திகள், இனிப்புகளில் சேர்க்கப்படுகிறது, அல்லது சாறுகள் மற்றும் ஜாம்களாக மாற்றப்படுகிறது — இதன் மென்மையான இனிப்பு சுவையும் மொறுமொறுப்பான அமைப்பும் இதை புத்துணர்ச்சியூட்டும் வெப்பமண்டல உணவாக்குகிறது.","ஆக்ஸிஜனேற்ற எதிர்ப்பான்கள், வைட்டமின் C, மற்றும் நார்ச்சத்து நிறைந்த டிராகன் ஃப்ரூட், நோய் எதிர்ப்பு சக்தி, செரிமானம், மற்றும் தோல் ஆரோக்கியத்திற்கு உதவுகிறது; இதன் விதைகளில் இதய ஆரோக்கியத்திற்கு நல்ல கொழுப்பு அமிலங்கள் உள்ளன.","இதன் மலர்கள் வௌவால்கள் மற்றும் அந்துப்பூச்சிகள் போன்ற இரவு நேர மகரந்தச் சேர்க்கையாளர்களுக்கு தேன் அளிக்கின்றன, மேலும் இதன் வறட்சி தாங்கும் திறன் வறண்ட பகுதிகளில் நிலையான விவசாயத்திற்கு உதவுகிறது."],
+        ],
+        [
+          [],
+          ["1 முதல் 1.5 மீட்டர் வரை உயரமுள்ளது.","முள் விளிம்புகளுடன் நீளமான, வாள் வடிவ, கடினமான இலைகள், அடர்த்தியான வட்டமாக அமைகின்றன.","பின்னர் ஒன்றிணைந்து பழமாக மாறும் ஒரு சுருள் வடிவ கொத்தில் அமைந்த சிறிய ஊதா அல்லது சிவப்பு நிற மலர்கள்.","ஒன்றிணைந்த பெர்ரிகளால் ஆன, முதிர்ந்தவுடன் தங்க-மஞ்சள் நிறமான, முள் இலைகளின் கொத்தால் முடிசூட்டப்பட்ட ஒரு கூட்டு பழம்.","முழு சூரிய ஒளியும் நன்கு வடிகட்டும் மணல் அல்லது களிமண் மண்ணும் கொண்ட வெப்பமண்டல மற்றும் துணை வெப்பமண்டல காலநிலைகள்."],
+          ["புதியதாக உண்ணப்படுகிறது, சாறு பிழியப்படுகிறது, அல்லது உணவுகள், இனிப்புகள், மற்றும் பானங்களில் பயன்படுத்தப்படுகிறது; ஜாம், மிட்டாய், மற்றும் பீட்சா அல்லது சாலட் மேலோட்டமாகவும் பொதுவாகப் பயன்படுத்தப்படுகிறது.","வைட்டமின் C, மாங்கனீஸ், மற்றும் புரோமிலைன் நொதி நிறைந்த அன்னாசி, செரிமானத்திற்கு உதவுகிறது, நோய் எதிர்ப்பு சக்தியை அதிகரிக்கிறது, மற்றும் அழற்சியைக் குறைக்க உதவுகிறது.","இதன் சாகுபடி மண் பாதுகாப்பு மற்றும் வேளாண்-வனவியல் அமைப்புகளை ஆதரிக்கிறது; செடியின் அடர்த்தியான இலைகள் மண் அரிப்பைத் தடுக்க உதவுகின்றன, மேலும் இதன் துணை பொருட்கள் கால்நடை தீவனம் மற்றும் உரமாக்குதலுக்குப் பயன்படுத்தப்படலாம்."],
+          ["முதிர்ந்த அன்னாசியின் இனிப்புத்தன்மையை சிலோன் கருப்பு தேயிலையின் மென்மையான வளத்துடன் இணைக்கும் ஒரு வெப்பமண்டல தேநீர், பழச்சுவைக்கும் தேநீர் அரவணைப்புக்கும் இடையே சமநிலையை வழங்குகிறது — சூடாகவோ அல்லது குளிர்ச்சியாகவோ சுவைக்கலாம்."],
         ],
       ],
-      duration: "10-15 நிமிடங்கள்",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["இயற்கையாக சுவை சேர்க்கப்பட்டது | மென்மையானது & புத்துணர்ச்சியானது | உயர்தர தரம்"],
+        ],
+      ],
+            duration: "10-15 நிமிடங்கள்",
     },
     "tea-factory": {
       name: "தேயிலை தொழிற்சாலை",
@@ -1335,13 +1390,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Il clima dello Sri Lanka favorisce un'ampia varietà di frutti poco comuni altrove, molti dei quali coltivati proprio accanto al tè e ad altre colture della tenuta. Scegli un frutto qui sotto per scoprirne di più su uno coltivato qui.",
         "Seleziona un frutto per vederne tutti i dettagli:",
       ],
-      fruitNames: ["Frutto del Drago"],
-      fruitSectionHeadings: [["Il Frutto del Drago","Caratteristiche","Usi e Benefici"]],
+      fruitNames: ["Frutto del Drago","Ananas"],
+      fruitSectionHeadings: [
+        ["Il Frutto del Drago","Caratteristiche","Usi e Benefici"],
+        ["La Pianta dell'Ananas","Caratteristiche","Usi e Benefici","Prodotti al Tè all'Ananas"],
+      ],
       fruitSectionBodies: [
         [
           "Hylocereus undatus — la pianta del frutto del drago, nota anche come pitaya o pera fragola — è un cactus rampicante originario dell'America Centrale e Meridionale, oggi coltivato in climi caldi in tutto il mondo, compresa questa tenuta. Allevato su un sostegno, i suoi fusti verdi, carnosi, spinosi e a sezione triangolare possono raggiungere i 5-10 metri. I suoi grandi fiori bianchi sbocciano solo di notte e si richiudono al mattino, il che gli è valso il soprannome di 'Regina della Notte'.",
           "Uno sguardo rapido alla pianta stessa:",
           "Il valore del frutto del drago va ben oltre il suo aspetto sorprendente:",
+        ],
+        [
+          "Ananas comosus — l'ananas — è una pianta tropicale da frutto della famiglia delle Bromeliaceae, originaria del Sud America e oggi ampiamente coltivata nelle regioni tropicali e subtropicali di tutto il mondo, compresa questa tenuta. La pianta forma una rosetta di foglie spinose a forma di spada attorno a uno stelo centrale, che produce il caratteristico frutto. Prospera in climi caldi e umidi con terreno ben drenato ed è apprezzata per il suo sapore dolce e leggermente aspro.",
+          "Uno sguardo rapido alla pianta stessa:",
+          "Il valore dell'ananas va ben oltre la sua polpa dolce:",
+          "La tenuta utilizza anche l'ananas come ingrediente a valore aggiunto nella propria gamma di tè, unendolo a un tè aromatizzato premium creato con essenza naturale di ananas e foglie di tè di Ceylon pregiate.",
         ],
       ],
       fruitItemHeadings: [
@@ -1350,25 +1414,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Portamento","Fusti","Fiori","Frutto","Habitat"],
           ["Usi Culinari","Proprietà Medicinali","Importanza Ecologica"],
         ],
+        [
+          [],
+          ["Altezza","Foglie","Fiori","Frutto","Habitat"],
+          ["Usi Culinari","Proprietà Medicinali","Importanza Ecologica"],
+          ["Tè Aromatizzato all'Ananas"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "Un cactus rampicante o strisciante che può raggiungere i 5-10 metri con un sostegno.",
-            "Fusti verdi, carnosi, a sezione triangolare, con piccole spine lungo i bordi.",
-            "Fiori grandi, bianchi, profumati, che sbocciano di notte, lunghi fino a 30 centimetri.",
-            "Frutto ovale o a forma di pera, con buccia rosa o rossa brillante e polpa bianca o rossa punteggiata di minuscoli semi neri.",
-            "Climi tropicali e subtropicali; predilige un terreno sabbioso o argilloso ben drenato e piena esposizione al sole.",
-          ],
-          [
-            "Si mangia fresco, si aggiunge a insalate di frutta, frullati e dessert, oppure si trasforma in succhi e marmellate — il suo sapore delicatamente dolce e la consistenza croccante lo rendono un rinfrescante piacere tropicale.",
-            "Ricco di antiossidanti, vitamina C e fibre, il frutto del drago sostiene il sistema immunitario, la digestione e la vitalità della pelle; i suoi semi contengono acidi grassi benefici per il cuore.",
-            "I suoi fiori forniscono nettare a impollinatori notturni come pipistrelli e falene, e la sua resistenza alla siccità sostiene un'agricoltura sostenibile nelle regioni aride.",
-          ],
+          ["Un cactus rampicante o strisciante che può raggiungere i 5-10 metri con un sostegno.","Fusti verdi, carnosi, a sezione triangolare, con piccole spine lungo i bordi.","Fiori grandi, bianchi, profumati, che sbocciano di notte, lunghi fino a 30 centimetri.","Frutto ovale o a forma di pera, con buccia rosa o rossa brillante e polpa bianca o rossa punteggiata di minuscoli semi neri.","Climi tropicali e subtropicali; predilige un terreno sabbioso o argilloso ben drenato e piena esposizione al sole."],
+          ["Si mangia fresco, si aggiunge a insalate di frutta, frullati e dessert, oppure si trasforma in succhi e marmellate — il suo sapore delicatamente dolce e la consistenza croccante lo rendono un rinfrescante piacere tropicale.","Ricco di antiossidanti, vitamina C e fibre, il frutto del drago sostiene il sistema immunitario, la digestione e la vitalità della pelle; i suoi semi contengono acidi grassi benefici per il cuore.","I suoi fiori forniscono nettare a impollinatori notturni come pipistrelli e falene, e la sua resistenza alla siccità sostiene un'agricoltura sostenibile nelle regioni aride."],
+        ],
+        [
+          [],
+          ["Alta fino a 1-1,5 metri.","Foglie lunghe, a forma di spada, robuste, con bordi spinosi, che formano una densa rosetta.","Piccoli fiori viola o rossastri disposti in un compatto grappolo a spirale che in seguito si fondono per formare il frutto.","Un frutto composto formato da bacche fuse, giallo dorato a maturazione, coronato da un ciuffo di foglie spinose.","Climi tropicali e subtropicali con piena esposizione al sole e terreno sabbioso o argilloso ben drenato."],
+          ["Si mangia fresco, spremuto, o utilizzato in piatti, dessert e bevande; comune anche in marmellate, caramelle, e come guarnizione per pizza o insalate.","Ricco di vitamina C, manganese, e dell'enzima bromelina, l'ananas favorisce la digestione, rafforza il sistema immunitario, e aiuta a ridurre l'infiammazione.","La sua coltivazione favorisce la conservazione del suolo e i sistemi agroforestali; il fogliame denso della pianta aiuta a prevenire l'erosione, e i suoi sottoprodotti possono essere usati per mangime animale e compostaggio."],
+          ["Un'infusione tropicale che unisce la dolcezza dell'ananas maturo alla morbida ricchezza del tè nero di Ceylon, offrendo un equilibrio tra sapore fruttato e calore del tè — gustoso caldo o freddo."],
         ],
       ],
-      duration: "10-15 minuti",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["Aromatizzato Naturalmente | Morbido e Rinfrescante | Qualità Premium"],
+        ],
+      ],
+            duration: "10-15 minuti",
     },
     "tea-factory": {
       name: "La Fabbrica del Tè",
@@ -1715,13 +1794,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "يدعم مناخ سريلانكا مجموعة واسعة من الفواكه غير الشائعة في أماكن أخرى، ويُزرع الكثير منها إلى جانب الشاي ومحاصيل المزرعة الأخرى مباشرة. اختر فاكهة أدناه لتلقي نظرة أقرب على واحدة تُزرع هنا.",
         "اختر فاكهة لعرض تفاصيلها الكاملة:",
       ],
-      fruitNames: ["فاكهة التنين"],
-      fruitSectionHeadings: [["عن نبات فاكهة التنين","الخصائص","الاستخدامات والفوائد"]],
+      fruitNames: ["فاكهة التنين","الأناناس"],
+      fruitSectionHeadings: [
+        ["عن نبات فاكهة التنين","الخصائص","الاستخدامات والفوائد"],
+        ["عن نبات الأناناس","الخصائص","الاستخدامات والفوائد","منتجات شاي الأناناس"],
+      ],
       fruitSectionBodies: [
         [
           "نبات فاكهة التنين، المعروف علميًا باسم Hylocereus undatus — ويُسمى أيضًا البيتايا أو كمثرى الفراولة — هو صبار متسلق موطنه الأصلي أمريكا الوسطى والجنوبية، يُزرع الآن في المناخات الدافئة حول العالم، بما في ذلك هذه المزرعة. وبدعم من عمود، يمكن أن تصل سيقانه الخضراء اللحمية الشائكة ثلاثية الأضلاع إلى 5-10 أمتار. تتفتح أزهاره البيضاء الكبيرة ليلاً فقط وتنغلق مجددًا بحلول الصباح، مما أكسبها لقب 'ملكة الليل'.",
           "نظرة سريعة على النبات نفسه:",
           "تتجاوز قيمة فاكهة التنين مظهرها اللافت بكثير:",
+        ],
+        [
+          "الأناناس (Ananas comosus) — نبات استوائي مثمر من عائلة البروميلياسيا، موطنه الأصلي أمريكا الجنوبية، ويُزرع الآن على نطاق واسع في المناطق الاستوائية وشبه الاستوائية حول العالم، بما في ذلك هذه المزرعة. يُشكّل النبات وردة من الأوراق الشائكة على شكل سيف حول ساق مركزي، ينتج الثمرة المميزة. يزدهر في المناخات الدافئة الرطبة ذات التربة جيدة التصريف، ويُقدَّر لمذاقه الحلو الحامض.",
+          "نظرة سريعة على النبات نفسه:",
+          "تتجاوز قيمة الأناناس لبّه الحلو بكثير:",
+          "تستخدم المزرعة الأناناس أيضًا كمكوّن ذي قيمة مضافة في تشكيلة الشاي الخاصة بها، حيث تمزجه في شاي منكّه فاخر مصنوع من خلاصة الأناناس الطبيعية وأوراق شاي سيلان الفاخرة.",
         ],
       ],
       fruitItemHeadings: [
@@ -1730,25 +1818,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["طريقة النمو","السيقان","الأزهار","الثمرة","الموطن"],
           ["الاستخدامات الطهوية","الخصائص الطبية","الأهمية البيئية"],
         ],
+        [
+          [],
+          ["الارتفاع","الأوراق","الأزهار","الثمرة","الموطن"],
+          ["الاستخدامات الطهوية","الخصائص الطبية","الأهمية البيئية"],
+          ["شاي الأناناس المنكّه"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "صبار متسلق أو زاحف يمكن أن يصل إلى 5-10 أمتار بدعامة.",
-            "سيقان خضراء لحمية ثلاثية الأضلاع مع أشواك صغيرة على طول الحواف.",
-            "أزهار كبيرة بيضاء عطرية تتفتح ليلاً ويصل طولها إلى 30 سنتيمترًا.",
-            "ثمرة بيضاوية أو كمثرية الشكل بقشرة وردية أو حمراء زاهية ولب أبيض أو أحمر مليء ببذور سوداء صغيرة.",
-            "المناخات الاستوائية وشبه الاستوائية؛ تفضل تربة رملية أو طينية جيدة التصريف وأشعة شمس كاملة.",
-          ],
-          [
-            "تؤكل طازجة، وتُضاف إلى سلطات الفاكهة والعصائر المخفوقة والحلويات، أو تُحوَّل إلى عصائر ومربيات — مذاقها الحلو الخفيف وقوامها المقرمش يجعلانها طعامًا استوائيًا منعشًا.",
-            "غنية بمضادات الأكسدة وفيتامين C والألياف، تدعم فاكهة التنين صحة المناعة والهضم وحيوية البشرة؛ كما تحتوي بذورها على أحماض دهنية مفيدة للقلب.",
-            "توفر أزهارها الرحيق لملقحات ليلية مثل الخفافيش والعث، كما أن تحملها للجفاف يدعم الزراعة المستدامة في المناطق القاحلة.",
-          ],
+          ["صبار متسلق أو زاحف يمكن أن يصل إلى 5-10 أمتار بدعامة.","سيقان خضراء لحمية ثلاثية الأضلاع مع أشواك صغيرة على طول الحواف.","أزهار كبيرة بيضاء عطرية تتفتح ليلاً ويصل طولها إلى 30 سنتيمترًا.","ثمرة بيضاوية أو كمثرية الشكل بقشرة وردية أو حمراء زاهية ولب أبيض أو أحمر مليء ببذور سوداء صغيرة.","المناخات الاستوائية وشبه الاستوائية؛ تفضل تربة رملية أو طينية جيدة التصريف وأشعة شمس كاملة."],
+          ["تؤكل طازجة، وتُضاف إلى سلطات الفاكهة والعصائر المخفوقة والحلويات، أو تُحوَّل إلى عصائر ومربيات — مذاقها الحلو الخفيف وقوامها المقرمش يجعلانها طعامًا استوائيًا منعشًا.","غنية بمضادات الأكسدة وفيتامين C والألياف، تدعم فاكهة التنين صحة المناعة والهضم وحيوية البشرة؛ كما تحتوي بذورها على أحماض دهنية مفيدة للقلب.","توفر أزهارها الرحيق لملقحات ليلية مثل الخفافيش والعث، كما أن تحملها للجفاف يدعم الزراعة المستدامة في المناطق القاحلة."],
+        ],
+        [
+          [],
+          ["يصل ارتفاعه إلى 1 إلى 1.5 متر.","أوراق طويلة على شكل سيف، قوية، بحواف شائكة، تشكل وردة كثيفة.","أزهار صغيرة أرجوانية أو محمرة مرتبة في عنقود حلزوني مدمج يندمج لاحقًا لتكوين الثمرة.","ثمرة مركبة مكوّنة من توتات مندمجة، ذهبية اللون عند النضج، متوّجة بخصلة من الأوراق الشائكة.","المناخات الاستوائية وشبه الاستوائية ذات أشعة الشمس الكاملة والتربة الرملية أو الطينية جيدة التصريف."],
+          ["يؤكل طازجًا، أو يُعصر، أو يُستخدم في الأطباق والحلويات والمشروبات؛ كما يُستخدم شائعًا في المربيات والحلوى وكإضافة للبيتزا أو السلطة.","غني بفيتامين C والمنغنيز وإنزيم البروميلين، يدعم الأناناس الهضم، ويعزز المناعة، ويساعد في تقليل الالتهاب.","تدعم زراعته الحفاظ على التربة وأنظمة الزراعة الحرجية؛ يساعد الأوراق الكثيفة للنبات في منع التآكل، ويمكن استخدام منتجاته الثانوية في علف الحيوانات والتسميد."],
+          ["مشروب استوائي يجمع بين حلاوة الأناناس الناضج وثراء شاي سيلان الأسود الناعم، ويقدّم توازنًا بين النكهة الفاكهية ودفء الشاي — لذيذ ساخنًا أو مثلجًا."],
         ],
       ],
-      duration: "10-15 دقيقة",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["منكّه طبيعيًا | ناعم ومنعش | جودة ممتازة"],
+        ],
+      ],
+            duration: "10-15 دقيقة",
     },
     "tea-factory": {
       name: "مصنع الشاي",
@@ -2095,13 +2198,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Климат Шри-Ланки благоприятствует широкому разнообразию фруктов, редко встречающихся в других местах, многие из которых выращиваются прямо рядом с чаем и другими плантационными культурами. Выберите фрукт ниже, чтобы поближе познакомиться с одним из тех, что выращивают здесь.",
         "Выберите фрукт, чтобы увидеть полную информацию о нём:",
       ],
-      fruitNames: ["Драконий фрукт"],
-      fruitSectionHeadings: [["О растении драконий фрукт","Характеристики","Применение и польза"]],
+      fruitNames: ["Драконий фрукт","Ананас"],
+      fruitSectionHeadings: [
+        ["О растении драконий фрукт","Характеристики","Применение и польза"],
+        ["О растении ананас","Характеристики","Применение и польза","Ананасовые чайные продукты"],
+      ],
       fruitSectionBodies: [
         [
           "Hylocereus undatus — растение драконьего фрукта, также известное как питайя или земляничная груша, — это лазающий кактус, родом из Центральной и Южной Америки, теперь выращиваемый в тёплых климатических зонах по всему миру, включая это поместье. Выращиваемые с опорой на столб, его трёхгранные, колючие, мясистые зелёные стебли могут достигать 5–10 метров. Его крупные белые цветки распускаются только ночью и снова закрываются к утру, за что растение получило прозвище «королева ночи».",
           "Краткий обзор самого растения:",
           "Ценность драконьего фрукта выходит далеко за рамки его эффектного вида:",
+        ],
+        [
+          "Ananas comosus — ананас — тропическое плодовое растение семейства бромелиевых, родом из Южной Америки, теперь широко выращиваемое в тропических и субтропических регионах по всему миру, включая это поместье. Растение образует розетку колючих, мечевидных листьев вокруг центрального стебля, на котором формируется характерный плод. Оно процветает в тёплом влажном климате с хорошо дренированной почвой и ценится за сладкий, терпкий вкус.",
+          "Краткий обзор самого растения:",
+          "Ценность ананаса выходит далеко за рамки его сладкой мякоти:",
+          "Поместье также использует ананас как ингредиент с добавленной ценностью в собственной линейке чая, добавляя его в премиальный ароматизированный чай, изготовленный из натуральной ананасовой эссенции и высококачественных листьев цейлонского чая.",
         ],
       ],
       fruitItemHeadings: [
@@ -2110,25 +2222,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Форма роста","Стебли","Цветки","Плод","Среда обитания"],
           ["Кулинарное применение","Лечебные свойства","Экологическое значение"],
         ],
+        [
+          [],
+          ["Высота","Листья","Цветки","Плод","Среда обитания"],
+          ["Кулинарное применение","Лечебные свойства","Экологическое значение"],
+          ["Ароматизированный ананасовый чай"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "Лазающий или вьющийся кактус, достигающий 5–10 метров с опорой.",
-            "Трёхгранные, зелёные, мясистые стебли с небольшими шипами по краям.",
-            "Крупные, белые, ароматные, распускающиеся ночью цветки длиной до 30 сантиметров.",
-            "Овальный или грушевидный плод с ярко-розовой или красной кожурой и белой или красной мякотью, усеянной крошечными чёрными семенами.",
-            "Тропический и субтропический климат; предпочитает хорошо дренированную песчаную или суглинистую почву и полное солнце.",
-          ],
-          [
-            "Едят свежим, добавляют во фруктовые салаты, смузи и десерты или перерабатывают в соки и джемы — его слегка сладкий вкус и хрустящая текстура делают его освежающим тропическим лакомством.",
-            "Богатый антиоксидантами, витамином C и клетчаткой, драконий фрукт поддерживает иммунитет, пищеварение и здоровье кожи; его семена содержат полезные для сердца жирные кислоты.",
-            "Его цветки дают нектар ночным опылителям, таким как летучие мыши и мотыльки, а его засухоустойчивость поддерживает устойчивое земледелие в засушливых регионах.",
-          ],
+          ["Лазающий или вьющийся кактус, достигающий 5–10 метров с опорой.","Трёхгранные, зелёные, мясистые стебли с небольшими шипами по краям.","Крупные, белые, ароматные, распускающиеся ночью цветки длиной до 30 сантиметров.","Овальный или грушевидный плод с ярко-розовой или красной кожурой и белой или красной мякотью, усеянной крошечными чёрными семенами.","Тропический и субтропический климат; предпочитает хорошо дренированную песчаную или суглинистую почву и полное солнце."],
+          ["Едят свежим, добавляют во фруктовые салаты, смузи и десерты или перерабатывают в соки и джемы — его слегка сладкий вкус и хрустящая текстура делают его освежающим тропическим лакомством.","Богатый антиоксидантами, витамином C и клетчаткой, драконий фрукт поддерживает иммунитет, пищеварение и здоровье кожи; его семена содержат полезные для сердца жирные кислоты.","Его цветки дают нектар ночным опылителям, таким как летучие мыши и мотыльки, а его засухоустойчивость поддерживает устойчивое земледелие в засушливых регионах."],
+        ],
+        [
+          [],
+          ["Высотой до 1–1,5 метра.","Длинные, мечевидные, жёсткие листья с колючими краями, образующие плотную розетку.","Мелкие фиолетовые или красноватые цветки, собранные в компактное спиральное соцветие, которое позже срастается, формируя плод.","Сложный плод, состоящий из сросшихся ягод, золотисто-жёлтый при созревании, увенчанный пучком колючих листьев.","Тропический и субтропический климат при полном солнце и хорошо дренированной песчаной или суглинистой почве."],
+          ["Едят свежим, выжимают сок, используют в блюдах, десертах и напитках; также распространён в джемах, конфетах и как топпинг для пиццы или салата.","Богатый витамином C, марганцем и ферментом бромелайном, ананас поддерживает пищеварение, укрепляет иммунитет и помогает уменьшить воспаление.","Его выращивание способствует сохранению почвы и агролесоводческим системам; густая листва растения помогает предотвратить эрозию, а его побочные продукты можно использовать для корма животных и компостирования."],
+          ["Тропический напиток, сочетающий сладость спелого ананаса с мягкой насыщенностью цейлонского чёрного чая, предлагающий баланс фруктового вкуса и чайного тепла — вкусен как горячим, так и со льдом."],
         ],
       ],
-      duration: "10–15 минут",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["С натуральным ароматом | Мягкий и освежающий | Премиальное качество"],
+        ],
+      ],
+            duration: "10–15 минут",
     },
     "tea-factory": {
       name: "Чайная фабрика",
@@ -2475,13 +2602,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Das Klima Sri Lankas begünstigt eine breite Palette an Früchten, die anderswo selten zu finden sind, viele davon direkt neben Tee und anderen Plantagenkulturen angebaut. Wählen Sie unten eine Frucht aus, um sich eine hier angebaute genauer anzusehen.",
         "Wählen Sie eine Frucht aus, um alle Details dazu zu sehen:",
       ],
-      fruitNames: ["Drachenfrucht"],
-      fruitSectionHeadings: [["Über die Drachenfrucht-Pflanze","Merkmale","Verwendung und Vorteile"]],
+      fruitNames: ["Drachenfrucht","Ananas"],
+      fruitSectionHeadings: [
+        ["Über die Drachenfrucht-Pflanze","Merkmale","Verwendung und Vorteile"],
+        ["Über die Ananas-Pflanze","Merkmale","Verwendung und Vorteile","Ananas-Teeprodukte"],
+      ],
       fruitSectionBodies: [
         [
           "Hylocereus undatus — die Drachenfrucht-Pflanze, auch als Pitaya oder Erdbeerbirne bekannt — ist ein kletternder Kaktus, der ursprünglich aus Mittel- und Südamerika stammt und heute weltweit in warmen Klimazonen angebaut wird, auch auf diesem Anwesen. An einem Stützpfahl gezogen, können ihre dreikantigen, stacheligen, fleischigen grünen Triebe 5 bis 10 Meter erreichen. Ihre großen weißen Blüten öffnen sich nur nachts und schließen sich bis zum Morgen wieder, was ihr den Beinamen 'Königin der Nacht' eingebracht hat.",
           "Ein kurzer Blick auf die Pflanze selbst:",
           "Der Wert der Drachenfrucht geht weit über ihr auffälliges Erscheinungsbild hinaus:",
+        ],
+        [
+          "Ananas comosus — die Ananas — ist eine tropische Fruchtpflanze aus der Familie der Bromeliengewächse, ursprünglich aus Südamerika, heute weit verbreitet in tropischen und subtropischen Regionen weltweit angebaut, auch auf diesem Anwesen. Die Pflanze bildet eine Rosette aus stacheligen, schwertförmigen Blättern um einen zentralen Stiel, der die charakteristische Frucht hervorbringt. Sie gedeiht in warmem, feuchtem Klima mit gut durchlässigem Boden und wird für ihren süßen, würzigen Geschmack geschätzt.",
+          "Ein kurzer Blick auf die Pflanze selbst:",
+          "Der Wert der Ananas geht weit über ihr süßes Fruchtfleisch hinaus:",
+          "Das Anwesen verwendet Ananas auch als wertschöpfende Zutat in der eigenen Teepalette und mischt sie zu einem hochwertigen aromatisierten Tee aus natürlichem Ananas-Extrakt und feinen Ceylon-Teeblättern.",
         ],
       ],
       fruitItemHeadings: [
@@ -2490,25 +2626,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Wuchsform","Triebe","Blüten","Frucht","Lebensraum"],
           ["Kulinarische Verwendung","Medizinische Eigenschaften","Ökologische Bedeutung"],
         ],
+        [
+          [],
+          ["Höhe","Blätter","Blüten","Frucht","Lebensraum"],
+          ["Kulinarische Verwendung","Medizinische Eigenschaften","Ökologische Bedeutung"],
+          ["Ananas-Aromatisierter Tee"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "Ein kletternder oder rankender Kaktus, der mit Stütze 5 bis 10 Meter erreichen kann.",
-            "Dreikantige, grüne, fleischige Triebe mit kleinen Stacheln entlang der Kanten.",
-            "Große, weiße, duftende, nachts blühende Blüten von bis zu 30 Zentimetern Länge.",
-            "Ovale oder birnenförmige Frucht mit leuchtend rosa oder roter Schale und weißem oder rotem Fruchtfleisch, gesprenkelt mit winzigen schwarzen Kernen.",
-            "Tropisches und subtropisches Klima; bevorzugt gut durchlässigen sandigen oder lehmigen Boden und volle Sonne.",
-          ],
-          [
-            "Wird frisch gegessen, zu Obstsalaten, Smoothies und Desserts hinzugefügt oder zu Säften und Marmeladen verarbeitet — ihr leicht süßer Geschmack und ihre knackige Textur machen sie zu einem erfrischenden tropischen Genuss.",
-            "Reich an Antioxidantien, Vitamin C und Ballaststoffen, unterstützt die Drachenfrucht Immunsystem, Verdauung und Hautvitalität; ihre Kerne enthalten herzgesunde Fettsäuren.",
-            "Ihre Blüten liefern Nektar für nächtliche Bestäuber wie Fledermäuse und Nachtfalter, und ihre Trockenheitstoleranz unterstützt nachhaltige Landwirtschaft in trockenen Regionen.",
-          ],
+          ["Ein kletternder oder rankender Kaktus, der mit Stütze 5 bis 10 Meter erreichen kann.","Dreikantige, grüne, fleischige Triebe mit kleinen Stacheln entlang der Kanten.","Große, weiße, duftende, nachts blühende Blüten von bis zu 30 Zentimetern Länge.","Ovale oder birnenförmige Frucht mit leuchtend rosa oder roter Schale und weißem oder rotem Fruchtfleisch, gesprenkelt mit winzigen schwarzen Kernen.","Tropisches und subtropisches Klima; bevorzugt gut durchlässigen sandigen oder lehmigen Boden und volle Sonne."],
+          ["Wird frisch gegessen, zu Obstsalaten, Smoothies und Desserts hinzugefügt oder zu Säften und Marmeladen verarbeitet — ihr leicht süßer Geschmack und ihre knackige Textur machen sie zu einem erfrischenden tropischen Genuss.","Reich an Antioxidantien, Vitamin C und Ballaststoffen, unterstützt die Drachenfrucht Immunsystem, Verdauung und Hautvitalität; ihre Kerne enthalten herzgesunde Fettsäuren.","Ihre Blüten liefern Nektar für nächtliche Bestäuber wie Fledermäuse und Nachtfalter, und ihre Trockenheitstoleranz unterstützt nachhaltige Landwirtschaft in trockenen Regionen."],
+        ],
+        [
+          [],
+          ["Bis zu 1 bis 1,5 Meter hoch.","Lange, schwertförmige, zähe Blätter mit stacheligen Rändern, die eine dichte Rosette bilden.","Kleine violette oder rötliche Blüten, angeordnet in einem kompakten spiralförmigen Cluster, die später verschmelzen, um die Frucht zu bilden.","Eine zusammengesetzte Frucht aus verschmolzenen Beeren, goldgelb bei Reife, gekrönt von einem Büschel stacheliger Blätter.","Tropisches und subtropisches Klima mit voller Sonneneinstrahlung und gut durchlässigem sandigem oder lehmigem Boden."],
+          ["Wird frisch gegessen, gepresst, oder in Gerichten, Desserts und Getränken verwendet; auch verbreitet in Marmeladen, Bonbons und als Belag für Pizza oder Salat.","Reich an Vitamin C, Mangan und dem Enzym Bromelain, unterstützt Ananas die Verdauung, stärkt das Immunsystem und hilft, Entzündungen zu reduzieren.","Ihr Anbau unterstützt den Bodenschutz und Agroforstsysteme; das dichte Laub der Pflanze hilft, Erosion zu verhindern, und ihre Nebenprodukte können als Tierfutter und zum Kompostieren verwendet werden."],
+          ["Ein tropischer Aufguss, der die Süße reifer Ananas mit der sanften Fülle von Ceylon-Schwarztee verbindet und eine Balance aus fruchtigem Geschmack und Teewärme bietet — köstlich heiß oder eisgekühlt."],
         ],
       ],
-      duration: "10-15 Minuten",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["Natürlich Aromatisiert | Sanft & Erfrischend | Premium-Qualität"],
+        ],
+      ],
+            duration: "10-15 Minuten",
     },
     "tea-factory": {
       name: "Die Teefabrik",
@@ -2855,13 +3006,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "El clima de Sri Lanka favorece una amplia variedad de frutas poco comunes en otros lugares, muchas de ellas cultivadas justo junto al té y otros cultivos de la finca. Elige una fruta a continuación para ver más de cerca una de las que se cultivan aquí.",
         "Selecciona una fruta para ver todos sus detalles:",
       ],
-      fruitNames: ["Fruta del Dragón"],
-      fruitSectionHeadings: [["Sobre la Planta de la Fruta del Dragón","Características","Usos y Beneficios"]],
+      fruitNames: ["Fruta del Dragón","Piña"],
+      fruitSectionHeadings: [
+        ["Sobre la Planta de la Fruta del Dragón","Características","Usos y Beneficios"],
+        ["Sobre la Planta de Piña","Características","Usos y Beneficios","Productos de Té de Piña"],
+      ],
       fruitSectionBodies: [
         [
           "Hylocereus undatus — la planta de la fruta del dragón, también conocida como pitaya o pera fresa — es un cactus trepador originario de Centroamérica y Sudamérica, hoy cultivado en climas cálidos de todo el mundo, incluida esta finca. Guiada sobre un poste de soporte, sus tallos verdes, carnosos, espinosos y de sección triangular pueden alcanzar los 5 a 10 metros. Sus grandes flores blancas se abren solo de noche y vuelven a cerrarse por la mañana, lo que le ha valido el apodo de 'Reina de la Noche'.",
           "Una mirada rápida a la planta en sí:",
           "El valor de la fruta del dragón va mucho más allá de su llamativo aspecto:",
+        ],
+        [
+          "Ananas comosus — la piña — es una planta frutal tropical de la familia Bromeliaceae, originaria de Sudamérica y hoy ampliamente cultivada en regiones tropicales y subtropicales de todo el mundo, incluida esta finca. La planta forma una roseta de hojas espinosas en forma de espada alrededor de un tallo central, que produce el fruto característico. Prospera en climas cálidos y húmedos con suelo bien drenado y es apreciada por su sabor dulce y ácido.",
+          "Una mirada rápida a la planta en sí:",
+          "El valor de la piña va mucho más allá de su pulpa dulce:",
+          "La finca también utiliza la piña como ingrediente de valor añadido en su propia gama de té, mezclándola en un té saborizado premium elaborado con esencia natural de piña y finas hojas de té de Ceilán.",
         ],
       ],
       fruitItemHeadings: [
@@ -2870,25 +3030,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Hábito de Crecimiento","Tallos","Flores","Fruto","Hábitat"],
           ["Usos Culinarios","Propiedades Medicinales","Importancia Ecológica"],
         ],
+        [
+          [],
+          ["Altura","Hojas","Flores","Fruto","Hábitat"],
+          ["Usos Culinarios","Propiedades Medicinales","Importancia Ecológica"],
+          ["Té Saborizado de Piña"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "Un cactus trepador o rastrero que puede alcanzar los 5 a 10 metros con soporte.",
-            "Tallos verdes, carnosos, de sección triangular, con pequeñas espinas a lo largo de los bordes.",
-            "Flores grandes, blancas, fragantes, que florecen de noche, de hasta 30 centímetros de largo.",
-            "Fruto ovalado o en forma de pera, con piel rosa o roja brillante y pulpa blanca o roja salpicada de diminutas semillas negras.",
-            "Climas tropicales y subtropicales; prefiere suelo arenoso o arcilloso bien drenado y pleno sol.",
-          ],
-          [
-            "Se come fresca, se añade a ensaladas de frutas, batidos y postres, o se procesa en jugos y mermeladas — su sabor ligeramente dulce y su textura crujiente la convierten en un refrescante placer tropical.",
-            "Rica en antioxidantes, vitamina C y fibra, la fruta del dragón favorece la inmunidad, la digestión y la vitalidad de la piel; sus semillas contienen ácidos grasos beneficiosos para el corazón.",
-            "Sus flores proporcionan néctar a polinizadores nocturnos como murciélagos y polillas, y su tolerancia a la sequía favorece la agricultura sostenible en regiones áridas.",
-          ],
+          ["Un cactus trepador o rastrero que puede alcanzar los 5 a 10 metros con soporte.","Tallos verdes, carnosos, de sección triangular, con pequeñas espinas a lo largo de los bordes.","Flores grandes, blancas, fragantes, que florecen de noche, de hasta 30 centímetros de largo.","Fruto ovalado o en forma de pera, con piel rosa o roja brillante y pulpa blanca o roja salpicada de diminutas semillas negras.","Climas tropicales y subtropicales; prefiere suelo arenoso o arcilloso bien drenado y pleno sol."],
+          ["Se come fresca, se añade a ensaladas de frutas, batidos y postres, o se procesa en jugos y mermeladas — su sabor ligeramente dulce y su textura crujiente la convierten en un refrescante placer tropical.","Rica en antioxidantes, vitamina C y fibra, la fruta del dragón favorece la inmunidad, la digestión y la vitalidad de la piel; sus semillas contienen ácidos grasos beneficiosos para el corazón.","Sus flores proporcionan néctar a polinizadores nocturnos como murciélagos y polillas, y su tolerancia a la sequía favorece la agricultura sostenible en regiones áridas."],
+        ],
+        [
+          [],
+          ["De hasta 1 a 1,5 metros de altura.","Hojas largas, en forma de espada, resistentes, con bordes espinosos, que forman una roseta densa.","Pequeñas flores moradas o rojizas dispuestas en un racimo espiral compacto que luego se fusionan para formar el fruto.","Un fruto compuesto formado por bayas fusionadas, de color amarillo dorado al madurar, coronado por un penacho de hojas espinosas.","Climas tropicales y subtropicales con pleno sol y suelo arenoso o arcilloso bien drenado."],
+          ["Se come fresca, se exprime, o se usa en platos, postres y bebidas; también es común en mermeladas, caramelos, y como cobertura de pizza o ensalada.","Rica en vitamina C, manganeso, y la enzima bromelina, la piña favorece la digestión, refuerza la inmunidad, y ayuda a reducir la inflamación.","Su cultivo favorece la conservación del suelo y los sistemas agroforestales; el follaje denso de la planta ayuda a prevenir la erosión, y sus subproductos pueden usarse para alimento animal y compostaje."],
+          ["Una infusión tropical que combina la dulzura de la piña madura con la suave riqueza del té negro de Ceilán, ofreciendo un equilibrio entre sabor afrutado y calidez del té — delicioso caliente o helado."],
         ],
       ],
-      duration: "10-15 minutos",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["Saborizado Naturalmente | Suave y Refrescante | Calidad Premium"],
+        ],
+      ],
+            duration: "10-15 minutos",
     },
     "tea-factory": {
       name: "La Fábrica de Té",
@@ -3235,13 +3410,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Le climat du Sri Lanka favorise une large variété de fruits peu courants ailleurs, dont beaucoup sont cultivés juste à côté du thé et d'autres cultures de la plantation. Choisissez un fruit ci-dessous pour découvrir de plus près l'un de ceux cultivés ici.",
         "Sélectionnez un fruit pour voir tous ses détails :",
       ],
-      fruitNames: ["Fruit du Dragon"],
-      fruitSectionHeadings: [["À propos du Fruit du Dragon","Caractéristiques","Usages et Bienfaits"]],
+      fruitNames: ["Fruit du Dragon","Ananas"],
+      fruitSectionHeadings: [
+        ["À propos du Fruit du Dragon","Caractéristiques","Usages et Bienfaits"],
+        ["À propos du Plant d'Ananas","Caractéristiques","Usages et Bienfaits","Produits de Thé à l'Ananas"],
+      ],
       fruitSectionBodies: [
         [
           "Hylocereus undatus — le fruit du dragon, aussi appelé pitaya ou poire-fraise — est un cactus grimpant originaire d'Amérique centrale et du Sud, aujourd'hui cultivé sous climat chaud partout dans le monde, y compris sur ce domaine. Conduites sur un poteau de soutien, ses tiges vertes, charnues, épineuses et à section triangulaire peuvent atteindre 5 à 10 mètres. Ses grandes fleurs blanches ne s'ouvrent que la nuit et se referment le matin, ce qui lui a valu le surnom de 'Reine de la Nuit'.",
           "Un rapide aperçu de la plante elle-même :",
           "La valeur du fruit du dragon va bien au-delà de son apparence saisissante :",
+        ],
+        [
+          "Ananas comosus — l'ananas — est une plante fruitière tropicale de la famille des Broméliacées, originaire d'Amérique du Sud et aujourd'hui largement cultivée dans les régions tropicales et subtropicales du monde entier, y compris sur ce domaine. La plante forme une rosette de feuilles épineuses en forme d'épée autour d'une tige centrale, qui produit le fruit caractéristique. Elle prospère sous climat chaud et humide avec un sol bien drainé et est appréciée pour sa saveur douce et acidulée.",
+          "Un rapide aperçu de la plante elle-même :",
+          "La valeur de l'ananas va bien au-delà de sa chair sucrée :",
+          "Le domaine utilise également l'ananas comme ingrédient à valeur ajoutée dans sa propre gamme de thé, en le mélangeant à un thé aromatisé premium élaboré à partir d'essence naturelle d'ananas et de fines feuilles de thé de Ceylan.",
         ],
       ],
       fruitItemHeadings: [
@@ -3250,25 +3434,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Port de Croissance","Tiges","Fleurs","Fruit","Habitat"],
           ["Usages Culinaires","Propriétés Médicinales","Importance Écologique"],
         ],
+        [
+          [],
+          ["Hauteur","Feuilles","Fleurs","Fruit","Habitat"],
+          ["Usages Culinaires","Propriétés Médicinales","Importance Écologique"],
+          ["Thé Aromatisé à l'Ananas"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "Un cactus grimpant ou rampant pouvant atteindre 5 à 10 mètres avec un support.",
-            "Tiges vertes, charnues, à section triangulaire, avec de petites épines le long des bords.",
-            "Grandes fleurs blanches parfumées, s'épanouissant la nuit, pouvant atteindre 30 centimètres de long.",
-            "Fruit ovale ou en forme de poire, à la peau rose ou rouge vif et à la chair blanche ou rouge, mouchetée de minuscules graines noires.",
-            "Climats tropicaux et subtropicaux ; préfère un sol sableux ou argileux bien drainé et le plein soleil.",
-          ],
-          [
-            "Se mange frais, s'ajoute aux salades de fruits, aux smoothies et aux desserts, ou se transforme en jus et confitures — son goût légèrement sucré et sa texture croquante en font une friandise tropicale rafraîchissante.",
-            "Riche en antioxydants, en vitamine C et en fibres, le fruit du dragon favorise l'immunité, la digestion et la vitalité de la peau ; ses graines contiennent des acides gras bons pour le cœur.",
-            "Ses fleurs fournissent du nectar aux pollinisateurs nocturnes comme les chauves-souris et les papillons de nuit, et sa tolérance à la sécheresse favorise une agriculture durable dans les régions arides.",
-          ],
+          ["Un cactus grimpant ou rampant pouvant atteindre 5 à 10 mètres avec un support.","Tiges vertes, charnues, à section triangulaire, avec de petites épines le long des bords.","Grandes fleurs blanches parfumées, s'épanouissant la nuit, pouvant atteindre 30 centimètres de long.","Fruit ovale ou en forme de poire, à la peau rose ou rouge vif et à la chair blanche ou rouge, mouchetée de minuscules graines noires.","Climats tropicaux et subtropicaux ; préfère un sol sableux ou argileux bien drainé et le plein soleil."],
+          ["Se mange frais, s'ajoute aux salades de fruits, aux smoothies et aux desserts, ou se transforme en jus et confitures — son goût légèrement sucré et sa texture croquante en font une friandise tropicale rafraîchissante.","Riche en antioxydants, en vitamine C et en fibres, le fruit du dragon favorise l'immunité, la digestion et la vitalité de la peau ; ses graines contiennent des acides gras bons pour le cœur.","Ses fleurs fournissent du nectar aux pollinisateurs nocturnes comme les chauves-souris et les papillons de nuit, et sa tolérance à la sécheresse favorise une agriculture durable dans les régions arides."],
+        ],
+        [
+          [],
+          ["Jusqu'à 1 à 1,5 mètre de hauteur.","Feuilles longues, en forme d'épée, coriaces, aux bords épineux, formant une rosette dense.","Petites fleurs violettes ou rougeâtres disposées en grappe spiralée compacte qui fusionnent ensuite pour former le fruit.","Un fruit composé formé de baies fusionnées, jaune doré à maturité, couronné d'une touffe de feuilles épineuses.","Climats tropicaux et subtropicaux en plein soleil avec un sol sableux ou argileux bien drainé."],
+          ["Se mange frais, pressé, ou utilisé dans des plats, desserts et boissons ; également courant dans les confitures, bonbons, et comme garniture de pizza ou de salade.","Riche en vitamine C, en manganèse, et en enzyme bromélaïne, l'ananas favorise la digestion, renforce l'immunité, et aide à réduire l'inflammation.","Sa culture favorise la conservation des sols et les systèmes agroforestiers ; le feuillage dense de la plante aide à prévenir l'érosion, et ses sous-produits peuvent être utilisés pour l'alimentation animale et le compostage."],
+          ["Une infusion tropicale alliant la douceur de l'ananas mûr à la richesse douce du thé noir de Ceylan, offrant un équilibre entre saveur fruitée et chaleur du thé — délicieux chaud ou glacé."],
         ],
       ],
-      duration: "10-15 minutes",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["Aromatisé Naturellement | Doux et Rafraîchissant | Qualité Premium"],
+        ],
+      ],
+            duration: "10-15 minutes",
     },
     "tea-factory": {
       name: "La Fabrique de Thé",
@@ -3615,13 +3814,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "斯里兰卡的气候孕育了种类繁多、其他地方少见的水果，其中许多就种植在茶树和其他庄园作物旁边。请从下方选择一种水果，近距离了解这里种植的一种水果。",
         "选择一种水果查看完整详情：",
       ],
-      fruitNames: ["火龙果"],
-      fruitSectionHeadings: [["关于火龙果","特征","用途与益处"]],
+      fruitNames: ["火龙果","菠萝"],
+      fruitSectionHeadings: [
+        ["关于火龙果","特征","用途与益处"],
+        ["关于菠萝植株","特征","用途与益处","菠萝茶产品"],
+      ],
       fruitSectionBodies: [
         [
           "火龙果植株，学名Hylocereus undatus，也叫红龙果或草莓梨，是一种原产于中美洲和南美洲的攀援仙人掌，如今在世界各地温暖气候地区广泛种植，包括这座庄园。借助支撑柱攀爬生长，其三棱形、带刺、肉质的绿色茎可长到5到10米。它硕大的白色花朵只在夜间绽放，清晨便重新闭合，因此得名「夜之女王」。",
           "简单了解一下这种植物：",
           "火龙果的价值远不止于它引人注目的外观：",
+        ],
+        [
+          "菠萝（Ananas comosus）是凤梨科的一种热带结果植物，原产于南美洲，如今在世界各地热带和亚热带地区广泛种植，包括这座庄园。这种植株围绕中央茎干形成一圈带刺的剑形叶片，中央茎干上结出标志性的果实。它在温暖潮湿、排水良好的土壤中生长旺盛，因其香甜微酸的风味而备受推崇。",
+          "简单了解一下这种植物：",
+          "菠萝的价值远不止于它香甜的果肉：",
+          "庄园还将菠萝用作自家茶系列的增值原料，将其与用天然菠萝精华和优质锡兰茶叶制成的高级调味茶混合在一起。",
         ],
       ],
       fruitItemHeadings: [
@@ -3630,25 +3838,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["生长习性","茎","花朵","果实","生境"],
           ["烹饪用途","药用价值","生态重要性"],
         ],
+        [
+          [],
+          ["高度","叶片","花朵","果实","生境"],
+          ["烹饪用途","药用价值","生态重要性"],
+          ["菠萝风味茶"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "一种借助支撑物可长到5到10米的攀援或蔓生仙人掌。",
-            "三棱形、绿色、肉质的茎，边缘带有小刺。",
-            "硕大、白色、芳香、夜间开花，长度可达30厘米。",
-            "椭圆形或梨形果实，外皮呈鲜艳的粉红色或红色，内里是白色或红色果肉，点缀着细小的黑籽。",
-            "热带和亚热带气候；偏好排水良好的沙质或壤质土壤及充足的阳光。",
-          ],
-          [
-            "可生吃，也可加入水果沙拉、奶昔和甜点中，或加工成果汁和果酱——其略带甜味的口感和爽脆的质地使其成为清爽的热带美味。",
-            "火龙果富含抗氧化物质、维生素C和膳食纤维，有助于增强免疫力、促进消化和改善肌肤活力；其种子还含有对心脏有益的脂肪酸。",
-            "它的花朵为蝙蝠和飞蛾等夜行传粉者提供花蜜，其耐旱特性也有助于在干旱地区实现可持续农业发展。",
-          ],
+          ["一种借助支撑物可长到5到10米的攀援或蔓生仙人掌。","三棱形、绿色、肉质的茎，边缘带有小刺。","硕大、白色、芳香、夜间开花，长度可达30厘米。","椭圆形或梨形果实，外皮呈鲜艳的粉红色或红色，内里是白色或红色果肉，点缀着细小的黑籽。","热带和亚热带气候；偏好排水良好的沙质或壤质土壤及充足的阳光。"],
+          ["可生吃，也可加入水果沙拉、奶昔和甜点中，或加工成果汁和果酱——其略带甜味的口感和爽脆的质地使其成为清爽的热带美味。","火龙果富含抗氧化物质、维生素C和膳食纤维，有助于增强免疫力、促进消化和改善肌肤活力；其种子还含有对心脏有益的脂肪酸。","它的花朵为蝙蝠和飞蛾等夜行传粉者提供花蜜，其耐旱特性也有助于在干旱地区实现可持续农业发展。"],
+        ],
+        [
+          [],
+          ["高度可达1到1.5米。","细长、剑形、坚韧的叶片，边缘带刺，形成密集的莲座状叶丛。","细小的紫色或红色花朵，排列成紧密的螺旋状花簇，后来融合形成果实。","由多个融合的浆果组成的复合果实，成熟时呈金黄色，顶部有一簇带刺的叶子。","热带和亚热带气候，阳光充足，排水良好的沙质或壤质土壤。"],
+          ["可生吃、榨汁，或用于菜肴、甜点和饮料；也常用于果酱、糖果，以及作为披萨或沙拉的配料。","菠萝富含维生素C、锰和菠萝蛋白酶，有助于促进消化、增强免疫力并有助于减轻炎症。","其种植有助于水土保持和农林复合系统；植株茂密的叶丛有助于防止水土流失，其副产品还可用作动物饲料和堆肥。"],
+          ["一款热带茶饮，将成熟菠萝的甜美与锡兰红茶的醇厚完美融合，在果香与茶香之间取得平衡——无论热饮还是冰饮都同样可口。"],
         ],
       ],
-      duration: "10-15分钟",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["天然调味 | 顺滑清爽 | 优质精选"],
+        ],
+      ],
+            duration: "10-15分钟",
     },
     "tea-factory": {
       name: "茶厂",
@@ -3995,13 +4218,22 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "スリランカの気候は、他の地域ではあまり見られない幅広い種類の果物を育みますが、その多くは茶などの農園作物のすぐそばで栽培されています。ここで栽培されている果物を詳しく見るには、以下から一つ選んでください。",
         "果物を選ぶと詳細が表示されます：",
       ],
-      fruitNames: ["ドラゴンフルーツ"],
-      fruitSectionHeadings: [["ドラゴンフルーツの植物について","特徴","用途と効能"]],
+      fruitNames: ["ドラゴンフルーツ","パイナップル"],
+      fruitSectionHeadings: [
+        ["ドラゴンフルーツの植物について","特徴","用途と効能"],
+        ["パイナップルの植物について","特徴","用途と効能","パイナップル茶製品"],
+      ],
       fruitSectionBodies: [
         [
           "ドラゴンフルーツの植物、学名Hylocereus undatusは、ピタヤやストロベリーペアーとも呼ばれ、中央アメリカと南アメリカ原産のつる性サボテンで、現在はこの農園を含む世界中の温暖な気候で栽培されています。支柱に沿って育てられ、その三稜形でとげのある多肉質の緑色の茎は5〜10メートルまで育ちます。その大きな白い花は夜にだけ咲き、朝には再び閉じてしまうことから「夜の女王」という愛称がついています。",
           "この植物についての簡単な紹介：",
           "ドラゴンフルーツの価値は、その印象的な見た目をはるかに超えています：",
+        ],
+        [
+          "パイナップル（Ananas comosus）は、パイナップル科（Bromeliaceae）に属する熱帯の果樹で、南アメリカ原産ですが、現在ではこの農園を含む世界中の熱帯・亜熱帯地域で広く栽培されています。この植物は中央の茎の周りにとげのある剣状の葉のロゼットを形成し、その茎に特徴的な果実が実ります。温暖で湿潤な気候と水はけの良い土壤で育ちやすく、その甘くさわやかな風味で高く評価されています。",
+          "この植物についての簡単な紹介：",
+          "パイナップルの価値は、その甘い果肉をはるかに超えています：",
+          "農園ではパイナップルも自社の茶製品ラインの付加価値素材として使用し、天然のパイナップルエキスと上質なセイロン茶葉を使った上質なフレーバーティーにブレンドしています。",
         ],
       ],
       fruitItemHeadings: [
@@ -4010,25 +4242,40 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["成長習性","茎","花","果実","生育環境"],
           ["料理での利用","薬効","生態学的重要性"],
         ],
+        [
+          [],
+          ["高さ","葉","花","果実","生育環境"],
+          ["料理での利用","薬効","生態学的重要性"],
+          ["パイナップルフレーバーティー"],
+        ],
       ],
       fruitItemBodies: [
         [
           [],
-          [
-            "支柱があれば5〜10メートルまで育つつる性・登はん性のサボテン。",
-            "縁に小さなとげのある三稜形で肉厚な緑色の茎。",
-            "夜に咲く、大きく白い香り高い花で、長さは30センチメートルに達する。",
-            "鮮やかなピンクまたは赤い皮を持ち、小さな黒い種が散らばる白または赤の果肉を含む、楕円形または洋梨形の果実。",
-            "熱帯および亜熱帯気候。水はけの良い砂質または壌土と十分な日照を好む。",
-          ],
-          [
-            "生で食べるほか、フルーツサラダ、スムージー、デザートに加えたり、ジュースやジャムに加工したりします——ほんのり甘い味わいとシャキシャキした食感が、爽やかな南国の味わいを生み出します。",
-            "抗酸化物質、ビタミンC、食物繊維が豊富なドラゴンフルーツは、免疫力、消化、肌の健康を支えます。種子には心臓に良い脂肪酸も含まれています。",
-            "その花はコウモリや蛾といった夜行性の花粉媒介者に蜜を提供し、乾燥への耐性は乾燥地域での持続可能な農業を支えています。",
-          ],
+          ["支柱があれば5〜10メートルまで育つつる性・登はん性のサボテン。","縁に小さなとげのある三稜形で肉厚な緑色の茎。","夜に咲く、大きく白い香り高い花で、長さは30センチメートルに達する。","鮮やかなピンクまたは赤い皮を持ち、小さな黒い種が散らばる白または赤の果肉を含む、楕円形または洋梨形の果実。","熱帯および亜熱帯気候。水はけの良い砂質または壌土と十分な日照を好む。"],
+          ["生で食べるほか、フルーツサラダ、スムージー、デザートに加えたり、ジュースやジャムに加工したりします——ほんのり甘い味わいとシャキシャキした食感が、爽やかな南国の味わいを生み出します。","抗酸化物質、ビタミンC、食物繊維が豊富なドラゴンフルーツは、免疫力、消化、肌の健康を支えます。種子には心臓に良い脂肪酸も含まれています。","その花はコウモリや蛾といった夜行性の花粉媒介者に蜜を提供し、乾燥への耐性は乾燥地域での持続可能な農業を支えています。"],
+        ],
+        [
+          [],
+          ["高さは1〜1.5メートルほど。","縁にとげのある、長く剣状で丈夫な葉が密なロゼット状に茂る。","小さな紫色または赤みがかった花が密集したらせん状のクラスターに並び、後に融合して果実になる。","融合した果実の集合体で、熟すと金色がかった黄色になり、とげのある葉の房を頂く複合果実。","十分な日照と水はけの良い砂質または壌土を好む熱帯および亜熱帯気候。"],
+          ["生で食べるほか、ジュースにしたり、料理、デザート、飲み物に使われます。ジャムやキャンディー、ピザやサラダのトッピングとしてもよく使われます。","ビタミンC、マンガン、そして酵素ブロメラインが豊富なパイナップルは、消化を助け、免疫力を高め、炎症を軽減するのに役立ちます。","その栽培は土壌保全と混農林業システムを支えます。植物の密な葉は浸食を防ぐのに役立ち、副産物は動物飼料や堆肥化に利用できます。"],
+          ["熟したパイナップルの甘さとセイロン紅茶のなめらかなコクを組み合わせた南国風のブレンドティーで、フルーティーな風味と紅茶の温かみのバランスが取れています——ホットでもアイスでも楽しめます。"],
         ],
       ],
-      duration: "10〜15分",
+      fruitItemTags: [
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
+          ["天然フレーバー | なめらかで爽やか | プレミアム品質"],
+        ],
+      ],
+            duration: "10〜15分",
     },
     "tea-factory": {
       name: "紅茶工場",
