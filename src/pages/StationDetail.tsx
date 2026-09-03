@@ -5,7 +5,7 @@ import { BadgeCheck, Bookmark, Check, ChevronLeft, ChevronRight, Clock, Leaf, Lo
 import { useLanguage } from "../context/LanguageContext";
 import { useFavorites } from "../context/FavoritesContext";
 import { useVisited } from "../context/VisitedContext";
-import { STATIONS, getStation } from "../data/stations";
+import { STATIONS, getStation, type StationSection } from "../data/stations";
 import { localizeStation } from "../data/localize";
 import { estimateStationMinutes } from "../data/estimateTime";
 
@@ -17,10 +17,12 @@ export function StationDetail() {
   const rawStation = id ? getStation(id) : undefined;
   const station = rawStation ? localizeStation(rawStation, language) : undefined;
   const [sectionIndex, setSectionIndex] = useState(0);
+  const [selectedFruitId, setSelectedFruitId] = useState<string | null>(null);
 
   useEffect(() => {
     if (rawStation) markVisited(rawStation.id);
     setSectionIndex(0);
+    setSelectedFruitId(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rawStation?.id]);
 
@@ -33,6 +35,7 @@ export function StationDetail() {
 
   function goToSection(index: number) {
     setSectionIndex(index);
+    setSelectedFruitId(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -101,69 +104,58 @@ export function StationDetail() {
 
         {station.sections ? (() => {
           const currentSection = station.sections![sectionIndex];
+          const selectedFruit = currentSection.fruits?.find((f) => f.id === selectedFruitId);
           return (
           <div>
             <AnimatePresence mode="wait">
               <motion.section
-                key={sectionIndex}
+                key={`${sectionIndex}-${selectedFruitId ?? "gallery"}`}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.3 }}
               >
-                {currentSection.image && (
-                  Array.isArray(currentSection.image) ? (
-                    <div className="grid grid-cols-2 gap-2 mb-3">
-                      {currentSection.image.map((src) => (
-                        <img
-                          key={src}
-                          src={src}
-                          alt={currentSection.heading}
-                          loading="lazy"
-                          className="w-full h-56 object-cover rounded-md shadow-sm"
-                        />
+                {currentSection.fruits ? (
+                  selectedFruit ? (
+                    <div>
+                      <button
+                        type="button"
+                        onClick={() => setSelectedFruitId(null)}
+                        className="inline-flex items-center gap-1 text-tea-600 dark:text-tea-400 hover:text-tea-900 dark:hover:text-white text-sm mb-5"
+                      >
+                        <ChevronLeft size={16} />
+                        {t("backToFruits")}
+                      </button>
+                      <h2 className="font-heading font-semibold text-2xl text-tea-900 dark:text-white mb-4">{selectedFruit.name}</h2>
+                      {selectedFruit.sections.map((fruitSection, fi) => (
+                        <div key={fi} className={fi > 0 ? "mt-8" : ""}>
+                          <SectionContent section={fruitSection} />
+                        </div>
                       ))}
                     </div>
                   ) : (
-                    <img
-                      src={currentSection.image}
-                      alt={currentSection.heading}
-                      loading="lazy"
-                      className="w-full h-56 object-cover rounded-md mb-3 shadow-sm"
-                    />
-                  )
-                )}
-                <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-2">{currentSection.heading}</h2>
-                <p className="text-tea-800 dark:text-tea-200 leading-relaxed">{currentSection.body}</p>
-
-                {currentSection.items && (
-                  <div className="mt-6 grid sm:grid-cols-2 gap-4">
-                    {currentSection.items.map((item) => (
-                      <div key={item.heading} className="flex flex-col h-full bg-tea-50 dark:bg-tea-900 border border-tea-200 dark:border-tea-700 rounded-md overflow-hidden">
-                        {item.image && (
-                          Array.isArray(item.image) ? (
-                            <div className="grid grid-cols-2 gap-0.5">
-                              {item.image.map((src) => (
-                                <img key={src} src={src} alt={item.heading} loading="lazy" className="w-full h-auto" />
-                              ))}
+                    <div>
+                      <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-2">{currentSection.heading}</h2>
+                      <p className="text-tea-800 dark:text-tea-200 leading-relaxed">{currentSection.body}</p>
+                      <div className="mt-6 grid sm:grid-cols-2 gap-4">
+                        {currentSection.fruits.map((fruit) => (
+                          <button
+                            key={fruit.id}
+                            type="button"
+                            onClick={() => setSelectedFruitId(fruit.id)}
+                            className="flex flex-col text-left h-full bg-tea-50 dark:bg-tea-900 border border-tea-200 dark:border-tea-700 rounded-md overflow-hidden hover:border-gold-500 dark:hover:border-gold-500 transition-colors"
+                          >
+                            <img src={fruit.image} alt={fruit.name} loading="lazy" className="w-full h-40 object-cover" />
+                            <div className="p-4">
+                              <h3 className="font-heading font-semibold text-lg text-tea-900 dark:text-white">{fruit.name}</h3>
                             </div>
-                          ) : (
-                            <img src={item.image} alt={item.heading} loading="lazy" className="w-full h-auto" />
-                          )
-                        )}
-                        <div className="flex-1 flex flex-col p-4">
-                          <h3 className="font-heading font-semibold text-lg text-tea-900 dark:text-white mb-1.5">{item.heading}</h3>
-                          <p className="text-tea-800 dark:text-tea-200 leading-relaxed text-sm">{item.body}</p>
-                          {item.tags && (
-                            <p className="flex items-center gap-1.5 text-gold-700 dark:text-gold-400 text-xs font-semibold mt-auto pt-3">
-                              <Leaf size={13} />
-                              {item.tags}
-                            </p>
-                          )}
-                        </div>
+                          </button>
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  )
+                ) : (
+                  <SectionContent section={currentSection} />
                 )}
               </motion.section>
             </AnimatePresence>
@@ -227,6 +219,68 @@ export function StationDetail() {
 
       </div>
     </div>
+  );
+}
+
+/** Renders one section's image(s), heading, body, and item cards — shared by the top-level section pager and a selected fruit's own stacked sections. */
+function SectionContent({ section }: { section: StationSection }) {
+  return (
+    <>
+      {section.image && (
+        Array.isArray(section.image) ? (
+          <div className="grid grid-cols-2 gap-2 mb-3">
+            {section.image.map((src) => (
+              <img
+                key={src}
+                src={src}
+                alt={section.heading}
+                loading="lazy"
+                className="w-full h-56 object-cover rounded-md shadow-sm"
+              />
+            ))}
+          </div>
+        ) : (
+          <img
+            src={section.image}
+            alt={section.heading}
+            loading="lazy"
+            className="w-full h-56 object-cover rounded-md mb-3 shadow-sm"
+          />
+        )
+      )}
+      <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-2">{section.heading}</h2>
+      <p className="text-tea-800 dark:text-tea-200 leading-relaxed">{section.body}</p>
+
+      {section.items && (
+        <div className="mt-6 grid sm:grid-cols-2 gap-4">
+          {section.items.map((item) => (
+            <div key={item.heading} className="flex flex-col h-full bg-tea-50 dark:bg-tea-900 border border-tea-200 dark:border-tea-700 rounded-md overflow-hidden">
+              {item.image && (
+                Array.isArray(item.image) ? (
+                  <div className="grid grid-cols-2 gap-0.5">
+                    {item.image.map((src) => (
+                      <img key={src} src={src} alt={item.heading} loading="lazy" className="w-full h-auto" />
+                    ))}
+                  </div>
+                ) : (
+                  <img src={item.image} alt={item.heading} loading="lazy" className="w-full h-auto" />
+                )
+              )}
+              <div className="flex-1 flex flex-col p-4">
+                <h3 className="font-heading font-semibold text-lg text-tea-900 dark:text-white mb-1.5">{item.heading}</h3>
+                <p className="text-tea-800 dark:text-tea-200 leading-relaxed text-sm">{item.body}</p>
+                {item.tags && (
+                  <p className="flex items-center gap-1.5 text-gold-700 dark:text-gold-400 text-xs font-semibold mt-auto pt-3">
+                    <Leaf size={13} />
+                    {item.tags}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
