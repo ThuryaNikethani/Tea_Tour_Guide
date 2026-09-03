@@ -24,6 +24,20 @@ export function localizeStation(station: Station, lang: LanguageCode): Station {
         body: tr.itemBodies?.[i]?.[j] ?? item.body,
         tags: tr.itemTags?.[i]?.[j] ?? item.tags,
       })),
+      fruits: section.fruits?.map((fruit, k) => ({
+        ...fruit,
+        name: tr.fruitNames?.[k] ?? fruit.name,
+        sections: fruit.sections.map((fSection, fi) => ({
+          ...fSection,
+          heading: tr.fruitSectionHeadings?.[k]?.[fi] ?? fSection.heading,
+          body: tr.fruitSectionBodies?.[k]?.[fi] ?? fSection.body,
+          items: fSection.items?.map((fItem, fj) => ({
+            ...fItem,
+            heading: tr.fruitItemHeadings?.[k]?.[fi]?.[fj] ?? fItem.heading,
+            body: tr.fruitItemBodies?.[k]?.[fi]?.[fj] ?? fItem.body,
+          })),
+        })),
+      })),
     })),
   };
 }
