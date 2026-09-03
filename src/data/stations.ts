@@ -85,6 +85,7 @@ export interface StationTranslation {
   fruitSectionBodies?: string[][];
   fruitItemHeadings?: string[][][];
   fruitItemBodies?: string[][][];
+  fruitItemTags?: string[][][];
 }
 
 import prepaImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
@@ -137,6 +138,19 @@ import dragonFruitPlantImg from "../assets/dragon-fruit/dragon-fruit-plant.jpg";
 import dragonFruitFlowerImg from "../assets/dragon-fruit/dragon-fruit-flower.webp";
 import dragonFruitHarvestImg from "../assets/dragon-fruit/dragon-fruit-harvest.jpg";
 import dragonFruitVineImg from "../assets/dragon-fruit/dragon-fruit-vine.jpg";
+// Sourced from the factory's own pineapple microsite
+// (celebrated-youtiao-b19e52.netlify.app) — real photos of the estate's
+// Ananas comosus crop, plus a genuine photo of the factory's own branded
+// "Flavoured Ceylon Tea" product with pineapple. Of the site's eleven
+// gallery images, two carried watermarks (one a tiled stock-photo mark
+// across a full field shot, one a faint centred copyright mark) and were
+// excluded; these five did not. See the provenance note near the
+// "unique-fruits" station below.
+import pineapplePlantImg from "../assets/pineapple/pineapple-plant.jpg";
+import pineappleFlowerImg from "../assets/pineapple/pineapple-flower.jpg";
+import pineappleFruitImg from "../assets/pineapple/pineapple-fruit.webp";
+import pineappleHarvestImg from "../assets/pineapple/pineapple-harvest.webp";
+import pineappleTeaBoxImg from "../assets/pineapple/pineapple-tea-box.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -815,8 +829,18 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * definition above): a "Fruits of Sri Lanka" intro page, then a "Meet the
  * Fruits" page showing selectable fruit cards, where picking one reveals
  * that fruit's full detail (all its own sections stacked on one page, not
- * paginated) with a link back to the gallery. Only dragon fruit is
- * populated for now, but the shape supports adding more fruit cards later.
+ * paginated) with a link back to the gallery. A second fruit card, pineapple,
+ * was added the same way on 2026-09-03 from the factory's own pineapple
+ * microsite (celebrated-youtiao-b19e52.netlify.app) — same template, same
+ * "Weralu" alt-text artifact on its unlabelled images; of its eleven gallery
+ * images, two were excluded (one tiled stock-photo watermark across a full
+ * field shot, one faint centred copyright mark), five were used. Unlike
+ * dragon fruit, the site also showed a genuine, real photo of the factory's
+ * own branded "Flavoured Ceylon Tea" product made with pineapple, so
+ * pineapple's fruit entry has a fourth section, "Pineapple Tea Products",
+ * matching the existing tea-product-section pattern used by "cinnamon" and
+ * "ginger-turmeric" — dragon fruit has no equivalent product, so it stays
+ * at three sections.
  */
 export const STATIONS: Station[] = [
   {
@@ -1375,6 +1399,52 @@ export const STATIONS: Station[] = [
                   { heading: "Culinary Uses", body: "Eaten fresh, added to fruit salads, smoothies, and desserts, or processed into juices and jams — its mildly sweet flavour and crisp texture make it a refreshing tropical treat." },
                   { heading: "Medicinal Properties", body: "Rich in antioxidants, vitamin C, and fibre, dragon fruit supports immune health, digestion, and skin vitality; its seeds contain healthy fatty acids that benefit the heart." },
                   { heading: "Ecological Importance", body: "Its flowers provide nectar for nocturnal pollinators such as bats and moths, and its drought tolerance supports sustainable agriculture in arid regions." },
+                ],
+              },
+            ],
+          },
+          {
+            id: "pineapple",
+            name: "Pineapple",
+            image: pineappleFruitImg,
+            sections: [
+              {
+                heading: "About the Pineapple Plant",
+                image: pineapplePlantImg,
+                body: "Ananas comosus — the pineapple — is a tropical fruit-bearing plant in the Bromeliaceae family, native to South America and now widely grown in tropical and subtropical regions worldwide, including here on the estate. The plant forms a rosette of spiny, sword-shaped leaves around a central stalk, which produces the iconic fruit. It thrives in warm, humid climates with well-drained soil and is prized for its sweet, tangy flavour.",
+              },
+              {
+                heading: "Characteristics",
+                image: pineappleFlowerImg,
+                body: "A quick look at the plant itself:",
+                items: [
+                  { heading: "Height", body: "Up to 1 to 1.5 metres tall." },
+                  { heading: "Leaves", body: "Long, sword-shaped, tough leaves with spiny edges, forming a dense rosette." },
+                  { heading: "Flowers", body: "Small purple or reddish flowers arranged in a compact spiral cluster that later fuses to form the fruit." },
+                  { heading: "Fruit", body: "A compound fruit made of fused berries, golden-yellow when ripe, crowned with a tuft of spiny leaves." },
+                  { heading: "Habitat", body: "Tropical and subtropical climates with full sunlight and well-drained sandy or loamy soil." },
+                ],
+              },
+              {
+                heading: "Uses and Benefits",
+                image: [pineappleFruitImg, pineappleHarvestImg],
+                body: "Pineapple's value goes well beyond its sweet flesh:",
+                items: [
+                  { heading: "Culinary Uses", body: "Eaten fresh, juiced, or used in dishes, desserts, and beverages; also common in jams, candies, and as a pizza or salad topping." },
+                  { heading: "Medicinal Properties", body: "Rich in vitamin C, manganese, and the enzyme bromelain, pineapple supports digestion, boosts immunity, and helps reduce inflammation." },
+                  { heading: "Ecological Importance", body: "Its cultivation supports soil conservation and agroforestry systems; the plant's dense foliage helps prevent erosion, and its by-products can be used for animal feed and composting." },
+                ],
+              },
+              {
+                heading: "Pineapple Tea Products",
+                body: "The factory also uses pineapple as a value-added ingredient in its own tea range, blending it into a premium flavoured tea crafted from natural pineapple essence and fine Ceylon tea leaves.",
+                items: [
+                  {
+                    heading: "Pineapple Flavoured Tea",
+                    image: pineappleTeaBoxImg,
+                    body: "A tropical infusion combining the sweetness of ripe pineapple with the smooth richness of Ceylon black tea, offering a balance of fruity flavour and tea warmth — enjoyable hot or iced.",
+                    tags: "Naturally Flavored | Smooth & Refreshing | Premium Quality",
+                  },
                 ],
               },
             ],
