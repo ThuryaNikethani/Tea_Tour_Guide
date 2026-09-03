@@ -61,6 +61,11 @@ import type { StationTranslation } from "./stations";
  * Pineapple's fourth section (a real tea product, unlike dragon fruit)
  * introduced `fruitItemTags`, indexed [fruitIndex][sectionIndex][itemIndex]
  * the same way, for that section's product tags line.
+ *
+ * A third fruit, Ceylon Olive (Weralu), was added to the gallery on
+ * 2026-09-03 and translated the same way, appending index 2 to fruitNames/
+ * fruitSectionHeadings/fruitSectionBodies/fruitItemHeadings/fruitItemBodies/
+ * fruitItemTags (empty arrays for the tags — no tea product for this crop).
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -576,10 +581,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "ශ්‍රී ලංකාවේ දේශගුණය වෙනත් තැන්වල සුලභ නොවන පලතුරු රැසකට හිතකර වන අතර, ඒවායින් බොහොමයක් තේ සහ අනෙකුත් වතු බෝග අසලම වගා කරනු ලැබේ. මෙහි වගා කරන එකක් වඩාත් සමීපව බැලීමට පහත පලතුරක් තෝරන්න.",
         "සම්පූර්ණ විස්තර බැලීමට පලතුරක් තෝරන්න:",
       ],
-      fruitNames: ["ඩ්‍රැගන් ෆෘට්","අන්නාසි"],
+      fruitNames: ["ඩ්‍රැගන් ෆෘට්","අන්නාසි","වේරළු (සිලෝන් ඔලිව්)"],
       fruitSectionHeadings: [
         ["ඩ්‍රැගන් ෆෘට් ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
         ["අන්නාසි ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ","අන්නාසි තේ නිෂ්පාදන"],
+        ["වේරළු ගස පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
       ],
       fruitSectionBodies: [
         [
@@ -592,6 +598,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "ශාකය පිළිබඳ කෙටි විස්තරයක්:",
           "අන්නාසි හි වටිනාකම එහි මිහිරි පල්පයට වඩා බොහෝ දුරට විහිදේ:",
           "කර්මාන්තශාලාව අන්නාසිද එහිම තේ පරාසයේ අගය එකතු කළ අමුද්‍රව්‍යයක් ලෙස භාවිතා කරයි, ස්වාභාවික අන්නාසි සාරය සහ උසස් තත්ත්වයේ සිලෝන් තේ කොළ වලින් සකසන ලද උසස් රස එකතු කළ තේ එකකට එය මිශ්‍ර කරමින්.",
+        ],
+        [
+          "වේරළු, විද්‍යාත්මකව Elaeocarpus serratus ලෙස හඳුන්වන — Elaeocarpaceae පවුලට අයත් මධ්‍යම සිට විශාල දක්වා සදාහරිත ගසකි, ඉන්දියානු උපමහාද්වීපයට හා ගිනිකොනදිග ආසියාවට ආවේණික, වතුයාය ඇතුළුව. එය එහි සුමට, ඔලිව් කොළ පැහැති ඵලය සහ කුඩා සුදු සීනි-මල් හැඩැති මල් සඳහා ප්‍රසිද්ධ වන අතර, නිවර්තන දේශගුණයන්හි වර්ධනය වන අතර ශ්‍රී ලාංකික නිවාස උද්‍යාන හා පහත් බිම් වර්ෂාවනාන්තරවල සුලභව දක්නට ලැබේ.",
+          "ගස පිළිබඳ කෙටි විස්තරයක්:",
+          "වේරළු හි වටිනාකම එහි ඇඹුල් ඵලයට වඩා බොහෝ දුරට විහිදේ:",
         ],
       ],
       fruitItemHeadings: [
@@ -606,6 +617,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["ආහාර පිසීමේ භාවිතය","ඖෂධීය ගුණාංග","පාරිසරික වැදගත්කම"],
           ["අන්නාසි රස එකතු කළ තේ"],
         ],
+        [
+          [],
+          ["උස","කොළ","මල්","ඵලය","වාසස්ථානය"],
+          ["ආහාර පිසීමේ භාවිතය","ඖෂධීය හා කෙස් රැකවරණය","පාරිසරික වැදගත්කම"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -616,8 +632,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["මීටර් 1 සිට 1.5 දක්වා උසැති වේ.","කටු දාර සහිත දිග, කඩුව-හැඩැති, ශක්තිමත් කොළ, ඝන රෝසෙට් එකක් සාදමින්.","පසුව ඵලය සෑදීමට එකට එකතු වන සංයුක්ත සර්පිලාකාර පොකුරක සකසන ලද කුඩා දම් හෝ රතු පැහැති මල්.","එකට එකතු වූ බෙරි වලින් සැදුණු, මුහුකුරා ගිය විට රන්වන්-කහ පැහැති, කටු සහිත කොළ පොකුරකින් ඔටුනු පළඳන සංයුක්ත ඵලයකි.","සම්පූර්ණ හිරු එළිය සහ හොඳින් ජලය බැස යන වැලි හෝ මැටිමය පසක් සහිත නිවර්තන හා අර්ධ නිවර්තන දේශගුණයන්."],
-          ["නැවුම්ව අනුභව කරන, යුෂ සාදන, හෝ ආහාර, අතුරුපස, සහ පාන වර්ග සඳහා භාවිතා කරයි; ජෑම්, රසකැවිලි, සහ පීසා හෝ සලාද එකතු කිරීමකට ලෙසද බහුලව භාවිතා වේ.","විටමින් C, මැංගනීස්, සහ බ්‍රොමලේන් එන්සයිමයෙන් පොහොසත් අන්නාසි, ආහාර දිරවීමට උපකාරී වන අතර, ප්‍රතිශක්තිකරණය වැඩි දියුණු කරයි, සහ දැවිල්ල අඩු කිරීමට උපකාරී වේ.","එහි වගාව පස් සංරක්ෂණයට හා කෘෂි-වන ක්‍රමවලට සහාය වේ; ශාකයේ ඝන පත්‍ර ස්කන්ධය ඛාදනය වැළැක්වීමට උපකාරී වන අතර, එහි උප-නිෂ්පාදන සත්ව ආහාර හා කොම්පෝස්ට් සෑදීම සඳහා භාවිතා කළ හැක."],
-          ["පරිණත අන්නාසි වල මිහිරි බව සිලෝන් කළු තේවල මෘදු පොහොසත් බව සමඟ ඒකාබද්ධ කරන නිවර්තන කසායක්, පලතුරු රසය සහ තේ උණුසුම අතර සමතුලිතතාවයක් ලබා දෙන — උණුසුම් හෝ අයිස් තේ ලෙස රසවත් වේ."],
+          ["නැවුම්ව අනුභව කරන, යුෂ සාදන, හෝ ආහාර, අතුරුපස, සහ පාන වර්ග සඳහා භාවිතා කරයි; ජෑම්, රසකැවිලි, සහ පීසා හෝ සලාද එකතු කිරීමකට ලෙසද බහුලව භාවිතා වේ.","විටමින් C, මැංගනීස්, සහ බ්‍රොමලේන් එන්සයිමයෙන් පොහොසත් අන්නාසි, ආහාර දිරවීමට උපකාරී වන අතර, ප්‍රතිශක්තිකරණය වැඩි දියුණු කරයි, සහ දැවිල්ල අඩු කිරීමට උපකාරී වේ.","එහි වගාව පස් සංරක්ෂණයට හා කෘෂි-වන ක්‍රමවලට සහාය වේ; ශාකයේ ඝන පත්‍ර ස්කන්ධය ඛාදනය වැළැක්වීමට උපකාරී වන අතර, එහි උප-නිෂ්පාදන සත්ව ආහාර හා කොම්පෝස්ට් සෑදීම සඳහා භාවිතා කළ හැක.","පරිණත අන්නාසි වල මිහිරි බව සිලෝන් කළු තේවල මෘදු පොහොසත් බව සමඟ ඒකාබද්ධ කරන නිවර්තන කසායක්, පලතුරු රසය සහ තේ උණුසුම අතර සමතුලිතතාවයක් ලබා දෙන — උණුසුම් හෝ අයිස් තේ ලෙස රසවත් වේ."],
+        ],
+        [
+          [],
+          ["සාමාන්‍යයෙන් මීටර් 15 සිට 20 දක්වා උසැති වේ.","දාරොප්පෙකි කොළ, තද කොළ පැහැති, ඇතැම් ඒවා වැටීමට පෙර දීප්ත රතු පැහැයට හැරේ.","සියුම් පොකුරු වශයෙන් එල්ලෙන කුඩා, සුදු, සීනි-මල් හැඩැති මල්.","සුමට, ඩිම්බාකාර, ඔලිව් කොළ පැහැති ඵලයකි, ඇඹුල් හෝ රළු රසයක් සහ තද බීජයක් සහිතව.","පහත් බිම් වර්ෂාවනාන්තර, සදාහරිත වනාන්තර, සහ නිවාස උද්‍යාන; හොඳින් ජලය බැස යන පසක් කැමති වේ."],
+          ["අමුවෙන් අනුභව කිරීම, ව්‍යංජනවලට එකතු කිරීම, හෝ ප්‍රසිද්ධ ශ්‍රී ලාංකික 'වේරළු අච්චාරු' සෑදීමට අච්චාරු දැමීම සඳහා ජනප්‍රියයි; විටමින් C සහ ප්‍රතිඔක්සිකාරක බහුලයි.","වේරළු කොළ සුමට, දිලිසෙන කෙස් සඳහා සාම්ප්‍රදායික ස්වාභාවික කෙස් ප්‍රතිකාරයකි; ගසේ විවිධ කොටස් ආහාර දිරවීමේ සෞඛ්‍යයට හා ප්‍රති-ගිනි අවුලුවන ගුණාංග සඳහාද භාවිතා කරයි.","ගස ප්‍රාදේශීය ජෛව විවිධත්වයට සහාය වන අතර, ඵල අනුභවී කුරුල්ලන් හා කෘමීන්ට ආහාර සපයන අතර, නිවර්තන වන පරිසර පද්ධතියක අත්‍යවශ්‍ය කොටසකි."],
         ],
       ],
       fruitItemTags: [
@@ -631,6 +651,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["ස්වාභාවිකව රසකාරක එකතු කළ | මෘදු සහ නැවුම් | උසස් තත්ත්වය"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "මිනිත්තු 10-15",
@@ -974,10 +999,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "இலங்கையின் காலநிலை மற்ற இடங்களில் பொதுவாகக் காணப்படாத பரந்த அளவிலான பழங்களுக்கு ஏற்றது, அவற்றில் பல தேயிலை மற்றும் பிற தோட்ட பயிர்களுக்கு அருகிலேயே பயிரிடப்படுகின்றன. இங்கு வளர்க்கப்படும் ஒன்றை நெருக்கமாகப் பார்க்க கீழே ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்.",
         "முழு விவரங்களைப் பார்க்க ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்:",
       ],
-      fruitNames: ["டிராகன் ஃப்ரூட்","அன்னாசி"],
+      fruitNames: ["டிராகன் ஃப்ரூட்","அன்னாசி","வேரளு (சிலோன் ஆலிவ்)"],
       fruitSectionHeadings: [
         ["டிராகன் ஃப்ரூட் செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
         ["அன்னாசி செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்","அன்னாசி தேநீர் பொருட்கள்"],
+        ["வேரளு மரம் பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
       ],
       fruitSectionBodies: [
         [
@@ -990,6 +1016,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "செடியைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
           "அன்னாசியின் மதிப்பு அதன் இனிப்பு சதையை தாண்டி விரிவடைகிறது:",
           "தோட்டம் அன்னாசியையும் தனது தேநீர் வரம்பில் மதிப்புக்கூட்டப்பட்ட பொருளாகப் பயன்படுத்துகிறது, இயற்கை அன்னாசி சாரமும் சிறந்த சிலோன் தேயிலை இலைகளும் கொண்டு தயாரிக்கப்பட்ட ஒரு உயர்தர சுவை சேர்க்கப்பட்ட தேநீருடன் அதைக் கலக்கிறது.",
+        ],
+        [
+          "வேரளு, அறிவியல் பூர்வமாக Elaeocarpus serratus எனப்படும் — Elaeocarpaceae குடும்பத்தைச் சேர்ந்த நடுத்தர முதல் பெரிய அளவிலான பசுமையான மரமாகும், இந்திய துணைக்கண்டம் மற்றும் தென்கிழக்கு ஆசியாவை பூர்வீகமாகக் கொண்டது, இந்த தோட்டம் உட்பட. இது அதன் மென்மையான, ஆலிவ்-பச்சை நிற பழத்திற்கும், சிறிய வெள்ளை மணி வடிவ மலர்களுக்கும் பெயர் பெற்றது, வெப்பமண்டல காலநிலைகளில் செழிக்கிறது, இலங்கை வீட்டுத் தோட்டங்களிலும் தாழ்வான மழைக்காடுகளிலும் பொதுவாகக் காணப்படுகிறது.",
+          "மரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+          "வேரளுவின் மதிப்பு அதன் புளிப்பான பழத்தை தாண்டி விரிவடைகிறது:",
         ],
       ],
       fruitItemHeadings: [
@@ -1004,6 +1035,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["சமையல் பயன்கள்","மருத்துவ பண்புகள்","சூழலியல் முக்கியத்துவம்"],
           ["அன்னாசி சுவை சேர்க்கப்பட்ட தேநீர்"],
         ],
+        [
+          [],
+          ["உயரம்","இலைகள்","மலர்கள்","பழம்","வாழ்விடம்"],
+          ["சமையல் பயன்கள்","மருத்துவம் & முடி பராமரிப்பு","சூழலியல் முக்கியத்துவம்"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -1014,8 +1050,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["1 முதல் 1.5 மீட்டர் வரை உயரமுள்ளது.","முள் விளிம்புகளுடன் நீளமான, வாள் வடிவ, கடினமான இலைகள், அடர்த்தியான வட்டமாக அமைகின்றன.","பின்னர் ஒன்றிணைந்து பழமாக மாறும் ஒரு சுருள் வடிவ கொத்தில் அமைந்த சிறிய ஊதா அல்லது சிவப்பு நிற மலர்கள்.","ஒன்றிணைந்த பெர்ரிகளால் ஆன, முதிர்ந்தவுடன் தங்க-மஞ்சள் நிறமான, முள் இலைகளின் கொத்தால் முடிசூட்டப்பட்ட ஒரு கூட்டு பழம்.","முழு சூரிய ஒளியும் நன்கு வடிகட்டும் மணல் அல்லது களிமண் மண்ணும் கொண்ட வெப்பமண்டல மற்றும் துணை வெப்பமண்டல காலநிலைகள்."],
-          ["புதியதாக உண்ணப்படுகிறது, சாறு பிழியப்படுகிறது, அல்லது உணவுகள், இனிப்புகள், மற்றும் பானங்களில் பயன்படுத்தப்படுகிறது; ஜாம், மிட்டாய், மற்றும் பீட்சா அல்லது சாலட் மேலோட்டமாகவும் பொதுவாகப் பயன்படுத்தப்படுகிறது.","வைட்டமின் C, மாங்கனீஸ், மற்றும் புரோமிலைன் நொதி நிறைந்த அன்னாசி, செரிமானத்திற்கு உதவுகிறது, நோய் எதிர்ப்பு சக்தியை அதிகரிக்கிறது, மற்றும் அழற்சியைக் குறைக்க உதவுகிறது.","இதன் சாகுபடி மண் பாதுகாப்பு மற்றும் வேளாண்-வனவியல் அமைப்புகளை ஆதரிக்கிறது; செடியின் அடர்த்தியான இலைகள் மண் அரிப்பைத் தடுக்க உதவுகின்றன, மேலும் இதன் துணை பொருட்கள் கால்நடை தீவனம் மற்றும் உரமாக்குதலுக்குப் பயன்படுத்தப்படலாம்."],
-          ["முதிர்ந்த அன்னாசியின் இனிப்புத்தன்மையை சிலோன் கருப்பு தேயிலையின் மென்மையான வளத்துடன் இணைக்கும் ஒரு வெப்பமண்டல தேநீர், பழச்சுவைக்கும் தேநீர் அரவணைப்புக்கும் இடையே சமநிலையை வழங்குகிறது — சூடாகவோ அல்லது குளிர்ச்சியாகவோ சுவைக்கலாம்."],
+          ["புதியதாக உண்ணப்படுகிறது, சாறு பிழியப்படுகிறது, அல்லது உணவுகள், இனிப்புகள், மற்றும் பானங்களில் பயன்படுத்தப்படுகிறது; ஜாம், மிட்டாய், மற்றும் பீட்சா அல்லது சாலட் மேலோட்டமாகவும் பொதுவாகப் பயன்படுத்தப்படுகிறது.","வைட்டமின் C, மாங்கனீஸ், மற்றும் புரோமிலைன் நொதி நிறைந்த அன்னாசி, செரிமானத்திற்கு உதவுகிறது, நோய் எதிர்ப்பு சக்தியை அதிகரிக்கிறது, மற்றும் அழற்சியைக் குறைக்க உதவுகிறது.","இதன் சாகுபடி மண் பாதுகாப்பு மற்றும் வேளாண்-வனவியல் அமைப்புகளை ஆதரிக்கிறது; செடியின் அடர்த்தியான இலைகள் மண் அரிப்பைத் தடுக்க உதவுகின்றன, மேலும் இதன் துணை பொருட்கள் கால்நடை தீவனம் மற்றும் உரமாக்குதலுக்குப் பயன்படுத்தப்படலாம்.","முதிர்ந்த அன்னாசியின் இனிப்புத்தன்மையை சிலோன் கருப்பு தேயிலையின் மென்மையான வளத்துடன் இணைக்கும் ஒரு வெப்பமண்டல தேநீர், பழச்சுவைக்கும் தேநீர் அரவணைப்புக்கும் இடையே சமநிலையை வழங்குகிறது — சூடாகவோ அல்லது குளிர்ச்சியாகவோ சுவைக்கலாம்."],
+        ],
+        [
+          [],
+          ["பொதுவாக 15 முதல் 20 மீட்டர் வரை உயரமுள்ளது.","பல்-விளிம்பு, அடர் பச்சை நிற இலைகள், சில உதிர்வதற்கு முன் பிரகாசமான சிவப்பு நிறமாக மாறும்.","மென்மையான தொகுதிகளில் தொங்கும் சிறிய, வெள்ளை, மணி வடிவ மலர்கள்.","மென்மையான, நீள்வட்ட, ஆலிவ்-பச்சை நிற பழம், புளிப்பு அல்லது கசப்பான சுவையும் கடினமான விதையும் கொண்டது.","தாழ்வான மழைக்காடுகள், பசுமையான காடுகள், மற்றும் வீட்டுத் தோட்டங்கள்; நன்கு வடிகட்டும் மண்ணை விரும்புகிறது."],
+          ["பச்சையாக உண்ணப்படுவது, கறிகளில் சமைக்கப்படுவது, அல்லது புகழ்பெற்ற இலங்கை 'வேரளு அச்சாறு' தயாரிக்க ஊறுகாய் இடப்படுவது பிரபலமானது; வைட்டமின் C மற்றும் ஆக்ஸிஜனேற்ற எதிர்ப்பான்கள் நிறைந்தது.","வேரளு இலைகள் மென்மையான, பளபளப்பான முடிக்கான பாரம்பரிய இயற்கை முடி சிகிச்சையாகும்; மரத்தின் பல்வேறு பாகங்கள் செரிமான ஆரோக்கியத்திற்கும் அழற்சி எதிர்ப்பு பண்புகளுக்கும் பயன்படுத்தப்படுகின்றன.","இந்த மரம் உள்ளூர் பல்லுயிர் பெருக்கத்தை ஆதரிக்கிறது, பழம் உண்ணும் பறவைகளுக்கும் பூச்சிகளுக்கும் உணவை வழங்குகிறது, மேலும் வெப்பமண்டல வன சுற்றுச்சூழல் அமைப்பின் இன்றியமையாத பகுதியாகும்."],
         ],
       ],
       fruitItemTags: [
@@ -1029,6 +1069,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["இயற்கையாக சுவை சேர்க்கப்பட்டது | மென்மையானது & புத்துணர்ச்சியானது | உயர்தர தரம்"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "10-15 நிமிடங்கள்",
@@ -1372,10 +1417,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Il clima dello Sri Lanka favorisce un'ampia varietà di frutti poco comuni altrove, molti dei quali coltivati proprio accanto al tè e ad altre colture della tenuta. Scegli un frutto qui sotto per scoprirne di più su uno coltivato qui.",
         "Seleziona un frutto per vederne tutti i dettagli:",
       ],
-      fruitNames: ["Frutto del Drago","Ananas"],
+      fruitNames: ["Frutto del Drago","Ananas","Olivo di Ceylon (Weralu)"],
       fruitSectionHeadings: [
         ["Il Frutto del Drago","Caratteristiche","Usi e Benefici"],
         ["La Pianta dell'Ananas","Caratteristiche","Usi e Benefici","Prodotti al Tè all'Ananas"],
+        ["L'Albero dell'Olivo di Ceylon","Caratteristiche","Usi e Benefici"],
       ],
       fruitSectionBodies: [
         [
@@ -1388,6 +1434,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Uno sguardo rapido alla pianta stessa:",
           "Il valore dell'ananas va ben oltre la sua polpa dolce:",
           "La tenuta utilizza anche l'ananas come ingrediente a valore aggiunto nella propria gamma di tè, unendolo a un tè aromatizzato premium creato con essenza naturale di ananas e foglie di tè di Ceylon pregiate.",
+        ],
+        [
+          "Elaeocarpus serratus — l'Olivo di Ceylon, noto localmente come Weralu — è un albero sempreverde da medio a grande della famiglia delle Elaeocarpaceae, originario del subcontinente indiano e del Sud-est asiatico, compresa questa tenuta. È noto per il suo frutto liscio, verde oliva, e per i suoi piccoli fiori bianchi a forma di campana, prospera nei climi tropicali ed è comune negli orti familiari dello Sri Lanka e nelle foreste pluviali di pianura.",
+          "Uno sguardo rapido all'albero stesso:",
+          "Il valore dell'Olivo di Ceylon va ben oltre il suo frutto aspro:",
         ],
       ],
       fruitItemHeadings: [
@@ -1402,6 +1453,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Usi Culinari","Proprietà Medicinali","Importanza Ecologica"],
           ["Tè Aromatizzato all'Ananas"],
         ],
+        [
+          [],
+          ["Altezza","Foglie","Fiori","Frutto","Habitat"],
+          ["Usi Culinari","Medicina e Cura dei Capelli","Importanza Ecologica"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -1412,8 +1468,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["Alta fino a 1-1,5 metri.","Foglie lunghe, a forma di spada, robuste, con bordi spinosi, che formano una densa rosetta.","Piccoli fiori viola o rossastri disposti in un compatto grappolo a spirale che in seguito si fondono per formare il frutto.","Un frutto composto formato da bacche fuse, giallo dorato a maturazione, coronato da un ciuffo di foglie spinose.","Climi tropicali e subtropicali con piena esposizione al sole e terreno sabbioso o argilloso ben drenato."],
-          ["Si mangia fresco, spremuto, o utilizzato in piatti, dessert e bevande; comune anche in marmellate, caramelle, e come guarnizione per pizza o insalate.","Ricco di vitamina C, manganese, e dell'enzima bromelina, l'ananas favorisce la digestione, rafforza il sistema immunitario, e aiuta a ridurre l'infiammazione.","La sua coltivazione favorisce la conservazione del suolo e i sistemi agroforestali; il fogliame denso della pianta aiuta a prevenire l'erosione, e i suoi sottoprodotti possono essere usati per mangime animale e compostaggio."],
-          ["Un'infusione tropicale che unisce la dolcezza dell'ananas maturo alla morbida ricchezza del tè nero di Ceylon, offrendo un equilibrio tra sapore fruttato e calore del tè — gustoso caldo o freddo."],
+          ["Si mangia fresco, spremuto, o utilizzato in piatti, dessert e bevande; comune anche in marmellate, caramelle, e come guarnizione per pizza o insalate.","Ricco di vitamina C, manganese, e dell'enzima bromelina, l'ananas favorisce la digestione, rafforza il sistema immunitario, e aiuta a ridurre l'infiammazione.","La sua coltivazione favorisce la conservazione del suolo e i sistemi agroforestali; il fogliame denso della pianta aiuta a prevenire l'erosione, e i suoi sottoprodotti possono essere usati per mangime animale e compostaggio.","Un'infusione tropicale che unisce la dolcezza dell'ananas maturo alla morbida ricchezza del tè nero di Ceylon, offrendo un equilibrio tra sapore fruttato e calore del tè — gustoso caldo o freddo."],
+        ],
+        [
+          [],
+          ["Tipicamente alto 15-20 metri.","Foglie dentellate, verde scuro, alcune delle quali diventano rosso brillante prima di cadere.","Piccoli fiori bianchi a forma di campana che pendono in delicati grappoli.","Frutto liscio, ovale, verde oliva, dal sapore aspro o astringente e con un seme duro.","Foreste pluviali di pianura, foreste sempreverdi e orti familiari; predilige un terreno ben drenato."],
+          ["Comunemente mangiato crudo, cucinato in curry, o messo sott'aceto per preparare il noto 'Weralu Achcharu' sri-lankese; ricco di vitamina C e antiossidanti.","Le foglie di Weralu sono un trattamento naturale tradizionale per capelli lisci e lucenti; varie parti dell'albero sono usate anche per la salute digestiva e le proprietà antinfiammatorie.","L'albero sostiene la biodiversità locale, fornendo cibo a uccelli e insetti frugivori, ed è una parte vitale degli ecosistemi delle foreste tropicali."],
         ],
       ],
       fruitItemTags: [
@@ -1427,6 +1487,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Aromatizzato Naturalmente | Morbido e Rinfrescante | Qualità Premium"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "10-15 minuti",
@@ -1770,10 +1835,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "يدعم مناخ سريلانكا مجموعة واسعة من الفواكه غير الشائعة في أماكن أخرى، ويُزرع الكثير منها إلى جانب الشاي ومحاصيل المزرعة الأخرى مباشرة. اختر فاكهة أدناه لتلقي نظرة أقرب على واحدة تُزرع هنا.",
         "اختر فاكهة لعرض تفاصيلها الكاملة:",
       ],
-      fruitNames: ["فاكهة التنين","الأناناس"],
+      fruitNames: ["فاكهة التنين","الأناناس","زيتون سيلان (ويرالو)"],
       fruitSectionHeadings: [
         ["عن نبات فاكهة التنين","الخصائص","الاستخدامات والفوائد"],
         ["عن نبات الأناناس","الخصائص","الاستخدامات والفوائد","منتجات شاي الأناناس"],
+        ["عن شجرة زيتون سيلان","الخصائص","الاستخدامات والفوائد"],
       ],
       fruitSectionBodies: [
         [
@@ -1786,6 +1852,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "نظرة سريعة على النبات نفسه:",
           "تتجاوز قيمة الأناناس لبّه الحلو بكثير:",
           "تستخدم المزرعة الأناناس أيضًا كمكوّن ذي قيمة مضافة في تشكيلة الشاي الخاصة بها، حيث تمزجه في شاي منكّه فاخر مصنوع من خلاصة الأناناس الطبيعية وأوراق شاي سيلان الفاخرة.",
+        ],
+        [
+          "زيتون سيلان (Elaeocarpus serratus)، المعروف محليًا باسم ويرالو، هو شجرة دائمة الخضرة متوسطة إلى كبيرة الحجم من عائلة الإيلايوكارباسيا، موطنها الأصلي شبه القارة الهندية وجنوب شرق آسيا، بما في ذلك هذه المزرعة. تشتهر بثمرتها الملساء ذات اللون الأخضر الزيتوني وأزهارها البيضاء الصغيرة على شكل جرس، وتزدهر في المناخات الاستوائية وهي منظر شائع في حدائق المنازل السريلانكية والغابات المطيرة المنخفضة.",
+          "نظرة سريعة على الشجرة نفسها:",
+          "تتجاوز قيمة زيتون سيلان ثمرتها الحامضة بكثير:",
         ],
       ],
       fruitItemHeadings: [
@@ -1800,6 +1871,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["الاستخدامات الطهوية","الخصائص الطبية","الأهمية البيئية"],
           ["شاي الأناناس المنكّه"],
         ],
+        [
+          [],
+          ["الارتفاع","الأوراق","الأزهار","الثمرة","الموطن"],
+          ["الاستخدامات الطهوية","الطب والعناية بالشعر","الأهمية البيئية"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -1810,8 +1886,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["يصل ارتفاعه إلى 1 إلى 1.5 متر.","أوراق طويلة على شكل سيف، قوية، بحواف شائكة، تشكل وردة كثيفة.","أزهار صغيرة أرجوانية أو محمرة مرتبة في عنقود حلزوني مدمج يندمج لاحقًا لتكوين الثمرة.","ثمرة مركبة مكوّنة من توتات مندمجة، ذهبية اللون عند النضج، متوّجة بخصلة من الأوراق الشائكة.","المناخات الاستوائية وشبه الاستوائية ذات أشعة الشمس الكاملة والتربة الرملية أو الطينية جيدة التصريف."],
-          ["يؤكل طازجًا، أو يُعصر، أو يُستخدم في الأطباق والحلويات والمشروبات؛ كما يُستخدم شائعًا في المربيات والحلوى وكإضافة للبيتزا أو السلطة.","غني بفيتامين C والمنغنيز وإنزيم البروميلين، يدعم الأناناس الهضم، ويعزز المناعة، ويساعد في تقليل الالتهاب.","تدعم زراعته الحفاظ على التربة وأنظمة الزراعة الحرجية؛ يساعد الأوراق الكثيفة للنبات في منع التآكل، ويمكن استخدام منتجاته الثانوية في علف الحيوانات والتسميد."],
-          ["مشروب استوائي يجمع بين حلاوة الأناناس الناضج وثراء شاي سيلان الأسود الناعم، ويقدّم توازنًا بين النكهة الفاكهية ودفء الشاي — لذيذ ساخنًا أو مثلجًا."],
+          ["يؤكل طازجًا، أو يُعصر، أو يُستخدم في الأطباق والحلويات والمشروبات؛ كما يُستخدم شائعًا في المربيات والحلوى وكإضافة للبيتزا أو السلطة.","غني بفيتامين C والمنغنيز وإنزيم البروميلين، يدعم الأناناس الهضم، ويعزز المناعة، ويساعد في تقليل الالتهاب.","تدعم زراعته الحفاظ على التربة وأنظمة الزراعة الحرجية؛ يساعد الأوراق الكثيفة للنبات في منع التآكل، ويمكن استخدام منتجاته الثانوية في علف الحيوانات والتسميد.","مشروب استوائي يجمع بين حلاوة الأناناس الناضج وثراء شاي سيلان الأسود الناعم، ويقدّم توازنًا بين النكهة الفاكهية ودفء الشاي — لذيذ ساخنًا أو مثلجًا."],
+        ],
+        [
+          [],
+          ["يصل ارتفاعها عادة إلى 15-20 مترًا.","أوراق مسننة، خضراء داكنة، يتحول بعضها إلى اللون الأحمر الزاهي قبل التساقط.","أزهار بيضاء صغيرة على شكل جرس متدلية في عناقيد رقيقة.","ثمرة ملساء بيضاوية خضراء زيتونية بمذاق حامض أو قابض وبذرة صلبة.","الغابات المطيرة المنخفضة، الغابات دائمة الخضرة، وحدائق المنازل؛ تفضل التربة جيدة التصريف."],
+          ["تُؤكل نيئة، أو تُطهى في الكاري، أو تُخلَّل لصنع 'ويرالو أتشارو' السريلانكي المعروف؛ غنية بفيتامين C ومضادات الأكسدة.","أوراق ويرالو علاج طبيعي تقليدي للشعر الأملس اللامع؛ كما تُستخدم أجزاء مختلفة من الشجرة لصحة الجهاز الهضمي وخصائصها المضادة للالتهابات.","تدعم الشجرة التنوع البيولوجي المحلي، وتوفر الغذاء للطيور والحشرات آكلة الثمار، وهي جزء حيوي من النظم البيئية للغابات الاستوائية."],
         ],
       ],
       fruitItemTags: [
@@ -1825,6 +1905,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["منكّه طبيعيًا | ناعم ومنعش | جودة ممتازة"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "10-15 دقيقة",
@@ -2168,10 +2253,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Климат Шри-Ланки благоприятствует широкому разнообразию фруктов, редко встречающихся в других местах, многие из которых выращиваются прямо рядом с чаем и другими плантационными культурами. Выберите фрукт ниже, чтобы поближе познакомиться с одним из тех, что выращивают здесь.",
         "Выберите фрукт, чтобы увидеть полную информацию о нём:",
       ],
-      fruitNames: ["Драконий фрукт","Ананас"],
+      fruitNames: ["Драконий фрукт","Ананас","Цейлонская олива (Вералу)"],
       fruitSectionHeadings: [
         ["О растении драконий фрукт","Характеристики","Применение и польза"],
         ["О растении ананас","Характеристики","Применение и польза","Ананасовые чайные продукты"],
+        ["О дереве цейлонской оливы","Характеристики","Применение и польза"],
       ],
       fruitSectionBodies: [
         [
@@ -2184,6 +2270,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Краткий обзор самого растения:",
           "Ценность ананаса выходит далеко за рамки его сладкой мякоти:",
           "Поместье также использует ананас как ингредиент с добавленной ценностью в собственной линейке чая, добавляя его в премиальный ароматизированный чай, изготовленный из натуральной ананасовой эссенции и высококачественных листьев цейлонского чая.",
+        ],
+        [
+          "Elaeocarpus serratus — цейлонская олива, местное название Вералу, — вечнозелёное дерево от среднего до крупного размера семейства элеокарповых, родом с Индийского субконтинента и из Юго-Восточной Азии, растёт и на этом поместье. Известно своим гладким, оливково-зелёным плодом и мелкими белыми колокольчатыми цветками, процветает в тропическом климате и часто встречается в шри-ланкийских приусадебных садах и низменных тропических лесах.",
+          "Краткий обзор самого дерева:",
+          "Ценность цейлонской оливы выходит далеко за рамки её терпкого плода:",
         ],
       ],
       fruitItemHeadings: [
@@ -2198,6 +2289,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Кулинарное применение","Лечебные свойства","Экологическое значение"],
           ["Ароматизированный ананасовый чай"],
         ],
+        [
+          [],
+          ["Высота","Листья","Цветки","Плод","Среда обитания"],
+          ["Кулинарное применение","Медицина и уход за волосами","Экологическое значение"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -2208,8 +2304,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["Высотой до 1–1,5 метра.","Длинные, мечевидные, жёсткие листья с колючими краями, образующие плотную розетку.","Мелкие фиолетовые или красноватые цветки, собранные в компактное спиральное соцветие, которое позже срастается, формируя плод.","Сложный плод, состоящий из сросшихся ягод, золотисто-жёлтый при созревании, увенчанный пучком колючих листьев.","Тропический и субтропический климат при полном солнце и хорошо дренированной песчаной или суглинистой почве."],
-          ["Едят свежим, выжимают сок, используют в блюдах, десертах и напитках; также распространён в джемах, конфетах и как топпинг для пиццы или салата.","Богатый витамином C, марганцем и ферментом бромелайном, ананас поддерживает пищеварение, укрепляет иммунитет и помогает уменьшить воспаление.","Его выращивание способствует сохранению почвы и агролесоводческим системам; густая листва растения помогает предотвратить эрозию, а его побочные продукты можно использовать для корма животных и компостирования."],
-          ["Тропический напиток, сочетающий сладость спелого ананаса с мягкой насыщенностью цейлонского чёрного чая, предлагающий баланс фруктового вкуса и чайного тепла — вкусен как горячим, так и со льдом."],
+          ["Едят свежим, выжимают сок, используют в блюдах, десертах и напитках; также распространён в джемах, конфетах и как топпинг для пиццы или салата.","Богатый витамином C, марганцем и ферментом бромелайном, ананас поддерживает пищеварение, укрепляет иммунитет и помогает уменьшить воспаление.","Его выращивание способствует сохранению почвы и агролесоводческим системам; густая листва растения помогает предотвратить эрозию, а его побочные продукты можно использовать для корма животных и компостирования.","Тропический напиток, сочетающий сладость спелого ананаса с мягкой насыщенностью цейлонского чёрного чая, предлагающий баланс фруктового вкуса и чайного тепла — вкусен как горячим, так и со льдом."],
+        ],
+        [
+          [],
+          ["Обычно высотой 15–20 метров.","Зубчатые, тёмно-зелёные листья, некоторые из которых становятся ярко-красными перед опадением.","Мелкие белые колокольчатые цветки, свисающие изящными гроздьями.","Гладкий, овальный, оливково-зелёный плод с терпким или вяжущим вкусом и твёрдой косточкой.","Низменные тропические леса, вечнозелёные леса и приусадебные сады; предпочитает хорошо дренированную почву."],
+          ["Популярно есть в сыром виде, готовить в карри или мариновать для приготовления известного шри-ланкийского «Вералу Ачхару»; богат витамином C и антиоксидантами.","Листья вералу — традиционное натуральное средство для гладких, блестящих волос; различные части дерева также используются для здоровья пищеварения и противовоспалительных свойств.","Дерево поддерживает местное биоразнообразие, обеспечивая пищей плодоядных птиц и насекомых, и является жизненно важной частью тропических лесных экосистем."],
         ],
       ],
       fruitItemTags: [
@@ -2223,6 +2323,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["С натуральным ароматом | Мягкий и освежающий | Премиальное качество"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "10–15 минут",
@@ -2566,10 +2671,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Das Klima Sri Lankas begünstigt eine breite Palette an Früchten, die anderswo selten zu finden sind, viele davon direkt neben Tee und anderen Plantagenkulturen angebaut. Wählen Sie unten eine Frucht aus, um sich eine hier angebaute genauer anzusehen.",
         "Wählen Sie eine Frucht aus, um alle Details dazu zu sehen:",
       ],
-      fruitNames: ["Drachenfrucht","Ananas"],
+      fruitNames: ["Drachenfrucht","Ananas","Ceylon-Olive (Weralu)"],
       fruitSectionHeadings: [
         ["Über die Drachenfrucht-Pflanze","Merkmale","Verwendung und Vorteile"],
         ["Über die Ananas-Pflanze","Merkmale","Verwendung und Vorteile","Ananas-Teeprodukte"],
+        ["Über den Ceylon-Oliven-Baum","Merkmale","Verwendung und Vorteile"],
       ],
       fruitSectionBodies: [
         [
@@ -2582,6 +2688,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Ein kurzer Blick auf die Pflanze selbst:",
           "Der Wert der Ananas geht weit über ihr süßes Fruchtfleisch hinaus:",
           "Das Anwesen verwendet Ananas auch als wertschöpfende Zutat in der eigenen Teepalette und mischt sie zu einem hochwertigen aromatisierten Tee aus natürlichem Ananas-Extrakt und feinen Ceylon-Teeblättern.",
+        ],
+        [
+          "Elaeocarpus serratus — die Ceylon-Olive, lokal als Weralu bekannt — ist ein mittelgroßer bis großer immergrüner Baum aus der Familie der Elaeocarpaceae, ursprünglich aus dem indischen Subkontinent und Südostasien, auch hier auf dem Anwesen. Bekannt für seine glatte, olivgrüne Frucht und kleine weiße, glockenförmige Blüten, gedeiht er in tropischem Klima und ist ein häufiger Anblick in sri-lankischen Hausgärten und Tiefland-Regenwäldern.",
+          "Ein kurzer Blick auf den Baum selbst:",
+          "Der Wert der Ceylon-Olive geht weit über ihre herbe Frucht hinaus:",
         ],
       ],
       fruitItemHeadings: [
@@ -2596,6 +2707,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Kulinarische Verwendung","Medizinische Eigenschaften","Ökologische Bedeutung"],
           ["Ananas-Aromatisierter Tee"],
         ],
+        [
+          [],
+          ["Höhe","Blätter","Blüten","Frucht","Lebensraum"],
+          ["Kulinarische Verwendung","Medizin & Haarpflege","Ökologische Bedeutung"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -2606,8 +2722,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["Bis zu 1 bis 1,5 Meter hoch.","Lange, schwertförmige, zähe Blätter mit stacheligen Rändern, die eine dichte Rosette bilden.","Kleine violette oder rötliche Blüten, angeordnet in einem kompakten spiralförmigen Cluster, die später verschmelzen, um die Frucht zu bilden.","Eine zusammengesetzte Frucht aus verschmolzenen Beeren, goldgelb bei Reife, gekrönt von einem Büschel stacheliger Blätter.","Tropisches und subtropisches Klima mit voller Sonneneinstrahlung und gut durchlässigem sandigem oder lehmigem Boden."],
-          ["Wird frisch gegessen, gepresst, oder in Gerichten, Desserts und Getränken verwendet; auch verbreitet in Marmeladen, Bonbons und als Belag für Pizza oder Salat.","Reich an Vitamin C, Mangan und dem Enzym Bromelain, unterstützt Ananas die Verdauung, stärkt das Immunsystem und hilft, Entzündungen zu reduzieren.","Ihr Anbau unterstützt den Bodenschutz und Agroforstsysteme; das dichte Laub der Pflanze hilft, Erosion zu verhindern, und ihre Nebenprodukte können als Tierfutter und zum Kompostieren verwendet werden."],
-          ["Ein tropischer Aufguss, der die Süße reifer Ananas mit der sanften Fülle von Ceylon-Schwarztee verbindet und eine Balance aus fruchtigem Geschmack und Teewärme bietet — köstlich heiß oder eisgekühlt."],
+          ["Wird frisch gegessen, gepresst, oder in Gerichten, Desserts und Getränken verwendet; auch verbreitet in Marmeladen, Bonbons und als Belag für Pizza oder Salat.","Reich an Vitamin C, Mangan und dem Enzym Bromelain, unterstützt Ananas die Verdauung, stärkt das Immunsystem und hilft, Entzündungen zu reduzieren.","Ihr Anbau unterstützt den Bodenschutz und Agroforstsysteme; das dichte Laub der Pflanze hilft, Erosion zu verhindern, und ihre Nebenprodukte können als Tierfutter und zum Kompostieren verwendet werden.","Ein tropischer Aufguss, der die Süße reifer Ananas mit der sanften Fülle von Ceylon-Schwarztee verbindet und eine Balance aus fruchtigem Geschmack und Teewärme bietet — köstlich heiß oder eisgekühlt."],
+        ],
+        [
+          [],
+          ["Typischerweise 15 bis 20 Meter hoch.","Gezähnte, dunkelgrüne Blätter, von denen manche vor dem Abfallen leuchtend rot werden.","Kleine, weiße, glockenförmige Blüten, die in zarten Trauben hängen.","Glatte, ovale, olivgrüne Frucht mit herbem oder adstringierendem Geschmack und hartem Kern.","Tiefland-Regenwälder, immergrüne Wälder und Hausgärten; bevorzugt gut durchlässigen Boden."],
+          ["Beliebt roh gegessen, in Currys gekocht, oder eingelegt für das bekannte sri-lankische 'Weralu Achcharu'; reich an Vitamin C und Antioxidantien.","Weralu-Blätter sind eine traditionelle natürliche Haarbehandlung für glattes, glänzendes Haar; verschiedene Teile des Baumes werden auch für die Verdauungsgesundheit und entzündungshemmende Eigenschaften verwendet.","Der Baum unterstützt die lokale Biodiversität, liefert Nahrung für fruchtfressende Vögel und Insekten und ist ein wichtiger Teil tropischer Waldökosysteme."],
         ],
       ],
       fruitItemTags: [
@@ -2621,6 +2741,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Natürlich Aromatisiert | Sanft & Erfrischend | Premium-Qualität"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "10-15 Minuten",
@@ -2964,10 +3089,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "El clima de Sri Lanka favorece una amplia variedad de frutas poco comunes en otros lugares, muchas de ellas cultivadas justo junto al té y otros cultivos de la finca. Elige una fruta a continuación para ver más de cerca una de las que se cultivan aquí.",
         "Selecciona una fruta para ver todos sus detalles:",
       ],
-      fruitNames: ["Fruta del Dragón","Piña"],
+      fruitNames: ["Fruta del Dragón","Piña","Aceituna de Ceilán (Weralu)"],
       fruitSectionHeadings: [
         ["Sobre la Planta de la Fruta del Dragón","Características","Usos y Beneficios"],
         ["Sobre la Planta de Piña","Características","Usos y Beneficios","Productos de Té de Piña"],
+        ["Sobre el Árbol de Aceituna de Ceilán","Características","Usos y Beneficios"],
       ],
       fruitSectionBodies: [
         [
@@ -2980,6 +3106,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Una mirada rápida a la planta en sí:",
           "El valor de la piña va mucho más allá de su pulpa dulce:",
           "La finca también utiliza la piña como ingrediente de valor añadido en su propia gama de té, mezclándola en un té saborizado premium elaborado con esencia natural de piña y finas hojas de té de Ceilán.",
+        ],
+        [
+          "Elaeocarpus serratus — la aceituna de Ceilán, conocida localmente como Weralu — es un árbol de hoja perenne de tamaño mediano a grande de la familia Elaeocarpaceae, originario del subcontinente indio y el sudeste asiático, incluida esta finca. Es conocido por su fruto liso de color verde oliva y sus pequeñas flores blancas en forma de campana, prospera en climas tropicales y es una vista común en los jardines domésticos de Sri Lanka y en las selvas tropicales de tierras bajas.",
+          "Una mirada rápida al árbol en sí:",
+          "El valor de la aceituna de Ceilán va mucho más allá de su fruto ácido:",
         ],
       ],
       fruitItemHeadings: [
@@ -2994,6 +3125,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Usos Culinarios","Propiedades Medicinales","Importancia Ecológica"],
           ["Té Saborizado de Piña"],
         ],
+        [
+          [],
+          ["Altura","Hojas","Flores","Fruto","Hábitat"],
+          ["Usos Culinarios","Medicina y Cuidado del Cabello","Importancia Ecológica"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -3004,8 +3140,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["De hasta 1 a 1,5 metros de altura.","Hojas largas, en forma de espada, resistentes, con bordes espinosos, que forman una roseta densa.","Pequeñas flores moradas o rojizas dispuestas en un racimo espiral compacto que luego se fusionan para formar el fruto.","Un fruto compuesto formado por bayas fusionadas, de color amarillo dorado al madurar, coronado por un penacho de hojas espinosas.","Climas tropicales y subtropicales con pleno sol y suelo arenoso o arcilloso bien drenado."],
-          ["Se come fresca, se exprime, o se usa en platos, postres y bebidas; también es común en mermeladas, caramelos, y como cobertura de pizza o ensalada.","Rica en vitamina C, manganeso, y la enzima bromelina, la piña favorece la digestión, refuerza la inmunidad, y ayuda a reducir la inflamación.","Su cultivo favorece la conservación del suelo y los sistemas agroforestales; el follaje denso de la planta ayuda a prevenir la erosión, y sus subproductos pueden usarse para alimento animal y compostaje."],
-          ["Una infusión tropical que combina la dulzura de la piña madura con la suave riqueza del té negro de Ceilán, ofreciendo un equilibrio entre sabor afrutado y calidez del té — delicioso caliente o helado."],
+          ["Se come fresca, se exprime, o se usa en platos, postres y bebidas; también es común en mermeladas, caramelos, y como cobertura de pizza o ensalada.","Rica en vitamina C, manganeso, y la enzima bromelina, la piña favorece la digestión, refuerza la inmunidad, y ayuda a reducir la inflamación.","Su cultivo favorece la conservación del suelo y los sistemas agroforestales; el follaje denso de la planta ayuda a prevenir la erosión, y sus subproductos pueden usarse para alimento animal y compostaje.","Una infusión tropical que combina la dulzura de la piña madura con la suave riqueza del té negro de Ceilán, ofreciendo un equilibrio entre sabor afrutado y calidez del té — delicioso caliente o helado."],
+        ],
+        [
+          [],
+          ["Normalmente de 15 a 20 metros de altura.","Hojas dentadas, verde oscuro, algunas de las cuales se vuelven rojo brillante antes de caer.","Pequeñas flores blancas en forma de campana que cuelgan en delicados racimos.","Fruto liso, ovalado, de color verde oliva, con sabor ácido o astringente y una semilla dura.","Selvas tropicales de tierras bajas, bosques de hoja perenne y jardines domésticos; prefiere un suelo bien drenado."],
+          ["Popular comerlo crudo, cocinado en curry, o encurtido para hacer el conocido 'Weralu Achcharu' de Sri Lanka; rico en vitamina C y antioxidantes.","Las hojas de Weralu son un tratamiento natural tradicional para un cabello suave y brillante; varias partes del árbol también se usan para la salud digestiva y propiedades antiinflamatorias.","El árbol favorece la biodiversidad local, proporcionando alimento a aves e insectos frugívoros, y es una parte vital de los ecosistemas de bosques tropicales."],
         ],
       ],
       fruitItemTags: [
@@ -3019,6 +3159,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Saborizado Naturalmente | Suave y Refrescante | Calidad Premium"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "10-15 minutos",
@@ -3362,10 +3507,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Le climat du Sri Lanka favorise une large variété de fruits peu courants ailleurs, dont beaucoup sont cultivés juste à côté du thé et d'autres cultures de la plantation. Choisissez un fruit ci-dessous pour découvrir de plus près l'un de ceux cultivés ici.",
         "Sélectionnez un fruit pour voir tous ses détails :",
       ],
-      fruitNames: ["Fruit du Dragon","Ananas"],
+      fruitNames: ["Fruit du Dragon","Ananas","Olivier de Ceylan (Weralu)"],
       fruitSectionHeadings: [
         ["À propos du Fruit du Dragon","Caractéristiques","Usages et Bienfaits"],
         ["À propos du Plant d'Ananas","Caractéristiques","Usages et Bienfaits","Produits de Thé à l'Ananas"],
+        ["À propos de l'Olivier de Ceylan","Caractéristiques","Usages et Bienfaits"],
       ],
       fruitSectionBodies: [
         [
@@ -3378,6 +3524,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Un rapide aperçu de la plante elle-même :",
           "La valeur de l'ananas va bien au-delà de sa chair sucrée :",
           "Le domaine utilise également l'ananas comme ingrédient à valeur ajoutée dans sa propre gamme de thé, en le mélangeant à un thé aromatisé premium élaboré à partir d'essence naturelle d'ananas et de fines feuilles de thé de Ceylan.",
+        ],
+        [
+          "Elaeocarpus serratus — l'olivier de Ceylan, appelé localement Weralu — est un arbre à feuilles persistantes de taille moyenne à grande de la famille des Elaeocarpaceae, originaire du sous-continent indien et de l'Asie du Sud-Est, y compris sur ce domaine. Il est connu pour son fruit lisse vert olive et ses petites fleurs blanches en forme de cloche, prospère sous climat tropical et est un spectacle courant dans les jardins familiaux sri-lankais et les forêts tropicales de basse altitude.",
+          "Un rapide aperçu de l'arbre lui-même :",
+          "La valeur de l'olivier de Ceylan va bien au-delà de son fruit acidulé :",
         ],
       ],
       fruitItemHeadings: [
@@ -3392,6 +3543,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Usages Culinaires","Propriétés Médicinales","Importance Écologique"],
           ["Thé Aromatisé à l'Ananas"],
         ],
+        [
+          [],
+          ["Hauteur","Feuilles","Fleurs","Fruit","Habitat"],
+          ["Usages Culinaires","Médecine et Soin des Cheveux","Importance Écologique"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -3402,8 +3558,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["Jusqu'à 1 à 1,5 mètre de hauteur.","Feuilles longues, en forme d'épée, coriaces, aux bords épineux, formant une rosette dense.","Petites fleurs violettes ou rougeâtres disposées en grappe spiralée compacte qui fusionnent ensuite pour former le fruit.","Un fruit composé formé de baies fusionnées, jaune doré à maturité, couronné d'une touffe de feuilles épineuses.","Climats tropicaux et subtropicaux en plein soleil avec un sol sableux ou argileux bien drainé."],
-          ["Se mange frais, pressé, ou utilisé dans des plats, desserts et boissons ; également courant dans les confitures, bonbons, et comme garniture de pizza ou de salade.","Riche en vitamine C, en manganèse, et en enzyme bromélaïne, l'ananas favorise la digestion, renforce l'immunité, et aide à réduire l'inflammation.","Sa culture favorise la conservation des sols et les systèmes agroforestiers ; le feuillage dense de la plante aide à prévenir l'érosion, et ses sous-produits peuvent être utilisés pour l'alimentation animale et le compostage."],
-          ["Une infusion tropicale alliant la douceur de l'ananas mûr à la richesse douce du thé noir de Ceylan, offrant un équilibre entre saveur fruitée et chaleur du thé — délicieux chaud ou glacé."],
+          ["Se mange frais, pressé, ou utilisé dans des plats, desserts et boissons ; également courant dans les confitures, bonbons, et comme garniture de pizza ou de salade.","Riche en vitamine C, en manganèse, et en enzyme bromélaïne, l'ananas favorise la digestion, renforce l'immunité, et aide à réduire l'inflammation.","Sa culture favorise la conservation des sols et les systèmes agroforestiers ; le feuillage dense de la plante aide à prévenir l'érosion, et ses sous-produits peuvent être utilisés pour l'alimentation animale et le compostage.","Une infusion tropicale alliant la douceur de l'ananas mûr à la richesse douce du thé noir de Ceylan, offrant un équilibre entre saveur fruitée et chaleur du thé — délicieux chaud ou glacé."],
+        ],
+        [
+          [],
+          ["Généralement 15 à 20 mètres de hauteur.","Feuilles dentelées, vert foncé, dont certaines deviennent rouge vif avant de tomber.","Petites fleurs blanches en forme de cloche suspendues en grappes délicates.","Fruit lisse, ovale, vert olive, au goût acidulé ou astringent et à la graine dure.","Forêts tropicales de basse altitude, forêts persistantes et jardins familiaux ; préfère un sol bien drainé."],
+          ["Souvent mangé cru, cuisiné dans des currys, ou mariné pour préparer le célèbre 'Weralu Achcharu' sri-lankais ; riche en vitamine C et en antioxydants.","Les feuilles de Weralu sont un traitement capillaire naturel traditionnel pour des cheveux lisses et brillants ; diverses parties de l'arbre sont également utilisées pour la santé digestive et leurs propriétés anti-inflammatoires.","L'arbre favorise la biodiversité locale, fournissant de la nourriture aux oiseaux et insectes frugivores, et constitue une partie vitale des écosystèmes forestiers tropicaux."],
         ],
       ],
       fruitItemTags: [
@@ -3417,6 +3577,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Aromatisé Naturellement | Doux et Rafraîchissant | Qualité Premium"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "10-15 minutes",
@@ -3760,10 +3925,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "斯里兰卡的气候孕育了种类繁多、其他地方少见的水果，其中许多就种植在茶树和其他庄园作物旁边。请从下方选择一种水果，近距离了解这里种植的一种水果。",
         "选择一种水果查看完整详情：",
       ],
-      fruitNames: ["火龙果","菠萝"],
+      fruitNames: ["火龙果","菠萝","锡兰橄榄（维拉鲁）"],
       fruitSectionHeadings: [
         ["关于火龙果","特征","用途与益处"],
         ["关于菠萝植株","特征","用途与益处","菠萝茶产品"],
+        ["关于锡兰橄榄树","特征","用途与益处"],
       ],
       fruitSectionBodies: [
         [
@@ -3776,6 +3942,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "简单了解一下这种植物：",
           "菠萝的价值远不止于它香甜的果肉：",
           "庄园还将菠萝用作自家茶系列的增值原料，将其与用天然菠萝精华和优质锡兰茶叶制成的高级调味茶混合在一起。",
+        ],
+        [
+          "锡兰橄榄，学名Elaeocarpus serratus，当地称为维拉鲁（Weralu），是杜英科的一种中大型常绿乔木，原产于印度次大陆和东南亚，这座庄园也有种植。它以光滑的橄榄绿色果实和洁白的小铃铛状花朵著称，在热带气候中生长旺盛，是斯里兰卡家庭花园和低地雨林中常见的树种。",
+          "简单了解一下这棵树：",
+          "锡兰橄榄的价值远不止于它酸涩的果实：",
         ],
       ],
       fruitItemHeadings: [
@@ -3790,6 +3961,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["烹饪用途","药用价值","生态重要性"],
           ["菠萝风味茶"],
         ],
+        [
+          [],
+          ["高度","叶片","花朵","果实","生境"],
+          ["烹饪用途","药用与护发","生态重要性"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -3800,8 +3976,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["高度可达1到1.5米。","细长、剑形、坚韧的叶片，边缘带刺，形成密集的莲座状叶丛。","细小的紫色或红色花朵，排列成紧密的螺旋状花簇，后来融合形成果实。","由多个融合的浆果组成的复合果实，成熟时呈金黄色，顶部有一簇带刺的叶子。","热带和亚热带气候，阳光充足，排水良好的沙质或壤质土壤。"],
-          ["可生吃、榨汁，或用于菜肴、甜点和饮料；也常用于果酱、糖果，以及作为披萨或沙拉的配料。","菠萝富含维生素C、锰和菠萝蛋白酶，有助于促进消化、增强免疫力并有助于减轻炎症。","其种植有助于水土保持和农林复合系统；植株茂密的叶丛有助于防止水土流失，其副产品还可用作动物饲料和堆肥。"],
-          ["一款热带茶饮，将成熟菠萝的甜美与锡兰红茶的醇厚完美融合，在果香与茶香之间取得平衡——无论热饮还是冰饮都同样可口。"],
+          ["可生吃、榨汁，或用于菜肴、甜点和饮料；也常用于果酱、糖果，以及作为披萨或沙拉的配料。","菠萝富含维生素C、锰和菠萝蛋白酶，有助于促进消化、增强免疫力并有助于减轻炎症。","其种植有助于水土保持和农林复合系统；植株茂密的叶丛有助于防止水土流失，其副产品还可用作动物饲料和堆肥。","一款热带茶饮，将成熟菠萝的甜美与锡兰红茶的醇厚完美融合，在果香与茶香之间取得平衡——无论热饮还是冰饮都同样可口。"],
+        ],
+        [
+          [],
+          ["通常高15到20米。","锯齿状深绿色叶片，部分叶片在落叶前会变成鲜红色。","细小的白色铃铛状花朵，悬垂成精致的花簇。","光滑的椭圆形橄榄绿色果实，口感酸涩或收敛，内含坚硬的种子。","低地雨林、常绿森林和家庭花园；偏好排水良好的土壤。"],
+          ["常生吃，或煮入咖喱菜肴，或腌制成著名的斯里兰卡「维拉鲁腌菜」（Weralu Achcharu）；富含维生素C和抗氧化物质。","维拉鲁的叶子是传统的天然护发方法，可使头发顺滑有光泽；树木的各个部位也用于促进消化健康和抗炎。","这种树支持当地的生物多样性，为食果鸟类和昆虫提供食物，是热带森林生态系统中不可或缺的一部分。"],
         ],
       ],
       fruitItemTags: [
@@ -3815,6 +3995,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["天然调味 | 顺滑清爽 | 优质精选"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "10-15分钟",
@@ -4158,10 +4343,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "スリランカの気候は、他の地域ではあまり見られない幅広い種類の果物を育みますが、その多くは茶などの農園作物のすぐそばで栽培されています。ここで栽培されている果物を詳しく見るには、以下から一つ選んでください。",
         "果物を選ぶと詳細が表示されます：",
       ],
-      fruitNames: ["ドラゴンフルーツ","パイナップル"],
+      fruitNames: ["ドラゴンフルーツ","パイナップル","セイロンオリーブ（ウェラル）"],
       fruitSectionHeadings: [
         ["ドラゴンフルーツの植物について","特徴","用途と効能"],
         ["パイナップルの植物について","特徴","用途と効能","パイナップル茶製品"],
+        ["セイロンオリーブの木について","特徴","用途と効能"],
       ],
       fruitSectionBodies: [
         [
@@ -4174,6 +4360,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "この植物についての簡単な紹介：",
           "パイナップルの価値は、その甘い果肉をはるかに超えています：",
           "農園ではパイナップルも自社の茶製品ラインの付加価値素材として使用し、天然のパイナップルエキスと上質なセイロン茶葉を使った上質なフレーバーティーにブレンドしています。",
+        ],
+        [
+          "セイロンオリーブ、学名Elaeocarpus serratusは、現地でウェラル（Weralu）と呼ばれ、ホルトノキ科に属する中型から大型の常緑樹で、インド亜大陸と東南アジア原産、この農園にも植えられています。滑らかなオリーブグリーンの果実と、小さな白い鐘形の花で知られ、熱帯気候で育ちやすく、スリランカの家庭菜園や低地の熱帯雨林でよく見られます。",
+          "この木についての簡単な紹介：",
+          "セイロンオリーブの価値は、その酸味のある果実をはるかに超えています：",
         ],
       ],
       fruitItemHeadings: [
@@ -4188,6 +4379,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["料理での利用","薬効","生態学的重要性"],
           ["パイナップルフレーバーティー"],
         ],
+        [
+          [],
+          ["高さ","葉","花","果実","生育環境"],
+          ["料理での利用","医療と髪のケア","生態学的重要性"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -4198,8 +4394,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           [],
           ["高さは1〜1.5メートルほど。","縁にとげのある、長く剣状で丈夫な葉が密なロゼット状に茂る。","小さな紫色または赤みがかった花が密集したらせん状のクラスターに並び、後に融合して果実になる。","融合した果実の集合体で、熟すと金色がかった黄色になり、とげのある葉の房を頂く複合果実。","十分な日照と水はけの良い砂質または壌土を好む熱帯および亜熱帯気候。"],
-          ["生で食べるほか、ジュースにしたり、料理、デザート、飲み物に使われます。ジャムやキャンディー、ピザやサラダのトッピングとしてもよく使われます。","ビタミンC、マンガン、そして酵素ブロメラインが豊富なパイナップルは、消化を助け、免疫力を高め、炎症を軽減するのに役立ちます。","その栽培は土壌保全と混農林業システムを支えます。植物の密な葉は浸食を防ぐのに役立ち、副産物は動物飼料や堆肥化に利用できます。"],
-          ["熟したパイナップルの甘さとセイロン紅茶のなめらかなコクを組み合わせた南国風のブレンドティーで、フルーティーな風味と紅茶の温かみのバランスが取れています——ホットでもアイスでも楽しめます。"],
+          ["生で食べるほか、ジュースにしたり、料理、デザート、飲み物に使われます。ジャムやキャンディー、ピザやサラダのトッピングとしてもよく使われます。","ビタミンC、マンガン、そして酵素ブロメラインが豊富なパイナップルは、消化を助け、免疫力を高め、炎症を軽減するのに役立ちます。","その栽培は土壌保全と混農林業システムを支えます。植物の密な葉は浸食を防ぐのに役立ち、副産物は動物飼料や堆肥化に利用できます。","熟したパイナップルの甘さとセイロン紅茶のなめらかなコクを組み合わせた南国風のブレンドティーで、フルーティーな風味と紅茶の温かみのバランスが取れています——ホットでもアイスでも楽しめます。"],
+        ],
+        [
+          [],
+          ["通常15〜20メートルほどの高さになる。","鋸歯状の濃い緑色の葉で、一部は落葉前に鮮やかな赤色に変わる。","繊細な房状に垂れ下がる、小さく白い鐘形の花。","滑らかな楕円形のオリーブグリーンの果実で、酸味または渋みのある味と硬い種を持つ。","低地の熱帯雨林、常緑樹林、家庭菜園。水はけの良い土壌を好む。"],
+          ["生で食べたり、カレーに調理したり、有名なスリランカの「ウェラル・アチャル」を作るために漬け込んだりするのに人気があります。ビタミンCと抗酸化物質が豊富です。","ウェラルの葉は、なめらかで艶のある髪のための伝統的な天然ヘアトリートメントです。木のさまざまな部分は消化器系の健康や抗炎症作用にも使われます。","この木は地域の生物多様性を支え、果実を食べる鳥や昆虫に食料を提供し、熱帯林の生態系に欠かせない役割を果たしています。"],
         ],
       ],
       fruitItemTags: [
@@ -4213,6 +4413,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["天然フレーバー | なめらかで爽やか | プレミアム品質"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
       ],
             duration: "10〜15分",
