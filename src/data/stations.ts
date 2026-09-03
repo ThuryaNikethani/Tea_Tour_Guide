@@ -14,6 +14,23 @@ export interface StationSection {
   image?: string | string[];
   /** When set, renders each as its own card (image + heading + body + tags) instead of one blended paragraph. */
   items?: StationSubItem[];
+  /**
+   * When set, this section renders as a gallery of selectable cards (thumbnail +
+   * name) instead of body/items. Clicking a card shows that one fruit's full
+   * detail — all of its own `sections` stacked on a single page, not paginated —
+   * with a "back to fruits" link to return to the gallery.
+   */
+  fruits?: FruitEntry[];
+}
+
+/** One selectable entry in a `StationSection.fruits` gallery — its own mini station page. */
+export interface FruitEntry {
+  id: string;
+  name: string;
+  /** Thumbnail shown on the gallery card. */
+  image: string;
+  /** Full detail, rendered stacked on one page (not paginated) once selected. */
+  sections: StationSection[];
 }
 
 export interface Station {
@@ -57,6 +74,17 @@ export interface StationTranslation {
   description?: string;
   keyPoints?: string;
   duration?: string;
+  /**
+   * Translations for a `StationSection.fruits` gallery, indexed by fruit
+   * position within the section (only one such section exists per station
+   * today, so a single flat index is enough). Each fruit's own sections are
+   * then indexed the same way as the top-level `sectionHeadings`/`itemHeadings`.
+   */
+  fruitNames?: string[];
+  fruitSectionHeadings?: string[][];
+  fruitSectionBodies?: string[][];
+  fruitItemHeadings?: string[][][];
+  fruitItemBodies?: string[][][];
 }
 
 import prepaImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
@@ -100,6 +128,15 @@ import turmericPlantImg from "../assets/turmeric/turmeric-plant.jpg";
 import turmericFlowerImg from "../assets/turmeric/turmeric-flower.webp";
 import turmericRhizomeImg from "../assets/turmeric/turmeric-rhizome.webp";
 import turmericFieldImg from "../assets/turmeric/turmeric-field.jpg";
+// Sourced from the factory's own dragon fruit microsite
+// (dragon-fruit-atf.netlify.app) — real photos of the estate's Hylocereus
+// undatus crop. One of the site's ten gallery images (a young-fruit close-up)
+// carried a faint tiled stock-photo watermark and was excluded; these four
+// did not. See the provenance note near the "unique-fruits" station below.
+import dragonFruitPlantImg from "../assets/dragon-fruit/dragon-fruit-plant.jpg";
+import dragonFruitFlowerImg from "../assets/dragon-fruit/dragon-fruit-flower.webp";
+import dragonFruitHarvestImg from "../assets/dragon-fruit/dragon-fruit-harvest.jpg";
+import dragonFruitVineImg from "../assets/dragon-fruit/dragon-fruit-vine.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -762,6 +799,24 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * organically-grown TRI 2043 bushes already exist and already supply the
  * specialty grades, separate from the younger trial cuttings still being
  * evaluated in the nursery for future expansion.
+ * "unique-fruits" was upgraded from a generic placeholder to `verified: true`
+ * on 2026-09-03, sourced from the factory's own dragon fruit microsite
+ * (dragon-fruit-atf.netlify.app) — the same template as the cinnamon/
+ * jaggery-palm/coconut-field/turmeric microsites, including the same
+ * "Weralu" alt-text artifact on its unlabelled gallery images (confirmed
+ * as a template bug, not evidence about the real subject, same as those
+ * other stations). Of the site's ten gallery images, one (a young-fruit
+ * close-up) carried a faint tiled stock-photo watermark and was excluded;
+ * the four used here did not. Went through three shapes the same day at
+ * the user's direction: first the simple description/keyPoints format,
+ * then a single rich station with sequential About/Characteristics/Uses
+ * sections (Part 1-4 of 4), and finally the current shape — a
+ * `StationSection.fruits` gallery (new to the Station type, see its
+ * definition above): a "Fruits of Sri Lanka" intro page, then a "Meet the
+ * Fruits" page showing selectable fruit cards, where picking one reveals
+ * that fruit's full detail (all its own sections stacked on one page, not
+ * paginated) with a link back to the gallery. Only dragon fruit is
+ * populated for now, but the shape supports adding more fruit cards later.
  */
 export const STATIONS: Station[] = [
   {
@@ -1278,12 +1333,56 @@ export const STATIONS: Station[] = [
     name: "Unique Fruits of Sri Lanka",
     shortName: "Unique Fruits",
     icon: "Citrus",
-    verified: false,
-    description:
-      "Sri Lanka's climate supports a range of fruits not commonly seen elsewhere. This stop introduces some of the island's distinctive fruit varieties, often grown alongside tea and other estate crops.",
-    keyPoints:
-      "Sri Lanka's fruit varieties reflect its tropical, monsoon-influenced climate and centuries of cultivation across different elevation zones.",
-    duration: "5 minutes",
+    verified: true,
+    lastVerified: "2026-09-03",
+    heroTagline: "From the island's own orchards to a closer look at some of its most striking crops.",
+    sections: [
+      {
+        heading: "Fruits of Sri Lanka",
+        body: "Sri Lanka's climate supports a wide range of fruits not commonly grown elsewhere, many of them cultivated right alongside tea and other estate crops. Pick a fruit below to take a closer look at one grown here.",
+      },
+      {
+        heading: "Meet the Fruits",
+        body: "Select a fruit to see its full details:",
+        fruits: [
+          {
+            id: "dragon-fruit",
+            name: "Dragon Fruit",
+            image: dragonFruitVineImg,
+            sections: [
+              {
+                heading: "About the Dragon Fruit Plant",
+                image: dragonFruitPlantImg,
+                body: "Hylocereus undatus — the dragon fruit plant, also known as pitaya or strawberry pear — is a climbing cactus native to Central and South America, now grown in warm climates worldwide, including here on the estate. Trained up a support post, its three-sided, spiny, fleshy green stems can reach 5 to 10 metres. Its large white flowers bloom only at night and close again by morning, earning it the nickname 'Queen of the Night'.",
+              },
+              {
+                heading: "Characteristics",
+                image: dragonFruitFlowerImg,
+                body: "A quick look at the plant itself:",
+                items: [
+                  { heading: "Growth Habit", body: "A climbing or vining cactus reaching up to 5 to 10 metres with support." },
+                  { heading: "Stems", body: "Three-sided, green, fleshy stems with small spines along the edges." },
+                  { heading: "Flowers", body: "Large, white, fragrant, night-blooming flowers up to 30 centimetres long." },
+                  { heading: "Fruit", body: "Oval or pear-shaped fruit with bright pink or red skin and white or red pulp filled with tiny black seeds." },
+                  { heading: "Habitat", body: "Tropical and subtropical climates; prefers well-drained sandy or loamy soil and full sunlight." },
+                ],
+              },
+              {
+                heading: "Uses and Benefits",
+                image: [dragonFruitHarvestImg, dragonFruitVineImg],
+                body: "Dragon fruit's value goes well beyond its striking appearance:",
+                items: [
+                  { heading: "Culinary Uses", body: "Eaten fresh, added to fruit salads, smoothies, and desserts, or processed into juices and jams — its mildly sweet flavour and crisp texture make it a refreshing tropical treat." },
+                  { heading: "Medicinal Properties", body: "Rich in antioxidants, vitamin C, and fibre, dragon fruit supports immune health, digestion, and skin vitality; its seeds contain healthy fatty acids that benefit the heart." },
+                  { heading: "Ecological Importance", body: "Its flowers provide nectar for nocturnal pollinators such as bats and moths, and its drought tolerance supports sustainable agriculture in arid regions." },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    duration: "10-15 minutes",
   },
   {
     id: "tea-factory",
