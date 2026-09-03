@@ -151,6 +151,17 @@ import pineappleFlowerImg from "../assets/pineapple/pineapple-flower.jpg";
 import pineappleFruitImg from "../assets/pineapple/pineapple-fruit.webp";
 import pineappleHarvestImg from "../assets/pineapple/pineapple-harvest.webp";
 import pineappleTeaBoxImg from "../assets/pineapple/pineapple-tea-box.jpg";
+// Sourced from the factory's own Ceylon olive (Weralu) microsite
+// (ceylon-olive-atf.netlify.app) — the real, original source of the
+// "Weralu" alt-text template reused (as a leftover artifact) on several
+// other crop microsites scraped earlier. Of its ten gallery images, one
+// (a white flower cluster) carried a faint tiled stock-photo watermark and
+// was excluded; these four did not. See the provenance note near the
+// "unique-fruits" station below.
+import ceylonOliveTreeImg from "../assets/ceylon-olive/ceylon-olive-tree.jpeg";
+import ceylonOliveFlowerImg from "../assets/ceylon-olive/ceylon-olive-flower.jpg";
+import ceylonOliveFruitImg from "../assets/ceylon-olive/ceylon-olive-fruit.png";
+import ceylonOliveHarvestImg from "../assets/ceylon-olive/ceylon-olive-harvest.webp";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -848,6 +859,16 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * renumbered down by one to keep "Station X of Y" contiguous, since that
  * count is displayed directly from each station's `order` field. The tour
  * now runs 26 stations instead of 27.
+ * A third fruit-gallery card, Ceylon Olive (Weralu), was added on
+ * 2026-09-03 from the factory's own Weralu microsite
+ * (ceylon-olive-atf.netlify.app) — this is the original source of the
+ * "Weralu" alt-text seen (as a leftover template artifact, not a labelling
+ * error about the real subject) on several other crop microsites scraped
+ * earlier this session. Of its ten gallery images, one (a white flower
+ * cluster) carried a faint tiled stock-photo watermark and was excluded;
+ * the four used here did not. No factory tea product was mentioned for
+ * this crop, so — like dragon fruit — it stays at three sections rather
+ * than pineapple's four.
  */
 export const STATIONS: Station[] = [
   {
@@ -1439,6 +1460,40 @@ export const STATIONS: Station[] = [
                     body: "A tropical infusion combining the sweetness of ripe pineapple with the smooth richness of Ceylon black tea, offering a balance of fruity flavour and tea warmth — enjoyable hot or iced.",
                     tags: "Naturally Flavored | Smooth & Refreshing | Premium Quality",
                   },
+                ],
+              },
+            ],
+          },
+          {
+            id: "ceylon-olive",
+            name: "Ceylon Olive (Weralu)",
+            image: ceylonOliveFruitImg,
+            sections: [
+              {
+                heading: "About the Ceylon Olive Tree",
+                image: ceylonOliveTreeImg,
+                body: "Elaeocarpus serratus — the Ceylon Olive, known locally as Weralu — is a medium to large evergreen tree in the Elaeocarpaceae family, native to the Indian subcontinent and Southeast Asia, including here on the estate. It's known for its smooth, olive-green fruit and small white bell-shaped flowers, and thrives in tropical climates as a common sight in Sri Lankan home gardens and lowland rainforests.",
+              },
+              {
+                heading: "Characteristics",
+                image: ceylonOliveFlowerImg,
+                body: "A quick look at the tree itself:",
+                items: [
+                  { heading: "Height", body: "Typically 15 to 20 metres tall." },
+                  { heading: "Leaves", body: "Serrated, dark green leaves, with some turning bright red before falling." },
+                  { heading: "Flowers", body: "Small, white, bell-shaped flowers hanging in delicate clusters." },
+                  { heading: "Fruit", body: "Smooth, oval, olive-green fruit with a tart or astringent taste and a hard seed." },
+                  { heading: "Habitat", body: "Lowland rainforests, evergreen forests, and home gardens; prefers well-draining soil." },
+                ],
+              },
+              {
+                heading: "Uses and Benefits",
+                image: [ceylonOliveFruitImg, ceylonOliveHarvestImg],
+                body: "The Ceylon Olive's value goes well beyond its tart fruit:",
+                items: [
+                  { heading: "Culinary Uses", body: "Popular eaten raw, cooked in curries, or pickled to make the well-known Sri Lankan 'Weralu Achcharu'; rich in vitamin C and antioxidants." },
+                  { heading: "Medicinal & Hair Care", body: "Weralu leaves are a traditional natural hair treatment for smooth, glossy hair; various parts of the tree are also used for digestive health and anti-inflammatory properties." },
+                  { heading: "Ecological Importance", body: "The tree supports local biodiversity, providing food for fruit-eating birds and insects, and is a vital part of tropical forest ecosystems." },
                 ],
               },
             ],
