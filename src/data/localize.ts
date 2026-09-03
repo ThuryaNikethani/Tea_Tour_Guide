@@ -35,6 +35,7 @@ export function localizeStation(station: Station, lang: LanguageCode): Station {
             ...fItem,
             heading: tr.fruitItemHeadings?.[k]?.[fi]?.[fj] ?? fItem.heading,
             body: tr.fruitItemBodies?.[k]?.[fi]?.[fj] ?? fItem.body,
+            tags: tr.fruitItemTags?.[k]?.[fi]?.[fj] ?? fItem.tags,
           })),
         })),
       })),
