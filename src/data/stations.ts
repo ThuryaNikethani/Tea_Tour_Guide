@@ -841,6 +841,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * matching the existing tea-product-section pattern used by "cinnamon" and
  * "ginger-turmeric" — dragon fruit has no equivalent product, so it stays
  * at three sections.
+ * The "organic-fertilizer" station (a generic, never-sourced `verified:
+ * false` placeholder — no real content was ever found for it) was removed
+ * outright on 2026-09-03 at the user's request, along with its translations
+ * in all 10 languages. Every station after it (order 16 through 27) was
+ * renumbered down by one to keep "Station X of Y" contiguous, since that
+ * count is displayed directly from each station's `order` field. The tour
+ * now runs 26 stations instead of 27.
  */
 export const STATIONS: Station[] = [
   {
@@ -1190,7 +1197,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "turmeric",
-    order: 23,
+    order: 22,
     name: "Turmeric Plantation",
     shortName: "Turmeric",
     icon: "Leaf",
@@ -1230,7 +1237,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "bee",
-    order: 24,
+    order: 23,
     name: "Honeybees",
     shortName: "Bees",
     icon: "Bug",
@@ -1270,7 +1277,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "artisanal-tea-grades",
-    order: 25,
+    order: 24,
     name: "Artisanal Tea Grades",
     shortName: "Artisanal Teas",
     icon: "Sparkles",
@@ -1325,21 +1332,8 @@ export const STATIONS: Station[] = [
     duration: "5-10 minutes",
   },
   {
-    id: "organic-fertilizer",
-    order: 15,
-    name: "Organic Fertilizer Application",
-    shortName: "Organic Fertilizer",
-    icon: "Wheat",
-    verified: false,
-    description:
-      "Healthy tea soil depends on regular fertilizing. This stop covers how organic fertilizers — compost, manure, and other natural amendments — are prepared and applied without synthetic chemical inputs.",
-    keyPoints:
-      "Organic fertilizers release nutrients more slowly than synthetic ones, which means application timing and soil health both matter more.",
-    duration: "5 minutes",
-  },
-  {
     id: "shade-management",
-    order: 16,
+    order: 15,
     name: "Shade Tree Management",
     shortName: "Shade Trees",
     icon: "Trees",
@@ -1353,7 +1347,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "unique-fruits",
-    order: 17,
+    order: 16,
     name: "Unique Fruits of Sri Lanka",
     shortName: "Unique Fruits",
     icon: "Citrus",
@@ -1456,7 +1450,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "tea-factory",
-    order: 18,
+    order: 17,
     name: "The Tea Factory",
     shortName: "Tea Factory",
     icon: "Factory",
@@ -1470,7 +1464,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "handmade-factory",
-    order: 19,
+    order: 18,
     name: "Handmade Tea Factory",
     shortName: "Handmade Factory",
     icon: "HandHeart",
@@ -1484,7 +1478,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "tea-center",
-    order: 20,
+    order: 19,
     name: "Tea Center",
     shortName: "Tea Center",
     icon: "Coffee",
@@ -1498,7 +1492,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "coconut-field",
-    order: 21,
+    order: 20,
     name: "Coconut Field",
     shortName: "Coconut Field",
     icon: "Palmtree",
@@ -1537,7 +1531,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "jaggery-palm",
-    order: 22,
+    order: 21,
     name: "Jaggery Palm (Kithul)",
     shortName: "Jaggery Palm",
     icon: "Droplet",
@@ -1576,7 +1570,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "pruning",
-    order: 26,
+    order: 25,
     name: "Pruning",
     shortName: "Pruning",
     icon: "Scissors",
@@ -1590,7 +1584,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "polytunnel",
-    order: 27,
+    order: 26,
     name: "Polytunnel & Greenhouse",
     shortName: "Polytunnel",
     icon: "Carrot",
