@@ -12,7 +12,19 @@ export function estimateStationMinutes(station: Station): number {
   let words = countWords(station.description) + countWords(station.keyPoints);
 
   if (station.sections) {
-    words += station.sections.reduce((sum, s) => sum + countWords(s.heading) + countWords(s.body), 0);
+    words += station.sections.reduce((sum, s) => {
+      let sectionWords = countWords(s.heading) + countWords(s.body);
+      if (s.fruits) {
+        sectionWords += s.fruits.reduce(
+          (fSum, fruit) =>
+            fSum +
+            countWords(fruit.name) +
+            fruit.sections.reduce((fsSum, fs) => fsSum + countWords(fs.heading) + countWords(fs.body), 0),
+          0
+        );
+      }
+      return sum + sectionWords;
+    }, 0);
   }
 
   let minutes = words / WORDS_PER_MINUTE;
