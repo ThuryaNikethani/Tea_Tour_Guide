@@ -162,6 +162,14 @@ import ceylonOliveTreeImg from "../assets/ceylon-olive/ceylon-olive-tree.jpeg";
 import ceylonOliveFlowerImg from "../assets/ceylon-olive/ceylon-olive-flower.jpg";
 import ceylonOliveFruitImg from "../assets/ceylon-olive/ceylon-olive-fruit.png";
 import ceylonOliveHarvestImg from "../assets/ceylon-olive/ceylon-olive-harvest.webp";
+// Sourced from the factory's own papaya microsite (papaya-atf.netlify.app)
+// — real photos of the estate's Carica papaya crop, none carrying any
+// visible third-party credit. See the provenance note near the
+// "unique-fruits" station below.
+import papayaTreeImg from "../assets/papaya/papaya-tree.jpg";
+import papayaFlowerImg from "../assets/papaya/papaya-flower.jpg";
+import papayaFruitImg from "../assets/papaya/papaya-fruit.jpg";
+import papayaHarvestImg from "../assets/papaya/papaya-harvest.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -869,6 +877,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * the four used here did not. No factory tea product was mentioned for
  * this crop, so — like dragon fruit — it stays at three sections rather
  * than pineapple's four.
+ * A fourth fruit-gallery card, Papaya, was added on 2026-09-03 from the
+ * factory's own papaya microsite (papaya-atf.netlify.app) — the same
+ * template again, including the same leftover "Weralu" alt-text artifact.
+ * Unlike the other three sources, none of its ten gallery images carried
+ * any visible watermark, so the four used here were picked purely for how
+ * well they illustrate the station's sections. No factory tea product was
+ * mentioned for this crop either, so it stays at three sections.
  */
 export const STATIONS: Station[] = [
   {
@@ -1494,6 +1509,40 @@ export const STATIONS: Station[] = [
                   { heading: "Culinary Uses", body: "Popular eaten raw, cooked in curries, or pickled to make the well-known Sri Lankan 'Weralu Achcharu'; rich in vitamin C and antioxidants." },
                   { heading: "Medicinal & Hair Care", body: "Weralu leaves are a traditional natural hair treatment for smooth, glossy hair; various parts of the tree are also used for digestive health and anti-inflammatory properties." },
                   { heading: "Ecological Importance", body: "The tree supports local biodiversity, providing food for fruit-eating birds and insects, and is a vital part of tropical forest ecosystems." },
+                ],
+              },
+            ],
+          },
+          {
+            id: "papaya",
+            name: "Papaya",
+            image: papayaFruitImg,
+            sections: [
+              {
+                heading: "About the Papaya Tree",
+                image: papayaTreeImg,
+                body: "Carica papaya — the papaya tree — is a small, sparsely branched tree in the Caricaceae family, native to the Americas but now cultivated throughout the tropical world, including here on the estate. It's famous for its sweet, melon-like fruit and the enzyme papain, which aids digestion; papayas grow rapidly and bear fruit year-round in suitable climates.",
+              },
+              {
+                heading: "Characteristics",
+                image: papayaFlowerImg,
+                body: "A quick look at the tree itself:",
+                items: [
+                  { heading: "Height", body: "5 to 10 metres tall." },
+                  { heading: "Leaves", body: "Large, deeply lobed leaves, arranged spirally at the top of the trunk." },
+                  { heading: "Flowers", body: "Fleshy, waxy, slightly fragrant flowers; can be male, female, or hermaphrodite." },
+                  { heading: "Fruit", body: "A large berry with soft orange or yellow flesh and a central cavity filled with black seeds." },
+                  { heading: "Habitat", body: "Tropical and subtropical regions; requires well-drained soil and full sun." },
+                ],
+              },
+              {
+                heading: "Uses and Benefits",
+                image: [papayaFruitImg, papayaHarvestImg],
+                body: "Papaya's value goes well beyond its sweet flesh:",
+                items: [
+                  { heading: "Culinary Uses", body: "Ripe papaya is eaten fresh or in salads, and green papaya is cooked as a vegetable; the seeds are edible with a peppery taste, and the enzyme papain is used as a meat tenderiser." },
+                  { heading: "Medicinal Properties", body: "High in vitamin C and A, papaya's papain aids digestion; leaf extracts are used in some cultures for treating dengue fever and skin conditions." },
+                  { heading: "Ecological Importance", body: "The tree provides a quick-growing canopy and food source for various birds, fruit bats, and insects in tropical ecosystems." },
                 ],
               },
             ],
