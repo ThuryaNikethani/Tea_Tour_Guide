@@ -13,6 +13,7 @@ export interface UIStrings {
   startTour: string;
   allStations: string;
   backToStations: string;
+  backToFruits: string; // link text to return from a selected fruit's detail to the fruit gallery
   stationOf: string; // e.g. "Station {current} of {total}"
   keyPoints: string;
   duration: string;
@@ -89,6 +90,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "Start the Tour",
     allStations: "Tour Stations",
     backToStations: "Back to all stations",
+    backToFruits: "Back to fruits",
     stationOf: "Station {current} of {total}",
     keyPoints: "Importance",
     duration: "Timing",
@@ -125,6 +127,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "开始参观",
     allStations: "参观站点",
     backToStations: "返回所有站点",
+    backToFruits: "返回水果列表",
     stationOf: "第 {current} 站，共 {total} 站",
     keyPoints: "重要性",
     duration: "时间",
@@ -161,6 +164,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "ツアーを開始",
     allStations: "ツアーステーション",
     backToStations: "すべてのステーションに戻る",
+    backToFruits: "果物一覧に戻る",
     stationOf: "ステーション {current} / {total}",
     keyPoints: "重要性",
     duration: "所要時間",
@@ -197,6 +201,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "Iniciar el Recorrido",
     allStations: "Estaciones del Recorrido",
     backToStations: "Volver a todas las estaciones",
+    backToFruits: "Volver a las frutas",
     stationOf: "Estación {current} de {total}",
     keyPoints: "Importancia",
     duration: "Duración",
@@ -233,6 +238,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "Commencer la Visite",
     allStations: "Stations de la Visite",
     backToStations: "Retour à toutes les stations",
+    backToFruits: "Retour aux fruits",
     stationOf: "Station {current} sur {total}",
     keyPoints: "Importance",
     duration: "Durée",
@@ -269,6 +275,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "Начать тур",
     allStations: "Станции тура",
     backToStations: "Назад ко всем станциям",
+    backToFruits: "Назад к фруктам",
     stationOf: "Станция {current} из {total}",
     keyPoints: "Важность",
     duration: "Время",
@@ -305,6 +312,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "චාරිකාව ආරම්භ කරන්න",
     allStations: "චාරිකා ස්ථාන",
     backToStations: "සියලුම ස්ථාන වෙත ආපසු",
+    backToFruits: "පලතුරු ලැයිස්තුවට ආපසු",
     stationOf: "ස්ථානය {current} න් {total}",
     keyPoints: "වැදගත්කම",
     duration: "කාලය",
@@ -341,6 +349,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "ابدأ الجولة",
     allStations: "محطات الجولة",
     backToStations: "العودة إلى جميع المحطات",
+    backToFruits: "العودة إلى الفواكه",
     stationOf: "المحطة {current} من {total}",
     keyPoints: "الأهمية",
     duration: "التوقيت",
@@ -377,6 +386,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "Inizia il Tour",
     allStations: "Stazioni del Tour",
     backToStations: "Torna a tutte le stazioni",
+    backToFruits: "Torna ai frutti",
     stationOf: "Stazione {current} di {total}",
     keyPoints: "Importanza",
     duration: "Tempistica",
@@ -413,6 +423,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "Tour starten",
     allStations: "Tour-Stationen",
     backToStations: "Zurück zu allen Stationen",
+    backToFruits: "Zurück zu den Früchten",
     stationOf: "Station {current} von {total}",
     keyPoints: "Wichtigkeit",
     duration: "Zeitpunkt",
@@ -449,6 +460,7 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     startTour: "சுற்றுலாவைத் தொடங்கவும்",
     allStations: "சுற்றுலா நிலையங்கள்",
     backToStations: "அனைத்து நிலையங்களுக்கும் திரும்பு",
+    backToFruits: "பழங்கள் பட்டியலுக்குத் திரும்பு",
     stationOf: "நிலையம் {current} / {total}",
     keyPoints: "முக்கியத்துவம்",
     duration: "நேரம்",
