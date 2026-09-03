@@ -4,11 +4,12 @@ A multilingual, QR-code-driven tour guide web app for **Athukorala Tea Factory**
 
 ## ✨ Features
 
-- 📱 **QR-code navigation** — each of the 21 tour stations has its own code; scanning one jumps straight to that stage, no menu-hunting
+- 📱 **QR-code navigation** — each of the 26 tour stations has its own code; scanning one jumps straight to that stage, no menu-hunting
 - 🌍 **11 languages**, including right-to-left Arabic — English, Chinese, Japanese, Spanish, French, Russian, Sinhala, Arabic, Italian, German, Tamil
 - 🔄 **In-place language switching** — pick a language from the header dropdown, no page reload or navigation away
-- 🌱 **Tea Nursery station** — real photos, real video, and real process details sourced from the working factory, covering everything from site selection to transplanting and cultivar trials
-- 🏔️ **20 supplementary stations** — an introduction to Ceylon tea, the manufacturing stages (Plucking → Packing), and estate-wide topics like cinnamon, ginger & turmeric, organic cultivation, clonal tea, and the tea factory itself — all clearly flagged as drafts, pending real on-site verification
+- ✅ **26 fully verified stations** — real photos, videos, and process details sourced from the working factory and its own crop microsites, covering the full black-tea line (Plucking → Packing), the Tea Nursery (with hero and process video), artisanal/handmade specialty teas, and estate crops like cinnamon, ginger, turmeric, coconut, kithul/jaggery palm, and honeybees
+- 🍓 **Fruit gallery** — the Unique Fruits station opens on an island-wide intro, then lets visitors pick a fruit (Dragon Fruit, Pineapple) from a card gallery to see that one fruit's full detail — botany, characteristics, uses, and its own factory tea product where one exists — on a single page
+- 📍 **Optional on-site confirmation** — a lightweight, privacy-friendly badge that appears once a visitor's device GPS is within range of the estate, purely additive and never gates any content
 - 🏡 **Kurunduwaththa Villa page** — a marketing page for the estate's stay-on-site accommodation, with its own QR code
 - 🔖 **Favorites** — bookmark stations to revisit, saved locally on-device
 - ⏱️ **Reading-time estimates** — calculated from actual content length, not guessed
@@ -40,9 +41,10 @@ npm run dev -- --host
 Other scripts:
 
 ```bash
-npm run build     # type-check and build for production
-npm run preview   # preview the production build locally
-npm run lint       # run Oxlint
+npm run build       # type-check and build for production
+npm run preview     # preview the production build locally
+npm run lint         # run Oxlint
+npm run check-links  # scan for hardcoded https:// URLs and flag any that don't respond
 ```
 
 ## 📂 Project Structure
@@ -51,8 +53,10 @@ npm run lint       # run Oxlint
 src/
 ├── pages/           # Home, AllStations, Highlights, StationDetail, VillaPage, QrSheet
 ├── components/       # Header, LanguageGate, LanguagePicker
-├── context/          # LanguageContext, FavoritesContext
-├── data/             # stations.ts, translations.ts, villa.ts, localize.ts, estimateTime.ts
+├── context/          # LanguageContext, FavoritesContext, VisitedContext
+├── hooks/             # useOnSiteConfirmation
+├── data/             # stations.ts, translations.ts, villa.ts, localize.ts,
+│                     # estimateTime.ts, estateLocation.ts, stations.schema.ts
 ├── i18n/              # languages.ts, ui.ts
 └── assets/            # station photos, video, brand imagery
 ```
@@ -61,10 +65,9 @@ The Home page is a short landing page (hero, stats, and two buttons). The statio
 
 ## 🌐 Content Policy
 
-Station content is clearly split into two tiers:
+Every station is `verified: true`, sourced from the factory itself — either directly (on-site video/audio transcripts, real photos) or from the factory's own crop microsites, each checked photo-by-photo for third-party watermarks before use. Where a newer source conflicts with an already-verified fact, the more specific, deliberately-sourced fact wins; every such call is documented in the doc comment at the top of `src/data/stations.ts`, which also tracks exactly where each station's content and images came from.
 
-- ✅ **Verified** — the Tea Nursery station's images, video, and facts are sourced directly from the working factory
-- 🚧 **Draft** — the other 20 stations are supplementary content flagged with an on-page notice, pending real verification before the tour is fully rolled out
+Translations (`src/data/translations.ts`) are a separate concern: most of the text in all 10 non-English languages is machine-translated and not yet reviewed by a native speaker — see that file's own doc comment for which strings are the exception (a few pulled directly from the factory's own multilingual site).
 
 ## 🖨️ Printing Station QR Codes
 
