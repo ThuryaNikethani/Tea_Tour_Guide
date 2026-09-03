@@ -562,13 +562,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "ක්ලෝන ව්‍යාප්තිය විශිෂ්ට පැළයක නිශ්චිත ලක්ෂණ රඳවා ගනී; හොඳම ක්ලෝන තේ බොහෝ විට ඉතා සීමිත ප්‍රමාණවලින් නිපදවනු ලැබේ. රතු හෝ කොළ පැහැති විශේෂ කල්ටිවාරවලින් ලැබෙන දලු, රන් තුඩු සහ රිදී තුඩු වැනි දුර්ලභ ශ්‍රේණි සඳහා අතින් නෙළනු ලබන අතර, සාමාන්‍ය නෙළන ලද කොළවලට වඩා කිලෝග්‍රෑමයකට රුපියල් 100ක් පමණ වැඩිපුර වතු සාමාන්‍යයෙන් ගෙවයි.",
       duration: "මිනිත්තු 5-10",
     },
-    "organic-fertilizer": {
-      name: "කාබනික පොහොර යෙදීම",
-      description: "නිරෝගී තේ පසක් නිතිපතා පොහොර යෙදීම මත රඳා පවතී. මෙම නැවතුම කාබනික පොහොර — කොම්පෝස්ට්, ගොම, සහ අනෙකුත් ස්වාභාවික ද්‍රව්‍ය — කෘත්‍රිම රසායනික ද්‍රව්‍ය නොමැතිව සකස් කර යොදන ආකාරය ගැන කියා දෙයි.",
-      keyPoints: "කාබනික පොහොර, කෘත්‍රිම පොහොරවලට වඩා පෝෂක සෙමින් නිකුත් කරන අතර, එමගින් යෙදීමේ කාලය සහ පස් සෞඛ්‍යය වඩාත් වැදගත් වේ.",
-      duration: "මිනිත්තු 5",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "සෙවන ගස් කළමනාකරණය",
       description: "තේ පැළවලට සමතුලිත හිරු එළියක් අවශ්‍ය වේ — අධික නම් කොළ දැවී යයි, අඳුරු නම් වර්ධනය නොවේ — එබැවින් වතුයාය පඳුරු අතරේ සෙවන ගස් ස්තර දෙකක් යොදා මෙය කළමනාකරණය කරයි. පහත් සෙවන ශාකය — දේශීයව මකුලත (ලැඩැප්, වැටමාර) ලෙස හඳුන්වන — තේ පඳුරුවලට සමීපව සිටුවනු ලබන්නේ බිම් උෂ්ණත්වය මධ්‍යස්ථ කිරීමට, පස තෙතමනය රඳවා තබා ගැනීමට, සහ ස්වාභාවික සුළං බාධකයක් ලෙස ක්‍රියා කිරීමටය. ඇල්බීසියා වැනි උස් සෙවන ශාක උස්, පුළුල් සෙවනැල්ලක් සහිත ගස් වන අතර, වතුයායේ විශාල කොටස් හරහා තීව්‍ර සෘජු හිරු එළිය පෙරීම මෙන්ම වැටෙන කාබනික ද්‍රව්‍ය මගින් පස පොහොසත් කිරීම ද සිදු කරයි.",
       keyPoints: "වතු කළමනාකරුවන් සෘතුව සහ උස අනුව සෙවන තත්ත්වය සියුම් ලෙස සකස් කිරීමට ස්තර දෙකම නිතිපතා කප්පාදු කරන අතර, ජෛව විවිධත්වය හා බෝග සුරක්ෂිතතාවය ආරක්ෂා කිරීමට තේ කල්ටිවාර සමඟින් සෑම සෙවන විශේෂයකම වෘක්ෂ විද්‍යාත්මක නාම සහ ලක්ෂණ නිරීක්ෂණය කරයි.",
@@ -966,13 +960,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "குளோன் பெருக்கம் ஒரு சிறந்த செடியின் சரியான பண்புகளை பாதுகாக்கிறது; சிறந்த குளோன் தேயிலைகள் பெரும்பாலும் மிகக் குறைந்த அளவில் உற்பத்தி செய்யப்படுகின்றன. சிவப்பு அல்லது பச்சை நுனி சிறப்பு வகைகளிலிருந்து பெறப்படும் தளிர்கள், கோல்டன் டிப்ஸ் மற்றும் சில்வர் டிப்ஸ் போன்ற அரிய தரங்களுக்காக கையால் பறிக்கப்படுகின்றன, மேலும் தோட்டங்கள் பொதுவாக சாதாரண பறிக்கப்பட்ட இலைகளை விட கிலோவுக்கு சுமார் 100 ரூபாய் அதிகமாக செலுத்துகின்றன.",
       duration: "5-10 நிமிடங்கள்",
     },
-    "organic-fertilizer": {
-      name: "இயற்கை உர பயன்பாடு",
-      description: "ஆரோக்கியமான தேயிலை மண் தொடர்ச்சியான உர பயன்பாட்டைச் சார்ந்துள்ளது. கம்போஸ்ட், சாணம் மற்றும் பிற இயற்கை பொருட்கள் போன்ற இயற்கை உரங்கள் செயற்கை இரசாயனங்கள் இல்லாமல் எவ்வாறு தயாரிக்கப்பட்டு பயன்படுத்தப்படுகின்றன என்பதை இந்த நிறுத்தம் விளக்குகிறது.",
-      keyPoints: "இயற்கை உரங்கள் செயற்கை உரங்களை விட மெதுவாக ஊட்டச்சத்துக்களை வெளியிடுகின்றன, எனவே பயன்படுத்தும் நேரமும் மண் ஆரோக்கியமும் இன்னும் முக்கியமானவை.",
-      duration: "5 நிமிடங்கள்",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "நிழல் மர மேலாண்மை",
       description: "தேயிலைச் செடிகளுக்கு சமச்சீரான சூரிய ஒளி தேவை — மிக அதிகமாக இருந்தால் இலைகள் கருகிவிடும், மிக இருட்டாக இருந்தால் வளராது — எனவே தோட்டம் புதர்களுக்கு இடையே நடப்பட்ட இரு அடுக்கு நிழல் மரங்களால் இதை நிர்வகிக்கிறது. தாழ்வான நிழல் மரம் — உள்ளூரில் மகுலத்தா (லடப்பா, வடமாரா) என்று அழைக்கப்படுகிறது — தேயிலை புதர்களுக்கு அருகில் நடப்பட்டு தரை வெப்பநிலையை கட்டுப்படுத்தவும், மண் ஈரப்பதத்தை தக்கவைக்கவும், இயற்கை காற்றுத் தடையாகவும் செயல்படுகிறது. ஆல்பீசியா போன்ற உயரமான நிழல் மரங்கள், தோட்டத்தின் பெரும் பகுதிகளில் தீவிர நேரடி சூரிய ஒளியை வடிகட்டும் உயரமான, அகன்ற இலைக்குடை மரங்களாகும், மேலும் விழும் கரிமப் பொருட்களால் மண்ணை வளப்படுத்துகின்றன.",
       keyPoints: "தோட்ட மேலாளர்கள் பருவநிலை மற்றும் உயரத்திற்கு ஏற்ப நிழல் நிலைமைகளை சரிசெய்ய இரு அடுக்குகளையும் தொடர்ந்து கத்தரிக்கின்றனர், பல்லுயிர் வளத்தையும் பயிர் ஆரோக்கியத்தையும் பாதுகாக்க ஒவ்வொரு நிழல் இனத்தின் தாவரவியல் பெயர்கள் மற்றும் பண்புகளையும் தேயிலை வகைகளுடன் இணைத்து கண்காணிக்கின்றனர்.",
@@ -1370,13 +1358,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "La propagazione clonale preserva le caratteristiche esatte di una pianta pregiata; i migliori tè clonali sono spesso prodotti in quantità molto limitate. Le gemme delle varietà speciali dalla punta rossa o verde vengono raccolte a mano per qualità rare come i Golden Tips e i Silver Tips, e le piantagioni pagano in genere circa 100 rupie in più al chilo rispetto alle foglie raccolte normalmente.",
       duration: "5-10 minuti",
     },
-    "organic-fertilizer": {
-      name: "Applicazione di Fertilizzante Biologico",
-      description: "Un suolo da tè sano dipende dalla fertilizzazione regolare. Questa tappa spiega come vengono preparati e applicati i fertilizzanti biologici — compost, letame e altri ammendanti naturali — senza input chimici sintetici.",
-      keyPoints: "I fertilizzanti biologici rilasciano i nutrienti più lentamente di quelli sintetici, il che rende ancora più importanti i tempi di applicazione e la salute del suolo.",
-      duration: "5 minuti",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "Gestione degli Alberi d'Ombra",
       description: "Le piante di tè hanno bisogno di una luce solare equilibrata — troppo intensa e le foglie si bruciano, troppo scarsa e non crescono — quindi la tenuta gestisce questo aspetto con due strati di alberi ombreggianti piantati tra i cespugli. L'albero ombreggiante basso — noto localmente come Makulatha (Ladappa, Vatamara) — viene piantato più vicino ai cespugli di tè per moderare la temperatura del suolo, trattenere l'umidità e fungere da frangivento naturale. Alberi ombreggianti alti come l'Albizia sono alberi imponenti dalla chioma ampia che filtrano la luce solare diretta e intensa su vaste sezioni della tenuta, arricchendo al contempo il suolo con la materia organica caduta.",
       keyPoints: "I gestori della tenuta potano regolarmente entrambi gli strati per calibrare le condizioni d'ombra in base alla stagione e all'altitudine, monitorando i nomi botanici e le caratteristiche di ogni specie ombreggiante insieme alle cultivar di tè per proteggere la biodiversità e la salute delle colture.",
@@ -1774,13 +1756,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "يحافظ الإكثار المستنسخ على الخصائص الدقيقة لنبات مميز؛ وغالبًا ما تُنتَج أفضل أنواع الشاي المستنسخ بكميات محدودة جدًا. تُقطف براعم الأصناف الخاصة ذات الطرف الأحمر أو الأخضر يدويًا لإنتاج درجات نادرة مثل القمم الذهبية والقمم الفضية، وعادةً ما تدفع المزارع حوالي 100 روبية إضافية لكل كيلوغرام مقارنة بالأوراق العادية المقطوفة.",
       duration: "5-10 دقائق",
     },
-    "organic-fertilizer": {
-      name: "تطبيق الأسمدة العضوية",
-      description: "تعتمد تربة الشاي الصحية على التسميد المنتظم. تتناول هذه المحطة كيفية تحضير وتطبيق الأسمدة العضوية — السماد العضوي والروث وغيرها من المُحسِّنات الطبيعية — دون مدخلات كيميائية اصطناعية.",
-      keyPoints: "تُطلق الأسمدة العضوية العناصر الغذائية ببطء أكبر من الأسمدة الاصطناعية، مما يجعل توقيت التطبيق وصحة التربة أكثر أهمية.",
-      duration: "5 دقائق",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "إدارة أشجار التظليل",
       description: "تحتاج نباتات الشاي إلى ضوء شمس متوازن — فإذا كان قاسيًا جدًا تحترق الأوراق، وإذا كان معتمًا جدًا لا تنمو — لذا تدير المزرعة هذا الأمر بطبقتين من أشجار الظل المزروعة بين الشجيرات. تُزرع شجرة الظل المنخفضة — المعروفة محليًا باسم ماكولاثا (لادابا، فاتامارا) — بالقرب من شجيرات الشاي لتعديل درجة حرارة الأرض، والاحتفاظ برطوبة التربة، والعمل كمصد رياح طبيعي. أما أشجار الظل العالية مثل الألبيزيا فهي أشجار طويلة ذات مظلة عريضة تُرشّح أشعة الشمس المباشرة القوية عبر أجزاء واسعة من المزرعة، بينما تُثري التربة بالمواد العضوية المتساقطة.",
       keyPoints: "يقوم مديرو المزرعة بتقليم كلتا الطبقتين بانتظام لضبط حالة الظل حسب الموسم والارتفاع، مع تتبع الأسماء والخصائص النباتية لكل نوع من أنواع أشجار الظل إلى جانب أصناف الشاي لحماية التنوع البيولوجي وصحة المحصول.",
@@ -2178,13 +2154,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Клоновое размножение сохраняет точные характеристики выдающегося растения; лучшие клоновые чаи часто производятся в очень ограниченных количествах. Почки редких сортов с красными или зелёными кончиками собирают вручную для таких редких сортов, как Golden Tips и Silver Tips, и плантации обычно платят за них примерно на 100 рупий больше за килограмм, чем за обычный сорванный лист.",
       duration: "5–10 минут",
     },
-    "organic-fertilizer": {
-      name: "Внесение органических удобрений",
-      description: "Здоровье почвы чайной плантации зависит от регулярного внесения удобрений. Эта остановка рассказывает о том, как готовятся и вносятся органические удобрения — компост, навоз и другие натуральные добавки — без синтетических химикатов.",
-      keyPoints: "Органические удобрения высвобождают питательные вещества медленнее, чем синтетические, поэтому время внесения и здоровье почвы имеют ещё большее значение.",
-      duration: "5 минут",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "Управление затеняющими деревьями",
       description: "Чайным растениям нужен сбалансированный солнечный свет — слишком яркий обжигает листья, слишком слабый мешает росту — поэтому поместье регулирует это двумя ярусами теневых деревьев, высаженных среди кустов. Низкое теневое дерево — известное в этих краях как макулата (ладаппа, ватамара) — высаживают ближе к чайным кустам, чтобы смягчать температуру почвы, удерживать влагу и служить естественной ветрозащитой. Высокие теневые деревья, такие как альбиция, — это высокие деревья с широкой кроной, которые фильтруют интенсивный прямой солнечный свет на больших участках поместья, одновременно обогащая почву опадающей органикой.",
       keyPoints: "Управляющие поместьем регулярно обрезают оба яруса, чтобы точно настроить условия затенения в зависимости от сезона и высоты, отслеживая ботанические названия и характеристики каждого теневого вида наряду с сортами чая для защиты биоразнообразия и здоровья урожая.",
@@ -2582,13 +2552,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Die Klonvermehrung bewahrt die exakten Eigenschaften einer erlesenen Pflanze; die besten Klontees werden oft nur in sehr begrenzten Mengen produziert. Knospen der speziellen rot- oder grünspitzigen Sorten werden von Hand für seltene Qualitäten wie Golden Tips und Silver Tips gepflückt, wofür Plantagen in der Regel rund 100 Rupien mehr pro Kilogramm zahlen als für normal gepflücktes Blatt.",
       duration: "5-10 Minuten",
     },
-    "organic-fertilizer": {
-      name: "Ausbringung von organischem Dünger",
-      description: "Gesunder Teeboden hängt von regelmäßiger Düngung ab. Diese Station zeigt, wie organische Dünger — Kompost, Mist und andere natürliche Bodenverbesserer — ohne synthetische Chemikalien vorbereitet und ausgebracht werden.",
-      keyPoints: "Organische Dünger setzen Nährstoffe langsamer frei als synthetische, weshalb Ausbringungszeitpunkt und Bodengesundheit umso wichtiger sind.",
-      duration: "5 Minuten",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "Schattenbaum-Management",
       description: "Teepflanzen benötigen ausgewogenes Sonnenlicht — zu intensiv, und die Blätter verbrennen; zu dunkel, und sie wachsen nicht — deshalb steuert das Anwesen dies mit zwei Schichten von Schattenbäumen, die zwischen den Sträuchern gepflanzt werden. Der niedrige Schattenbaum — vor Ort als Makulatha (Ladappa, Vatamara) bekannt — wird näher an den Teesträuchern gepflanzt, um die Bodentemperatur zu regulieren, die Bodenfeuchtigkeit zu speichern und als natürlicher Windschutz zu dienen. Hohe Schattenbäume wie die Albizie sind hoch aufragende Bäume mit breiter Krone, die intensives direktes Sonnenlicht über große Bereiche des Anwesens filtern und dabei den Boden mit herabfallendem organischem Material anreichern.",
       keyPoints: "Die Plantagenleiter beschneiden beide Schichten regelmäßig, um die Beschattung je nach Jahreszeit und Höhenlage fein abzustimmen, und erfassen die botanischen Namen und Merkmale jeder Schattenbaumart zusammen mit den Teesorten, um Biodiversität und Erntequalität zu schützen.",
@@ -2986,13 +2950,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "La propagación clonal conserva las características exactas de una planta destacada; los mejores tés clonales suelen producirse en cantidades muy limitadas. Los brotes de las variedades especiales de punta roja o verde se recogen a mano para grados raros como los Golden Tips y los Silver Tips, y las plantaciones suelen pagar unas 100 rupias más por kilogramo que por las hojas recogidas normalmente.",
       duration: "5-10 minutos",
     },
-    "organic-fertilizer": {
-      name: "Aplicación de Fertilizante Orgánico",
-      description: "Un suelo de té saludable depende de una fertilización regular. Esta parada explica cómo se preparan y aplican los fertilizantes orgánicos — compost, estiércol y otras enmiendas naturales — sin insumos químicos sintéticos.",
-      keyPoints: "Los fertilizantes orgánicos liberan nutrientes más lentamente que los sintéticos, lo que hace que el momento de aplicación y la salud del suelo importen aún más.",
-      duration: "5 minutos",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "Gestión de Árboles de Sombra",
       description: "Las plantas de té necesitan luz solar equilibrada — demasiado intensa y las hojas se queman, demasiado escasa y no crecen — por lo que la finca gestiona esto con dos capas de árboles de sombra plantados entre los arbustos. El árbol de sombra bajo — conocido localmente como Makulatha (Ladappa, Vatamara) — se planta más cerca de los arbustos de té para moderar la temperatura del suelo, retener la humedad y actuar como cortavientos natural. Los árboles de sombra altos, como el Albizia, son árboles imponentes de copa ancha que filtran la luz solar directa e intensa en grandes secciones de la finca, a la vez que enriquecen el suelo con materia orgánica caída.",
       keyPoints: "Los gestores de la finca podan regularmente ambas capas para ajustar las condiciones de sombra según la temporada y la altitud, registrando los nombres botánicos y las características de cada especie de sombra junto con las variedades de té para proteger la biodiversidad y la salud del cultivo.",
@@ -3390,13 +3348,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "La propagation clonale préserve les caractéristiques exactes d'un plant remarquable ; les meilleurs thés clonaux sont souvent produits en quantités très limitées. Les bourgeons des variétés spéciales à pointe rouge ou verte sont cueillis à la main pour des qualités rares comme les Golden Tips et les Silver Tips, et les plantations paient généralement environ 100 roupies de plus par kilogramme que pour les feuilles cueillies normalement.",
       duration: "5-10 minutes",
     },
-    "organic-fertilizer": {
-      name: "Application d'Engrais Biologique",
-      description: "Un sol à thé sain dépend d'une fertilisation régulière. Cette étape explique comment les engrais biologiques — compost, fumier et autres amendements naturels — sont préparés et appliqués sans intrants chimiques synthétiques.",
-      keyPoints: "Les engrais biologiques libèrent les nutriments plus lentement que les engrais synthétiques, ce qui rend le moment de l'application et la santé du sol d'autant plus importants.",
-      duration: "5 minutes",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "Gestion des Arbres d'Ombrage",
       description: "Les théiers ont besoin d'un ensoleillement équilibré — trop intense, les feuilles brûlent ; trop sombre, elles ne poussent pas — c'est pourquoi le domaine gère cela avec deux niveaux d'arbres d'ombrage plantés parmi les théiers. L'arbre d'ombrage bas — connu localement sous le nom de Makulatha (Ladappa, Vatamara) — est planté plus près des théiers pour modérer la température du sol, retenir l'humidité et servir de brise-vent naturel. Les arbres d'ombrage hauts comme l'Albizia sont de grands arbres à large canopée qui filtrent la lumière directe intense sur de vastes sections du domaine tout en enrichissant le sol grâce aux matières organiques tombées.",
       keyPoints: "Les gestionnaires du domaine taillent régulièrement les deux niveaux pour ajuster les conditions d'ombrage selon la saison et l'altitude, en suivant les noms botaniques et les caractéristiques de chaque espèce d'ombrage ainsi que des cultivars de thé afin de protéger la biodiversité et la santé des cultures.",
@@ -3794,13 +3746,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "克隆繁殖能保留优良母株的确切特性；最优质的克隆茶往往产量非常有限。红尖或绿尖特色品种的嫩芽会被手工采摘，用于制作金毫（Golden Tips）、银毫（Silver Tips）等稀有茶品，茶园通常会为此多付约每公斤100卢比，高于普通采摘叶片的价格。",
       duration: "5-10分钟",
     },
-    "organic-fertilizer": {
-      name: "有机肥施用",
-      description: "健康的茶园土壤离不开定期施肥。本站介绍如何制备和施用堆肥、粪肥等天然有机肥料，而不使用合成化学品。",
-      keyPoints: "有机肥释放养分的速度比化肥更慢，因此施肥时机和土壤健康都更为关键。",
-      duration: "5分钟",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "遮荫树管理",
       description: "茶树需要均衡的阳光——过强会灼伤叶片，过暗则无法生长——因此庄园通过在茶丛间种植两层遮荫树来调节这一点。低层遮荫树——当地称为马库拉塔（拉达帕、瓦塔马拉）——种植在靠近茶丛的位置，用以调节地表温度、保持土壤水分，并充当天然防风屏障。银合欢（Albizia）等高层遮荫树则是树冠宽阔的高大乔木，可在庄园大片区域内过滤强烈的直射阳光，同时通过落叶等有机物滋养土壤。",
       keyPoints: "庄园管理人员会根据季节和海拔定期修剪这两层遮荫树以精细调节遮荫程度，并记录每种遮荫树种与茶树品种的植物学名称和特征，以保护生物多样性和作物健康。",
@@ -4198,13 +4144,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "クローン繁殖は優れた親株の特性をそのまま保持します。最高級のクローン茶は生産量が非常に限られていることが多いです。赤色または緑色の芽先を持つ特選品種の芽は、ゴールデンティップスやシルバーティップスといった希少な等級のために手摘みされ、農園では通常、標準的に摘まれた葉よりも1キログラムあたり約100ルピー多く支払われます。",
       duration: "5〜10分",
     },
-    "organic-fertilizer": {
-      name: "有機肥料の施用",
-      description: "健全な茶園の土壌には定期的な施肥が欠かせません。このストップでは、堆肥や厩肥などの天然由来の有機肥料が、合成化学物質を使わずにどのように準備・施用されるかを紹介します。",
-      keyPoints: "有機肥料は化学肥料より養分の放出が緩やかなため、施肥のタイミングと土壌の健康状態がより重要になります。",
-      duration: "5分",
-    },
-    "shade-management": {
+        "shade-management": {
       name: "シェードツリー（日陰木）管理",
       description: "茶樹には均衡の取れた日光が必要です——強すぎれば葉が焼け、暗すぎれば育ちません——そのため農園では茶樹の間に2層の遮光樹を植えてこれを管理しています。低木遮光樹——現地ではマクラタ（ラダッパ、ヴァタマラ）として知られています——は茶樹の近くに植えられ、地表温度を和らげ、土壌水分を保持し、天然の防風林として機能します。アルビジアなどの高木遮光樹は、樹冠が広く高い木で、農園の広い範囲にわたって強い直射日光を遮る一方、落ち葉などの有機物で土壌を豊かにします。",
       keyPoints: "農園の管理者は季節と標高に応じて遮光の状態を微調整するため、両方の層を定期的に剪定し、生物多様性と作物の健全性を守るために各遮光樹種と茶の品種の植物学名や特徴を記録しています。",
