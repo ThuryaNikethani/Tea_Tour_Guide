@@ -66,6 +66,9 @@ import type { StationTranslation } from "./stations";
  * 2026-09-03 and translated the same way, appending index 2 to fruitNames/
  * fruitSectionHeadings/fruitSectionBodies/fruitItemHeadings/fruitItemBodies/
  * fruitItemTags (empty arrays for the tags — no tea product for this crop).
+ *
+ * A fourth fruit, Papaya, was added the same day, appending index 3 to the
+ * same five fields (again empty `fruitItemTags` arrays — no tea product).
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -581,11 +584,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "ශ්‍රී ලංකාවේ දේශගුණය වෙනත් තැන්වල සුලභ නොවන පලතුරු රැසකට හිතකර වන අතර, ඒවායින් බොහොමයක් තේ සහ අනෙකුත් වතු බෝග අසලම වගා කරනු ලැබේ. මෙහි වගා කරන එකක් වඩාත් සමීපව බැලීමට පහත පලතුරක් තෝරන්න.",
         "සම්පූර්ණ විස්තර බැලීමට පලතුරක් තෝරන්න:",
       ],
-      fruitNames: ["ඩ්‍රැගන් ෆෘට්","අන්නාසි","වේරළු (සිලෝන් ඔලිව්)"],
+      fruitNames: ["ඩ්‍රැගන් ෆෘට්","අන්නාසි","වේරළු (සිලෝන් ඔලිව්)","පැපොල්"],
       fruitSectionHeadings: [
         ["ඩ්‍රැගන් ෆෘට් ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
         ["අන්නාසි ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ","අන්නාසි තේ නිෂ්පාදන"],
         ["වේරළු ගස පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
+        ["පැපොල් ගස පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
       ],
       fruitSectionBodies: [
         [
@@ -603,6 +607,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "වේරළු, විද්‍යාත්මකව Elaeocarpus serratus ලෙස හඳුන්වන — Elaeocarpaceae පවුලට අයත් මධ්‍යම සිට විශාල දක්වා සදාහරිත ගසකි, ඉන්දියානු උපමහාද්වීපයට හා ගිනිකොනදිග ආසියාවට ආවේණික, වතුයාය ඇතුළුව. එය එහි සුමට, ඔලිව් කොළ පැහැති ඵලය සහ කුඩා සුදු සීනි-මල් හැඩැති මල් සඳහා ප්‍රසිද්ධ වන අතර, නිවර්තන දේශගුණයන්හි වර්ධනය වන අතර ශ්‍රී ලාංකික නිවාස උද්‍යාන හා පහත් බිම් වර්ෂාවනාන්තරවල සුලභව දක්නට ලැබේ.",
           "ගස පිළිබඳ කෙටි විස්තරයක්:",
           "වේරළු හි වටිනාකම එහි ඇඹුල් ඵලයට වඩා බොහෝ දුරට විහිදේ:",
+        ],
+        [
+          "පැපොල් ගස, විද්‍යාත්මකව Carica papaya ලෙස හඳුන්වන — Caricaceae පවුලට අයත් කුඩා, විරලව අතු ලා ගසකි, ඇමරිකාවට ආවේණික නමුත් දැන් නිවර්තන ලෝකය පුරාම, වතුයාය ඇතුළුව වගා කෙරේ. එය එහි මිහිරි, කොමඩු වැනි ඵලය සහ ආහාර දිරවීමට උපකාරී වන පැපේන් එන්සයිමය සඳහා ප්‍රසිද්ධ වේ; සුදුසු දේශගුණයන්හි පැපොල් ඉක්මනින් වර්ධනය වන අතර වසර පුරාම ඵල දරයි.",
+          "ගස පිළිබඳ කෙටි විස්තරයක්:",
+          "පැපොල් හි වටිනාකම එහි මිහිරි පල්පයට වඩා බොහෝ දුරට විහිදේ:",
         ],
       ],
       fruitItemHeadings: [
@@ -622,6 +631,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["උස","කොළ","මල්","ඵලය","වාසස්ථානය"],
           ["ආහාර පිසීමේ භාවිතය","ඖෂධීය හා කෙස් රැකවරණය","පාරිසරික වැදගත්කම"],
         ],
+        [
+          [],
+          ["උස","කොළ","මල්","ඵලය","වාසස්ථානය"],
+          ["ආහාර පිසීමේ භාවිතය","ඖෂධීය ගුණාංග","පාරිසරික වැදගත්කම"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -639,6 +653,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["සාමාන්‍යයෙන් මීටර් 15 සිට 20 දක්වා උසැති වේ.","දාරොප්පෙකි කොළ, තද කොළ පැහැති, ඇතැම් ඒවා වැටීමට පෙර දීප්ත රතු පැහැයට හැරේ.","සියුම් පොකුරු වශයෙන් එල්ලෙන කුඩා, සුදු, සීනි-මල් හැඩැති මල්.","සුමට, ඩිම්බාකාර, ඔලිව් කොළ පැහැති ඵලයකි, ඇඹුල් හෝ රළු රසයක් සහ තද බීජයක් සහිතව.","පහත් බිම් වර්ෂාවනාන්තර, සදාහරිත වනාන්තර, සහ නිවාස උද්‍යාන; හොඳින් ජලය බැස යන පසක් කැමති වේ."],
           ["අමුවෙන් අනුභව කිරීම, ව්‍යංජනවලට එකතු කිරීම, හෝ ප්‍රසිද්ධ ශ්‍රී ලාංකික 'වේරළු අච්චාරු' සෑදීමට අච්චාරු දැමීම සඳහා ජනප්‍රියයි; විටමින් C සහ ප්‍රතිඔක්සිකාරක බහුලයි.","වේරළු කොළ සුමට, දිලිසෙන කෙස් සඳහා සාම්ප්‍රදායික ස්වාභාවික කෙස් ප්‍රතිකාරයකි; ගසේ විවිධ කොටස් ආහාර දිරවීමේ සෞඛ්‍යයට හා ප්‍රති-ගිනි අවුලුවන ගුණාංග සඳහාද භාවිතා කරයි.","ගස ප්‍රාදේශීය ජෛව විවිධත්වයට සහාය වන අතර, ඵල අනුභවී කුරුල්ලන් හා කෘමීන්ට ආහාර සපයන අතර, නිවර්තන වන පරිසර පද්ධතියක අත්‍යවශ්‍ය කොටසකි."],
         ],
+        [
+          [],
+          ["මීටර් 5 සිට 10 දක්වා උසැති වේ.","විශාල, ගැඹුරින් පෙති සහිත කොළ, කඳේ මුදුනේ සර්පිලාකාරව සකසා ඇත.","මාංශල, ඉටි වැනි, තරමක් සුවඳවත් මල්; පිරිමි, ගැහැණු, හෝ ද්විලිංගික විය හැක.","මෘදු තැඹිලි හෝ කහ පැහැති පල්පයක් සහ කළු බීජවලින් පිරුණු මධ්‍ය කුහරයක් සහිත විශාල බෙරි ඵලයකි.","නිවර්තන හා අර්ධ නිවර්තන ප්‍රදේශ; හොඳින් ජලය බැස යන පසක් සහ පූර්ණ හිරු එළිය අවශ්‍ය වේ."],
+          ["මුහුකුරා ගිය පැපොල් නැවුම්ව හෝ සලාද වශයෙන් අනුභව කරන අතර, කොළ පැහැති පැපොල් එළවළුවක් ලෙස පිසිනු ලැබේ; බීජ රස කුළුබඩු රසයක් සහිතව අනුභවයට සුදුසු වන අතර, පැපේන් එන්සයිමය මස් මෘදු කිරීමට යොදා ගනී.","විටමින් C සහ A බහුල පැපොල් හි පැපේන් ආහාර දිරවීමට උපකාරී වේ; ඩෙංගු උණ සහ සම රෝග සඳහා සමහර සංස්කෘතීන්හි කොළ සාරය භාවිතා කරයි.","ගස නිවර්තන පරිසර පද්ධතිවල විවිධ කුරුල්ලන්ට, පල අනුභවී වවුලන්ට, සහ කෘමීන්ට ඉක්මනින් වර්ධනය වන සෙවනක් හා ආහාර මූලාශ්‍රයක් සපයයි."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -651,6 +670,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["ස්වාභාවිකව රසකාරක එකතු කළ | මෘදු සහ නැවුම් | උසස් තත්ත්වය"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -999,11 +1023,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "இலங்கையின் காலநிலை மற்ற இடங்களில் பொதுவாகக் காணப்படாத பரந்த அளவிலான பழங்களுக்கு ஏற்றது, அவற்றில் பல தேயிலை மற்றும் பிற தோட்ட பயிர்களுக்கு அருகிலேயே பயிரிடப்படுகின்றன. இங்கு வளர்க்கப்படும் ஒன்றை நெருக்கமாகப் பார்க்க கீழே ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்.",
         "முழு விவரங்களைப் பார்க்க ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்:",
       ],
-      fruitNames: ["டிராகன் ஃப்ரூட்","அன்னாசி","வேரளு (சிலோன் ஆலிவ்)"],
+      fruitNames: ["டிராகன் ஃப்ரூட்","அன்னாசி","வேரளு (சிலோன் ஆலிவ்)","பப்பாளி"],
       fruitSectionHeadings: [
         ["டிராகன் ஃப்ரூட் செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
         ["அன்னாசி செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்","அன்னாசி தேநீர் பொருட்கள்"],
         ["வேரளு மரம் பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
+        ["பப்பாளி மரம் பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
       ],
       fruitSectionBodies: [
         [
@@ -1021,6 +1046,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "வேரளு, அறிவியல் பூர்வமாக Elaeocarpus serratus எனப்படும் — Elaeocarpaceae குடும்பத்தைச் சேர்ந்த நடுத்தர முதல் பெரிய அளவிலான பசுமையான மரமாகும், இந்திய துணைக்கண்டம் மற்றும் தென்கிழக்கு ஆசியாவை பூர்வீகமாகக் கொண்டது, இந்த தோட்டம் உட்பட. இது அதன் மென்மையான, ஆலிவ்-பச்சை நிற பழத்திற்கும், சிறிய வெள்ளை மணி வடிவ மலர்களுக்கும் பெயர் பெற்றது, வெப்பமண்டல காலநிலைகளில் செழிக்கிறது, இலங்கை வீட்டுத் தோட்டங்களிலும் தாழ்வான மழைக்காடுகளிலும் பொதுவாகக் காணப்படுகிறது.",
           "மரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
           "வேரளுவின் மதிப்பு அதன் புளிப்பான பழத்தை தாண்டி விரிவடைகிறது:",
+        ],
+        [
+          "பப்பாளி மரம், அறிவியல் பூர்வமாக Carica papaya எனப்படும் — Caricaceae குடும்பத்தைச் சேர்ந்த சிறிய, குறைவாக கிளைத்த மரமாகும், அமெரிக்காவை பூர்வீகமாகக் கொண்டது, ஆனால் இப்போது இந்த தோட்டம் உட்பட வெப்பமண்டல உலகம் முழுவதும் பயிரிடப்படுகிறது. இது இனிப்பான, முலாம்பழம் போன்ற பழத்திற்கும், செரிமானத்திற்கு உதவும் பப்பைன் நொதிக்கும் புகழ்பெற்றது; ஏற்ற காலநிலைகளில் பப்பாளி வேகமாக வளர்ந்து ஆண்டு முழுவதும் பழம் தருகிறது.",
+          "மரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+          "பப்பாளியின் மதிப்பு அதன் இனிப்பு சதையை தாண்டி விரிவடைகிறது:",
         ],
       ],
       fruitItemHeadings: [
@@ -1040,6 +1070,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["உயரம்","இலைகள்","மலர்கள்","பழம்","வாழ்விடம்"],
           ["சமையல் பயன்கள்","மருத்துவம் & முடி பராமரிப்பு","சூழலியல் முக்கியத்துவம்"],
         ],
+        [
+          [],
+          ["உயரம்","இலைகள்","மலர்கள்","பழம்","வாழ்விடம்"],
+          ["சமையல் பயன்கள்","மருத்துவ பண்புகள்","சூழலியல் முக்கியத்துவம்"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -1057,6 +1092,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["பொதுவாக 15 முதல் 20 மீட்டர் வரை உயரமுள்ளது.","பல்-விளிம்பு, அடர் பச்சை நிற இலைகள், சில உதிர்வதற்கு முன் பிரகாசமான சிவப்பு நிறமாக மாறும்.","மென்மையான தொகுதிகளில் தொங்கும் சிறிய, வெள்ளை, மணி வடிவ மலர்கள்.","மென்மையான, நீள்வட்ட, ஆலிவ்-பச்சை நிற பழம், புளிப்பு அல்லது கசப்பான சுவையும் கடினமான விதையும் கொண்டது.","தாழ்வான மழைக்காடுகள், பசுமையான காடுகள், மற்றும் வீட்டுத் தோட்டங்கள்; நன்கு வடிகட்டும் மண்ணை விரும்புகிறது."],
           ["பச்சையாக உண்ணப்படுவது, கறிகளில் சமைக்கப்படுவது, அல்லது புகழ்பெற்ற இலங்கை 'வேரளு அச்சாறு' தயாரிக்க ஊறுகாய் இடப்படுவது பிரபலமானது; வைட்டமின் C மற்றும் ஆக்ஸிஜனேற்ற எதிர்ப்பான்கள் நிறைந்தது.","வேரளு இலைகள் மென்மையான, பளபளப்பான முடிக்கான பாரம்பரிய இயற்கை முடி சிகிச்சையாகும்; மரத்தின் பல்வேறு பாகங்கள் செரிமான ஆரோக்கியத்திற்கும் அழற்சி எதிர்ப்பு பண்புகளுக்கும் பயன்படுத்தப்படுகின்றன.","இந்த மரம் உள்ளூர் பல்லுயிர் பெருக்கத்தை ஆதரிக்கிறது, பழம் உண்ணும் பறவைகளுக்கும் பூச்சிகளுக்கும் உணவை வழங்குகிறது, மேலும் வெப்பமண்டல வன சுற்றுச்சூழல் அமைப்பின் இன்றியமையாத பகுதியாகும்."],
         ],
+        [
+          [],
+          ["5 முதல் 10 மீட்டர் வரை உயரமுள்ளது.","பெரிய, ஆழமாக பிளவுபட்ட இலைகள், தண்டின் உச்சியில் சுருள் வடிவில் அமைந்துள்ளன.","சதைப்பற்றுள்ள, மெழுகு போன்ற, சற்று நறுமணமுள்ள மலர்கள்; ஆண், பெண், அல்லது இருபால் ஆகியவற்றில் ஏதேனும் ஒன்றாக இருக்கலாம்.","மென்மையான ஆரஞ்சு அல்லது மஞ்சள் நிற சதையும், கருப்பு விதைகள் நிறைந்த மைய குழியும் கொண்ட ஒரு பெரிய பெர்ரி பழம்.","வெப்பமண்டல மற்றும் துணை வெப்பமண்டல பகுதிகள்; நன்கு வடிகட்டும் மண்ணும் முழு சூரிய ஒளியும் தேவை."],
+          ["முதிர்ந்த பப்பாளி புதியதாக அல்லது சாலட்களில் உண்ணப்படுகிறது, பச்சை பப்பாளி காயாக சமைக்கப்படுகிறது; விதைகள் காரமான சுவையுடன் உண்ணக்கூடியவை, மேலும் பப்பைன் நொதி இறைச்சியை மென்மையாக்க பயன்படுத்தப்படுகிறது.","வைட்டமின் C மற்றும் A நிறைந்த பப்பாளியின் பப்பைன் செரிமானத்திற்கு உதவுகிறது; சில கலாச்சாரங்களில் இலை சாறு டெங்கு காய்ச்சல் மற்றும் தோல் நோய்களுக்கு சிகிச்சையளிக்க பயன்படுத்தப்படுகிறது.","இந்த மரம் வெப்பமண்டல சுற்றுச்சூழல் அமைப்புகளில் பல்வேறு பறவைகள், பழம் தின்னும் வௌவால்கள், மற்றும் பூச்சிகளுக்கு வேகமாக வளரும் விதானத்தையும் உணவு ஆதாரத்தையும் வழங்குகிறது."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -1069,6 +1109,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["இயற்கையாக சுவை சேர்க்கப்பட்டது | மென்மையானது & புத்துணர்ச்சியானது | உயர்தர தரம்"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -1417,11 +1462,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Il clima dello Sri Lanka favorisce un'ampia varietà di frutti poco comuni altrove, molti dei quali coltivati proprio accanto al tè e ad altre colture della tenuta. Scegli un frutto qui sotto per scoprirne di più su uno coltivato qui.",
         "Seleziona un frutto per vederne tutti i dettagli:",
       ],
-      fruitNames: ["Frutto del Drago","Ananas","Olivo di Ceylon (Weralu)"],
+      fruitNames: ["Frutto del Drago","Ananas","Olivo di Ceylon (Weralu)","Papaya"],
       fruitSectionHeadings: [
         ["Il Frutto del Drago","Caratteristiche","Usi e Benefici"],
         ["La Pianta dell'Ananas","Caratteristiche","Usi e Benefici","Prodotti al Tè all'Ananas"],
         ["L'Albero dell'Olivo di Ceylon","Caratteristiche","Usi e Benefici"],
+        ["L'Albero della Papaya","Caratteristiche","Usi e Benefici"],
       ],
       fruitSectionBodies: [
         [
@@ -1439,6 +1485,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Elaeocarpus serratus — l'Olivo di Ceylon, noto localmente come Weralu — è un albero sempreverde da medio a grande della famiglia delle Elaeocarpaceae, originario del subcontinente indiano e del Sud-est asiatico, compresa questa tenuta. È noto per il suo frutto liscio, verde oliva, e per i suoi piccoli fiori bianchi a forma di campana, prospera nei climi tropicali ed è comune negli orti familiari dello Sri Lanka e nelle foreste pluviali di pianura.",
           "Uno sguardo rapido all'albero stesso:",
           "Il valore dell'Olivo di Ceylon va ben oltre il suo frutto aspro:",
+        ],
+        [
+          "Carica papaya — l'albero della papaya — è un albero piccolo, poco ramificato della famiglia delle Caricaceae, originario delle Americhe ma oggi coltivato in tutto il mondo tropicale, compresa questa tenuta. È famoso per il suo frutto dolce, simile a un melone, e per l'enzima papaina, che favorisce la digestione; le papaie crescono rapidamente e producono frutti tutto l'anno nei climi adatti.",
+          "Uno sguardo rapido all'albero stesso:",
+          "Il valore della papaya va ben oltre la sua polpa dolce:",
         ],
       ],
       fruitItemHeadings: [
@@ -1458,6 +1509,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Altezza","Foglie","Fiori","Frutto","Habitat"],
           ["Usi Culinari","Medicina e Cura dei Capelli","Importanza Ecologica"],
         ],
+        [
+          [],
+          ["Altezza","Foglie","Fiori","Frutto","Habitat"],
+          ["Usi Culinari","Proprietà Medicinali","Importanza Ecologica"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -1475,6 +1531,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Tipicamente alto 15-20 metri.","Foglie dentellate, verde scuro, alcune delle quali diventano rosso brillante prima di cadere.","Piccoli fiori bianchi a forma di campana che pendono in delicati grappoli.","Frutto liscio, ovale, verde oliva, dal sapore aspro o astringente e con un seme duro.","Foreste pluviali di pianura, foreste sempreverdi e orti familiari; predilige un terreno ben drenato."],
           ["Comunemente mangiato crudo, cucinato in curry, o messo sott'aceto per preparare il noto 'Weralu Achcharu' sri-lankese; ricco di vitamina C e antiossidanti.","Le foglie di Weralu sono un trattamento naturale tradizionale per capelli lisci e lucenti; varie parti dell'albero sono usate anche per la salute digestiva e le proprietà antinfiammatorie.","L'albero sostiene la biodiversità locale, fornendo cibo a uccelli e insetti frugivori, ed è una parte vitale degli ecosistemi delle foreste tropicali."],
         ],
+        [
+          [],
+          ["Alto 5-10 metri.","Foglie grandi, profondamente lobate, disposte a spirale in cima al tronco.","Fiori carnosi, cerosi, leggermente profumati; possono essere maschili, femminili o ermafroditi.","Una grande bacca con polpa morbida arancione o gialla e una cavità centrale piena di semi neri.","Regioni tropicali e subtropicali; richiede terreno ben drenato e pieno sole."],
+          ["La papaya matura si mangia fresca o in insalate, mentre quella verde si cucina come verdura; i semi sono commestibili con un sapore pepato, e l'enzima papaina è usato come intenerente per la carne.","Ricca di vitamina C e A, la papaina della papaya favorisce la digestione; gli estratti di foglie sono usati in alcune culture per trattare la febbre dengue e le condizioni della pelle.","L'albero fornisce una chioma a crescita rapida e una fonte di cibo per vari uccelli, pipistrelli frugivori e insetti negli ecosistemi tropicali."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -1487,6 +1548,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Aromatizzato Naturalmente | Morbido e Rinfrescante | Qualità Premium"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -1835,11 +1901,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "يدعم مناخ سريلانكا مجموعة واسعة من الفواكه غير الشائعة في أماكن أخرى، ويُزرع الكثير منها إلى جانب الشاي ومحاصيل المزرعة الأخرى مباشرة. اختر فاكهة أدناه لتلقي نظرة أقرب على واحدة تُزرع هنا.",
         "اختر فاكهة لعرض تفاصيلها الكاملة:",
       ],
-      fruitNames: ["فاكهة التنين","الأناناس","زيتون سيلان (ويرالو)"],
+      fruitNames: ["فاكهة التنين","الأناناس","زيتون سيلان (ويرالو)","البابايا"],
       fruitSectionHeadings: [
         ["عن نبات فاكهة التنين","الخصائص","الاستخدامات والفوائد"],
         ["عن نبات الأناناس","الخصائص","الاستخدامات والفوائد","منتجات شاي الأناناس"],
         ["عن شجرة زيتون سيلان","الخصائص","الاستخدامات والفوائد"],
+        ["عن شجرة البابايا","الخصائص","الاستخدامات والفوائد"],
       ],
       fruitSectionBodies: [
         [
@@ -1857,6 +1924,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "زيتون سيلان (Elaeocarpus serratus)، المعروف محليًا باسم ويرالو، هو شجرة دائمة الخضرة متوسطة إلى كبيرة الحجم من عائلة الإيلايوكارباسيا، موطنها الأصلي شبه القارة الهندية وجنوب شرق آسيا، بما في ذلك هذه المزرعة. تشتهر بثمرتها الملساء ذات اللون الأخضر الزيتوني وأزهارها البيضاء الصغيرة على شكل جرس، وتزدهر في المناخات الاستوائية وهي منظر شائع في حدائق المنازل السريلانكية والغابات المطيرة المنخفضة.",
           "نظرة سريعة على الشجرة نفسها:",
           "تتجاوز قيمة زيتون سيلان ثمرتها الحامضة بكثير:",
+        ],
+        [
+          "البابايا (Carica papaya) هي شجرة صغيرة قليلة التفرع من عائلة الكاريكاسيا، موطنها الأصلي الأمريكتان، لكنها تُزرع الآن في جميع أنحاء العالم الاستوائي، بما في ذلك هذه المزرعة. تشتهر بثمرتها الحلوة الشبيهة بالشمام وبإنزيم الباباين الذي يساعد على الهضم؛ تنمو أشجار البابايا بسرعة وتثمر على مدار العام في المناخات المناسبة.",
+          "نظرة سريعة على الشجرة نفسها:",
+          "تتجاوز قيمة البابايا لبّها الحلو بكثير:",
         ],
       ],
       fruitItemHeadings: [
@@ -1876,6 +1948,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["الارتفاع","الأوراق","الأزهار","الثمرة","الموطن"],
           ["الاستخدامات الطهوية","الطب والعناية بالشعر","الأهمية البيئية"],
         ],
+        [
+          [],
+          ["الارتفاع","الأوراق","الأزهار","الثمرة","الموطن"],
+          ["الاستخدامات الطهوية","الخصائص الطبية","الأهمية البيئية"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -1893,6 +1970,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["يصل ارتفاعها عادة إلى 15-20 مترًا.","أوراق مسننة، خضراء داكنة، يتحول بعضها إلى اللون الأحمر الزاهي قبل التساقط.","أزهار بيضاء صغيرة على شكل جرس متدلية في عناقيد رقيقة.","ثمرة ملساء بيضاوية خضراء زيتونية بمذاق حامض أو قابض وبذرة صلبة.","الغابات المطيرة المنخفضة، الغابات دائمة الخضرة، وحدائق المنازل؛ تفضل التربة جيدة التصريف."],
           ["تُؤكل نيئة، أو تُطهى في الكاري، أو تُخلَّل لصنع 'ويرالو أتشارو' السريلانكي المعروف؛ غنية بفيتامين C ومضادات الأكسدة.","أوراق ويرالو علاج طبيعي تقليدي للشعر الأملس اللامع؛ كما تُستخدم أجزاء مختلفة من الشجرة لصحة الجهاز الهضمي وخصائصها المضادة للالتهابات.","تدعم الشجرة التنوع البيولوجي المحلي، وتوفر الغذاء للطيور والحشرات آكلة الثمار، وهي جزء حيوي من النظم البيئية للغابات الاستوائية."],
         ],
+        [
+          [],
+          ["يتراوح ارتفاعها بين 5 و10 أمتار.","أوراق كبيرة، عميقة الفصوص، مرتبة حلزونيًا في أعلى الجذع.","أزهار لحمية، شمعية، وعطرة قليلاً؛ يمكن أن تكون ذكرية أو أنثوية أو خنثى.","توتة كبيرة بلب طري برتقالي أو أصفر وتجويف مركزي مليء ببذور سوداء.","المناطق الاستوائية وشبه الاستوائية؛ تتطلب تربة جيدة التصريف وأشعة شمس كاملة."],
+          ["تؤكل البابايا الناضجة طازجة أو في السلطات، بينما تُطهى البابايا الخضراء كخضار؛ البذور صالحة للأكل بمذاق فلفلي، ويُستخدم إنزيم الباباين لتطرية اللحوم.","غنية بفيتامين C وA، يساعد إنزيم الباباين في البابايا على الهضم؛ تُستخدم مستخلصات الأوراق في بعض الثقافات لعلاج حمى الضنك وحالات الجلد.","توفر الشجرة مظلة سريعة النمو ومصدر غذاء لمختلف الطيور وخفافيش الفاكهة والحشرات في النظم البيئية الاستوائية."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -1905,6 +1987,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["منكّه طبيعيًا | ناعم ومنعش | جودة ممتازة"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -2253,11 +2340,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Климат Шри-Ланки благоприятствует широкому разнообразию фруктов, редко встречающихся в других местах, многие из которых выращиваются прямо рядом с чаем и другими плантационными культурами. Выберите фрукт ниже, чтобы поближе познакомиться с одним из тех, что выращивают здесь.",
         "Выберите фрукт, чтобы увидеть полную информацию о нём:",
       ],
-      fruitNames: ["Драконий фрукт","Ананас","Цейлонская олива (Вералу)"],
+      fruitNames: ["Драконий фрукт","Ананас","Цейлонская олива (Вералу)","Папайя"],
       fruitSectionHeadings: [
         ["О растении драконий фрукт","Характеристики","Применение и польза"],
         ["О растении ананас","Характеристики","Применение и польза","Ананасовые чайные продукты"],
         ["О дереве цейлонской оливы","Характеристики","Применение и польза"],
+        ["О дереве папайи","Характеристики","Применение и польза"],
       ],
       fruitSectionBodies: [
         [
@@ -2275,6 +2363,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Elaeocarpus serratus — цейлонская олива, местное название Вералу, — вечнозелёное дерево от среднего до крупного размера семейства элеокарповых, родом с Индийского субконтинента и из Юго-Восточной Азии, растёт и на этом поместье. Известно своим гладким, оливково-зелёным плодом и мелкими белыми колокольчатыми цветками, процветает в тропическом климате и часто встречается в шри-ланкийских приусадебных садах и низменных тропических лесах.",
           "Краткий обзор самого дерева:",
           "Ценность цейлонской оливы выходит далеко за рамки её терпкого плода:",
+        ],
+        [
+          "Carica papaya — папайя — небольшое, слабоветвящееся дерево семейства кариковых, родом из Америки, теперь выращиваемое по всему тропическому миру, включая это поместье. Известна своим сладким, похожим на дыню плодом и ферментом папаином, который способствует пищеварению; папайя быстро растёт и плодоносит круглый год в подходящем климате.",
+          "Краткий обзор самого дерева:",
+          "Ценность папайи выходит далеко за рамки её сладкой мякоти:",
         ],
       ],
       fruitItemHeadings: [
@@ -2294,6 +2387,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Высота","Листья","Цветки","Плод","Среда обитания"],
           ["Кулинарное применение","Медицина и уход за волосами","Экологическое значение"],
         ],
+        [
+          [],
+          ["Высота","Листья","Цветки","Плод","Среда обитания"],
+          ["Кулинарное применение","Лечебные свойства","Экологическое значение"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -2311,6 +2409,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Обычно высотой 15–20 метров.","Зубчатые, тёмно-зелёные листья, некоторые из которых становятся ярко-красными перед опадением.","Мелкие белые колокольчатые цветки, свисающие изящными гроздьями.","Гладкий, овальный, оливково-зелёный плод с терпким или вяжущим вкусом и твёрдой косточкой.","Низменные тропические леса, вечнозелёные леса и приусадебные сады; предпочитает хорошо дренированную почву."],
           ["Популярно есть в сыром виде, готовить в карри или мариновать для приготовления известного шри-ланкийского «Вералу Ачхару»; богат витамином C и антиоксидантами.","Листья вералу — традиционное натуральное средство для гладких, блестящих волос; различные части дерева также используются для здоровья пищеварения и противовоспалительных свойств.","Дерево поддерживает местное биоразнообразие, обеспечивая пищей плодоядных птиц и насекомых, и является жизненно важной частью тропических лесных экосистем."],
         ],
+        [
+          [],
+          ["Высотой 5–10 метров.","Крупные, глубоко лопастные листья, расположенные по спирали на верхушке ствола.","Мясистые, восковые, слегка ароматные цветки; могут быть мужскими, женскими или обоеполыми.","Крупная ягода с мягкой оранжевой или жёлтой мякотью и центральной полостью, заполненной чёрными семенами.","Тропические и субтропические регионы; требует хорошо дренированной почвы и полного солнца."],
+          ["Спелую папайю едят свежей или в салатах, а зелёную готовят как овощ; семена съедобны с перечным вкусом, а фермент папаин используют для размягчения мяса.","Богатая витаминами C и A, папаин папайи способствует пищеварению; в некоторых культурах экстракты листьев используют для лечения лихорадки денге и кожных заболеваний.","Дерево обеспечивает быстрорастущий полог и источник пищи для различных птиц, плодоядных летучих мышей и насекомых в тропических экосистемах."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -2323,6 +2426,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["С натуральным ароматом | Мягкий и освежающий | Премиальное качество"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -2671,11 +2779,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Das Klima Sri Lankas begünstigt eine breite Palette an Früchten, die anderswo selten zu finden sind, viele davon direkt neben Tee und anderen Plantagenkulturen angebaut. Wählen Sie unten eine Frucht aus, um sich eine hier angebaute genauer anzusehen.",
         "Wählen Sie eine Frucht aus, um alle Details dazu zu sehen:",
       ],
-      fruitNames: ["Drachenfrucht","Ananas","Ceylon-Olive (Weralu)"],
+      fruitNames: ["Drachenfrucht","Ananas","Ceylon-Olive (Weralu)","Papaya"],
       fruitSectionHeadings: [
         ["Über die Drachenfrucht-Pflanze","Merkmale","Verwendung und Vorteile"],
         ["Über die Ananas-Pflanze","Merkmale","Verwendung und Vorteile","Ananas-Teeprodukte"],
         ["Über den Ceylon-Oliven-Baum","Merkmale","Verwendung und Vorteile"],
+        ["Über den Papaya-Baum","Merkmale","Verwendung und Vorteile"],
       ],
       fruitSectionBodies: [
         [
@@ -2693,6 +2802,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Elaeocarpus serratus — die Ceylon-Olive, lokal als Weralu bekannt — ist ein mittelgroßer bis großer immergrüner Baum aus der Familie der Elaeocarpaceae, ursprünglich aus dem indischen Subkontinent und Südostasien, auch hier auf dem Anwesen. Bekannt für seine glatte, olivgrüne Frucht und kleine weiße, glockenförmige Blüten, gedeiht er in tropischem Klima und ist ein häufiger Anblick in sri-lankischen Hausgärten und Tiefland-Regenwäldern.",
           "Ein kurzer Blick auf den Baum selbst:",
           "Der Wert der Ceylon-Olive geht weit über ihre herbe Frucht hinaus:",
+        ],
+        [
+          "Carica papaya — der Papaya-Baum — ist ein kleiner, spärlich verzweigter Baum aus der Familie der Caricaceae, ursprünglich aus Amerika, heute in der gesamten tropischen Welt angebaut, auch auf diesem Anwesen. Er ist berühmt für seine süße, melonenartige Frucht und das Enzym Papain, das die Verdauung unterstützt; Papayas wachsen schnell und tragen in geeigneten Klimazonen das ganze Jahr über Früchte.",
+          "Ein kurzer Blick auf den Baum selbst:",
+          "Der Wert der Papaya geht weit über ihr süßes Fruchtfleisch hinaus:",
         ],
       ],
       fruitItemHeadings: [
@@ -2712,6 +2826,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Höhe","Blätter","Blüten","Frucht","Lebensraum"],
           ["Kulinarische Verwendung","Medizin & Haarpflege","Ökologische Bedeutung"],
         ],
+        [
+          [],
+          ["Höhe","Blätter","Blüten","Frucht","Lebensraum"],
+          ["Kulinarische Verwendung","Medizinische Eigenschaften","Ökologische Bedeutung"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -2729,6 +2848,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Typischerweise 15 bis 20 Meter hoch.","Gezähnte, dunkelgrüne Blätter, von denen manche vor dem Abfallen leuchtend rot werden.","Kleine, weiße, glockenförmige Blüten, die in zarten Trauben hängen.","Glatte, ovale, olivgrüne Frucht mit herbem oder adstringierendem Geschmack und hartem Kern.","Tiefland-Regenwälder, immergrüne Wälder und Hausgärten; bevorzugt gut durchlässigen Boden."],
           ["Beliebt roh gegessen, in Currys gekocht, oder eingelegt für das bekannte sri-lankische 'Weralu Achcharu'; reich an Vitamin C und Antioxidantien.","Weralu-Blätter sind eine traditionelle natürliche Haarbehandlung für glattes, glänzendes Haar; verschiedene Teile des Baumes werden auch für die Verdauungsgesundheit und entzündungshemmende Eigenschaften verwendet.","Der Baum unterstützt die lokale Biodiversität, liefert Nahrung für fruchtfressende Vögel und Insekten und ist ein wichtiger Teil tropischer Waldökosysteme."],
         ],
+        [
+          [],
+          ["5 bis 10 Meter hoch.","Große, tief gelappte Blätter, spiralförmig an der Stammspitze angeordnet.","Fleischige, wachsartige, leicht duftende Blüten; können männlich, weiblich oder zwittrig sein.","Eine große Beere mit weichem orangefarbenem oder gelbem Fruchtfleisch und einer zentralen Höhle voller schwarzer Kerne.","Tropische und subtropische Regionen; benötigt gut durchlässigen Boden und volle Sonne."],
+          ["Reife Papaya wird frisch oder in Salaten gegessen, grüne Papaya wird als Gemüse gekocht; die Kerne sind mit einem pfeffrigen Geschmack essbar, und das Enzym Papain wird als Fleischzartmacher verwendet.","Reich an Vitamin C und A, unterstützt das Papain der Papaya die Verdauung; Blattextrakte werden in manchen Kulturen zur Behandlung von Dengue-Fieber und Hautkrankheiten verwendet.","Der Baum bietet ein schnell wachsendes Blätterdach und eine Nahrungsquelle für verschiedene Vögel, Flughunde und Insekten in tropischen Ökosystemen."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -2741,6 +2865,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Natürlich Aromatisiert | Sanft & Erfrischend | Premium-Qualität"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -3089,11 +3218,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "El clima de Sri Lanka favorece una amplia variedad de frutas poco comunes en otros lugares, muchas de ellas cultivadas justo junto al té y otros cultivos de la finca. Elige una fruta a continuación para ver más de cerca una de las que se cultivan aquí.",
         "Selecciona una fruta para ver todos sus detalles:",
       ],
-      fruitNames: ["Fruta del Dragón","Piña","Aceituna de Ceilán (Weralu)"],
+      fruitNames: ["Fruta del Dragón","Piña","Aceituna de Ceilán (Weralu)","Papaya"],
       fruitSectionHeadings: [
         ["Sobre la Planta de la Fruta del Dragón","Características","Usos y Beneficios"],
         ["Sobre la Planta de Piña","Características","Usos y Beneficios","Productos de Té de Piña"],
         ["Sobre el Árbol de Aceituna de Ceilán","Características","Usos y Beneficios"],
+        ["Sobre el Árbol de Papaya","Características","Usos y Beneficios"],
       ],
       fruitSectionBodies: [
         [
@@ -3111,6 +3241,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Elaeocarpus serratus — la aceituna de Ceilán, conocida localmente como Weralu — es un árbol de hoja perenne de tamaño mediano a grande de la familia Elaeocarpaceae, originario del subcontinente indio y el sudeste asiático, incluida esta finca. Es conocido por su fruto liso de color verde oliva y sus pequeñas flores blancas en forma de campana, prospera en climas tropicales y es una vista común en los jardines domésticos de Sri Lanka y en las selvas tropicales de tierras bajas.",
           "Una mirada rápida al árbol en sí:",
           "El valor de la aceituna de Ceilán va mucho más allá de su fruto ácido:",
+        ],
+        [
+          "Carica papaya — el árbol de papaya — es un árbol pequeño, poco ramificado, de la familia Caricaceae, originario de las Américas pero hoy cultivado en todo el mundo tropical, incluida esta finca. Es famoso por su fruto dulce, parecido al melón, y por la enzima papaína, que ayuda a la digestión; las papayas crecen rápidamente y dan fruto todo el año en climas adecuados.",
+          "Una mirada rápida al árbol en sí:",
+          "El valor de la papaya va mucho más allá de su pulpa dulce:",
         ],
       ],
       fruitItemHeadings: [
@@ -3130,6 +3265,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Altura","Hojas","Flores","Fruto","Hábitat"],
           ["Usos Culinarios","Medicina y Cuidado del Cabello","Importancia Ecológica"],
         ],
+        [
+          [],
+          ["Altura","Hojas","Flores","Fruto","Hábitat"],
+          ["Usos Culinarios","Propiedades Medicinales","Importancia Ecológica"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -3147,6 +3287,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Normalmente de 15 a 20 metros de altura.","Hojas dentadas, verde oscuro, algunas de las cuales se vuelven rojo brillante antes de caer.","Pequeñas flores blancas en forma de campana que cuelgan en delicados racimos.","Fruto liso, ovalado, de color verde oliva, con sabor ácido o astringente y una semilla dura.","Selvas tropicales de tierras bajas, bosques de hoja perenne y jardines domésticos; prefiere un suelo bien drenado."],
           ["Popular comerlo crudo, cocinado en curry, o encurtido para hacer el conocido 'Weralu Achcharu' de Sri Lanka; rico en vitamina C y antioxidantes.","Las hojas de Weralu son un tratamiento natural tradicional para un cabello suave y brillante; varias partes del árbol también se usan para la salud digestiva y propiedades antiinflamatorias.","El árbol favorece la biodiversidad local, proporcionando alimento a aves e insectos frugívoros, y es una parte vital de los ecosistemas de bosques tropicales."],
         ],
+        [
+          [],
+          ["De 5 a 10 metros de altura.","Hojas grandes, profundamente lobuladas, dispuestas en espiral en la parte superior del tronco.","Flores carnosas, cerosas, ligeramente fragantes; pueden ser masculinas, femeninas o hermafroditas.","Una baya grande con pulpa suave anaranjada o amarilla y una cavidad central llena de semillas negras.","Regiones tropicales y subtropicales; requiere suelo bien drenado y pleno sol."],
+          ["La papaya madura se come fresca o en ensaladas, y la papaya verde se cocina como verdura; las semillas son comestibles con un sabor picante, y la enzima papaína se usa como ablandador de carne.","Rica en vitamina C y A, la papaína de la papaya ayuda a la digestión; los extractos de hojas se usan en algunas culturas para tratar el dengue y afecciones de la piel.","El árbol proporciona un dosel de rápido crecimiento y una fuente de alimento para diversas aves, murciélagos frugívoros e insectos en los ecosistemas tropicales."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -3159,6 +3304,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Saborizado Naturalmente | Suave y Refrescante | Calidad Premium"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -3507,11 +3657,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Le climat du Sri Lanka favorise une large variété de fruits peu courants ailleurs, dont beaucoup sont cultivés juste à côté du thé et d'autres cultures de la plantation. Choisissez un fruit ci-dessous pour découvrir de plus près l'un de ceux cultivés ici.",
         "Sélectionnez un fruit pour voir tous ses détails :",
       ],
-      fruitNames: ["Fruit du Dragon","Ananas","Olivier de Ceylan (Weralu)"],
+      fruitNames: ["Fruit du Dragon","Ananas","Olivier de Ceylan (Weralu)","Papaye"],
       fruitSectionHeadings: [
         ["À propos du Fruit du Dragon","Caractéristiques","Usages et Bienfaits"],
         ["À propos du Plant d'Ananas","Caractéristiques","Usages et Bienfaits","Produits de Thé à l'Ananas"],
         ["À propos de l'Olivier de Ceylan","Caractéristiques","Usages et Bienfaits"],
+        ["À propos du Papayer","Caractéristiques","Usages et Bienfaits"],
       ],
       fruitSectionBodies: [
         [
@@ -3529,6 +3680,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Elaeocarpus serratus — l'olivier de Ceylan, appelé localement Weralu — est un arbre à feuilles persistantes de taille moyenne à grande de la famille des Elaeocarpaceae, originaire du sous-continent indien et de l'Asie du Sud-Est, y compris sur ce domaine. Il est connu pour son fruit lisse vert olive et ses petites fleurs blanches en forme de cloche, prospère sous climat tropical et est un spectacle courant dans les jardins familiaux sri-lankais et les forêts tropicales de basse altitude.",
           "Un rapide aperçu de l'arbre lui-même :",
           "La valeur de l'olivier de Ceylan va bien au-delà de son fruit acidulé :",
+        ],
+        [
+          "Carica papaya — le papayer — est un petit arbre peu ramifié de la famille des Caricacées, originaire des Amériques mais aujourd'hui cultivé dans tout le monde tropical, y compris sur ce domaine. Il est célèbre pour son fruit sucré, semblable au melon, et pour l'enzyme papaïne, qui facilite la digestion ; les papayers poussent rapidement et portent des fruits toute l'année sous des climats adaptés.",
+          "Un rapide aperçu de l'arbre lui-même :",
+          "La valeur de la papaye va bien au-delà de sa chair sucrée :",
         ],
       ],
       fruitItemHeadings: [
@@ -3548,6 +3704,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Hauteur","Feuilles","Fleurs","Fruit","Habitat"],
           ["Usages Culinaires","Médecine et Soin des Cheveux","Importance Écologique"],
         ],
+        [
+          [],
+          ["Hauteur","Feuilles","Fleurs","Fruit","Habitat"],
+          ["Usages Culinaires","Propriétés Médicinales","Importance Écologique"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -3565,6 +3726,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Généralement 15 à 20 mètres de hauteur.","Feuilles dentelées, vert foncé, dont certaines deviennent rouge vif avant de tomber.","Petites fleurs blanches en forme de cloche suspendues en grappes délicates.","Fruit lisse, ovale, vert olive, au goût acidulé ou astringent et à la graine dure.","Forêts tropicales de basse altitude, forêts persistantes et jardins familiaux ; préfère un sol bien drainé."],
           ["Souvent mangé cru, cuisiné dans des currys, ou mariné pour préparer le célèbre 'Weralu Achcharu' sri-lankais ; riche en vitamine C et en antioxydants.","Les feuilles de Weralu sont un traitement capillaire naturel traditionnel pour des cheveux lisses et brillants ; diverses parties de l'arbre sont également utilisées pour la santé digestive et leurs propriétés anti-inflammatoires.","L'arbre favorise la biodiversité locale, fournissant de la nourriture aux oiseaux et insectes frugivores, et constitue une partie vitale des écosystèmes forestiers tropicaux."],
         ],
+        [
+          [],
+          ["5 à 10 mètres de hauteur.","Grandes feuilles profondément lobées, disposées en spirale au sommet du tronc.","Fleurs charnues, cireuses, légèrement parfumées ; peuvent être mâles, femelles ou hermaphrodites.","Une grosse baie à la chair tendre orange ou jaune et à la cavité centrale remplie de graines noires.","Régions tropicales et subtropicales ; nécessite un sol bien drainé et le plein soleil."],
+          ["La papaye mûre se mange fraîche ou en salade, et la papaye verte se cuisine comme légume ; les graines sont comestibles avec un goût poivré, et l'enzyme papaïne est utilisée comme attendrisseur de viande.","Riche en vitamines C et A, la papaïne de la papaye facilite la digestion ; des extraits de feuilles sont utilisés dans certaines cultures pour traiter la dengue et les affections cutanées.","L'arbre offre une canopée à croissance rapide et une source de nourriture pour divers oiseaux, chauves-souris frugivores et insectes dans les écosystèmes tropicaux."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -3577,6 +3743,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Aromatisé Naturellement | Doux et Rafraîchissant | Qualité Premium"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -3925,11 +4096,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "斯里兰卡的气候孕育了种类繁多、其他地方少见的水果，其中许多就种植在茶树和其他庄园作物旁边。请从下方选择一种水果，近距离了解这里种植的一种水果。",
         "选择一种水果查看完整详情：",
       ],
-      fruitNames: ["火龙果","菠萝","锡兰橄榄（维拉鲁）"],
+      fruitNames: ["火龙果","菠萝","锡兰橄榄（维拉鲁）","木瓜"],
       fruitSectionHeadings: [
         ["关于火龙果","特征","用途与益处"],
         ["关于菠萝植株","特征","用途与益处","菠萝茶产品"],
         ["关于锡兰橄榄树","特征","用途与益处"],
+        ["关于木瓜树","特征","用途与益处"],
       ],
       fruitSectionBodies: [
         [
@@ -3947,6 +4119,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "锡兰橄榄，学名Elaeocarpus serratus，当地称为维拉鲁（Weralu），是杜英科的一种中大型常绿乔木，原产于印度次大陆和东南亚，这座庄园也有种植。它以光滑的橄榄绿色果实和洁白的小铃铛状花朵著称，在热带气候中生长旺盛，是斯里兰卡家庭花园和低地雨林中常见的树种。",
           "简单了解一下这棵树：",
           "锡兰橄榄的价值远不止于它酸涩的果实：",
+        ],
+        [
+          "木瓜，学名Carica papaya，是番木瓜科的一种小型、分枝稀疏的树，原产于美洲，如今在整个热带地区广泛种植，包括这座庄园。它以香甜、类似甜瓜的果实和有助消化的木瓜蛋白酶而闻名；在适宜的气候下，木瓜生长迅速，全年结果。",
+          "简单了解一下这棵树：",
+          "木瓜的价值远不止于它香甜的果肉：",
         ],
       ],
       fruitItemHeadings: [
@@ -3966,6 +4143,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["高度","叶片","花朵","果实","生境"],
           ["烹饪用途","药用与护发","生态重要性"],
         ],
+        [
+          [],
+          ["高度","叶片","花朵","果实","生境"],
+          ["烹饪用途","药用价值","生态重要性"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -3983,6 +4165,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["通常高15到20米。","锯齿状深绿色叶片，部分叶片在落叶前会变成鲜红色。","细小的白色铃铛状花朵，悬垂成精致的花簇。","光滑的椭圆形橄榄绿色果实，口感酸涩或收敛，内含坚硬的种子。","低地雨林、常绿森林和家庭花园；偏好排水良好的土壤。"],
           ["常生吃，或煮入咖喱菜肴，或腌制成著名的斯里兰卡「维拉鲁腌菜」（Weralu Achcharu）；富含维生素C和抗氧化物质。","维拉鲁的叶子是传统的天然护发方法，可使头发顺滑有光泽；树木的各个部位也用于促进消化健康和抗炎。","这种树支持当地的生物多样性，为食果鸟类和昆虫提供食物，是热带森林生态系统中不可或缺的一部分。"],
         ],
+        [
+          [],
+          ["高5到10米。","大型、深裂的叶片，呈螺旋状排列在树干顶部。","肉质、蜡质、略带香气的花朵；可为雄花、雌花或两性花。","一种大型浆果，果肉柔软呈橙色或黄色，中央空腔内充满黑色种子。","热带和亚热带地区；需要排水良好的土壤和充足的阳光。"],
+          ["成熟的木瓜可生吃或加入沙拉，青木瓜则作为蔬菜烹煮；种子可食用，带有胡椒般的辛辣味，木瓜蛋白酶则用作肉类嫩化剂。","木瓜富含维生素C和维生素A，其木瓜蛋白酶有助于消化；在一些文化中，叶片提取物被用于治疗登革热和皮肤病。","这种树为热带生态系统中的各种鸟类、食果蝙蝠和昆虫提供了快速生长的树冠和食物来源。"],
+        ],
       ],
       fruitItemTags: [
         [
@@ -3995,6 +4182,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["天然调味 | 顺滑清爽 | 优质精选"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -4343,11 +4535,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "スリランカの気候は、他の地域ではあまり見られない幅広い種類の果物を育みますが、その多くは茶などの農園作物のすぐそばで栽培されています。ここで栽培されている果物を詳しく見るには、以下から一つ選んでください。",
         "果物を選ぶと詳細が表示されます：",
       ],
-      fruitNames: ["ドラゴンフルーツ","パイナップル","セイロンオリーブ（ウェラル）"],
+      fruitNames: ["ドラゴンフルーツ","パイナップル","セイロンオリーブ（ウェラル）","パパイヤ"],
       fruitSectionHeadings: [
         ["ドラゴンフルーツの植物について","特徴","用途と効能"],
         ["パイナップルの植物について","特徴","用途と効能","パイナップル茶製品"],
         ["セイロンオリーブの木について","特徴","用途と効能"],
+        ["パパイヤの木について","特徴","用途と効能"],
       ],
       fruitSectionBodies: [
         [
@@ -4365,6 +4558,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "セイロンオリーブ、学名Elaeocarpus serratusは、現地でウェラル（Weralu）と呼ばれ、ホルトノキ科に属する中型から大型の常緑樹で、インド亜大陸と東南アジア原産、この農園にも植えられています。滑らかなオリーブグリーンの果実と、小さな白い鐘形の花で知られ、熱帯気候で育ちやすく、スリランカの家庭菜園や低地の熱帯雨林でよく見られます。",
           "この木についての簡単な紹介：",
           "セイロンオリーブの価値は、その酸味のある果実をはるかに超えています：",
+        ],
+        [
+          "パパイヤ、学名Carica papayaは、パパイヤ科に属する小型で枝分かれの少ない木で、アメリカ大陸原産ですが、現在ではこの農園を含む熱帯地域全体で栽培されています。甘くメロンのような果実と、消化を助ける酵素パパインで有名です。適した気候ではパパイヤは急速に成長し、一年中実をつけます。",
+          "この木についての簡単な紹介：",
+          "パパイヤの価値は、その甘い果肉をはるかに超えています：",
         ],
       ],
       fruitItemHeadings: [
@@ -4384,6 +4582,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["高さ","葉","花","果実","生育環境"],
           ["料理での利用","医療と髪のケア","生態学的重要性"],
         ],
+        [
+          [],
+          ["高さ","葉","花","果実","生育環境"],
+          ["料理での利用","薬効","生態学的重要性"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -4401,6 +4604,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["通常15〜20メートルほどの高さになる。","鋸歯状の濃い緑色の葉で、一部は落葉前に鮮やかな赤色に変わる。","繊細な房状に垂れ下がる、小さく白い鐘形の花。","滑らかな楕円形のオリーブグリーンの果実で、酸味または渋みのある味と硬い種を持つ。","低地の熱帯雨林、常緑樹林、家庭菜園。水はけの良い土壌を好む。"],
           ["生で食べたり、カレーに調理したり、有名なスリランカの「ウェラル・アチャル」を作るために漬け込んだりするのに人気があります。ビタミンCと抗酸化物質が豊富です。","ウェラルの葉は、なめらかで艶のある髪のための伝統的な天然ヘアトリートメントです。木のさまざまな部分は消化器系の健康や抗炎症作用にも使われます。","この木は地域の生物多様性を支え、果実を食べる鳥や昆虫に食料を提供し、熱帯林の生態系に欠かせない役割を果たしています。"],
         ],
+        [
+          [],
+          ["高さ5〜10メートル。","大きく深く裂けた葉が、幹の先端にらせん状に配置される。","肉厚でロウ質、わずかに香りのある花。雄花、雌花、両性花のいずれかである。","柔らかいオレンジ色または黄色の果肉と、黒い種子で満たされた中央の空洞を持つ大きな液果。","熱帯および亜熱帯地域。水はけの良い土壌と十分な日照が必要。"],
+          ["熟したパパイヤは生またはサラダで食べられ、青パパイヤは野菜として調理されます。種子はピリッとした辛味があり食用可能で、酵素パパインは肉を柔らかくするために使われます。","ビタミンCとAが豊富で、パパイヤのパパインは消化を助けます。一部の文化では葉の抽出物がデング熱や皮膚疾患の治療に使われます。","この木は熱帯生態系においてさまざまな鳥類、果実を食べるコウモリ、昆虫に急速に成長する樹冠と食料源を提供します。"],
+        ],
       ],
       fruitItemTags: [
         [
@@ -4413,6 +4621,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["天然フレーバー | なめらかで爽やか | プレミアム品質"],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
