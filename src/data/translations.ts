@@ -69,6 +69,14 @@ import type { StationTranslation } from "./stations";
  *
  * A fourth fruit, Papaya, was added the same day, appending index 3 to the
  * same five fields (again empty `fruitItemTags` arrays — no tea product).
+ *
+ * A fifth fruit, Guava, was added on 2026-09-04, appending index 4 to the
+ * same five fields (again empty `fruitItemTags` — no tea product).
+ *
+ * A sixth fruit, Star Fruit, was added the same day, appending index 5 to
+ * the same five fields (again empty `fruitItemTags`). Its third item
+ * heading is "Health Benefits" in every language, matching the source
+ * site's own wording rather than "Medicinal Properties" like the others.
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -584,12 +592,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "ශ්‍රී ලංකාවේ දේශගුණය වෙනත් තැන්වල සුලභ නොවන පලතුරු රැසකට හිතකර වන අතර, ඒවායින් බොහොමයක් තේ සහ අනෙකුත් වතු බෝග අසලම වගා කරනු ලැබේ. මෙහි වගා කරන එකක් වඩාත් සමීපව බැලීමට පහත පලතුරක් තෝරන්න.",
         "සම්පූර්ණ විස්තර බැලීමට පලතුරක් තෝරන්න:",
       ],
-      fruitNames: ["ඩ්‍රැගන් ෆෘට්","අන්නාසි","වේරළු (සිලෝන් ඔලිව්)","පැපොල්"],
+      fruitNames: ["ඩ්‍රැගන් ෆෘට්","අන්නාසි","වේරළු (සිලෝන් ඔලිව්)","පැපොල්","පේර","කමරංගා"],
       fruitSectionHeadings: [
         ["ඩ්‍රැගන් ෆෘට් ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
         ["අන්නාසි ශාකය පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ","අන්නාසි තේ නිෂ්පාදන"],
         ["වේරළු ගස පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
         ["පැපොල් ගස පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
+        ["පේර ගස පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
+        ["කමරංගා ගස පිළිබඳ","ලක්ෂණ","භාවිත සහ ප්‍රතිලාභ"],
       ],
       fruitSectionBodies: [
         [
@@ -612,6 +622,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "පැපොල් ගස, විද්‍යාත්මකව Carica papaya ලෙස හඳුන්වන — Caricaceae පවුලට අයත් කුඩා, විරලව අතු ලා ගසකි, ඇමරිකාවට ආවේණික නමුත් දැන් නිවර්තන ලෝකය පුරාම, වතුයාය ඇතුළුව වගා කෙරේ. එය එහි මිහිරි, කොමඩු වැනි ඵලය සහ ආහාර දිරවීමට උපකාරී වන පැපේන් එන්සයිමය සඳහා ප්‍රසිද්ධ වේ; සුදුසු දේශගුණයන්හි පැපොල් ඉක්මනින් වර්ධනය වන අතර වසර පුරාම ඵල දරයි.",
           "ගස පිළිබඳ කෙටි විස්තරයක්:",
           "පැපොල් හි වටිනාකම එහි මිහිරි පල්පයට වඩා බොහෝ දුරට විහිදේ:",
+        ],
+        [
+          "පේර ගස, විද්‍යාත්මකව Psidium guajava ලෙස හඳුන්වන — Myrtaceae පවුලට අයත් කුඩා නිවර්තන සදාහරිත පඳුරක් හෝ ගසකි, ඇමරිකාවට ආවේණික නමුත් දැන් නිවර්තන හා අර්ධ නිවර්තන ප්‍රදේශවල ලොව පුරා වගා කෙරේ, වතුයාය ඇතුළුව. එහි තද ලීය හා පීල හැලෙන පොත්ත සඳහා ප්‍රසිද්ධ මෙම ගස, විශේෂයෙන් විටමින් C බහුල පෝෂක බලාගාරයක් වන ඵලයක් සහ සියවස් ගණනාවක් තිස්සේ සාම්ප්‍රදායික වෛද්‍ය විද්‍යාවේ භාවිතා කරන කොළ නිපදවයි.",
+          "ගස පිළිබඳ කෙටි විස්තරයක්:",
+          "පේර හි වටිනාකම එහි සුවඳවත් ඵලයට වඩා බොහෝ දුරට විහිදේ:",
+        ],
+        [
+          "කමරංගා, විද්‍යාත්මකව Averrhoa carambola ලෙස හඳුන්වන — නිවර්තන ගිනිකොනදිග ආසියාවට ආවේණික ගසකි, දැන් වතුයායේද වගා කෙරේ. එය හරහට කැපූ විට පරිපූර්ණ තරු හැඩයක් සාදන එහි සුවිශේෂී කොරවල් සඳහා නම් කර ඇත. සම ඇතුළුව සම්පූර්ණ ඵලයම අනුභවයට සුදුසු වන අතර, ඇඹුල් සිට මිහිරි දක්වා රසයක් සහිත කැළතෙන වයනයක් ලබා දෙයි.",
+          "ගස පිළිබඳ කෙටි විස්තරයක්:",
+          "කමරංගා හි වටිනාකම එහි සුවිශේෂී හැඩයට වඩා බොහෝ දුරට විහිදේ:",
         ],
       ],
       fruitItemHeadings: [
@@ -636,6 +656,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["උස","කොළ","මල්","ඵලය","වාසස්ථානය"],
           ["ආහාර පිසීමේ භාවිතය","ඖෂධීය ගුණාංග","පාරිසරික වැදගත්කම"],
         ],
+        [
+          [],
+          ["උස","කොළ","මල්","ඵලය","වාසස්ථානය"],
+          ["ආහාර පිසීමේ භාවිතය","ඖෂධීය ගුණාංග","පාරිසරික වැදගත්කම"],
+        ],
+        [
+          [],
+          ["උස","කොළ","මල්","ඵලය","වාසස්ථානය"],
+          ["ආහාර පිසීමේ භාවිතය","සෞඛ්‍ය ප්‍රතිලාභ","පාරිසරික වැදගත්කම"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -658,6 +688,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["මීටර් 5 සිට 10 දක්වා උසැති වේ.","විශාල, ගැඹුරින් පෙති සහිත කොළ, කඳේ මුදුනේ සර්පිලාකාරව සකසා ඇත.","මාංශල, ඉටි වැනි, තරමක් සුවඳවත් මල්; පිරිමි, ගැහැණු, හෝ ද්විලිංගික විය හැක.","මෘදු තැඹිලි හෝ කහ පැහැති පල්පයක් සහ කළු බීජවලින් පිරුණු මධ්‍ය කුහරයක් සහිත විශාල බෙරි ඵලයකි.","නිවර්තන හා අර්ධ නිවර්තන ප්‍රදේශ; හොඳින් ජලය බැස යන පසක් සහ පූර්ණ හිරු එළිය අවශ්‍ය වේ."],
           ["මුහුකුරා ගිය පැපොල් නැවුම්ව හෝ සලාද වශයෙන් අනුභව කරන අතර, කොළ පැහැති පැපොල් එළවළුවක් ලෙස පිසිනු ලැබේ; බීජ රස කුළුබඩු රසයක් සහිතව අනුභවයට සුදුසු වන අතර, පැපේන් එන්සයිමය මස් මෘදු කිරීමට යොදා ගනී.","විටමින් C සහ A බහුල පැපොල් හි පැපේන් ආහාර දිරවීමට උපකාරී වේ; ඩෙංගු උණ සහ සම රෝග සඳහා සමහර සංස්කෘතීන්හි කොළ සාරය භාවිතා කරයි.","ගස නිවර්තන පරිසර පද්ධතිවල විවිධ කුරුල්ලන්ට, පල අනුභවී වවුලන්ට, සහ කෘමීන්ට ඉක්මනින් වර්ධනය වන සෙවනක් හා ආහාර මූලාශ්‍රයක් සපයයි."],
         ],
+        [
+          [],
+          ["සාමාන්‍යයෙන් මීටර් 3 සිට 10 දක්වා උසැති වේ.","එකිනෙකට විරුද්ධ, සරල, ඉලිප්සාකාර සිට බිත්තර හැඩැති කොළ, සෙන්ටිමීටර් 5 සිට 15 දක්වා දිග, කැපී පෙනෙන නහර සහිතව.","සුදු, තනි හෝ පොකුරු වශයෙන්, පෙති හතරක් හෝ පහක් සහ බොහෝ පුෂ්ප තන්තු සහිතව.","අනුභවයට සුදුසු සම, සුදු හෝ රෝස පල්පයක්, සහ බොහෝ කුඩා බීජ සහිත වටකුරු හෝ පෙයාර්ස් හැඩැති බෙරි ඵලයකි.","නිවර්තන සිට අර්ධ නිවර්තන දේශගුණයන්; හොඳින් ජලය බැස යන පසෙහි වර්ධනය වන නමුත් විවිධ තත්ත්වයන්ට අනුවර්තනය විය හැක."],
+          ["නැවුම්ව අනුභව කරන හෝ ජෑම්, ජෙලි, යුෂ, සහ පේස්ට් බවට සකසන; ඵලය විටමින් C සහ පෙක්ටින් වලින් අසාමාන්‍ය ලෙස පොහොසත් වේ.","පේර කොළ පාචනය හා ආහාර දිරවීමේ ගැටලු සඳහා තේ ලෙස පෙරන ලබයි; පොත්ත සහ ඵලයද ක්ෂුද්‍ර ජීවී විරෝධී හා ප්‍රතිඔක්සිකාරක ගුණාංග දරයි.","පේර ගස් විවිධ කුරුල්ලන්ට හා ක්ෂීරපායීන්ට ආහාර සපයන අතර, ඔවුන් බීජ විසිරීමට උපකාරී වන අතර, පිරිහුණු ඉඩම්වල පුරෝගාමී විශේෂයන් ලෙස සේවය කිරීමට තරම් ශක්තිමත් වේ."],
+        ],
+        [
+          [],
+          ["මීටර් 5 සිට 12 දක්වා උසැති වේ.","සංයුක්ත කොළ, සෙන්ටිමීටර් 15 සිට 30 දක්වා දිග, සංවේදී පත්‍රිකා සහිතව.","පොකුරු වශයෙන් හටගන්නා කුඩා, සීනි-මල් හැඩැති, රෝස සිට දම් පැහැති මල්.","මුහුකුරා ගිය විට කහ පැහැයට හැරෙන, සෙන්ටිමීටර් 5 සිට 15 දක්වා දිග මාංශල, තරු හැඩැති ඵලයකි.","නිවර්තන හා අර්ධ නිවර්තන ප්‍රදේශ; හොඳින් ජලය බැස යන පසෙහි සහ පූර්ණ හිරු එළියෙහි වර්ධනය වේ."],
+          ["සාමාන්‍යයෙන් නැවුම්ව අනුභව කරන, පළතුරු සලාදවලට යොදන, හෝ අලංකරණයක් ලෙස භාවිතා කරයි; යුෂ සාදන, ජෑම් බවට සකසන, හෝ රසවත් ආසියානු ආහාරවල පිසිනු ලැබේ.","විටමින් C, පොටෑසියම්, සහ ප්‍රතිඔක්සිකාරක බහුල වන අතර, ප්‍රතිශක්තිකරණ පද්ධතියට සහාය වන අතර ප්‍රති-ගිනි අවුලුවන ගුණාංග දරයි.","ගස විවිධ නිවර්තන කුරුල්ලන්ට හා ප්‍රයෝජනවත් කෘමීන්ට ආහාර හා වාසස්ථානය සපයන අතර, ප්‍රාදේශීය ජෛව විවිධත්වයට දායක වේ."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -670,6 +710,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["ස්වාභාවිකව රසකාරක එකතු කළ | මෘදු සහ නැවුම් | උසස් තත්ත්වය"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -1023,12 +1073,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "இலங்கையின் காலநிலை மற்ற இடங்களில் பொதுவாகக் காணப்படாத பரந்த அளவிலான பழங்களுக்கு ஏற்றது, அவற்றில் பல தேயிலை மற்றும் பிற தோட்ட பயிர்களுக்கு அருகிலேயே பயிரிடப்படுகின்றன. இங்கு வளர்க்கப்படும் ஒன்றை நெருக்கமாகப் பார்க்க கீழே ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்.",
         "முழு விவரங்களைப் பார்க்க ஒரு பழத்தைத் தேர்ந்தெடுக்கவும்:",
       ],
-      fruitNames: ["டிராகன் ஃப்ரூட்","அன்னாசி","வேரளு (சிலோன் ஆலிவ்)","பப்பாளி"],
+      fruitNames: ["டிராகன் ஃப்ரூட்","அன்னாசி","வேரளு (சிலோன் ஆலிவ்)","பப்பாளி","கொய்யா","நட்சத்திரப் பழம்"],
       fruitSectionHeadings: [
         ["டிராகன் ஃப்ரூட் செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
         ["அன்னாசி செடி பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்","அன்னாசி தேநீர் பொருட்கள்"],
         ["வேரளு மரம் பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
         ["பப்பாளி மரம் பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
+        ["கொய்யா மரம் பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
+        ["நட்சத்திரப் பழ மரம் பற்றி","பண்புகள்","பயன்கள் மற்றும் நன்மைகள்"],
       ],
       fruitSectionBodies: [
         [
@@ -1051,6 +1103,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "பப்பாளி மரம், அறிவியல் பூர்வமாக Carica papaya எனப்படும் — Caricaceae குடும்பத்தைச் சேர்ந்த சிறிய, குறைவாக கிளைத்த மரமாகும், அமெரிக்காவை பூர்வீகமாகக் கொண்டது, ஆனால் இப்போது இந்த தோட்டம் உட்பட வெப்பமண்டல உலகம் முழுவதும் பயிரிடப்படுகிறது. இது இனிப்பான, முலாம்பழம் போன்ற பழத்திற்கும், செரிமானத்திற்கு உதவும் பப்பைன் நொதிக்கும் புகழ்பெற்றது; ஏற்ற காலநிலைகளில் பப்பாளி வேகமாக வளர்ந்து ஆண்டு முழுவதும் பழம் தருகிறது.",
           "மரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
           "பப்பாளியின் மதிப்பு அதன் இனிப்பு சதையை தாண்டி விரிவடைகிறது:",
+        ],
+        [
+          "கொய்யா மரம், அறிவியல் பூர்வமாக Psidium guajava எனப்படும் — Myrtaceae குடும்பத்தைச் சேர்ந்த சிறிய வெப்பமண்டல பசுமையான புதர் அல்லது மரமாகும், அமெரிக்காவை பூர்வீகமாகக் கொண்டது, ஆனால் இப்போது இந்த தோட்டம் உட்பட வெப்பமண்டல மற்றும் துணை வெப்பமண்டல பகுதிகளில் உலகம் முழுவதும் பயிரிடப்படுகிறது. அதன் கடினமான மரம் மற்றும் உரிக்கும் பட்டைக்கு புகழ்பெற்ற இது, குறிப்பாக வைட்டமின் C நிறைந்த ஊட்டச்சத்து நிலையமான ஒரு பழத்தையும், நூற்றாண்டுகளாக பாரம்பரிய மருத்துவத்தில் பயன்படுத்தப்படும் இலைகளையும் தருகிறது.",
+          "மரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+          "கொய்யாவின் மதிப்பு அதன் நறுமணமிக்க பழத்தை தாண்டி விரிவடைகிறது:",
+        ],
+        [
+          "நட்சத்திரப் பழம், அறிவியல் பூர்வமாக Averrhoa carambola எனப்படும் — வெப்பமண்டல தென்கிழக்கு ஆசியாவை பூர்வீகமாகக் கொண்ட மரமாகும், இப்போது இந்த தோட்டத்திலும் வளர்க்கப்படுகிறது. குறுக்காக வெட்டும்போது சரியான நட்சத்திர வடிவத்தை உருவாக்கும் அதன் தனித்துவமான விளிம்புகளால் இது பெயரிடப்பட்டுள்ளது. தோல் உட்பட முழு பழமும் உண்ணக்கூடியது, புளிப்பு முதல் இனிப்பு வரையிலான சுவையுடன் மொறுமொறுப்பான அமைப்பை வழங்குகிறது.",
+          "மரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
+          "நட்சத்திரப் பழத்தின் மதிப்பு அதன் தனித்துவமான வடிவத்தை தாண்டி விரிவடைகிறது:",
         ],
       ],
       fruitItemHeadings: [
@@ -1075,6 +1137,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["உயரம்","இலைகள்","மலர்கள்","பழம்","வாழ்விடம்"],
           ["சமையல் பயன்கள்","மருத்துவ பண்புகள்","சூழலியல் முக்கியத்துவம்"],
         ],
+        [
+          [],
+          ["உயரம்","இலைகள்","மலர்கள்","பழம்","வாழ்விடம்"],
+          ["சமையல் பயன்கள்","மருத்துவ பண்புகள்","சூழலியல் முக்கியத்துவம்"],
+        ],
+        [
+          [],
+          ["உயரம்","இலைகள்","மலர்கள்","பழம்","வாழ்விடம்"],
+          ["சமையல் பயன்கள்","ஆரோக்கிய நன்மைகள்","சூழலியல் முக்கியத்துவம்"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -1097,6 +1169,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["5 முதல் 10 மீட்டர் வரை உயரமுள்ளது.","பெரிய, ஆழமாக பிளவுபட்ட இலைகள், தண்டின் உச்சியில் சுருள் வடிவில் அமைந்துள்ளன.","சதைப்பற்றுள்ள, மெழுகு போன்ற, சற்று நறுமணமுள்ள மலர்கள்; ஆண், பெண், அல்லது இருபால் ஆகியவற்றில் ஏதேனும் ஒன்றாக இருக்கலாம்.","மென்மையான ஆரஞ்சு அல்லது மஞ்சள் நிற சதையும், கருப்பு விதைகள் நிறைந்த மைய குழியும் கொண்ட ஒரு பெரிய பெர்ரி பழம்.","வெப்பமண்டல மற்றும் துணை வெப்பமண்டல பகுதிகள்; நன்கு வடிகட்டும் மண்ணும் முழு சூரிய ஒளியும் தேவை."],
           ["முதிர்ந்த பப்பாளி புதியதாக அல்லது சாலட்களில் உண்ணப்படுகிறது, பச்சை பப்பாளி காயாக சமைக்கப்படுகிறது; விதைகள் காரமான சுவையுடன் உண்ணக்கூடியவை, மேலும் பப்பைன் நொதி இறைச்சியை மென்மையாக்க பயன்படுத்தப்படுகிறது.","வைட்டமின் C மற்றும் A நிறைந்த பப்பாளியின் பப்பைன் செரிமானத்திற்கு உதவுகிறது; சில கலாச்சாரங்களில் இலை சாறு டெங்கு காய்ச்சல் மற்றும் தோல் நோய்களுக்கு சிகிச்சையளிக்க பயன்படுத்தப்படுகிறது.","இந்த மரம் வெப்பமண்டல சுற்றுச்சூழல் அமைப்புகளில் பல்வேறு பறவைகள், பழம் தின்னும் வௌவால்கள், மற்றும் பூச்சிகளுக்கு வேகமாக வளரும் விதானத்தையும் உணவு ஆதாரத்தையும் வழங்குகிறது."],
         ],
+        [
+          [],
+          ["பொதுவாக 3 முதல் 10 மீட்டர் வரை உயரமுள்ளது.","எதிரெதிர், எளிய, நீள்வட்டம் முதல் முட்டை வடிவ இலைகள், 5 முதல் 15 செ.மீ நீளம், தெளிவான நரம்புகளுடன்.","வெள்ளை, தனித்தனியாக அல்லது கொத்துகளாக, நான்கு அல்லது ஐந்து இதழ்களும் ஏராளமான மகரந்தத்தூள் தண்டுகளும் கொண்டவை.","உண்ணக்கூடிய தோலுடனும், வெள்ளை அல்லது இளஞ்சிவப்பு சதையுடனும், பல சிறிய விதைகளுடனும் கூடிய வட்டமான அல்லது பேரிக்காய் வடிவ பெர்ரி பழம்.","வெப்பமண்டல முதல் துணை வெப்பமண்டல காலநிலைகள்; நன்கு வடிகட்டும் மண்ணில் செழிக்கும், ஆனால் பல்வேறு நிலைமைகளுக்கு ஏற்றவாறு மாற்றியமைந்துகொள்ளும்."],
+          ["புதியதாக உண்ணப்படுகிறது அல்லது ஜாம், ஜெல்லி, சாறுகள், மற்றும் பேஸ்ட்டுகளாக பதப்படுத்தப்படுகிறது; பழம் வைட்டமின் C மற்றும் பெக்டின் ஆகியவற்றால் விதிவிலக்காக நிறைந்துள்ளது.","கொய்யா இலைகள் வயிற்றுப்போக்கு மற்றும் செரிமான பிரச்சினைகளுக்கு சிகிச்சையளிக்க தேநீராக காய்ச்சப்படுகின்றன; பட்டையும் பழமும் நுண்ணுயிர் எதிர்ப்பு மற்றும் ஆக்ஸிஜனேற்ற எதிர்ப்பு பண்புகளையும் கொண்டுள்ளன.","கொய்யா மரங்கள் பல்வேறு பறவைகள் மற்றும் பாலூட்டிகளுக்கு உணவை வழங்குகின்றன, இது விதை பரவலுக்கு உதவுகிறது, மேலும் சீரழிந்த நிலங்களில் முன்னோடி இனங்களாக செயல்படக்கூடிய அளவுக்கு வலுவானவை."],
+        ],
+        [
+          [],
+          ["5 முதல் 12 மீட்டர் வரை உயரமுள்ளது.","கூட்டு இலைகள், 15 முதல் 30 செ.மீ நீளம், உணர்திறன் மிக்க சிற்றிலைகளுடன்.","கொத்துகளாக தாங்கப்படும் சிறிய, மணி வடிவ, இளஞ்சிவப்பு முதல் மங்கிய ஊதா நிற மலர்கள்.","முதிர்ந்தவுடன் மஞ்சளாக மாறும், 5 முதல் 15 செ.மீ நீளமுள்ள சதைப்பற்றுள்ள, நட்சத்திர வடிவ கனி.","வெப்பமண்டல மற்றும் துணை வெப்பமண்டல பகுதிகள்; நன்கு வடிகட்டும் மண்ணிலும் முழு சூரிய ஒளியிலும் செழிக்கும்."],
+          ["பொதுவாக புதியதாக உண்ணப்படுகிறது, பழ சாலட்களில் பயன்படுத்தப்படுகிறது, அல்லது அலங்காரமாக பயன்படுத்தப்படுகிறது; சாறாகவும், ஜாமாகவும், அல்லது சுவையான ஆசிய உணவுகளில் சமைக்கவும் பயன்படுகிறது.","வைட்டமின் C, பொட்டாசியம், மற்றும் ஆக்ஸிஜனேற்ற எதிர்ப்பான்கள் நிறைந்தது; நோய் எதிர்ப்பு அமைப்பை ஆதரிக்கிறது மற்றும் அழற்சி எதிர்ப்பு பண்புகளைக் கொண்டுள்ளது.","இந்த மரம் பல்வேறு வெப்பமண்டல பறவைகளுக்கும் நன்மை பயக்கும் பூச்சிகளுக்கும் உணவையும் வாழ்விடத்தையும் வழங்குகிறது, இது உள்ளூர் பல்லுயிர் பெருக்கத்திற்கு பங்களிக்கிறது."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -1109,6 +1191,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["இயற்கையாக சுவை சேர்க்கப்பட்டது | மென்மையானது & புத்துணர்ச்சியானது | உயர்தர தரம்"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -1462,12 +1554,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Il clima dello Sri Lanka favorisce un'ampia varietà di frutti poco comuni altrove, molti dei quali coltivati proprio accanto al tè e ad altre colture della tenuta. Scegli un frutto qui sotto per scoprirne di più su uno coltivato qui.",
         "Seleziona un frutto per vederne tutti i dettagli:",
       ],
-      fruitNames: ["Frutto del Drago","Ananas","Olivo di Ceylon (Weralu)","Papaya"],
+      fruitNames: ["Frutto del Drago","Ananas","Olivo di Ceylon (Weralu)","Papaya","Guava","Carambola"],
       fruitSectionHeadings: [
         ["Il Frutto del Drago","Caratteristiche","Usi e Benefici"],
         ["La Pianta dell'Ananas","Caratteristiche","Usi e Benefici","Prodotti al Tè all'Ananas"],
         ["L'Albero dell'Olivo di Ceylon","Caratteristiche","Usi e Benefici"],
         ["L'Albero della Papaya","Caratteristiche","Usi e Benefici"],
+        ["L'Albero del Guava","Caratteristiche","Usi e Benefici"],
+        ["L'Albero della Carambola","Caratteristiche","Usi e Benefici"],
       ],
       fruitSectionBodies: [
         [
@@ -1490,6 +1584,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Carica papaya — l'albero della papaya — è un albero piccolo, poco ramificato della famiglia delle Caricaceae, originario delle Americhe ma oggi coltivato in tutto il mondo tropicale, compresa questa tenuta. È famoso per il suo frutto dolce, simile a un melone, e per l'enzima papaina, che favorisce la digestione; le papaie crescono rapidamente e producono frutti tutto l'anno nei climi adatti.",
           "Uno sguardo rapido all'albero stesso:",
           "Il valore della papaya va ben oltre la sua polpa dolce:",
+        ],
+        [
+          "Psidium guajava — l'albero del guava — è un piccolo arbusto o albero tropicale sempreverde della famiglia delle Myrtaceae, originario delle Americhe ma oggi coltivato nelle regioni tropicali e subtropicali di tutto il mondo, compresa questa tenuta. Rinomato per il suo legno duro e la corteccia che si sfalda, produce un frutto che è una miniera di nutrienti, in particolare vitamina C, e foglie usate nella medicina tradizionale da secoli.",
+          "Uno sguardo rapido all'albero stesso:",
+          "Il valore del guava va ben oltre il suo frutto aromatico:",
+        ],
+        [
+          "Averrhoa carambola — la carambola, o frutto stella — è un albero originario del Sud-est asiatico tropicale, coltivato ora anche qui in tenuta. Prende il nome dalle sue caratteristiche costolature, che creano una perfetta forma a stella quando il frutto viene tagliato trasversalmente. L'intero frutto è commestibile, buccia compresa, e offre una consistenza croccante con un sapore che va dall'aspro al dolce.",
+          "Uno sguardo rapido all'albero stesso:",
+          "Il valore della carambola va ben oltre la sua forma caratteristica:",
         ],
       ],
       fruitItemHeadings: [
@@ -1514,6 +1618,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Altezza","Foglie","Fiori","Frutto","Habitat"],
           ["Usi Culinari","Proprietà Medicinali","Importanza Ecologica"],
         ],
+        [
+          [],
+          ["Altezza","Foglie","Fiori","Frutto","Habitat"],
+          ["Usi Culinari","Proprietà Medicinali","Importanza Ecologica"],
+        ],
+        [
+          [],
+          ["Altezza","Foglie","Fiori","Frutto","Habitat"],
+          ["Usi Culinari","Benefici per la Salute","Importanza Ecologica"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -1536,6 +1650,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Alto 5-10 metri.","Foglie grandi, profondamente lobate, disposte a spirale in cima al tronco.","Fiori carnosi, cerosi, leggermente profumati; possono essere maschili, femminili o ermafroditi.","Una grande bacca con polpa morbida arancione o gialla e una cavità centrale piena di semi neri.","Regioni tropicali e subtropicali; richiede terreno ben drenato e pieno sole."],
           ["La papaya matura si mangia fresca o in insalate, mentre quella verde si cucina come verdura; i semi sono commestibili con un sapore pepato, e l'enzima papaina è usato come intenerente per la carne.","Ricca di vitamina C e A, la papaina della papaya favorisce la digestione; gli estratti di foglie sono usati in alcune culture per trattare la febbre dengue e le condizioni della pelle.","L'albero fornisce una chioma a crescita rapida e una fonte di cibo per vari uccelli, pipistrelli frugivori e insetti negli ecosistemi tropicali."],
         ],
+        [
+          [],
+          ["Alto solitamente 3-10 metri.","Foglie opposte, semplici, da ellittiche a ovate, lunghe 5-15 centimetri con venature prominenti.","Fiori bianchi, solitari o in gruppi, con quattro o cinque petali e numerosi stami.","Una bacca rotonda o a forma di pera con buccia commestibile, polpa bianca o rosa, e molti piccoli semi.","Climi tropicali fino a subtropicali; prospera in terreni ben drenati ma si adatta a varie condizioni."],
+          ["Si mangia fresco o si trasforma in marmellate, gelatine, succhi e paste; il frutto è eccezionalmente ricco di vitamina C e pectina.","Le foglie di guava vengono infuse in tè per trattare la diarrea e i disturbi digestivi; anche la corteccia e il frutto hanno proprietà antimicrobiche e antiossidanti.","Gli alberi di guava forniscono cibo a numerosi uccelli e mammiferi, che aiutano nella dispersione dei semi, e sono abbastanza robusti da fungere da specie pioniere su terreni degradati."],
+        ],
+        [
+          [],
+          ["Alta 5-12 metri.","Foglie composte, lunghe 15-30 centimetri, con foglioline sensibili.","Fiori piccoli, a forma di campana, dal rosa al lilla, riuniti in grappoli.","Una drupa carnosa a forma di stella, lunga 5-15 centimetri, che diventa gialla a maturazione.","Regioni tropicali e subtropicali; prospera in terreno ben drenato e pieno sole."],
+          ["Comunemente mangiata fresca, usata in insalate di frutta, o come guarnizione; anche spremuta, trasformata in marmellate, o cucinata in piatti asiatici salati.","Ricca di vitamina C, potassio, e antiossidanti; sostiene il sistema immunitario e possiede proprietà antinfiammatorie.","L'albero fornisce cibo e habitat a vari uccelli tropicali e insetti benefici, contribuendo alla biodiversità locale."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -1548,6 +1672,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Aromatizzato Naturalmente | Morbido e Rinfrescante | Qualità Premium"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -1901,12 +2035,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "يدعم مناخ سريلانكا مجموعة واسعة من الفواكه غير الشائعة في أماكن أخرى، ويُزرع الكثير منها إلى جانب الشاي ومحاصيل المزرعة الأخرى مباشرة. اختر فاكهة أدناه لتلقي نظرة أقرب على واحدة تُزرع هنا.",
         "اختر فاكهة لعرض تفاصيلها الكاملة:",
       ],
-      fruitNames: ["فاكهة التنين","الأناناس","زيتون سيلان (ويرالو)","البابايا"],
+      fruitNames: ["فاكهة التنين","الأناناس","زيتون سيلان (ويرالو)","البابايا","الجوافة","الكرمبولا (فاكهة النجمة)"],
       fruitSectionHeadings: [
         ["عن نبات فاكهة التنين","الخصائص","الاستخدامات والفوائد"],
         ["عن نبات الأناناس","الخصائص","الاستخدامات والفوائد","منتجات شاي الأناناس"],
         ["عن شجرة زيتون سيلان","الخصائص","الاستخدامات والفوائد"],
         ["عن شجرة البابايا","الخصائص","الاستخدامات والفوائد"],
+        ["عن شجرة الجوافة","الخصائص","الاستخدامات والفوائد"],
+        ["عن شجرة فاكهة النجمة","الخصائص","الاستخدامات والفوائد"],
       ],
       fruitSectionBodies: [
         [
@@ -1929,6 +2065,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "البابايا (Carica papaya) هي شجرة صغيرة قليلة التفرع من عائلة الكاريكاسيا، موطنها الأصلي الأمريكتان، لكنها تُزرع الآن في جميع أنحاء العالم الاستوائي، بما في ذلك هذه المزرعة. تشتهر بثمرتها الحلوة الشبيهة بالشمام وبإنزيم الباباين الذي يساعد على الهضم؛ تنمو أشجار البابايا بسرعة وتثمر على مدار العام في المناخات المناسبة.",
           "نظرة سريعة على الشجرة نفسها:",
           "تتجاوز قيمة البابايا لبّها الحلو بكثير:",
+        ],
+        [
+          "الجوافة (Psidium guajava) هي شجيرة أو شجرة استوائية صغيرة دائمة الخضرة من عائلة الآسيّة، موطنها الأصلي الأمريكتان، لكنها تُزرع الآن في المناطق الاستوائية وشبه الاستوائية حول العالم، بما في ذلك هذه المزرعة. تشتهر بخشبها الصلب ولحائها المتقشر، وتنتج ثمرة غنية بالعناصر الغذائية، وخاصة فيتامين C، وأوراقًا استُخدمت في الطب التقليدي لقرون.",
+          "نظرة سريعة على الشجرة نفسها:",
+          "تتجاوز قيمة الجوافة ثمرتها العطرة بكثير:",
+        ],
+        [
+          "الكرمبولا (Averrhoa carambola)، المعروفة أيضًا باسم فاكهة النجمة، هي شجرة موطنها الأصلي جنوب شرق آسيا الاستوائي، وتُزرع الآن هنا في المزرعة أيضًا. سُمّيت بذلك بسبب حوافها المميزة، التي تُشكّل نجمة مثالية عند تقطيع الثمرة بشكل عرضي. الثمرة بأكملها صالحة للأكل، بما في ذلك القشرة، وتقدم قوامًا مقرمشًا بمذاق يتراوح بين الحامض والحلو.",
+          "نظرة سريعة على الشجرة نفسها:",
+          "تتجاوز قيمة فاكهة النجمة شكلها المميز بكثير:",
         ],
       ],
       fruitItemHeadings: [
@@ -1953,6 +2099,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["الارتفاع","الأوراق","الأزهار","الثمرة","الموطن"],
           ["الاستخدامات الطهوية","الخصائص الطبية","الأهمية البيئية"],
         ],
+        [
+          [],
+          ["الارتفاع","الأوراق","الأزهار","الثمرة","الموطن"],
+          ["الاستخدامات الطهوية","الخصائص الطبية","الأهمية البيئية"],
+        ],
+        [
+          [],
+          ["الارتفاع","الأوراق","الأزهار","الثمرة","الموطن"],
+          ["الاستخدامات الطهوية","الفوائد الصحية","الأهمية البيئية"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -1975,6 +2131,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["يتراوح ارتفاعها بين 5 و10 أمتار.","أوراق كبيرة، عميقة الفصوص، مرتبة حلزونيًا في أعلى الجذع.","أزهار لحمية، شمعية، وعطرة قليلاً؛ يمكن أن تكون ذكرية أو أنثوية أو خنثى.","توتة كبيرة بلب طري برتقالي أو أصفر وتجويف مركزي مليء ببذور سوداء.","المناطق الاستوائية وشبه الاستوائية؛ تتطلب تربة جيدة التصريف وأشعة شمس كاملة."],
           ["تؤكل البابايا الناضجة طازجة أو في السلطات، بينما تُطهى البابايا الخضراء كخضار؛ البذور صالحة للأكل بمذاق فلفلي، ويُستخدم إنزيم الباباين لتطرية اللحوم.","غنية بفيتامين C وA، يساعد إنزيم الباباين في البابايا على الهضم؛ تُستخدم مستخلصات الأوراق في بعض الثقافات لعلاج حمى الضنك وحالات الجلد.","توفر الشجرة مظلة سريعة النمو ومصدر غذاء لمختلف الطيور وخفافيش الفاكهة والحشرات في النظم البيئية الاستوائية."],
         ],
+        [
+          [],
+          ["عادة ما يتراوح ارتفاعها بين 3 و10 أمتار.","أوراق متقابلة، بسيطة، بيضاوية إلى إهليلجية، طولها 5 إلى 15 سنتيمترًا مع عروق بارزة.","أزهار بيضاء، منفردة أو في عناقيد، بأربع أو خمس بتلات وأسدية عديدة.","توتة مستديرة أو كمثرية الشكل بقشرة صالحة للأكل ولب أبيض أو وردي وبذور صغيرة عديدة.","المناخات الاستوائية إلى شبه الاستوائية؛ تزدهر في التربة جيدة التصريف لكنها تتكيف مع ظروف متنوعة."],
+          ["تؤكل طازجة أو تُحوَّل إلى مربى وهلام وعصائر ومعجون؛ الثمرة غنية بشكل استثنائي بفيتامين C والبكتين.","تُغلى أوراق الجوافة لصنع شاي لعلاج الإسهال ومشاكل الهضم؛ كما تحمل اللحاء والثمرة خصائص مضادة للميكروبات ومضادة للأكسدة.","توفر أشجار الجوافة الغذاء لمجموعة متنوعة من الطيور والثدييات، مما يساعد في نشر البذور، وهي قوية بما يكفي لتكون نوعًا رائدًا في الأراضي المتدهورة."],
+        ],
+        [
+          [],
+          ["يتراوح ارتفاعها بين 5 و12 مترًا.","أوراق مركبة، طولها 15 إلى 30 سنتيمترًا، بوريقات حساسة.","أزهار صغيرة، جرسية الشكل، وردية إلى بنفسجية فاتحة، تنمو في عناقيد.","ثمرة لحمية نجمية الشكل، طولها 5 إلى 15 سنتيمترًا، تتحول إلى اللون الأصفر عند النضج.","المناطق الاستوائية وشبه الاستوائية؛ تزدهر في التربة جيدة التصريف وأشعة الشمس الكاملة."],
+          ["تؤكل عادة طازجة، وتُستخدم في سلطات الفاكهة، أو كزينة؛ كما تُعصر، أو تُصنع منها المربى، أو تُطهى في أطباق آسيوية مالحة.","غنية بفيتامين C والبوتاسيوم ومضادات الأكسدة؛ تدعم جهاز المناعة وتحمل خصائص مضادة للالتهابات.","توفر الشجرة الغذاء والموطن لمختلف الطيور الاستوائية والحشرات النافعة، مما يسهم في التنوع البيولوجي المحلي."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -1987,6 +2153,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["منكّه طبيعيًا | ناعم ومنعش | جودة ممتازة"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -2340,12 +2516,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Климат Шри-Ланки благоприятствует широкому разнообразию фруктов, редко встречающихся в других местах, многие из которых выращиваются прямо рядом с чаем и другими плантационными культурами. Выберите фрукт ниже, чтобы поближе познакомиться с одним из тех, что выращивают здесь.",
         "Выберите фрукт, чтобы увидеть полную информацию о нём:",
       ],
-      fruitNames: ["Драконий фрукт","Ананас","Цейлонская олива (Вералу)","Папайя"],
+      fruitNames: ["Драконий фрукт","Ананас","Цейлонская олива (Вералу)","Папайя","Гуава","Карамбола (звёздный фрукт)"],
       fruitSectionHeadings: [
         ["О растении драконий фрукт","Характеристики","Применение и польза"],
         ["О растении ананас","Характеристики","Применение и польза","Ананасовые чайные продукты"],
         ["О дереве цейлонской оливы","Характеристики","Применение и польза"],
         ["О дереве папайи","Характеристики","Применение и польза"],
+        ["О дереве гуавы","Характеристики","Применение и польза"],
+        ["О дереве карамболы","Характеристики","Применение и польза"],
       ],
       fruitSectionBodies: [
         [
@@ -2368,6 +2546,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Carica papaya — папайя — небольшое, слабоветвящееся дерево семейства кариковых, родом из Америки, теперь выращиваемое по всему тропическому миру, включая это поместье. Известна своим сладким, похожим на дыню плодом и ферментом папаином, который способствует пищеварению; папайя быстро растёт и плодоносит круглый год в подходящем климате.",
           "Краткий обзор самого дерева:",
           "Ценность папайи выходит далеко за рамки её сладкой мякоти:",
+        ],
+        [
+          "Psidium guajava — гуава — небольшой тропический вечнозелёный кустарник или дерево семейства миртовых, родом из Америки, теперь выращиваемое в тропических и субтропических регионах по всему миру, включая это поместье. Известна своей твёрдой древесиной и отслаивающейся корой, приносит плод, являющийся кладезем питательных веществ, особенно витамина C, и листья, которые веками использовались в традиционной медицине.",
+          "Краткий обзор самого дерева:",
+          "Ценность гуавы выходит далеко за рамки её ароматного плода:",
+        ],
+        [
+          "Averrhoa carambola — карамбола, также известная как звёздный фрукт, — дерево, родом из тропической Юго-Восточной Азии, теперь выращиваемое и здесь, в поместье. Названо так за характерные рёбра, образующие идеальную форму звезды при поперечном разрезе плода. Весь плод съедобен, включая кожицу, и обладает хрустящей текстурой со вкусом от терпкого до сладкого.",
+          "Краткий обзор самого дерева:",
+          "Ценность карамболы выходит далеко за рамки её характерной формы:",
         ],
       ],
       fruitItemHeadings: [
@@ -2392,6 +2580,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Высота","Листья","Цветки","Плод","Среда обитания"],
           ["Кулинарное применение","Лечебные свойства","Экологическое значение"],
         ],
+        [
+          [],
+          ["Высота","Листья","Цветки","Плод","Среда обитания"],
+          ["Кулинарное применение","Лечебные свойства","Экологическое значение"],
+        ],
+        [
+          [],
+          ["Высота","Листья","Цветки","Плод","Среда обитания"],
+          ["Кулинарное применение","Польза для здоровья","Экологическое значение"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -2414,6 +2612,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Высотой 5–10 метров.","Крупные, глубоко лопастные листья, расположенные по спирали на верхушке ствола.","Мясистые, восковые, слегка ароматные цветки; могут быть мужскими, женскими или обоеполыми.","Крупная ягода с мягкой оранжевой или жёлтой мякотью и центральной полостью, заполненной чёрными семенами.","Тропические и субтропические регионы; требует хорошо дренированной почвы и полного солнца."],
           ["Спелую папайю едят свежей или в салатах, а зелёную готовят как овощ; семена съедобны с перечным вкусом, а фермент папаин используют для размягчения мяса.","Богатая витаминами C и A, папаин папайи способствует пищеварению; в некоторых культурах экстракты листьев используют для лечения лихорадки денге и кожных заболеваний.","Дерево обеспечивает быстрорастущий полог и источник пищи для различных птиц, плодоядных летучих мышей и насекомых в тропических экосистемах."],
         ],
+        [
+          [],
+          ["Обычно высотой 3–10 метров.","Супротивные, простые, от эллиптических до яйцевидных листья, длиной 5–15 сантиметров с выраженными жилками.","Белые цветки, одиночные или в кистях, с четырьмя-пятью лепестками и многочисленными тычинками.","Круглая или грушевидная ягода со съедобной кожицей, белой или розовой мякотью и множеством мелких семян.","Тропический и субтропический климат; процветает на хорошо дренированных почвах, но приспосабливается к различным условиям."],
+          ["Едят свежей или перерабатывают в джемы, желе, соки и пасты; плод исключительно богат витамином C и пектином.","Листья гуавы заваривают как чай для лечения диареи и проблем с пищеварением; кора и плод также обладают антимикробными и антиоксидантными свойствами.","Деревья гуавы обеспечивают пищей различных птиц и млекопитающих, которые помогают распространять семена, и достаточно устойчивы, чтобы служить видом-пионером на деградированных землях."],
+        ],
+        [
+          [],
+          ["Высотой 5–12 метров.","Сложные листья, длиной 15–30 сантиметров, с чувствительными листочками.","Мелкие, колокольчатые, розовые до сиреневых цветки, собранные в кисти.","Мясистая, звездообразная костянка, длиной 5–15 сантиметров, желтеющая при созревании.","Тропические и субтропические регионы; процветает на хорошо дренированной почве при полном солнце."],
+          ["Обычно едят свежей, добавляют во фруктовые салаты или используют как украшение; также отжимают сок, делают варенье или готовят в пикантных азиатских блюдах.","Богата витамином C, калием и антиоксидантами; поддерживает иммунную систему и обладает противовоспалительными свойствами.","Дерево обеспечивает пищей и средой обитания различных тропических птиц и полезных насекомых, способствуя местному биоразнообразию."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -2426,6 +2634,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["С натуральным ароматом | Мягкий и освежающий | Премиальное качество"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -2779,12 +2997,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Das Klima Sri Lankas begünstigt eine breite Palette an Früchten, die anderswo selten zu finden sind, viele davon direkt neben Tee und anderen Plantagenkulturen angebaut. Wählen Sie unten eine Frucht aus, um sich eine hier angebaute genauer anzusehen.",
         "Wählen Sie eine Frucht aus, um alle Details dazu zu sehen:",
       ],
-      fruitNames: ["Drachenfrucht","Ananas","Ceylon-Olive (Weralu)","Papaya"],
+      fruitNames: ["Drachenfrucht","Ananas","Ceylon-Olive (Weralu)","Papaya","Guave","Sternfrucht"],
       fruitSectionHeadings: [
         ["Über die Drachenfrucht-Pflanze","Merkmale","Verwendung und Vorteile"],
         ["Über die Ananas-Pflanze","Merkmale","Verwendung und Vorteile","Ananas-Teeprodukte"],
         ["Über den Ceylon-Oliven-Baum","Merkmale","Verwendung und Vorteile"],
         ["Über den Papaya-Baum","Merkmale","Verwendung und Vorteile"],
+        ["Über den Guaven-Baum","Merkmale","Verwendung und Vorteile"],
+        ["Über den Sternfrucht-Baum","Merkmale","Verwendung und Vorteile"],
       ],
       fruitSectionBodies: [
         [
@@ -2807,6 +3027,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Carica papaya — der Papaya-Baum — ist ein kleiner, spärlich verzweigter Baum aus der Familie der Caricaceae, ursprünglich aus Amerika, heute in der gesamten tropischen Welt angebaut, auch auf diesem Anwesen. Er ist berühmt für seine süße, melonenartige Frucht und das Enzym Papain, das die Verdauung unterstützt; Papayas wachsen schnell und tragen in geeigneten Klimazonen das ganze Jahr über Früchte.",
           "Ein kurzer Blick auf den Baum selbst:",
           "Der Wert der Papaya geht weit über ihr süßes Fruchtfleisch hinaus:",
+        ],
+        [
+          "Psidium guajava — der Guaven-Baum — ist ein kleiner tropischer immergrüner Strauch oder Baum aus der Familie der Myrtengewächse, ursprünglich aus Amerika, heute in tropischen und subtropischen Regionen weltweit angebaut, auch auf diesem Anwesen. Bekannt für sein hartes Holz und seine abblätternde Rinde, bringt er eine Frucht hervor, die ein Kraftpaket an Nährstoffen ist, insbesondere Vitamin C, sowie Blätter, die seit Jahrhunderten in der traditionellen Medizin verwendet werden.",
+          "Ein kurzer Blick auf den Baum selbst:",
+          "Der Wert der Guave geht weit über ihre aromatische Frucht hinaus:",
+        ],
+        [
+          "Averrhoa carambola — die Sternfrucht, auch Karambole genannt — ist ein Baum, der ursprünglich aus dem tropischen Südostasien stammt und heute auch hier auf dem Anwesen angebaut wird. Sie ist nach ihren markanten Rippen benannt, die beim Querschneiden der Frucht eine perfekte Sternform ergeben. Die gesamte Frucht ist essbar, einschließlich der Schale, und bietet eine knackige Textur mit einem Geschmack von herb bis süß.",
+          "Ein kurzer Blick auf den Baum selbst:",
+          "Der Wert der Sternfrucht geht weit über ihre markante Form hinaus:",
         ],
       ],
       fruitItemHeadings: [
@@ -2831,6 +3061,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Höhe","Blätter","Blüten","Frucht","Lebensraum"],
           ["Kulinarische Verwendung","Medizinische Eigenschaften","Ökologische Bedeutung"],
         ],
+        [
+          [],
+          ["Höhe","Blätter","Blüten","Frucht","Lebensraum"],
+          ["Kulinarische Verwendung","Medizinische Eigenschaften","Ökologische Bedeutung"],
+        ],
+        [
+          [],
+          ["Höhe","Blätter","Blüten","Frucht","Lebensraum"],
+          ["Kulinarische Verwendung","Gesundheitliche Vorteile","Ökologische Bedeutung"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -2853,6 +3093,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["5 bis 10 Meter hoch.","Große, tief gelappte Blätter, spiralförmig an der Stammspitze angeordnet.","Fleischige, wachsartige, leicht duftende Blüten; können männlich, weiblich oder zwittrig sein.","Eine große Beere mit weichem orangefarbenem oder gelbem Fruchtfleisch und einer zentralen Höhle voller schwarzer Kerne.","Tropische und subtropische Regionen; benötigt gut durchlässigen Boden und volle Sonne."],
           ["Reife Papaya wird frisch oder in Salaten gegessen, grüne Papaya wird als Gemüse gekocht; die Kerne sind mit einem pfeffrigen Geschmack essbar, und das Enzym Papain wird als Fleischzartmacher verwendet.","Reich an Vitamin C und A, unterstützt das Papain der Papaya die Verdauung; Blattextrakte werden in manchen Kulturen zur Behandlung von Dengue-Fieber und Hautkrankheiten verwendet.","Der Baum bietet ein schnell wachsendes Blätterdach und eine Nahrungsquelle für verschiedene Vögel, Flughunde und Insekten in tropischen Ökosystemen."],
         ],
+        [
+          [],
+          ["Meist 3 bis 10 Meter hoch.","Gegenständige, einfache, elliptische bis eiförmige Blätter, 5 bis 15 Zentimeter lang mit deutlichen Adern.","Weiße Blüten, einzeln oder in Büscheln, mit vier oder fünf Blütenblättern und zahlreichen Staubblättern.","Eine runde oder birnenförmige Beere mit essbarer Schale, weißem oder rosafarbenem Fruchtfleisch und vielen kleinen Kernen.","Tropisches bis subtropisches Klima; gedeiht auf gut durchlässigen Böden, ist aber an verschiedene Bedingungen anpassungsfähig."],
+          ["Wird frisch gegessen oder zu Marmeladen, Gelees, Säften und Pasten verarbeitet; die Frucht ist außergewöhnlich reich an Vitamin C und Pektin.","Guavenblätter werden zu Tee aufgebrüht, um Durchfall und Verdauungsprobleme zu behandeln; Rinde und Frucht besitzen zudem antimikrobielle und antioxidative Eigenschaften.","Guavenbäume bieten Nahrung für verschiedene Vögel und Säugetiere, die bei der Samenverbreitung helfen, und sind robust genug, um als Pionierart auf degradiertem Land zu dienen."],
+        ],
+        [
+          [],
+          ["5 bis 12 Meter hoch.","Zusammengesetzte Blätter, 15 bis 30 Zentimeter lang, mit empfindlichen Fiederblättchen.","Kleine, glockenförmige, rosa bis fliederfarbene Blüten in Büscheln.","Eine fleischige, sternförmige Steinfrucht, 5 bis 15 Zentimeter lang, die bei Reife gelb wird.","Tropische und subtropische Regionen; gedeiht in gut durchlässigem Boden bei voller Sonne."],
+          ["Wird meist frisch gegessen, in Obstsalaten verwendet oder als Garnitur; auch gepresst, zu Marmelade verarbeitet oder in herzhaften asiatischen Gerichten gekocht.","Reich an Vitamin C, Kalium und Antioxidantien; unterstützt das Immunsystem und besitzt entzündungshemmende Eigenschaften.","Der Baum bietet Nahrung und Lebensraum für verschiedene tropische Vögel und nützliche Insekten und trägt so zur lokalen Biodiversität bei."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -2865,6 +3115,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Natürlich Aromatisiert | Sanft & Erfrischend | Premium-Qualität"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -3218,12 +3478,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "El clima de Sri Lanka favorece una amplia variedad de frutas poco comunes en otros lugares, muchas de ellas cultivadas justo junto al té y otros cultivos de la finca. Elige una fruta a continuación para ver más de cerca una de las que se cultivan aquí.",
         "Selecciona una fruta para ver todos sus detalles:",
       ],
-      fruitNames: ["Fruta del Dragón","Piña","Aceituna de Ceilán (Weralu)","Papaya"],
+      fruitNames: ["Fruta del Dragón","Piña","Aceituna de Ceilán (Weralu)","Papaya","Guayaba","Carambola"],
       fruitSectionHeadings: [
         ["Sobre la Planta de la Fruta del Dragón","Características","Usos y Beneficios"],
         ["Sobre la Planta de Piña","Características","Usos y Beneficios","Productos de Té de Piña"],
         ["Sobre el Árbol de Aceituna de Ceilán","Características","Usos y Beneficios"],
         ["Sobre el Árbol de Papaya","Características","Usos y Beneficios"],
+        ["Sobre el Árbol de Guayaba","Características","Usos y Beneficios"],
+        ["Sobre el Árbol de Carambola","Características","Usos y Beneficios"],
       ],
       fruitSectionBodies: [
         [
@@ -3246,6 +3508,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Carica papaya — el árbol de papaya — es un árbol pequeño, poco ramificado, de la familia Caricaceae, originario de las Américas pero hoy cultivado en todo el mundo tropical, incluida esta finca. Es famoso por su fruto dulce, parecido al melón, y por la enzima papaína, que ayuda a la digestión; las papayas crecen rápidamente y dan fruto todo el año en climas adecuados.",
           "Una mirada rápida al árbol en sí:",
           "El valor de la papaya va mucho más allá de su pulpa dulce:",
+        ],
+        [
+          "Psidium guajava — el árbol de guayaba — es un pequeño arbusto o árbol tropical de hoja perenne de la familia Myrtaceae, originario de las Américas pero hoy cultivado en regiones tropicales y subtropicales de todo el mundo, incluida esta finca. Conocido por su madera dura y su corteza que se desprende, produce un fruto que es una fuente poderosa de nutrientes, particularmente vitamina C, y hojas que se han usado en la medicina tradicional durante siglos.",
+          "Una mirada rápida al árbol en sí:",
+          "El valor de la guayaba va mucho más allá de su fruto aromático:",
+        ],
+        [
+          "Averrhoa carambola — la carambola, también conocida como fruta estrella — es un árbol originario del sudeste asiático tropical, cultivado ahora también aquí en la finca. Recibe su nombre por sus distintivas crestas, que forman una estrella perfecta cuando la fruta se corta transversalmente. Toda la fruta es comestible, incluida la piel, y ofrece una textura crujiente con un sabor que va de ácido a dulce.",
+          "Una mirada rápida al árbol en sí:",
+          "El valor de la carambola va mucho más allá de su forma distintiva:",
         ],
       ],
       fruitItemHeadings: [
@@ -3270,6 +3542,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Altura","Hojas","Flores","Fruto","Hábitat"],
           ["Usos Culinarios","Propiedades Medicinales","Importancia Ecológica"],
         ],
+        [
+          [],
+          ["Altura","Hojas","Flores","Fruto","Hábitat"],
+          ["Usos Culinarios","Propiedades Medicinales","Importancia Ecológica"],
+        ],
+        [
+          [],
+          ["Altura","Hojas","Flores","Fruto","Hábitat"],
+          ["Usos Culinarios","Beneficios para la Salud","Importancia Ecológica"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -3292,6 +3574,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["De 5 a 10 metros de altura.","Hojas grandes, profundamente lobuladas, dispuestas en espiral en la parte superior del tronco.","Flores carnosas, cerosas, ligeramente fragantes; pueden ser masculinas, femeninas o hermafroditas.","Una baya grande con pulpa suave anaranjada o amarilla y una cavidad central llena de semillas negras.","Regiones tropicales y subtropicales; requiere suelo bien drenado y pleno sol."],
           ["La papaya madura se come fresca o en ensaladas, y la papaya verde se cocina como verdura; las semillas son comestibles con un sabor picante, y la enzima papaína se usa como ablandador de carne.","Rica en vitamina C y A, la papaína de la papaya ayuda a la digestión; los extractos de hojas se usan en algunas culturas para tratar el dengue y afecciones de la piel.","El árbol proporciona un dosel de rápido crecimiento y una fuente de alimento para diversas aves, murciélagos frugívoros e insectos en los ecosistemas tropicales."],
         ],
+        [
+          [],
+          ["Normalmente de 3 a 10 metros de altura.","Hojas opuestas, simples, de elípticas a ovadas, de 5 a 15 centímetros de largo con venas prominentes.","Flores blancas, solitarias o en racimos, con cuatro o cinco pétalos y numerosos estambres.","Una baya redonda o en forma de pera con piel comestible, pulpa blanca o rosada, y muchas semillas pequeñas.","Climas tropicales a subtropicales; prospera en suelos bien drenados pero se adapta a diversas condiciones."],
+          ["Se come fresca o se procesa en mermeladas, jaleas, jugos y pastas; el fruto es excepcionalmente rico en vitamina C y pectina.","Las hojas de guayaba se preparan como té para tratar la diarrea y problemas digestivos; la corteza y el fruto también tienen propiedades antimicrobianas y antioxidantes.","Los árboles de guayaba proporcionan alimento a diversas aves y mamíferos, que ayudan a dispersar las semillas, y son lo bastante resistentes como para servir de especie pionera en tierras degradadas."],
+        ],
+        [
+          [],
+          ["De 5 a 12 metros de altura.","Hojas compuestas, de 15 a 30 centímetros de largo, con folíolos sensibles.","Flores pequeñas, en forma de campana, de color rosa a lila, agrupadas en racimos.","Una drupa carnosa en forma de estrella, de 5 a 15 centímetros de largo, que se vuelve amarilla al madurar.","Regiones tropicales y subtropicales; prospera en suelo bien drenado y pleno sol."],
+          ["Se come comúnmente fresca, se usa en ensaladas de frutas, o como adorno; también se exprime, se convierte en mermeladas, o se cocina en platos asiáticos salados.","Rica en vitamina C, potasio, y antioxidantes; favorece el sistema inmunológico y tiene propiedades antiinflamatorias.","El árbol proporciona alimento y hábitat a diversas aves tropicales e insectos beneficiosos, contribuyendo a la biodiversidad local."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -3304,6 +3596,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Saborizado Naturalmente | Suave y Refrescante | Calidad Premium"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -3657,12 +3959,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "Le climat du Sri Lanka favorise une large variété de fruits peu courants ailleurs, dont beaucoup sont cultivés juste à côté du thé et d'autres cultures de la plantation. Choisissez un fruit ci-dessous pour découvrir de plus près l'un de ceux cultivés ici.",
         "Sélectionnez un fruit pour voir tous ses détails :",
       ],
-      fruitNames: ["Fruit du Dragon","Ananas","Olivier de Ceylan (Weralu)","Papaye"],
+      fruitNames: ["Fruit du Dragon","Ananas","Olivier de Ceylan (Weralu)","Papaye","Goyave","Carambole"],
       fruitSectionHeadings: [
         ["À propos du Fruit du Dragon","Caractéristiques","Usages et Bienfaits"],
         ["À propos du Plant d'Ananas","Caractéristiques","Usages et Bienfaits","Produits de Thé à l'Ananas"],
         ["À propos de l'Olivier de Ceylan","Caractéristiques","Usages et Bienfaits"],
         ["À propos du Papayer","Caractéristiques","Usages et Bienfaits"],
+        ["À propos du Goyavier","Caractéristiques","Usages et Bienfaits"],
+        ["À propos du Carambolier","Caractéristiques","Usages et Bienfaits"],
       ],
       fruitSectionBodies: [
         [
@@ -3685,6 +3989,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Carica papaya — le papayer — est un petit arbre peu ramifié de la famille des Caricacées, originaire des Amériques mais aujourd'hui cultivé dans tout le monde tropical, y compris sur ce domaine. Il est célèbre pour son fruit sucré, semblable au melon, et pour l'enzyme papaïne, qui facilite la digestion ; les papayers poussent rapidement et portent des fruits toute l'année sous des climats adaptés.",
           "Un rapide aperçu de l'arbre lui-même :",
           "La valeur de la papaye va bien au-delà de sa chair sucrée :",
+        ],
+        [
+          "Psidium guajava — le goyavier — est un petit arbuste ou arbre tropical à feuilles persistantes de la famille des Myrtacées, originaire des Amériques mais aujourd'hui cultivé dans les régions tropicales et subtropicales du monde entier, y compris sur ce domaine. Réputé pour son bois dur et son écorce qui se détache, il produit un fruit qui est une véritable mine de nutriments, en particulier de vitamine C, et des feuilles utilisées en médecine traditionnelle depuis des siècles.",
+          "Un rapide aperçu de l'arbre lui-même :",
+          "La valeur de la goyave va bien au-delà de son fruit aromatique :",
+        ],
+        [
+          "Averrhoa carambola — la carambole, aussi appelée fruit étoile — est un arbre originaire d'Asie du Sud-Est tropicale, désormais cultivé ici aussi sur le domaine. Elle doit son nom à ses arêtes distinctives, qui forment une étoile parfaite lorsque le fruit est coupé transversalement. Le fruit entier est comestible, peau comprise, et offre une texture croquante avec une saveur allant de l'acidulé au sucré.",
+          "Un rapide aperçu de l'arbre lui-même :",
+          "La valeur de la carambole va bien au-delà de sa forme distinctive :",
         ],
       ],
       fruitItemHeadings: [
@@ -3709,6 +4023,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["Hauteur","Feuilles","Fleurs","Fruit","Habitat"],
           ["Usages Culinaires","Propriétés Médicinales","Importance Écologique"],
         ],
+        [
+          [],
+          ["Hauteur","Feuilles","Fleurs","Fruit","Habitat"],
+          ["Usages Culinaires","Propriétés Médicinales","Importance Écologique"],
+        ],
+        [
+          [],
+          ["Hauteur","Feuilles","Fleurs","Fruit","Habitat"],
+          ["Usages Culinaires","Bienfaits pour la Santé","Importance Écologique"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -3731,6 +4055,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["5 à 10 mètres de hauteur.","Grandes feuilles profondément lobées, disposées en spirale au sommet du tronc.","Fleurs charnues, cireuses, légèrement parfumées ; peuvent être mâles, femelles ou hermaphrodites.","Une grosse baie à la chair tendre orange ou jaune et à la cavité centrale remplie de graines noires.","Régions tropicales et subtropicales ; nécessite un sol bien drainé et le plein soleil."],
           ["La papaye mûre se mange fraîche ou en salade, et la papaye verte se cuisine comme légume ; les graines sont comestibles avec un goût poivré, et l'enzyme papaïne est utilisée comme attendrisseur de viande.","Riche en vitamines C et A, la papaïne de la papaye facilite la digestion ; des extraits de feuilles sont utilisés dans certaines cultures pour traiter la dengue et les affections cutanées.","L'arbre offre une canopée à croissance rapide et une source de nourriture pour divers oiseaux, chauves-souris frugivores et insectes dans les écosystèmes tropicaux."],
         ],
+        [
+          [],
+          ["Généralement 3 à 10 mètres de hauteur.","Feuilles opposées, simples, elliptiques à ovales, longues de 5 à 15 centimètres avec des nervures proéminentes.","Fleurs blanches, solitaires ou en grappes, avec quatre ou cinq pétales et de nombreuses étamines.","Une baie ronde ou en forme de poire à la peau comestible, à la chair blanche ou rose, et aux nombreuses petites graines.","Climats tropicaux à subtropicaux ; prospère dans les sols bien drainés mais s'adapte à diverses conditions."],
+          ["Se mange fraîche ou se transforme en confitures, gelées, jus et pâtes ; le fruit est exceptionnellement riche en vitamine C et en pectine.","Les feuilles de goyavier sont infusées en thé pour traiter la diarrhée et les troubles digestifs ; l'écorce et le fruit possèdent aussi des propriétés antimicrobiennes et antioxydantes.","Les goyaviers fournissent de la nourriture à divers oiseaux et mammifères, qui aident à la dispersion des graines, et sont assez robustes pour servir d'espèce pionnière sur des terres dégradées."],
+        ],
+        [
+          [],
+          ["5 à 12 mètres de hauteur.","Feuilles composées, longues de 15 à 30 centimètres, aux folioles sensibles.","Petites fleurs en forme de cloche, roses à lilas, groupées en grappes.","Une drupe charnue en forme d'étoile, longue de 5 à 15 centimètres, qui jaunit à maturité.","Régions tropicales et subtropicales ; prospère dans un sol bien drainé en plein soleil."],
+          ["Généralement mangée fraîche, utilisée dans les salades de fruits, ou comme garniture ; également pressée, transformée en confiture, ou cuisinée dans des plats asiatiques salés.","Riche en vitamine C, en potassium, et en antioxydants ; soutient le système immunitaire et possède des propriétés anti-inflammatoires.","L'arbre fournit nourriture et habitat à divers oiseaux tropicaux et insectes utiles, contribuant à la biodiversité locale."],
+        ],
       ],
       fruitItemTags: [
         [
@@ -3743,6 +4077,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["Aromatisé Naturellement | Doux et Rafraîchissant | Qualité Premium"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -4096,12 +4440,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "斯里兰卡的气候孕育了种类繁多、其他地方少见的水果，其中许多就种植在茶树和其他庄园作物旁边。请从下方选择一种水果，近距离了解这里种植的一种水果。",
         "选择一种水果查看完整详情：",
       ],
-      fruitNames: ["火龙果","菠萝","锡兰橄榄（维拉鲁）","木瓜"],
+      fruitNames: ["火龙果","菠萝","锡兰橄榄（维拉鲁）","木瓜","番石榴","杨桃"],
       fruitSectionHeadings: [
         ["关于火龙果","特征","用途与益处"],
         ["关于菠萝植株","特征","用途与益处","菠萝茶产品"],
         ["关于锡兰橄榄树","特征","用途与益处"],
         ["关于木瓜树","特征","用途与益处"],
+        ["关于番石榴树","特征","用途与益处"],
+        ["关于杨桃树","特征","用途与益处"],
       ],
       fruitSectionBodies: [
         [
@@ -4124,6 +4470,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "木瓜，学名Carica papaya，是番木瓜科的一种小型、分枝稀疏的树，原产于美洲，如今在整个热带地区广泛种植，包括这座庄园。它以香甜、类似甜瓜的果实和有助消化的木瓜蛋白酶而闻名；在适宜的气候下，木瓜生长迅速，全年结果。",
           "简单了解一下这棵树：",
           "木瓜的价值远不止于它香甜的果肉：",
+        ],
+        [
+          "番石榴，学名Psidium guajava，是桃金娘科的一种小型热带常绿灌木或乔木，原产于美洲，如今在世界各地热带和亚热带地区广泛种植，包括这座庄园。它以坚硬的木材和剥落的树皮著称，出产一种营养极为丰富的果实，尤其富含维生素C，其叶子几个世纪以来一直用于传统医药。",
+          "简单了解一下这棵树：",
+          "番石榴的价值远不止于它芳香的果实：",
+        ],
+        [
+          "杨桃，学名Averrhoa carambola，是原产于东南亚热带地区的一种树木，如今在这座庄园也有种植。它因独特的棱角而得名，横切时会形成完美的星形。整个果实都可食用，包括果皮，口感爽脆，味道从酸到甜不等。",
+          "简单了解一下这棵树：",
+          "杨桃的价值远不止于它独特的外形：",
         ],
       ],
       fruitItemHeadings: [
@@ -4148,6 +4504,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["高度","叶片","花朵","果实","生境"],
           ["烹饪用途","药用价值","生态重要性"],
         ],
+        [
+          [],
+          ["高度","叶片","花朵","果实","生境"],
+          ["烹饪用途","药用价值","生态重要性"],
+        ],
+        [
+          [],
+          ["高度","叶片","花朵","果实","生境"],
+          ["烹饪用途","健康益处","生态重要性"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -4170,6 +4536,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["高5到10米。","大型、深裂的叶片，呈螺旋状排列在树干顶部。","肉质、蜡质、略带香气的花朵；可为雄花、雌花或两性花。","一种大型浆果，果肉柔软呈橙色或黄色，中央空腔内充满黑色种子。","热带和亚热带地区；需要排水良好的土壤和充足的阳光。"],
           ["成熟的木瓜可生吃或加入沙拉，青木瓜则作为蔬菜烹煮；种子可食用，带有胡椒般的辛辣味，木瓜蛋白酶则用作肉类嫩化剂。","木瓜富含维生素C和维生素A，其木瓜蛋白酶有助于消化；在一些文化中，叶片提取物被用于治疗登革热和皮肤病。","这种树为热带生态系统中的各种鸟类、食果蝙蝠和昆虫提供了快速生长的树冠和食物来源。"],
         ],
+        [
+          [],
+          ["通常高3到10米。","对生、单叶，椭圆形至卵形，长5到15厘米，叶脉明显。","白色花朵，单生或簇生，有四到五片花瓣和众多雄蕊。","圆形或梨形浆果，果皮可食用，果肉呈白色或粉红色，内含许多小种子。","热带至亚热带气候；在排水良好的土壤中生长旺盛，但也能适应各种环境条件。"],
+          ["可生吃，也可加工成果酱、果冻、果汁和果泥；果实中维生素C和果胶含量异常丰富。","番石榴叶可煮成茶用于治疗腹泻和消化问题；树皮和果实也具有抗菌和抗氧化特性。","番石榴树为多种鸟类和哺乳动物提供食物，帮助传播种子，并且足够顽强，可作为退化土地上的先锋物种。"],
+        ],
+        [
+          [],
+          ["高5到12米。","复叶，长15到30厘米，带有敏感的小叶。","小而呈铃铛状的花朵，粉红色至淡紫色，成簇生长。","肉质星形核果，长5到15厘米，成熟时变黄。","热带和亚热带地区；在排水良好的土壤和充足阳光下生长旺盛。"],
+          ["通常生吃，用于水果沙拉，或作为装饰；也可榨汁、制成果酱，或用于烹制咸味亚洲菜肴。","富含维生素C、钾和抗氧化物质；有助于支持免疫系统，并具有抗炎特性。","这种树为各种热带鸟类和益虫提供食物和栖息地，为当地生物多样性做出贡献。"],
+        ],
       ],
       fruitItemTags: [
         [
@@ -4182,6 +4558,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["天然调味 | 顺滑清爽 | 优质精选"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
@@ -4535,12 +4921,14 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         "スリランカの気候は、他の地域ではあまり見られない幅広い種類の果物を育みますが、その多くは茶などの農園作物のすぐそばで栽培されています。ここで栽培されている果物を詳しく見るには、以下から一つ選んでください。",
         "果物を選ぶと詳細が表示されます：",
       ],
-      fruitNames: ["ドラゴンフルーツ","パイナップル","セイロンオリーブ（ウェラル）","パパイヤ"],
+      fruitNames: ["ドラゴンフルーツ","パイナップル","セイロンオリーブ（ウェラル）","パパイヤ","グアバ","スターフルーツ"],
       fruitSectionHeadings: [
         ["ドラゴンフルーツの植物について","特徴","用途と効能"],
         ["パイナップルの植物について","特徴","用途と効能","パイナップル茶製品"],
         ["セイロンオリーブの木について","特徴","用途と効能"],
         ["パパイヤの木について","特徴","用途と効能"],
+        ["グアバの木について","特徴","用途と効能"],
+        ["スターフルーツの木について","特徴","用途と効能"],
       ],
       fruitSectionBodies: [
         [
@@ -4563,6 +4951,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "パパイヤ、学名Carica papayaは、パパイヤ科に属する小型で枝分かれの少ない木で、アメリカ大陸原産ですが、現在ではこの農園を含む熱帯地域全体で栽培されています。甘くメロンのような果実と、消化を助ける酵素パパインで有名です。適した気候ではパパイヤは急速に成長し、一年中実をつけます。",
           "この木についての簡単な紹介：",
           "パパイヤの価値は、その甘い果肉をはるかに超えています：",
+        ],
+        [
+          "グアバ、学名Psidium guajavaは、フトモモ科に属する小型の熱帯常緑低木または高木で、アメリカ大陸原産ですが、現在ではこの農園を含む世界中の熱帯・亜熱帯地域で栽培されています。硬い木材と剥がれる樹皮で知られ、特にビタミンCが豊富な栄養満点の果実と、何世紀にもわたり伝統医学で使われてきた葉をもたらします。",
+          "この木についての簡単な紹介：",
+          "グアバの価値は、その芳香のある果実をはるかに超えています：",
+        ],
+        [
+          "スターフルーツ、学名Averrhoa carambolaは、カランボラとも呼ばれ、熱帯東南アジア原産の木で、現在ではこの農園でも栽培されています。横に切ると完璧な星形になる独特の稜（りょう）にちなんで名付けられました。果実全体が皮を含めて食用可能で、酸味から甘味までさまざまな風味とシャキシャキした食感を持っています。",
+          "この木についての簡単な紹介：",
+          "スターフルーツの価値は、その独特の形状をはるかに超えています：",
         ],
       ],
       fruitItemHeadings: [
@@ -4587,6 +4985,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["高さ","葉","花","果実","生育環境"],
           ["料理での利用","薬効","生態学的重要性"],
         ],
+        [
+          [],
+          ["高さ","葉","花","果実","生育環境"],
+          ["料理での利用","薬効","生態学的重要性"],
+        ],
+        [
+          [],
+          ["高さ","葉","花","果実","生育環境"],
+          ["料理での利用","健康効果","生態学的重要性"],
+        ],
       ],
       fruitItemBodies: [
         [
@@ -4609,6 +5017,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           ["高さ5〜10メートル。","大きく深く裂けた葉が、幹の先端にらせん状に配置される。","肉厚でロウ質、わずかに香りのある花。雄花、雌花、両性花のいずれかである。","柔らかいオレンジ色または黄色の果肉と、黒い種子で満たされた中央の空洞を持つ大きな液果。","熱帯および亜熱帯地域。水はけの良い土壌と十分な日照が必要。"],
           ["熟したパパイヤは生またはサラダで食べられ、青パパイヤは野菜として調理されます。種子はピリッとした辛味があり食用可能で、酵素パパインは肉を柔らかくするために使われます。","ビタミンCとAが豊富で、パパイヤのパパインは消化を助けます。一部の文化では葉の抽出物がデング熱や皮膚疾患の治療に使われます。","この木は熱帯生態系においてさまざまな鳥類、果実を食べるコウモリ、昆虫に急速に成長する樹冠と食料源を提供します。"],
         ],
+        [
+          [],
+          ["通常高さ3〜10メートル。","対生する単葉で、楕円形から卵形、長さ5〜15センチメートル、葉脈が目立つ。","白い花で、単生またはクラスター状に咲き、4〜5枚の花弁と多数の雄しべを持つ。","食用可能な皮と、白またはピンク色の果肉、多数の小さな種子を持つ丸いまたは洋梨形の液果。","熱帯から亜熱帯気候。水はけの良い土壌でよく育つが、さまざまな条件に適応できる。"],
+          ["生で食べるほか、ジャム、ゼリー、ジュース、ペーストに加工されます。果実はビタミンCとペクチンが非常に豊富です。","グアバの葉は下痢や消化器系の不調を治療するためにお茶として煎じられます。樹皮と果実も抗菌・抗酸化作用を持っています。","グアバの木はさまざまな鳥類や哺乳類に食料を提供し、種子の散布を助けます。また、荒廃した土地でパイオニア種として機能できるほど頑丈です。"],
+        ],
+        [
+          [],
+          ["高さ5〜12メートル。","複葉で、長さ15〜30センチメートル、繊細な小葉を持つ。","クラスター状に咲く、小さく鐘形のピンクから薄紫色の花。","熟すと黄色くなる、長さ5〜15センチメートルの肉厚な星形の核果。","熱帯および亜熱帯地域。水はけの良い土壌と十分な日照でよく育つ。"],
+          ["一般的に生で食べられ、フルーツサラダに使われたり、飾り付けに使われたりします。ジュースにしたり、ジャムにしたり、アジアの塩味料理に調理されることもあります。","ビタミンC、カリウム、抗酸化物質が豊富で、免疫系を支え、抗炎症作用を持っています。","この木はさまざまな熱帯の鳥類や益虫に食料と生息地を提供し、地域の生物多様性に貢献しています。"],
+        ],
       ],
       fruitItemTags: [
         [
@@ -4621,6 +5039,16 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           [],
           [],
           ["天然フレーバー | なめらかで爽やか | プレミアム品質"],
+        ],
+        [
+          [],
+          [],
+          [],
+        ],
+        [
+          [],
+          [],
+          [],
         ],
         [
           [],
