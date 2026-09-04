@@ -31,6 +31,7 @@ import {
   Sprout,
   TreePine,
   Trees,
+  Warehouse,
   Wheat,
   Wind,
   type LucideIcon,
@@ -80,6 +81,7 @@ const STATION_ICONS: Record<string, LucideIcon> = {
   Sparkles,
   Scissors,
   Carrot,
+  Warehouse,
 };
 
 export function AllStations() {
