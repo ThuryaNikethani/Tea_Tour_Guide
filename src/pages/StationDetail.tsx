@@ -224,32 +224,35 @@ export function StationDetail() {
 
 /** Renders one section's image(s), heading, body, and item cards — shared by the top-level section pager and a selected fruit's own stacked sections. */
 function SectionContent({ section }: { section: StationSection }) {
-  return (
-    <>
-      {section.image && (
-        Array.isArray(section.image) ? (
-          <div className="grid grid-cols-2 gap-2 mb-3">
-            {section.image.map((src) => (
-              <img
-                key={src}
-                src={src}
-                alt={section.heading}
-                loading="lazy"
-                className="w-full h-56 object-cover rounded-md shadow-sm"
-              />
-            ))}
-          </div>
-        ) : (
+  const images = section.image && (
+    Array.isArray(section.image) ? (
+      <div className="grid grid-cols-2 gap-2 mb-3">
+        {section.image.map((src) => (
           <img
-            src={section.image}
+            key={src}
+            src={src}
             alt={section.heading}
             loading="lazy"
-            className="w-full h-56 object-cover rounded-md mb-3 shadow-sm"
+            className="w-full h-56 object-cover rounded-md shadow-sm"
           />
-        )
-      )}
+        ))}
+      </div>
+    ) : (
+      <img
+        src={section.image}
+        alt={section.heading}
+        loading="lazy"
+        className="w-full h-56 object-cover rounded-md mb-3 shadow-sm"
+      />
+    )
+  );
+
+  return (
+    <>
+      {section.imagePosition !== "bottom" && images}
       <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-2">{section.heading}</h2>
       <p className="text-tea-800 dark:text-tea-200 leading-relaxed">{section.body}</p>
+      {section.imagePosition === "bottom" && <div className="mt-3">{images}</div>}
 
       {section.items && (
         <div className="mt-6 grid sm:grid-cols-2 gap-4">
