@@ -98,6 +98,12 @@ import type { StationTranslation } from "./stations";
  * description/keyPoints shape in every language — the image only ever
  * lives in stations.ts, so no further translations.ts change was needed
  * once "handmade-factory" picked up all three photos instead.
+ *
+ * "mushroom-hut" was added on 2026-09-04, same session, at the
+ * supervisor's request via the user with no source material supplied yet.
+ * Machine-translated into all 10 languages the same way as the original
+ * placeholder stations, same not-native-reviewed caveat as above — swap in
+ * real, estate-specific details (and their translations) once available.
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -854,6 +860,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "පොලිටනලය වතුයාය තමන්ගේම නිෂ්පාදන මෙහිදීම වැඩි වශයෙන් වගා කිරීමට ගන්නා පියවරෙහි කොටසක් වන අතර, විලා සහ කැබනා අමුත්තන් සඳහා විශේෂ අත්දැකීමක් ලෙස තමන්ම එළවළු නෙළා ගැනීම සැලසුම් කර ඇත.",
       duration: "මිනිත්තු 5",
     },
+    "mushroom-hut": {
+      name: "බිම්මල් කුටිය",
+      description: "වතුයාය එහි තේ, කුළුබඩු, සහ පළතුරු බෝග අතරින්, විශේෂිත බිම්මල් කුටියක් පවත්වා ගෙන යයි — එය කුඩා, සෙවන සහිත ගොඩනැගිල්ලක් වන අතර, උයන්හි අනෙකුත් කොටස් වගා කරන සූර්යාලෝකය හා වායු සංචලනයට වඩා, බිම්මල් වර්ධනය වීමට අවශ්‍ය අඳුරු, සිසිල්, තෙත් තත්ත්වයන් පවත්වා ගැනීම සඳහා තැනිණි. ඔයිස්ටර් බිම්මල් ශ්‍රී ලංකාවේ මේ ආකාරයෙන් වගා කරන වඩාත් සුලභ වර්ග අතරින් එකකි, පසට වඩා පිදුරු හෝ මට්ටි කුඩු මාධ්‍යයක් මත වගා කරනු ලැබේ.",
+      keyPoints: "මෙලෙස බිම්මල් වගා කිරීම ගොවිපලකට එහි ප්‍රධාන බෝගයෙන් ඔබ්බට විවිධාංගීකරණය වීමට අඩු වියදම්, තිරසාර ක්‍රමයකි, බොහෝ විට පිදුරු වැනි කෘෂිකාර්මික අපද්‍රව්‍ය වගා මාධ්‍යයක් ලෙස යොදාගනිමින්, එක් මාධ්‍ය කාණ්ඩයකින් සති කිහිපයක් තුළ අස්වනු කිහිපයක් ලබා ගනිමින්.",
+      duration: "මිනිත්තු 5",
+    },
   },
   ta: {
     plucking: {
@@ -1334,6 +1346,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "பாலிடன்னல் மற்றும் பசுமை இல்லம்",
       description: "தற்போதுள்ள பசுமையக அறைக்கு கூடுதலாக, தோட்டம் மணி மிளகாய், தக்காளி போன்ற காய்கறிகளை வளர்ப்பதற்காக ஒரு பாலிடன்னலை கட்டி வருகிறது. அது முடிந்தவுடன், வில்லா அல்லது கேபனாவில் தங்கும் விருந்தினர்கள் இங்கேயே வளர்க்கப்படும் காய்கறிகளை நேரடியாக பறித்துக்கொள்ள முடியும்.",
       keyPoints: "பாலிடன்னல் தோட்டம் தன் சொந்த விளைபொருட்களை இங்கேயே அதிகமாக வளர்ப்பதற்கான முயற்சியின் ஒரு பகுதியாகும், வில்லா மற்றும் கேபனா விருந்தினர்களுக்கு ஒரு சிறப்பம்சமாக தாங்களே காய்கறிகளை அறுவடை செய்யும் வாய்ப்பு திட்டமிடப்பட்டுள்ளது.",
+      duration: "5 நிமிடங்கள்",
+    },
+    "mushroom-hut": {
+      name: "காளான் குடில்",
+      description: "தோட்டம் தனது தேயிலை, மசாலா, மற்றும் பழப் பயிர்களுடன், ஒரு தனி காளான் குடிலையும் பராமரிக்கிறது — இது ஒரு சிறிய, நிழல் நிறைந்த கட்டமைப்பாகும், தோட்டத்தின் மற்ற பகுதிகள் வளர்க்கப்படும் சூரிய ஒளி மற்றும் காற்றோட்டத்திற்கு பதிலாக, காளான்கள் காய்க்க தேவையான இருண்ட, குளிர்ந்த, ஈரப்பதமான நிலைமைகளை பராமரிக்க கட்டப்பட்டுள்ளது. ஆய்ஸ்டர் காளான்கள் இலங்கையில் இந்த முறையில் வளர்க்கப்படும் பொதுவான வகைகளில் ஒன்றாகும், மண்ணுக்கு பதிலாக வைக்கோல் அல்லது மர அறுக்கல் தூள் ஊடகத்தில் பயிரிடப்படுகின்றன.",
+      keyPoints: "இப்படி காளான்கள் வளர்ப்பது ஒரு பண்ணை தனது முதன்மை பயிரைத் தாண்டி பல்வகைப்படுத்த குறைந்த செலவில், நிலைத்தன்மையான வழியாகும், பெரும்பாலும் வைக்கோல் போன்ற விவசாய கழிவுகளை வளர்ப்பு ஊடகமாகப் பயன்படுத்துகிறது, ஒரே ஒரு தொகுதி ஊடகம் பல வாரங்களில் பல அறுவடைகளை தருகிறது.",
       duration: "5 நிமிடங்கள்",
     },
   },
@@ -1818,6 +1836,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Il tunnel fa parte dell'impegno della tenuta verso una maggiore produzione propria in loco, con la raccolta autonoma degli ortaggi prevista come un privilegio per gli ospiti della villa e delle cabana.",
       duration: "5 minuti",
     },
+    "mushroom-hut": {
+      name: "Capanna dei Funghi",
+      description: "Accanto alle sue colture di tè, spezie e frutta, la tenuta mantiene una capanna dedicata ai funghi — una piccola struttura ombreggiata costruita per mantenere le condizioni buie, fresche e umide di cui i funghi hanno bisogno per fruttificare, anziché il sole e la circolazione d'aria per cui vengono coltivati il resto dei giardini. I funghi ostrica sono tra le varietà più comuni coltivate in questo modo in Sri Lanka, cresciuti su un substrato di paglia o segatura anziché sul terreno.",
+      keyPoints: "Coltivare funghi in questo modo è un modo economico e sostenibile per una fattoria di diversificarsi oltre la sua coltura principale, spesso utilizzando rifiuti agricoli come la paglia come substrato di crescita, con un solo lotto di substrato che produce diversi raccolti nell'arco di diverse settimane.",
+      duration: "5 minuti",
+    },
   },
   ar: {
     plucking: {
@@ -2298,6 +2322,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "النفق البلاستيكي والبيت الزجاجي",
       description: "إلى جانب دفيئة قائمة بالفعل، تعمل المزرعة على بناء نفق بلاستيكي لزراعة خضروات مثل الفلفل الحلو والطماطم. وبمجرد اكتماله، سيتمكن ضيوف الفيلا أو الكابانا من قطف الخضروات المزروعة هنا بأنفسهم طازجة.",
       keyPoints: "يمثل هذا النفق جزءًا من توجه المزرعة نحو زراعة المزيد من محاصيلها الخاصة في الموقع، مع التخطيط لتقديم تجربة قطف الخضروات بأنفسهم كميزة خاصة لضيوف الفيلا والكابانا.",
+      duration: "5 دقائق",
+    },
+    "mushroom-hut": {
+      name: "كوخ الفطر",
+      description: "إلى جانب محاصيلها من الشاي والتوابل والفواكه، تحتفظ المزرعة بكوخ مخصص لزراعة الفطر — وهو مبنى صغير مظلل بُني للحفاظ على الظروف المظلمة والباردة والرطبة التي يحتاجها الفطر لينمو ثماره، بدلاً من أشعة الشمس وتدفق الهواء الذي تُزرع من أجله بقية الحدائق. يُعد فطر المحار من بين الأنواع الأكثر شيوعًا التي تُزرع بهذه الطريقة في سريلانكا، حيث يُزرع على وسط من القش أو نشارة الخشب بدلاً من التربة.",
+      keyPoints: "تُعد زراعة الفطر بهذه الطريقة وسيلة منخفضة التكلفة ومستدامة للمزرعة لتنويع إنتاجها إلى جانب محصولها الرئيسي، وغالبًا ما تستخدم مخلفات زراعية مثل القش كوسط للزراعة، حيث تنتج دفعة واحدة من الوسط عدة حصادات على مدى عدة أسابيع.",
       duration: "5 دقائق",
     },
   },
@@ -2782,6 +2812,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Тоннель — часть стремления поместья выращивать больше собственной продукции на месте; сбор овощей своими руками планируется как особое удовольствие для гостей виллы и кабаны.",
       duration: "5 минут",
     },
+    "mushroom-hut": {
+      name: "Грибной домик",
+      description: "Наряду с чаем, специями и фруктами поместье содержит отдельный грибной домик — небольшое затенённое строение, построенное для поддержания тёмных, прохладных и влажных условий, необходимых грибам для плодоношения, в отличие от солнца и циркуляции воздуха, для которых выращивается остальная часть садов. Вешенки — один из самых распространённых видов грибов, выращиваемых таким способом на Шри-Ланке, на субстрате из соломы или опилок, а не в почве.",
+      keyPoints: "Выращивание грибов таким образом — недорогой и устойчивый способ для хозяйства диверсифицироваться за пределы основной культуры, часто с использованием сельскохозяйственных отходов, таких как солома, в качестве субстрата для выращивания, при этом одна партия субстрата даёт несколько урожаев в течение нескольких недель.",
+      duration: "5 минут",
+    },
   },
   de: {
     plucking: {
@@ -3262,6 +3298,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Folientunnel & Gewächshaus",
       description: "Neben einem bereits vorhandenen Gewächshaus baut das Anwesen einen Folientunnel für den Anbau von Gemüse wie Paprika und Tomaten. Sobald er fertiggestellt ist, können Gäste, die in der Villa oder Cabana wohnen, das hier angebaute Gemüse selbst frisch ernten.",
       keyPoints: "Der Folientunnel ist Teil des Bestrebens des Anwesens, mehr eigene Produkte vor Ort anzubauen; das eigenhändige Ernten von Gemüse ist als besonderes Erlebnis für Gäste der Villa und der Cabana geplant.",
+      duration: "5 Minuten",
+    },
+    "mushroom-hut": {
+      name: "Pilzhütte",
+      description: "Neben Tee-, Gewürz- und Obstkulturen unterhält das Anwesen eine eigene Pilzhütte — ein kleines, schattiges Gebäude, das gebaut wurde, um die dunklen, kühlen, feuchten Bedingungen zu halten, die Pilze zum Fruchten brauchen, statt der Sonne und Luftzirkulation, für die der Rest der Gärten angebaut wird. Austernpilze gehören zu den in Sri Lanka auf diese Weise am häufigsten angebauten Sorten, kultiviert auf einem Stroh- oder Sägemehlsubstrat statt in Erde.",
+      keyPoints: "Pilze auf diese Weise anzubauen ist eine kostengünstige, nachhaltige Möglichkeit für einen Betrieb, sich über seine Hauptkultur hinaus zu diversifizieren, wobei oft landwirtschaftliche Abfälle wie Stroh als Anbaumedium genutzt werden und eine einzige Substratcharge über mehrere Wochen mehrere Ernten liefert.",
       duration: "5 Minuten",
     },
   },
@@ -3746,6 +3788,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "El túnel forma parte del esfuerzo de la finca por cultivar más de sus propios productos in situ, con la recolección propia de verduras prevista como un aliciente para los huéspedes de la villa y la cabaña.",
       duration: "5 minutos",
     },
+    "mushroom-hut": {
+      name: "Cabaña de Setas",
+      description: "Junto con sus cultivos de té, especias y frutas, la finca mantiene una cabaña dedicada a las setas — una pequeña estructura sombreada construida para mantener las condiciones oscuras, frescas y húmedas que las setas necesitan para fructificar, en lugar del sol y la circulación de aire para los que se cultiva el resto de los jardines. Las setas ostra están entre las variedades más comunes cultivadas así en Sri Lanka, en un sustrato de paja o serrín en lugar de tierra.",
+      keyPoints: "Cultivar setas de esta manera es una forma económica y sostenible de que una finca se diversifique más allá de su cultivo principal, a menudo usando residuos agrícolas como la paja como medio de cultivo, con un solo lote de sustrato que produce varias cosechas a lo largo de varias semanas.",
+      duration: "5 minutos",
+    },
   },
   fr: {
     plucking: {
@@ -4226,6 +4274,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Tunnel de Culture et Serre",
       description: "À côté d'une serre déjà existante, le domaine construit un tunnel maraîcher pour cultiver des légumes comme les poivrons et les tomates. Une fois terminé, les hôtes séjournant à la villa ou au cabana pourront cueillir eux-mêmes, frais, les légumes cultivés ici.",
       keyPoints: "Le tunnel s'inscrit dans la volonté du domaine de cultiver davantage ses propres produits sur place, avec la cueillette de légumes en autonomie prévue comme un atout pour les hôtes de la villa et du cabana.",
+      duration: "5 minutes",
+    },
+    "mushroom-hut": {
+      name: "Cabane à Champignons",
+      description: "Aux côtés de ses cultures de thé, d'épices et de fruits, le domaine entretient une cabane dédiée aux champignons — une petite structure ombragée construite pour maintenir les conditions sombres, fraîches et humides dont les champignons ont besoin pour fructifier, plutôt que le soleil et la circulation d'air pour lesquels le reste des jardins est cultivé. Les pleurotes comptent parmi les variétés les plus couramment cultivées ainsi au Sri Lanka, sur un substrat de paille ou de sciure plutôt que dans la terre.",
+      keyPoints: "Cultiver des champignons de cette manière est un moyen économique et durable pour une exploitation de se diversifier au-delà de sa culture principale, utilisant souvent des déchets agricoles comme la paille comme milieu de culture, un seul lot de substrat produisant plusieurs récoltes sur plusieurs semaines.",
       duration: "5 minutes",
     },
   },
@@ -4710,6 +4764,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "这座大棚是庄园致力于在本地种植更多自有农产品的一部分，亲手采摘蔬菜也被规划为别墅与小木屋客人的一项特色体验。",
       duration: "5分钟",
     },
+    "mushroom-hut": {
+      name: "蘑菇棚",
+      description: "除了茶叶、香料和水果作物外，庄园还设有一间专用的蘑菇棚——这是一座小型遮荫建筑，专为维持蘑菇长菇所需的阴暗、凉爽、潮湿环境而建，而不像庄园其他地方那样为了日照和通风而种植。平菇是斯里兰卡以这种方式种植的最常见品种之一，种植在稻草或木屑基质上，而非土壤中。",
+      keyPoints: "以这种方式种植蘑菇，是农场在主要作物之外实现多元化经营的一种低成本、可持续方式，常利用稻草等农业废弃物作为栽培基质，一批基质可在数周内产出多次收成。",
+      duration: "5分钟",
+    },
   },
   ja: {
     plucking: {
@@ -5190,6 +5250,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "ビニールハウスと温室",
       description: "既存の温室に加えて、農園ではパプリカやトマトなどの野菜を栽培するためのビニールハウスを建設中です。完成すれば、ヴィラやキャビンに宿泊するゲストは、ここで栽培された新鮮な野菜を自分の手で収穫できるようになります。",
       keyPoints: "このビニールハウスは、農園が自家製の農産物をより多く現地で栽培しようとする取り組みの一環であり、ヴィラやキャビンのゲスト向けの特典として、野菜の収穫体験が計画されています。",
+      duration: "5分",
+    },
+    "mushroom-hut": {
+      name: "きのこ小屋",
+      description: "茶、スパイス、果物の作物に加えて、農園にはきのこ専用の小屋があります——これは小さな日陰の建物で、庭の他の部分が日光と通気のために育てられているのとは異なり、きのこが実をつけるために必要な暗く涼しく湿った環境を保つために建てられています。ヒラタケは、スリランカでこのように栽培される最も一般的な種類の一つで、土ではなく藁やおがくずを基質として栽培されます。",
+      keyPoints: "このようにきのこを育てることは、農園が主要作物以外に多角化するための低コストで持続可能な方法であり、藁のような農業廃棄物を栽培基質として利用することが多く、一つの基質のバッチから数週間かけて何度も収穫できます。",
       duration: "5分",
     },
   },
