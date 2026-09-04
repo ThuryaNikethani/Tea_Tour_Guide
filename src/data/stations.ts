@@ -187,6 +187,10 @@ import starfruitTreeImg from "../assets/starfruit/starfruit-tree.jpg";
 import starfruitFlowerImg from "../assets/starfruit/starfruit-flower.jpg";
 import starfruitFruitImg from "../assets/starfruit/starfruit-fruit.webp";
 import starfruitHarvestImg from "../assets/starfruit/starfruit-harvest.webp";
+// Real, user-supplied photo of the estate's own TRI 2043 bushes in the
+// field, showing the cultivar's distinctive purple-red young shoot. See
+// the provenance note near the "organic-cultivation" station below.
+import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -918,6 +922,14 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * labelled "Health Benefits" rather than "Medicinal Properties" like the
  * other fruits — kept as-is since that's the source's own wording. No
  * factory tea product was mentioned, so it stays at three sections.
+ * "organic-cultivation" was converted from the simple description/
+ * keyPoints shape to a rich, single-section shape on 2026-09-04, so it
+ * could carry a real photo the user took of the estate's own TRI 2043
+ * bushes — the purple-red young shoot clearly visible in the field. The
+ * original description and keyPoints text was merged into one flowing
+ * section body rather than split further, since this is a single, focused
+ * topic rather than a multi-part one; nothing about the facts changed,
+ * only the shape needed to add the image.
  */
 export const STATIONS: Station[] = [
   {
@@ -1380,11 +1392,15 @@ export const STATIONS: Station[] = [
     shortName: "Organic Tea",
     icon: "Recycle",
     verified: true,
-    lastVerified: "2026-09-02",
-    description:
-      "The tea cultivar grown organically at this estate is TRI 2043, a China-type cultivar bred by the Tea Research Institute and known for a purple-hued shoot coloured by the pigment anthocyanin instead of the usual green. Mature TRI 2043 bushes here, grown without synthetic pesticides or fertilisers, already supply specialty grades like Golden Tip, Silver Tip, White Tea, Purple Tea, and Pink Tea. That's different from the younger TRI 2043 cuttings back at the nursery — those are still being trialled and haven't been cleared for planting at scale yet.",
-    keyPoints:
-      "TRI 2043 is naturally low-yielding, which is why the specialty grades made from it stay so limited in supply. Organic certification itself generally requires several years of chemical-free cultivation before a plot can be certified, with yields running lower than on conventionally managed land throughout.",
+    lastVerified: "2026-09-04",
+    heroTagline: "A closer look at the estate's own organically grown TRI 2043 tea bushes.",
+    sections: [
+      {
+        heading: "TRI 2043 — Grown Organically at the Estate",
+        image: tri2043ShootImg,
+        body: "The tea cultivar grown organically at this estate is TRI 2043, a China-type cultivar bred by the Tea Research Institute and known for a purple-hued shoot coloured by the pigment anthocyanin instead of the usual green. Mature TRI 2043 bushes here, grown without synthetic pesticides or fertilisers, already supply specialty grades like Golden Tip, Silver Tip, White Tea, Purple Tea, and Pink Tea. That's different from the younger TRI 2043 cuttings back at the nursery — those are still being trialled and haven't been cleared for planting at scale yet. TRI 2043 is naturally low-yielding, which is why the specialty grades made from it stay so limited in supply. Organic certification itself generally requires several years of chemical-free cultivation before a plot can be certified, with yields running lower than on conventionally managed land throughout.",
+      },
+    ],
     duration: "5-10 minutes",
   },
   {
