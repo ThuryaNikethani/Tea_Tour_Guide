@@ -170,6 +170,23 @@ import papayaTreeImg from "../assets/papaya/papaya-tree.jpg";
 import papayaFlowerImg from "../assets/papaya/papaya-flower.jpg";
 import papayaFruitImg from "../assets/papaya/papaya-fruit.jpg";
 import papayaHarvestImg from "../assets/papaya/papaya-harvest.jpg";
+// Sourced from the factory's own guava microsite (guava-atf.netlify.app) —
+// real photos of the estate's Psidium guajava crop, none carrying any
+// visible third-party credit. See the provenance note near the
+// "unique-fruits" station below.
+import guavaTreeImg from "../assets/guava/guava-tree.jpg";
+import guavaFlowerImg from "../assets/guava/guava-flower.webp";
+import guavaFruitImg from "../assets/guava/guava-fruit.webp";
+import guavaHarvestImg from "../assets/guava/guava-harvest.png";
+// Sourced from the factory's own star fruit microsite
+// (starfruit-aft.netlify.app, note the site's own "aft" spelling) — real
+// photos of the estate's Averrhoa carambola crop, none carrying any
+// visible third-party credit. See the provenance note near the
+// "unique-fruits" station below.
+import starfruitTreeImg from "../assets/starfruit/starfruit-tree.jpg";
+import starfruitFlowerImg from "../assets/starfruit/starfruit-flower.jpg";
+import starfruitFruitImg from "../assets/starfruit/starfruit-fruit.webp";
+import starfruitHarvestImg from "../assets/starfruit/starfruit-harvest.webp";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -884,6 +901,23 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * any visible watermark, so the four used here were picked purely for how
  * well they illustrate the station's sections. No factory tea product was
  * mentioned for this crop either, so it stays at three sections.
+ * A fifth fruit-gallery card, Guava, was added on 2026-09-04 from the
+ * factory's own guava microsite (guava-atf.netlify.app) — same template,
+ * same leftover "Weralu" alt-text artifact. This microsite briefly failed
+ * to load (an IPv6 routing issue in the local environment, not the site
+ * itself); resolved by forcing IPv4 resolution for the scrape. None of its
+ * ten gallery images carried any visible watermark, so the four used here
+ * were picked purely for illustration. No factory tea product was
+ * mentioned for this crop either, so it stays at three sections.
+ * A sixth fruit-gallery card, Star Fruit, was added on 2026-09-04 from the
+ * factory's own star fruit microsite (starfruit-aft.netlify.app, again the
+ * site's own "aft" spelling) — same template, same leftover "Weralu"
+ * alt-text artifact, and the same IPv6 routing issue worked around with
+ * forced IPv4 resolution. None of its ten gallery images carried any
+ * visible watermark. The site's own third "Uses and Benefits" item is
+ * labelled "Health Benefits" rather than "Medicinal Properties" like the
+ * other fruits — kept as-is since that's the source's own wording. No
+ * factory tea product was mentioned, so it stays at three sections.
  */
 export const STATIONS: Station[] = [
   {
@@ -1543,6 +1577,74 @@ export const STATIONS: Station[] = [
                   { heading: "Culinary Uses", body: "Ripe papaya is eaten fresh or in salads, and green papaya is cooked as a vegetable; the seeds are edible with a peppery taste, and the enzyme papain is used as a meat tenderiser." },
                   { heading: "Medicinal Properties", body: "High in vitamin C and A, papaya's papain aids digestion; leaf extracts are used in some cultures for treating dengue fever and skin conditions." },
                   { heading: "Ecological Importance", body: "The tree provides a quick-growing canopy and food source for various birds, fruit bats, and insects in tropical ecosystems." },
+                ],
+              },
+            ],
+          },
+          {
+            id: "guava",
+            name: "Guava",
+            image: guavaFruitImg,
+            sections: [
+              {
+                heading: "About the Guava Tree",
+                image: guavaTreeImg,
+                body: "Psidium guajava — the guava tree — is a small tropical evergreen shrub or tree in the Myrtaceae family, native to the Americas but now cultivated in tropical and subtropical regions worldwide, including here on the estate. Renowned for its hard wood and peeling bark, it produces a fruit that's a powerhouse of nutrients, particularly vitamin C, and leaves that have been used in traditional medicine for centuries.",
+              },
+              {
+                heading: "Characteristics",
+                image: guavaFlowerImg,
+                body: "A quick look at the tree itself:",
+                items: [
+                  { heading: "Height", body: "Usually 3 to 10 metres tall." },
+                  { heading: "Leaves", body: "Opposite, simple, elliptic to ovate leaves, 5 to 15 centimetres long with prominent veins." },
+                  { heading: "Flowers", body: "White, solitary or in clusters, with four or five petals and numerous stamens." },
+                  { heading: "Fruit", body: "A round or pear-shaped berry with edible skin, white or pink flesh, and many small seeds." },
+                  { heading: "Habitat", body: "Tropical to subtropical climates; thrives in well-drained soils but adaptable to various conditions." },
+                ],
+              },
+              {
+                heading: "Uses and Benefits",
+                image: [guavaFruitImg, guavaHarvestImg],
+                body: "Guava's value goes well beyond its aromatic fruit:",
+                items: [
+                  { heading: "Culinary Uses", body: "Eaten fresh or processed into jams, jellies, juices, and pastes; the fruit is exceptionally rich in vitamin C and pectin." },
+                  { heading: "Medicinal Properties", body: "Guava leaves are brewed into tea to treat diarrhoea and digestive issues; the bark and fruit also carry antimicrobial and antioxidant properties." },
+                  { heading: "Ecological Importance", body: "Guava trees provide food for a variety of birds and mammals, which aid in seed dispersal, and are robust enough to serve as pioneer species on degraded land." },
+                ],
+              },
+            ],
+          },
+          {
+            id: "starfruit",
+            name: "Star Fruit",
+            image: starfruitFruitImg,
+            sections: [
+              {
+                heading: "About the Star Fruit Tree",
+                image: starfruitTreeImg,
+                body: "Averrhoa carambola — the star fruit, also known as carambola — is a tree native to tropical Southeast Asia, now grown here on the estate too. It's named for its distinctive ridges, which create a perfect star shape when the fruit is sliced crosswise. The entire fruit is edible, including the skin, offering a crisp texture with a flavour ranging from tart to sweet.",
+              },
+              {
+                heading: "Characteristics",
+                image: starfruitFlowerImg,
+                body: "A quick look at the tree itself:",
+                items: [
+                  { heading: "Height", body: "5 to 12 metres tall." },
+                  { heading: "Leaves", body: "Compound leaves, 15 to 30 centimetres long, with sensitive leaflets." },
+                  { heading: "Flowers", body: "Small, bell-shaped, pink to lilac flowers borne in clusters." },
+                  { heading: "Fruit", body: "A fleshy, star-shaped drupe, 5 to 15 centimetres long, turning yellow when ripe." },
+                  { heading: "Habitat", body: "Tropical and subtropical regions; thrives in well-drained soil and full sun." },
+                ],
+              },
+              {
+                heading: "Uses and Benefits",
+                image: [starfruitFruitImg, starfruitHarvestImg],
+                body: "Star fruit's value goes well beyond its distinctive shape:",
+                items: [
+                  { heading: "Culinary Uses", body: "Commonly eaten fresh, used in fruit salads, or as a garnish; also juiced, made into jams, or cooked in savoury Asian dishes." },
+                  { heading: "Health Benefits", body: "High in vitamin C, potassium, and antioxidants; supports the immune system and carries anti-inflammatory properties." },
+                  { heading: "Ecological Importance", body: "The tree provides food and habitat for various tropical birds and beneficial insects, contributing to local biodiversity." },
                 ],
               },
             ],
