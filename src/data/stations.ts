@@ -435,6 +435,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * claiming it's already in use (revised 2026-09-02 after the user flagged
  * the original wording as unsuitable for a live site). `order: 27`,
  * appended at the end for the same reason as "pruning" above.
+ * "mushroom-hut" was added on 2026-09-04 at the supervisor's request, with
+ * no source material supplied yet — same situation the original 7 draft
+ * manufacturing-process stations were in. `verified: false` (no
+ * `lastVerified`, no caution-banner date) and the description sticks to
+ * generic, standard mushroom-cultivation knowledge (a shaded hut, oyster
+ * mushrooms grown on straw/sawdust rather than soil) instead of inventing
+ * estate-specific facts — swap in the estate's own details (species grown,
+ * hut size, what the mushrooms are used for) as soon as they're available.
+ * `order: 27`, appended at the end.
  * On 2026-09-01 the user supplied a transcript of a full guided walkthrough
  * of the main factory floor, which upgraded six stations at once —
  * "tea-factory" (the overview), "withering", "rolling", "fermentation",
@@ -1847,6 +1856,19 @@ export const STATIONS: Station[] = [
       "Alongside an existing greenhouse, the estate is building a polytunnel for growing vegetables such as bell peppers and tomatoes. Once complete, guests staying at the villa or cabana will be able to freshly pick vegetables grown right here themselves.",
     keyPoints:
       "The polytunnel is part of the estate's push toward growing more of its own produce on-site, with harvest-your-own vegetables planned as a perk for villa and cabana guests.",
+    duration: "5 minutes",
+  },
+  {
+    id: "mushroom-hut",
+    order: 27,
+    name: "Mushroom Hut",
+    shortName: "Mushroom Hut",
+    icon: "Warehouse",
+    verified: false,
+    description:
+      "Alongside its tea, spice, and fruit crops, the estate keeps a dedicated mushroom hut — a small, shaded structure built to hold the dark, cool, humid conditions mushrooms need to fruit, rather than the sun and airflow the rest of the gardens are grown for. Oyster mushrooms are among the most common varieties grown this way in Sri Lanka, cultivated on a straw or sawdust substrate rather than soil.",
+    keyPoints:
+      "Growing mushrooms like this is a low-cost, sustainable way for a farm to diversify beyond its main crop, often making use of agricultural waste such as straw as the growing medium, with a single batch of substrate yielding several harvests over several weeks.",
     duration: "5 minutes",
   },
 ];
