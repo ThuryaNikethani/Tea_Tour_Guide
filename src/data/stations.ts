@@ -12,6 +12,8 @@ export interface StationSection {
   body: string;
   /** A single page can show one image, or a couple side by side (e.g. two product photos). */
   image?: string | string[];
+  /** Where the image(s) render relative to the heading/body. Defaults to "top". */
+  imagePosition?: "top" | "bottom";
   /** When set, renders each as its own card (image + heading + body + tags) instead of one blended paragraph. */
   items?: StationSubItem[];
   /**
@@ -191,6 +193,13 @@ import starfruitHarvestImg from "../assets/starfruit/starfruit-harvest.webp";
 // field, showing the cultivar's distinctive purple-red young shoot. See
 // the provenance note near the "organic-cultivation" station below.
 import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
+// Real, user-supplied photos of this estate's own equipment and signage.
+// See the provenance notes near the "introduction" and "handmade-factory"
+// stations below.
+import ceylonTeaSymbolImg from "../assets/introduction/ceylon-tea-symbol.jpg";
+import handmadeTrayRackImg from "../assets/handmade-factory/tray-rack.jpg";
+import rollerMachineImg from "../assets/handmade-factory/roller-machine.jpg";
+import dryerUnitImg from "../assets/handmade-factory/dryer-unit.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -930,6 +939,19 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * section body rather than split further, since this is a single, focused
  * topic rather than a multi-part one; nothing about the facts changed,
  * only the shape needed to add the image.
+ * "introduction" was converted the same way on 2026-09-04, to carry the
+ * user's own photo of the roadside Ceylon Tea Symbol sign. As with
+ * organic-cultivation, its existing description and keyPoints text was
+ * merged unchanged into one section body; no facts were added, removed,
+ * or reworded.
+ * "rolling" and "drying" were briefly converted the same way to carry the
+ * user's own roller and dryer photos, but those two photos are actually
+ * of equipment in the estate's Handmade Tea Factory, not the main
+ * mechanized line — so on 2026-09-04 they were reverted back to their
+ * original plain description/keyPoints shape, and the roller/dryer photos
+ * were moved onto "handmade-factory" instead, alongside its existing tray
+ * rack photo (all three as one multi-image section, since all three show
+ * that one stop's own equipment).
  */
 export const STATIONS: Station[] = [
   {
@@ -939,12 +961,16 @@ export const STATIONS: Station[] = [
     shortName: "Introduction",
     icon: "Mountain",
     verified: true,
-    lastVerified: "2026-08-26",
+    lastVerified: "2026-09-04",
     virtualTourUrl: "https://ceylonteatourism.com/",
-    description:
-      "Since the early 1800s, the name \"Ceylon\" has been synonymous with tea. The history of Ceylon tea runs back to the British rule in Sri Lanka over two hundred years ago. The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. In 1839, further tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
-    keyPoints:
-      "The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa. High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker — this estate is a low-country, or 'Pahatharata,' producer, sitting within the Ruhuna growing region specifically, one of Ceylon tea's three geographic classifications alongside up-country ('Udarata') and mid-country ('Medarata'). Visitors are traditionally welcomed with 'Ayubowan' — a Sinhala greeting meaning 'may you live long' — sometimes in person by the estate's own chairman, Anura Athukorala.",
+    heroTagline: "The Ceylon Tea Symbol of Quality, seen on a signboard at the estate.",
+    sections: [
+      {
+        heading: "Ceylon Tea — Symbol of Quality",
+        image: ceylonTeaSymbolImg,
+        body: "Since the early 1800s, the name \"Ceylon\" has been synonymous with tea. The history of Ceylon tea runs back to the British rule in Sri Lanka over two hundred years ago. The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. In 1839, further tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka. The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa. High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker — this estate is a low-country, or 'Pahatharata,' producer, sitting within the Ruhuna growing region specifically, one of Ceylon tea's three geographic classifications alongside up-country ('Udarata') and mid-country ('Medarata'). Visitors are traditionally welcomed with 'Ayubowan' — a Sinhala greeting meaning 'may you live long' — sometimes in person by the estate's own chairman, Anura Athukorala.",
+      },
+    ],
     duration: "5-10 minutes",
   },
   {
@@ -1691,11 +1717,16 @@ export const STATIONS: Station[] = [
     shortName: "Handmade Factory",
     icon: "HandHeart",
     verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; once steamed, the leaf rests outside to shed the surface moisture left by steaming, then is hand-rolled to curl it and draw out its colour, strength, aroma, and taste, before a final pass through the dryer, with drying time varying from one small producer to the next. The building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato). This stop covers what distinguishes hand-made tea from factory-line production.",
-    keyPoints:
-      "Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
+    lastVerified: "2026-09-04",
+    heroTagline: "The estate's own Handmade Tea Factory — tray racks, hand-roller, and dryer.",
+    sections: [
+      {
+        heading: "Handmade Tea Factory",
+        image: [handmadeTrayRackImg, rollerMachineImg, dryerUnitImg],
+        imagePosition: "bottom",
+        body: "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; once steamed, the leaf rests outside to shed the surface moisture left by steaming, then is hand-rolled to curl it and draw out its colour, strength, aroma, and taste, before a final pass through the dryer, with drying time varying from one small producer to the next. The building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato). This stop covers what distinguishes hand-made tea from factory-line production. Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
+      },
+    ],
     duration: "10 minutes",
   },
   {
