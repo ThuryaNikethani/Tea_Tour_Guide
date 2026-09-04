@@ -77,6 +77,13 @@ import type { StationTranslation } from "./stations";
  * the same five fields (again empty `fruitItemTags`). Its third item
  * heading is "Health Benefits" in every language, matching the source
  * site's own wording rather than "Medicinal Properties" like the others.
+ *
+ * "organic-cultivation" was converted from description/keyPoints/duration
+ * to heroTagline/sectionHeadings/sectionBodies/duration on 2026-09-04 in
+ * every language, matching the shape change in stations.ts made to carry
+ * a real photo. Each language's old description and keyPoints text was
+ * merged into one sectionBodies[0] string — same words, just joined into
+ * a single flowing paragraph instead of two separate fields.
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -566,10 +573,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "කාබනික තේ වගාව",
-      description:
-        "මෙම වතුයායේ කාබනිකව වගා කරන තේ ප්‍රභේදය TRI 2043 වන අතර, එය තේ පර්යේෂණ ආයතනය විසින් අභිජනනය කරන ලද චීන වර්ගයේ තේ ප්‍රභේදයකි. සාමාන්‍ය කොළ පැහැයට වෙනුවට ඇන්තසයනින් වර්ණකයෙන් වර්ණවත් වූ දම් පැහැති අංකුරයෙන් එය හඳුනාගත හැකිය. ඉදුණු TRI 2043 පඳුරු මෙහි කෘත්‍රිම කෘමිනාශක හෝ පොහොර නොමැතිව දැනටමත් වගා කරන අතර, ඒවායේ අංකුර Golden Tip, Silver Tip, White Tea, Purple Tea, සහ Pink Tea වැනි විශේෂිත ශ්‍රේණි සෑදීමට යොදා ගැනේ. එය තේ තවානේ තවමත් පරීක්ෂා කරමින් සිටින, තවම විශාල පරිමාණයෙන් සිටුවීමට අනුමත නොකළ තරුණ TRI 2043 දඬු කැබලිවලට වඩා වෙනස්ය.",
-      keyPoints:
-        "TRI 2043 ස්වභාවිකවම අඩු අස්වැන්නක් ලබා දෙන අතර, එබැවින් එයින් සාදන විශේෂිත ශ්‍රේණි එතරම් සීමිත සැපයුමකින් පවතී. කාබනික සහතිකයක් ලබා ගැනීමට සාමාන්‍යයෙන් වසර කිහිපයක් රසායනික ද්‍රව්‍ය රහිතව වගා කිරීම අවශ්‍ය වන අතර, මුළු කාලය පුරාම අස්වැන්න සාම්ප්‍රදායික ඉඩම්වලට වඩා අඩුය.",
+      heroTagline: "වතුයායේම කාබනිකව වගා කරන TRI 2043 තේ පඳුරු කෙරෙහි සමීප බැල්මක්.",
+      sectionHeadings: ["TRI 2043 — වතුයායේ කාබනිකව වගා කෙරේ"],
+      sectionBodies: ["මෙම වතුයායේ කාබනිකව වගා කරන තේ ප්‍රභේදය TRI 2043 වන අතර, එය තේ පර්යේෂණ ආයතනය විසින් අභිජනනය කරන ලද චීන වර්ගයේ තේ ප්‍රභේදයකි. සාමාන්‍ය කොළ පැහැයට වෙනුවට ඇන්තසයනින් වර්ණකයෙන් වර්ණවත් වූ දම් පැහැති අංකුරයෙන් එය හඳුනාගත හැකිය. ඉදුණු TRI 2043 පඳුරු මෙහි කෘත්‍රිම කෘමිනාශක හෝ පොහොර නොමැතිව දැනටමත් වගා කරන අතර, ඒවායේ අංකුර Golden Tip, Silver Tip, White Tea, Purple Tea, සහ Pink Tea වැනි විශේෂිත ශ්‍රේණි සෑදීමට යොදා ගැනේ. එය තේ තවානේ තවමත් පරීක්ෂා කරමින් සිටින, තවම විශාල පරිමාණයෙන් සිටුවීමට අනුමත නොකළ තරුණ TRI 2043 දඬු කැබලිවලට වඩා වෙනස්ය. TRI 2043 ස්වභාවිකවම අඩු අස්වැන්නක් ලබා දෙන අතර, එබැවින් එයින් සාදන විශේෂිත ශ්‍රේණි එතරම් සීමිත සැපයුමකින් පවතී. කාබනික සහතිකයක් ලබා ගැනීමට සාමාන්‍යයෙන් වසර කිහිපයක් රසායනික ද්‍රව්‍ය රහිතව වගා කිරීම අවශ්‍ය වන අතර, මුළු කාලය පුරාම අස්වැන්න සාම්ප්‍රදායික ඉඩම්වලට වඩා අඩුය."],
       duration: "මිනිත්තු 5-10",
     },
     "clonal-tea": {
@@ -1047,10 +1053,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "இயற்கை தேயிலை சாகுபடி",
-      description:
-        "இந்த தோட்டத்தில் இயற்கையாக வளர்க்கப்படும் தேயிலை இனம் TRI 2043 ஆகும், இது தேயிலை ஆராய்ச்சி நிறுவனத்தால் உருவாக்கப்பட்ட சீன வகை இனமாகும், வழக்கமான பச்சை நிறத்திற்குப் பதிலாக ஆந்தோசயனின் நிறமியால் வண்ணமிடப்பட்ட ஊதா நிற தளிரால் அறியப்படுகிறது. இங்குள்ள முதிர்ந்த TRI 2043 செடிகள், செயற்கை பூச்சிக்கொல்லிகள் அல்லது உரங்கள் இன்றி வளர்க்கப்படுகின்றன, ஏற்கனவே Golden Tip, Silver Tip, White Tea, Purple Tea, மற்றும் Pink Tea போன்ற சிறப்பு தரங்களை வழங்குகின்றன. இது தேயிலை நாற்றுமேடையில் இன்னும் சோதிக்கப்பட்டு வரும், பெரிய அளவில் நடவு செய்ய இன்னும் அனுமதிக்கப்படாத இளம் TRI 2043 தண்டு துண்டுகளிலிருந்து வேறுபட்டது.",
-      keyPoints:
-        "TRI 2043 இயற்கையாகவே குறைந்த விளைச்சலைக் கொண்டுள்ளது, இதனால் இதிலிருந்து தயாரிக்கப்படும் சிறப்பு தரங்கள் மிகக் குறைவான அளவிலேயே கிடைக்கின்றன. இயற்கை சான்றிதழ் பெற பொதுவாக பல ஆண்டுகள் இரசாயனங்கள் இல்லாத சாகுபடி தேவைப்படுகிறது, இந்த முழு காலத்திலும் விளைச்சல் வழக்கமான நிலங்களை விட குறைவாகவே இருக்கும்.",
+      heroTagline: "தோட்டத்திலேயே இயற்கையாக வளர்க்கப்படும் TRI 2043 தேயிலைச் செடிகளை நெருக்கமாகப் பார்ப்போம்.",
+      sectionHeadings: ["TRI 2043 — தோட்டத்தில் இயற்கையாக வளர்க்கப்படுகிறது"],
+      sectionBodies: ["இந்த தோட்டத்தில் இயற்கையாக வளர்க்கப்படும் தேயிலை இனம் TRI 2043 ஆகும், இது தேயிலை ஆராய்ச்சி நிறுவனத்தால் உருவாக்கப்பட்ட சீன வகை இனமாகும், வழக்கமான பச்சை நிறத்திற்குப் பதிலாக ஆந்தோசயனின் நிறமியால் வண்ணமிடப்பட்ட ஊதா நிற தளிரால் அறியப்படுகிறது. இங்குள்ள முதிர்ந்த TRI 2043 செடிகள், செயற்கை பூச்சிக்கொல்லிகள் அல்லது உரங்கள் இன்றி வளர்க்கப்படுகின்றன, ஏற்கனவே Golden Tip, Silver Tip, White Tea, Purple Tea, மற்றும் Pink Tea போன்ற சிறப்பு தரங்களை வழங்குகின்றன. இது தேயிலை நாற்றுமேடையில் இன்னும் சோதிக்கப்பட்டு வரும், பெரிய அளவில் நடவு செய்ய இன்னும் அனுமதிக்கப்படாத இளம் TRI 2043 தண்டு துண்டுகளிலிருந்து வேறுபட்டது. TRI 2043 இயற்கையாகவே குறைந்த விளைச்சலைக் கொண்டுள்ளது, இதனால் இதிலிருந்து தயாரிக்கப்படும் சிறப்பு தரங்கள் மிகக் குறைவான அளவிலேயே கிடைக்கின்றன. இயற்கை சான்றிதழ் பெற பொதுவாக பல ஆண்டுகள் இரசாயனங்கள் இல்லாத சாகுபடி தேவைப்படுகிறது, இந்த முழு காலத்திலும் விளைச்சல் வழக்கமான நிலங்களை விட குறைவாகவே இருக்கும்."],
       duration: "5-10 நிமிடங்கள்",
     },
     "clonal-tea": {
@@ -1528,10 +1533,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "Coltivazione di Tè Biologico",
-      description:
-        "La cultivar di tè coltivata biologicamente in questa tenuta è la TRI 2043, una cultivar di tipo cinese selezionata dal Tea Research Institute, nota per il suo germoglio color viola, colorato dal pigmento antociano anziché dal solito verde. I cespugli maturi di TRI 2043 qui, coltivati senza pesticidi né fertilizzanti sintetici, forniscono già qualità speciali come Golden Tip, Silver Tip, White Tea, Purple Tea e Pink Tea. È una cosa diversa dalle talee più giovani di TRI 2043 al Vivaio del Tè, ancora in fase di prova e non ancora autorizzate per la piantagione su larga scala.",
-      keyPoints:
-        "La TRI 2043 ha una resa naturalmente bassa, motivo per cui le qualità speciali ricavate da essa restano così limitate. La certificazione biologica richiede generalmente diversi anni di coltivazione priva di sostanze chimiche prima che un appezzamento possa essere certificato, con rese inferiori rispetto ai terreni gestiti in modo convenzionale per tutto quel periodo.",
+      heroTagline: "Uno sguardo più da vicino ai cespugli di tè TRI 2043 coltivati biologicamente dalla tenuta stessa.",
+      sectionHeadings: ["TRI 2043 — Coltivata Biologicamente nella Tenuta"],
+      sectionBodies: ["La cultivar di tè coltivata biologicamente in questa tenuta è la TRI 2043, una cultivar di tipo cinese selezionata dal Tea Research Institute, nota per il suo germoglio color viola, colorato dal pigmento antociano anziché dal solito verde. I cespugli maturi di TRI 2043 qui, coltivati senza pesticidi né fertilizzanti sintetici, forniscono già qualità speciali come Golden Tip, Silver Tip, White Tea, Purple Tea e Pink Tea. È una cosa diversa dalle talee più giovani di TRI 2043 al Vivaio del Tè, ancora in fase di prova e non ancora autorizzate per la piantagione su larga scala. La TRI 2043 ha una resa naturalmente bassa, motivo per cui le qualità speciali ricavate da essa restano così limitate. La certificazione biologica richiede generalmente diversi anni di coltivazione priva di sostanze chimiche prima che un appezzamento possa essere certificato, con rese inferiori rispetto ai terreni gestiti in modo convenzionale per tutto quel periodo."],
       duration: "5-10 minuti",
     },
     "clonal-tea": {
@@ -2009,10 +2013,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "زراعة الشاي العضوي",
-      description:
-        "صنف الشاي الذي يُزرع عضويًا في هذه المزرعة هو TRI 2043، وهو صنف من النوع الصيني ربّاه معهد أبحاث الشاي، معروف ببرعمه الأرجواني اللون الذي يكتسب لونه من صبغة الأنثوسيانين بدلاً من اللون الأخضر المعتاد. شجيرات TRI 2043 الناضجة هنا، التي تُزرع دون مبيدات أو أسمدة اصطناعية، تُزوّد بالفعل درجات خاصة مثل Golden Tip وSilver Tip وWhite Tea وPurple Tea وPink Tea. وهذا يختلف عن عقل TRI 2043 الأصغر سنًا في مشتل الشاي، التي لا تزال قيد التجربة ولم تُعتمد بعد للزراعة على نطاق واسع.",
-      keyPoints:
-        "إنتاجية صنف TRI 2043 منخفضة بطبيعتها، ولهذا تبقى الدرجات الخاصة المصنوعة منه محدودة العرض. تتطلب الشهادة العضوية عادة عدة سنوات من الزراعة الخالية من المواد الكيميائية قبل اعتماد القطعة، مع إنتاجية أقل من الأراضي التقليدية طوال تلك الفترة.",
+      heroTagline: "نظرة أقرب على شجيرات شاي TRI 2043 التي تزرعها المزرعة نفسها عضويًا.",
+      sectionHeadings: ["TRI 2043 — تُزرع عضويًا في المزرعة"],
+      sectionBodies: ["صنف الشاي الذي يُزرع عضويًا في هذه المزرعة هو TRI 2043، وهو صنف من النوع الصيني ربّاه معهد أبحاث الشاي، معروف ببرعمه الأرجواني اللون الذي يكتسب لونه من صبغة الأنثوسيانين بدلاً من اللون الأخضر المعتاد. شجيرات TRI 2043 الناضجة هنا، التي تُزرع دون مبيدات أو أسمدة اصطناعية، تُزوّد بالفعل درجات خاصة مثل Golden Tip وSilver Tip وWhite Tea وPurple Tea وPink Tea. وهذا يختلف عن عقل TRI 2043 الأصغر سنًا في مشتل الشاي، التي لا تزال قيد التجربة ولم تُعتمد بعد للزراعة على نطاق واسع. إنتاجية صنف TRI 2043 منخفضة بطبيعتها، ولهذا تبقى الدرجات الخاصة المصنوعة منه محدودة العرض. تتطلب الشهادة العضوية عادة عدة سنوات من الزراعة الخالية من المواد الكيميائية قبل اعتماد القطعة، مع إنتاجية أقل من الأراضي التقليدية طوال تلك الفترة."],
       duration: "5-10 دقائق",
     },
     "clonal-tea": {
@@ -2490,10 +2493,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "Органическое выращивание чая",
-      description:
-        "Сорт чая, который выращивается органически в этом поместье, — это TRI 2043, китайская разновидность, выведенная Институтом чайных исследований и известная фиолетовым побегом, окрашенным пигментом антоцианом вместо обычного зелёного цвета. Зрелые кусты TRI 2043 здесь, выращиваемые без синтетических пестицидов и удобрений, уже дают такие особые сорта, как Golden Tip, Silver Tip, White Tea, Purple Tea и Pink Tea. Это отличается от более молодых черенков TRI 2043 в Чайном питомнике — они всё ещё проходят испытания и пока не одобрены для посадки в промышленных масштабах.",
-      keyPoints:
-        "TRI 2043 от природы низкоурожаен, поэтому особые сорта, изготавливаемые из него, остаются столь ограниченными в поставках. Органическая сертификация обычно требует несколько лет выращивания без химикатов, прежде чем участок может быть сертифицирован, при этом урожайность на всём этом протяжении ниже, чем на обычных землях.",
+      heroTagline: "Более близкий взгляд на собственные органически выращиваемые кусты чая TRI 2043 поместья.",
+      sectionHeadings: ["TRI 2043 — выращивается органически в поместье"],
+      sectionBodies: ["Сорт чая, который выращивается органически в этом поместье, — это TRI 2043, китайская разновидность, выведенная Институтом чайных исследований и известная фиолетовым побегом, окрашенным пигментом антоцианом вместо обычного зелёного цвета. Зрелые кусты TRI 2043 здесь, выращиваемые без синтетических пестицидов и удобрений, уже дают такие особые сорта, как Golden Tip, Silver Tip, White Tea, Purple Tea и Pink Tea. Это отличается от более молодых черенков TRI 2043 в Чайном питомнике — они всё ещё проходят испытания и пока не одобрены для посадки в промышленных масштабах. TRI 2043 от природы низкоурожаен, поэтому особые сорта, изготавливаемые из него, остаются столь ограниченными в поставках. Органическая сертификация обычно требует несколько лет выращивания без химикатов, прежде чем участок может быть сертифицирован, при этом урожайность на всём этом протяжении ниже, чем на обычных землях."],
       duration: "5–10 минут",
     },
     "clonal-tea": {
@@ -2971,10 +2973,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "Biologischer Teeanbau",
-      description:
-        "Die hier biologisch angebaute Teesorte ist TRI 2043, eine chinesische Sorte, gezüchtet vom Tea Research Institute und bekannt für ihren violetten Trieb, der durch das Pigment Anthocyan statt des üblichen Grüns gefärbt wird. Ausgewachsene TRI-2043-Sträucher hier, angebaut ohne synthetische Pestizide oder Dünger, liefern bereits Spezialsorten wie Golden Tip, Silver Tip, White Tea, Purple Tea und Pink Tea. Das ist etwas anderes als die jüngeren TRI-2043-Stecklinge in der Tee-Baumschule — die werden noch erprobt und sind noch nicht für den großflächigen Anbau freigegeben.",
-      keyPoints:
-        "TRI 2043 liefert von Natur aus einen niedrigen Ertrag, weshalb die daraus hergestellten Spezialsorten so begrenzt verfügbar bleiben. Für eine Bio-Zertifizierung sind in der Regel mehrere Jahre chemikalienfreier Anbau erforderlich, bevor eine Fläche zertifiziert werden kann, wobei der Ertrag während dieser ganzen Zeit niedriger ausfällt als auf konventionell bewirtschafteten Flächen.",
+      heroTagline: "Ein genauerer Blick auf die eigenen, biologisch angebauten TRI-2043-Teesträucher des Anwesens.",
+      sectionHeadings: ["TRI 2043 — Biologisch Angebaut auf dem Anwesen"],
+      sectionBodies: ["Die hier biologisch angebaute Teesorte ist TRI 2043, eine chinesische Sorte, gezüchtet vom Tea Research Institute und bekannt für ihren violetten Trieb, der durch das Pigment Anthocyan statt des üblichen Grüns gefärbt wird. Ausgewachsene TRI-2043-Sträucher hier, angebaut ohne synthetische Pestizide oder Dünger, liefern bereits Spezialsorten wie Golden Tip, Silver Tip, White Tea, Purple Tea und Pink Tea. Das ist etwas anderes als die jüngeren TRI-2043-Stecklinge in der Tee-Baumschule — die werden noch erprobt und sind noch nicht für den großflächigen Anbau freigegeben. TRI 2043 liefert von Natur aus einen niedrigen Ertrag, weshalb die daraus hergestellten Spezialsorten so begrenzt verfügbar bleiben. Für eine Bio-Zertifizierung sind in der Regel mehrere Jahre chemikalienfreier Anbau erforderlich, bevor eine Fläche zertifiziert werden kann, wobei der Ertrag während dieser ganzen Zeit niedriger ausfällt als auf konventionell bewirtschafteten Flächen."],
       duration: "5-10 Minuten",
     },
     "clonal-tea": {
@@ -3452,10 +3453,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "Cultivo de Té Orgánico",
-      description:
-        "La variedad de té que se cultiva de forma orgánica en esta finca es la TRI 2043, una variedad de tipo chino criada por el Tea Research Institute, conocida por su brote de color púrpura, coloreado por el pigmento antocianina en lugar del verde habitual. Los arbustos maduros de TRI 2043 aquí, cultivados sin pesticidas ni fertilizantes sintéticos, ya suministran grados especiales como Golden Tip, Silver Tip, White Tea, Purple Tea y Pink Tea. Eso es distinto de los esquejes más jóvenes de TRI 2043 en el Vivero de Té, que todavía se están probando y aún no han sido autorizados para plantarse a gran escala.",
-      keyPoints:
-        "La TRI 2043 tiene un rendimiento naturalmente bajo, por lo que los grados especiales elaborados a partir de ella siguen siendo tan limitados. La certificación orgánica generalmente requiere varios años de cultivo libre de químicos antes de que una parcela pueda certificarse, con rendimientos menores que en terrenos de manejo convencional durante todo ese tiempo.",
+      heroTagline: "Una mirada más de cerca a los propios arbustos de té TRI 2043 cultivados orgánicamente por la finca.",
+      sectionHeadings: ["TRI 2043 — Cultivada Orgánicamente en la Finca"],
+      sectionBodies: ["La variedad de té que se cultiva de forma orgánica en esta finca es la TRI 2043, una variedad de tipo chino criada por el Tea Research Institute, conocida por su brote de color púrpura, coloreado por el pigmento antocianina en lugar del verde habitual. Los arbustos maduros de TRI 2043 aquí, cultivados sin pesticidas ni fertilizantes sintéticos, ya suministran grados especiales como Golden Tip, Silver Tip, White Tea, Purple Tea y Pink Tea. Eso es distinto de los esquejes más jóvenes de TRI 2043 en el Vivero de Té, que todavía se están probando y aún no han sido autorizados para plantarse a gran escala. La TRI 2043 tiene un rendimiento naturalmente bajo, por lo que los grados especiales elaborados a partir de ella siguen siendo tan limitados. La certificación orgánica generalmente requiere varios años de cultivo libre de químicos antes de que una parcela pueda certificarse, con rendimientos menores que en terrenos de manejo convencional durante todo ese tiempo."],
       duration: "5-10 minutos",
     },
     "clonal-tea": {
@@ -3933,10 +3933,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "Culture de Thé Biologique",
-      description:
-        "Le cultivar de thé cultivé biologiquement dans ce domaine est le TRI 2043, un cultivar de type chinois créé par le Tea Research Institute, connu pour son bourgeon violet, coloré par le pigment anthocyane plutôt que par le vert habituel. Les théiers TRI 2043 matures ici, cultivés sans pesticides ni engrais synthétiques, fournissent déjà des qualités spéciales comme le Golden Tip, le Silver Tip, le White Tea, le Purple Tea et le Pink Tea. C'est différent des boutures de TRI 2043 plus jeunes à la Pépinière de Thé, qui sont encore à l'essai et n'ont pas encore été validées pour une plantation à grande échelle.",
-      keyPoints:
-        "Le TRI 2043 a un rendement naturellement faible, ce qui explique pourquoi les qualités spéciales qui en sont issues restent si limitées. La certification biologique nécessite généralement plusieurs années de culture sans produits chimiques avant qu'une parcelle puisse être certifiée, avec des rendements plus faibles que sur des terres cultivées de manière conventionnelle pendant toute cette période.",
+      heroTagline: "Un regard plus attentif sur les propres théiers TRI 2043 du domaine, cultivés biologiquement.",
+      sectionHeadings: ["TRI 2043 — Cultivé Biologiquement sur le Domaine"],
+      sectionBodies: ["Le cultivar de thé cultivé biologiquement dans ce domaine est le TRI 2043, un cultivar de type chinois créé par le Tea Research Institute, connu pour son bourgeon violet, coloré par le pigment anthocyane plutôt que par le vert habituel. Les théiers TRI 2043 matures ici, cultivés sans pesticides ni engrais synthétiques, fournissent déjà des qualités spéciales comme le Golden Tip, le Silver Tip, le White Tea, le Purple Tea et le Pink Tea. C'est différent des boutures de TRI 2043 plus jeunes à la Pépinière de Thé, qui sont encore à l'essai et n'ont pas encore été validées pour une plantation à grande échelle. Le TRI 2043 a un rendement naturellement faible, ce qui explique pourquoi les qualités spéciales qui en sont issues restent si limitées. La certification biologique nécessite généralement plusieurs années de culture sans produits chimiques avant qu'une parcelle puisse être certifiée, avec des rendements plus faibles que sur des terres cultivées de manière conventionnelle pendant toute cette période."],
       duration: "5-10 minutes",
     },
     "clonal-tea": {
@@ -4414,10 +4413,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "有机茶种植",
-      description:
-        "这座庄园以有机方式种植的茶树品种是TRI 2043，一种由茶叶研究所培育的中国型品种，以紫色嫩芽著称，这种颜色来自花青素色素，而非通常的绿色。这里不使用合成农药或化肥种植的成熟TRI 2043茶树，已经在供应金毫（Golden Tip）、银毫（Silver Tip）、白茶（White Tea）、紫茶（Purple Tea）和粉茶（Pink Tea）等特色茶品。这与茶叶苗圃里较年幼的TRI 2043插条不同，那些插条仍在试种阶段，尚未获批大规模种植。",
-      keyPoints:
-        "TRI 2043天生产量偏低，这也是由它制成的特色茶品产量如此稀少的原因。有机认证通常需要连续数年无化学品种植才能获得认证，在此期间产量始终低于常规管理的茶园。",
+      heroTagline: "近距离了解庄园自家有机种植的TRI 2043茶树。",
+      sectionHeadings: ["TRI 2043——庄园的有机种植"],
+      sectionBodies: ["这座庄园以有机方式种植的茶树品种是TRI 2043，一种由茶叶研究所培育的中国型品种，以紫色嫩芽著称，这种颜色来自花青素色素，而非通常的绿色。这里不使用合成农药或化肥种植的成熟TRI 2043茶树，已经在供应金毫（Golden Tip）、银毫（Silver Tip）、白茶（White Tea）、紫茶（Purple Tea）和粉茶（Pink Tea）等特色茶品。这与茶叶苗圃里较年幼的TRI 2043插条不同，那些插条仍在试种阶段，尚未获批大规模种植。TRI 2043天生产量偏低，这也是由它制成的特色茶品产量如此稀少的原因。有机认证通常需要连续数年无化学品种植才能获得认证，在此期间产量始终低于常规管理的茶园。"],
       duration: "5-10分钟",
     },
     "clonal-tea": {
@@ -4895,10 +4893,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "organic-cultivation": {
       name: "オーガニック茶栽培",
-      description:
-        "この農園で有機栽培されている茶品種はTRI 2043です。茶業研究所によって育成された中国系の品種で、通常の緑色ではなく、アントシアニン色素によって紫色に染まった新芽で知られています。合成農薬や化学肥料を使わずに栽培されているここの成熟したTRI 2043の木は、すでにゴールデンティップス、シルバーティップス、ホワイトティー、パープルティー、ピンクティーといった特選等級を供給しています。これは茶の苗床にあるより若いTRI 2043の挿し木とは異なり、そちらはまだ試験段階で、大規模な植え付けはまだ承認されていません。",
-      keyPoints:
-        "TRI 2043はもともと収量が少ない品種で、そのためこの品種から作られる特選等級の供給はこれほど限られています。有機認証を得るには通常、数年間の無化学栽培が必要で、その間ずっと収穫量は慣行栽培の農地より少なくなります。",
+      heroTagline: "農園自身が有機栽培しているTRI 2043の茶の木を詳しく見てみましょう。",
+      sectionHeadings: ["TRI 2043——農園で有機栽培"],
+      sectionBodies: ["この農園で有機栽培されている茶品種はTRI 2043です。茶業研究所によって育成された中国系の品種で、通常の緑色ではなく、アントシアニン色素によって紫色に染まった新芽で知られています。合成農薬や化学肥料を使わずに栽培されているここの成熟したTRI 2043の木は、すでにゴールデンティップス、シルバーティップス、ホワイトティー、パープルティー、ピンクティーといった特選等級を供給しています。これは茶の苗床にあるより若いTRI 2043の挿し木とは異なり、そちらはまだ試験段階で、大規模な植え付けはまだ承認されていません。TRI 2043はもともと収量が少ない品種で、そのためこの品種から作られる特選等級の供給はこれほど限られています。有機認証を得るには通常、数年間の無化学栽培が必要で、その間ずっと収穫量は慣行栽培の農地より少なくなります。"],
       duration: "5〜10分",
     },
     "clonal-tea": {
