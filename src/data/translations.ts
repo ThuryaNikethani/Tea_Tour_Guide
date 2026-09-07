@@ -111,6 +111,14 @@ import type { StationTranslation } from "./stations";
  * two real photos (a shade-tree signboard and a labelled Albizia). Each
  * language's existing description/keyPoints text was merged unchanged
  * into sectionBodies[0].
+ *
+ * "pruning" was converted the same way, same day, in every language, to
+ * carry two real photos of the estate's own pruning-stage signs. Unlike
+ * organic-cultivation/shade-management, this one also gained new content
+ * in every language: a translated sentence naming the two cross-cut
+ * stages and their signed height ranges (9-12in/22-30cm, then
+ * 16-18in/40-45cm), inserted between the existing description and
+ * keyPoints text rather than replacing either.
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -858,8 +866,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "කප්පාදුව",
-      description: "කප්පාදුව කිරීමට පෙර, වහාම කැපීම වෙනුවට, වතුයාය හිතාමතාම තේ පඳුර යම් කාලයක් වර්ධනය වීමට ඉඩ හරියි — අලුත් වර්ධනය සම්පූර්ණයෙන් එන්නට ඉඩ දී, පඳුරට පෝෂණය රැස් කර ගැනීමට ඉඩ සලසයි. එම රැස්වීම සම්පූර්ණ වූ පසුව පමණක් කප්පාදුව ආරම්භ කරයි, එවිට පඳුර දණහිස උසට පමණ කපා දමනු ලැබේ.",
-      keyPoints: "තත්ත්වය නොසලකා නිශ්චිත කාලසටහනකට කප්පාදු කිරීම වෙනුවට, පළමුව පඳුරට වර්ධනය වීමට ඉඩ දීම, කැපීමට පෙර පෝෂණය උඩට ගෙන යාමට ශාකයට කාලය ලබා දෙයි.",
+      heroTagline: "වතුයායේම කප්පාදු අදියර දෙකම සලකුණු කරන එහිම දර්ශන ලකුණු.",
+      sectionHeadings: ["කප්පාදුව"],
+      sectionBodies: ["කප්පාදුව කිරීමට පෙර, වහාම කැපීම වෙනුවට, වතුයාය හිතාමතාම තේ පඳුර යම් කාලයක් වර්ධනය වීමට ඉඩ හරියි — අලුත් වර්ධනය සම්පූර්ණයෙන් එන්නට ඉඩ දී, පඳුරට පෝෂණය රැස් කර ගැනීමට ඉඩ සලසයි. එම රැස්වීම සම්පූර්ණ වූ පසුව පමණක් කප්පාදුව ආරම්භ කරයි, එවිට පඳුර දණහිස උසට පමණ කපා දමනු ලැබේ. වතුයායේ දර්ශන ලකුණු මෙය නම් කරන ලද අදියර දෙකක් ලෙස පෙන්වයි — පළමු හරස් කැපුමේදී පඳුර අඟල් 9-12ක් (සෙ.මී. 22-30) දක්වා කපනු ලබන අතර, දෙවන හරස් කැපුමේදී එය නැවත අඟල් 16-18ක් (සෙ.මී. 40-45) දක්වා වර්ධනය වීමට ඉඩ හරිනු ලැබේ. තත්ත්වය නොසලකා නිශ්චිත කාලසටහනකට කප්පාදු කිරීම වෙනුවට, පළමුව පඳුරට වර්ධනය වීමට ඉඩ දීම, කැපීමට පෙර පෝෂණය උඩට ගෙන යාමට ශාකයට කාලය ලබා දෙයි."],
       duration: "මිනිත්තු 5",
     },
     polytunnel: {
@@ -1347,8 +1356,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "கத்தரித்தல்",
-      description: "கத்தரிப்பதற்கு முன், உடனடியாக வெட்டுவதற்குப் பதிலாக, தோட்டம் வேண்டுமென்றே தேயிலைப் புதரை ஒரு காலத்திற்கு வளர விடுகிறது — புதிய வளர்ச்சி முழுமையாக வர அனுமதித்து, புதர் ஊட்டச்சத்தை சேகரிக்க வைக்கிறது. அந்த சேகரிப்பு முழுமையானதும் மட்டுமே கத்தரித்தல் தொடங்குகிறது, புதரை தோராயமாக முழங்கால் உயரத்திற்கு வெட்டுகிறது.",
-      keyPoints: "நிலைமையைப் பொருட்படுத்தாமல் ஒரு நிலையான அட்டவணையில் கத்தரிப்பதற்குப் பதிலாக, முதலில் புதரை வளர விடுவது, வெட்டப்படுவதற்கு முன் ஊட்டச்சத்தை மேலே செலுத்த தாவரத்திற்கு நேரம் அளிக்கிறது.",
+      heroTagline: "தோட்டத்தின் சொந்த இரண்டு கத்தரிப்பு நிலைகளையும் குறிக்கும் அதன் சொந்த அறிவிப்புப் பலகைகள்.",
+      sectionHeadings: ["கத்தரித்தல்"],
+      sectionBodies: ["கத்தரிப்பதற்கு முன், உடனடியாக வெட்டுவதற்குப் பதிலாக, தோட்டம் வேண்டுமென்றே தேயிலைப் புதரை ஒரு காலத்திற்கு வளர விடுகிறது — புதிய வளர்ச்சி முழுமையாக வர அனுமதித்து, புதர் ஊட்டச்சத்தை சேகரிக்க வைக்கிறது. அந்த சேகரிப்பு முழுமையானதும் மட்டுமே கத்தரித்தல் தொடங்குகிறது, புதரை தோராயமாக முழங்கால் உயரத்திற்கு வெட்டுகிறது. இடத்திலேயே உள்ள அறிவிப்புப் பலகைகள் இதை பெயரிடப்பட்ட இரண்டு நிலைகளாகக் காட்டுகின்றன — முதல் குறுக்கு வெட்டின் (பலமு ஹரஸ் கபும) போது புதர் சுமார் 9-12 அங்குலம் (22-30 செ.மீ.) அளவுக்கு வெட்டப்படுகிறது, இரண்டாவது குறுக்கு வெட்டின் (தேவன ஹரஸ் கபும) போது அது மீண்டும் சுமார் 16-18 அங்குலம் (40-45 செ.மீ.) அளவுக்கு வளர விடப்படுகிறது. நிலைமையைப் பொருட்படுத்தாமல் ஒரு நிலையான அட்டவணையில் கத்தரிப்பதற்குப் பதிலாக, முதலில் புதரை வளர விடுவது, வெட்டப்படுவதற்கு முன் ஊட்டச்சத்தை மேலே செலுத்த தாவரத்திற்கு நேரம் அளிக்கிறது."],
       duration: "5 நிமிடங்கள்",
     },
     polytunnel: {
@@ -1836,8 +1846,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "Potatura",
-      description: "Prima della potatura, la tenuta lascia deliberatamente crescere la pianta di tè per un periodo anziché tagliarla subito — lasciando che la nuova crescita si sviluppi completamente in modo che la pianta accumuli nutrimento. Solo una volta completato questo accumulo inizia la potatura, che taglia la pianta fino a un'altezza di circa il ginocchio.",
-      keyPoints: "Lasciare prima crescere la pianta, anziché potarla secondo un programma fisso indipendentemente dalle condizioni, dà alla pianta il tempo di convogliare il nutrimento verso l'alto prima di essere tagliata.",
+      heroTagline: "I cartelli in loco della tenuta che segnano le sue due fasi di potatura.",
+      sectionHeadings: ["Potatura"],
+      sectionBodies: ["Prima della potatura, la tenuta lascia deliberatamente crescere la pianta di tè per un periodo anziché tagliarla subito — lasciando che la nuova crescita si sviluppi completamente in modo che la pianta accumuli nutrimento. Solo una volta completato questo accumulo inizia la potatura, che taglia la pianta fino a un'altezza di circa il ginocchio. I cartelli in loco indicano questo come due fasi denominate: il primo taglio incrociato (Palamu Haras Kapuma) porta il cespuglio a circa 9-12 pollici (22-30 cm), e il secondo taglio incrociato (Dewana Haras Kapuma) lo riporta a circa 16-18 pollici (40-45 cm). Lasciare prima crescere la pianta, anziché potarla secondo un programma fisso indipendentemente dalle condizioni, dà alla pianta il tempo di convogliare il nutrimento verso l'alto prima di essere tagliata."],
       duration: "5 minuti",
     },
     polytunnel: {
@@ -2325,8 +2336,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "التقليم",
-      description: "قبل التقليم، تترك المزرعة شجيرة الشاي عمدًا لتنمو لفترة بدلاً من تقليمها فورًا — بحيث يكتمل النمو الجديد تمامًا لتتمكن الشجيرة من تجميع الغذاء. ولا يبدأ التقليم إلا بعد اكتمال هذا التجمع، حيث تُقلَّم الشجيرة حتى ارتفاع الركبة تقريبًا.",
-      keyPoints: "ترك الشجيرة تنمو أولًا، بدلاً من تقليمها وفق جدول ثابت بغض النظر عن حالتها، يمنح النبات وقتًا لتوجيه الغذاء إلى الأعلى قبل تقليمه.",
+      heroTagline: "لافتات المزرعة الخاصة التي تحدد مرحلتي التقليم لديها.",
+      sectionHeadings: ["التقليم"],
+      sectionBodies: ["قبل التقليم، تترك المزرعة شجيرة الشاي عمدًا لتنمو لفترة بدلاً من تقليمها فورًا — بحيث يكتمل النمو الجديد تمامًا لتتمكن الشجيرة من تجميع الغذاء. ولا يبدأ التقليم إلا بعد اكتمال هذا التجمع، حيث تُقلَّم الشجيرة حتى ارتفاع الركبة تقريبًا. تُظهر اللافتات الموجودة في الموقع هذا الأمر كمرحلتين مسمّاتين: يخفض القطع المتقاطع الأول (Palamu Haras Kapuma) الشجيرة إلى حوالي 9-12 بوصة (22-30 سم)، بينما يعيد القطع المتقاطع الثاني (Dewana Haras Kapuma) ارتفاعها إلى حوالي 16-18 بوصة (40-45 سم). ترك الشجيرة تنمو أولًا، بدلاً من تقليمها وفق جدول ثابت بغض النظر عن حالتها، يمنح النبات وقتًا لتوجيه الغذاء إلى الأعلى قبل تقليمه."],
       duration: "5 دقائق",
     },
     polytunnel: {
@@ -2814,8 +2826,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "Обрезка",
-      description: "Перед обрезкой поместье намеренно оставляет чайный куст расти в течение некоторого времени, вместо того чтобы сразу его обрезать — новому приросту дают полностью развиться, чтобы куст накопил питательные вещества. Обрезка начинается только после того, как это накопление завершено, и куст обрезают примерно до высоты колена.",
-      keyPoints: "Позволяя кусту сначала подрасти, а не обрезая его по фиксированному графику независимо от состояния, растению дают время направить питательные вещества вверх перед обрезкой.",
+      heroTagline: "Собственные таблички поместья, отмечающие два этапа обрезки.",
+      sectionHeadings: ["Обрезка"],
+      sectionBodies: ["Перед обрезкой поместье намеренно оставляет чайный куст расти в течение некоторого времени, вместо того чтобы сразу его обрезать — новому приросту дают полностью развиться, чтобы куст накопил питательные вещества. Обрезка начинается только после того, как это накопление завершено, и куст обрезают примерно до высоты колена. Таблички на месте отмечают это как два поименованных этапа: первая перекрёстная обрезка (Palamu Haras Kapuma) снижает куст примерно до 9-12 дюймов (22-30 см), а вторая перекрёстная обрезка (Dewana Haras Kapuma) снова поднимает его примерно до 16-18 дюймов (40-45 см). Позволяя кусту сначала подрасти, а не обрезая его по фиксированному графику независимо от состояния, растению дают время направить питательные вещества вверх перед обрезкой."],
       duration: "5 минут",
     },
     polytunnel: {
@@ -3303,8 +3316,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "Beschneiden",
-      description: "Vor dem Beschneiden lässt das Anwesen den Teestrauch bewusst eine Zeit lang weiterwachsen, anstatt ihn sofort zurückzuschneiden — der neue Trieb darf sich vollständig entwickeln, damit der Strauch Nährstoffe aufbaut. Erst wenn dieser Aufbau abgeschlossen ist, beginnt das Beschneiden, bei dem der Strauch auf etwa Kniehöhe zurückgeschnitten wird.",
-      keyPoints: "Den Strauch zunächst wachsen zu lassen, anstatt ihn nach einem festen Zeitplan unabhängig vom Zustand zu beschneiden, gibt der Pflanze Zeit, Nährstoffe nach oben zu leiten, bevor sie zurückgeschnitten wird.",
+      heroTagline: "Die eigenen Schilder des Anwesens, die seine beiden Rückschnittstufen markieren.",
+      sectionHeadings: ["Beschneiden"],
+      sectionBodies: ["Vor dem Beschneiden lässt das Anwesen den Teestrauch bewusst eine Zeit lang weiterwachsen, anstatt ihn sofort zurückzuschneiden — der neue Trieb darf sich vollständig entwickeln, damit der Strauch Nährstoffe aufbaut. Erst wenn dieser Aufbau abgeschlossen ist, beginnt das Beschneiden, bei dem der Strauch auf etwa Kniehöhe zurückgeschnitten wird. Schilder vor Ort kennzeichnen dies als zwei benannte Stufen: Der erste Kreuzschnitt (Palamu Haras Kapuma) bringt den Strauch auf etwa 9-12 Zoll (22-30 cm) herunter, und der zweite Kreuzschnitt (Dewana Haras Kapuma) lässt ihn wieder auf etwa 16-18 Zoll (40-45 cm) heranwachsen. Den Strauch zunächst wachsen zu lassen, anstatt ihn nach einem festen Zeitplan unabhängig vom Zustand zu beschneiden, gibt der Pflanze Zeit, Nährstoffe nach oben zu leiten, bevor sie zurückgeschnitten wird."],
       duration: "5 Minuten",
     },
     polytunnel: {
@@ -3792,8 +3806,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "Poda",
-      description: "Antes de la poda, la finca deja deliberadamente que el arbusto de té crezca durante un tiempo en lugar de cortarlo de inmediato — dejando que el nuevo crecimiento se desarrolle por completo para que el arbusto acumule nutrientes. Solo una vez completada esa acumulación comienza la poda, que corta el arbusto hasta una altura aproximada de la rodilla.",
-      keyPoints: "Dejar que el arbusto crezca primero, en lugar de podarlo según un calendario fijo sin importar su estado, le da a la planta tiempo para dirigir los nutrientes hacia arriba antes de ser cortada.",
+      heroTagline: "Los propios carteles de la finca que señalan sus dos etapas de poda.",
+      sectionHeadings: ["Poda"],
+      sectionBodies: ["Antes de la poda, la finca deja deliberadamente que el arbusto de té crezca durante un tiempo en lugar de cortarlo de inmediato — dejando que el nuevo crecimiento se desarrolle por completo para que el arbusto acumule nutrientes. Solo una vez completada esa acumulación comienza la poda, que corta el arbusto hasta una altura aproximada de la rodilla. Los carteles del propio lugar marcan esto como dos etapas con nombre: el primer corte cruzado (Palamu Haras Kapuma) baja el arbusto a unas 9-12 pulgadas (22-30 cm), y el segundo corte cruzado (Dewana Haras Kapuma) lo deja crecer de nuevo hasta unas 16-18 pulgadas (40-45 cm). Dejar que el arbusto crezca primero, en lugar de podarlo según un calendario fijo sin importar su estado, le da a la planta tiempo para dirigir los nutrientes hacia arriba antes de ser cortada."],
       duration: "5 minutos",
     },
     polytunnel: {
@@ -4281,8 +4296,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "Taille",
-      description: "Avant la taille, le domaine laisse délibérément le théier pousser pendant un certain temps plutôt que de le couper immédiatement — en laissant la nouvelle pousse se développer pleinement afin que l'arbuste accumule des réserves nutritives. La taille ne commence qu'une fois cette accumulation terminée, en coupant l'arbuste jusqu'à une hauteur d'environ le genou.",
-      keyPoints: "Laisser d'abord l'arbuste pousser, plutôt que de le tailler selon un calendrier fixe sans tenir compte de son état, donne à la plante le temps d'acheminer les nutriments vers le haut avant d'être coupée.",
+      heroTagline: "Les propres panneaux du domaine, marquant ses deux étapes de taille.",
+      sectionHeadings: ["Taille"],
+      sectionBodies: ["Avant la taille, le domaine laisse délibérément le théier pousser pendant un certain temps plutôt que de le couper immédiatement — en laissant la nouvelle pousse se développer pleinement afin que l'arbuste accumule des réserves nutritives. La taille ne commence qu'une fois cette accumulation terminée, en coupant l'arbuste jusqu'à une hauteur d'environ le genou. Des panneaux sur place identifient cela comme deux étapes nommées : la première coupe croisée (Palamu Haras Kapuma) ramène le théier à environ 9-12 pouces (22-30 cm), et la seconde coupe croisée (Dewana Haras Kapuma) le laisse repousser jusqu'à environ 16-18 pouces (40-45 cm). Laisser d'abord l'arbuste pousser, plutôt que de le tailler selon un calendrier fixe sans tenir compte de son état, donne à la plante le temps d'acheminer les nutriments vers le haut avant d'être coupée."],
       duration: "5 minutes",
     },
     polytunnel: {
@@ -4770,8 +4786,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "修剪",
-      description: "在修剪之前，庄园会特意让茶树先生长一段时间，而不是立刻剪短——让新梢充分长出，使茶树积累养分。只有在这种养分积累完成之后，才会开始修剪，将茶树剪至大约膝盖的高度。",
-      keyPoints: "让茶树先自然生长，而不是不顾其状态按固定时间表修剪，可以让茶树有时间在被剪短之前把养分向上输送。",
+      heroTagline: "庄园自家的标牌，标示出其两个修剪阶段。",
+      sectionHeadings: ["修剪"],
+      sectionBodies: ["在修剪之前，庄园会特意让茶树先生长一段时间，而不是立刻剪短——让新梢充分长出，使茶树积累养分。只有在这种养分积累完成之后，才会开始修剪，将茶树剪至大约膝盖的高度。现场的标牌将其标注为两个命名阶段：第一次十字修剪（Palamu Haras Kapuma）将茶丛剪至约9-12英寸（22-30厘米），第二次十字修剪（Dewana Haras Kapuma）则让它重新长到约16-18英寸（40-45厘米）。让茶树先自然生长，而不是不顾其状态按固定时间表修剪，可以让茶树有时间在被剪短之前把养分向上输送。"],
       duration: "5分钟",
     },
     polytunnel: {
@@ -5259,8 +5276,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     pruning: {
       name: "剪定",
-      description: "剪定を行う前に、農園ではすぐに刈り込むのではなく、あえて一定期間茶樹を伸ばすままにしておきます——新しい芽が十分に育つようにすることで、茶樹に養分を蓄えさせるためです。この養分の蓄積が完了して初めて剪定が始まり、茶樹はおよそ膝の高さまで刈り込まれます。",
-      keyPoints: "状態に関係なく決まった予定で剪定するのではなく、まず茶樹を伸ばすままにしておくことで、刈り込まれる前に養分を上へ送る時間を植物に与えます。",
+      heroTagline: "この農園自前の看板で、二つの剪定段階を示しています。",
+      sectionHeadings: ["剪定"],
+      sectionBodies: ["剪定を行う前に、農園ではすぐに刈り込むのではなく、あえて一定期間茶樹を伸ばすままにしておきます——新しい芽が十分に育つようにすることで、茶樹に養分を蓄えさせるためです。この養分の蓄積が完了して初めて剪定が始まり、茶樹はおよそ膝の高さまで刈り込まれます。現地の看板では、これを2つの名前の付いた段階として示しています——第一次十字剪定（Palamu Haras Kapuma）で茶樹は約9〜12インチ（22〜30cm）まで切り詰められ、第二次十字剪定（Dewana Haras Kapuma）で再び約16〜18インチ（40〜45cm）まで伸びるのを待ちます。状態に関係なく決まった予定で剪定するのではなく、まず茶樹を伸ばすままにしておくことで、刈り込まれる前に養分を上へ送る時間を植物に与えます。"],
       duration: "5分",
     },
     polytunnel: {
