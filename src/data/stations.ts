@@ -215,6 +215,12 @@ import highShadeAlbiziaImg from "../assets/shade-management/high-shade-albizia.j
 // height. See the provenance note near the "pruning" station below.
 import firstCrossCutSignImg from "../assets/pruning/first-cross-cut-sign.jpg";
 import secondCrossCutSignImg from "../assets/pruning/second-cross-cut-sign.jpg";
+// Real, user-supplied photos of the estate's own two tea-grade signs
+// (background removed with AI, then cropped in to the poster itself,
+// same as the pruning signs) — "Artisanal Tea Grades" and "Low Grown
+// Tea Grades". See the provenance note near the "sorting" station below.
+import artisanalTeaGradesSignImg from "../assets/sorting/artisanal-tea-grades-sign.jpg";
+import lowGrownTeaGradesSignImg from "../assets/sorting/low-grown-tea-grades-sign.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -474,6 +480,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * the body alongside the existing "roughly knee height" description
  * rather than replacing it, since knee height is consistent with the
  * signs' own 16-18in target.
+ * "sorting" was likewise converted on 2026-09-07 to carry two of the
+ * user's own tea-grade signs — "Low Grown Tea Grades" (FBOPF/BOP/Pekoe/
+ * Dust and the rest of the grades already named in this station's own
+ * text) and "Artisanal Tea Grades" (Golden Tip/Silver Tip/White/Purple/
+ * Pink Tea, matching the "artisanal-tea-grades" station). Both photos had
+ * their background removed with AI before being supplied, then cropped
+ * in tighter to the poster itself; confirmed by the user to be real
+ * on-site signage rather than a synthetic illustration. Existing
+ * description/keyPoints merged unchanged into one section body.
  * On 2026-09-01 the user supplied a transcript of a full guided walkthrough
  * of the main factory floor, which upgraded six stations at once —
  * "tea-factory" (the overview), "withering", "rolling", "fermentation",
@@ -1193,11 +1208,16 @@ export const STATIONS: Station[] = [
     shortName: "Sort",
     icon: "Filter",
     verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse. That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong. Sieves of different mesh sizes further separate particles by size over several passes, and an electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside — none of this colour or character comes from dyes or additives, only natural processing.",
-    keyPoints:
-      "Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
+    lastVerified: "2026-09-07",
+    heroTagline: "The estate's own tea-grade signs, laying out how each grade is classified.",
+    sections: [
+      {
+        heading: "Sorting & Grading",
+        image: [lowGrownTeaGradesSignImg, artisanalTeaGradesSignImg],
+        imageFit: "contain",
+        body: "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse. That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong. Sieves of different mesh sizes further separate particles by size over several passes, and an electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside — none of this colour or character comes from dyes or additives, only natural processing. Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
+      },
+    ],
     duration: "Sorting runs continuously on machinery and takes roughly 30 to 45 minutes per batch.",
   },
   {
