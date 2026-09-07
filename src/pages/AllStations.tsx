@@ -116,7 +116,7 @@ export function AllStations() {
           )}
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-5 items-start">
+        <div className="grid sm:grid-cols-2 gap-5 items-stretch">
           {STATIONS.map((station) => {
             const localized = localizeStation(station, language);
             const Icon = STATION_ICONS[station.icon] ?? Sprout;
