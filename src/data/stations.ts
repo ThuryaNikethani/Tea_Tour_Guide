@@ -576,7 +576,17 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * "mushroom-hut" gained a real `processVideo` the same day — a WhatsApp
  * video (portrait, 480x816, 9.8s, ~1.2MB, already silent), re-encoded for
  * faststart to ~698KB. Same plain-shape treatment and rendering as the
- * others; `verified` and description/keyPoints left untouched.
+ * others; `verified` and description/keyPoints left untouched. Since this
+ * was the first portrait process video, the shared video styling in
+ * StationDetail.tsx was changed from a hard `w-full` (which stretched it
+ * to the full content width and made it render far too tall) to
+ * `max-w-full max-h-[70vh] mx-auto` — landscape videos still fill the
+ * content column exactly as before, portrait ones are now capped by
+ * height and centered instead.
+ * "drying" gained a real `processVideo` the same day — a WhatsApp video
+ * of the firing stage, already silent (1072x576, 38s, ~4.8MB), re-encoded
+ * only for faststart (size essentially unchanged, already efficient).
+ * Same plain-shape treatment and rendering as the others.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -1997,11 +2007,12 @@ export const STATIONS: Station[] = [
     shortName: "Dry",
     icon: "Flame",
     verified: true,
-    lastVerified: "2026-09-01",
+    lastVerified: "2026-09-07",
     description:
       "The oxidised leaf passes through hot-air dryers — reportedly running at around 240°C — that halt oxidation instantly and lock in the tea's character. What comes out the other end is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
     keyPoints:
       "Firing stops the chemical changes at exactly the right moment and reduces moisture from around 45-50% down to about 2-3%, which is essential for the tea to stay fresh during storage and shipping.",
+    processVideo: "/videos/drying-process.mp4",
     duration: "Leaf passes through the dryer in around 20 minutes at carefully controlled temperatures.",
   },
   {
