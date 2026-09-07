@@ -238,6 +238,11 @@ import gradeYieldDiagramImg from "../assets/sorting/grade-yield-diagram.jpg";
 // radish) and the misting system in use. See the provenance note near
 // the "polytunnel" station below.
 import polytunnelInteriorImg from "../assets/polytunnel/polytunnel-interior.jpg";
+// Real, user-supplied photos of visitors hand-plucking tea in the
+// estate's own garden, wearing the traditional back-carried plucking
+// basket. See the provenance note near the "plucking" station below.
+import pluckerWithBasketImg from "../assets/plucking/plucker-with-basket.jpg";
+import pluckingGroupImg from "../assets/plucking/plucking-group.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -495,6 +500,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * treatments used elsewhere, per the user's request not to change this
  * station's existing layout. Existing description/keyPoints merged
  * unchanged into one section body; no facts changed.
+ * "plucking" gained two real photos on 2026-09-07 — visitors hand-picking
+ * tea shoots in the estate's own garden, one wearing the traditional
+ * back-carried plucking basket, confirmed by the user as fine to publish
+ * with faces visible. Converted from plain description/keyPoints to the
+ * heroTagline/sections shape, kept to the plain multi-image default
+ * (2-column grid, cover fit, no imagePosition override). Existing
+ * description/keyPoints merged unchanged into one section body.
  * "mushroom-hut" was added on 2026-09-04 at the supervisor's request, with
  * no source material supplied yet — same situation the original 7 draft
  * manufacturing-process stations were in. `verified: false` (no
@@ -1194,11 +1206,15 @@ export const STATIONS: Station[] = [
     shortName: "Pluck",
     icon: "Hand",
     verified: true,
-    lastVerified: "2026-08-31",
-    description:
-      "Every leaf begins in the tea garden, where pluckers hand-pick each shoot down to what staff call 'deka hamara' — two and a half leaves — often three and a half, rather than a strict two-leaves-and-a-bud count. This fine plucking standard is what gives Ceylon tea its delicate character — coarser leaves are left on the bush. The exact leaf count plucked differs between black tea and green tea.",
-    keyPoints:
-      "Only the youngest growth is used. Hand plucking protects the bush and selects the leaves with the highest concentration of flavour compounds, something machines can't replicate at this quality level.",
+    lastVerified: "2026-09-07",
+    heroTagline: "Visitors hand-plucking tea in the estate's own garden.",
+    sections: [
+      {
+        heading: "Plucking",
+        image: [pluckerWithBasketImg, pluckingGroupImg],
+        body: "Every leaf begins in the tea garden, where pluckers hand-pick each shoot down to what staff call 'deka hamara' — two and a half leaves — often three and a half, rather than a strict two-leaves-and-a-bud count. This fine plucking standard is what gives Ceylon tea its delicate character — coarser leaves are left on the bush. The exact leaf count plucked differs between black tea and green tea. Only the youngest growth is used. Hand plucking protects the bush and selects the leaves with the highest concentration of flavour compounds, something machines can't replicate at this quality level.",
+      },
+    ],
     duration: "Leaves are plucked daily, year-round, and rushed to the factory within hours to stay fresh.",
   },
   {
