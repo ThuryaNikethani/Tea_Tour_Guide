@@ -243,6 +243,12 @@ import polytunnelInteriorImg from "../assets/polytunnel/polytunnel-interior.jpg"
 // basket. See the provenance note near the "plucking" station below.
 import pluckerWithBasketImg from "../assets/plucking/plucker-with-basket.jpg";
 import pluckingGroupImg from "../assets/plucking/plucking-group.jpg";
+// Real, user-supplied exterior photos of the estate's own main factory
+// building, with its "Athukorala Tea Factory" signage. Resized down from
+// the original ~24MP/40MB PNGs to a normal web size. See the provenance
+// note near the "tea-factory" station below.
+import factoryBuilding1Img from "../assets/tea-factory/factory-building-1.jpg";
+import factoryBuilding2Img from "../assets/tea-factory/factory-building-2.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -507,6 +513,14 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * heroTagline/sections shape, kept to the plain multi-image default
  * (2-column grid, cover fit, no imagePosition override). Existing
  * description/keyPoints merged unchanged into one section body.
+ * "tea-factory" gained two real exterior photos of the estate's own main
+ * factory building (with its "Athukorala Tea Factory" signage), supplied
+ * as ~24MP/40MB PNGs from a bulk photo folder and resized down to normal
+ * web dimensions (1600px wide JPEGs) before adding — the originals were
+ * far too large to ship as-is. Converted from plain description/keyPoints
+ * to the heroTagline/sections shape, kept to the plain multi-image
+ * default. Existing description/keyPoints merged unchanged into one
+ * section body.
  * On 2026-09-07 the user re-sequenced the entire tour to match the actual
  * walking route a visitor follows: introduction, pahatharata-manufacturing,
  * nursery, clonal-tea, pruning, cinnamon, ginger-turmeric, turmeric,
@@ -1886,11 +1900,15 @@ export const STATIONS: Station[] = [
     shortName: "Tea Factory",
     icon: "Factory",
     verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "The main factory building is where plucked leaf is turned into finished tea, from weighing through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — weighing, withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order.",
-    keyPoints:
-      "A working tea factory runs the full weighing-to-packing sequence under one roof, timed closely with each day's leaf intake — incoming leaf is weighed on arrival to log the day's harvest before processing begins. Visitors touring the factory floor are asked to wear a hairnet, a mask, and protective footwear, in line with the facility's hygiene standards.",
+    lastVerified: "2026-09-07",
+    heroTagline: "The estate's own main factory building.",
+    sections: [
+      {
+        heading: "The Tea Factory",
+        image: [factoryBuilding1Img, factoryBuilding2Img],
+        body: "The main factory building is where plucked leaf is turned into finished tea, from weighing through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — weighing, withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order. A working tea factory runs the full weighing-to-packing sequence under one roof, timed closely with each day's leaf intake — incoming leaf is weighed on arrival to log the day's harvest before processing begins. Visitors touring the factory floor are asked to wear a hairnet, a mask, and protective footwear, in line with the facility's hygiene standards.",
+      },
+    ],
     duration: "10-15 minutes",
   },
   {
