@@ -14,6 +14,8 @@ export interface StationSection {
   image?: string | string[];
   /** Where the image(s) render relative to the heading/body. Defaults to "top". */
   imagePosition?: "top" | "bottom";
+  /** "cover" (default) crops to fill a fixed height; "contain" shows the whole image uncropped, at its own aspect ratio. */
+  imageFit?: "cover" | "contain";
   /** When set, renders each as its own card (image + heading + body + tags) instead of one blended paragraph. */
   items?: StationSubItem[];
   /**
@@ -200,6 +202,12 @@ import ceylonTeaSymbolImg from "../assets/introduction/ceylon-tea-symbol.jpg";
 import handmadeTrayRackImg from "../assets/handmade-factory/tray-rack.jpg";
 import rollerMachineImg from "../assets/handmade-factory/roller-machine.jpg";
 import dryerUnitImg from "../assets/handmade-factory/dryer-unit.jpg";
+// Real, user-supplied photos of two labelled shade trees on the estate —
+// a general "why shade trees" signboard, and a high-shade Albizia
+// moluccana specimen tagged with its own species/size marker. See the
+// provenance note near the "shade-management" station below.
+import shadeTreeSignboardImg from "../assets/shade-management/shade-tree-signboard.jpg";
+import highShadeAlbiziaImg from "../assets/shade-management/high-shade-albizia.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -444,6 +452,12 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * estate-specific facts — swap in the estate's own details (species grown,
  * hut size, what the mushrooms are used for) as soon as they're available.
  * `order: 27`, appended at the end.
+ * "shade-management" was converted from description/keyPoints to the
+ * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
+ * photos: a general "why shade trees" signboard, and a labelled Albizia
+ * moluccana high-shade specimen — the same Albizia already named in the
+ * existing text, now backed by a real on-site tag. Existing description
+ * and keyPoints merged unchanged into one section body; no facts changed.
  * On 2026-09-01 the user supplied a transcript of a full guided walkthrough
  * of the main factory floor, which upgraded six stations at once —
  * "tea-factory" (the overview), "withering", "rolling", "fermentation",
@@ -1459,11 +1473,16 @@ export const STATIONS: Station[] = [
     shortName: "Shade Trees",
     icon: "Trees",
     verified: true,
-    lastVerified: "2026-08-28",
-    description:
-      "Tea plants need balanced sunlight — too harsh and the leaves burn, too dark and they won't grow — so the estate manages this with two layers of shade trees planted among the bushes. The low shade tree — known locally as Makulatha (Ladappa, Vatamara) — is planted closer to the tea bushes to moderate ground temperature, retain soil moisture, and act as a natural windbreak. High shade trees such as Albizia are tall, wide-canopy trees that filter intense direct sunlight across large sections of the estate while enriching the soil with falling organic matter.",
-    keyPoints:
-      "Estate managers regularly prune both layers to fine-tune shade conditions for the season and altitude, tracking the botanical names and characteristics of each shade species alongside the tea cultivars to protect biodiversity and crop health.",
+    lastVerified: "2026-09-07",
+    heroTagline: "Two of the estate's own labelled shade trees, growing right among the tea bushes.",
+    sections: [
+      {
+        heading: "Shade Tree Management",
+        image: [shadeTreeSignboardImg, highShadeAlbiziaImg],
+        imageFit: "contain",
+        body: "Tea plants need balanced sunlight — too harsh and the leaves burn, too dark and they won't grow — so the estate manages this with two layers of shade trees planted among the bushes. The low shade tree — known locally as Makulatha (Ladappa, Vatamara) — is planted closer to the tea bushes to moderate ground temperature, retain soil moisture, and act as a natural windbreak. High shade trees such as Albizia are tall, wide-canopy trees that filter intense direct sunlight across large sections of the estate while enriching the soil with falling organic matter. Estate managers regularly prune both layers to fine-tune shade conditions for the season and altitude, tracking the botanical names and characteristics of each shade species alongside the tea cultivars to protect biodiversity and crop health.",
+      },
+    ],
     duration: "5 minutes",
   },
   {
