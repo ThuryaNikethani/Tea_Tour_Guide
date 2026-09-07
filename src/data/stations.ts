@@ -521,6 +521,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * to the heroTagline/sections shape, kept to the plain multi-image
  * default. Existing description/keyPoints merged unchanged into one
  * section body.
+ * "plucking" gained a real `processVideo` the same day — a screen
+ * recording the user supplied, re-encoded to strip its audio track
+ * entirely (not just muted client-side) and downscaled from ~3642x1668/
+ * 40MB to 1280px-wide/~4MB, since the original was far too large and the
+ * user wanted it silent. Rendered the same way as cinnamon's
+ * processVideo: native `controls`, `preload="none"`, no autoplay — the
+ * visitor has to tap play themselves.
  * On 2026-09-07 the user re-sequenced the entire tour to match the actual
  * walking route a visitor follows: introduction, pahatharata-manufacturing,
  * nursery, clonal-tea, pruning, cinnamon, ginger-turmeric, turmeric,
@@ -1852,6 +1859,7 @@ export const STATIONS: Station[] = [
         body: "Every leaf begins in the tea garden, where pluckers hand-pick each shoot down to what staff call 'deka hamara' — two and a half leaves — often three and a half, rather than a strict two-leaves-and-a-bud count. This fine plucking standard is what gives Ceylon tea its delicate character — coarser leaves are left on the bush. The exact leaf count plucked differs between black tea and green tea. Only the youngest growth is used. Hand plucking protects the bush and selects the leaves with the highest concentration of flavour compounds, something machines can't replicate at this quality level.",
       },
     ],
+    processVideo: "/videos/plucking-process.mp4",
     duration: "Leaves are plucked daily, year-round, and rushed to the factory within hours to stay fresh.",
   },
   {
