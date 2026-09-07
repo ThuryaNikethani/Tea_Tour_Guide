@@ -563,7 +563,11 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * this source already had no audio track and was already a modest
  * 1072x576/3.7MB, so it was re-encoded only for web-friendly faststart
  * (no downscale needed), landing at ~2.4MB. Same plain-shape treatment and
- * rendering as withering's video.
+ * rendering as withering's video. Later the same day the user swapped in a
+ * second WhatsApp video of the same stage (also silent, 848x432/3.7MB,
+ * re-encoded the same way to ~1.5MB) — replaces the file content at the
+ * same `/videos/rolling-process.mp4` path, no `stations.ts` path change
+ * needed.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
