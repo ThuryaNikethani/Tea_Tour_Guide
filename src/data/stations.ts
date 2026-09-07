@@ -573,6 +573,10 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * video of the oxidising stage, again already silent (816x416, 15s,
  * ~2MB), re-encoded only for faststart to ~1.2MB. Same plain-shape
  * treatment and rendering as the others.
+ * "mushroom-hut" gained a real `processVideo` the same day — a WhatsApp
+ * video (portrait, 480x816, 9.8s, ~1.2MB, already silent), re-encoded for
+ * faststart to ~698KB. Same plain-shape treatment and rendering as the
+ * others; `verified` and description/keyPoints left untouched.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -2076,6 +2080,7 @@ export const STATIONS: Station[] = [
       "Alongside its tea, spice, and fruit crops, the estate keeps a dedicated mushroom hut — a small, shaded structure built to hold the dark, cool, humid conditions mushrooms need to fruit, rather than the sun and airflow the rest of the gardens are grown for. Oyster mushrooms are among the most common varieties grown this way in Sri Lanka, cultivated on a straw or sawdust substrate rather than soil.",
     keyPoints:
       "Growing mushrooms like this is a low-cost, sustainable way for a farm to diversify beyond its main crop, often making use of agricultural waste such as straw as the growing medium, with a single batch of substrate yielding several harvests over several weeks.",
+    processVideo: "/videos/mushroom-hut-process.mp4",
     duration: "5 minutes",
   },
 ];
