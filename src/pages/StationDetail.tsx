@@ -238,7 +238,7 @@ function SectionContent({ section }: { section: StationSection }) {
         ))}
       </div>
     ) : (
-      <img src={section.image} alt={section.heading} loading="lazy" className={`${imageClass} mb-3 ${isContain ? "mx-auto max-w-full" : ""}`} />
+      <img src={section.image} alt={section.heading} loading="lazy" className={`${imageClass} mb-3 ${isContain ? "max-w-full" : ""}`} />
     )
   );
 
