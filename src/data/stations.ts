@@ -221,8 +221,10 @@ import firstCrossCutSignImg from "../assets/pruning/first-cross-cut-sign.jpg";
 import secondCrossCutSignImg from "../assets/pruning/second-cross-cut-sign.jpg";
 // Real, user-supplied photos of the estate's own two tea-grade signs
 // (background removed with AI, then cropped in to the poster itself,
-// same as the pruning signs) — "Artisanal Tea Grades" and "Low Grown
-// Tea Grades". See the provenance note near the "sorting" station below.
+// same as the pruning signs) — "Artisanal Tea Grades" (shown on both
+// "sorting" and "artisanal-tea-grades", see each station's provenance
+// note below) and "Low Grown Tea Grades" (used on "sorting" only, see
+// its provenance note below).
 import artisanalTeaGradesSignImg from "../assets/sorting/artisanal-tea-grades-sign.jpg";
 import lowGrownTeaGradesSignImg from "../assets/sorting/low-grown-tea-grades-sign.jpg";
 // NOT a real photo — a fully AI-generated illustrative diagram (confirmed
@@ -489,11 +491,11 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * the body alongside the existing "roughly knee height" description
  * rather than replacing it, since knee height is consistent with the
  * signs' own 16-18in target.
- * "sorting" was likewise converted on 2026-09-07 to carry two of the
- * user's own tea-grade signs — "Low Grown Tea Grades" (FBOPF/BOP/Pekoe/
- * Dust and the rest of the grades already named in this station's own
- * text) and "Artisanal Tea Grades" (Golden Tip/Silver Tip/White/Purple/
- * Pink Tea, matching the "artisanal-tea-grades" station). Both photos had
+ * "sorting" was likewise converted on 2026-09-07 to carry the user's own
+ * "Low Grown Tea Grades" sign (FBOPF/BOP/Pekoe/Dust and the rest of the
+ * grades already named in this station's own text) and "Artisanal Tea
+ * Grades" sign (Golden Tip/Silver Tip/White/Purple/Pink Tea, matching
+ * the "artisanal-tea-grades" station — see its own note below). Both had
  * their background removed with AI before being supplied, then cropped
  * in tighter to the poster itself; confirmed by the user to be real
  * on-site signage rather than a synthetic illustration. Existing
@@ -502,7 +504,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * confirmed is a fully AI-generated illustration, NOT a photo of a real
  * sign or document; its per-grade percentages are unsourced and were
  * deliberately kept out of the body text, used only as a generic
- * supporting graphic alongside the two real signs.
+ * supporting graphic. The "Artisanal Tea Grades" sign was briefly
+ * removed from here when it was added to "artisanal-tea-grades", but the
+ * user asked for it to stay on both stations rather than move — it's the
+ * same image file, just referenced from two sections.
+ * "artisanal-tea-grades" was converted from plain description/keyPoints
+ * to the heroTagline/sections shape on 2026-09-07 to carry that same
+ * "Artisanal Tea Grades" sign photo (also shown on "sorting", per
+ * above). Existing description/keyPoints merged unchanged into one
+ * section body.
  * "handmade-factory" picked up a fourth photo on 2026-09-07 — the small
  * withering trough described in its own text, filled with leaf — added
  * to the front of its existing image array (before the tray rack,
@@ -1467,11 +1477,17 @@ export const STATIONS: Station[] = [
     shortName: "Artisanal Teas",
     icon: "Sparkles",
     verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot — TRI 2043, a Tea Research Institute clone — whose colour comes from anthocyanin; it's a low-yielding cultivar, which is why not every Sri Lankan estate grows it. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud, whose fine silvery hairs give the grade its name and a faint shimmer; the bud alone is weighed, withered for a few hours, and dried — a simpler process than the fully fermented grades — for a subtly sweet, floral cup with a velvety texture. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste, with a pale liquor, a velvety texture, a floral aroma, and a natural richness in antioxidants. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting — for a flavour closer to oolong: lighter than black tea but less vegetal than green tea, comparatively low in caffeine, and naturally rich in antioxidants. Pink tea starts out essentially colourless like white tea, and only turns pink once a couple of drops of lime are added — the citrus triggers a colour change in the same anthocyanin pigment that gives the shoot its hue; it also takes well to a couple of drops of honey, is recommended served as iced tea, and is naturally rich in antioxidants too. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots.",
-    keyPoints:
-      "These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
+    lastVerified: "2026-09-07",
+    heroTagline: "The estate's own Artisanal Tea Grades sign.",
+    sections: [
+      {
+        heading: "Artisanal Tea Grades",
+        image: artisanalTeaGradesSignImg,
+        imageFit: "contain",
+        imagePosition: "bottom",
+        body: "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot — TRI 2043, a Tea Research Institute clone — whose colour comes from anthocyanin; it's a low-yielding cultivar, which is why not every Sri Lankan estate grows it. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud, whose fine silvery hairs give the grade its name and a faint shimmer; the bud alone is weighed, withered for a few hours, and dried — a simpler process than the fully fermented grades — for a subtly sweet, floral cup with a velvety texture. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste, with a pale liquor, a velvety texture, a floral aroma, and a natural richness in antioxidants. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting — for a flavour closer to oolong: lighter than black tea but less vegetal than green tea, comparatively low in caffeine, and naturally rich in antioxidants. Pink tea starts out essentially colourless like white tea, and only turns pink once a couple of drops of lime are added — the citrus triggers a colour change in the same anthocyanin pigment that gives the shoot its hue; it also takes well to a couple of drops of honey, is recommended served as iced tea, and is naturally rich in antioxidants too. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots. These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
+      },
+    ],
     duration: "5 minutes",
   },
   {
