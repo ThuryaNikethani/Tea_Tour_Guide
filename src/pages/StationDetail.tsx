@@ -201,12 +201,7 @@ export function StationDetail() {
         {station.processVideo && (!station.sections || isLastSection) && (
           <section className="mt-8">
             <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-3">{t("watchProcess")}</h2>
-            <video
-              src={station.processVideo}
-              controls
-              preload="none"
-              className="block max-w-full max-h-[70vh] mx-auto rounded-md shadow-sm"
-            />
+            <ProcessVideoPlayer src={station.processVideo} />
           </section>
         )}
 
@@ -321,6 +316,25 @@ function ShareButton({ title }: { title: string }) {
     >
       {copied ? <Check size={16} className="text-gold-500" /> : <Share2 size={16} />}
     </button>
+  );
+}
+
+function ProcessVideoPlayer({ src }: { src: string }) {
+  const [started, setStarted] = useState(false);
+
+  return (
+    <video
+      key={src}
+      src={src}
+      controls
+      preload="none"
+      onPlay={() => setStarted(true)}
+      className={
+        started
+          ? "block max-w-full max-h-[70vh] mx-auto rounded-md shadow-sm"
+          : "block w-full aspect-video object-contain bg-black mx-auto rounded-md shadow-sm"
+      }
+    />
   );
 }
 
