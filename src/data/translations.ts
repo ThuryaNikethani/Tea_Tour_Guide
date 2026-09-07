@@ -155,6 +155,11 @@ import type { StationTranslation } from "./stations";
  * the estate's own garden. Existing description/keyPoints text merged
  * unchanged into sectionBodies[0]; kept to the plain multi-image default
  * (2-column grid, cover fit).
+ *
+ * "tea-factory" was converted the same way on 2026-09-07, in every
+ * language, to carry two real exterior photos of the estate's own main
+ * factory building. Existing description/keyPoints text merged unchanged
+ * into sectionBodies[0]; kept to the plain multi-image default.
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -817,8 +822,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "තේ කර්මාන්තශාලාව",
-      description: "ප්‍රධාන කර්මාන්තශාලා ගොඩනැගිල්ල, නෙළන ලද කොළ බර කිරීමේ සිට පැක් කිරීම දක්වා නිමි තේ බවට පත් වන ස්ථානයයි. මෙම නැවතුම ක්‍රියාත්මක වන කර්මාන්තශාලා තට්ටුව සහ එක් එක් අදියරේ භාවිතා කරන උපකරණ පිළිබඳ දළ විශ්ලේෂණයකි — බර කිරීම, මැලවීම, රෝල් කිරීම, පැසවීම (ඔක්සිකරණය), වියලීම, තේ වෙන් කිරීම (ශ්‍රේණිගත කිරීම), සහ අවසන් පැක් කිරීම, එම අනුපිළිවෙලින්ම.",
-      keyPoints: "ක්‍රියාත්මක තේ කර්මාන්තශාලාවක්, සෑම දිනකම කොළ ප්‍රමාණයට සමීපව සමමුහුර්තව, බර කිරීමේ සිට පැක් කිරීම දක්වා සම්පූර්ණ අනුපිළිවෙල එකම වහලක් යටතේ ක්‍රියාත්මක කරයි — දිනපතා අස්වැන්න වාර්තා කිරීම සඳහා පැමිණෙන කොළ පළමුව බර කරනු ලැබේ. සනීපාරක්ෂක ප්‍රමිතීන්ට අනුකූලව, කර්මාන්තශාලා තට්ටුව නරඹන අමුත්තන්ගෙන් හිසකෙස් දැලක්, මුඛ ආවරණයක්, සහ ආරක්ෂිත පාවහන් පැළඳීමට ඉල්ලා සිටිනු ලැබේ.",
+      heroTagline: "වතුයායේම ප්‍රධාන කර්මාන්තශාලා ගොඩනැගිල්ල.",
+      sectionHeadings: ["තේ කර්මාන්තශාලාව"],
+      sectionBodies: ["ප්‍රධාන කර්මාන්තශාලා ගොඩනැගිල්ල, නෙළන ලද කොළ බර කිරීමේ සිට පැක් කිරීම දක්වා නිමි තේ බවට පත් වන ස්ථානයයි. මෙම නැවතුම ක්‍රියාත්මක වන කර්මාන්තශාලා තට්ටුව සහ එක් එක් අදියරේ භාවිතා කරන උපකරණ පිළිබඳ දළ විශ්ලේෂණයකි — බර කිරීම, මැලවීම, රෝල් කිරීම, පැසවීම (ඔක්සිකරණය), වියලීම, තේ වෙන් කිරීම (ශ්‍රේණිගත කිරීම), සහ අවසන් පැක් කිරීම, එම අනුපිළිවෙලින්ම. ක්‍රියාත්මක තේ කර්මාන්තශාලාවක්, සෑම දිනකම කොළ ප්‍රමාණයට සමීපව සමමුහුර්තව, බර කිරීමේ සිට පැක් කිරීම දක්වා සම්පූර්ණ අනුපිළිවෙල එකම වහලක් යටතේ ක්‍රියාත්මක කරයි — දිනපතා අස්වැන්න වාර්තා කිරීම සඳහා පැමිණෙන කොළ පළමුව බර කරනු ලැබේ. සනීපාරක්ෂක ප්‍රමිතීන්ට අනුකූලව, කර්මාන්තශාලා තට්ටුව නරඹන අමුත්තන්ගෙන් හිසකෙස් දැලක්, මුඛ ආවරණයක්, සහ ආරක්ෂිත පාවහන් පැළඳීමට ඉල්ලා සිටිනු ලැබේ."],
       duration: "මිනිත්තු 10-15",
     },
     "handmade-factory": {
@@ -1311,8 +1317,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "தேயிலை தொழிற்சாலை",
-      description: "பறிக்கப்பட்ட இலை எடைபோடுதல் முதல் பொதிசெய்தல் வரை முடிக்கப்பட்ட தேயிலையாக மாற்றப்படும் இடம் முதன்மை தொழிற்சாலை கட்டிடமாகும். இயங்கும் தொழிற்சாலை தளத்தையும் ஒவ்வொரு கட்டத்திலும் பயன்படுத்தப்படும் உபகரணங்களையும் இந்த நிறுத்தம் மேலோட்டமாக விளக்குகிறது — எடைபோடுதல், வாடுதல், உருட்டுதல், நொதித்தல் (ஆக்சிஜனேற்றம்), உலர்த்துதல், தேயிலை பிரித்தல் (தரப்படுத்தல்), மற்றும் இறுதி பொதிசெய்தல், அந்த வரிசையில்.",
-      keyPoints: "இயங்கும் தேயிலை தொழிற்சாலை ஒரு கூரையின் கீழ் எடைபோடுதல் முதல் பொதிசெய்தல் வரையிலான முழு வரிசையையும் இயக்குகிறது, தினசரி இலை வரவுக்கு நெருக்கமாக நேரம் ஒத்திசைக்கப்படுகிறது — அன்றைய அறுவடையை பதிவு செய்ய வரும் இலை முதலில் எடைபோடப்படுகிறது. ஆலை தளத்தை பார்வையிடும் விருந்தினர்கள் சுகாதார தரநிலைகளுக்கு இணங்க தலைமுடி வலை, முகக்கவசம், மற்றும் பாதுகாப்பு காலணிகள் அணிய வேண்டும் என்று கேட்டுக்கொள்ளப்படுகிறார்கள்.",
+      heroTagline: "தோட்டத்தின் சொந்த முதன்மை தொழிற்சாலை கட்டிடம்.",
+      sectionHeadings: ["தேயிலை தொழிற்சாலை"],
+      sectionBodies: ["பறிக்கப்பட்ட இலை எடைபோடுதல் முதல் பொதிசெய்தல் வரை முடிக்கப்பட்ட தேயிலையாக மாற்றப்படும் இடம் முதன்மை தொழிற்சாலை கட்டிடமாகும். இயங்கும் தொழிற்சாலை தளத்தையும் ஒவ்வொரு கட்டத்திலும் பயன்படுத்தப்படும் உபகரணங்களையும் இந்த நிறுத்தம் மேலோட்டமாக விளக்குகிறது — எடைபோடுதல், வாடுதல், உருட்டுதல், நொதித்தல் (ஆக்சிஜனேற்றம்), உலர்த்துதல், தேயிலை பிரித்தல் (தரப்படுத்தல்), மற்றும் இறுதி பொதிசெய்தல், அந்த வரிசையில். இயங்கும் தேயிலை தொழிற்சாலை ஒரு கூரையின் கீழ் எடைபோடுதல் முதல் பொதிசெய்தல் வரையிலான முழு வரிசையையும் இயக்குகிறது, தினசரி இலை வரவுக்கு நெருக்கமாக நேரம் ஒத்திசைக்கப்படுகிறது — அன்றைய அறுவடையை பதிவு செய்ய வரும் இலை முதலில் எடைபோடப்படுகிறது. ஆலை தளத்தை பார்வையிடும் விருந்தினர்கள் சுகாதார தரநிலைகளுக்கு இணங்க தலைமுடி வலை, முகக்கவசம், மற்றும் பாதுகாப்பு காலணிகள் அணிய வேண்டும் என்று கேட்டுக்கொள்ளப்படுகிறார்கள்."],
       duration: "10-15 நிமிடங்கள்",
     },
     "handmade-factory": {
@@ -1805,8 +1812,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "La Fabbrica del Tè",
-      description: "L'edificio principale della fabbrica è dove la foglia raccolta viene trasformata in tè finito, dalla pesatura fino al confezionamento. Questa tappa offre una panoramica del piano di fabbrica in funzione e delle attrezzature usate in ogni fase — pesatura, appassimento, arrotolamento, fermentazione (ossidazione), essiccazione, selezione del tè (classificazione) e confezionamento finale, in quest'ordine.",
-      keyPoints: "Una fabbrica del tè in funzione esegue l'intera sequenza dalla pesatura al confezionamento sotto lo stesso tetto, sincronizzata da vicino con l'arrivo giornaliero delle foglie — la foglia in arrivo viene pesata per registrare il raccolto del giorno prima che inizi la lavorazione. Ai visitatori che percorrono il piano di fabbrica viene chiesto di indossare una retina per capelli, una mascherina e calzature protettive, in linea con gli standard igienici della struttura.",
+      heroTagline: "L'edificio principale della fabbrica della tenuta stessa.",
+      sectionHeadings: ["La Fabbrica del Tè"],
+      sectionBodies: ["L'edificio principale della fabbrica è dove la foglia raccolta viene trasformata in tè finito, dalla pesatura fino al confezionamento. Questa tappa offre una panoramica del piano di fabbrica in funzione e delle attrezzature usate in ogni fase — pesatura, appassimento, arrotolamento, fermentazione (ossidazione), essiccazione, selezione del tè (classificazione) e confezionamento finale, in quest'ordine. Una fabbrica del tè in funzione esegue l'intera sequenza dalla pesatura al confezionamento sotto lo stesso tetto, sincronizzata da vicino con l'arrivo giornaliero delle foglie — la foglia in arrivo viene pesata per registrare il raccolto del giorno prima che inizi la lavorazione. Ai visitatori che percorrono il piano di fabbrica viene chiesto di indossare una retina per capelli, una mascherina e calzature protettive, in linea con gli standard igienici della struttura."],
       duration: "10-15 minuti",
     },
     "handmade-factory": {
@@ -2299,8 +2307,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "مصنع الشاي",
-      description: "المصنع الرئيسي هو المكان الذي تتحول فيه الأوراق المقطوفة إلى شاي جاهز، من الوزن إلى التعبئة. تقدم هذه المحطة نظرة عامة على أرضية المصنع العاملة والمعدات المستخدمة في كل مرحلة — الوزن، الذبول، اللف، التخمير (الأكسدة)، التجفيف، فرز الشاي (التصنيف)، والتعبئة النهائية، بهذا الترتيب.",
-      keyPoints: "يدير مصنع الشاي العامل التسلسل الكامل من الوزن إلى التعبئة تحت سقف واحد، بتوقيت دقيق مع كمية الأوراق الواردة يوميًا — تُوزن الأوراق الواردة عند وصولها لتسجيل محصول اليوم قبل بدء المعالجة. يُطلب من الزوار الذين يجولون في أرضية المصنع ارتداء غطاء للشعر وكمامة وحذاء واقٍ، تماشيًا مع معايير النظافة في المنشأة.",
+      heroTagline: "مبنى المصنع الرئيسي الخاص بالمزرعة نفسها.",
+      sectionHeadings: ["مصنع الشاي"],
+      sectionBodies: ["المصنع الرئيسي هو المكان الذي تتحول فيه الأوراق المقطوفة إلى شاي جاهز، من الوزن إلى التعبئة. تقدم هذه المحطة نظرة عامة على أرضية المصنع العاملة والمعدات المستخدمة في كل مرحلة — الوزن، الذبول، اللف، التخمير (الأكسدة)، التجفيف، فرز الشاي (التصنيف)، والتعبئة النهائية، بهذا الترتيب. يدير مصنع الشاي العامل التسلسل الكامل من الوزن إلى التعبئة تحت سقف واحد، بتوقيت دقيق مع كمية الأوراق الواردة يوميًا — تُوزن الأوراق الواردة عند وصولها لتسجيل محصول اليوم قبل بدء المعالجة. يُطلب من الزوار الذين يجولون في أرضية المصنع ارتداء غطاء للشعر وكمامة وحذاء واقٍ، تماشيًا مع معايير النظافة في المنشأة."],
       duration: "10-15 دقيقة",
     },
     "handmade-factory": {
@@ -2793,8 +2802,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "Чайная фабрика",
-      description: "В главном здании фабрики собранный лист превращается в готовый чай — от взвешивания до упаковки. Эта остановка даёт общее представление о работающем цехе фабрики и оборудовании, используемом на каждом этапе — взвешивание, завяливание, скручивание, ферментация (окисление), сушка, сортировка чая (калибровка) и финальная упаковка, именно в этом порядке.",
-      keyPoints: "Работающая чайная фабрика выполняет всю последовательность от взвешивания до упаковки под одной крышей, тесно синхронизированную с ежедневным поступлением листа — поступающий лист взвешивают при прибытии, чтобы зафиксировать дневной сбор, прежде чем начинается обработка. Посетителям, осматривающим цех фабрики, предлагается надеть сетку для волос, маску и защитную обувь — в соответствии с санитарными нормами предприятия.",
+      heroTagline: "Собственное здание главной фабрики поместья.",
+      sectionHeadings: ["Чайная фабрика"],
+      sectionBodies: ["В главном здании фабрики собранный лист превращается в готовый чай — от взвешивания до упаковки. Эта остановка даёт общее представление о работающем цехе фабрики и оборудовании, используемом на каждом этапе — взвешивание, завяливание, скручивание, ферментация (окисление), сушка, сортировка чая (калибровка) и финальная упаковка, именно в этом порядке. Работающая чайная фабрика выполняет всю последовательность от взвешивания до упаковки под одной крышей, тесно синхронизированную с ежедневным поступлением листа — поступающий лист взвешивают при прибытии, чтобы зафиксировать дневной сбор, прежде чем начинается обработка. Посетителям, осматривающим цех фабрики, предлагается надеть сетку для волос, маску и защитную обувь — в соответствии с санитарными нормами предприятия."],
       duration: "10–15 минут",
     },
     "handmade-factory": {
@@ -3287,8 +3297,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "Die Teefabrik",
-      description: "Im Hauptfabrikgebäude wird gepflücktes Blatt vom Wiegen bis zur Verpackung zu fertigem Tee verarbeitet. Diese Station bietet einen Überblick über die arbeitende Fabrikhalle und die in jeder Phase verwendeten Geräte — Wiegen, Welken, Rollen, Fermentation (Oxidation), Trocknen, Teetrennung (Klassifizierung) und abschließendes Verpacken, in dieser Reihenfolge.",
-      keyPoints: "Eine arbeitende Teefabrik führt die gesamte Abfolge vom Wiegen bis zur Verpackung unter einem Dach durch, eng abgestimmt auf den täglichen Blattertrag — ankommendes Blatt wird bei der Anlieferung gewogen, um die Tagesernte zu erfassen, bevor die Verarbeitung beginnt. Besucher, die die Fabrikhalle besichtigen, werden gebeten, gemäß den Hygienestandards des Betriebs ein Haarnetz, einen Mundschutz und Schutzschuhe zu tragen.",
+      heroTagline: "Das eigene Hauptfabrikgebäude des Anwesens.",
+      sectionHeadings: ["Die Teefabrik"],
+      sectionBodies: ["Im Hauptfabrikgebäude wird gepflücktes Blatt vom Wiegen bis zur Verpackung zu fertigem Tee verarbeitet. Diese Station bietet einen Überblick über die arbeitende Fabrikhalle und die in jeder Phase verwendeten Geräte — Wiegen, Welken, Rollen, Fermentation (Oxidation), Trocknen, Teetrennung (Klassifizierung) und abschließendes Verpacken, in dieser Reihenfolge. Eine arbeitende Teefabrik führt die gesamte Abfolge vom Wiegen bis zur Verpackung unter einem Dach durch, eng abgestimmt auf den täglichen Blattertrag — ankommendes Blatt wird bei der Anlieferung gewogen, um die Tagesernte zu erfassen, bevor die Verarbeitung beginnt. Besucher, die die Fabrikhalle besichtigen, werden gebeten, gemäß den Hygienestandards des Betriebs ein Haarnetz, einen Mundschutz und Schutzschuhe zu tragen."],
       duration: "10-15 Minuten",
     },
     "handmade-factory": {
@@ -3781,8 +3792,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "La Fábrica de Té",
-      description: "El edificio principal de la fábrica es donde la hoja recolectada se convierte en té terminado, desde el pesaje hasta el envasado. Esta parada ofrece una visión general de la planta de la fábrica en funcionamiento y el equipo utilizado en cada etapa — pesaje, marchitado, enrollado, fermentación (oxidación), secado, separación del té (clasificación) y envasado final, en ese orden.",
-      keyPoints: "Una fábrica de té en funcionamiento ejecuta toda la secuencia de pesaje a envasado bajo un mismo techo, sincronizada de cerca con la cantidad de hoja recibida cada día — la hoja que llega se pesa a su llegada para registrar la cosecha del día antes de que comience el procesamiento. A los visitantes que recorren la planta de la fábrica se les pide que usen una redecilla para el cabello, una mascarilla y calzado protector, conforme a las normas de higiene de la instalación.",
+      heroTagline: "El propio edificio principal de la fábrica de la finca.",
+      sectionHeadings: ["La Fábrica de Té"],
+      sectionBodies: ["El edificio principal de la fábrica es donde la hoja recolectada se convierte en té terminado, desde el pesaje hasta el envasado. Esta parada ofrece una visión general de la planta de la fábrica en funcionamiento y el equipo utilizado en cada etapa — pesaje, marchitado, enrollado, fermentación (oxidación), secado, separación del té (clasificación) y envasado final, en ese orden. Una fábrica de té en funcionamiento ejecuta toda la secuencia de pesaje a envasado bajo un mismo techo, sincronizada de cerca con la cantidad de hoja recibida cada día — la hoja que llega se pesa a su llegada para registrar la cosecha del día antes de que comience el procesamiento. A los visitantes que recorren la planta de la fábrica se les pide que usen una redecilla para el cabello, una mascarilla y calzado protector, conforme a las normas de higiene de la instalación."],
       duration: "10-15 minutos",
     },
     "handmade-factory": {
@@ -4275,8 +4287,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "La Fabrique de Thé",
-      description: "Le bâtiment principal de l'usine est l'endroit où la feuille cueillie devient du thé fini, de la pesée jusqu'à l'emballage. Cette étape offre un aperçu de l'atelier de production et des équipements utilisés à chaque étape — pesée, flétrissage, roulage, fermentation (oxydation), séchage, triage du thé (classification) et emballage final, dans cet ordre.",
-      keyPoints: "Une usine de thé en activité fait fonctionner toute la séquence de la pesée à l'emballage sous un même toit, en synchronisation étroite avec l'arrivée quotidienne des feuilles — la feuille reçue est pesée à son arrivée pour consigner la récolte du jour avant que la transformation ne commence. Les visiteurs qui parcourent l'atelier de production sont priés de porter une charlotte, un masque et des chaussures de protection, conformément aux normes d'hygiène de l'établissement.",
+      heroTagline: "Le propre bâtiment principal de l'usine du domaine.",
+      sectionHeadings: ["La Fabrique de Thé"],
+      sectionBodies: ["Le bâtiment principal de l'usine est l'endroit où la feuille cueillie devient du thé fini, de la pesée jusqu'à l'emballage. Cette étape offre un aperçu de l'atelier de production et des équipements utilisés à chaque étape — pesée, flétrissage, roulage, fermentation (oxydation), séchage, triage du thé (classification) et emballage final, dans cet ordre. Une usine de thé en activité fait fonctionner toute la séquence de la pesée à l'emballage sous un même toit, en synchronisation étroite avec l'arrivée quotidienne des feuilles — la feuille reçue est pesée à son arrivée pour consigner la récolte du jour avant que la transformation ne commence. Les visiteurs qui parcourent l'atelier de production sont priés de porter une charlotte, un masque et des chaussures de protection, conformément aux normes d'hygiène de l'établissement."],
       duration: "10-15 minutes",
     },
     "handmade-factory": {
@@ -4769,8 +4782,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "茶厂",
-      description: "主厂房是采摘下来的茶叶经称重直至包装制成成品茶的地方。本站概览工厂车间及各阶段所用的设备——依次为称重、萎凋、揉捻、发酵（氧化）、干燥、茶叶分选（分级）以及最终包装。",
-      keyPoints: "一座运转中的茶厂在同一屋檐下完成从称重到包装的全部流程，并需与每日采摘量紧密配合——运抵的茶叶会先称重以记录当日采收量，然后才开始加工。按照工厂的卫生标准，参观车间的访客需佩戴发网、口罩，并穿着防护鞋。",
+      heroTagline: "庄园自家的主厂房。",
+      sectionHeadings: ["茶厂"],
+      sectionBodies: ["主厂房是采摘下来的茶叶经称重直至包装制成成品茶的地方。本站概览工厂车间及各阶段所用的设备——依次为称重、萎凋、揉捻、发酵（氧化）、干燥、茶叶分选（分级）以及最终包装。一座运转中的茶厂在同一屋檐下完成从称重到包装的全部流程，并需与每日采摘量紧密配合——运抵的茶叶会先称重以记录当日采收量，然后才开始加工。按照工厂的卫生标准，参观车间的访客需佩戴发网、口罩，并穿着防护鞋。"],
       duration: "10-15分钟",
     },
     "handmade-factory": {
@@ -5263,8 +5277,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "tea-factory": {
       name: "紅茶工場",
-      description: "本館の工場は、摘み取られた茶葉が計量から梱包まで経て仕上げの紅茶になる場所です。このストップでは、稼働中の工場フロアと各工程で使われる設備を概観します——計量、萎凋、揉捻、発酵（酸化）、乾燥、茶葉選別（格付け）、そして最終梱包の順です。",
-      keyPoints: "稼働中の紅茶工場は、計量から梱包までの全工程を一つの屋根の下で行い、毎日の茶葉の搬入量に合わせて緊密にタイミングを調整します——搬入された茶葉はまず計量され、その日の収穫量が記録されてから加工が始まります。工場フロアを見学する訪問者は、施設の衛生基準に従い、ヘアネット、マスク、保護シューズの着用をお願いしています。",
+      heroTagline: "この農園自前の本館工場の建物。",
+      sectionHeadings: ["紅茶工場"],
+      sectionBodies: ["本館の工場は、摘み取られた茶葉が計量から梱包まで経て仕上げの紅茶になる場所です。このストップでは、稼働中の工場フロアと各工程で使われる設備を概観します——計量、萎凋、揉捻、発酵（酸化）、乾燥、茶葉選別（格付け）、そして最終梱包の順です。稼働中の紅茶工場は、計量から梱包までの全工程を一つの屋根の下で行い、毎日の茶葉の搬入量に合わせて緊密にタイミングを調整します——搬入された茶葉はまず計量され、その日の収穫量が記録されてから加工が始まります。工場フロアを見学する訪問者は、施設の衛生基準に従い、ヘアネット、マスク、保護シューズの着用をお願いしています。"],
       duration: "10〜15分",
     },
     "handmade-factory": {
