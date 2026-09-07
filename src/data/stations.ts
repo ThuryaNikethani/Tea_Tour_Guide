@@ -551,6 +551,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * estate-specific facts — swap in the estate's own details (species grown,
  * hut size, what the mushrooms are used for) as soon as they're available.
  * `order: 27`, appended at the end.
+ * "withering" gained a real `processVideo` on 2026-09-07 — another screen
+ * recording the user supplied, re-encoded the same way as plucking's: audio
+ * stripped entirely and downscaled from 3622x2032/110MB to 1280px-wide/
+ * ~5.4MB. Stays in its plain description/keyPoints/duration shape (no
+ * accompanying image, so no conversion to sections needed) with
+ * `processVideo` added alongside; renders with native `controls`,
+ * `preload="none"`, no autoplay, same as the other process videos.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -1926,11 +1933,12 @@ export const STATIONS: Station[] = [
     shortName: "Wither",
     icon: "Wind",
     verified: true,
-    lastVerified: "2026-09-01",
+    lastVerified: "2026-09-07",
     description:
       "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs roughly a foot deep, where large fans force air through it to steadily remove moisture — what the estate calls the 'modern' withering process. Moisture drops from around 75% at plucking to roughly 45% by the time the leaf turns limp and pliable, ready for rolling without shattering. The withered leaf is weighed again before it moves on to rolling.",
     keyPoints:
       "Withering evens out moisture across the leaf and lets natural enzymes begin the chemical changes that will later create the tea's aroma and colour.",
+    processVideo: "/videos/withering-process.mp4",
     duration: "This stage typically takes 10 to 12 hours, depending on humidity and airflow.",
   },
   {
