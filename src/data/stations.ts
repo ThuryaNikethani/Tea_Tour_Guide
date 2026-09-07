@@ -202,6 +202,10 @@ import ceylonTeaSymbolImg from "../assets/introduction/ceylon-tea-symbol.jpg";
 import handmadeTrayRackImg from "../assets/handmade-factory/tray-rack.jpg";
 import rollerMachineImg from "../assets/handmade-factory/roller-machine.jpg";
 import dryerUnitImg from "../assets/handmade-factory/dryer-unit.jpg";
+// Real, user-supplied photo of the estate's own small withering trough at
+// the Handmade Tea Factory, filled with leaf. See the provenance note
+// near the "handmade-factory" station below.
+import witheringTroughImg from "../assets/handmade-factory/withering-trough.jpg";
 // Real, user-supplied photos of two labelled shade trees on the estate —
 // a general "why shade trees" signboard, and a high-shade Albizia
 // moluccana specimen tagged with its own species/size marker. See the
@@ -221,6 +225,11 @@ import secondCrossCutSignImg from "../assets/pruning/second-cross-cut-sign.jpg";
 // Tea Grades". See the provenance note near the "sorting" station below.
 import artisanalTeaGradesSignImg from "../assets/sorting/artisanal-tea-grades-sign.jpg";
 import lowGrownTeaGradesSignImg from "../assets/sorting/low-grown-tea-grades-sign.jpg";
+// NOT a real photo — a fully AI-generated illustrative diagram (confirmed
+// by the user), not sourced from any actual estate sign or document. Its
+// per-grade percentages are not factual and are not used in this
+// station's text, only shown as a generic supporting graphic.
+import gradeYieldDiagramImg from "../assets/sorting/grade-yield-diagram.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -488,7 +497,16 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * their background removed with AI before being supplied, then cropped
  * in tighter to the poster itself; confirmed by the user to be real
  * on-site signage rather than a synthetic illustration. Existing
- * description/keyPoints merged unchanged into one section body.
+ * description/keyPoints merged unchanged into one section body. A third
+ * image was added the same day — a grade/yield diagram the user
+ * confirmed is a fully AI-generated illustration, NOT a photo of a real
+ * sign or document; its per-grade percentages are unsourced and were
+ * deliberately kept out of the body text, used only as a generic
+ * supporting graphic alongside the two real signs.
+ * "handmade-factory" picked up a fourth photo on 2026-09-07 — the small
+ * withering trough described in its own text, filled with leaf — added
+ * to the front of its existing image array (before the tray rack,
+ * roller, and dryer already there). No text changed.
  * On 2026-09-01 the user supplied a transcript of a full guided walkthrough
  * of the main factory floor, which upgraded six stations at once —
  * "tea-factory" (the overview), "withering", "rolling", "fermentation",
@@ -1213,7 +1231,7 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Sorting & Grading",
-        image: [lowGrownTeaGradesSignImg, artisanalTeaGradesSignImg],
+        image: [lowGrownTeaGradesSignImg, artisanalTeaGradesSignImg, gradeYieldDiagramImg],
         imageFit: "contain",
         body: "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse. That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong. Sieves of different mesh sizes further separate particles by size over several passes, and an electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside — none of this colour or character comes from dyes or additives, only natural processing. Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
       },
@@ -1782,11 +1800,11 @@ export const STATIONS: Station[] = [
     icon: "HandHeart",
     verified: true,
     lastVerified: "2026-09-04",
-    heroTagline: "The estate's own Handmade Tea Factory — tray racks, hand-roller, and dryer.",
+    heroTagline: "The estate's own Handmade Tea Factory — withering trough, tray racks, hand-roller, and dryer.",
     sections: [
       {
         heading: "Handmade Tea Factory",
-        image: [handmadeTrayRackImg, rollerMachineImg, dryerUnitImg],
+        image: [witheringTroughImg, handmadeTrayRackImg, rollerMachineImg, dryerUnitImg],
         imagePosition: "bottom",
         body: "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; once steamed, the leaf rests outside to shed the surface moisture left by steaming, then is hand-rolled to curl it and draw out its colour, strength, aroma, and taste, before a final pass through the dryer, with drying time varying from one small producer to the next. The building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato). This stop covers what distinguishes hand-made tea from factory-line production. Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
       },
