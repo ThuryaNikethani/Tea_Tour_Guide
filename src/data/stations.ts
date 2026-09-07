@@ -558,6 +558,12 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * accompanying image, so no conversion to sections needed) with
  * `processVideo` added alongside; renders with native `controls`,
  * `preload="none"`, no autoplay, same as the other process videos.
+ * "rolling" gained a real `processVideo` the same day — a WhatsApp video
+ * the user supplied of the rolling stage. Unlike the other process videos
+ * this source already had no audio track and was already a modest
+ * 1072x576/3.7MB, so it was re-encoded only for web-friendly faststart
+ * (no downscale needed), landing at ~2.4MB. Same plain-shape treatment and
+ * rendering as withering's video.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -1948,11 +1954,12 @@ export const STATIONS: Station[] = [
     shortName: "Roll",
     icon: "RotateCw",
     verified: true,
-    lastVerified: "2026-09-01",
+    lastVerified: "2026-09-07",
     description:
       "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
     keyPoints:
       "Breaking the cell walls exposes enzymes to oxygen, kicking off oxidation. How hard and how long the leaf is rolled shapes the final tea's strength and appearance. The first of several passes, a gentle 'pre-conditioning' roll, is meant to coat the twisted particles in the leaf's own juices before firmer rolling follows.",
+    processVideo: "/videos/rolling-process.mp4",
     duration: "Rolling usually runs for 45 minutes to an hour, often in multiple passes.",
   },
   {
