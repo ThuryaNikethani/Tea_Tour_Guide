@@ -569,6 +569,10 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * 832x416/3.7MB, re-encoded to ~1.4MB) — each swap replaces the file
  * content at the same `/videos/rolling-process.mp4` path, no `stations.ts`
  * path change needed.
+ * "fermentation" gained a real `processVideo` the same day — a WhatsApp
+ * video of the oxidising stage, again already silent (816x416, 15s,
+ * ~2MB), re-encoded only for faststart to ~1.2MB. Same plain-shape
+ * treatment and rendering as the others.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -1974,11 +1978,12 @@ export const STATIONS: Station[] = [
     shortName: "Ferment",
     icon: "FlaskConical",
     verified: true,
-    lastVerified: "2026-09-01",
+    lastVerified: "2026-09-07",
     description:
       "Rolled leaf is spread out in a cool, humid room held at around 25 to 30°C and left to oxidise, with a humidifier keeping the air moist enough for the reaction to happen. The green leaf gradually turns a coppery brown as it develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
     keyPoints:
       "This is the single most important step for flavour. Timing has to be judged precisely — too little and the tea is thin, too much and it turns flat and dull. It's also what separates the tea types made here: black tea goes withering, rolling, fermentation, then firing, while green tea skips fermentation entirely (withering, rolling, drying only) and is milder — mostly drunk for its gentler, more medicinal character; white tea skips both withering and fermentation, going straight from fresh leaf to steaming and drying. The factory doesn't produce Oolong tea, which the guide describes as a black-tea-like fermented style made by repeated steaming and hand-brushing rather than machine rolling.",
+    processVideo: "/videos/fermentation-process.mp4",
     duration: "At this factory, fermentation typically takes 1.5 to 2.5 hours depending on conditions, before the leaf moves on to drying.",
   },
   {
