@@ -225,16 +225,20 @@ export function StationDetail() {
 /** Renders one section's image(s), heading, body, and item cards — shared by the top-level section pager and a selected fruit's own stacked sections. */
 function SectionContent({ section }: { section: StationSection }) {
   const isContain = section.imageFit === "contain";
-  const imageClass = isContain ? "max-w-full max-h-72 w-auto h-auto rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
+  // "contain" images share one fixed-size box (equal width via flex-1, shared height via h-72)
+  // and use object-contain so each one scales down to fit inside without cropping or distortion —
+  // this is what actually guarantees they render at the same size, regardless of each photo's own
+  // aspect ratio (unlike relying on matching source-file dimensions, which drift as photos are swapped).
+  const imageClass = isContain ? "flex-1 h-72 object-contain rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
   const images = section.image && (
     Array.isArray(section.image) ? (
-      <div className={isContain ? "flex flex-wrap justify-center gap-2 mb-3" : "grid grid-cols-2 gap-2 mb-3"}>
+      <div className={isContain ? "flex flex-nowrap justify-center items-start gap-2 mb-3" : "grid grid-cols-2 gap-2 mb-3"}>
         {section.image.map((src) => (
           <img key={src} src={src} alt={section.heading} loading="lazy" className={imageClass} />
         ))}
       </div>
     ) : (
-      <img src={section.image} alt={section.heading} loading="lazy" className={`${imageClass} mb-3 ${isContain ? "mx-auto" : ""}`} />
+      <img src={section.image} alt={section.heading} loading="lazy" className={`${imageClass} mb-3 ${isContain ? "mx-auto max-w-full" : ""}`} />
     )
   );
 
