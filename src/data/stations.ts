@@ -507,6 +507,20 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * heroTagline/sections shape, kept to the plain multi-image default
  * (2-column grid, cover fit, no imagePosition override). Existing
  * description/keyPoints merged unchanged into one section body.
+ * On 2026-09-07 the user re-sequenced the entire tour to match the actual
+ * walking route a visitor follows: introduction, pahatharata-manufacturing,
+ * nursery, clonal-tea, pruning, cinnamon, ginger-turmeric, turmeric,
+ * sorting, artisanal-tea-grades, bee, organic-cultivation,
+ * shade-management, unique-fruits, coconut-field, plucking, jaggery-palm,
+ * tea-factory, withering, rolling, fermentation, drying, packing,
+ * handmade-factory, tea-center, polytunnel, mushroom-hut (polytunnel and
+ * mushroom-hut deliberately last, per the user). Applied as a pure
+ * reorder of the array plus a matching renumber of each `order` field to
+ * 1-27 — every other field's content is byte-identical to before,
+ * verified by diffing the sorted set of changed lines against each other.
+ * No station's own order values had been kept sequential with array
+ * position before this (see the "turmeric is order 23" note below, now
+ * stale) — this pass finally makes both agree.
  * "mushroom-hut" was added on 2026-09-04 at the supervisor's request, with
  * no source material supplied yet — same situation the original 7 draft
  * manufacturing-process stations were in. `verified: false` (no
@@ -1096,8 +1110,22 @@ export const STATIONS: Station[] = [
     duration: "5-10 minutes",
   },
   {
-    id: "nursery",
+    id: "pahatharata-manufacturing",
     order: 2,
+    name: "Tea Manufacturing (Pahatharata)",
+    shortName: "Pahatharata",
+    icon: "Layers",
+    verified: true,
+    lastVerified: "2026-09-01",
+    description:
+      "Low-country ('Pahatharata') estates like this one process tea differently from high-grown estates further inland — and the estate's own manufacturing process, covered stage by stage earlier on this tour, bears that out: rolling here breaks the leaf down into small, dense particles rather than twisting it into whole orthodox leaf, the hallmark of CTC (Crush-Tear-Curl) processing. This stop is a quick recap of what that low-country approach means for plucking, processing, and grading.",
+    keyPoints:
+      "CTC (Crush-Tear-Curl) mechanically processes the leaf into small, dense granules, producing the strong, brisk character low-country Ceylon tea is known for — the same leaf particles seen earlier at the rolling and sorting stops on this tour.",
+    duration: "10-15 minutes",
+  },
+  {
+    id: "nursery",
+    order: 3,
     name: "Tea Nursery",
     shortName: "Nursery",
     icon: "Sprout",
@@ -1200,115 +1228,41 @@ export const STATIONS: Station[] = [
     ],
   },
   {
-    id: "plucking",
-    order: 3,
-    name: "Plucking",
-    shortName: "Pluck",
-    icon: "Hand",
-    verified: true,
-    lastVerified: "2026-09-07",
-    heroTagline: "Visitors hand-plucking tea in the estate's own garden.",
-    sections: [
-      {
-        heading: "Plucking",
-        image: [pluckerWithBasketImg, pluckingGroupImg],
-        body: "Every leaf begins in the tea garden, where pluckers hand-pick each shoot down to what staff call 'deka hamara' — two and a half leaves — often three and a half, rather than a strict two-leaves-and-a-bud count. This fine plucking standard is what gives Ceylon tea its delicate character — coarser leaves are left on the bush. The exact leaf count plucked differs between black tea and green tea. Only the youngest growth is used. Hand plucking protects the bush and selects the leaves with the highest concentration of flavour compounds, something machines can't replicate at this quality level.",
-      },
-    ],
-    duration: "Leaves are plucked daily, year-round, and rushed to the factory within hours to stay fresh.",
-  },
-  {
-    id: "withering",
+    id: "clonal-tea",
     order: 4,
-    name: "Withering",
-    shortName: "Wither",
-    icon: "Wind",
+    name: "Clonal Tea",
+    shortName: "Clonal Tea",
+    icon: "Gem",
     verified: true,
-    lastVerified: "2026-09-01",
+    lastVerified: "2026-08-31",
     description:
-      "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs roughly a foot deep, where large fans force air through it to steadily remove moisture — what the estate calls the 'modern' withering process. Moisture drops from around 75% at plucking to roughly 45% by the time the leaf turns limp and pliable, ready for rolling without shattering. The withered leaf is weighed again before it moves on to rolling.",
+      "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price. The Tea Research Institute (TRI) breeds clonal varieties for different needs — some for drought or rain tolerance and higher yield, others for the distinctive red- or green-tipped young buds prized for hand-made specialty teas. Widely planted, high-yielding cultivars such as TRI 2023, TRI 2025, and TRI 2026 are common on both estates and in home gardens, while the rarer specialty cultivars are mostly grown on larger estates for handcrafted tea rather than everyday cultivation. Despite looking like years, these TRI numbers are simply assigned identifiers, not the year each cultivar was released.",
     keyPoints:
-      "Withering evens out moisture across the leaf and lets natural enzymes begin the chemical changes that will later create the tea's aroma and colour.",
-    duration: "This stage typically takes 10 to 12 hours, depending on humidity and airflow.",
+      "Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities. Buds from the specialty red- or green-tipped cultivars are hand-picked for rare grades like Golden Tips and Silver Tips, and estates typically pay around Rs. 100 more per kilogram for them than for standard plucked leaf.",
+    duration: "5-10 minutes",
   },
   {
-    id: "rolling",
+    id: "pruning",
     order: 5,
-    name: "Rolling",
-    shortName: "Roll",
-    icon: "RotateCw",
-    verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
-    keyPoints:
-      "Breaking the cell walls exposes enzymes to oxygen, kicking off oxidation. How hard and how long the leaf is rolled shapes the final tea's strength and appearance. The first of several passes, a gentle 'pre-conditioning' roll, is meant to coat the twisted particles in the leaf's own juices before firmer rolling follows.",
-    duration: "Rolling usually runs for 45 minutes to an hour, often in multiple passes.",
-  },
-  {
-    id: "fermentation",
-    order: 6,
-    name: "Fermentation (Oxidation)",
-    shortName: "Ferment",
-    icon: "FlaskConical",
-    verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "Rolled leaf is spread out in a cool, humid room held at around 25 to 30°C and left to oxidise, with a humidifier keeping the air moist enough for the reaction to happen. The green leaf gradually turns a coppery brown as it develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
-    keyPoints:
-      "This is the single most important step for flavour. Timing has to be judged precisely — too little and the tea is thin, too much and it turns flat and dull. It's also what separates the tea types made here: black tea goes withering, rolling, fermentation, then firing, while green tea skips fermentation entirely (withering, rolling, drying only) and is milder — mostly drunk for its gentler, more medicinal character; white tea skips both withering and fermentation, going straight from fresh leaf to steaming and drying. The factory doesn't produce Oolong tea, which the guide describes as a black-tea-like fermented style made by repeated steaming and hand-brushing rather than machine rolling.",
-    duration: "At this factory, fermentation typically takes 1.5 to 2.5 hours depending on conditions, before the leaf moves on to drying.",
-  },
-  {
-    id: "drying",
-    order: 7,
-    name: "Drying (Firing)",
-    shortName: "Dry",
-    icon: "Flame",
-    verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "The oxidised leaf passes through hot-air dryers — reportedly running at around 240°C — that halt oxidation instantly and lock in the tea's character. What comes out the other end is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
-    keyPoints:
-      "Firing stops the chemical changes at exactly the right moment and reduces moisture from around 45-50% down to about 2-3%, which is essential for the tea to stay fresh during storage and shipping.",
-    duration: "Leaf passes through the dryer in around 20 minutes at carefully controlled temperatures.",
-  },
-  {
-    id: "sorting",
-    order: 8,
-    name: "Sorting & Grading",
-    shortName: "Sort",
-    icon: "Filter",
+    name: "Pruning",
+    shortName: "Pruning",
+    icon: "Scissors",
     verified: true,
     lastVerified: "2026-09-07",
-    heroTagline: "The estate's own tea-grade signs, laying out how each grade is classified.",
+    heroTagline: "The estate's own on-site signs marking its two pruning stages.",
     sections: [
       {
-        heading: "Sorting & Grading",
-        image: [lowGrownTeaGradesSignImg, artisanalTeaGradesSignImg, gradeYieldDiagramImg],
+        heading: "Pruning",
+        image: [firstCrossCutSignImg, secondCrossCutSignImg],
         imageFit: "contain",
-        body: "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse. That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong. Sieves of different mesh sizes further separate particles by size over several passes, and an electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside — none of this colour or character comes from dyes or additives, only natural processing. Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
+        body: "Before pruning, the estate deliberately leaves the tea bush to grow out for a period rather than cutting it back right away — letting new growth come in fully so the bush builds up nourishment. Only once that build-up is complete does pruning begin, cutting the bush back down to roughly knee height. On-site signs mark this out as two named stages: the first cross-cut (Palamu Haras Kapuma) brings the bush down to roughly 9-12 inches (22-30 cm), and the second cross-cut (Dewana Haras Kapuma) brings it back up to roughly 16-18 inches (40-45 cm). Letting the bush grow out first, rather than pruning on a fixed schedule regardless of condition, gives the plant time to channel nourishment upward before it's cut back.",
       },
     ],
-    duration: "Sorting runs continuously on machinery and takes roughly 30 to 45 minutes per batch.",
-  },
-  {
-    id: "packing",
-    order: 9,
-    name: "Packing",
-    shortName: "Pack",
-    icon: "Package",
-    verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "Graded tea is weighed, tasted for quality, and sealed into moisture-proof packaging lined with aluminium foil, printed with the factory's name and logo, its registration number, the Ceylon Tea Symbol, and its food safety certificate. The packing area is where several finished grades sit side by side — Dust (destined mainly for tea bags), OP1, Pekoe, BOP (Broken Orange Pekoe), and OP (Orange Pekoe) — with OP1 and OP especially popular across Arabic-speaking markets and Pekoe well known in Russia and Iran. The rarest and most valuable grade made here is SFOPE1, a 'Flowery Tippy' grade named for the pale, silvery tip pieces it contains from the very top of the shoot — prized more for its delicate character than raw strength. Bag weights vary by grade too: a fixed-size bag holds far more of a fine, dense grade like Dust (around 58kg) than a bulkier, leafier grade like OPE (around 30kg). Mostly, the factory hands its finished tea to Colombo tea brokers — names like Forbes & Walker, Akbar Brothers, and Finlays came up — who bring it to the Colombo Tea Auction, where buyers purchase it and often export it under their own brand after adding further value; direct export under the Athukorala name itself does happen too, but mainly for occasional special orders from overseas buyers.",
-    keyPoints:
-      "Airtight packing protects the tea from moisture and odours, preserving the flavour that was carefully built through every earlier stage of the process. Different countries want different things from their tea — some prefer a strong, astringent cup, others don't — so which part of the shoot a grade comes from is effectively matched to each export market's palate; Arabic-speaking markets, for instance, specifically request grades that aren't part of everyday drinking habits back home. Selling mostly through brokers rather than exporting directly means outside buyers usually handle onward international shipment and branding.",
-    duration: "The final batch is packed and ready for dispatch the same day it's graded.",
+    duration: "5 minutes",
   },
   {
     id: "cinnamon",
-    order: 10,
+    order: 6,
     name: "Cinnamon Plantation",
     shortName: "Cinnamon",
     icon: "TreePine",
@@ -1379,7 +1333,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "ginger-turmeric",
-    order: 11,
+    order: 7,
     name: "Ginger Plantation",
     shortName: "Ginger",
     icon: "Leaf",
@@ -1436,7 +1390,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "turmeric",
-    order: 22,
+    order: 8,
     name: "Turmeric Plantation",
     shortName: "Turmeric",
     icon: "Leaf",
@@ -1475,8 +1429,47 @@ export const STATIONS: Station[] = [
     duration: "5-10 minutes",
   },
   {
+    id: "sorting",
+    order: 9,
+    name: "Sorting & Grading",
+    shortName: "Sort",
+    icon: "Filter",
+    verified: true,
+    lastVerified: "2026-09-07",
+    heroTagline: "The estate's own tea-grade signs, laying out how each grade is classified.",
+    sections: [
+      {
+        heading: "Sorting & Grading",
+        image: [lowGrownTeaGradesSignImg, artisanalTeaGradesSignImg, gradeYieldDiagramImg],
+        imageFit: "contain",
+        body: "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse. That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong. Sieves of different mesh sizes further separate particles by size over several passes, and an electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside — none of this colour or character comes from dyes or additives, only natural processing. Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
+      },
+    ],
+    duration: "Sorting runs continuously on machinery and takes roughly 30 to 45 minutes per batch.",
+  },
+  {
+    id: "artisanal-tea-grades",
+    order: 10,
+    name: "Artisanal Tea Grades",
+    shortName: "Artisanal Teas",
+    icon: "Sparkles",
+    verified: true,
+    lastVerified: "2026-09-07",
+    heroTagline: "The estate's own Artisanal Tea Grades sign.",
+    sections: [
+      {
+        heading: "Artisanal Tea Grades",
+        image: artisanalTeaGradesSignImg,
+        imageFit: "contain",
+        imagePosition: "bottom",
+        body: "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot — TRI 2043, a Tea Research Institute clone — whose colour comes from anthocyanin; it's a low-yielding cultivar, which is why not every Sri Lankan estate grows it. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud, whose fine silvery hairs give the grade its name and a faint shimmer; the bud alone is weighed, withered for a few hours, and dried — a simpler process than the fully fermented grades — for a subtly sweet, floral cup with a velvety texture. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste, with a pale liquor, a velvety texture, a floral aroma, and a natural richness in antioxidants. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting — for a flavour closer to oolong: lighter than black tea but less vegetal than green tea, comparatively low in caffeine, and naturally rich in antioxidants. Pink tea starts out essentially colourless like white tea, and only turns pink once a couple of drops of lime are added — the citrus triggers a colour change in the same anthocyanin pigment that gives the shoot its hue; it also takes well to a couple of drops of honey, is recommended served as iced tea, and is naturally rich in antioxidants too. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots. These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
+      },
+    ],
+    duration: "5 minutes",
+  },
+  {
     id: "bee",
-    order: 23,
+    order: 11,
     name: "Honeybees",
     shortName: "Bees",
     icon: "Bug",
@@ -1515,42 +1508,8 @@ export const STATIONS: Station[] = [
     ],
   },
   {
-    id: "artisanal-tea-grades",
-    order: 24,
-    name: "Artisanal Tea Grades",
-    shortName: "Artisanal Teas",
-    icon: "Sparkles",
-    verified: true,
-    lastVerified: "2026-09-07",
-    heroTagline: "The estate's own Artisanal Tea Grades sign.",
-    sections: [
-      {
-        heading: "Artisanal Tea Grades",
-        image: artisanalTeaGradesSignImg,
-        imageFit: "contain",
-        imagePosition: "bottom",
-        body: "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot — TRI 2043, a Tea Research Institute clone — whose colour comes from anthocyanin; it's a low-yielding cultivar, which is why not every Sri Lankan estate grows it. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud, whose fine silvery hairs give the grade its name and a faint shimmer; the bud alone is weighed, withered for a few hours, and dried — a simpler process than the fully fermented grades — for a subtly sweet, floral cup with a velvety texture. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste, with a pale liquor, a velvety texture, a floral aroma, and a natural richness in antioxidants. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting — for a flavour closer to oolong: lighter than black tea but less vegetal than green tea, comparatively low in caffeine, and naturally rich in antioxidants. Pink tea starts out essentially colourless like white tea, and only turns pink once a couple of drops of lime are added — the citrus triggers a colour change in the same anthocyanin pigment that gives the shoot its hue; it also takes well to a couple of drops of honey, is recommended served as iced tea, and is naturally rich in antioxidants too. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots. These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
-      },
-    ],
-    duration: "5 minutes",
-  },
-  {
-    id: "pahatharata-manufacturing",
-    order: 12,
-    name: "Tea Manufacturing (Pahatharata)",
-    shortName: "Pahatharata",
-    icon: "Layers",
-    verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "Low-country ('Pahatharata') estates like this one process tea differently from high-grown estates further inland — and the estate's own manufacturing process, covered stage by stage earlier on this tour, bears that out: rolling here breaks the leaf down into small, dense particles rather than twisting it into whole orthodox leaf, the hallmark of CTC (Crush-Tear-Curl) processing. This stop is a quick recap of what that low-country approach means for plucking, processing, and grading.",
-    keyPoints:
-      "CTC (Crush-Tear-Curl) mechanically processes the leaf into small, dense granules, producing the strong, brisk character low-country Ceylon tea is known for — the same leaf particles seen earlier at the rolling and sorting stops on this tour.",
-    duration: "10-15 minutes",
-  },
-  {
     id: "organic-cultivation",
-    order: 13,
+    order: 12,
     name: "Organic Tea Cultivation",
     shortName: "Organic Tea",
     icon: "Recycle",
@@ -1567,22 +1526,8 @@ export const STATIONS: Station[] = [
     duration: "5-10 minutes",
   },
   {
-    id: "clonal-tea",
-    order: 14,
-    name: "Clonal Tea",
-    shortName: "Clonal Tea",
-    icon: "Gem",
-    verified: true,
-    lastVerified: "2026-08-31",
-    description:
-      "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price. The Tea Research Institute (TRI) breeds clonal varieties for different needs — some for drought or rain tolerance and higher yield, others for the distinctive red- or green-tipped young buds prized for hand-made specialty teas. Widely planted, high-yielding cultivars such as TRI 2023, TRI 2025, and TRI 2026 are common on both estates and in home gardens, while the rarer specialty cultivars are mostly grown on larger estates for handcrafted tea rather than everyday cultivation. Despite looking like years, these TRI numbers are simply assigned identifiers, not the year each cultivar was released.",
-    keyPoints:
-      "Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities. Buds from the specialty red- or green-tipped cultivars are hand-picked for rare grades like Golden Tips and Silver Tips, and estates typically pay around Rs. 100 more per kilogram for them than for standard plucked leaf.",
-    duration: "5-10 minutes",
-  },
-  {
     id: "shade-management",
-    order: 15,
+    order: 13,
     name: "Shade Tree Management",
     shortName: "Shade Trees",
     icon: "Trees",
@@ -1601,7 +1546,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "unique-fruits",
-    order: 16,
+    order: 14,
     name: "Unique Fruits of Sri Lanka",
     shortName: "Unique Fruits",
     icon: "Citrus",
@@ -1839,55 +1784,8 @@ export const STATIONS: Station[] = [
     duration: "10-15 minutes",
   },
   {
-    id: "tea-factory",
-    order: 17,
-    name: "The Tea Factory",
-    shortName: "Tea Factory",
-    icon: "Factory",
-    verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "The main factory building is where plucked leaf is turned into finished tea, from weighing through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — weighing, withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order.",
-    keyPoints:
-      "A working tea factory runs the full weighing-to-packing sequence under one roof, timed closely with each day's leaf intake — incoming leaf is weighed on arrival to log the day's harvest before processing begins. Visitors touring the factory floor are asked to wear a hairnet, a mask, and protective footwear, in line with the facility's hygiene standards.",
-    duration: "10-15 minutes",
-  },
-  {
-    id: "handmade-factory",
-    order: 18,
-    name: "Handmade Tea Factory",
-    shortName: "Handmade Factory",
-    icon: "HandHeart",
-    verified: true,
-    lastVerified: "2026-09-04",
-    heroTagline: "The estate's own Handmade Tea Factory — withering trough, tray racks, hand-roller, and dryer.",
-    sections: [
-      {
-        heading: "Handmade Tea Factory",
-        image: [witheringTroughImg, handmadeTrayRackImg, rollerMachineImg, dryerUnitImg],
-        imagePosition: "bottom",
-        body: "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; once steamed, the leaf rests outside to shed the surface moisture left by steaming, then is hand-rolled to curl it and draw out its colour, strength, aroma, and taste, before a final pass through the dryer, with drying time varying from one small producer to the next. The building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato). This stop covers what distinguishes hand-made tea from factory-line production. Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
-      },
-    ],
-    duration: "10 minutes",
-  },
-  {
-    id: "tea-center",
-    order: 19,
-    name: "Tea Center",
-    shortName: "Tea Center",
-    icon: "Coffee",
-    verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "The tour ends at the tea center, where a tasting panel checks every batch — not just here, but earlier too, whenever tea leaves the main factory for the local market or comes in for packing — for defects like over-fermentation, under-fermentation, or scorching, discarding anything that fails before it's sold and noting even minor issues so they can inform future production. On display here are two more small-batch specialties from the handmade factory, Flower Chakra and Tea Coin. Artisanal teas like these can be re-infused up to three times using water heated to about 80°C rather than boiling — roughly 2, 5, and 8 minutes per steep with fresh hot water each time — unlike standard black tea, which is brewed once at full boiling point.",
-    keyPoints:
-      "Tasting follows a method similar to wine tasting — smelling first, then slurping to pull the tea across the taste buds on the sides of the tongue with a draw of air; the panel spits rather than swallows while tasting up to 50 teas a day, though visitors are welcome to actually drink what they try. Properly brewed black tea needs about 2.5 to 3 minutes of covered steeping, not just a quick dip. BOPF and BOPF Special are the grades most Sri Lankans actually drink day to day; Dust and Dust 1, the lowest grades, are never sent to export markets and are what typically ends up — with added colouring — in cheap supermarket tea bags, which is why the colour appears the instant they're dipped rather than after a proper steep. Much of what's sold in supermarkets is also blended with cheaper tea bought in from elsewhere, unlike the estate's own unblended, single-origin teas. The very finest grades — FF Extra Special, FF Special, FBOP — come from only about 1% of the harvest, the most immature part of the bud, and sell for around $25 per 100g; bulkier grades like OPA and OP run closer to $5-6 per 200g. The white tip particles visible in the finest grades add extra sweetness and mostly go to European buyers, while Arabic markets tend to prefer a stronger cup. Beyond tea, the estate blends its own green and black tea (about 90%) with local herbs (about 10%) — gotukola, heenbovitiya, and moringa — and makes Masala, Cinnamon, and Ginger spice teas from its own spices; the masala recipe uses seven Sri Lankan spices, including cardamom, cinnamon, ginger, and black pepper (the rest a kept secret), and masala or BOP tea is what's recommended for milk tea.",
-    duration: "10-15 minutes",
-  },
-  {
     id: "coconut-field",
-    order: 20,
+    order: 15,
     name: "Coconut Field",
     shortName: "Coconut Field",
     icon: "Palmtree",
@@ -1925,8 +1823,26 @@ export const STATIONS: Station[] = [
     ],
   },
   {
+    id: "plucking",
+    order: 16,
+    name: "Plucking",
+    shortName: "Pluck",
+    icon: "Hand",
+    verified: true,
+    lastVerified: "2026-09-07",
+    heroTagline: "Visitors hand-plucking tea in the estate's own garden.",
+    sections: [
+      {
+        heading: "Plucking",
+        image: [pluckerWithBasketImg, pluckingGroupImg],
+        body: "Every leaf begins in the tea garden, where pluckers hand-pick each shoot down to what staff call 'deka hamara' — two and a half leaves — often three and a half, rather than a strict two-leaves-and-a-bud count. This fine plucking standard is what gives Ceylon tea its delicate character — coarser leaves are left on the bush. The exact leaf count plucked differs between black tea and green tea. Only the youngest growth is used. Hand plucking protects the bush and selects the leaves with the highest concentration of flavour compounds, something machines can't replicate at this quality level.",
+      },
+    ],
+    duration: "Leaves are plucked daily, year-round, and rushed to the factory within hours to stay fresh.",
+  },
+  {
     id: "jaggery-palm",
-    order: 21,
+    order: 17,
     name: "Jaggery Palm (Kithul)",
     shortName: "Jaggery Palm",
     icon: "Droplet",
@@ -1964,23 +1880,121 @@ export const STATIONS: Station[] = [
     ],
   },
   {
-    id: "pruning",
-    order: 25,
-    name: "Pruning",
-    shortName: "Pruning",
-    icon: "Scissors",
+    id: "tea-factory",
+    order: 18,
+    name: "The Tea Factory",
+    shortName: "Tea Factory",
+    icon: "Factory",
     verified: true,
-    lastVerified: "2026-09-07",
-    heroTagline: "The estate's own on-site signs marking its two pruning stages.",
+    lastVerified: "2026-09-01",
+    description:
+      "The main factory building is where plucked leaf is turned into finished tea, from weighing through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — weighing, withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order.",
+    keyPoints:
+      "A working tea factory runs the full weighing-to-packing sequence under one roof, timed closely with each day's leaf intake — incoming leaf is weighed on arrival to log the day's harvest before processing begins. Visitors touring the factory floor are asked to wear a hairnet, a mask, and protective footwear, in line with the facility's hygiene standards.",
+    duration: "10-15 minutes",
+  },
+  {
+    id: "withering",
+    order: 19,
+    name: "Withering",
+    shortName: "Wither",
+    icon: "Wind",
+    verified: true,
+    lastVerified: "2026-09-01",
+    description:
+      "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs roughly a foot deep, where large fans force air through it to steadily remove moisture — what the estate calls the 'modern' withering process. Moisture drops from around 75% at plucking to roughly 45% by the time the leaf turns limp and pliable, ready for rolling without shattering. The withered leaf is weighed again before it moves on to rolling.",
+    keyPoints:
+      "Withering evens out moisture across the leaf and lets natural enzymes begin the chemical changes that will later create the tea's aroma and colour.",
+    duration: "This stage typically takes 10 to 12 hours, depending on humidity and airflow.",
+  },
+  {
+    id: "rolling",
+    order: 20,
+    name: "Rolling",
+    shortName: "Roll",
+    icon: "RotateCw",
+    verified: true,
+    lastVerified: "2026-09-01",
+    description:
+      "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
+    keyPoints:
+      "Breaking the cell walls exposes enzymes to oxygen, kicking off oxidation. How hard and how long the leaf is rolled shapes the final tea's strength and appearance. The first of several passes, a gentle 'pre-conditioning' roll, is meant to coat the twisted particles in the leaf's own juices before firmer rolling follows.",
+    duration: "Rolling usually runs for 45 minutes to an hour, often in multiple passes.",
+  },
+  {
+    id: "fermentation",
+    order: 21,
+    name: "Fermentation (Oxidation)",
+    shortName: "Ferment",
+    icon: "FlaskConical",
+    verified: true,
+    lastVerified: "2026-09-01",
+    description:
+      "Rolled leaf is spread out in a cool, humid room held at around 25 to 30°C and left to oxidise, with a humidifier keeping the air moist enough for the reaction to happen. The green leaf gradually turns a coppery brown as it develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
+    keyPoints:
+      "This is the single most important step for flavour. Timing has to be judged precisely — too little and the tea is thin, too much and it turns flat and dull. It's also what separates the tea types made here: black tea goes withering, rolling, fermentation, then firing, while green tea skips fermentation entirely (withering, rolling, drying only) and is milder — mostly drunk for its gentler, more medicinal character; white tea skips both withering and fermentation, going straight from fresh leaf to steaming and drying. The factory doesn't produce Oolong tea, which the guide describes as a black-tea-like fermented style made by repeated steaming and hand-brushing rather than machine rolling.",
+    duration: "At this factory, fermentation typically takes 1.5 to 2.5 hours depending on conditions, before the leaf moves on to drying.",
+  },
+  {
+    id: "drying",
+    order: 22,
+    name: "Drying (Firing)",
+    shortName: "Dry",
+    icon: "Flame",
+    verified: true,
+    lastVerified: "2026-09-01",
+    description:
+      "The oxidised leaf passes through hot-air dryers — reportedly running at around 240°C — that halt oxidation instantly and lock in the tea's character. What comes out the other end is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
+    keyPoints:
+      "Firing stops the chemical changes at exactly the right moment and reduces moisture from around 45-50% down to about 2-3%, which is essential for the tea to stay fresh during storage and shipping.",
+    duration: "Leaf passes through the dryer in around 20 minutes at carefully controlled temperatures.",
+  },
+  {
+    id: "packing",
+    order: 23,
+    name: "Packing",
+    shortName: "Pack",
+    icon: "Package",
+    verified: true,
+    lastVerified: "2026-09-01",
+    description:
+      "Graded tea is weighed, tasted for quality, and sealed into moisture-proof packaging lined with aluminium foil, printed with the factory's name and logo, its registration number, the Ceylon Tea Symbol, and its food safety certificate. The packing area is where several finished grades sit side by side — Dust (destined mainly for tea bags), OP1, Pekoe, BOP (Broken Orange Pekoe), and OP (Orange Pekoe) — with OP1 and OP especially popular across Arabic-speaking markets and Pekoe well known in Russia and Iran. The rarest and most valuable grade made here is SFOPE1, a 'Flowery Tippy' grade named for the pale, silvery tip pieces it contains from the very top of the shoot — prized more for its delicate character than raw strength. Bag weights vary by grade too: a fixed-size bag holds far more of a fine, dense grade like Dust (around 58kg) than a bulkier, leafier grade like OPE (around 30kg). Mostly, the factory hands its finished tea to Colombo tea brokers — names like Forbes & Walker, Akbar Brothers, and Finlays came up — who bring it to the Colombo Tea Auction, where buyers purchase it and often export it under their own brand after adding further value; direct export under the Athukorala name itself does happen too, but mainly for occasional special orders from overseas buyers.",
+    keyPoints:
+      "Airtight packing protects the tea from moisture and odours, preserving the flavour that was carefully built through every earlier stage of the process. Different countries want different things from their tea — some prefer a strong, astringent cup, others don't — so which part of the shoot a grade comes from is effectively matched to each export market's palate; Arabic-speaking markets, for instance, specifically request grades that aren't part of everyday drinking habits back home. Selling mostly through brokers rather than exporting directly means outside buyers usually handle onward international shipment and branding.",
+    duration: "The final batch is packed and ready for dispatch the same day it's graded.",
+  },
+  {
+    id: "handmade-factory",
+    order: 24,
+    name: "Handmade Tea Factory",
+    shortName: "Handmade Factory",
+    icon: "HandHeart",
+    verified: true,
+    lastVerified: "2026-09-04",
+    heroTagline: "The estate's own Handmade Tea Factory — withering trough, tray racks, hand-roller, and dryer.",
     sections: [
       {
-        heading: "Pruning",
-        image: [firstCrossCutSignImg, secondCrossCutSignImg],
-        imageFit: "contain",
-        body: "Before pruning, the estate deliberately leaves the tea bush to grow out for a period rather than cutting it back right away — letting new growth come in fully so the bush builds up nourishment. Only once that build-up is complete does pruning begin, cutting the bush back down to roughly knee height. On-site signs mark this out as two named stages: the first cross-cut (Palamu Haras Kapuma) brings the bush down to roughly 9-12 inches (22-30 cm), and the second cross-cut (Dewana Haras Kapuma) brings it back up to roughly 16-18 inches (40-45 cm). Letting the bush grow out first, rather than pruning on a fixed schedule regardless of condition, gives the plant time to channel nourishment upward before it's cut back.",
+        heading: "Handmade Tea Factory",
+        image: [witheringTroughImg, handmadeTrayRackImg, rollerMachineImg, dryerUnitImg],
+        imagePosition: "bottom",
+        body: "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; once steamed, the leaf rests outside to shed the surface moisture left by steaming, then is hand-rolled to curl it and draw out its colour, strength, aroma, and taste, before a final pass through the dryer, with drying time varying from one small producer to the next. The building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato). This stop covers what distinguishes hand-made tea from factory-line production. Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
       },
     ],
-    duration: "5 minutes",
+    duration: "10 minutes",
+  },
+  {
+    id: "tea-center",
+    order: 25,
+    name: "Tea Center",
+    shortName: "Tea Center",
+    icon: "Coffee",
+    verified: true,
+    lastVerified: "2026-09-01",
+    description:
+      "The tour ends at the tea center, where a tasting panel checks every batch — not just here, but earlier too, whenever tea leaves the main factory for the local market or comes in for packing — for defects like over-fermentation, under-fermentation, or scorching, discarding anything that fails before it's sold and noting even minor issues so they can inform future production. On display here are two more small-batch specialties from the handmade factory, Flower Chakra and Tea Coin. Artisanal teas like these can be re-infused up to three times using water heated to about 80°C rather than boiling — roughly 2, 5, and 8 minutes per steep with fresh hot water each time — unlike standard black tea, which is brewed once at full boiling point.",
+    keyPoints:
+      "Tasting follows a method similar to wine tasting — smelling first, then slurping to pull the tea across the taste buds on the sides of the tongue with a draw of air; the panel spits rather than swallows while tasting up to 50 teas a day, though visitors are welcome to actually drink what they try. Properly brewed black tea needs about 2.5 to 3 minutes of covered steeping, not just a quick dip. BOPF and BOPF Special are the grades most Sri Lankans actually drink day to day; Dust and Dust 1, the lowest grades, are never sent to export markets and are what typically ends up — with added colouring — in cheap supermarket tea bags, which is why the colour appears the instant they're dipped rather than after a proper steep. Much of what's sold in supermarkets is also blended with cheaper tea bought in from elsewhere, unlike the estate's own unblended, single-origin teas. The very finest grades — FF Extra Special, FF Special, FBOP — come from only about 1% of the harvest, the most immature part of the bud, and sell for around $25 per 100g; bulkier grades like OPA and OP run closer to $5-6 per 200g. The white tip particles visible in the finest grades add extra sweetness and mostly go to European buyers, while Arabic markets tend to prefer a stronger cup. Beyond tea, the estate blends its own green and black tea (about 90%) with local herbs (about 10%) — gotukola, heenbovitiya, and moringa — and makes Masala, Cinnamon, and Ginger spice teas from its own spices; the masala recipe uses seven Sri Lankan spices, including cardamom, cinnamon, ginger, and black pepper (the rest a kept secret), and masala or BOP tea is what's recommended for milk tea.",
+    duration: "10-15 minutes",
   },
   {
     id: "polytunnel",
