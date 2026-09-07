@@ -134,6 +134,21 @@ import type { StationTranslation } from "./stations";
  * language, to carry that same "Artisanal Tea Grades" sign photo.
  * Existing description/keyPoints merged unchanged into sectionBodies[0],
  * with a new translated heroTagline only.
+ *
+ * "polytunnel" was updated on 2026-09-07, in every language, from a
+ * user-supplied PDF listing the 12 specific crops planned — replacing the
+ * earlier vague "such as bell peppers and tomatoes" — plus a new
+ * keyPoints sentence summarizing the drip-vs-mist watering pattern and
+ * the harvest-time range (25-35 days for radish up to 90-120 days for
+ * leeks). The PDF's full per-crop irrigation table was deliberately left
+ * out as internal agronomy detail, not visitor-facing content — see the
+ * fuller note near this station in stations.ts. Converted the same day
+ * to heroTagline/sectionHeadings/sectionBodies, in every language, to
+ * carry a real photo of the estate's own polytunnel interior — kept to
+ * the plain single-image defaults (no imagePosition/imageFit override),
+ * per the user's request not to change this station's existing layout.
+ * Existing description/keyPoints text merged unchanged into
+ * sectionBodies[0].
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -890,8 +905,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "පොලිටනල් සහ හරිතාගාරය",
-      description: "දැනට පවතින හරිතාගාරයට අමතරව, වතුයාය බෙල් පෙපර්, තක්කාලි වැනි එළවළු වගා කිරීම සඳහා පොලිටනලයක් ඉදි කරමින් සිටී. එය සම්පූර්ණ වූ පසු, විලා හෝ කැබනාවේ නවාතැන් ගන්නා අමුත්තන්ට මෙහිම වගා කරන එළවළු තමන් විසින්ම නැවුම්ව නෙළා ගැනීමට හැකි වනු ඇත.",
-      keyPoints: "පොලිටනලය වතුයාය තමන්ගේම නිෂ්පාදන මෙහිදීම වැඩි වශයෙන් වගා කිරීමට ගන්නා පියවරෙහි කොටසක් වන අතර, විලා සහ කැබනා අමුත්තන් සඳහා විශේෂ අත්දැකීමක් ලෙස තමන්ම එළවළු නෙළා ගැනීම සැලසුම් කර ඇත.",
+      heroTagline: "වතුයායේම පොලිටනලය තුළ, දැනටමත් එහි පළමු බෝග වගා කරමින්.",
+      sectionHeadings: ["පොලිටනල් සහ හරිතාගාරය"],
+      sectionBodies: ["දැනට පවතින හරිතාගාරයට අමතරව, වතුයාය තමන්ගේම විවිධ එළවළු වගා කිරීම සඳහා පොලිටනලයක් ඉදි කරමින් සිටී — ස්කොච් බොනට් සහ කොළ මිරිස්, කැප්සිකම්, ගර්කින්, තක්කාලි, බෙල් පෙපර්, ගෝවා, රාබු, බෝංචි, ලීක්ස්, ස්ප්‍රින් ලූනු, සහ කැරට් ඇතුළුව. එය සම්පූර්ණ වූ පසු, විලා හෝ කැබනාවේ නවාතැන් ගන්නා අමුත්තන්ට මෙහිම වගා කරන එළවළු තමන් විසින්ම නැවුම්ව නෙළා ගැනීමට හැකි වනු ඇත. සෑම බෝගයක්ම එහිම ජල සැපයුම් ක්‍රමයක් අනුගමනය කරයි, වර්ධන අවධිය අනුව මුල් මට්ටමේ බින්දු වාරිමාර්ග සහ ඉහළින් ඉසින මීදුම අතර මාරු වෙමින් — මීදුම ප්‍රධාන වශයෙන් කැරට් සහ රාබු වැනි බෝග සඳහා මුල් පැළ හටගැනීමට හා සිසිල් කිරීමට උපකාරී වන අතර, තක්කාලි වැනි බෝගවල ගෙඩි හටගැනීම ආරම්භ වූ පසු බින්දු වාරිමාර්ගය ප්‍රධාන ක්‍රමය බවට පත් වේ. පළමු අස්වැන්නට ගතවන කාලය බෝගයෙන් බෝගයට බෙහෙවින් වෙනස් වේ, රාබු සඳහා දින 25-35ක් තරම් අඩුවේ සිට ලීක්ස් සඳහා දින 90-120ක් දක්වා, එබැවින් සමයේ පාහේ සෑම අවස්ථාවකදීම පොලිටනලයේ නෙළා ගැනීමට යමක් තිබිය යුතුය."],
       duration: "මිනිත්තු 5",
     },
     "mushroom-hut": {
@@ -1382,8 +1398,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "பாலிடன்னல் மற்றும் பசுமை இல்லம்",
-      description: "தற்போதுள்ள பசுமையக அறைக்கு கூடுதலாக, தோட்டம் மணி மிளகாய், தக்காளி போன்ற காய்கறிகளை வளர்ப்பதற்காக ஒரு பாலிடன்னலை கட்டி வருகிறது. அது முடிந்தவுடன், வில்லா அல்லது கேபனாவில் தங்கும் விருந்தினர்கள் இங்கேயே வளர்க்கப்படும் காய்கறிகளை நேரடியாக பறித்துக்கொள்ள முடியும்.",
-      keyPoints: "பாலிடன்னல் தோட்டம் தன் சொந்த விளைபொருட்களை இங்கேயே அதிகமாக வளர்ப்பதற்கான முயற்சியின் ஒரு பகுதியாகும், வில்லா மற்றும் கேபனா விருந்தினர்களுக்கு ஒரு சிறப்பம்சமாக தாங்களே காய்கறிகளை அறுவடை செய்யும் வாய்ப்பு திட்டமிடப்பட்டுள்ளது.",
+      heroTagline: "தோட்டத்தின் சொந்த பாலிடன்னலின் உள்ளே, ஏற்கனவே அதன் முதல் பயிர்களை வளர்த்து வருகிறது.",
+      sectionHeadings: ["பாலிடன்னல் மற்றும் பசுமை இல்லம்"],
+      sectionBodies: ["தற்போதுள்ள பசுமையக அறைக்கு கூடுதலாக, தோட்டம் தனது சொந்த பல்வேறு காய்கறிகளை வளர்ப்பதற்காக ஒரு பாலிடன்னலை கட்டி வருகிறது — ஸ்காட்ச் பொனட் மற்றும் பச்சை மிளகாய், கேப்சிகம், கெர்கின், தக்காளி, மணி மிளகாய், முட்டைக்கோஸ், முள்ளங்கி, பீன்ஸ், லீக்ஸ், கீரை வெங்காயம், மற்றும் கேரட் உள்ளிட்டவை. அது முடிந்தவுடன், வில்லா அல்லது கேபனாவில் தங்கும் விருந்தினர்கள் இங்கேயே வளர்க்கப்படும் காய்கறிகளை நேரடியாக பறித்துக்கொள்ள முடியும். ஒவ்வொரு பயிரும் அதன் சொந்த நீர்ப்பாசன முறையைப் பின்பற்றுகிறது, வளர்ச்சி நிலைக்கு ஏற்ப வேர் மட்ட சொட்டு நீர்ப்பாசனத்திற்கும் மேலிருந்து தெளிக்கும் நீராவிக்கும் இடையே மாறி மாறி — கேரட் மற்றும் முள்ளங்கி போன்ற பயிர்களுக்கு நீராவி முக்கியமாக முளைப்பதற்கும் குளிர்விப்பதற்கும் உதவுகிறது, அதே சமயம் தக்காளி போன்ற பயிர்களில் காய் பிடிக்கத் தொடங்கியதும் சொட்டு நீர்ப்பாசனம் முதன்மையான முறையாக மாறுகிறது. முதல் அறுவடைக்கு ஆகும் காலம் பயிருக்குப் பயிர் வெகுவாக வேறுபடுகிறது, முள்ளங்கிக்கு 25-35 நாட்கள் என்ற குறைந்த காலத்திலிருந்து லீக்ஸுக்கு 90-120 நாட்கள் வரை, எனவே பருவத்தின் எந்த நேரத்திலும் பாலிடன்னலில் அறுவடை செய்ய ஏதாவது இருக்கும்."],
       duration: "5 நிமிடங்கள்",
     },
     "mushroom-hut": {
@@ -1874,8 +1891,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "Serra e Tunnel Coltivazione",
-      description: "Accanto a una serra già esistente, la tenuta sta costruendo un tunnel per la coltivazione di ortaggi come peperoni e pomodori. Una volta completato, gli ospiti del villa o della cabana potranno raccogliere di persona, freschi, gli ortaggi coltivati proprio qui.",
-      keyPoints: "Il tunnel fa parte dell'impegno della tenuta verso una maggiore produzione propria in loco, con la raccolta autonoma degli ortaggi prevista come un privilegio per gli ospiti della villa e delle cabana.",
+      heroTagline: "All'interno del tunnel di coltivazione della tenuta, già al lavoro con le sue prime colture.",
+      sectionHeadings: ["Serra e Tunnel Coltivazione"],
+      sectionBodies: ["Accanto a una serra già esistente, la tenuta sta costruendo un tunnel per coltivare una varietà di ortaggi propri — tra cui peperoncini Scotch Bonnet e peperoncini verdi, peperoni, cetriolini, pomodori, peperoni dolci, cavoli, ravanelli, fagiolini, porri, cipollotti e carote. Una volta completato, gli ospiti del villa o della cabana potranno raccogliere di persona, freschi, gli ortaggi coltivati proprio qui. Ogni coltura segue il proprio programma di irrigazione, alternando l'irrigazione a goccia a livello delle radici con la nebulizzazione dall'alto a seconda della fase di crescita — la nebulizzazione aiuta soprattutto la germinazione precoce e il raffreddamento per colture come carote e ravanelli, mentre l'irrigazione a goccia diventa il metodo principale una volta iniziata la fruttificazione per colture come il pomodoro. Il tempo per il primo raccolto varia molto da coltura a coltura, da appena 25-35 giorni per i ravanelli fino a 90-120 giorni per i porri, quindi il tunnel dovrebbe avere sempre qualcosa pronto da raccogliere in quasi ogni momento della stagione."],
       duration: "5 minuti",
     },
     "mushroom-hut": {
@@ -2366,8 +2384,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "النفق البلاستيكي والبيت الزجاجي",
-      description: "إلى جانب دفيئة قائمة بالفعل، تعمل المزرعة على بناء نفق بلاستيكي لزراعة خضروات مثل الفلفل الحلو والطماطم. وبمجرد اكتماله، سيتمكن ضيوف الفيلا أو الكابانا من قطف الخضروات المزروعة هنا بأنفسهم طازجة.",
-      keyPoints: "يمثل هذا النفق جزءًا من توجه المزرعة نحو زراعة المزيد من محاصيلها الخاصة في الموقع، مع التخطيط لتقديم تجربة قطف الخضروات بأنفسهم كميزة خاصة لضيوف الفيلا والكابانا.",
+      heroTagline: "داخل النفق البلاستيكي الخاص بالمزرعة، الذي يزرع بالفعل محاصيله الأولى.",
+      sectionHeadings: ["النفق البلاستيكي والبيت الزجاجي"],
+      sectionBodies: ["إلى جانب دفيئة قائمة بالفعل، تعمل المزرعة على بناء نفق بلاستيكي لزراعة مجموعة متنوعة من الخضروات الخاصة بها — منها فلفل السكوتش بونيت والفلفل الأخضر الحار، والفلفل الحلو، والخيار المخلل، والطماطم، والفلفل الرومي، والملفوف، والفجل، والفاصولياء الخضراء، والكراث، والبصل الأخضر، والجزر. وبمجرد اكتماله، سيتمكن ضيوف الفيلا أو الكابانا من قطف الخضروات المزروعة هنا بأنفسهم طازجة. يتبع كل محصول نظام ري خاصًا به، يتناوب بين الري بالتنقيط عند مستوى الجذور والرش العلوي حسب مرحلة النمو — إذ يساعد الرش بشكل أساسي على الإنبات المبكر والتبريد لمحاصيل مثل الجزر والفجل، بينما يصبح الري بالتنقيط هو الطريقة الرئيسية بمجرد بدء الإثمار في محاصيل مثل الطماطم. يختلف الوقت اللازم للحصاد الأول اختلافًا كبيرًا حسب المحصول، من 25 إلى 35 يومًا فقط للفجل إلى 90 إلى 120 يومًا للكراث، لذا من المفترض أن يكون هناك دائمًا شيء جاهز للقطف في النفق البلاستيكي في أي وقت تقريبًا من الموسم."],
       duration: "5 دقائق",
     },
     "mushroom-hut": {
@@ -2858,8 +2877,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "Тоннель и теплица",
-      description: "Рядом с уже существующей теплицей поместье строит плёночный тоннель для выращивания овощей, таких как болгарский перец и помидоры. После завершения строительства гости, проживающие на вилле или в кабане, смогут сами собирать свежие овощи, выращенные прямо здесь.",
-      keyPoints: "Тоннель — часть стремления поместья выращивать больше собственной продукции на месте; сбор овощей своими руками планируется как особое удовольствие для гостей виллы и кабаны.",
+      heroTagline: "Внутри собственного плёночного тоннеля поместья, где уже растут его первые культуры.",
+      sectionHeadings: ["Тоннель и теплица"],
+      sectionBodies: ["Рядом с уже существующей теплицей поместье строит плёночный тоннель для выращивания целого набора собственных овощей — перца чили сорта Scotch Bonnet и зелёного чили, болгарского перца, корнишонов, помидоров, сладкого перца, капусты, редиса, зелёной фасоли, лука-порея, зелёного лука и моркови. После завершения строительства гости, проживающие на вилле или в кабане, смогут сами собирать свежие овощи, выращенные прямо здесь. Каждая культура выращивается по собственному графику полива, чередуя капельный полив у корней с верхним распылением в зависимости от стадии роста — распыление в основном помогает прорастанию и охлаждению на ранних этапах для таких культур, как морковь и редис, тогда как капельный полив становится основным методом, как только начинается плодоношение, например у помидоров. Время до первого урожая сильно варьируется в зависимости от культуры — от всего 25–35 дней для редиса до 90–120 дней для лука-порея, так что в тоннеле почти всегда должно найтись что собрать в любой момент сезона."],
       duration: "5 минут",
     },
     "mushroom-hut": {
@@ -3350,8 +3370,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "Folientunnel & Gewächshaus",
-      description: "Neben einem bereits vorhandenen Gewächshaus baut das Anwesen einen Folientunnel für den Anbau von Gemüse wie Paprika und Tomaten. Sobald er fertiggestellt ist, können Gäste, die in der Villa oder Cabana wohnen, das hier angebaute Gemüse selbst frisch ernten.",
-      keyPoints: "Der Folientunnel ist Teil des Bestrebens des Anwesens, mehr eigene Produkte vor Ort anzubauen; das eigenhändige Ernten von Gemüse ist als besonderes Erlebnis für Gäste der Villa und der Cabana geplant.",
+      heroTagline: "Im Inneren des eigenen Folientunnels des Anwesens, in dem bereits die ersten Kulturen wachsen.",
+      sectionHeadings: ["Folientunnel & Gewächshaus"],
+      sectionBodies: ["Neben einem bereits vorhandenen Gewächshaus baut das Anwesen einen Folientunnel für den Anbau einer eigenen Gemüsevielfalt — darunter Scotch-Bonnet- und grüne Chilischoten, Paprika, Gewürzgurken, Tomaten, Gemüsepaprika, Kohl, Radieschen, grüne Bohnen, Lauch, Frühlingszwiebeln und Karotten. Sobald er fertiggestellt ist, können Gäste, die in der Villa oder Cabana wohnen, das hier angebaute Gemüse selbst frisch ernten. Jede Kultur folgt ihrem eigenen Bewässerungsplan, der je nach Wachstumsphase zwischen Tröpfchenbewässerung an der Wurzel und Beregnung von oben wechselt — die Beregnung unterstützt vor allem die frühe Keimung und Kühlung bei Kulturen wie Karotten und Radieschen, während die Tröpfchenbewässerung zur Hauptmethode wird, sobald die Fruchtbildung einsetzt, etwa bei Tomaten. Die Zeit bis zur ersten Ernte variiert je nach Kultur stark, von nur 25-35 Tagen bei Radieschen bis zu 90-120 Tagen bei Lauch, sodass im Folientunnel fast zu jedem Zeitpunkt der Saison etwas erntereif sein sollte."],
       duration: "5 Minuten",
     },
     "mushroom-hut": {
@@ -3842,8 +3863,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "Túnel de Cultivo e Invernadero",
-      description: "Junto a un invernadero ya existente, la finca está construyendo un túnel de cultivo para verduras como pimientos y tomates. Una vez terminado, los huéspedes alojados en la villa o la cabaña podrán recoger ellos mismos, frescas, las verduras cultivadas aquí.",
-      keyPoints: "El túnel forma parte del esfuerzo de la finca por cultivar más de sus propios productos in situ, con la recolección propia de verduras prevista como un aliciente para los huéspedes de la villa y la cabaña.",
+      heroTagline: "Dentro del propio túnel de cultivo de la finca, ya con sus primeras hortalizas creciendo.",
+      sectionHeadings: ["Túnel de Cultivo e Invernadero"],
+      sectionBodies: ["Junto a un invernadero ya existente, la finca está construyendo un túnel de cultivo para una variedad de verduras propias — entre ellas chiles Scotch Bonnet y chiles verdes, pimiento, pepinillos, tomates, pimientos morrones, repollo, rábano, judías verdes, puerros, cebolletas y zanahorias. Una vez terminado, los huéspedes alojados en la villa o la cabaña podrán recoger ellos mismos, frescas, las verduras cultivadas aquí. Cada cultivo sigue su propia rutina de riego, alternando el riego por goteo a nivel de raíz con la nebulización aérea según la etapa de crecimiento — la nebulización ayuda sobre todo a la germinación temprana y al enfriamiento en cultivos como la zanahoria y el rábano, mientras que el goteo se convierte en el método principal una vez que comienza la fructificación en cultivos como el tomate. El tiempo hasta la primera cosecha varía mucho según el cultivo, desde apenas 25-35 días para el rábano hasta 90-120 días para el puerro, por lo que el túnel debería tener siempre algo listo para recoger en casi cualquier momento de la temporada."],
       duration: "5 minutos",
     },
     "mushroom-hut": {
@@ -4334,8 +4356,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "Tunnel de Culture et Serre",
-      description: "À côté d'une serre déjà existante, le domaine construit un tunnel maraîcher pour cultiver des légumes comme les poivrons et les tomates. Une fois terminé, les hôtes séjournant à la villa ou au cabana pourront cueillir eux-mêmes, frais, les légumes cultivés ici.",
-      keyPoints: "Le tunnel s'inscrit dans la volonté du domaine de cultiver davantage ses propres produits sur place, avec la cueillette de légumes en autonomie prévue comme un atout pour les hôtes de la villa et du cabana.",
+      heroTagline: "À l'intérieur du propre tunnel maraîcher du domaine, déjà en train de faire pousser ses premières cultures.",
+      sectionHeadings: ["Tunnel de Culture et Serre"],
+      sectionBodies: ["À côté d'une serre déjà existante, le domaine construit un tunnel maraîcher pour cultiver tout un assortiment de légumes qui lui sont propres — piments Scotch Bonnet et piments verts, poivrons, cornichons, tomates, poivrons doux, choux, radis, haricots verts, poireaux, oignons nouveaux et carottes, entre autres. Une fois terminé, les hôtes séjournant à la villa ou au cabana pourront cueillir eux-mêmes, frais, les légumes cultivés ici. Chaque culture suit son propre programme d'arrosage, alternant l'irrigation goutte à goutte au niveau des racines et la brumisation par le haut selon le stade de croissance — la brumisation aide surtout à la germination précoce et au rafraîchissement pour des cultures comme la carotte et le radis, tandis que le goutte-à-goutte devient la méthode principale une fois la fructification commencée, comme pour la tomate. Le temps avant la première récolte varie fortement selon la culture, d'à peine 25 à 35 jours pour le radis jusqu'à 90 à 120 jours pour le poireau, si bien qu'il devrait toujours y avoir quelque chose à cueillir dans le tunnel, presque à tout moment de la saison."],
       duration: "5 minutes",
     },
     "mushroom-hut": {
@@ -4826,8 +4849,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "塑料大棚与温室",
-      description: "在现有温室之外，庄园正在搭建一座塑料大棚，用于种植灯笼椒、番茄等蔬菜。建成后，入住别墅或小木屋的客人将能够亲手采摘这里新鲜种植的蔬菜。",
-      keyPoints: "这座大棚是庄园致力于在本地种植更多自有农产品的一部分，亲手采摘蔬菜也被规划为别墅与小木屋客人的一项特色体验。",
+      heroTagline: "庄园自家塑料大棚内部，已经种下了第一批作物。",
+      sectionHeadings: ["塑料大棚与温室"],
+      sectionBodies: ["在现有温室之外，庄园正在搭建一座塑料大棚，用于种植自家的各种蔬菜——包括苏格兰帽椒和青辣椒、灯笼椒、小黄瓜、番茄、彩椒、卷心菜、萝卜、四季豆、韭葱、香葱以及胡萝卜等。建成后，入住别墅或小木屋的客人将能够亲手采摘这里新鲜种植的蔬菜。每种作物都遵循自己的浇水方式，根据生长阶段在根部滴灌和上方喷雾之间交替进行——喷雾主要有助于胡萝卜、萝卜等作物的早期发芽和降温，而一旦番茄等作物开始结果，滴灌就会成为主要的浇水方式。不同作物达到首次采收所需的时间差异很大，短则萝卜只需25至35天，长则韭葱需要90至120天，因此大棚里几乎在整个种植季节的任何时候都应该有可采摘的蔬菜。"],
       duration: "5分钟",
     },
     "mushroom-hut": {
@@ -5318,8 +5342,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     polytunnel: {
       name: "ビニールハウスと温室",
-      description: "既存の温室に加えて、農園ではパプリカやトマトなどの野菜を栽培するためのビニールハウスを建設中です。完成すれば、ヴィラやキャビンに宿泊するゲストは、ここで栽培された新鮮な野菜を自分の手で収穫できるようになります。",
-      keyPoints: "このビニールハウスは、農園が自家製の農産物をより多く現地で栽培しようとする取り組みの一環であり、ヴィラやキャビンのゲスト向けの特典として、野菜の収穫体験が計画されています。",
+      heroTagline: "農園自前のビニールハウスの内部——すでに最初の作物が育っています。",
+      sectionHeadings: ["ビニールハウスと温室"],
+      sectionBodies: ["既存の温室に加えて、農園では自家製のさまざまな野菜を栽培するためのビニールハウスを建設中です——スコッチボネットや青唐辛子、ピーマン、ガーキン、トマト、パプリカ、キャベツ、ラディッシュ、さやいんげん、リーキ、青ネギ、ニンジンなどです。完成すれば、ヴィラやキャビンに宿泊するゲストは、ここで栽培された新鮮な野菜を自分の手で収穫できるようになります。それぞれの作物は生育段階に応じて、根元への点滴灌漑と上からのミスト散布を切り替える独自の水やりスケジュールに従います——ミストは主にニンジンやラディッシュなどの作物の発芽初期と冷却に役立ち、トマトなどの作物では結実が始まると点滴灌漑が主な方法になります。最初の収穫までにかかる時間は作物によって大きく異なり、ラディッシュのわずか25〜35日から、リーキの90〜120日まで幅があるため、ビニールハウスではシーズンのほぼどの時期にも収穫できるものがあるはずです。"],
       duration: "5分",
     },
     "mushroom-hut": {
