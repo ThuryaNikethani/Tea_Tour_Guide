@@ -208,6 +208,13 @@ import dryerUnitImg from "../assets/handmade-factory/dryer-unit.jpg";
 // provenance note near the "shade-management" station below.
 import shadeTreeSignboardImg from "../assets/shade-management/shade-tree-signboard.jpg";
 import highShadeAlbiziaImg from "../assets/shade-management/high-shade-albizia.jpg";
+// Real, user-supplied photos of the estate's own two pruning-stage signs
+// (cropped in to the poster itself, cutting out most of the surrounding
+// foliage) — "Palamu Haras Kapuma" (first cross-cut) and "Dewana Haras
+// Kapuma" (second cross-cut), each with its own illustrated target
+// height. See the provenance note near the "pruning" station below.
+import firstCrossCutSignImg from "../assets/pruning/first-cross-cut-sign.jpg";
+import secondCrossCutSignImg from "../assets/pruning/second-cross-cut-sign.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -458,6 +465,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * moluccana high-shade specimen — the same Albizia already named in the
  * existing text, now backed by a real on-site tag. Existing description
  * and keyPoints merged unchanged into one section body; no facts changed.
+ * "pruning" was likewise converted on 2026-09-07 to carry two of the
+ * user's own photos of the estate's pruning-stage signs — cropped in to
+ * the poster itself per the user's request, cutting out most of the
+ * surrounding tree canopy and bushes that dominated the original shots.
+ * The signs' own labelled height ranges (first cross-cut 9-12in/22-30cm,
+ * second cross-cut 16-18in/40-45cm) are new confirmed facts, folded into
+ * the body alongside the existing "roughly knee height" description
+ * rather than replacing it, since knee height is consistent with the
+ * signs' own 16-18in target.
  * On 2026-09-01 the user supplied a transcript of a full guided walkthrough
  * of the main factory floor, which upgraded six stations at once —
  * "tea-factory" (the overview), "withering", "rolling", "fermentation",
@@ -1856,11 +1872,16 @@ export const STATIONS: Station[] = [
     shortName: "Pruning",
     icon: "Scissors",
     verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "Before pruning, the estate deliberately leaves the tea bush to grow out for a period rather than cutting it back right away — letting new growth come in fully so the bush builds up nourishment. Only once that build-up is complete does pruning begin, cutting the bush back down to roughly knee height.",
-    keyPoints:
-      "Letting the bush grow out first, rather than pruning on a fixed schedule regardless of condition, gives the plant time to channel nourishment upward before it's cut back.",
+    lastVerified: "2026-09-07",
+    heroTagline: "The estate's own on-site signs marking its two pruning stages.",
+    sections: [
+      {
+        heading: "Pruning",
+        image: [firstCrossCutSignImg, secondCrossCutSignImg],
+        imageFit: "contain",
+        body: "Before pruning, the estate deliberately leaves the tea bush to grow out for a period rather than cutting it back right away — letting new growth come in fully so the bush builds up nourishment. Only once that build-up is complete does pruning begin, cutting the bush back down to roughly knee height. On-site signs mark this out as two named stages: the first cross-cut (Palamu Haras Kapuma) brings the bush down to roughly 9-12 inches (22-30 cm), and the second cross-cut (Dewana Haras Kapuma) brings it back up to roughly 16-18 inches (40-45 cm). Letting the bush grow out first, rather than pruning on a fixed schedule regardless of condition, gives the plant time to channel nourishment upward before it's cut back.",
+      },
+    ],
     duration: "5 minutes",
   },
   {
