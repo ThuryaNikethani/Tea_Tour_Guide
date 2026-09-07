@@ -205,7 +205,7 @@ export function StationDetail() {
               src={station.processVideo}
               controls
               preload="none"
-              className="w-full rounded-md shadow-sm"
+              className="block max-w-full max-h-[70vh] mx-auto rounded-md shadow-sm"
             />
           </section>
         )}
