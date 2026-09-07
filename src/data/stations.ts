@@ -232,6 +232,12 @@ import lowGrownTeaGradesSignImg from "../assets/sorting/low-grown-tea-grades-sig
 // per-grade percentages are not factual and are not used in this
 // station's text, only shown as a generic supporting graphic.
 import gradeYieldDiagramImg from "../assets/sorting/grade-yield-diagram.jpg";
+// Real, user-supplied photo of the estate's own polytunnel interior —
+// the same photo used as the cover of the supplied crop-schedule PDF,
+// showing several of the labelled crops (Scotch Bonnet, leeks, carrots,
+// radish) and the misting system in use. See the provenance note near
+// the "polytunnel" station below.
+import polytunnelInteriorImg from "../assets/polytunnel/polytunnel-interior.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -467,6 +473,28 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * claiming it's already in use (revised 2026-09-02 after the user flagged
  * the original wording as unsuitable for a live site). `order: 27`,
  * appended at the end for the same reason as "pruning" above.
+ * "polytunnel" was updated on 2026-09-07 from a user-supplied PDF ("Vegetable
+ * Cultivation Guide in a Polytunnel") listing the specific 12 crops planned
+ * — Scotch Bonnet, green chili, capsicum, gherkin, tomato, bell pepper,
+ * cabbage, radish, green beans, leeks, spring onion, carrot — replacing the
+ * earlier vague "such as bell peppers and tomatoes." The PDF's per-crop
+ * table also covers exact harvesting frequency/duration and a detailed
+ * drip-vs-mist watering schedule per growth stage for each crop; only the
+ * general pattern (drip for root-level/fruiting-stage watering, misting for
+ * germination/cooling) and the overall harvest-time range across all crops
+ * (25-35 days for radish up to 90-120 days for leeks) were folded in — the
+ * full per-crop irrigation table is internal agronomy detail, not
+ * visitor-facing tour content, so it was deliberately left out.
+ * "polytunnel" gained a real photo the same day — the estate's own
+ * polytunnel interior, the very image used as the supplied PDF's cover,
+ * showing several of its labelled crops and the misting system running.
+ * Converted from plain description/keyPoints to the heroTagline/sections
+ * shape to carry it, same as every other station's first photo, but
+ * deliberately kept to the plain single-image defaults (top position,
+ * cover fit, one section) rather than the bottom/contain/multi-image
+ * treatments used elsewhere, per the user's request not to change this
+ * station's existing layout. Existing description/keyPoints merged
+ * unchanged into one section body; no facts changed.
  * "mushroom-hut" was added on 2026-09-04 at the supervisor's request, with
  * no source material supplied yet — same situation the original 7 draft
  * manufacturing-process stations were in. `verified: false` (no
@@ -1945,11 +1973,15 @@ export const STATIONS: Station[] = [
     shortName: "Polytunnel",
     icon: "Carrot",
     verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "Alongside an existing greenhouse, the estate is building a polytunnel for growing vegetables such as bell peppers and tomatoes. Once complete, guests staying at the villa or cabana will be able to freshly pick vegetables grown right here themselves.",
-    keyPoints:
-      "The polytunnel is part of the estate's push toward growing more of its own produce on-site, with harvest-your-own vegetables planned as a perk for villa and cabana guests.",
+    lastVerified: "2026-09-07",
+    heroTagline: "Inside the estate's own polytunnel, already growing its first crops.",
+    sections: [
+      {
+        heading: "Polytunnel & Greenhouse",
+        image: polytunnelInteriorImg,
+        body: "Alongside an existing greenhouse, the estate is building a polytunnel for growing an assortment of vegetables entirely its own — Scotch Bonnet and green chili peppers, capsicum, gherkins, tomatoes, bell peppers, cabbage, radish, green beans, leeks, spring onions, and carrots among them. Once complete, guests staying at the villa or cabana will be able to freshly pick vegetables grown right here themselves. Each crop follows its own watering routine, alternating root-level drip irrigation with overhead misting depending on the growth stage — misting mainly helps early germination and cooling for crops like carrot and radish, for instance, while drip takes over as the main method once fruiting begins for crops like tomato. Time to first harvest varies widely by crop, from as little as 25-35 days for radish up to 90-120 days for leeks, so the polytunnel should have something ready to pick at almost any point in the season.",
+      },
+    ],
     duration: "5 minutes",
   },
   {
