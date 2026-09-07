@@ -224,16 +224,17 @@ export function StationDetail() {
 
 /** Renders one section's image(s), heading, body, and item cards — shared by the top-level section pager and a selected fruit's own stacked sections. */
 function SectionContent({ section }: { section: StationSection }) {
-  const imageClass = section.imageFit === "contain" ? "w-full h-auto rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
+  const isContain = section.imageFit === "contain";
+  const imageClass = isContain ? "max-w-full max-h-72 w-auto h-auto rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
   const images = section.image && (
     Array.isArray(section.image) ? (
-      <div className="grid grid-cols-2 gap-2 mb-3">
+      <div className={isContain ? "flex flex-wrap justify-center gap-2 mb-3" : "grid grid-cols-2 gap-2 mb-3"}>
         {section.image.map((src) => (
           <img key={src} src={src} alt={section.heading} loading="lazy" className={imageClass} />
         ))}
       </div>
     ) : (
-      <img src={section.image} alt={section.heading} loading="lazy" className={`${imageClass} mb-3`} />
+      <img src={section.image} alt={section.heading} loading="lazy" className={`${imageClass} mb-3 ${isContain ? "mx-auto" : ""}`} />
     )
   );
 
