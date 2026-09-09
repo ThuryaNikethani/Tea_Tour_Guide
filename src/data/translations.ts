@@ -845,11 +845,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "පොල් වත්ත",
       heroTagline: "'ජීවන වෘක්ෂය' — වෙරළබඩ යෝධයෙකි, එහි කිසිවක්ම පාහේ අපතේ නොයයි.",
-      sectionHeadings: ["පොල් ගස පිළිබඳ", "ලක්ෂණ", "භාවිත සහ ප්‍රතිලාභ"],
+      sectionHeadings: ["පොල් ගස පිළිබඳ", "ලක්ෂණ", "භාවිත සහ ප්‍රතිලාභ", "පොල් සත්කාරයක්"],
       sectionBodies: [
         "පොල් ගස (Cocos nucifera) — Arecaceae පවුලට අයත් උස් ගසකි, ලොව පුරා නිවර්තන වෙරළබඩ ප්‍රදේශවල පුළුල් ලෙස වගා කෙරේ. 'ජීවන වෘක්ෂය' ලෙස හඳුන්වන මෙහි සෑම කොටසක්ම ප්‍රයෝජනවත් වේ — පෝෂ්‍යදායී ගෙඩිය සහ ප්‍රාණවත් වතුරේ සිට ලීය, කොළ, සහ තන්තු දක්වා. මෙම ගස වැලි සහිත, හොඳින් ජලය බැස යන පසෙහි වර්ධනය වන අතර ඉහළ ලවණතාවයට ඔරොත්තු දිය හැකි බැවින් වෙරළබඩ ප්‍රදේශවල සුලභය.",
         "ගස පිළිබඳ කෙටි විස්තරයක්:",
         "පොල් ගසේ වටිනාකම ගෙඩියට වඩා බොහෝ දුරට විහිදේ:",
+        "මෙම නැවතුම දැන් විස්තර කළ දේ ප්‍රායෝගිකව අත්විඳීමක් සමඟින් පැමිණේ — අමුත්තන්ට නැවුම් තැඹිලි ගෙඩියක් සත්කාර කරනු ලැබේ, එතැනම කපා, ගසෙන් තවමත් සිසිල්ව ඇති අතරම පිදුරු පොදකින් සෘජුවම පානය කරනු ලැබේ.",
       ],
       itemHeadings: [
         [],
@@ -1342,11 +1343,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "தென்னை வயல்",
       heroTagline: "'உயிர் மரம்' — கடலோர ராட்சதன், இதில் எதுவும் வீணாவதில்லை.",
-      sectionHeadings: ["தென்னை மரத்தைப் பற்றி", "பண்புகள்", "பயன்கள் மற்றும் நன்மைகள்"],
+      sectionHeadings: ["தென்னை மரத்தைப் பற்றி", "பண்புகள்", "பயன்கள் மற்றும் நன்மைகள்", "தேங்காய் உபசாரம்"],
       sectionBodies: [
         "Cocos nucifera — தென்னை மரம் — Arecaceae குடும்பத்தைச் சேர்ந்த உயரமான பனை, உலகம் முழுவதும் வெப்பமண்டல கடலோரப் பகுதிகளில் பரவலாக பயிரிடப்படுகிறது. 'உயிர் மரம்' என அழைக்கப்படும் இதன் ஒவ்வொரு பகுதியும் பயனுள்ளதாக இருக்கிறது — சத்தான பழம் மற்றும் புத்துணர்ச்சியூட்டும் நீரிலிருந்து அதன் மரம், இலைகள், நார் வரை. இந்த மரம் மணல் நிறைந்த, நன்கு வடிகட்டும் மண்ணில் செழித்து வளர்கிறது, அதிக உப்புத்தன்மையையும் தாங்கக்கூடியது, இதனால் கடலோரங்களில் பொதுவானது.",
         "பனையைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
         "தென்னை பனையின் மதிப்பு பழத்தைத் தாண்டி விரிவடைகிறது:",
+        "இந்த நிறுத்தம் இப்போது விவரிக்கப்பட்டதை நேரடியாக அனுபவிக்கும் வாய்ப்புடன் வருகிறது — பார்வையாளர்களுக்கு புதிய இளநீர் வழங்கப்படுகிறது, அப்போதே வெட்டப்பட்டு, மரத்திலிருந்து இன்னும் குளிர்ச்சியாக இருக்கும் நிலையிலேயே வைக்கோல் மூலம் நேரடியாக பருகப்படுகிறது.",
       ],
       itemHeadings: [
         [],
@@ -1839,11 +1841,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "Campo di Cocco",
       heroTagline: "L'\"Albero della Vita\" — un gigante costiero di cui non si spreca quasi nulla.",
-      sectionHeadings: ["La Palma da Cocco", "Caratteristiche", "Usi e Benefici"],
+      sectionHeadings: ["La Palma da Cocco", "Caratteristiche", "Usi e Benefici", "Un Assaggio di Cocco"],
       sectionBodies: [
         "Cocos nucifera — la palma da cocco — è una palma alta della famiglia delle Arecaceae, ampiamente coltivata nelle regioni costiere tropicali di tutto il mondo. Conosciuta come l'\"Albero della Vita\", ogni sua parte è utile — dal frutto nutriente e dall'acqua rinfrescante al legno, alle foglie e alle fibre. L'albero prospera in terreni sabbiosi e ben drenati e può resistere ad alta salinità, il che lo rende comune lungo le coste.",
         "Uno sguardo rapido alla palma stessa:",
         "Il valore della palma da cocco va ben oltre il frutto stesso:",
+        "Questa tappa offre un assaggio pratico di quanto appena descritto — ai visitatori viene offerta una king coconut fresca, aperta al momento e sorseggiata direttamente con una cannuccia, ancora fresca dall'albero.",
       ],
       itemHeadings: [
         [],
@@ -2336,11 +2339,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "حقل جوز الهند",
       heroTagline: "«شجرة الحياة» — عملاق ساحلي لا يكاد يُهدر منه شيء.",
-      sectionHeadings: ["عن شجرة جوز الهند", "الخصائص", "الاستخدامات والفوائد"],
+      sectionHeadings: ["عن شجرة جوز الهند", "الخصائص", "الاستخدامات والفوائد", "ضيافة جوز الهند"],
       sectionBodies: [
         "جوز الهند (Cocos nucifera) نخلة طويلة تنتمي إلى الفصيلة النخيلية، تُزرع على نطاق واسع في المناطق الساحلية الاستوائية حول العالم. تُعرف بـ«شجرة الحياة»، إذ يُستفاد من كل جزء منها — من ثمرتها المغذية ومائها المنعش إلى خشبها وأوراقها وأليافها. تزدهر هذه الشجرة في التربة الرملية جيدة التصريف وتتحمل الملوحة العالية، مما يجعلها شائعة على طول السواحل.",
         "نظرة سريعة على النخلة نفسها:",
         "تتجاوز قيمة نخلة جوز الهند الثمرة نفسها إلى حد بعيد:",
+        "تأتي هذه المحطة مصحوبة بتجربة عملية لما ورد وصفه للتو — يُقدَّم للزوار جوز هند ملكي (king coconut) طازج، يُفتح في الحال ويُشرب مباشرة بواسطة ماصة وهو لا يزال باردًا من الشجرة.",
       ],
       itemHeadings: [
         [],
@@ -2833,11 +2837,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "Кокосовое поле",
       heroTagline: "«Дерево жизни» — прибрежный гигант, у которого почти ничего не пропадает даром.",
-      sectionHeadings: ["О кокосовой пальме", "Характеристики", "Применение и польза"],
+      sectionHeadings: ["О кокосовой пальме", "Характеристики", "Применение и польза", "Кокосовое угощение"],
       sectionBodies: [
         "Cocos nucifera — кокосовая пальма — высокая пальма семейства Арековые, широко культивируемая в тропических прибрежных регионах по всему миру. Известная как «дерево жизни», она полезна каждой своей частью — от питательного плода и освежающей воды до древесины, листьев и волокна. Дерево хорошо растёт на песчаных, хорошо дренированных почвах и выдерживает высокую засолённость, поэтому оно так распространено вдоль побережий.",
         "Краткий обзор самой пальмы:",
         "Ценность кокосовой пальмы выходит далеко за рамки самого плода:",
+        "Эта остановка сопровождается практической дегустацией только что описанного — посетителям предлагают свежий королевский кокос (king coconut), который вскрывают прямо на месте и пьют через трубочку, пока он ещё прохладный, только что с дерева.",
       ],
       itemHeadings: [
         [],
@@ -3330,11 +3335,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "Kokosnussfeld",
       heroTagline: "Der „Baum des Lebens“ — ein Küstenriese, bei dem fast nichts verschwendet wird.",
-      sectionHeadings: ["Über die Kokospalme", "Merkmale", "Verwendung und Nutzen"],
+      sectionHeadings: ["Über die Kokospalme", "Merkmale", "Verwendung und Nutzen", "Eine Kokosnuss-Erfrischung"],
       sectionBodies: [
         "Cocos nucifera — die Kokospalme — ist eine hohe Palme aus der Familie der Arecaceae, die weltweit in tropischen Küstenregionen weit verbreitet angebaut wird. Als „Baum des Lebens“ bekannt, ist jeder Teil von ihr nützlich — von der nahrhaften Frucht und dem erfrischenden Wasser bis hin zu Holz, Blättern und Fasern. Der Baum gedeiht auf sandigen, gut durchlässigen Böden und verträgt hohe Salzgehalte, weshalb er entlang von Küsten so verbreitet ist.",
         "Ein kurzer Blick auf die Palme selbst:",
         "Der Wert der Kokospalme geht weit über die Frucht selbst hinaus:",
+        "Diese Station bringt eine praktische Kostprobe dessen, was gerade beschrieben wurde — Besucher werden mit einer frischen King Coconut verwöhnt, die vor Ort aufgeschnitten und direkt mit einem Strohhalm getrunken wird, noch kühl vom Baum.",
       ],
       itemHeadings: [
         [],
@@ -3827,11 +3833,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "Campo de Cocoteros",
       heroTagline: "El «Árbol de la Vida» — un gigante costero del que casi nada se desperdicia.",
-      sectionHeadings: ["Sobre la Palma de Coco", "Características", "Usos y Beneficios"],
+      sectionHeadings: ["Sobre la Palma de Coco", "Características", "Usos y Beneficios", "Un Refrigerio de Coco"],
       sectionBodies: [
         "Cocos nucifera —la palmera de coco— es una palmera alta de la familia Arecaceae, ampliamente cultivada en regiones costeras tropicales de todo el mundo. Conocida como el «Árbol de la Vida», todas sus partes son útiles —desde su fruto nutritivo y su agua refrescante hasta su madera, hojas y fibra. El árbol prospera en suelos arenosos bien drenados y puede resistir una alta salinidad, lo que lo hace común a lo largo de las costas.",
         "Un vistazo rápido a la palmera:",
         "El valor de la palmera de coco va mucho más allá del propio fruto:",
+        "Esta parada viene con una degustación práctica de lo que se acaba de describir — a los visitantes se les ofrece un coco rey (king coconut) fresco, abierto en el momento y bebido directamente con una pajita, todavía frío recién bajado del árbol.",
       ],
       itemHeadings: [
         [],
@@ -4324,11 +4331,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "Champ de Cocotiers",
       heroTagline: "L'« Arbre de Vie » — un géant côtier dont presque rien ne se perd.",
-      sectionHeadings: ["À propos du Cocotier", "Caractéristiques", "Usages et Bienfaits"],
+      sectionHeadings: ["À propos du Cocotier", "Caractéristiques", "Usages et Bienfaits", "Une Pause Noix de Coco"],
       sectionBodies: [
         "Cocos nucifera — le cocotier — est un grand palmier de la famille des Arecaceae, largement cultivé dans les régions côtières tropicales du monde entier. Connu comme l'« Arbre de Vie », chacune de ses parties est utile — de son fruit nourrissant et de son eau rafraîchissante à son bois, ses feuilles et ses fibres. L'arbre prospère dans les sols sableux et bien drainés et peut résister à une forte salinité, ce qui le rend courant le long des côtes.",
         "Un aperçu rapide du palmier lui-même :",
         "La valeur du cocotier va bien au-delà du fruit lui-même :",
+        "Cette étape s'accompagne d'une dégustation pratique de ce qui vient d'être décrit — les visiteurs se voient offrir une noix de coco royale (king coconut) fraîche, ouverte sur place et bue directement à la paille, encore fraîche de l'arbre.",
       ],
       itemHeadings: [
         [],
@@ -4821,11 +4829,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "椰园",
       heroTagline: "「生命之树」——一种几乎全身都不会被浪费的海岸巨树。",
-      sectionHeadings: ["关于椰子树", "特征", "用途与益处"],
+      sectionHeadings: ["关于椰子树", "特征", "用途与益处", "椰子款待"],
       sectionBodies: [
         "椰子树（Cocos nucifera）是棕榈科的一种高大棕榈树，广泛种植于世界各地的热带沿海地区。被誉为「生命之树」，它的每一部分都物尽其用——从营养丰富的果实、清凉解渴的椰子水，到木材、叶片与纤维。这种树在排水良好的沙质土壤中长势良好，并能耐受高盐分，因此在海岸线一带十分常见。",
         "棕榈树本身的简要介绍：",
         "椰子树的价值远不止果实本身：",
+        "这一站带来一次亲身体验，正好呼应上文所述——游客会获赠一颗新鲜的王椰（king coconut），当场切开，插上吸管直接饮用，椰子仍带着刚从树上摘下的清凉。",
       ],
       itemHeadings: [
         [],
@@ -5318,11 +5327,12 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "coconut-field": {
       name: "ココナッツ畑",
       heroTagline: "「生命の木」——ほとんど無駄になる部分がない、海岸の巨木。",
-      sectionHeadings: ["ココナッツヤシについて", "特徴", "用途と効能"],
+      sectionHeadings: ["ココナッツヤシについて", "特徴", "用途と効能", "ココナッツのおもてなし"],
       sectionBodies: [
         "ココナッツヤシ（Cocos nucifera）はヤシ科に属する背の高いヤシで、世界中の熱帯沿岸地域で広く栽培されています。「生命の木」として知られ、その全ての部分が役立ちます——栄養豊富な果実や爽やかなココナッツウォーターから、木材、葉、繊維まで。この木は水はけのよい砂質の土壤でよく育ち、高い塩分にも耐えられるため、海岸沿いでよく見られます。",
         "ヤシそのものを簡単に見てみましょう：",
         "ココナッツヤシの価値は、果実そのものだけにとどまりません：",
+        "このストップでは、今説明した内容を実際に体験できます——訪問者にはその場でカットした新鮮なキングココナッツが振る舞われ、木からもぎたての冷たさが残るうちに、ストローでそのまま飲むことができます。",
       ],
       itemHeadings: [
         [],
