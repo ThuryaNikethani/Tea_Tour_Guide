@@ -721,6 +721,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * use confirmed with the user. The old single-image import was replaced
  * by the new collage import rather than kept alongside it, since nothing
  * else referenced it.
+ * Two more images were added into "introduction"'s collage on 2026-09-09
+ * — a "Ceylon Tea Ruhuna" promotional graphic and a "Ceylon Tea: The
+ * Journey from Leaf to Cup" 16-step process poster. Both are AI-generated
+ * (Gemini) recreations of real signage/posters at the estate, not direct
+ * photos — confirmed with the user before adding. Inserted between the
+ * existing Ceylon Tea Symbol photo and the AR-TEA Academy card (now 5
+ * panels total: symbol, Ruhuna graphic, leaf-to-cup poster, AR-TEA card,
+ * visitor with shoots), grouping the three signage/graphic panels before
+ * the more personal photos.
  * "pahatharata-manufacturing" gained the same collage-heroImage treatment
  * shortly after — first with two photos of visitors reading the factory's
  * own process flow chart and touring the machinery deck (visitor faces
