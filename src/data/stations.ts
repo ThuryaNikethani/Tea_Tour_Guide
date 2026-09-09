@@ -204,12 +204,10 @@ import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
 // "introduction"'s heroImage. See the provenance note near the
 // "introduction" station below.
 import introductionCollageImg from "../assets/introduction/introduction-collage.jpg";
-// A generated collage combining two real photos of visitors touring the
-// factory floor — the "Process Flow Chart of Athukorala Tea Factory"
-// signboard, and the machinery deck one level down. Visitor faces are
-// partly visible (masks/hairnets); use confirmed with the user. Used as
-// "pahatharata-manufacturing"'s heroImage. See the provenance note near
-// the "pahatharata-manufacturing" station below.
+// A generated collage combining two real photos of the estate's own
+// low-country tea field (with a labelled shade tree) and its withering
+// troughs. Used as "pahatharata-manufacturing"'s heroImage. See the
+// provenance note near the "pahatharata-manufacturing" station below.
 import pahatharataManufacturingCollageImg from "../assets/pahatharata-manufacturing/pahatharata-manufacturing-collage.jpg";
 // A generated collage combining four real photos of the Handmade Tea
 // Factory's own equipment (withering trough, tray rack, hand-roller,
@@ -716,12 +714,17 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * by the new collage import rather than kept alongside it, since nothing
  * else referenced it.
  * "pahatharata-manufacturing" gained the same collage-heroImage treatment
- * shortly after — two real photos the user supplied (visitors reading the
- * factory's own process flow chart, and touring the machinery deck),
- * combined with the same Pillow script. Stayed in its plain
- * description/keyPoints/duration shape (heroImage/heroTagline render
- * independently of `sections`) — no restructuring, no text changed.
- * Visitor faces are partly visible; use confirmed with the user.
+ * shortly after — first with two photos of visitors reading the factory's
+ * own process flow chart and touring the machinery deck (visitor faces
+ * partly visible, use confirmed), then replaced minutes later, still
+ * 2026-09-09, with two different real photos the user supplied instead —
+ * the estate's own low-country tea field (with a labelled shade tree) and
+ * its withering troughs — confirmed as real photos of this estate, not
+ * stock. The first pair of source photos was never committed, so the
+ * swap is a plain content replacement, not a tracked history change.
+ * Stayed in its plain description/keyPoints/duration shape
+ * (heroImage/heroTagline render independently of `sections`) — no
+ * restructuring, no text changed.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
