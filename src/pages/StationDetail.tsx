@@ -136,7 +136,7 @@ export function StationDetail() {
                   ) : (
                     <div>
                       <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-2">{currentSection.heading}</h2>
-                      <p className="text-tea-800 dark:text-tea-200 leading-relaxed">{currentSection.body}</p>
+                      <p className="text-tea-800 dark:text-tea-200 leading-relaxed text-justify">{currentSection.body}</p>
                       <div className="mt-6 grid sm:grid-cols-2 gap-4">
                         {currentSection.fruits.map((fruit) => (
                           <button
@@ -187,13 +187,13 @@ export function StationDetail() {
           );
         })() : (
           <>
-            <p className="text-tea-800 dark:text-tea-200 leading-relaxed mb-6">{station.description}</p>
+            <p className="text-tea-800 dark:text-tea-200 leading-relaxed mb-6 text-justify">{station.description}</p>
             <div className="bg-tea-50 dark:bg-tea-900 border border-tea-200 dark:border-tea-700 rounded-md p-4 mb-6">
               <div className="flex items-center gap-1.5 text-tea-700 dark:text-tea-200 font-medium text-sm mb-1.5">
                 <Sparkles size={15} />
                 {t("keyPoints")}
               </div>
-              <p className="text-tea-800 dark:text-tea-300 text-sm leading-relaxed">{station.keyPoints}</p>
+              <p className="text-tea-800 dark:text-tea-300 text-sm leading-relaxed text-justify">{station.keyPoints}</p>
             </div>
           </>
         )}
@@ -241,7 +241,7 @@ function SectionContent({ section }: { section: StationSection }) {
     <>
       {section.imagePosition !== "bottom" && images}
       <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-2">{section.heading}</h2>
-      <p className="text-tea-800 dark:text-tea-200 leading-relaxed">{section.body}</p>
+      <p className="text-tea-800 dark:text-tea-200 leading-relaxed text-justify">{section.body}</p>
       {section.imagePosition === "bottom" && <div className="mt-3">{images}</div>}
 
       {section.items && (
@@ -261,7 +261,7 @@ function SectionContent({ section }: { section: StationSection }) {
               )}
               <div className="flex-1 flex flex-col p-4">
                 <h3 className="font-heading font-semibold text-lg text-tea-900 dark:text-white mb-1.5">{item.heading}</h3>
-                <p className="text-tea-800 dark:text-tea-200 leading-relaxed text-sm">{item.body}</p>
+                <p className="text-tea-800 dark:text-tea-200 leading-relaxed text-sm text-justify">{item.body}</p>
                 {item.tags && (
                   <p className="flex items-center gap-1.5 text-gold-700 dark:text-gold-400 text-xs font-semibold mt-auto pt-3">
                     <Leaf size={13} />
