@@ -233,6 +233,13 @@ import artisanalTeaGradesSignImg from "../assets/sorting/artisanal-tea-grades-si
 // size — used as the station's heroImage banner. See the provenance note
 // near the "sorting" station below.
 import sortingCollageImg from "../assets/sorting/sorting-collage.jpg";
+// A generated collage combining two real, user-supplied photos of
+// visitors at the packing area (bagging graded tea, and examining
+// finished grades in bins), center-cropped to the same size and laid out
+// side by side — same treatment as "sorting"'s collage. Used as
+// "packing"'s heroImage. Visitor faces are visible; use confirmed with
+// the user. See the provenance note near the "packing" station below.
+import packingCollageImg from "../assets/packing/packing-collage.jpg";
 // Real, user-supplied photo of the estate's own polytunnel interior —
 // the same photo used as the cover of the supplied crop-schedule PDF,
 // showing several of the labelled crops (Scotch Bonnet, leeks, carrots,
@@ -674,6 +681,14 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * yield diagram, both sorting-floor photos) were removed as unused;
  * `artisanalTeaGradesSignImg` stays imported since "artisanal-tea-grades"
  * still uses it directly as its own heroImage.
+ * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
+ * two real photos the user supplied (visitors bagging graded tea, and
+ * examining finished grades in bins), combined with the same Pillow
+ * script into `packing-collage.jpg`. Stayed in its plain
+ * description/keyPoints/duration shape (heroImage/heroTagline render
+ * independently of `sections`, same as processVideo does) — no
+ * restructuring, no section text changed. Visitor faces are visible; use
+ * confirmed with the user.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -2117,7 +2132,9 @@ export const STATIONS: Station[] = [
     shortName: "Pack",
     icon: "Package",
     verified: true,
-    lastVerified: "2026-09-01",
+    lastVerified: "2026-09-09",
+    heroImage: packingCollageImg,
+    heroTagline: "Visitors at the estate's own packing area.",
     description:
       "Graded tea is weighed, tasted for quality, and sealed into moisture-proof packaging lined with aluminium foil, printed with the factory's name and logo, its registration number, the Ceylon Tea Symbol, and its food safety certificate. The packing area is where several finished grades sit side by side — Dust (destined mainly for tea bags), OP1, Pekoe, BOP (Broken Orange Pekoe), and OP (Orange Pekoe) — with OP1 and OP especially popular across Arabic-speaking markets and Pekoe well known in Russia and Iran. The rarest and most valuable grade made here is SFOPE1, a 'Flowery Tippy' grade named for the pale, silvery tip pieces it contains from the very top of the shoot — prized more for its delicate character than raw strength. Bag weights vary by grade too: a fixed-size bag holds far more of a fine, dense grade like Dust (around 58kg) than a bulkier, leafier grade like OPE (around 30kg). Mostly, the factory hands its finished tea to Colombo tea brokers — names like Forbes & Walker, Akbar Brothers, and Finlays came up — who bring it to the Colombo Tea Auction, where buyers purchase it and often export it under their own brand after adding further value; direct export under the Athukorala name itself does happen too, but mainly for occasional special orders from overseas buyers.",
     keyPoints:
