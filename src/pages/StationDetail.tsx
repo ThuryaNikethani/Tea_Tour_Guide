@@ -65,7 +65,7 @@ export function StationDetail() {
           <img
             src={station.heroImage}
             alt={station.name}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-top"
           />
           <div className="absolute inset-0 bg-tea-950/55 flex flex-col items-center justify-center text-center px-4">
             <h1 className="font-heading font-semibold text-3xl md:text-5xl text-white mb-3 drop-shadow-lg">{station.name}</h1>
