@@ -60,6 +60,22 @@ export function StationDetail() {
         </div>
       )}
 
+      {!station.heroVideo && station.heroImage && (
+        <div className="relative w-full h-64 md:h-[420px] overflow-hidden">
+          <img
+            src={station.heroImage}
+            alt={station.name}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-tea-950/55 flex flex-col items-center justify-center text-center px-4">
+            <h1 className="font-heading font-semibold text-3xl md:text-5xl text-white mb-3 drop-shadow-lg">{station.name}</h1>
+            {station.heroTagline && (
+              <p className="text-white/90 max-w-xl">{station.heroTagline}</p>
+            )}
+          </div>
+        </div>
+      )}
+
       <div className="max-w-2xl mx-auto px-4 py-6">
         <Link to="/stations" className="inline-flex items-center gap-1 text-tea-600 dark:text-tea-400 hover:text-tea-900 dark:hover:text-white text-sm mb-6">
           <ChevronLeft size={16} />
@@ -86,7 +102,7 @@ export function StationDetail() {
             </button>
           </div>
         </div>
-        {!station.heroVideo && <h1 className="font-heading font-semibold text-3xl text-tea-900 dark:text-white mb-2">{station.name}</h1>}
+        {!station.heroVideo && !station.heroImage && <h1 className="font-heading font-semibold text-3xl text-tea-900 dark:text-white mb-2">{station.name}</h1>}
 
         {station.verified && station.lastVerified && (
           <p className="flex items-center gap-1.5 text-tea-400 dark:text-tea-500 text-xs mb-4">
