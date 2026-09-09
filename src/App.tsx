@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import { Header } from "./components/Header";
-import { LanguageGate } from "./components/LanguageGate";
 import { useLanguage } from "./context/LanguageContext";
 import { Home } from "./pages/Home";
 import { AllStations } from "./pages/AllStations";
@@ -26,23 +25,21 @@ function ScrollToHash() {
 
 function App() {
   return (
-    <LanguageGate>
-      <div className="min-h-screen bg-white dark:bg-tea-950 flex flex-col">
-        <ScrollToHash />
-        <Header />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/stations" element={<AllStations />} />
-            <Route path="/highlights" element={<Highlights />} />
-            <Route path="/station/:id" element={<StationDetail />} />
-            <Route path="/qr-codes" element={<QrSheet />} />
-            <Route path="/villa" element={<VillaPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </LanguageGate>
+    <div className="min-h-screen bg-white dark:bg-tea-950 flex flex-col">
+      <ScrollToHash />
+      <Header />
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/stations" element={<AllStations />} />
+          <Route path="/highlights" element={<Highlights />} />
+          <Route path="/station/:id" element={<StationDetail />} />
+          <Route path="/qr-codes" element={<QrSheet />} />
+          <Route path="/villa" element={<VillaPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
