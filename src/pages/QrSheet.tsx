@@ -21,15 +21,15 @@ export function QrSheet() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-6 print:max-w-none print:px-6 print:py-6">
       {/* Screen-only controls */}
-      <div className="flex items-center justify-between mb-6 print:hidden">
-        <div>
-          <h1 className="font-heading font-semibold text-2xl text-tea-900 dark:text-white">{t("qrSheetTitle")}</h1>
-          <p className="text-tea-600 dark:text-tea-400 text-sm">{t("qrSheetSubtitle")}</p>
+      <div className="flex items-center justify-between gap-3 mb-6 print:hidden">
+        <div className="min-w-0">
+          <h1 className="font-heading font-semibold text-2xl text-tea-900 dark:text-white truncate">{t("qrSheetTitle")}</h1>
+          <p className="text-tea-600 dark:text-tea-400 text-sm truncate">{t("qrSheetSubtitle")}</p>
         </div>
         <button
           type="button"
           onClick={() => window.print()}
-          className="flex items-center gap-1.5 bg-tea-700 hover:bg-tea-800 text-white rounded-lg px-4 py-2 text-sm font-medium"
+          className="flex items-center gap-1.5 bg-tea-700 hover:bg-tea-800 text-white rounded-lg px-4 py-2 text-sm font-medium shrink-0"
         >
           <Printer size={16} />
           {t("printButton")}
