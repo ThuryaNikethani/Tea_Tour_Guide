@@ -204,6 +204,13 @@ import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
 // "introduction"'s heroImage. See the provenance note near the
 // "introduction" station below.
 import introductionCollageImg from "../assets/introduction/introduction-collage.jpg";
+// A generated collage combining two real photos of visitors touring the
+// factory floor — the "Process Flow Chart of Athukorala Tea Factory"
+// signboard, and the machinery deck one level down. Visitor faces are
+// partly visible (masks/hairnets); use confirmed with the user. Used as
+// "pahatharata-manufacturing"'s heroImage. See the provenance note near
+// the "pahatharata-manufacturing" station below.
+import pahatharataManufacturingCollageImg from "../assets/pahatharata-manufacturing/pahatharata-manufacturing-collage.jpg";
 // A generated collage combining four real photos of the Handmade Tea
 // Factory's own equipment (withering trough, tray rack, hand-roller,
 // dryer unit), same treatment as "sorting"'s collage. Used as
@@ -708,6 +715,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * use confirmed with the user. The old single-image import was replaced
  * by the new collage import rather than kept alongside it, since nothing
  * else referenced it.
+ * "pahatharata-manufacturing" gained the same collage-heroImage treatment
+ * shortly after — two real photos the user supplied (visitors reading the
+ * factory's own process flow chart, and touring the machinery deck),
+ * combined with the same Pillow script. Stayed in its plain
+ * description/keyPoints/duration shape (heroImage/heroTagline render
+ * independently of `sections`) — no restructuring, no text changed.
+ * Visitor faces are partly visible; use confirmed with the user.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
@@ -1302,7 +1316,9 @@ export const STATIONS: Station[] = [
     shortName: "Pahatharata",
     icon: "Layers",
     verified: true,
-    lastVerified: "2026-09-01",
+    lastVerified: "2026-09-09",
+    heroImage: pahatharataManufacturingCollageImg,
+    heroTagline: "Visitors touring the estate's own factory floor.",
     description:
       "Low-country ('Pahatharata') estates like this one process tea differently from high-grown estates further inland — and the estate's own manufacturing process, covered stage by stage earlier on this tour, bears that out: rolling here breaks the leaf down into small, dense particles rather than twisting it into whole orthodox leaf, the hallmark of CTC (Crush-Tear-Curl) processing. This stop is a quick recap of what that low-country approach means for plucking, processing, and grading.",
     keyPoints:
