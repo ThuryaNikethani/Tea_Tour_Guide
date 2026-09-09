@@ -266,6 +266,12 @@ import coconutPlantationImg from "../assets/coconut/coconut-plantation.avif";
 import coconutInflorescenceImg from "../assets/coconut/coconut-inflorescence.jpg";
 import coconutClusterImg from "../assets/coconut/coconut-cluster.png";
 import coconutKingClusterImg from "../assets/coconut/coconut-king-cluster.jpg";
+// Real, user-supplied photos of visitors being treated to fresh king
+// coconuts during the coconut-field stop. Visitor faces are visible; use
+// confirmed with the user. See the provenance note near the
+// "coconut-field" station below.
+import coconutTreatGroupImg from "../assets/coconut/coconut-treat-group.jpg";
+import coconutTreatGatheringImg from "../assets/coconut/coconut-treat-gathering.jpg";
 // Real photos from the factory's own ginger plantation and product line.
 import gingerPlantImg from "../assets/ginger/ginger-plant.jpg";
 import gingerRhizomeImg from "../assets/ginger/ginger-rhizome.jpg";
@@ -622,6 +628,14 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * keyPoints merged unchanged into one section body; multi-image row uses
  * the same `imageFit: "contain"` equal-size treatment as clonal-tea and
  * tea-factory.
+ * "coconut-field" gained a new fourth section, "A Coconut Treat", on
+ * 2026-09-09 — two real photos the user supplied of visitors being handed
+ * fresh king coconuts to drink during this stop (one landscape, one
+ * portrait, hence the `imageFit: "contain"` equal-size treatment).
+ * Visitor faces are visible; use confirmed with the user beforehand.
+ * Existing three sections (tree, characteristics, uses/benefits) left
+ * untouched; new section adds one short new sentence describing the
+ * on-site coconut treat rather than restating anything already covered.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -1887,7 +1901,7 @@ export const STATIONS: Station[] = [
     shortName: "Coconut Field",
     icon: "Palmtree",
     verified: true,
-    lastVerified: "2026-09-01",
+    lastVerified: "2026-09-09",
     heroTagline: "The 'Tree of Life' — a coastal giant where almost nothing goes to waste.",
     sections: [
       {
@@ -1916,6 +1930,12 @@ export const STATIONS: Station[] = [
           { heading: "Medicinal Properties", body: "Coconut oil has antimicrobial and moisturising properties; coconut water is hydrating and rich in electrolytes, supporting kidney and heart health." },
           { heading: "Ecological Importance", body: "Coconut trees help stabilise coastal soils and prevent erosion; they provide shade and habitat for numerous coastal organisms and support local ecosystems." },
         ],
+      },
+      {
+        heading: "A Coconut Treat",
+        image: [coconutTreatGroupImg, coconutTreatGatheringImg],
+        imageFit: "contain",
+        body: "This stop comes with a hands-on taste of what was just described — visitors are treated to a fresh king coconut, cut open on the spot and sipped straight through a straw, still cool from the tree.",
       },
     ],
   },
