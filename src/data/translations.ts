@@ -417,8 +417,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "වර්ග කිරීම හා ශ්‍රේණිගත කිරීම",
       heroTagline: "එක් එක් ශ්‍රේණිය වර්ග කරන ආකාරය දක්වන වතුයායේම තේ ශ්‍රේණි දර්ශන ලකුණු.",
-      sectionHeadings: ["වර්ග කිරීම හා ශ්‍රේණිගත කිරීම"],
-      sectionBodies: ["හරිත තේ (Green Tea) සහ කළු තේ (Black Tea) දෙකම පටන් ගන්නේ එකම පඳුරෙන් හා එකම කොළවලින්මය. ඒවා සැබවින්ම වෙන් කරන්නේ පැසවීම (ෆර්මන්ටේෂන්/ඔක්සිකරණය) නම් අදියරයි — කළු තේ එය හරහා යන නමුත් හරිත තේ එය මඟ හරියි. මෙම කර්මාන්තශාලාවේ නිෂ්පාදනයෙන් වැඩි හරියක් කළු තේය. වියළි කොළ ශ්‍රේණිගත කිරීමේ යන්ත්‍රය හරහා යන විට, එය එක් වරකින්ම එහි ආරම්භක අංකුරයේ කුමන කොටසින් ආවාද යන්න අනුව වෙන් කරනු ලැබේ: මෘදු, පහසුවෙන් කැඩෙන තුඩුව සහ ඉහළම කොළ — එක් එක් අංකුරයෙන් 2%ක් පමණි — FBOPF Extra Special බවට පත් වේ, එය හොඳම හා මිල අධිකම ශ්‍රේණියයි. යටින් තව දුරටත් ඇති කොළ BOP සහ Pekoe වැනි ශක්තිමත් ශ්‍රේණි බවට පත් වේ. වඩාත් මෝරු, පහළම කොළ Dust බවට පත් වන අතර, පාවිච්චි කළ නොහැකි නටු හා කැබලි Refuse ලෙස ඉවත් කරනු ලැබේ. එම ශ්‍රේණිගත කිරීමේ යන්ත්‍රයේ, කොළ සහ මල් වැනි අංශු වෙන් හඳුනාගත හැකි කැමරා පද්ධතියක් සහිත වර්ණ වෙන්කරණයක් ඇතුළත් වන අතර, එයට අයත් නොවන ඕනෑම දෙයක් පෙරා දමයි. විවිධ දැල් ප්‍රමාණයේ පෙරහන් කිහිප වතාවක්ම කොටස් ප්‍රමාණය අනුව තවදුරටත් වෙන් කරයි. විද්‍යුත් ස්ථිති වෙන්කරණයක් ඉතිරි වන දුඹුරු පැහැති නටු කැබලිවලට රෝලර් මත ආරෝපණයක් ලබා දී ඒවා වෙන් කර ගැනීමට ඉඩ සලසයි. මෙහි කිසිදු පාටක් හෝ ලක්ෂණයක් තීන්ත හෝ එකතු කළ ද්‍රව්‍ය වලින් නොව, ස්වාභාවික සැකසුමෙන් පමණි. වටිනාකම රැඳී පවතින්නේ අංකුරයේ ස්ථානය මතය, කොළයේ ප්‍රමාණය මත පමණක් නොවේ — කොළය ඉහළින් හා මෘදු වන තරමට, එහි ශ්‍රේණියත් මිලත් වැඩි වේ. සාමාන්‍යයෙන් රස එකතු කළ තේ බෑග් වල අඩංගු වන්නේ උසස් තත්ත්වයේ කොළ නොව Dust ශ්‍රේණියයි; FBOPF Extra Special වැනි හොඳම ශ්‍රේණි ඒවායේ අපනයන වෙළඳපොළ අගය නිසා දේශීයව විකිණෙන්නේ කලාතුරකිනි."],
+      sectionHeadings: [
+        "වර්ග කිරීම හා ශ්‍රේණිගත කිරීම",
+        "අංකුරයේ ස්ථානය අනුව ශ්‍රේණිගත කිරීම",
+        "ශ්‍රේණිගත කිරීමේ යන්ත්‍රෝපකරණ",
+        "ශ්‍රේණිය, වටිනාකම, සහ අපනයනය",
+      ],
+      sectionBodies: [
+        "හරිත තේ (Green Tea) සහ කළු තේ (Black Tea) දෙකම පටන් ගන්නේ එකම පඳුරෙන් හා එකම කොළවලින්මය. ඒවා සැබවින්ම වෙන් කරන්නේ පැසවීම (ෆර්මන්ටේෂන්/ඔක්සිකරණය) නම් අදියරයි — කළු තේ එය හරහා යන නමුත් හරිත තේ එය මඟ හරියි. මෙම කර්මාන්තශාලාවේ නිෂ්පාදනයෙන් වැඩි හරියක් කළු තේය.",
+        "වියළි කොළ ශ්‍රේණිගත කිරීමේ යන්ත්‍රය හරහා යන විට, එය එක් වරකින්ම එහි ආරම්භක අංකුරයේ කුමන කොටසින් ආවාද යන්න අනුව වෙන් කරනු ලැබේ: මෘදු, පහසුවෙන් කැඩෙන තුඩුව සහ ඉහළම කොළ — එක් එක් අංකුරයෙන් 2%ක් පමණි — FBOPF Extra Special බවට පත් වේ, එය හොඳම හා මිල අධිකම ශ්‍රේණියයි. යටින් තව දුරටත් ඇති කොළ BOP සහ Pekoe වැනි ශක්තිමත් ශ්‍රේණි බවට පත් වේ. වඩාත් මෝරු, පහළම කොළ Dust බවට පත් වන අතර, පාවිච්චි කළ නොහැකි නටු හා කැබලි Refuse ලෙස ඉවත් කරනු ලැබේ.",
+        "එම ශ්‍රේණිගත කිරීමේ යන්ත්‍රයේ, කොළ සහ මල් වැනි අංශු වෙන් හඳුනාගත හැකි කැමරා පද්ධතියක් සහිත වර්ණ වෙන්කරණයක් ඇතුළත් වන අතර, එයට අයත් නොවන ඕනෑම දෙයක් පෙරා දමයි. විවිධ දැල් ප්‍රමාණයේ පෙරහන් කිහිප වතාවක්ම කොටස් ප්‍රමාණය අනුව තවදුරටත් වෙන් කරයි. විද්‍යුත් ස්ථිති වෙන්කරණයක් ඉතිරි වන දුඹුරු පැහැති නටු කැබලිවලට රෝලර් මත ආරෝපණයක් ලබා දී ඒවා වෙන් කර ගැනීමට ඉඩ සලසයි. මෙහි කිසිදු පාටක් හෝ ලක්ෂණයක් තීන්ත හෝ එකතු කළ ද්‍රව්‍ය වලින් නොව, ස්වාභාවික සැකසුමෙන් පමණි.",
+        "වටිනාකම රැඳී පවතින්නේ අංකුරයේ ස්ථානය මතය, කොළයේ ප්‍රමාණය මත පමණක් නොවේ — කොළය ඉහළින් හා මෘදු වන තරමට, එහි ශ්‍රේණියත් මිලත් වැඩි වේ. සාමාන්‍යයෙන් රස එකතු කළ තේ බෑග් වල අඩංගු වන්නේ උසස් තත්ත්වයේ කොළ නොව Dust ශ්‍රේණියයි; FBOPF Extra Special වැනි හොඳම ශ්‍රේණි ඒවායේ අපනයන වෙළඳපොළ අගය නිසා දේශීයව විකිණෙන්නේ කලාතුරකිනි.",
+      ],
       duration: "වර්ග කිරීම යන්ත්‍ර මත අඛණ්ඩව ක්‍රියාත්මක වන අතර, එක් කණ්ඩායමකට මිනිත්තු 30 සිට 45 දක්වා ගතවේ.",
     },
     packing: {
@@ -587,8 +597,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "අත්කම් තේ ශ්‍රේණි",
       heroTagline: "වතුයායේම අත්කම් තේ ශ්‍රේණි දර්ශන ලකුණ.",
-      sectionHeadings: ["අත්කම් තේ ශ්‍රේණි"],
-      sectionBodies: ["සාමාන්‍ය කළු තේවලට අමතරව, වතුයාය දුර්ලභ, අතින් සකසන ලද අත්කම් තේද නිපදවයි. මේවා ප්‍රධාන කළු තේ නිෂ්පාදන මාර්ගයේ නොව, වෙනම 'අතින් සකසන තේ කර්මාන්තශාලාවේදී' අතින් නිම කරනු ලැබේ. එබැවින්ම මෙම ශ්‍රේණි 'අත්කම් තේ ශ්‍රේණි' ලෙසද හඳුන්වනු ලබන අතර, එය කර්මාන්ත නිෂ්පාදනයකට වඩා අත්කම් කලාවකට ආසන්නය. මේවායින් බොහොමයක් හටගන්නේ TRI 2043 නම් සුවිශේෂී දම් පැහැති අංකුරයකින් — තේ පර්යේෂණ ආයතනයේ ක්ලෝනයකි. එහි වර්ණය ලැබෙන්නේ ඇන්තොසයනින් නිසාය. එය අඩු අස්වැන්නක් දෙන ප්‍රභේදයක් වන අතර, එබැවින්ම සෑම ශ්‍රී ලාංකික වතුයායක්ම එය වගා නොකරයි. රන් තුඩුව (Golden Tip) එම අංකුරයේම මුහුකුරා ගිය තුඩුවෙන් සාදන අතර, රිදී තුඩුව (Silver Tip) එම අංකුරයේම නොමුහුකුරා, ලා පැහැති තුඩුවෙන් සාදනු ලැබේ. සියුම් රිදී පැහැති රෝම නිසාම රිදී තුඩුවට එම නම ලැබී ඇති අතර, එයට සුළු දිලිසීමක්ද ලැබේ. තුඩුව පමණක් බර කර, පැය කිහිපයක් මැළවී, වියලනු ලැබේ — සම්පූර්ණයෙන් පැසවන ශ්‍රේණිවලට වඩා සරල ක්‍රියාවලියකි — එමගින් මෘදු මිහිරි, මල් සුවඳැති, මෘදු වයනයක් සහිත කෝප්පයක් ලැබේ. සුදු තේ (White Tea) අංකුරයෙන් කොළ දෙක හමාරක් ගෙන, මැලවීම සම්පූර්ණයෙන්ම මඟහරියි. එය කළු තේ මෙන් පැසවා රෝල් කරනු වෙනුවට වාෂ්ප කර වියලනු ලැබේ. එහි ප්‍රතිඵලය ඉතා සැහැල්ලුවෙන් සකසන ලද, ස්වාභාවිකව මිහිරි රසයකි — ලා පැහැති කසායක්, මෘදු වයනයක්, මල් සුවඳක්, සහ ස්වාභාවික ප්‍රතිඔක්සිකාරක බහුලත්වයක් සහිතව. දම් තේ (Purple Tea) එකම නෙළීම භාවිතා කරයි, නමුත් සුදු තේට වෙනස්ව සම්පූර්ණ කළු තේ ක්‍රියාවලියටම — මැලවීම, රෝල් කිරීම, සහ පැසවීම — ලක් වේ. එමගින් ඔලොන්ග් තේට සමීප රසයක් ලැබේ: කළු තේට වඩා සැහැල්ලු, නමුත් හරිත තේට වඩා ශාක රසය අඩුවෙන්, කැෆේන් සාපේක්ෂව අඩුවෙන්, සහ ස්වාභාවිකව ප්‍රතිඔක්සිකාරක බහුලව. රෝස තේ (Pink Tea) ආරම්භයේදී සුදු තේ මෙන්ම වර්ණ රහිතව පවතී. දෙහි යුෂ බින්දු කිහිපයක් එකතු කළ පසුව පමණක් එය රෝස පැහැයට හැරෙන්නේ, එම ඇඹුල් යුෂ අංකුරයට වර්ණය ලබා දෙන එම ඇන්තොසයනින් වර්ණකයේම වෙනසක් ඇති කරන බැවිනි. බින්දු කිහිපයක් මී පැණි එකතු කිරීමද එයට හොඳින් ගැලපේ, අයිස් තේ ලෙස පිළිගැන්වීම නිර්දේශ කෙරේ, එයද ස්වාභාවික ප්‍රතිඔක්සිකාරක බහුලයි. විටා ග්ලෝ (Vita Glow) වෙනුවට සාදනු ලබන්නේ දම් පැහැති අංකුරය නොව සාමාන්‍ය කොළ පැහැති අංකුරයේ තුඩුවෙනි. වතුයාය නෙළුම් මල් වැනි ද්‍රව්‍ය එකතු කළ අගය එකතු කළ මිශ්‍රණද, එම අංකුරවලින්ම අතින් බැඳි බ්ලූමින් තේ (Blooming Tea) ද නිපදවයි. මෙම අත්කම් ශ්‍රේණි සාමාන්‍ය කළු තේට වඩා බෙහෙවින් අඩු ප්‍රමාණවලින් නෙළා සකසනු ලබන අතර, එය ඒවා දුර්ලභ හා අගය කරන කරුණ වේ — රස බැලීමේ කවුන්ටරයේ මෙය රස බැලීමට ඉල්ලා සිටින්න. මෙම ශ්‍රේණි බොහොමයක් සඳහා දම් පැහැති අංකුරය හෝ සාමාන්‍ය කොළ අංකුරය යන දෙකම භාවිතා කළ හැකි වුවත්, වතුයාය බොහෝ විට භාවිතා කරන්නේ දම් පැහැති අංකුරයයි."],
+      sectionHeadings: [
+        "අත්කම් තේ ශ්‍රේණි",
+        "රන් තුඩුව සහ රිදී තුඩුව",
+        "සුදු තේ සහ දම් තේ",
+        "රෝස තේ සහ විටා ග්ලෝ",
+        "මිශ්‍රණ සහ දුර්ලභත්වය",
+      ],
+      sectionBodies: [
+        "සාමාන්‍ය කළු තේවලට අමතරව, වතුයාය දුර්ලභ, අතින් සකසන ලද අත්කම් තේද නිපදවයි. මේවා ප්‍රධාන කළු තේ නිෂ්පාදන මාර්ගයේ නොව, වෙනම 'අතින් සකසන තේ කර්මාන්තශාලාවේදී' අතින් නිම කරනු ලැබේ. එබැවින්ම මෙම ශ්‍රේණි 'අත්කම් තේ ශ්‍රේණි' ලෙසද හඳුන්වනු ලබන අතර, එය කර්මාන්ත නිෂ්පාදනයකට වඩා අත්කම් කලාවකට ආසන්නය. මේවායින් බොහොමයක් හටගන්නේ TRI 2043 නම් සුවිශේෂී දම් පැහැති අංකුරයකින් — තේ පර්යේෂණ ආයතනයේ ක්ලෝනයකි. එහි වර්ණය ලැබෙන්නේ ඇන්තොසයනින් නිසාය. එය අඩු අස්වැන්නක් දෙන ප්‍රභේදයක් වන අතර, එබැවින්ම සෑම ශ්‍රී ලාංකික වතුයායක්ම එය වගා නොකරයි.",
+        "රන් තුඩුව (Golden Tip) එම අංකුරයේම මුහුකුරා ගිය තුඩුවෙන් සාදන අතර, රිදී තුඩුව (Silver Tip) එම අංකුරයේම නොමුහුකුරා, ලා පැහැති තුඩුවෙන් සාදනු ලැබේ. සියුම් රිදී පැහැති රෝම නිසාම රිදී තුඩුවට එම නම ලැබී ඇති අතර, එයට සුළු දිලිසීමක්ද ලැබේ. තුඩුව පමණක් බර කර, පැය කිහිපයක් මැළවී, වියලනු ලැබේ — සම්පූර්ණයෙන් පැසවන ශ්‍රේණිවලට වඩා සරල ක්‍රියාවලියකි — එමගින් මෘදු මිහිරි, මල් සුවඳැති, මෘදු වයනයක් සහිත කෝප්පයක් ලැබේ.",
+        "සුදු තේ (White Tea) අංකුරයෙන් කොළ දෙක හමාරක් ගෙන, මැලවීම සම්පූර්ණයෙන්ම මඟහරියි. එය කළු තේ මෙන් පැසවා රෝල් කරනු වෙනුවට වාෂ්ප කර වියලනු ලැබේ. එහි ප්‍රතිඵලය ඉතා සැහැල්ලුවෙන් සකසන ලද, ස්වාභාවිකව මිහිරි රසයකි — ලා පැහැති කසායක්, මෘදු වයනයක්, මල් සුවඳක්, සහ ස්වාභාවික ප්‍රතිඔක්සිකාරක බහුලත්වයක් සහිතව. දම් තේ (Purple Tea) එකම නෙළීම භාවිතා කරයි, නමුත් සුදු තේට වෙනස්ව සම්පූර්ණ කළු තේ ක්‍රියාවලියටම — මැලවීම, රෝල් කිරීම, සහ පැසවීම — ලක් වේ. එමගින් ඔලොන්ග් තේට සමීප රසයක් ලැබේ: කළු තේට වඩා සැහැල්ලු, නමුත් හරිත තේට වඩා ශාක රසය අඩුවෙන්, කැෆේන් සාපේක්ෂව අඩුවෙන්, සහ ස්වාභාවිකව ප්‍රතිඔක්සිකාරක බහුලව.",
+        "රෝස තේ (Pink Tea) ආරම්භයේදී සුදු තේ මෙන්ම වර්ණ රහිතව පවතී. දෙහි යුෂ බින්දු කිහිපයක් එකතු කළ පසුව පමණක් එය රෝස පැහැයට හැරෙන්නේ, එම ඇඹුල් යුෂ අංකුරයට වර්ණය ලබා දෙන එම ඇන්තොසයනින් වර්ණකයේම වෙනසක් ඇති කරන බැවිනි. බින්දු කිහිපයක් මී පැණි එකතු කිරීමද එයට හොඳින් ගැලපේ, අයිස් තේ ලෙස පිළිගැන්වීම නිර්දේශ කෙරේ, එයද ස්වාභාවික ප්‍රතිඔක්සිකාරක බහුලයි. විටා ග්ලෝ (Vita Glow) වෙනුවට සාදනු ලබන්නේ දම් පැහැති අංකුරය නොව සාමාන්‍ය කොළ පැහැති අංකුරයේ තුඩුවෙනි.",
+        "වතුයාය නෙළුම් මල් වැනි ද්‍රව්‍ය එකතු කළ අගය එකතු කළ මිශ්‍රණද, එම අංකුරවලින්ම අතින් බැඳි බ්ලූමින් තේ (Blooming Tea) ද නිපදවයි. මෙම අත්කම් ශ්‍රේණි සාමාන්‍ය කළු තේට වඩා බෙහෙවින් අඩු ප්‍රමාණවලින් නෙළා සකසනු ලබන අතර, එය ඒවා දුර්ලභ හා අගය කරන කරුණ වේ — රස බැලීමේ කවුන්ටරයේ මෙය රස බැලීමට ඉල්ලා සිටින්න. මෙම ශ්‍රේණි බොහොමයක් සඳහා දම් පැහැති අංකුරය හෝ සාමාන්‍ය කොළ අංකුරය යන දෙකම භාවිතා කළ හැකි වුවත්, වතුයාය බොහෝ විට භාවිතා කරන්නේ දම් පැහැති අංකුරයයි.",
+      ],
       duration: "මිනිත්තු 5",
     },
     "pahatharata-manufacturing": {
@@ -824,8 +846,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "සිලෝන් තේ හැඳින්වීම",
       heroTagline: "වතුයායේ තිබෙන පුවරුවක දැකිය හැකි 'සිලෝන් තේ තත්ත්වයේ සංකේතය' (Ceylon Tea Symbol of Quality).",
-      sectionHeadings: ["සිලෝන් තේ — තත්ත්වයේ සංකේතය"],
-      sectionBodies: ["'සිලෝන්' යන නම 1800 ගණන්වල මුල් භාගයේ සිට තේ සමඟ සමාන පදයක් වී තිබේ. සිලෝන් තේවල ඉතිහාසය, වසර දෙසීයකට වඩා පෙර ශ්‍රී ලංකාවේ බ්‍රිතාන්‍ය පාලන සමයට දිව යයි. ශ්‍රී ලංකාවේ වාර්තාගත පළමු තේ පැළය පැමිණියේ 1824 දීය — එවකට බ්‍රිතාන්‍යයන් චීනයෙන් තේ පැළයක් රැගෙන ඇවිත් පේරාදෙණියේ රාජකීය උද්භිද උද්‍යානයේ වාණිජමය නොවන අරමුණින් සිටෙව්වා. 1839 දී පර්යේෂණ සඳහා ආසාම් සහ කල්කටාවෙන් තවත් තේ බෝග ගෙන එන ලදී. නමුත් ශ්‍රී ලංකාවේ තේ වතු වගාව සැබවින්ම ආරම්භ වූයේ දිවයිනේ එකම සාර්ථක කර්මාන්තය වූ කෝපි කර්මාන්තය විනාශ වීමත් සමඟය. 1869 දී 'කෝපි කුණුවීම' නම් නව ශාක රෝගයක් ශ්‍රී ලංකාවේ සමෘද්ධිමත් කෝපි වතුවලට වැදී, දශකයකටත් අඩු කාලයක් තුළ මුළු කෝපි ව්‍යාපාරයම විනාශ කළේය. එතැන් සිට ශ්‍රී ලංකාවේ තේ ව්‍යාප්ත වගාව ආරම්භ විය. සිලෝන් තේවල කතාව ඇරඹුණේ 1867 දී මහනුවර ලූල්කඳුර වතුයායේ අක්කර 19ක ඉඩමකින් — එය සිටෙව්වේ හිටපු ස්කොට්ලන්ත ජාතික කෝපි වගාකරුවෙකු වූ ජේම්ස් ටේලර්ය, විවිධාංගීකරණ පරීක්ෂණයක කොටසක් ලෙසිනි. වසර ගණනාවක් ගත වීමත් සමඟ, එය ශ්‍රී ලංකාවේ තේ වගා කරන ප්‍රදේශ හතක් දක්වා පැතිර ගියේය — මහනුවර, ඌව, රුහුණ (දකුණ), උඩපුස්සැල්ලාව, නුවරඑළිය, දිඹුල, සහ සබරගමුව. උස් රට තේ (මීටර් 1,200කට වඩා උසින්, නුවරඑළිය සහ ඌව වැනි) සියුම් හා සුවඳවත් වේ. පහත් රට තේ (මීටර් 600කට වඩා පහළින්, මෙහි නිපදවන ආකාරයේ) සාමාන්‍යයෙන් වඩාත් ශක්තිමත් හා තද පැහැයෙන් යුක්තය. මෙම වතුයාය පහත් රට, එනම් 'පහත්තරට' නිෂ්පාදකයෙකි, විශේෂයෙන්ම රුහුණ තේ වගා කලාපයට අයත්ය — එය සිලෝන් තේවල භූගෝලීය වර්ගීකරණ තුනෙන් එකකි, උඩරට ('උදරට') සහ මැදරට ('මැදරට') සමඟ. අමුත්තන් සාම්ප්‍රදායිකව පිළිගනු ලබන්නේ 'ආයුබෝවන්' යන වචනයෙනි — 'දීර්ඝායුෂ අත්වේවා' යන අර්ථය දෙන සිංහල ආචාර වචනයයි — සමහර විට එය වතුයායේම සභාපති අනුර අතුකෝරළ විසින් පෞද්ගලිකවම කරනු ලැබේ."],
+      sectionHeadings: [
+        "සිලෝන් තේ — තත්ත්වයේ සංකේතය",
+        "කෝපියේ සිට තේ දක්වා",
+        "කර්මාන්තයක උපත",
+        "පහත් රට සිලෝන් තේ",
+        "සාම්ප්‍රදායික පිළිගැනීමක්",
+      ],
+      sectionBodies: [
+        "'සිලෝන්' යන නම 1800 ගණන්වල මුල් භාගයේ සිට තේ සමඟ සමාන පදයක් වී තිබේ. සිලෝන් තේවල ඉතිහාසය, වසර දෙසීයකට වඩා පෙර ශ්‍රී ලංකාවේ බ්‍රිතාන්‍ය පාලන සමයට දිව යයි.",
+        "ශ්‍රී ලංකාවේ වාර්තාගත පළමු තේ පැළය පැමිණියේ 1824 දීය — එවකට බ්‍රිතාන්‍යයන් චීනයෙන් තේ පැළයක් රැගෙන ඇවිත් පේරාදෙණියේ රාජකීය උද්භිද උද්‍යානයේ වාණිජමය නොවන අරමුණින් සිටෙව්වා. 1839 දී පර්යේෂණ සඳහා ආසාම් සහ කල්කටාවෙන් තවත් තේ බෝග ගෙන එන ලදී. නමුත් ශ්‍රී ලංකාවේ තේ වතු වගාව සැබවින්ම ආරම්භ වූයේ දිවයිනේ එකම සාර්ථක කර්මාන්තය වූ කෝපි කර්මාන්තය විනාශ වීමත් සමඟය. 1869 දී 'කෝපි කුණුවීම' නම් නව ශාක රෝගයක් ශ්‍රී ලංකාවේ සමෘද්ධිමත් කෝපි වතුවලට වැදී, දශකයකටත් අඩු කාලයක් තුළ මුළු කෝපි ව්‍යාපාරයම විනාශ කළේය. එතැන් සිට ශ්‍රී ලංකාවේ තේ ව්‍යාප්ත වගාව ආරම්භ විය.",
+        "සිලෝන් තේවල කතාව ඇරඹුණේ 1867 දී මහනුවර ලූල්කඳුර වතුයායේ අක්කර 19ක ඉඩමකින් — එය සිටෙව්වේ හිටපු ස්කොට්ලන්ත ජාතික කෝපි වගාකරුවෙකු වූ ජේම්ස් ටේලර්ය, විවිධාංගීකරණ පරීක්ෂණයක කොටසක් ලෙසිනි. වසර ගණනාවක් ගත වීමත් සමඟ, එය ශ්‍රී ලංකාවේ තේ වගා කරන ප්‍රදේශ හතක් දක්වා පැතිර ගියේය — මහනුවර, ඌව, රුහුණ (දකුණ), උඩපුස්සැල්ලාව, නුවරඑළිය, දිඹුල, සහ සබරගමුව.",
+        "උස් රට තේ (මීටර් 1,200කට වඩා උසින්, නුවරඑළිය සහ ඌව වැනි) සියුම් හා සුවඳවත් වේ. පහත් රට තේ (මීටර් 600කට වඩා පහළින්, මෙහි නිපදවන ආකාරයේ) සාමාන්‍යයෙන් වඩාත් ශක්තිමත් හා තද පැහැයෙන් යුක්තය. මෙම වතුයාය පහත් රට, එනම් 'පහත්තරට' නිෂ්පාදකයෙකි, විශේෂයෙන්ම රුහුණ තේ වගා කලාපයට අයත්ය — එය සිලෝන් තේවල භූගෝලීය වර්ගීකරණ තුනෙන් එකකි, උඩරට ('උදරට') සහ මැදරට ('මැදරට') සමඟ.",
+        "අමුත්තන් සාම්ප්‍රදායිකව පිළිගනු ලබන්නේ 'ආයුබෝවන්' යන වචනයෙනි — 'දීර්ඝායුෂ අත්වේවා' යන අර්ථය දෙන සිංහල ආචාර වචනයයි — සමහර විට එය වතුයායේම සභාපති අනුර අතුකෝරළ විසින් පෞද්ගලිකවම කරනු ලැබේ.",
+      ],
       duration: "මිනිත්තු 5-10",
     },
     "jaggery-palm": {
@@ -915,8 +949,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "வகைப்படுத்தல் மற்றும் தரப்படுத்தல்",
       heroTagline: "ஒவ்வொரு தரமும் எவ்வாறு வகைப்படுத்தப்படுகிறது என்பதைக் காட்டும் தோட்டத்தின் சொந்த தேயிலை தர அறிவிப்புப் பலகைகள்.",
-      sectionHeadings: ["வகைப்படுத்தல் மற்றும் தரப்படுத்தல்"],
-      sectionBodies: ["பச்சை தேயிலையும் (Green Tea) கருப்பு தேயிலையும் (Black Tea) இரண்டும் ஒரே செடியிலிருந்தும் ஒரே இலையிலிருந்துமே தொடங்குகின்றன. அவற்றை உண்மையில் வேறுபடுத்துவது நொதித்தல் (பெர்மென்டேஷன்/ஆக்சிடேஷன்) என்ற கட்டமே — கருப்பு தேயிலை அதன் வழியாக செல்கிறது, பச்சை தேயிலை அதை தவிர்க்கிறது. இந்த தொழிற்சாலையின் உற்பத்தியில் பெரும்பகுதி கருப்பு தேயிலையே. உலர்ந்த இலை தரப்படுத்தும் இயந்திரம் வழியாக செல்லும் போது, அது ஒரே கடத்தலில் அதன் மூல தளிரின் எந்த பகுதியிலிருந்து வந்தது என்பதன் அடிப்படையில் பிரிக்கப்படுகிறது: மென்மையான, எளிதில் முறியக்கூடிய நுனியும் மேல் இலைகளும் — ஒவ்வொரு தளிரிலும் சுமார் 2% மட்டுமே — FBOPF Extra Special ஆக மாறுகிறது, இது சிறந்த மற்றும் அதிக விலை கொண்ட தரம். கீழே உள்ள இலைகள் BOP மற்றும் Pekoe போன்ற வலிமையான தரங்களாக மாறுகின்றன. அதிக முதிர்ந்த, கீழ்மட்ட இலை டஸ்ட் ஆக மாறுகிறது, பயன்படுத்த முடியாத தண்டுகளும் துண்டுகளும் குப்பையாக நிராகரிக்கப்படுகின்றன. அந்த தரப்படுத்தும் இயந்திரத்தில், இலை மற்றும் மலர் போன்ற துகள்களை வேறுபடுத்தி அறியக்கூடிய கேமரா அமைப்புடன் கூடிய ஒரு நிற பிரிப்பான் அடங்கும், அதற்கு சொந்தமில்லாத எதையும் வடிகட்டுகிறது. வெவ்வேறு வலை அளவுள்ள சல்லடைகள் பல முறை துகள் அளவின்படி மேலும் பிரிக்கின்றன. மீதமுள்ள பழுப்பு நிற தண்டு துண்டுகளுக்கு ரோலர்களில் நிலைமின் ஏற்றம் தந்து அவற்றை பிரித்தெடுக்க ஒரு நிலைமின் பிரிப்பான் உதவுகிறது. இங்கு எந்த நிறமும் தன்மையும் சாயம் அல்லது சேர்க்கைப் பொருட்களிலிருந்து அல்ல, இயற்கையான செயலாக்கத்திலிருந்தே கிடைக்கின்றன. மதிப்பு தளிரின் நிலையைப் பொறுத்தே இருக்கிறது, இலையின் அளவை மட்டும் அல்ல — இலை எவ்வளவு உயரமாகவும் மென்மையாகவும் இருக்கிறதோ, அதன் தரமும் விலையும் அவ்வளவு அதிகம். சுவை சேர்க்கப்பட்ட தேநீர் பைகளில் பொதுவாக இருப்பது உயர்தர இலை அல்ல, Dust தரமே; FBOPF Extra Special போன்ற சிறந்த தரங்கள் அவற்றின் ஏற்றுமதி சந்தை மதிப்பு காரணமாக உள்நாட்டில் அரிதாகவே விற்கப்படுகின்றன."],
+      sectionHeadings: [
+        "வகைப்படுத்தல் மற்றும் தரப்படுத்தல்",
+        "தளிர் நிலையின் அடிப்படையில் தரப்படுத்தல்",
+        "தரப்படுத்தும் இயந்திரங்கள்",
+        "தரம், மதிப்பு, மற்றும் ஏற்றுமதி",
+      ],
+      sectionBodies: [
+        "பச்சை தேயிலையும் (Green Tea) கருப்பு தேயிலையும் (Black Tea) இரண்டும் ஒரே செடியிலிருந்தும் ஒரே இலையிலிருந்துமே தொடங்குகின்றன. அவற்றை உண்மையில் வேறுபடுத்துவது நொதித்தல் (பெர்மென்டேஷன்/ஆக்சிடேஷன்) என்ற கட்டமே — கருப்பு தேயிலை அதன் வழியாக செல்கிறது, பச்சை தேயிலை அதை தவிர்க்கிறது. இந்த தொழிற்சாலையின் உற்பத்தியில் பெரும்பகுதி கருப்பு தேயிலையே.",
+        "உலர்ந்த இலை தரப்படுத்தும் இயந்திரம் வழியாக செல்லும் போது, அது ஒரே கடத்தலில் அதன் மூல தளிரின் எந்த பகுதியிலிருந்து வந்தது என்பதன் அடிப்படையில் பிரிக்கப்படுகிறது: மென்மையான, எளிதில் முறியக்கூடிய நுனியும் மேல் இலைகளும் — ஒவ்வொரு தளிரிலும் சுமார் 2% மட்டுமே — FBOPF Extra Special ஆக மாறுகிறது, இது சிறந்த மற்றும் அதிக விலை கொண்ட தரம். கீழே உள்ள இலைகள் BOP மற்றும் Pekoe போன்ற வலிமையான தரங்களாக மாறுகின்றன. அதிக முதிர்ந்த, கீழ்மட்ட இலை டஸ்ட் ஆக மாறுகிறது, பயன்படுத்த முடியாத தண்டுகளும் துண்டுகளும் குப்பையாக நிராகரிக்கப்படுகின்றன.",
+        "அந்த தரப்படுத்தும் இயந்திரத்தில், இலை மற்றும் மலர் போன்ற துகள்களை வேறுபடுத்தி அறியக்கூடிய கேமரா அமைப்புடன் கூடிய ஒரு நிற பிரிப்பான் அடங்கும், அதற்கு சொந்தமில்லாத எதையும் வடிகட்டுகிறது. வெவ்வேறு வலை அளவுள்ள சல்லடைகள் பல முறை துகள் அளவின்படி மேலும் பிரிக்கின்றன. மீதமுள்ள பழுப்பு நிற தண்டு துண்டுகளுக்கு ரோலர்களில் நிலைமின் ஏற்றம் தந்து அவற்றை பிரித்தெடுக்க ஒரு நிலைமின் பிரிப்பான் உதவுகிறது. இங்கு எந்த நிறமும் தன்மையும் சாயம் அல்லது சேர்க்கைப் பொருட்களிலிருந்து அல்ல, இயற்கையான செயலாக்கத்திலிருந்தே கிடைக்கின்றன.",
+        "மதிப்பு தளிரின் நிலையைப் பொறுத்தே இருக்கிறது, இலையின் அளவை மட்டும் அல்ல — இலை எவ்வளவு உயரமாகவும் மென்மையாகவும் இருக்கிறதோ, அதன் தரமும் விலையும் அவ்வளவு அதிகம். சுவை சேர்க்கப்பட்ட தேநீர் பைகளில் பொதுவாக இருப்பது உயர்தர இலை அல்ல, Dust தரமே; FBOPF Extra Special போன்ற சிறந்த தரங்கள் அவற்றின் ஏற்றுமதி சந்தை மதிப்பு காரணமாக உள்நாட்டில் அரிதாகவே விற்கப்படுகின்றன.",
+      ],
       duration: "வகைப்படுத்தல் இயந்திரங்களில் தொடர்ச்சியாக நடைபெறுகிறது, ஒரு தொகுதிக்கு சுமார் 30 முதல் 45 நிமிடங்கள் ஆகும்.",
     },
     packing: {
@@ -1085,8 +1129,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "கைவினை தேயிலை தரங்கள்",
       heroTagline: "தோட்டத்தின் சொந்த கைவினை தேயிலை தரங்கள் அறிவிப்புப் பலகை.",
-      sectionHeadings: ["கைவினை தேயிலை தரங்கள்"],
-      sectionBodies: ["சாதாரண கருப்பு தேயிலைக்கு கூடுதலாக, இந்த தோட்டம் அரிதான, கைவினைத் தேயிலைகளையும் தயாரிக்கிறது. இவை பெரும்பாலும் முதன்மை கருப்பு தேயிலை உற்பத்தி வரிசையில் அல்ல, தனியான 'கைவினை தேயிலை தொழிற்சாலையில்' கையால் நிறைவு செய்யப்படுகின்றன. இதனாலேயே இந்த தரங்கள் 'கைவினை தேயிலை தரங்கள்' என்றும் அழைக்கப்படுகின்றன — இது பேரளவு உற்பத்தியை விட ஒரு கைவினைக்கு நெருக்கமானது. இவற்றில் பெரும்பாலானவை TRI 2043 எனப்படும் தனித்துவமான ஊதா நிற தளிரிலிருந்து வருகின்றன — இது தேயிலை ஆராய்ச்சி நிறுவனத்தின் ஒரு குளோன் ஆகும். அதன் நிறம் ஆந்தோசயனினிலிருந்து வருகிறது. இது குறைந்த விளைச்சல் தரும் இனமாகும், எனவேதான் ஒவ்வொரு இலங்கை தோட்டமும் இதை வளர்ப்பதில்லை. கோல்டன் டிப் (Golden Tip) அந்த தளிரின் முழுமையாக முதிர்ந்த மொட்டிலிருந்து தயாரிக்கப்படுகிறது, அதே நேரம் சில்வர் டிப் (Silver Tip) அதே தளிரின் இன்னும் முதிராத, வெளிர் நிற மொட்டிலிருந்து தயாரிக்கப்படுகிறது. அதன் மெல்லிய வெள்ளி நிற முடிகளே இந்த தரத்திற்கு அதன் பெயரையும் ஒரு மெல்லிய பொலிவையும் தருகின்றன. மொட்டு மட்டும் எடைபோடப்பட்டு, சில மணி நேரம் வாடவைக்கப்பட்டு, உலர்த்தப்படுகிறது — முழுமையாக நொதிக்கப்படும் தரங்களை விட எளிமையான செயல்முறை — இதன் விளைவாக மென்மையான இனிப்பு, மலர் மணம், மென்மையான அமைப்புடைய ஒரு கோப்பை கிடைக்கிறது. வெள்ளை தேயிலை (White Tea) தளிரிலிருந்து இரண்டரை இலைகளை எடுத்து, வாடவைத்தலை முழுவதுமாக தவிர்க்கிறது. இது கருப்பு தேயிலை போல நொதிக்கப்பட்டு உருட்டப்படுவதற்கு பதிலாக, ஆவியில் வேகவைத்து உலர்த்தப்படுகிறது. இதன் விளைவு மிக இலகுவாக செயலாக்கப்பட்ட, இயற்கையாக இனிப்பான சுவை — வெளிர் நிற காடி, மென்மையான அமைப்பு, மலர் வாசனை, இயற்கையான ஆக்ஸிஜனேற்ற எதிர்ப்பு நிறைவு ஆகியவற்றுடன். ஊதா தேயிலை (Purple Tea) அதே பறிப்பைப் பயன்படுத்துகிறது, ஆனால் வெள்ளை தேயிலையிலிருந்து வேறுபட்டு, முழு கருப்பு தேயிலை செயல்முறையின் வழியாக செல்கிறது — வாடவைத்தல், உருட்டுதல், நொதித்தல். இதன் விளைவாக ஊலாங் தேயிலைக்கு நெருக்கமான சுவை கிடைக்கிறது: கருப்பு தேயிலையை விட இலகுவானது, ஆனால் பச்சை தேயிலையை விட தாவர சுவை குறைவானது, ஒப்பீட்டளவில் காஃபின் குறைவானது, இயற்கையாக ஆக்ஸிஜனேற்ற எதிர்ப்பு நிறைந்தது. இளஞ்சிவப்பு தேயிலை (Pink Tea) ஆரம்பத்தில் வெள்ளை தேயிலை போலவே நிறமற்றதாக இருக்கும். எலுமிச்சை சாற்றின் சில துளிகள் சேர்க்கப்பட்ட பின்னரே இது இளஞ்சிவப்பு நிறமாக மாறுகிறது — அந்த சிட்ரஸ், தளிருக்கு அதன் நிறத்தைத் தரும் அதே ஆந்தோசயனின் நிறமியில் ஒரு நிற மாற்றத்தைத் தூண்டுகிறது. சில துளிகள் தேன் சேர்ப்பதும் இதற்கு நன்றாகப் பொருந்துகிறது, பனிக்கட்டி தேநீராக பரிமாறுவது பரிந்துரைக்கப்படுகிறது, இதுவும் இயற்கையாக ஆக்ஸிஜனேற்ற எதிர்ப்பு நிறைந்தது. விட்டா க்ளோ (Vita Glow) ஊதா நிற தளிருக்கு பதிலாக, சாதாரண பச்சை நிற தளிரின் மொட்டிலிருந்து தயாரிக்கப்படுகிறது. தோட்டம் மதிப்புக்கூட்டப்பட்ட கலவைகளையும் — தாமரை மலர்களுடன் கலந்த தேயிலை போன்றவை — அதே தளிர்களிலிருந்து கையால் கட்டப்பட்ட ப்ளூமிங் தேயிலையையும் (Blooming Tea) தயாரிக்கிறது. இந்த கைவினைத் தரங்கள் நிலையான கருப்பு தேயிலையை விட மிகக் குறைந்த அளவில் பறிக்கப்பட்டு செயலாக்கப்படுகின்றன, இதுவே அவற்றை அரிதானதாகவும் மதிப்புமிக்கதாகவும் ஆக்குகிறது — சுவை பார்க்கும் கவுண்டரில் இவற்றை சுவைக்க கேளுங்கள். இந்த தரங்களில் பெரும்பாலானவற்றிற்கு ஊதா நிற தளிர் அல்லது சாதாரண பச்சை தளிர் இரண்டையும் பயன்படுத்தலாம் என்றாலும், தோட்டம் பெரும்பாலும் ஊதா நிற தளிரையே பயன்படுத்துகிறது."],
+      sectionHeadings: [
+        "கைவினை தேயிலை தரங்கள்",
+        "கோல்டன் டிப் மற்றும் சில்வர் டிப்",
+        "வெள்ளை தேயிலை மற்றும் ஊதா தேயிலை",
+        "இளஞ்சிவப்பு தேயிலை மற்றும் விட்டா க்ளோ",
+        "கலவைகள் மற்றும் அபூர்வத்தன்மை",
+      ],
+      sectionBodies: [
+        "சாதாரண கருப்பு தேயிலைக்கு கூடுதலாக, இந்த தோட்டம் அரிதான, கைவினைத் தேயிலைகளையும் தயாரிக்கிறது. இவை பெரும்பாலும் முதன்மை கருப்பு தேயிலை உற்பத்தி வரிசையில் அல்ல, தனியான 'கைவினை தேயிலை தொழிற்சாலையில்' கையால் நிறைவு செய்யப்படுகின்றன. இதனாலேயே இந்த தரங்கள் 'கைவினை தேயிலை தரங்கள்' என்றும் அழைக்கப்படுகின்றன — இது பேரளவு உற்பத்தியை விட ஒரு கைவினைக்கு நெருக்கமானது. இவற்றில் பெரும்பாலானவை TRI 2043 எனப்படும் தனித்துவமான ஊதா நிற தளிரிலிருந்து வருகின்றன — இது தேயிலை ஆராய்ச்சி நிறுவனத்தின் ஒரு குளோன் ஆகும். அதன் நிறம் ஆந்தோசயனினிலிருந்து வருகிறது. இது குறைந்த விளைச்சல் தரும் இனமாகும், எனவேதான் ஒவ்வொரு இலங்கை தோட்டமும் இதை வளர்ப்பதில்லை.",
+        "கோல்டன் டிப் (Golden Tip) அந்த தளிரின் முழுமையாக முதிர்ந்த மொட்டிலிருந்து தயாரிக்கப்படுகிறது, அதே நேரம் சில்வர் டிப் (Silver Tip) அதே தளிரின் இன்னும் முதிராத, வெளிர் நிற மொட்டிலிருந்து தயாரிக்கப்படுகிறது. அதன் மெல்லிய வெள்ளி நிற முடிகளே இந்த தரத்திற்கு அதன் பெயரையும் ஒரு மெல்லிய பொலிவையும் தருகின்றன. மொட்டு மட்டும் எடைபோடப்பட்டு, சில மணி நேரம் வாடவைக்கப்பட்டு, உலர்த்தப்படுகிறது — முழுமையாக நொதிக்கப்படும் தரங்களை விட எளிமையான செயல்முறை — இதன் விளைவாக மென்மையான இனிப்பு, மலர் மணம், மென்மையான அமைப்புடைய ஒரு கோப்பை கிடைக்கிறது.",
+        "வெள்ளை தேயிலை (White Tea) தளிரிலிருந்து இரண்டரை இலைகளை எடுத்து, வாடவைத்தலை முழுவதுமாக தவிர்க்கிறது. இது கருப்பு தேயிலை போல நொதிக்கப்பட்டு உருட்டப்படுவதற்கு பதிலாக, ஆவியில் வேகவைத்து உலர்த்தப்படுகிறது. இதன் விளைவு மிக இலகுவாக செயலாக்கப்பட்ட, இயற்கையாக இனிப்பான சுவை — வெளிர் நிற காடி, மென்மையான அமைப்பு, மலர் வாசனை, இயற்கையான ஆக்ஸிஜனேற்ற எதிர்ப்பு நிறைவு ஆகியவற்றுடன். ஊதா தேயிலை (Purple Tea) அதே பறிப்பைப் பயன்படுத்துகிறது, ஆனால் வெள்ளை தேயிலையிலிருந்து வேறுபட்டு, முழு கருப்பு தேயிலை செயல்முறையின் வழியாக செல்கிறது — வாடவைத்தல், உருட்டுதல், நொதித்தல். இதன் விளைவாக ஊலாங் தேயிலைக்கு நெருக்கமான சுவை கிடைக்கிறது: கருப்பு தேயிலையை விட இலகுவானது, ஆனால் பச்சை தேயிலையை விட தாவர சுவை குறைவானது, ஒப்பீட்டளவில் காஃபின் குறைவானது, இயற்கையாக ஆக்ஸிஜனேற்ற எதிர்ப்பு நிறைந்தது.",
+        "இளஞ்சிவப்பு தேயிலை (Pink Tea) ஆரம்பத்தில் வெள்ளை தேயிலை போலவே நிறமற்றதாக இருக்கும். எலுமிச்சை சாற்றின் சில துளிகள் சேர்க்கப்பட்ட பின்னரே இது இளஞ்சிவப்பு நிறமாக மாறுகிறது — அந்த சிட்ரஸ், தளிருக்கு அதன் நிறத்தைத் தரும் அதே ஆந்தோசயனின் நிறமியில் ஒரு நிற மாற்றத்தைத் தூண்டுகிறது. சில துளிகள் தேன் சேர்ப்பதும் இதற்கு நன்றாகப் பொருந்துகிறது, பனிக்கட்டி தேநீராக பரிமாறுவது பரிந்துரைக்கப்படுகிறது, இதுவும் இயற்கையாக ஆக்ஸிஜனேற்ற எதிர்ப்பு நிறைந்தது. விட்டா க்ளோ (Vita Glow) ஊதா நிற தளிருக்கு பதிலாக, சாதாரண பச்சை நிற தளிரின் மொட்டிலிருந்து தயாரிக்கப்படுகிறது.",
+        "தோட்டம் மதிப்புக்கூட்டப்பட்ட கலவைகளையும் — தாமரை மலர்களுடன் கலந்த தேயிலை போன்றவை — அதே தளிர்களிலிருந்து கையால் கட்டப்பட்ட ப்ளூமிங் தேயிலையையும் (Blooming Tea) தயாரிக்கிறது. இந்த கைவினைத் தரங்கள் நிலையான கருப்பு தேயிலையை விட மிகக் குறைந்த அளவில் பறிக்கப்பட்டு செயலாக்கப்படுகின்றன, இதுவே அவற்றை அரிதானதாகவும் மதிப்புமிக்கதாகவும் ஆக்குகிறது — சுவை பார்க்கும் கவுண்டரில் இவற்றை சுவைக்க கேளுங்கள். இந்த தரங்களில் பெரும்பாலானவற்றிற்கு ஊதா நிற தளிர் அல்லது சாதாரண பச்சை தளிர் இரண்டையும் பயன்படுத்தலாம் என்றாலும், தோட்டம் பெரும்பாலும் ஊதா நிற தளிரையே பயன்படுத்துகிறது.",
+      ],
       duration: "5 நிமிடங்கள்",
     },
     "pahatharata-manufacturing": {
@@ -1322,8 +1378,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "இலங்கை தேயிலைக்கு அறிமுகம்",
       heroTagline: "தோட்டத்தில் உள்ள ஒரு பலகையில் காணப்படும் 'சிலோன் தேயிலை தரத்தின் சின்னம்' (Ceylon Tea Symbol of Quality).",
-      sectionHeadings: ["சிலோன் தேயிலை — தரத்தின் சின்னம்"],
-      sectionBodies: ["'சிலோன்' என்ற பெயர் 1800களின் ஆரம்பத்தில் இருந்தே தேயிலையுடன் ஒத்ததாக இருந்து வருகிறது. இலங்கை தேயிலையின் வரலாறு இருநூறு ஆண்டுகளுக்கும் மேலாக, இலங்கையில் பிரிட்டிஷ் ஆட்சிக் காலத்திற்குச் செல்கிறது. இலங்கையில் பதிவு செய்யப்பட்ட முதல் தேயிலைச் செடி 1824 இல் வந்தது — அப்போது ஆங்கிலேயர்கள் சீனாவிலிருந்து ஒரு தேயிலைச் செடியைக் கொண்டு வந்து, பேராதனையின் அரச தாவரவியல் பூங்காவில் வணிகரீதியற்ற பயன்பாட்டுக்காக நட்டனர். 1839 இல் சோதனை நடவுக்காக அசாம் மற்றும் கல்கத்தாவிலிருந்து மேலும் தேயிலைப் பயிர்கள் கொண்டு வரப்பட்டன. ஆனால் இலங்கையில் தேயிலைத் தோட்டங்களின் உண்மையான தோற்றம் ஏற்பட்டது தீவின் ஒரே வெற்றிகரமான தொழிலான காபித் தொழில் அழிந்ததன் விளைவாகவே. 1869 இல் 'காபி துரு' எனும் புதிய தாவர நோய் இலங்கையின் செழிப்பான காபித் தோட்டங்களைத் தாக்கியது, அதனால் இலங்கையின் காபி தொழில் ஒரு தசாப்தத்திற்குள் முற்றிலும் அழிந்தது. இவ்வாறே இலங்கையில் தேயிலையின் பாரிய சாகுபடி தொடங்கியது. சிலோன் தேயிலையின் கதை 1867 இல் கண்டியில் லூல்கந்தூரா தோட்டத்தில் 19 ஏக்கர் நிலத்தில் தொடங்கியது — முன்னாள் ஸ்காட்லாந்து காபி தோட்ட நிர்வாகியான ஜேம்ஸ் டெய்லர் இதை ஒரு பல்வகைப்படுத்தல் சோதனையின் ஒரு பகுதியாக நட்டார். ஆண்டுகள் செல்ல செல்ல, அது இலங்கையின் ஏழு தேயிலை வளரும் பிராந்தியங்களாக வளர்ந்தது — கண்டி, ஊவா, ருஹுணா (தெற்கு), உடபுசெல்லாவா, நுவரெலியா, டிம்புலா, மற்றும் சபரகமுவா. உயர்நில தேயிலை (சுமார் 1,200 மீட்டருக்கு மேல், நுவரெலியா மற்றும் ஊவா போன்றவை) மென்மையானதாகவும் நறுமணமிக்கதாகவும் இருக்கும். தாழ்நில தேயிலை (சுமார் 600 மீட்டருக்குக் கீழ், இங்கு உற்பத்தி செய்யப்படுவது போல்) பொதுவாக அதிக வலிமையும் அடர் நிறமும் கொண்டது. இந்த தோட்டம் ஒரு தாழ்நில, அல்லது 'பஹத்தரட' உற்பத்தியாளர் ஆகும் — குறிப்பாக ருஹுணா தேயிலை வளரும் பிராந்தியத்தில் அமைந்துள்ளது, மேல்நாடு ('உடரட') மற்றும் நடுநாடு ('மேதரட') ஆகியவற்றுடன் சிலோன் தேயிலையின் மூன்று புவியியல் வகைப்பாடுகளில் ஒன்றாகும். விருந்தினர்கள் பாரம்பரியமாக 'ஆயுபோவன்' என்ற வார்த்தையால் வரவேற்கப்படுகிறார்கள் — 'நீடூழி வாழ்க' என்று பொருள்படும் சிங்கள வாழ்த்துச் சொல் — சில வேளைகளில் தோட்டத்தின் சொந்த தலைவர் அனுர அதுகோரளவே நேரடியாக இதைச் செய்கிறார்."],
+      sectionHeadings: [
+        "சிலோன் தேயிலை — தரத்தின் சின்னம்",
+        "காபியிலிருந்து தேயிலைக்கு",
+        "ஒரு தொழிலின் பிறப்பு",
+        "தாழ்நில சிலோன் தேயிலை",
+        "ஒரு பாரம்பரிய வரவேற்பு",
+      ],
+      sectionBodies: [
+        "'சிலோன்' என்ற பெயர் 1800களின் ஆரம்பத்தில் இருந்தே தேயிலையுடன் ஒத்ததாக இருந்து வருகிறது. இலங்கை தேயிலையின் வரலாறு இருநூறு ஆண்டுகளுக்கும் மேலாக, இலங்கையில் பிரிட்டிஷ் ஆட்சிக் காலத்திற்குச் செல்கிறது.",
+        "இலங்கையில் பதிவு செய்யப்பட்ட முதல் தேயிலைச் செடி 1824 இல் வந்தது — அப்போது ஆங்கிலேயர்கள் சீனாவிலிருந்து ஒரு தேயிலைச் செடியைக் கொண்டு வந்து, பேராதனையின் அரச தாவரவியல் பூங்காவில் வணிகரீதியற்ற பயன்பாட்டுக்காக நட்டனர். 1839 இல் சோதனை நடவுக்காக அசாம் மற்றும் கல்கத்தாவிலிருந்து மேலும் தேயிலைப் பயிர்கள் கொண்டு வரப்பட்டன. ஆனால் இலங்கையில் தேயிலைத் தோட்டங்களின் உண்மையான தோற்றம் ஏற்பட்டது தீவின் ஒரே வெற்றிகரமான தொழிலான காபித் தொழில் அழிந்ததன் விளைவாகவே. 1869 இல் 'காபி துரு' எனும் புதிய தாவர நோய் இலங்கையின் செழிப்பான காபித் தோட்டங்களைத் தாக்கியது, அதனால் இலங்கையின் காபி தொழில் ஒரு தசாப்தத்திற்குள் முற்றிலும் அழிந்தது. இவ்வாறே இலங்கையில் தேயிலையின் பாரிய சாகுபடி தொடங்கியது.",
+        "சிலோன் தேயிலையின் கதை 1867 இல் கண்டியில் லூல்கந்தூரா தோட்டத்தில் 19 ஏக்கர் நிலத்தில் தொடங்கியது — முன்னாள் ஸ்காட்லாந்து காபி தோட்ட நிர்வாகியான ஜேம்ஸ் டெய்லர் இதை ஒரு பல்வகைப்படுத்தல் சோதனையின் ஒரு பகுதியாக நட்டார். ஆண்டுகள் செல்ல செல்ல, அது இலங்கையின் ஏழு தேயிலை வளரும் பிராந்தியங்களாக வளர்ந்தது — கண்டி, ஊவா, ருஹுணா (தெற்கு), உடபுசெல்லாவா, நுவரெலியா, டிம்புலா, மற்றும் சபரகமுவா.",
+        "உயர்நில தேயிலை (சுமார் 1,200 மீட்டருக்கு மேல், நுவரெலியா மற்றும் ஊவா போன்றவை) மென்மையானதாகவும் நறுமணமிக்கதாகவும் இருக்கும். தாழ்நில தேயிலை (சுமார் 600 மீட்டருக்குக் கீழ், இங்கு உற்பத்தி செய்யப்படுவது போல்) பொதுவாக அதிக வலிமையும் அடர் நிறமும் கொண்டது. இந்த தோட்டம் ஒரு தாழ்நில, அல்லது 'பஹத்தரட' உற்பத்தியாளர் ஆகும் — குறிப்பாக ருஹுணா தேயிலை வளரும் பிராந்தியத்தில் அமைந்துள்ளது, மேல்நாடு ('உடரட') மற்றும் நடுநாடு ('மேதரட') ஆகியவற்றுடன் சிலோன் தேயிலையின் மூன்று புவியியல் வகைப்பாடுகளில் ஒன்றாகும்.",
+        "விருந்தினர்கள் பாரம்பரியமாக 'ஆயுபோவன்' என்ற வார்த்தையால் வரவேற்கப்படுகிறார்கள் — 'நீடூழி வாழ்க' என்று பொருள்படும் சிங்கள வாழ்த்துச் சொல் — சில வேளைகளில் தோட்டத்தின் சொந்த தலைவர் அனுர அதுகோரளவே நேரடியாக இதைச் செய்கிறார்.",
+      ],
       duration: "5-10 நிமிடங்கள்",
     },
     "jaggery-palm": {
@@ -1413,8 +1481,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "Selezione e Classificazione",
       heroTagline: "I cartelli sui gradi del tè della tenuta stessa, che illustrano come viene classificato ogni grado.",
-      sectionHeadings: ["Selezione e Classificazione"],
-      sectionBodies: ["Il tè verde e il tè nero partono entrambi dalla stessa pianta e dalla stessa foglia. Ciò che li separa davvero è la fermentazione (ossidazione), una fase che il tè nero attraversa e il tè verde salta. La produzione di questa fabbrica è per lo più tè nero. Mentre la foglia essiccata passa attraverso il macchinario di classificazione, viene separata in un solo passaggio in base a quale parte del germoglio originale proviene: la punta tenera e facilmente spezzabile e le foglie più in alto — solo circa il 2% di ogni germoglio — diventano FBOPF Extra Special, la qualità più pregiata e costosa. La foglia più in basso diventa qualità robuste come BOP e Pekoe. La foglia più matura e più bassa diventa Dust, e steli e scarti inutilizzabili vengono scartati come Refuse. Quel macchinario di classificazione include un separatore di colore con un sistema a telecamera in grado di distinguere particelle come foglia e fiore, filtrando tutto ciò che non appartiene. Setacci di diverse dimensioni di maglia separano ulteriormente le particelle per dimensione in più passaggi. Un separatore elettrostatico dà una carica statica sui rulli ai frammenti di stelo bruno rimanenti così da poterli scartare. Nessuno di questo colore o carattere deriva da coloranti o additivi, solo dalla lavorazione naturale. Il valore segue la posizione sul germoglio, non solo la dimensione della foglia — più la foglia è alta e tenera, più alta è la sua qualità e il suo prezzo. Il Dust, non la foglia pregiata, è ciò che di solito finisce nelle bustine di tè aromatizzate; le qualità più pregiate come il FBOPF Extra Special vengono raramente vendute localmente per via del loro valore sui mercati di esportazione."],
+      sectionHeadings: [
+        "Selezione e Classificazione",
+        "Classificazione per Posizione sul Germoglio",
+        "Il Macchinario di Classificazione",
+        "Qualità, Valore ed Esportazione",
+      ],
+      sectionBodies: [
+        "Il tè verde e il tè nero partono entrambi dalla stessa pianta e dalla stessa foglia. Ciò che li separa davvero è la fermentazione (ossidazione), una fase che il tè nero attraversa e il tè verde salta. La produzione di questa fabbrica è per lo più tè nero.",
+        "Mentre la foglia essiccata passa attraverso il macchinario di classificazione, viene separata in un solo passaggio in base a quale parte del germoglio originale proviene: la punta tenera e facilmente spezzabile e le foglie più in alto — solo circa il 2% di ogni germoglio — diventano FBOPF Extra Special, la qualità più pregiata e costosa. La foglia più in basso diventa qualità robuste come BOP e Pekoe. La foglia più matura e più bassa diventa Dust, e steli e scarti inutilizzabili vengono scartati come Refuse.",
+        "Quel macchinario di classificazione include un separatore di colore con un sistema a telecamera in grado di distinguere particelle come foglia e fiore, filtrando tutto ciò che non appartiene. Setacci di diverse dimensioni di maglia separano ulteriormente le particelle per dimensione in più passaggi. Un separatore elettrostatico dà una carica statica sui rulli ai frammenti di stelo bruno rimanenti così da poterli scartare. Nessuno di questo colore o carattere deriva da coloranti o additivi, solo dalla lavorazione naturale.",
+        "Il valore segue la posizione sul germoglio, non solo la dimensione della foglia — più la foglia è alta e tenera, più alta è la sua qualità e il suo prezzo. Il Dust, non la foglia pregiata, è ciò che di solito finisce nelle bustine di tè aromatizzate; le qualità più pregiate come il FBOPF Extra Special vengono raramente vendute localmente per via del loro valore sui mercati di esportazione.",
+      ],
       duration: "La selezione avviene in modo continuo tramite macchinari e richiede circa 30-45 minuti per lotto.",
     },
     packing: {
@@ -1583,8 +1661,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "Tè Artigianali Pregiati",
       heroTagline: "Il cartello dei Tè Artigianali Pregiati della tenuta stessa.",
-      sectionHeadings: ["Tè Artigianali Pregiati"],
-      sectionBodies: ["Oltre al tè nero standard, la tenuta produce anche rari tè artigianali lavorati a mano. Questi vengono per lo più rifiniti a mano nella Fabbrica del Tè Fatto a Mano separata, non sulla linea principale del tè nero. Ecco perché queste qualità sono chiamate anche 'Tè Artigianali': è più vicino a un'arte che a una produzione di massa. Molti di essi provengono da un germoglio color viola distintivo — TRI 2043, un clone del Tea Research Institute — il cui colore deriva dall'antociano. È una cultivar a basso rendimento, motivo per cui non tutte le tenute dello Sri Lanka la coltivano. Il Golden Tip usa la gemma di quel germoglio ormai matura, mentre il Silver Tip usa la gemma più chiara e ancora immatura dello stesso germoglio, i cui sottili peli argentati danno alla qualità il suo nome e una lieve luccichio. Solo la gemma viene pesata, appassita per qualche ora ed essiccata — un processo più semplice rispetto alle qualità completamente fermentate — per una tazza delicatamente dolce, floreale, dalla consistenza vellutata. Il tè bianco prende due foglie e mezzo dal germoglio e salta completamente l'appassimento: viene cotto a vapore ed essiccato anziché fermentato e arrotolato come il tè nero. Il risultato è un gusto naturalmente dolce e molto leggermente lavorato, con un liquore chiaro, una consistenza vellutata, un aroma floreale e una naturale ricchezza di antiossidanti. Il tè viola usa la stessa raccolta ma, a differenza del tè bianco, attraversa l'intero processo del tè nero — appassimento, arrotolamento e fermentazione — per un gusto più vicino all'oolong: più leggero del tè nero ma meno vegetale del tè verde, relativamente povero di caffeina e naturalmente ricco di antiossidanti. Il tè rosa parte praticamente incolore come il tè bianco, e diventa rosa solo dopo l'aggiunta di un paio di gocce di lime — l'agrume innesca un cambiamento di colore nello stesso pigmento antociano che dà al germoglio la sua tonalità. Si abbina bene anche a un paio di gocce di miele, si consiglia servito come tè freddo, ed è naturalmente ricco di antiossidanti anch'esso. Il Vita Glow viene invece prodotto dalla gemma del germoglio verde ordinario anziché da quello viola. La tenuta crea anche miscele a valore aggiunto — come il tè infuso con fiori di loto — e il Blooming Tea legato a mano dagli stessi germogli. Questi pregiati tè artigianali vengono raccolti e lavorati in quantità molto più ridotte rispetto al tè nero standard, ed è proprio questo a renderli più rari e pregiati — chiedete al banco di degustazione per assaggiarli. Per la maggior parte di queste qualità si può usare sia il germoglio dalle sfumature viola sia il normale germoglio verde, anche se la tenuta utilizza per lo più quello viola."],
+      sectionHeadings: [
+        "Tè Artigianali Pregiati",
+        "Golden Tip e Silver Tip",
+        "Tè Bianco e Tè Viola",
+        "Tè Rosa e Vita Glow",
+        "Miscele e Rarità",
+      ],
+      sectionBodies: [
+        "Oltre al tè nero standard, la tenuta produce anche rari tè artigianali lavorati a mano. Questi vengono per lo più rifiniti a mano nella Fabbrica del Tè Fatto a Mano separata, non sulla linea principale del tè nero. Ecco perché queste qualità sono chiamate anche 'Tè Artigianali': è più vicino a un'arte che a una produzione di massa. Molti di essi provengono da un germoglio color viola distintivo — TRI 2043, un clone del Tea Research Institute — il cui colore deriva dall'antociano. È una cultivar a basso rendimento, motivo per cui non tutte le tenute dello Sri Lanka la coltivano.",
+        "Il Golden Tip usa la gemma di quel germoglio ormai matura, mentre il Silver Tip usa la gemma più chiara e ancora immatura dello stesso germoglio, i cui sottili peli argentati danno alla qualità il suo nome e una lieve luccichio. Solo la gemma viene pesata, appassita per qualche ora ed essiccata — un processo più semplice rispetto alle qualità completamente fermentate — per una tazza delicatamente dolce, floreale, dalla consistenza vellutata.",
+        "Il tè bianco prende due foglie e mezzo dal germoglio e salta completamente l'appassimento: viene cotto a vapore ed essiccato anziché fermentato e arrotolato come il tè nero. Il risultato è un gusto naturalmente dolce e molto leggermente lavorato, con un liquore chiaro, una consistenza vellutata, un aroma floreale e una naturale ricchezza di antiossidanti. Il tè viola usa la stessa raccolta ma, a differenza del tè bianco, attraversa l'intero processo del tè nero — appassimento, arrotolamento e fermentazione — per un gusto più vicino all'oolong: più leggero del tè nero ma meno vegetale del tè verde, relativamente povero di caffeina e naturalmente ricco di antiossidanti.",
+        "Il tè rosa parte praticamente incolore come il tè bianco, e diventa rosa solo dopo l'aggiunta di un paio di gocce di lime — l'agrume innesca un cambiamento di colore nello stesso pigmento antociano che dà al germoglio la sua tonalità. Si abbina bene anche a un paio di gocce di miele, si consiglia servito come tè freddo, ed è naturalmente ricco di antiossidanti anch'esso. Il Vita Glow viene invece prodotto dalla gemma del germoglio verde ordinario anziché da quello viola.",
+        "La tenuta crea anche miscele a valore aggiunto — come il tè infuso con fiori di loto — e il Blooming Tea legato a mano dagli stessi germogli. Questi pregiati tè artigianali vengono raccolti e lavorati in quantità molto più ridotte rispetto al tè nero standard, ed è proprio questo a renderli più rari e pregiati — chiedete al banco di degustazione per assaggiarli. Per la maggior parte di queste qualità si può usare sia il germoglio dalle sfumature viola sia il normale germoglio verde, anche se la tenuta utilizza per lo più quello viola.",
+      ],
       duration: "5 minuti",
     },
     "pahatharata-manufacturing": {
@@ -1820,8 +1910,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Introduzione al Tè di Ceylon",
       heroTagline: "Il Simbolo di Qualità del tè di Ceylon, visto su un cartello nella tenuta.",
-      sectionHeadings: ["Tè di Ceylon — Simbolo di Qualità"],
-      sectionBodies: ["Fin dall'inizio del 1800, il nome \"Ceylon\" è stato sinonimo di tè. La storia del tè di Ceylon risale al dominio britannico in Sri Lanka, oltre duecento anni fa. La prima pianta di tè registrata in Sri Lanka arrivò nel 1824, quando gli inglesi portarono una pianta di tè dalla Cina e la piantarono nel Giardino Botanico Reale di Peradeniya per uso non commerciale. Nel 1839 arrivarono ulteriori colture di tè da Assam e Calcutta a scopo sperimentale. La vera nascita delle piantagioni di tè in Sri Lanka, però, arrivò con il declino dell'unica industria di successo dell'isola: quella del caffè. Nel 1869 le fiorenti piantagioni di caffè dello Sri Lanka furono colpite da una nuova malattia delle piante chiamata ruggine del caffè, e l'industria del caffè fu spazzata via in meno di un decennio. Ebbe così inizio la coltivazione di massa del tè in Sri Lanka. La storia del tè di Ceylon iniziò nel 1867, su un terreno di 19 acri nella tenuta di Loolecondera a Kandy — piantato da James Taylor, un ex coltivatore di caffè scozzese, come parte di un esperimento di diversificazione. Nel corso degli anni, si sviluppò nelle sette regioni tè dello Sri Lanka: Kandy, Uva, Ruhuna (Sud), Udapussellawa, Nuwara Eliya, Dimbula e Sabaragamuwa. Il tè d'alta quota (sopra circa 1.200 m, come a Nuwara Eliya e Uva) tende a essere delicato e aromatico. Il tè di pianura (sotto circa 600 m, come quello prodotto qui) è generalmente più forte e scuro. Questa tenuta è una produttrice di pianura, o 'Pahatharata', situata in particolare nella regione tè di Ruhuna — una delle tre classificazioni geografiche del tè di Ceylon, insieme all'alta quota ('Udarata') e alla media quota ('Medarata'). I visitatori vengono tradizionalmente accolti con 'Ayubowan', un saluto singalese che significa 'possa tu vivere a lungo', talvolta di persona dal presidente stesso della tenuta, Anura Athukorala."],
+      sectionHeadings: [
+        "Tè di Ceylon — Simbolo di Qualità",
+        "Dal Caffè al Tè",
+        "La Nascita di un'Industria",
+        "Tè di Ceylon di Pianura",
+        "Un'Accoglienza Tradizionale",
+      ],
+      sectionBodies: [
+        "Fin dall'inizio del 1800, il nome \"Ceylon\" è stato sinonimo di tè. La storia del tè di Ceylon risale al dominio britannico in Sri Lanka, oltre duecento anni fa.",
+        "La prima pianta di tè registrata in Sri Lanka arrivò nel 1824, quando gli inglesi portarono una pianta di tè dalla Cina e la piantarono nel Giardino Botanico Reale di Peradeniya per uso non commerciale. Nel 1839 arrivarono ulteriori colture di tè da Assam e Calcutta a scopo sperimentale. La vera nascita delle piantagioni di tè in Sri Lanka, però, arrivò con il declino dell'unica industria di successo dell'isola: quella del caffè. Nel 1869 le fiorenti piantagioni di caffè dello Sri Lanka furono colpite da una nuova malattia delle piante chiamata ruggine del caffè, e l'industria del caffè fu spazzata via in meno di un decennio. Ebbe così inizio la coltivazione di massa del tè in Sri Lanka.",
+        "La storia del tè di Ceylon iniziò nel 1867, su un terreno di 19 acri nella tenuta di Loolecondera a Kandy — piantato da James Taylor, un ex coltivatore di caffè scozzese, come parte di un esperimento di diversificazione. Nel corso degli anni, si sviluppò nelle sette regioni tè dello Sri Lanka: Kandy, Uva, Ruhuna (Sud), Udapussellawa, Nuwara Eliya, Dimbula e Sabaragamuwa.",
+        "Il tè d'alta quota (sopra circa 1.200 m, come a Nuwara Eliya e Uva) tende a essere delicato e aromatico. Il tè di pianura (sotto circa 600 m, come quello prodotto qui) è generalmente più forte e scuro. Questa tenuta è una produttrice di pianura, o 'Pahatharata', situata in particolare nella regione tè di Ruhuna — una delle tre classificazioni geografiche del tè di Ceylon, insieme all'alta quota ('Udarata') e alla media quota ('Medarata').",
+        "I visitatori vengono tradizionalmente accolti con 'Ayubowan', un saluto singalese che significa 'possa tu vivere a lungo', talvolta di persona dal presidente stesso della tenuta, Anura Athukorala.",
+      ],
       duration: "5-10 minuti",
     },
     "jaggery-palm": {
@@ -1911,8 +2013,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "الفرز والتصنيف",
       heroTagline: "لافتات درجات الشاي الخاصة بالمزرعة، التي توضح كيفية تصنيف كل درجة.",
-      sectionHeadings: ["الفرز والتصنيف"],
-      sectionBodies: ["يبدأ كل من الشاي الأخضر والشاي الأسود من نفس الشجيرة ونفس الأوراق تمامًا. ما يفصل بينهما فعليًا هو مرحلة التخمير (الأكسدة)، وهي مرحلة يمر بها الشاي الأسود ويتخطاها الشاي الأخضر. معظم إنتاج هذا المصنع هو شاي أسود. عندما تمر الأوراق المجففة عبر آلة التصنيف، تُفصَل في مرور واحد حسب الجزء الذي أتت منه من البرعم الأصلي: الطرف الطري سهل الكسر والأوراق العلوية — نحو 2% فقط من كل برعم — تصبح FBOPF Extra Special، وهي أرقى الدرجات وأغلاها. تصبح الأوراق الأسفل درجات قوية مثل BOP وPekoe. تصبح الأوراق الأكثر نضجًا والأدنى موقعًا درجة Dust، وتُستبعد السيقان والبقايا غير القابلة للاستخدام كنفايات (Refuse). تشمل آلة التصنيف تلك فاصلًا لونيًا بنظام كاميرا يمكنه التمييز بين جزيئات مثل الأوراق والزهور، فيُصفّي كل ما لا ينتمي إليها. تفصل مناخل بأحجام شبكية مختلفة الجزيئات أكثر حسب الحجم عبر عدة مراحل. يمنح فاصل كهروستاتيكي شحنة ساكنة على بكرات لبقايا السيقان البنية المتبقية بحيث يمكن سحبها جانبًا. لا يأتي أي من هذا اللون أو الطابع من أصباغ أو إضافات، بل من المعالجة الطبيعية فقط. تتبع القيمة موقع الورقة على الغصن، وليس حجم الورقة فقط — فكلما كانت الورقة أعلى وأكثر طراوة، ارتفعت درجتها وسعرها. درجة Dust، وليست الأوراق الفاخرة، هي ما ينتهي عادةً في أكياس الشاي المنكّهة؛ أما أفضل الدرجات مثل FBOPF Extra Special فنادرًا ما تُباع محليًا بسبب قيمتها العالية في أسواق التصدير."],
+      sectionHeadings: [
+        "الفرز والتصنيف",
+        "التصنيف حسب موقع الورقة على البرعم",
+        "آلات التصنيف",
+        "الدرجة والقيمة والتصدير",
+      ],
+      sectionBodies: [
+        "يبدأ كل من الشاي الأخضر والشاي الأسود من نفس الشجيرة ونفس الأوراق تمامًا. ما يفصل بينهما فعليًا هو مرحلة التخمير (الأكسدة)، وهي مرحلة يمر بها الشاي الأسود ويتخطاها الشاي الأخضر. معظم إنتاج هذا المصنع هو شاي أسود.",
+        "عندما تمر الأوراق المجففة عبر آلة التصنيف، تُفصَل في مرور واحد حسب الجزء الذي أتت منه من البرعم الأصلي: الطرف الطري سهل الكسر والأوراق العلوية — نحو 2% فقط من كل برعم — تصبح FBOPF Extra Special، وهي أرقى الدرجات وأغلاها. تصبح الأوراق الأسفل درجات قوية مثل BOP وPekoe. تصبح الأوراق الأكثر نضجًا والأدنى موقعًا درجة Dust، وتُستبعد السيقان والبقايا غير القابلة للاستخدام كنفايات (Refuse).",
+        "تشمل آلة التصنيف تلك فاصلًا لونيًا بنظام كاميرا يمكنه التمييز بين جزيئات مثل الأوراق والزهور، فيُصفّي كل ما لا ينتمي إليها. تفصل مناخل بأحجام شبكية مختلفة الجزيئات أكثر حسب الحجم عبر عدة مراحل. يمنح فاصل كهروستاتيكي شحنة ساكنة على بكرات لبقايا السيقان البنية المتبقية بحيث يمكن سحبها جانبًا. لا يأتي أي من هذا اللون أو الطابع من أصباغ أو إضافات، بل من المعالجة الطبيعية فقط.",
+        "تتبع القيمة موقع الورقة على الغصن، وليس حجم الورقة فقط — فكلما كانت الورقة أعلى وأكثر طراوة، ارتفعت درجتها وسعرها. درجة Dust، وليست الأوراق الفاخرة، هي ما ينتهي عادةً في أكياس الشاي المنكّهة؛ أما أفضل الدرجات مثل FBOPF Extra Special فنادرًا ما تُباع محليًا بسبب قيمتها العالية في أسواق التصدير.",
+      ],
       duration: "يعمل الفرز باستمرار على الآلات ويستغرق حوالي 30 إلى 45 دقيقة لكل دفعة.",
     },
     packing: {
@@ -2081,8 +2193,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "درجات الشاي الحرفي",
       heroTagline: "لافتة درجات الشاي الحرفي الخاصة بالمزرعة.",
-      sectionHeadings: ["درجات الشاي الحرفي"],
-      sectionBodies: ["بالإضافة إلى الشاي الأسود العادي، تنتج المزرعة أيضًا أنواعًا نادرة من الشاي الحرفي المصنوع يدويًا. يتم تجهيز معظمها يدويًا في مصنع الشاي اليدوي المنفصل، وليس في خط الشاي الأسود الرئيسي. لهذا السبب تُسمى هذه الدرجات أيضًا 'درجات الشاي الحرفي' — فهي أقرب إلى حرفة منها إلى إنتاج جماعي. يأتي الكثير منها من برعم أرجواني مميز — TRI 2043، وهو صنف مستنسخ من معهد أبحاث الشاي. يكتسب لونه من صبغة الأنثوسيانين. إنه صنف منخفض الإنتاجية، ولهذا لا تزرعه كل مزرعة في سريلانكا. يُصنع Golden Tip من البرعم الناضج تمامًا لذلك الفرع، بينما يُصنع Silver Tip من برعم أفتح وأقل نضجًا من نفس الفرع. تمنحه شعيراته الفضية الرقيقة اسمه ولمعانًا خفيفًا. يُوزن البرعم وحده، ويُذبل لبضع ساعات، ثم يُجفف — وهي عملية أبسط من الدرجات المخمرة بالكامل — لينتج كوبًا حلو المذاق قليلاً، زهري الرائحة، بقوام مخملي. يأخذ الشاي الأبيض ورقتين ونصف من البرعم، ويتخطى الذبول تمامًا. يُطهى بالبخار ويُجفف بدلاً من التخمير واللف كما في الشاي الأسود. والنتيجة مذاق حلو طبيعيًا ومعالج بخفة شديدة، بسائل فاتح اللون، وقوام مخملي، ورائحة زهرية، وغنى طبيعي بمضادات الأكسدة. يستخدم الشاي الأرجواني نفس القطاف، لكنه على عكس الشاي الأبيض يمر بعملية الشاي الأسود الكاملة — الذبول واللف والتخمير — لينتج نكهة أقرب إلى الأولونغ: أخف من الشاي الأسود لكن أقل نباتية من الشاي الأخضر، وأقل نسبيًا في الكافيين، وغني طبيعيًا بمضادات الأكسدة. يبدأ الشاي الوردي عديم اللون تقريبًا مثل الشاي الأبيض، ولا يتحول إلى اللون الوردي إلا بعد إضافة بضع قطرات من الليمون الحامض — إذ يُحدث الحمض تغيرًا لونيًا في نفس صبغة الأنثوسيانين التي تمنح البرعم لونه. كما يتناسب جيدًا مع بضع قطرات من العسل، ويُنصح بتقديمه كشاي مثلج، وهو أيضًا غني طبيعيًا بمضادات الأكسدة. أما Vita Glow فيُصنع بدلاً من ذلك من برعم الفرع الأخضر العادي وليس الأرجواني. تصنع المزرعة أيضًا مزيجات ذات قيمة مضافة — مثل الشاي المنقوع بأزهار اللوتس — وشاي Blooming المربوط يدويًا من نفس الفروع. تُقطف هذه الأنواع الحرفية وتُعالج بكميات أقل بكثير من الشاي الأسود القياسي، وهذا ما يجعلها أكثر ندرة وقيمة — اسأل عند طاولة التذوق لتجربتها. يمكن استخدام البرعم الأرجواني أو البرعم الأخضر العادي لمعظم هذه الدرجات، رغم أن المزرعة تستخدم في الغالب البرعم الأرجواني."],
+      sectionHeadings: [
+        "درجات الشاي الحرفي",
+        "Golden Tip و Silver Tip",
+        "الشاي الأبيض والشاي الأرجواني",
+        "الشاي الوردي و Vita Glow",
+        "المزيجات والندرة",
+      ],
+      sectionBodies: [
+        "بالإضافة إلى الشاي الأسود العادي، تنتج المزرعة أيضًا أنواعًا نادرة من الشاي الحرفي المصنوع يدويًا. يتم تجهيز معظمها يدويًا في مصنع الشاي اليدوي المنفصل، وليس في خط الشاي الأسود الرئيسي. لهذا السبب تُسمى هذه الدرجات أيضًا 'درجات الشاي الحرفي' — فهي أقرب إلى حرفة منها إلى إنتاج جماعي. يأتي الكثير منها من برعم أرجواني مميز — TRI 2043، وهو صنف مستنسخ من معهد أبحاث الشاي. يكتسب لونه من صبغة الأنثوسيانين. إنه صنف منخفض الإنتاجية، ولهذا لا تزرعه كل مزرعة في سريلانكا.",
+        "يُصنع Golden Tip من البرعم الناضج تمامًا لذلك الفرع، بينما يُصنع Silver Tip من برعم أفتح وأقل نضجًا من نفس الفرع. تمنحه شعيراته الفضية الرقيقة اسمه ولمعانًا خفيفًا. يُوزن البرعم وحده، ويُذبل لبضع ساعات، ثم يُجفف — وهي عملية أبسط من الدرجات المخمرة بالكامل — لينتج كوبًا حلو المذاق قليلاً، زهري الرائحة، بقوام مخملي.",
+        "يأخذ الشاي الأبيض ورقتين ونصف من البرعم، ويتخطى الذبول تمامًا. يُطهى بالبخار ويُجفف بدلاً من التخمير واللف كما في الشاي الأسود. والنتيجة مذاق حلو طبيعيًا ومعالج بخفة شديدة، بسائل فاتح اللون، وقوام مخملي، ورائحة زهرية، وغنى طبيعي بمضادات الأكسدة. يستخدم الشاي الأرجواني نفس القطاف، لكنه على عكس الشاي الأبيض يمر بعملية الشاي الأسود الكاملة — الذبول واللف والتخمير — لينتج نكهة أقرب إلى الأولونغ: أخف من الشاي الأسود لكن أقل نباتية من الشاي الأخضر، وأقل نسبيًا في الكافيين، وغني طبيعيًا بمضادات الأكسدة.",
+        "يبدأ الشاي الوردي عديم اللون تقريبًا مثل الشاي الأبيض، ولا يتحول إلى اللون الوردي إلا بعد إضافة بضع قطرات من الليمون الحامض — إذ يُحدث الحمض تغيرًا لونيًا في نفس صبغة الأنثوسيانين التي تمنح البرعم لونه. كما يتناسب جيدًا مع بضع قطرات من العسل، ويُنصح بتقديمه كشاي مثلج، وهو أيضًا غني طبيعيًا بمضادات الأكسدة. أما Vita Glow فيُصنع بدلاً من ذلك من برعم الفرع الأخضر العادي وليس الأرجواني.",
+        "تصنع المزرعة أيضًا مزيجات ذات قيمة مضافة — مثل الشاي المنقوع بأزهار اللوتس — وشاي Blooming المربوط يدويًا من نفس الفروع. تُقطف هذه الأنواع الحرفية وتُعالج بكميات أقل بكثير من الشاي الأسود القياسي، وهذا ما يجعلها أكثر ندرة وقيمة — اسأل عند طاولة التذوق لتجربتها. يمكن استخدام البرعم الأرجواني أو البرعم الأخضر العادي لمعظم هذه الدرجات، رغم أن المزرعة تستخدم في الغالب البرعم الأرجواني.",
+      ],
       duration: "5 دقائق",
     },
     "pahatharata-manufacturing": {
@@ -2318,8 +2442,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "مقدمة عن شاي سيلان",
       heroTagline: "رمز جودة شاي سيلان، كما يظهر على لافتة في المزرعة.",
-      sectionHeadings: ["شاي سيلان — رمز الجودة"],
-      sectionBodies: ["منذ أوائل القرن التاسع عشر، أصبح اسم \"سيلان\" مرادفًا للشاي. يعود تاريخ شاي سيلان إلى الحكم البريطاني في سريلانكا، منذ أكثر من مئتي عام. وصلت أول شجرة شاي مسجلة في سريلانكا عام 1824، عندما أحضر البريطانيون شجرة شاي من الصين وزرعوها في حديقة بيرادينيا النباتية الملكية للاستخدام غير التجاري. وفي عام 1839، وصلت المزيد من محاصيل الشاي من آسام وكلكتا لأغراض تجريبية. أما الميلاد الفعلي لمزارع الشاي في سريلانكا فجاء مع زوال صناعة البن، وهي الصناعة الناجحة الوحيدة في الجزيرة آنذاك. ففي عام 1869، أصيبت مزارع البن المزدهرة في سريلانكا بمرض نباتي جديد يُدعى صدأ البن، فانهارت صناعة البن بالكامل خلال أقل من عقد. وهكذا بدأت الزراعة الواسعة للشاي في سريلانكا. بدأت قصة شاي سيلان عام 1867 على مساحة 19 فدانًا في مزرعة لولكوندرا بكاندي — زرعها جيمس تايلور، المزارع الاسكتلندي الذي عمل سابقًا في زراعة البن، كجزء من تجربة لتنويع المحاصيل. وعلى مر السنين، تطورت لتشمل مناطق سريلانكا السبع لزراعة الشاي: كاندي، وأوفا، وروهونا (الجنوب)، وأودابوسيلاوا، ونوارا إليا، وديمبولا، وساباراغاموا. يميل شاي الأراضي المرتفعة (فوق حوالي 1,200 متر، كما في نوارا إليا وأوفا) إلى أن يكون رقيقًا وعطريًا. أما شاي الأراضي المنخفضة (أقل من حوالي 600 متر، كما يُنتج هنا) فعادة ما يكون أقوى وأغمق. وهذه المزرعة منتجة للأراضي المنخفضة، أو 'باهاتارتا'، وتقع تحديدًا ضمن منطقة روهونا لزراعة الشاي — إحدى التصنيفات الجغرافية الثلاثة لشاي سيلان، إلى جانب الأراضي المرتفعة ('أودارتا') والأراضي الوسطى ('ميدارتا'). ويُرحَّب بالزوار تقليديًا بعبارة 'أيوبوان'، وهي تحية سنهالية تعني 'أطال الله عمرك'، وأحيانًا شخصيًا من قِبل رئيس المزرعة نفسه، أنورا أتوكورالا."],
+      sectionHeadings: [
+        "شاي سيلان — رمز الجودة",
+        "من البن إلى الشاي",
+        "ميلاد صناعة",
+        "شاي سيلان من الأراضي المنخفضة",
+        "ترحيب تقليدي",
+      ],
+      sectionBodies: [
+        "منذ أوائل القرن التاسع عشر، أصبح اسم \"سيلان\" مرادفًا للشاي. يعود تاريخ شاي سيلان إلى الحكم البريطاني في سريلانكا، منذ أكثر من مئتي عام.",
+        "وصلت أول شجرة شاي مسجلة في سريلانكا عام 1824، عندما أحضر البريطانيون شجرة شاي من الصين وزرعوها في حديقة بيرادينيا النباتية الملكية للاستخدام غير التجاري. وفي عام 1839، وصلت المزيد من محاصيل الشاي من آسام وكلكتا لأغراض تجريبية. أما الميلاد الفعلي لمزارع الشاي في سريلانكا فجاء مع زوال صناعة البن، وهي الصناعة الناجحة الوحيدة في الجزيرة آنذاك. ففي عام 1869، أصيبت مزارع البن المزدهرة في سريلانكا بمرض نباتي جديد يُدعى صدأ البن، فانهارت صناعة البن بالكامل خلال أقل من عقد. وهكذا بدأت الزراعة الواسعة للشاي في سريلانكا.",
+        "بدأت قصة شاي سيلان عام 1867 على مساحة 19 فدانًا في مزرعة لولكوندرا بكاندي — زرعها جيمس تايلور، المزارع الاسكتلندي الذي عمل سابقًا في زراعة البن، كجزء من تجربة لتنويع المحاصيل. وعلى مر السنين، تطورت لتشمل مناطق سريلانكا السبع لزراعة الشاي: كاندي، وأوفا، وروهونا (الجنوب)، وأودابوسيلاوا، ونوارا إليا، وديمبولا، وساباراغاموا.",
+        "يميل شاي الأراضي المرتفعة (فوق حوالي 1,200 متر، كما في نوارا إليا وأوفا) إلى أن يكون رقيقًا وعطريًا. أما شاي الأراضي المنخفضة (أقل من حوالي 600 متر، كما يُنتج هنا) فعادة ما يكون أقوى وأغمق. وهذه المزرعة منتجة للأراضي المنخفضة، أو 'باهاتارتا'، وتقع تحديدًا ضمن منطقة روهونا لزراعة الشاي — إحدى التصنيفات الجغرافية الثلاثة لشاي سيلان، إلى جانب الأراضي المرتفعة ('أودارتا') والأراضي الوسطى ('ميدارتا').",
+        "ويُرحَّب بالزوار تقليديًا بعبارة 'أيوبوان'، وهي تحية سنهالية تعني 'أطال الله عمرك'، وأحيانًا شخصيًا من قِبل رئيس المزرعة نفسه، أنورا أتوكورالا.",
+      ],
       duration: "5-10 دقائق",
     },
     "jaggery-palm": {
@@ -2409,8 +2545,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "Сортировка и калибровка",
       heroTagline: "Собственные таблички поместья с сортами чая, показывающие, как классифицируется каждый сорт.",
-      sectionHeadings: ["Сортировка и калибровка"],
-      sectionBodies: ["И зелёный, и чёрный чай начинаются с одного и того же куста и одного и того же листа. По-настоящему их разделяет этап ферментации (окисления) — чёрный чай через него проходит, а зелёный его пропускает. Большая часть продукции этой фабрики — чёрный чай. Когда высушенный лист проходит через сортировочную машину, его разделяют за один проход по тому, из какой части исходного побега он взялся: нежный, легко ломающийся кончик и самые верхние листья — лишь около 2% каждого побега — становятся FBOPF Extra Special, самым тонким и дорогим сортом. Лист, расположенный ниже, становится крепкими сортами вроде BOP и Pekoe. Самый зрелый, нижний лист становится Dust, а непригодные стебли и обрезки отбраковываются как Refuse. Та же сортировочная машина включает цветовой сепаратор с камерной системой, способной отличать частицы вроде листа и цветка, отфильтровывая всё лишнее. Сита с разным размером ячеек дополнительно разделяют частицы по размеру за несколько проходов. Электростатический сепаратор придаёт статический заряд на роликах оставшимся коричневым фрагментам стеблей, чтобы их можно было отделить. Ни цвет, ни характер здесь не связаны с красителями или добавками — только с естественной обработкой. Ценность зависит от положения на побеге, а не только от размера листа — чем выше и нежнее лист, тем выше его сорт и цена. В ароматизированные чайные пакетики обычно попадает именно сорт Dust, а не премиальный лист; лучшие сорта, такие как FBOPF Extra Special, редко продаются внутри страны из-за их высокой стоимости на экспортных рынках."],
+      sectionHeadings: [
+        "Сортировка и калибровка",
+        "Калибровка по положению на побеге",
+        "Сортировочное оборудование",
+        "Сорт, ценность и экспорт",
+      ],
+      sectionBodies: [
+        "И зелёный, и чёрный чай начинаются с одного и того же куста и одного и того же листа. По-настоящему их разделяет этап ферментации (окисления) — чёрный чай через него проходит, а зелёный его пропускает. Большая часть продукции этой фабрики — чёрный чай.",
+        "Когда высушенный лист проходит через сортировочную машину, его разделяют за один проход по тому, из какой части исходного побега он взялся: нежный, легко ломающийся кончик и самые верхние листья — лишь около 2% каждого побега — становятся FBOPF Extra Special, самым тонким и дорогим сортом. Лист, расположенный ниже, становится крепкими сортами вроде BOP и Pekoe. Самый зрелый, нижний лист становится Dust, а непригодные стебли и обрезки отбраковываются как Refuse.",
+        "Та же сортировочная машина включает цветовой сепаратор с камерной системой, способной отличать частицы вроде листа и цветка, отфильтровывая всё лишнее. Сита с разным размером ячеек дополнительно разделяют частицы по размеру за несколько проходов. Электростатический сепаратор придаёт статический заряд на роликах оставшимся коричневым фрагментам стеблей, чтобы их можно было отделить. Ни цвет, ни характер здесь не связаны с красителями или добавками — только с естественной обработкой.",
+        "Ценность зависит от положения на побеге, а не только от размера листа — чем выше и нежнее лист, тем выше его сорт и цена. В ароматизированные чайные пакетики обычно попадает именно сорт Dust, а не премиальный лист; лучшие сорта, такие как FBOPF Extra Special, редко продаются внутри страны из-за их высокой стоимости на экспортных рынках.",
+      ],
       duration: "Сортировка проводится непрерывно на оборудовании и занимает примерно 30–45 минут на партию.",
     },
     packing: {
@@ -2579,8 +2725,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "Ремесленные сорта чая",
       heroTagline: "Собственная табличка поместья «Ремесленные сорта чая».",
-      sectionHeadings: ["Ремесленные сорта чая"],
-      sectionBodies: ["Помимо стандартного чёрного чая, поместье производит также редкие, изготовленные вручную ремесленные сорта чая. Большинство из них дорабатывается вручную на отдельной Фабрике ручного чая, а не на основной линии чёрного чая. Именно поэтому эти сорта также называют «ремесленными сортами чая» — это ближе к ремеслу, чем к массовому производству. Многие из них получают из отличительного фиолетового побега — TRI 2043, клона Института чайных исследований. Его цвет обусловлен антоцианом. Это низкоурожайный сорт, поэтому его выращивают не в каждом поместье Шри-Ланки. Golden Tip делают из полностью созревшей почки этого побега, а Silver Tip — из более светлой, ещё незрелой почки того же побега. Именно тонкие серебристые волоски дают этому сорту его название и лёгкий блеск. Только почку взвешивают, вялят несколько часов и сушат — это более простой процесс, чем для полностью ферментированных сортов, — в результате получается чуть сладковатый, цветочный настой с бархатистой текстурой. Белый чай берёт с побега два с половиной листа и полностью пропускает вяление. Его пропаривают и сушат, а не ферментируют и скручивают, как чёрный чай. В итоге получается очень легко обработанный, естественно сладкий вкус со светлым настоем, бархатистой текстурой, цветочным ароматом и природным богатством антиоксидантов. Фиолетовый чай использует тот же сбор, но, в отличие от белого чая, проходит полный процесс чёрного чая — вяление, скручивание и ферментацию — для вкуса, близкого к улуну: легче чёрного чая, но менее травянистого, чем зелёный, сравнительно небольшое содержание кофеина и естественная насыщенность антиоксидантами. Розовый чай изначально практически бесцветен, как белый чай, и приобретает розовый оттенок только после добавления пары капель лайма — цитрус вызывает изменение цвета того же пигмента антоциана, который придаёт побегу его окраску. Он также хорошо сочетается с парой капель мёда, его рекомендуют подавать как холодный чай, и он тоже естественно богат антиоксидантами. Vita Glow, напротив, делают из почки обычного зелёного побега, а не фиолетового. Поместье также создаёт смеси с добавленной ценностью — например, чай с лотосом — и связанный вручную Blooming Tea из тех же побегов. Эти ремесленные сорта собираются и обрабатываются в гораздо меньших количествах, чем стандартный чёрный чай, что и делает их более редкими и ценными — спросите на дегустационной стойке, чтобы попробовать их. Для большинства этих сортов можно использовать как побег с фиолетовым оттенком, так и обычный зелёный побег, хотя поместье чаще использует именно фиолетовый."],
+      sectionHeadings: [
+        "Ремесленные сорта чая",
+        "Golden Tip и Silver Tip",
+        "Белый и фиолетовый чай",
+        "Розовый чай и Vita Glow",
+        "Смеси и редкость",
+      ],
+      sectionBodies: [
+        "Помимо стандартного чёрного чая, поместье производит также редкие, изготовленные вручную ремесленные сорта чая. Большинство из них дорабатывается вручную на отдельной Фабрике ручного чая, а не на основной линии чёрного чая. Именно поэтому эти сорта также называют «ремесленными сортами чая» — это ближе к ремеслу, чем к массовому производству. Многие из них получают из отличительного фиолетового побега — TRI 2043, клона Института чайных исследований. Его цвет обусловлен антоцианом. Это низкоурожайный сорт, поэтому его выращивают не в каждом поместье Шри-Ланки.",
+        "Golden Tip делают из полностью созревшей почки этого побега, а Silver Tip — из более светлой, ещё незрелой почки того же побега. Именно тонкие серебристые волоски дают этому сорту его название и лёгкий блеск. Только почку взвешивают, вялят несколько часов и сушат — это более простой процесс, чем для полностью ферментированных сортов, — в результате получается чуть сладковатый, цветочный настой с бархатистой текстурой.",
+        "Белый чай берёт с побега два с половиной листа и полностью пропускает вяление. Его пропаривают и сушат, а не ферментируют и скручивают, как чёрный чай. В итоге получается очень легко обработанный, естественно сладкий вкус со светлым настоем, бархатистой текстурой, цветочным ароматом и природным богатством антиоксидантов. Фиолетовый чай использует тот же сбор, но, в отличие от белого чая, проходит полный процесс чёрного чая — вяление, скручивание и ферментацию — для вкуса, близкого к улуну: легче чёрного чая, но менее травянистого, чем зелёный, сравнительно небольшое содержание кофеина и естественная насыщенность антиоксидантами.",
+        "Розовый чай изначально практически бесцветен, как белый чай, и приобретает розовый оттенок только после добавления пары капель лайма — цитрус вызывает изменение цвета того же пигмента антоциана, который придаёт побегу его окраску. Он также хорошо сочетается с парой капель мёда, его рекомендуют подавать как холодный чай, и он тоже естественно богат антиоксидантами. Vita Glow, напротив, делают из почки обычного зелёного побега, а не фиолетового.",
+        "Поместье также создаёт смеси с добавленной ценностью — например, чай с лотосом — и связанный вручную Blooming Tea из тех же побегов. Эти ремесленные сорта собираются и обрабатываются в гораздо меньших количествах, чем стандартный чёрный чай, что и делает их более редкими и ценными — спросите на дегустационной стойке, чтобы попробовать их. Для большинства этих сортов можно использовать как побег с фиолетовым оттенком, так и обычный зелёный побег, хотя поместье чаще использует именно фиолетовый.",
+      ],
       duration: "5 минут",
     },
     "pahatharata-manufacturing": {
@@ -2816,8 +2974,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Введение в цейлонский чай",
       heroTagline: "Знак качества цейлонского чая на табличке в поместье.",
-      sectionHeadings: ["Цейлонский чай — Знак качества"],
-      sectionBodies: ["С начала 1800-х годов название «Цейлон» стало синонимом чая. История цейлонского чая восходит к британскому правлению в Шри-Ланке, более двухсот лет назад. Первое зарегистрированное чайное растение в Шри-Ланке появилось в 1824 году, когда британцы привезли чайный куст из Китая и высадили его в Королевском ботаническом саду Перадении для некоммерческого использования. В 1839 году из Ассама и Калькутты завезли новые чайные культуры для экспериментальной посадки. Однако подлинное рождение чайных плантаций на Шри-Ланке пришло вместе с упадком кофейной отрасли — единственной успешной на тот момент отрасли острова. В 1869 году процветавшие кофейные плантации Шри-Ланки поразила новая болезнь растений под названием кофейная ржавчина, и кофейная отрасль на острове была полностью уничтожена менее чем за десятилетие. Так началось массовое возделывание чая на Шри-Ланке. История цейлонского чая началась в 1867 году с участка в 19 акров на плантации Лулекондера в Канди — его засадил шотландец Джеймс Тейлор, бывший плантатор кофе, в рамках эксперимента по диверсификации. С годами плантация выросла в семь чаепроизводящих регионов Шри-Ланки: Канди, Уву, Рухуну (Юг), Удапуссельлаву, Нувара-Элию, Димбулу и Сабарагамуву. Высокогорный чай (выше примерно 1200 м, как в Нувара-Элии и Уве) обычно нежный и ароматный. Низинный чай (ниже примерно 600 м, как здесь) обычно крепче и темнее. Эта плантация относится к низинным производителям, или «Пахатарата», и находится именно в чаепроизводящем регионе Рухуна — одном из трёх географических делений цейлонского чая, наряду с высокогорьем («Ударата») и среднегорьем («Медарата»). Гостей традиционно приветствуют словом «Аюбован» — сингальским приветствием, означающим «долгих лет жизни», — иногда лично сам председатель поместья, Анура Атукорала."],
+      sectionHeadings: [
+        "Цейлонский чай — Знак качества",
+        "От кофе к чаю",
+        "Рождение отрасли",
+        "Низинный цейлонский чай",
+        "Традиционное приветствие",
+      ],
+      sectionBodies: [
+        "С начала 1800-х годов название «Цейлон» стало синонимом чая. История цейлонского чая восходит к британскому правлению в Шри-Ланке, более двухсот лет назад.",
+        "Первое зарегистрированное чайное растение в Шри-Ланке появилось в 1824 году, когда британцы привезли чайный куст из Китая и высадили его в Королевском ботаническом саду Перадении для некоммерческого использования. В 1839 году из Ассама и Калькутты завезли новые чайные культуры для экспериментальной посадки. Однако подлинное рождение чайных плантаций на Шри-Ланке пришло вместе с упадком кофейной отрасли — единственной успешной на тот момент отрасли острова. В 1869 году процветавшие кофейные плантации Шри-Ланки поразила новая болезнь растений под названием кофейная ржавчина, и кофейная отрасль на острове была полностью уничтожена менее чем за десятилетие. Так началось массовое возделывание чая на Шри-Ланке.",
+        "История цейлонского чая началась в 1867 году с участка в 19 акров на плантации Лулекондера в Канди — его засадил шотландец Джеймс Тейлор, бывший плантатор кофе, в рамках эксперимента по диверсификации. С годами плантация выросла в семь чаепроизводящих регионов Шри-Ланки: Канди, Уву, Рухуну (Юг), Удапуссельлаву, Нувара-Элию, Димбулу и Сабарагамуву.",
+        "Высокогорный чай (выше примерно 1200 м, как в Нувара-Элии и Уве) обычно нежный и ароматный. Низинный чай (ниже примерно 600 м, как здесь) обычно крепче и темнее. Эта плантация относится к низинным производителям, или «Пахатарата», и находится именно в чаепроизводящем регионе Рухуна — одном из трёх географических делений цейлонского чая, наряду с высокогорьем («Ударата») и среднегорьем («Медарата»).",
+        "Гостей традиционно приветствуют словом «Аюбован» — сингальским приветствием, означающим «долгих лет жизни», — иногда лично сам председатель поместья, Анура Атукорала.",
+      ],
       duration: "5–10 минут",
     },
     "jaggery-palm": {
@@ -2907,8 +3077,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "Sortieren & Klassifizieren",
       heroTagline: "Die eigenen Teesorten-Schilder des Anwesens, die zeigen, wie jede Sorte klassifiziert wird.",
-      sectionHeadings: ["Sortieren & Klassifizieren"],
-      sectionBodies: ["Grüner und schwarzer Tee starten beide von genau demselben Strauch und derselben Blattqualität. Was sie wirklich trennt, ist die Fermentation (Oxidation) — ein Schritt, den schwarzer Tee durchläuft und grüner Tee überspringt. Die Produktion dieser Fabrik ist größtenteils schwarzer Tee. Wenn getrocknetes Blatt durch die Sortiermaschine läuft, wird es in einem einzigen Durchgang danach getrennt, aus welchem Teil des ursprünglichen Triebs es stammt: die zarte, leicht abbrechende Spitze und die obersten Blätter — nur etwa 2% jedes Triebs — werden zu FBOPF Extra Special, der feinsten und teuersten Sorte. Weiter unten liegendes Blatt wird zu kräftigen Sorten wie BOP und Pekoe. Das reifste, unterste Blatt wird zu Dust, und unbrauchbare Stängel und Reste werden als Ausschuss aussortiert. Diese Sortiermaschine umfasst einen Farbseparator mit einem Kamerasystem, das Partikel wie Blatt und Blüte unterscheiden kann und alles Fremde herausfiltert. Siebe mit unterschiedlicher Maschenweite trennen die Partikel in mehreren Durchgängen weiter nach Größe. Ein elektrostatischer Separator gibt verbleibenden braunen Stängelfragmenten auf Walzen eine statische Ladung, sodass sie ausgesondert werden können. Nichts von dieser Farbe oder diesem Charakter stammt von Farbstoffen oder Zusätzen, sondern allein von der natürlichen Verarbeitung. Der Wert richtet sich nach der Position am Trieb, nicht nur nach der Blattgröße — je höher und zarter das Blatt, desto höher seine Sorte und sein Preis. Dust-Qualität, nicht das edle Blatt, landet meist in aromatisierten Teebeuteln; die feinsten Sorten wie FBOPF Extra Special werden wegen ihres Werts auf den Exportmärkten nur selten im Inland verkauft."],
+      sectionHeadings: [
+        "Sortieren & Klassifizieren",
+        "Klassifizierung nach Position am Trieb",
+        "Die Sortiermaschinen",
+        "Sorte, Wert und Export",
+      ],
+      sectionBodies: [
+        "Grüner und schwarzer Tee starten beide von genau demselben Strauch und derselben Blattqualität. Was sie wirklich trennt, ist die Fermentation (Oxidation) — ein Schritt, den schwarzer Tee durchläuft und grüner Tee überspringt. Die Produktion dieser Fabrik ist größtenteils schwarzer Tee.",
+        "Wenn getrocknetes Blatt durch die Sortiermaschine läuft, wird es in einem einzigen Durchgang danach getrennt, aus welchem Teil des ursprünglichen Triebs es stammt: die zarte, leicht abbrechende Spitze und die obersten Blätter — nur etwa 2% jedes Triebs — werden zu FBOPF Extra Special, der feinsten und teuersten Sorte. Weiter unten liegendes Blatt wird zu kräftigen Sorten wie BOP und Pekoe. Das reifste, unterste Blatt wird zu Dust, und unbrauchbare Stängel und Reste werden als Ausschuss aussortiert.",
+        "Diese Sortiermaschine umfasst einen Farbseparator mit einem Kamerasystem, das Partikel wie Blatt und Blüte unterscheiden kann und alles Fremde herausfiltert. Siebe mit unterschiedlicher Maschenweite trennen die Partikel in mehreren Durchgängen weiter nach Größe. Ein elektrostatischer Separator gibt verbleibenden braunen Stängelfragmenten auf Walzen eine statische Ladung, sodass sie ausgesondert werden können. Nichts von dieser Farbe oder diesem Charakter stammt von Farbstoffen oder Zusätzen, sondern allein von der natürlichen Verarbeitung.",
+        "Der Wert richtet sich nach der Position am Trieb, nicht nur nach der Blattgröße — je höher und zarter das Blatt, desto höher seine Sorte und sein Preis. Dust-Qualität, nicht das edle Blatt, landet meist in aromatisierten Teebeuteln; die feinsten Sorten wie FBOPF Extra Special werden wegen ihres Werts auf den Exportmärkten nur selten im Inland verkauft.",
+      ],
       duration: "Das Sortieren läuft kontinuierlich auf Maschinen und dauert etwa 30 bis 45 Minuten pro Charge.",
     },
     packing: {
@@ -3077,8 +3257,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "Handwerkliche Teesorten",
       heroTagline: "Das eigene Schild „Handwerkliche Teesorten“ des Anwesens.",
-      sectionHeadings: ["Handwerkliche Teesorten"],
-      sectionBodies: ["Neben dem gewöhnlichen schwarzen Tee stellt das Anwesen auch seltene, handgefertigte Kunsttees her. Die meisten davon werden in der separaten Handwerklichen Teefabrik von Hand fertiggestellt, nicht an der Hauptlinie für schwarzen Tee. Deshalb werden diese Sorten auch 'handwerkliche Teesorten' genannt — es ist eher Handwerk als Massenproduktion. Viele von ihnen stammen von einem markanten violetten Trieb — TRI 2043, einem Klon des Tea Research Institute. Seine Farbe stammt vom Pigment Anthocyan. Es handelt sich um eine ertragsschwache Sorte, weshalb nicht jedes Anwesen in Sri Lanka sie anbaut. Golden Tip wird aus der voll ausgereiften Knospe dieses Triebs hergestellt, während Silver Tip aus der helleren, noch unreifen Knospe desselben Triebs stammt. Ihre feinen silbrigen Härchen geben der Sorte ihren Namen und einen leichten Schimmer. Nur die Knospe wird gewogen, einige Stunden welken gelassen und getrocknet — ein einfacherer Prozess als bei den voll fermentierten Sorten — für eine leicht süße, blumige Tasse mit samtiger Textur. Weißer Tee nimmt zweieinhalb Blätter vom Trieb und überspringt das Welken vollständig. Er wird gedämpft und getrocknet statt fermentiert und gerollt wie schwarzer Tee. Das Ergebnis ist ein sehr leicht verarbeiteter, natürlich süßer Geschmack mit hellem Aufguss, samtiger Textur, blumigem Aroma und natürlichem Reichtum an Antioxidantien. Violetter Tee nutzt dieselbe Pflückung, durchläuft aber im Gegensatz zu weißem Tee den vollständigen Schwarztee-Prozess — Welken, Rollen und Fermentieren — für einen Geschmack, der Oolong nahekommt: leichter als schwarzer Tee, aber weniger grasig als grüner Tee, vergleichsweise koffeinarm und natürlich reich an Antioxidantien. Rosa Tee beginnt praktisch farblos wie weißer Tee und färbt sich erst rosa, wenn ein paar Tropfen Limette hinzugefügt werden — die Zitrusfrucht löst einen Farbwechsel im selben Anthocyan-Pigment aus, das dem Trieb seine Farbe verleiht. Er verträgt sich auch gut mit ein paar Tropfen Honig, wird als Eistee empfohlen und ist ebenfalls natürlich reich an Antioxidantien. Vita Glow wird stattdessen aus der Knospe des gewöhnlichen grünen Triebs hergestellt statt aus dem violetten. Das Anwesen kreiert außerdem wertschöpfende Mischungen — etwa mit Lotusblüten aufgegossenen Tee — sowie handgebundenen Blooming Tea aus denselben Trieben. Diese handwerklichen Sorten werden in deutlich geringeren Mengen gepflückt und verarbeitet als Standard-Schwarztee, was sie seltener und wertvoller macht — fragen Sie am Verkostungsstand, um sie zu probieren. Für die meisten dieser Sorten kann sowohl der violett getönte als auch der gewöhnliche grüne Trieb verwendet werden, wobei das Anwesen meist den violetten nimmt."],
+      sectionHeadings: [
+        "Handwerkliche Teesorten",
+        "Golden Tip & Silver Tip",
+        "Weißer und Violetter Tee",
+        "Rosa Tee & Vita Glow",
+        "Mischungen und Seltenheit",
+      ],
+      sectionBodies: [
+        "Neben dem gewöhnlichen schwarzen Tee stellt das Anwesen auch seltene, handgefertigte Kunsttees her. Die meisten davon werden in der separaten Handwerklichen Teefabrik von Hand fertiggestellt, nicht an der Hauptlinie für schwarzen Tee. Deshalb werden diese Sorten auch 'handwerkliche Teesorten' genannt — es ist eher Handwerk als Massenproduktion. Viele von ihnen stammen von einem markanten violetten Trieb — TRI 2043, einem Klon des Tea Research Institute. Seine Farbe stammt vom Pigment Anthocyan. Es handelt sich um eine ertragsschwache Sorte, weshalb nicht jedes Anwesen in Sri Lanka sie anbaut.",
+        "Golden Tip wird aus der voll ausgereiften Knospe dieses Triebs hergestellt, während Silver Tip aus der helleren, noch unreifen Knospe desselben Triebs stammt. Ihre feinen silbrigen Härchen geben der Sorte ihren Namen und einen leichten Schimmer. Nur die Knospe wird gewogen, einige Stunden welken gelassen und getrocknet — ein einfacherer Prozess als bei den voll fermentierten Sorten — für eine leicht süße, blumige Tasse mit samtiger Textur.",
+        "Weißer Tee nimmt zweieinhalb Blätter vom Trieb und überspringt das Welken vollständig. Er wird gedämpft und getrocknet statt fermentiert und gerollt wie schwarzer Tee. Das Ergebnis ist ein sehr leicht verarbeiteter, natürlich süßer Geschmack mit hellem Aufguss, samtiger Textur, blumigem Aroma und natürlichem Reichtum an Antioxidantien. Violetter Tee nutzt dieselbe Pflückung, durchläuft aber im Gegensatz zu weißem Tee den vollständigen Schwarztee-Prozess — Welken, Rollen und Fermentieren — für einen Geschmack, der Oolong nahekommt: leichter als schwarzer Tee, aber weniger grasig als grüner Tee, vergleichsweise koffeinarm und natürlich reich an Antioxidantien.",
+        "Rosa Tee beginnt praktisch farblos wie weißer Tee und färbt sich erst rosa, wenn ein paar Tropfen Limette hinzugefügt werden — die Zitrusfrucht löst einen Farbwechsel im selben Anthocyan-Pigment aus, das dem Trieb seine Farbe verleiht. Er verträgt sich auch gut mit ein paar Tropfen Honig, wird als Eistee empfohlen und ist ebenfalls natürlich reich an Antioxidantien. Vita Glow wird stattdessen aus der Knospe des gewöhnlichen grünen Triebs hergestellt statt aus dem violetten.",
+        "Das Anwesen kreiert außerdem wertschöpfende Mischungen — etwa mit Lotusblüten aufgegossenen Tee — sowie handgebundenen Blooming Tea aus denselben Trieben. Diese handwerklichen Sorten werden in deutlich geringeren Mengen gepflückt und verarbeitet als Standard-Schwarztee, was sie seltener und wertvoller macht — fragen Sie am Verkostungsstand, um sie zu probieren. Für die meisten dieser Sorten kann sowohl der violett getönte als auch der gewöhnliche grüne Trieb verwendet werden, wobei das Anwesen meist den violetten nimmt.",
+      ],
       duration: "5 Minuten",
     },
     "pahatharata-manufacturing": {
@@ -3314,8 +3506,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Einführung in Ceylon-Tee",
       heroTagline: "Das Ceylon-Tee-Gütesiegel, zu sehen auf einem Schild auf dem Anwesen.",
-      sectionHeadings: ["Ceylon-Tee — Gütesiegel"],
-      sectionBodies: ["Seit Anfang der 1800er-Jahre ist der Name „Ceylon“ ein Synonym für Tee. Die Geschichte des Ceylon-Tees reicht bis in die Zeit der britischen Kolonialherrschaft in Sri Lanka zurück, vor über zweihundert Jahren. Die erste in Sri Lanka verzeichnete Teepflanze traf 1824 ein, als die Briten eine Teepflanze aus China mitbrachten und sie im Königlichen Botanischen Garten von Peradeniya zu nichtkommerziellen Zwecken pflanzten. 1839 folgten weitere Teekulturen aus Assam und Kalkutta zu Versuchszwecken. Die eigentliche Geburtsstunde der Teeplantagen in Sri Lanka kam jedoch erst mit dem Niedergang der Kaffeeindustrie — der bis dahin einzigen erfolgreichen Industrie der Insel. 1869 wurden die blühenden Kaffeeplantagen Sri Lankas von einer neuen Pflanzenkrankheit namens Kaffeerost befallen, und die Kaffeeindustrie wurde innerhalb weniger als eines Jahrzehnts vollständig ausgelöscht. So begann der großflächige Teeanbau in Sri Lanka. Die Geschichte des Ceylon-Tees begann 1867 auf einer 19 Acres großen Fläche auf dem Loolecondera-Anwesen in Kandy — gepflanzt von dem schottischen ehemaligen Kaffeepflanzer James Taylor im Rahmen eines Diversifizierungsexperiments. Im Laufe der Jahre wuchs sie zu Sri Lankas sieben Tee-Anbauregionen heran: Kandy, Uva, Ruhuna (Süden), Udapussellawa, Nuwara Eliya, Dimbula und Sabaragamuwa. Hochlandtee (oberhalb von etwa 1.200 m, wie in Nuwara Eliya und Uva) ist tendenziell fein und aromatisch. Tieflandtee (unterhalb von etwa 600 m, wie hier produziert) ist typischerweise kräftiger und dunkler. Dieses Anwesen ist ein Tiefland-, oder 'Pahatharata'-Produzent, und liegt speziell in der Tee-Anbauregion Ruhuna — einer von drei geografischen Einteilungen des Ceylon-Tees, neben Hochland ('Udarata') und Mittelland ('Medarata'). Besucher werden traditionell mit 'Ayubowan' begrüßt, einem singhalesischen Gruß, der 'mögest du lange leben' bedeutet, manchmal persönlich vom Vorsitzenden des Anwesens selbst, Anura Athukorala."],
+      sectionHeadings: [
+        "Ceylon-Tee — Gütesiegel",
+        "Vom Kaffee zum Tee",
+        "Die Geburt einer Industrie",
+        "Tiefland-Ceylon-Tee",
+        "Eine traditionelle Begrüßung",
+      ],
+      sectionBodies: [
+        "Seit Anfang der 1800er-Jahre ist der Name „Ceylon“ ein Synonym für Tee. Die Geschichte des Ceylon-Tees reicht bis in die Zeit der britischen Kolonialherrschaft in Sri Lanka zurück, vor über zweihundert Jahren.",
+        "Die erste in Sri Lanka verzeichnete Teepflanze traf 1824 ein, als die Briten eine Teepflanze aus China mitbrachten und sie im Königlichen Botanischen Garten von Peradeniya zu nichtkommerziellen Zwecken pflanzten. 1839 folgten weitere Teekulturen aus Assam und Kalkutta zu Versuchszwecken. Die eigentliche Geburtsstunde der Teeplantagen in Sri Lanka kam jedoch erst mit dem Niedergang der Kaffeeindustrie — der bis dahin einzigen erfolgreichen Industrie der Insel. 1869 wurden die blühenden Kaffeeplantagen Sri Lankas von einer neuen Pflanzenkrankheit namens Kaffeerost befallen, und die Kaffeeindustrie wurde innerhalb weniger als eines Jahrzehnts vollständig ausgelöscht. So begann der großflächige Teeanbau in Sri Lanka.",
+        "Die Geschichte des Ceylon-Tees begann 1867 auf einer 19 Acres großen Fläche auf dem Loolecondera-Anwesen in Kandy — gepflanzt von dem schottischen ehemaligen Kaffeepflanzer James Taylor im Rahmen eines Diversifizierungsexperiments. Im Laufe der Jahre wuchs sie zu Sri Lankas sieben Tee-Anbauregionen heran: Kandy, Uva, Ruhuna (Süden), Udapussellawa, Nuwara Eliya, Dimbula und Sabaragamuwa.",
+        "Hochlandtee (oberhalb von etwa 1.200 m, wie in Nuwara Eliya und Uva) ist tendenziell fein und aromatisch. Tieflandtee (unterhalb von etwa 600 m, wie hier produziert) ist typischerweise kräftiger und dunkler. Dieses Anwesen ist ein Tiefland-, oder 'Pahatharata'-Produzent, und liegt speziell in der Tee-Anbauregion Ruhuna — einer von drei geografischen Einteilungen des Ceylon-Tees, neben Hochland ('Udarata') und Mittelland ('Medarata').",
+        "Besucher werden traditionell mit 'Ayubowan' begrüßt, einem singhalesischen Gruß, der 'mögest du lange leben' bedeutet, manchmal persönlich vom Vorsitzenden des Anwesens selbst, Anura Athukorala.",
+      ],
       duration: "5-10 Minuten",
     },
     "jaggery-palm": {
@@ -3405,8 +3609,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "Clasificación y Graduación",
       heroTagline: "Los propios carteles de grados de té de la finca, que muestran cómo se clasifica cada grado.",
-      sectionHeadings: ["Clasificación y Graduación"],
-      sectionBodies: ["Tanto el té verde como el té negro comienzan exactamente con el mismo arbusto y la misma hoja. Lo que realmente los separa es la fermentación (oxidación), una etapa que atraviesa el té negro y que el té verde se salta. La producción de esta fábrica es en su mayoría té negro. Cuando la hoja seca pasa por la maquinaria de clasificación, se separa en un solo paso según de qué parte del brote original proviene: la punta tierna y fácil de romper y las hojas más altas — solo alrededor del 2% de cada brote — se convierten en FBOPF Extra Special, el grado más fino y caro. La hoja de más abajo se convierte en grados fuertes como BOP y Pekoe. La hoja más madura y más baja se convierte en Dust, y los tallos y restos inservibles se descartan como Refuse. Esa maquinaria de clasificación incluye un separador de color con un sistema de cámara capaz de distinguir partículas como hoja y flor, filtrando todo lo que no corresponde. Tamices de distintos tamaños de malla separan aún más las partículas por tamaño en varias pasadas. Un separador electrostático da una carga estática en rodillos a los fragmentos de tallo marrón restantes para poder apartarlos. Nada de este color o carácter proviene de tintes o aditivos, solo del procesamiento natural. El valor depende de la posición en el brote, no solo del tamaño de la hoja — cuanto más alta y tierna es la hoja, mayor es su grado y precio. El grado Dust, no la hoja de primera calidad, es lo que suele terminar en las bolsitas de té aromatizadas; los grados más finos, como el FBOPF Extra Special, rara vez se venden localmente debido a su alto valor en los mercados de exportación."],
+      sectionHeadings: [
+        "Clasificación y Graduación",
+        "Clasificación por Posición en el Brote",
+        "La Maquinaria de Clasificación",
+        "Grado, Valor y Exportación",
+      ],
+      sectionBodies: [
+        "Tanto el té verde como el té negro comienzan exactamente con el mismo arbusto y la misma hoja. Lo que realmente los separa es la fermentación (oxidación), una etapa que atraviesa el té negro y que el té verde se salta. La producción de esta fábrica es en su mayoría té negro.",
+        "Cuando la hoja seca pasa por la maquinaria de clasificación, se separa en un solo paso según de qué parte del brote original proviene: la punta tierna y fácil de romper y las hojas más altas — solo alrededor del 2% de cada brote — se convierten en FBOPF Extra Special, el grado más fino y caro. La hoja de más abajo se convierte en grados fuertes como BOP y Pekoe. La hoja más madura y más baja se convierte en Dust, y los tallos y restos inservibles se descartan como Refuse.",
+        "Esa maquinaria de clasificación incluye un separador de color con un sistema de cámara capaz de distinguir partículas como hoja y flor, filtrando todo lo que no corresponde. Tamices de distintos tamaños de malla separan aún más las partículas por tamaño en varias pasadas. Un separador electrostático da una carga estática en rodillos a los fragmentos de tallo marrón restantes para poder apartarlos. Nada de este color o carácter proviene de tintes o aditivos, solo del procesamiento natural.",
+        "El valor depende de la posición en el brote, no solo del tamaño de la hoja — cuanto más alta y tierna es la hoja, mayor es su grado y precio. El grado Dust, no la hoja de primera calidad, es lo que suele terminar en las bolsitas de té aromatizadas; los grados más finos, como el FBOPF Extra Special, rara vez se venden localmente debido a su alto valor en los mercados de exportación.",
+      ],
       duration: "La clasificación se realiza de forma continua con maquinaria y tarda entre 30 y 45 minutos por lote.",
     },
     packing: {
@@ -3575,8 +3789,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "Tés Artesanales de Alta Gama",
       heroTagline: "El propio cartel de Grados de Té Artesanal de la finca.",
-      sectionHeadings: ["Tés Artesanales de Alta Gama"],
-      sectionBodies: ["Además del té negro estándar, la finca también produce tés artesanales raros, elaborados a mano. La mayoría se terminan a mano en la Fábrica de Té Hecho a Mano, separada de la línea principal de té negro. Por eso estos grados también se llaman 'tés artesanales': se acercan más a un oficio que a la producción en masa. Muchos de ellos provienen de un brote de color púrpura distintivo — TRI 2043, un clon del Tea Research Institute. Su color proviene de la antocianina. Es una variedad de bajo rendimiento, por lo que no todas las fincas de Sri Lanka la cultivan. El Golden Tip se elabora con el brote ya completamente maduro de ese arbusto, mientras que el Silver Tip usa el brote más pálido y aún inmaduro del mismo arbusto. Sus finos pelillos plateados le dan al grado su nombre y un ligero brillo. Solo se pesa el brote, se marchita unas horas y se seca — un proceso más simple que el de los grados totalmente fermentados — para obtener una taza sutilmente dulce, floral y de textura aterciopelada. El té blanco toma dos hojas y media del brote y se salta el marchitado por completo. Se cuece al vapor y se seca en lugar de fermentarse y enrollarse como el té negro. El resultado es un sabor muy ligeramente procesado y naturalmente dulce, con un licor pálido, una textura aterciopelada, un aroma floral y una riqueza natural en antioxidantes. El té púrpura usa la misma cosecha pero, a diferencia del té blanco, pasa por todo el proceso del té negro — marchitado, enrollado y fermentación — para un sabor más cercano al oolong: más ligero que el té negro pero menos vegetal que el té verde, relativamente bajo en cafeína y naturalmente rico en antioxidantes. El té rosa comienza prácticamente incoloro como el té blanco, y solo se vuelve rosado tras añadir un par de gotas de lima — el cítrico desencadena un cambio de color en el mismo pigmento de antocianina que le da su tono al brote. También combina bien con un par de gotas de miel, se recomienda servido como té helado, y también es naturalmente rico en antioxidantes. El Vita Glow, en cambio, se elabora con el brote del arbusto verde ordinario en lugar del púrpura. La finca también crea mezclas de valor añadido — como té infusionado con flores de loto — y el Blooming Tea atado a mano a partir de los mismos brotes. Estos grados artesanales se recolectan y procesan en cantidades mucho menores que el té negro estándar, lo que los hace más raros y apreciados — pregunte en el mostrador de degustación para probarlos. Para la mayoría de estos grados se puede usar tanto el brote de tono morado como el brote verde normal, aunque la finca suele usar el morado."],
+      sectionHeadings: [
+        "Tés Artesanales de Alta Gama",
+        "Golden Tip y Silver Tip",
+        "Té Blanco y Té Púrpura",
+        "Té Rosa y Vita Glow",
+        "Mezclas y Rareza",
+      ],
+      sectionBodies: [
+        "Además del té negro estándar, la finca también produce tés artesanales raros, elaborados a mano. La mayoría se terminan a mano en la Fábrica de Té Hecho a Mano, separada de la línea principal de té negro. Por eso estos grados también se llaman 'tés artesanales': se acercan más a un oficio que a la producción en masa. Muchos de ellos provienen de un brote de color púrpura distintivo — TRI 2043, un clon del Tea Research Institute. Su color proviene de la antocianina. Es una variedad de bajo rendimiento, por lo que no todas las fincas de Sri Lanka la cultivan.",
+        "El Golden Tip se elabora con el brote ya completamente maduro de ese arbusto, mientras que el Silver Tip usa el brote más pálido y aún inmaduro del mismo arbusto. Sus finos pelillos plateados le dan al grado su nombre y un ligero brillo. Solo se pesa el brote, se marchita unas horas y se seca — un proceso más simple que el de los grados totalmente fermentados — para obtener una taza sutilmente dulce, floral y de textura aterciopelada.",
+        "El té blanco toma dos hojas y media del brote y se salta el marchitado por completo. Se cuece al vapor y se seca en lugar de fermentarse y enrollarse como el té negro. El resultado es un sabor muy ligeramente procesado y naturalmente dulce, con un licor pálido, una textura aterciopelada, un aroma floral y una riqueza natural en antioxidantes. El té púrpura usa la misma cosecha pero, a diferencia del té blanco, pasa por todo el proceso del té negro — marchitado, enrollado y fermentación — para un sabor más cercano al oolong: más ligero que el té negro pero menos vegetal que el té verde, relativamente bajo en cafeína y naturalmente rico en antioxidantes.",
+        "El té rosa comienza prácticamente incoloro como el té blanco, y solo se vuelve rosado tras añadir un par de gotas de lima — el cítrico desencadena un cambio de color en el mismo pigmento de antocianina que le da su tono al brote. También combina bien con un par de gotas de miel, se recomienda servido como té helado, y también es naturalmente rico en antioxidantes. El Vita Glow, en cambio, se elabora con el brote del arbusto verde ordinario en lugar del púrpura.",
+        "La finca también crea mezclas de valor añadido — como té infusionado con flores de loto — y el Blooming Tea atado a mano a partir de los mismos brotes. Estos grados artesanales se recolectan y procesan en cantidades mucho menores que el té negro estándar, lo que los hace más raros y apreciados — pregunte en el mostrador de degustación para probarlos. Para la mayoría de estos grados se puede usar tanto el brote de tono morado como el brote verde normal, aunque la finca suele usar el morado.",
+      ],
       duration: "5 minutos",
     },
     "pahatharata-manufacturing": {
@@ -3812,8 +4038,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Introducción al Té de Ceilán",
       heroTagline: "El Símbolo de Calidad del té de Ceilán, visto en un cartel de la finca.",
-      sectionHeadings: ["Té de Ceilán — Símbolo de Calidad"],
-      sectionBodies: ["Desde principios del siglo XIX, el nombre \"Ceilán\" ha sido sinónimo de té. La historia del té de Ceilán se remonta al dominio británico en Sri Lanka, hace más de doscientos años. La primera planta de té registrada en Sri Lanka llegó en 1824, cuando los británicos trajeron una planta de té desde China y la plantaron en el Jardín Botánico Real de Peradeniya para uso no comercial. En 1839 llegaron más cultivos de té desde Assam y Calcuta con fines experimentales. Sin embargo, el verdadero nacimiento de las plantaciones de té en Sri Lanka llegó con el declive de la única industria exitosa de la isla hasta entonces: la del café. En 1869, las florecientes plantaciones de café de Sri Lanka fueron golpeadas por una nueva enfermedad vegetal llamada roya del café, y la industria cafetalera fue arrasada por completo en menos de una década. Así comenzó el cultivo masivo de té en Sri Lanka. La historia del té de Ceilán comenzó en 1867, en un terreno de 19 acres en la finca Loolecondera, en Kandy — plantado por el escocés James Taylor, antiguo cultivador de café, como parte de un experimento de diversificación. Con los años, se convirtió en las siete regiones productoras de té de Sri Lanka: Kandy, Uva, Ruhuna (Sur), Udapussellawa, Nuwara Eliya, Dimbula y Sabaragamuwa. El té de tierras altas (por encima de aproximadamente 1.200 m, como en Nuwara Eliya y Uva) tiende a ser delicado y aromático. El té de tierras bajas (por debajo de unos 600 m, como el que se produce aquí) suele ser más fuerte y oscuro. Esta finca es una productora de tierras bajas, o 'Pahatharata', situada específicamente en la región productora de té de Ruhuna — una de las tres clasificaciones geográficas del té de Ceilán, junto con las tierras altas ('Udarata') y las tierras medias ('Medarata'). Tradicionalmente se recibe a los visitantes con 'Ayubowan', un saludo cingalés que significa 'que vivas muchos años', a veces en persona por el propio presidente de la finca, Anura Athukorala."],
+      sectionHeadings: [
+        "Té de Ceilán — Símbolo de Calidad",
+        "Del Café al Té",
+        "El Nacimiento de una Industria",
+        "Té de Ceilán de Tierras Bajas",
+        "Una Bienvenida Tradicional",
+      ],
+      sectionBodies: [
+        "Desde principios del siglo XIX, el nombre \"Ceilán\" ha sido sinónimo de té. La historia del té de Ceilán se remonta al dominio británico en Sri Lanka, hace más de doscientos años.",
+        "La primera planta de té registrada en Sri Lanka llegó en 1824, cuando los británicos trajeron una planta de té desde China y la plantaron en el Jardín Botánico Real de Peradeniya para uso no comercial. En 1839 llegaron más cultivos de té desde Assam y Calcuta con fines experimentales. Sin embargo, el verdadero nacimiento de las plantaciones de té en Sri Lanka llegó con el declive de la única industria exitosa de la isla hasta entonces: la del café. En 1869, las florecientes plantaciones de café de Sri Lanka fueron golpeadas por una nueva enfermedad vegetal llamada roya del café, y la industria cafetalera fue arrasada por completo en menos de una década. Así comenzó el cultivo masivo de té en Sri Lanka.",
+        "La historia del té de Ceilán comenzó en 1867, en un terreno de 19 acres en la finca Loolecondera, en Kandy — plantado por el escocés James Taylor, antiguo cultivador de café, como parte de un experimento de diversificación. Con los años, se convirtió en las siete regiones productoras de té de Sri Lanka: Kandy, Uva, Ruhuna (Sur), Udapussellawa, Nuwara Eliya, Dimbula y Sabaragamuwa.",
+        "El té de tierras altas (por encima de aproximadamente 1.200 m, como en Nuwara Eliya y Uva) tiende a ser delicado y aromático. El té de tierras bajas (por debajo de unos 600 m, como el que se produce aquí) suele ser más fuerte y oscuro. Esta finca es una productora de tierras bajas, o 'Pahatharata', situada específicamente en la región productora de té de Ruhuna — una de las tres clasificaciones geográficas del té de Ceilán, junto con las tierras altas ('Udarata') y las tierras medias ('Medarata').",
+        "Tradicionalmente se recibe a los visitantes con 'Ayubowan', un saludo cingalés que significa 'que vivas muchos años', a veces en persona por el propio presidente de la finca, Anura Athukorala.",
+      ],
       duration: "5-10 minutos",
     },
     "jaggery-palm": {
@@ -3903,8 +4141,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "Triage et Classification",
       heroTagline: "Les propres panneaux de grades de thé du domaine, montrant comment chaque grade est classé.",
-      sectionHeadings: ["Triage et Classification"],
-      sectionBodies: ["Le thé vert et le thé noir partent tous deux exactement du même théier et de la même feuille. Ce qui les sépare réellement, c'est la fermentation (oxydation), une étape que traverse le thé noir et que le thé vert saute. La production de cette fabrique est majoritairement du thé noir. Lorsque la feuille séchée passe dans la machine de tri, elle est séparée en un seul passage selon la partie du bourgeon d'origine dont elle provient : la pointe tendre et facile à casser ainsi que les feuilles les plus hautes — seulement environ 2 % de chaque bourgeon — deviennent du FBOPF Extra Special, la qualité la plus fine et la plus chère. La feuille plus bas devient des qualités robustes comme le BOP et le Pekoe. La feuille la plus mûre, la plus basse, devient du Dust, et les tiges et débris inutilisables sont écartés en tant que Refuse. Cette machine de tri comprend un séparateur de couleur avec un système de caméra capable de distinguer des particules comme la feuille et la fleur, filtrant tout ce qui n'y appartient pas. Des tamis de différentes tailles de maille séparent encore les particules par taille sur plusieurs passages. Un séparateur électrostatique donne une charge statique sur des rouleaux aux fragments de tige brune restants afin qu'ils puissent être écartés. Rien de cette couleur ou de ce caractère ne vient de colorants ou d'additifs, seulement du traitement naturel. La valeur dépend de la position sur la pousse, pas seulement de la taille de la feuille — plus la feuille est haute et tendre, plus sa qualité et son prix sont élevés. C'est la qualité Dust, et non la feuille de premier choix, qui se retrouve généralement dans les sachets de thé aromatisés ; les meilleures qualités comme le FBOPF Extra Special sont rarement vendues localement en raison de leur valeur sur les marchés d'exportation."],
+      sectionHeadings: [
+        "Triage et Classification",
+        "Classification par Position sur la Pousse",
+        "Les Machines de Tri",
+        "Qualité, Valeur et Exportation",
+      ],
+      sectionBodies: [
+        "Le thé vert et le thé noir partent tous deux exactement du même théier et de la même feuille. Ce qui les sépare réellement, c'est la fermentation (oxydation), une étape que traverse le thé noir et que le thé vert saute. La production de cette fabrique est majoritairement du thé noir.",
+        "Lorsque la feuille séchée passe dans la machine de tri, elle est séparée en un seul passage selon la partie du bourgeon d'origine dont elle provient : la pointe tendre et facile à casser ainsi que les feuilles les plus hautes — seulement environ 2 % de chaque bourgeon — deviennent du FBOPF Extra Special, la qualité la plus fine et la plus chère. La feuille plus bas devient des qualités robustes comme le BOP et le Pekoe. La feuille la plus mûre, la plus basse, devient du Dust, et les tiges et débris inutilisables sont écartés en tant que Refuse.",
+        "Cette machine de tri comprend un séparateur de couleur avec un système de caméra capable de distinguer des particules comme la feuille et la fleur, filtrant tout ce qui n'y appartient pas. Des tamis de différentes tailles de maille séparent encore les particules par taille sur plusieurs passages. Un séparateur électrostatique donne une charge statique sur des rouleaux aux fragments de tige brune restants afin qu'ils puissent être écartés. Rien de cette couleur ou de ce caractère ne vient de colorants ou d'additifs, seulement du traitement naturel.",
+        "La valeur dépend de la position sur la pousse, pas seulement de la taille de la feuille — plus la feuille est haute et tendre, plus sa qualité et son prix sont élevés. C'est la qualité Dust, et non la feuille de premier choix, qui se retrouve généralement dans les sachets de thé aromatisés ; les meilleures qualités comme le FBOPF Extra Special sont rarement vendues localement en raison de leur valeur sur les marchés d'exportation.",
+      ],
       duration: "Le triage s'effectue en continu sur des machines et prend environ 30 à 45 minutes par lot.",
     },
     packing: {
@@ -4073,8 +4321,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "Thés Artisanaux d'Exception",
       heroTagline: "Le propre panneau des Grades de Thé Artisanal du domaine.",
-      sectionHeadings: ["Thés Artisanaux d'Exception"],
-      sectionBodies: ["En plus du thé noir standard, le domaine produit aussi des thés artisanaux rares, façonnés à la main. La plupart sont finis à la main dans la Fabrique de Thé Fait Main séparée, et non sur la ligne principale de thé noir. C'est pourquoi ces qualités sont aussi appelées 'thés artisanaux d'exception' : c'est plus proche de l'artisanat que de la production de masse. Beaucoup d'entre eux proviennent d'un bourgeon violet distinctif — le TRI 2043, un clone du Tea Research Institute. Sa couleur vient de l'anthocyane. C'est un cultivar à faible rendement, ce qui explique que toutes les exploitations sri-lankaises ne le cultivent pas. Le Golden Tip utilise le bourgeon pleinement mûr de ce théier, tandis que le Silver Tip utilise le bourgeon plus pâle et encore immature du même théier. Ses fins poils argentés donnent son nom à cette qualité et un léger scintillement. Seul le bourgeon est pesé, flétri quelques heures, puis séché — un procédé plus simple que celui des qualités entièrement fermentées — pour une tasse subtilement sucrée, florale, à la texture veloutée. Le thé blanc prélève deux feuilles et demie sur le bourgeon et saute complètement le flétrissage. Il est cuit à la vapeur et séché plutôt que fermenté et roulé comme le thé noir. Le résultat est un goût très légèrement transformé, naturellement sucré, avec une liqueur pâle, une texture veloutée, un arôme floral et une richesse naturelle en antioxydants. Le thé violet utilise la même cueillette mais, contrairement au thé blanc, traverse le processus complet du thé noir — flétrissage, roulage et fermentation — pour un goût plus proche de l'oolong : plus léger que le thé noir mais moins végétal que le thé vert, relativement pauvre en caféine et naturellement riche en antioxydants. Le thé rose commence pratiquement incolore comme le thé blanc, et ne devient rose qu'après l'ajout de quelques gouttes de citron vert — l'agrume déclenche un changement de couleur dans le même pigment anthocyane qui donne sa teinte au bourgeon. Il se marie aussi bien avec quelques gouttes de miel, se recommande servi en thé glacé, et est lui aussi naturellement riche en antioxydants. Le Vita Glow, lui, est fabriqué à partir du bourgeon du théier vert ordinaire plutôt que du violet. Le domaine crée aussi des mélanges à valeur ajoutée — comme du thé infusé aux fleurs de lotus — et du Blooming Tea noué à la main à partir des mêmes bourgeons. Ces qualités artisanales sont cueillies et transformées en quantités bien plus faibles que le thé noir standard, ce qui les rend plus rares et plus prisées — demandez au comptoir de dégustation pour les goûter. La pousse à teinte violette ou la pousse verte ordinaire peuvent être utilisées pour la plupart de ces qualités, bien que le domaine utilise le plus souvent la pousse violette."],
+      sectionHeadings: [
+        "Thés Artisanaux d'Exception",
+        "Golden Tip et Silver Tip",
+        "Thé Blanc et Thé Violet",
+        "Thé Rose et Vita Glow",
+        "Mélanges et Rareté",
+      ],
+      sectionBodies: [
+        "En plus du thé noir standard, le domaine produit aussi des thés artisanaux rares, façonnés à la main. La plupart sont finis à la main dans la Fabrique de Thé Fait Main séparée, et non sur la ligne principale de thé noir. C'est pourquoi ces qualités sont aussi appelées 'thés artisanaux d'exception' : c'est plus proche de l'artisanat que de la production de masse. Beaucoup d'entre eux proviennent d'un bourgeon violet distinctif — le TRI 2043, un clone du Tea Research Institute. Sa couleur vient de l'anthocyane. C'est un cultivar à faible rendement, ce qui explique que toutes les exploitations sri-lankaises ne le cultivent pas.",
+        "Le Golden Tip utilise le bourgeon pleinement mûr de ce théier, tandis que le Silver Tip utilise le bourgeon plus pâle et encore immature du même théier. Ses fins poils argentés donnent son nom à cette qualité et un léger scintillement. Seul le bourgeon est pesé, flétri quelques heures, puis séché — un procédé plus simple que celui des qualités entièrement fermentées — pour une tasse subtilement sucrée, florale, à la texture veloutée.",
+        "Le thé blanc prélève deux feuilles et demie sur le bourgeon et saute complètement le flétrissage. Il est cuit à la vapeur et séché plutôt que fermenté et roulé comme le thé noir. Le résultat est un goût très légèrement transformé, naturellement sucré, avec une liqueur pâle, une texture veloutée, un arôme floral et une richesse naturelle en antioxydants. Le thé violet utilise la même cueillette mais, contrairement au thé blanc, traverse le processus complet du thé noir — flétrissage, roulage et fermentation — pour un goût plus proche de l'oolong : plus léger que le thé noir mais moins végétal que le thé vert, relativement pauvre en caféine et naturellement riche en antioxydants.",
+        "Le thé rose commence pratiquement incolore comme le thé blanc, et ne devient rose qu'après l'ajout de quelques gouttes de citron vert — l'agrume déclenche un changement de couleur dans le même pigment anthocyane qui donne sa teinte au bourgeon. Il se marie aussi bien avec quelques gouttes de miel, se recommande servi en thé glacé, et est lui aussi naturellement riche en antioxydants. Le Vita Glow, lui, est fabriqué à partir du bourgeon du théier vert ordinaire plutôt que du violet.",
+        "Le domaine crée aussi des mélanges à valeur ajoutée — comme du thé infusé aux fleurs de lotus — et du Blooming Tea noué à la main à partir des mêmes bourgeons. Ces qualités artisanales sont cueillies et transformées en quantités bien plus faibles que le thé noir standard, ce qui les rend plus rares et plus prisées — demandez au comptoir de dégustation pour les goûter. La pousse à teinte violette ou la pousse verte ordinaire peuvent être utilisées pour la plupart de ces qualités, bien que le domaine utilise le plus souvent la pousse violette.",
+      ],
       duration: "5 minutes",
     },
     "pahatharata-manufacturing": {
@@ -4310,8 +4570,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "Introduction au Thé de Ceylan",
       heroTagline: "Le Symbole de Qualité du thé de Ceylan, vu sur un panneau du domaine.",
-      sectionHeadings: ["Thé de Ceylan — Symbole de Qualité"],
-      sectionBodies: ["Depuis le début des années 1800, le nom « Ceylan » est synonyme de thé. L'histoire du thé de Ceylan remonte à la domination britannique au Sri Lanka, il y a plus de deux cents ans. Le premier théier recensé au Sri Lanka est arrivé en 1824, lorsque les Britanniques ont rapporté un théier de Chine et l'ont planté dans le Jardin Botanique Royal de Peradeniya à des fins non commerciales. En 1839, d'autres cultures de thé sont arrivées d'Assam et de Calcutta à des fins expérimentales. La véritable naissance des plantations de thé au Sri Lanka est venue avec le déclin de l'unique industrie prospère de l'île jusqu'alors : celle du café. En 1869, les florissantes plantations de café du Sri Lanka ont été frappées par une nouvelle maladie végétale appelée rouille du caféier, et l'industrie caféière a été anéantie en moins d'une décennie. C'est ainsi qu'a commencé la culture massive du thé au Sri Lanka. L'histoire du thé de Ceylan a commencé en 1867, sur un terrain de 19 acres du domaine de Loolecondera à Kandy — planté par l'Écossais James Taylor, ancien planteur de café, dans le cadre d'une expérience de diversification. Au fil des années, elle s'est développée pour devenir les sept régions théicoles du Sri Lanka : Kandy, Uva, Ruhuna (Sud), Udapussellawa, Nuwara Eliya, Dimbula et Sabaragamuwa. Le thé de hautes terres (au-dessus d'environ 1 200 m, comme à Nuwara Eliya et Uva) tend à être délicat et aromatique. Le thé de basses terres (en dessous d'environ 600 m, comme celui produit ici) est généralement plus fort et plus foncé. Cette plantation est une productrice de basses terres, ou « Pahatharata », située précisément dans la région théicole de Ruhuna — l'une des trois classifications géographiques du thé de Ceylan, aux côtés des hautes terres (« Udarata ») et des terres moyennes (« Medarata »). Les visiteurs sont traditionnellement accueillis par « Ayubowan », une salutation cingalaise signifiant « puissiez-vous vivre longtemps », parfois en personne par le président du domaine lui-même, Anura Athukorala."],
+      sectionHeadings: [
+        "Thé de Ceylan — Symbole de Qualité",
+        "Du Café au Thé",
+        "La Naissance d'une Industrie",
+        "Thé de Ceylan de Basses Terres",
+        "Un Accueil Traditionnel",
+      ],
+      sectionBodies: [
+        "Depuis le début des années 1800, le nom « Ceylan » est synonyme de thé. L'histoire du thé de Ceylan remonte à la domination britannique au Sri Lanka, il y a plus de deux cents ans.",
+        "Le premier théier recensé au Sri Lanka est arrivé en 1824, lorsque les Britanniques ont rapporté un théier de Chine et l'ont planté dans le Jardin Botanique Royal de Peradeniya à des fins non commerciales. En 1839, d'autres cultures de thé sont arrivées d'Assam et de Calcutta à des fins expérimentales. La véritable naissance des plantations de thé au Sri Lanka est venue avec le déclin de l'unique industrie prospère de l'île jusqu'alors : celle du café. En 1869, les florissantes plantations de café du Sri Lanka ont été frappées par une nouvelle maladie végétale appelée rouille du caféier, et l'industrie caféière a été anéantie en moins d'une décennie. C'est ainsi qu'a commencé la culture massive du thé au Sri Lanka.",
+        "L'histoire du thé de Ceylan a commencé en 1867, sur un terrain de 19 acres du domaine de Loolecondera à Kandy — planté par l'Écossais James Taylor, ancien planteur de café, dans le cadre d'une expérience de diversification. Au fil des années, elle s'est développée pour devenir les sept régions théicoles du Sri Lanka : Kandy, Uva, Ruhuna (Sud), Udapussellawa, Nuwara Eliya, Dimbula et Sabaragamuwa.",
+        "Le thé de hautes terres (au-dessus d'environ 1 200 m, comme à Nuwara Eliya et Uva) tend à être délicat et aromatique. Le thé de basses terres (en dessous d'environ 600 m, comme celui produit ici) est généralement plus fort et plus foncé. Cette plantation est une productrice de basses terres, ou « Pahatharata », située précisément dans la région théicole de Ruhuna — l'une des trois classifications géographiques du thé de Ceylan, aux côtés des hautes terres (« Udarata ») et des terres moyennes (« Medarata »).",
+        "Les visiteurs sont traditionnellement accueillis par « Ayubowan », une salutation cingalaise signifiant « puissiez-vous vivre longtemps », parfois en personne par le président du domaine lui-même, Anura Athukorala.",
+      ],
       duration: "5-10 minutes",
     },
     "jaggery-palm": {
@@ -4401,8 +4673,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "分级筛选",
       heroTagline: "庄园自家的茶叶等级标牌，展示每个等级是如何划分的。",
-      sectionHeadings: ["分级筛选"],
-      sectionBodies: ["绿茶和红茶都源自完全相同的茶树和茶叶。真正将它们区分开的是发酵（氧化）这一步骤——红茶要经过这一步，绿茶则跳过它。这家茶厂的产量大多是红茶。干燥的茶叶经过分级机时，会一次性根据它来自原始嫩芽的哪个部位而被分开：柔嫩、易折断的芽尖和最上层的叶片——仅占每根嫩芽的约2%——会成为FBOPF Extra Special，这是最优、也是最昂贵的等级。位置更靠下的叶片会成为BOP和Pekoe这类浓郁的等级。最成熟、位置最低的叶片会成为Dust，无法使用的茎梗和碎屑则作为废料被剔除。那台分级机还配备了一套带摄像系统的色选机，能够分辨出茶叶和花朵等颗粒，将不属于成品的东西过滤掉。不同网目大小的筛网会在多次筛选中进一步按颗粒大小分离。一台静电分离器会给滚轴上残留的棕色茎梗碎片施加静电，以便将它们分拣出来。这里的任何颜色或特性都不是来自染料或添加剂，而完全来自天然加工。茶叶的价值取决于它在新梢上的位置，而不仅仅是叶片大小——叶片位置越高、越嫩，等级和价格就越高。通常出现在加香茶包里的并不是优质茶叶，而是茶末（Dust）等级；像FBOPF特级这样的顶级茶，由于在出口市场上价值极高，很少在本地销售。"],
+      sectionHeadings: [
+        "分级筛选",
+        "按新梢位置分级",
+        "分级设备",
+        "等级、价值与出口",
+      ],
+      sectionBodies: [
+        "绿茶和红茶都源自完全相同的茶树和茶叶。真正将它们区分开的是发酵（氧化）这一步骤——红茶要经过这一步，绿茶则跳过它。这家茶厂的产量大多是红茶。",
+        "干燥的茶叶经过分级机时，会一次性根据它来自原始嫩芽的哪个部位而被分开：柔嫩、易折断的芽尖和最上层的叶片——仅占每根嫩芽的约2%——会成为FBOPF Extra Special，这是最优、也是最昂贵的等级。位置更靠下的叶片会成为BOP和Pekoe这类浓郁的等级。最成熟、位置最低的叶片会成为Dust，无法使用的茎梗和碎屑则作为废料被剔除。",
+        "那台分级机还配备了一套带摄像系统的色选机，能够分辨出茶叶和花朵等颗粒，将不属于成品的东西过滤掉。不同网目大小的筛网会在多次筛选中进一步按颗粒大小分离。一台静电分离器会给滚轴上残留的棕色茎梗碎片施加静电，以便将它们分拣出来。这里的任何颜色或特性都不是来自染料或添加剂，而完全来自天然加工。",
+        "茶叶的价值取决于它在新梢上的位置，而不仅仅是叶片大小——叶片位置越高、越嫩，等级和价格就越高。通常出现在加香茶包里的并不是优质茶叶，而是茶末（Dust）等级；像FBOPF特级这样的顶级茶，由于在出口市场上价值极高，很少在本地销售。",
+      ],
       duration: "分级在机器上连续进行，每批大约需要30至45分钟。",
     },
     packing: {
@@ -4571,8 +4853,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "手工精品茶",
       heroTagline: "庄园自家的手工茶等级标牌。",
-      sectionHeadings: ["手工精品茶"],
-      sectionBodies: ["除了标准红茶之外，庄园还生产稀有的手工精制茶。这些茶大多在独立的手工茶厂手工完成，而不是在主要的红茶生产线上。因此这些等级也被称为「手工精品茶」——它更接近一门手艺，而非批量生产。其中许多来自一种独特的紫色嫩芽——TRI 2043，茶叶研究所培育的一个品种。它的颜色来自花青素。这是一个低产品种，因此并非每个斯里兰卡庄园都种植它。金毫（Golden Tip）取自这种嫩芽完全成熟的芽头，银毫（Silver Tip）则取自同一嫩芽颜色更浅、尚未成熟的芽头。细密的银色绒毛让银毫得名，也带来一丝微光。只需称重芽头，萎凋几个小时，然后烘干——比全发酵茶更简单的工艺——便能得到一杯略带甜味、花香、口感丝滑的茶汤。白茶取自嫩芽的两叶半，完全不经过萎凋。它以蒸青和烘干代替发酵和揉捻，不像红茶那样处理。成品是一种加工程度很轻、天然带甜的味道，汤色浅淡，口感丝滑，带有花香，并天然富含抗氧化物质。紫茶采摘方式相同，但与白茶不同，要经过完整的红茶工艺——萎凋、揉捻、发酵——风味更接近乌龙茶：比红茶清淡，但比绿茶少了几分青草味，咖啡因含量相对较低，天然富含抗氧化物质。粉茶起初几乎无色，就像白茶一样，只有加入几滴青柠汁后才会变成粉红色——柑橘触发了同一种赋予嫩芽颜色的花青素色素发生变色。它也很适合加几滴蜂蜜，建议做成冰茶饮用，同样天然富含抗氧化物质。而多元活力茶（Vita Glow）则不是用紫色嫩芽，而是用普通绿色嫩芽的芽头制成。庄园还制作附加值混合茶——例如用莲花窨制的茶——以及用同样的嫩芽手工绑扎而成的绽放茶（Blooming Tea）。这些精品茶的采摘和加工数量远少于标准红茶，这正是它们更为稀有珍贵的原因——可在品茶柜台询问是否可以品尝。这些等级中的大多数既可以用紫色新梢，也可以用普通绿色新梢制作，不过庄园大多使用紫色新梢。"],
+      sectionHeadings: [
+        "手工精品茶",
+        "金毫与银毫",
+        "白茶与紫茶",
+        "粉茶与多元活力茶",
+        "混合茶与稀有性",
+      ],
+      sectionBodies: [
+        "除了标准红茶之外，庄园还生产稀有的手工精制茶。这些茶大多在独立的手工茶厂手工完成，而不是在主要的红茶生产线上。因此这些等级也被称为「手工精品茶」——它更接近一门手艺，而非批量生产。其中许多来自一种独特的紫色嫩芽——TRI 2043，茶叶研究所培育的一个品种。它的颜色来自花青素。这是一个低产品种，因此并非每个斯里兰卡庄园都种植它。",
+        "金毫（Golden Tip）取自这种嫩芽完全成熟的芽头，银毫（Silver Tip）则取自同一嫩芽颜色更浅、尚未成熟的芽头。细密的银色绒毛让银毫得名，也带来一丝微光。只需称重芽头，萎凋几个小时，然后烘干——比全发酵茶更简单的工艺——便能得到一杯略带甜味、花香、口感丝滑的茶汤。",
+        "白茶取自嫩芽的两叶半，完全不经过萎凋。它以蒸青和烘干代替发酵和揉捻，不像红茶那样处理。成品是一种加工程度很轻、天然带甜的味道，汤色浅淡，口感丝滑，带有花香，并天然富含抗氧化物质。紫茶采摘方式相同，但与白茶不同，要经过完整的红茶工艺——萎凋、揉捻、发酵——风味更接近乌龙茶：比红茶清淡，但比绿茶少了几分青草味，咖啡因含量相对较低，天然富含抗氧化物质。",
+        "粉茶起初几乎无色，就像白茶一样，只有加入几滴青柠汁后才会变成粉红色——柑橘触发了同一种赋予嫩芽颜色的花青素色素发生变色。它也很适合加几滴蜂蜜，建议做成冰茶饮用，同样天然富含抗氧化物质。而多元活力茶（Vita Glow）则不是用紫色嫩芽，而是用普通绿色嫩芽的芽头制成。",
+        "庄园还制作附加值混合茶——例如用莲花窨制的茶——以及用同样的嫩芽手工绑扎而成的绽放茶（Blooming Tea）。这些精品茶的采摘和加工数量远少于标准红茶，这正是它们更为稀有珍贵的原因——可在品茶柜台询问是否可以品尝。这些等级中的大多数既可以用紫色新梢，也可以用普通绿色新梢制作，不过庄园大多使用紫色新梢。",
+      ],
       duration: "5分钟",
     },
     "pahatharata-manufacturing": {
@@ -4808,8 +5102,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "锡兰茶导览",
       heroTagline: "庄园招牌上可见的锡兰茶质量标志。",
-      sectionHeadings: ["锡兰茶——品质的象征"],
-      sectionBodies: ["自19世纪初以来，“锡兰”这个名字便与茶叶密不可分。锡兰茶的历史可追溯至斯里兰卡的英国殖民统治时期，距今已有两百多年。斯里兰卡有记录的第一株茶树出现于1824年，当时英国人从中国带来一株茶树，种植在佩拉德尼亚皇家植物园内作非商业用途。1839年，又有更多茶叶作物从阿萨姆和加尔各答引入进行试种。然而，斯里兰卡茶园的真正诞生，源于该岛当时唯一成功产业咖啡业的衰落。1869年，斯里兰卡繁荣的咖啡种植园遭受一种名为咖啡锈病的新植物病害侵袭，斯里兰卡的咖啡产业在不到十年间彻底覆灭。斯里兰卡的大规模茶叶种植由此拉开序幕。锡兰茶的故事始于1867年，由苏格兰籍前咖啡种植园主詹姆斯·泰勒（James Taylor）在康提鲁勒康德拉庄园（Loolecondera Estate）的19英亩土地上进行的一次多元化种植试验。历经岁月，它发展成斯里兰卡如今的七大产茶区：康提、乌瓦、鲁哈纳（南部）、乌达普塞拉瓦、努沃勒埃利耶、丁布拉和萨伯拉加姆瓦。高地茶（海拔约1200米以上，如努沃勒埃利耶和乌瓦地区）通常口感细腻、香气高扬。低地茶（海拔约600米以下，如本庄园所产）则通常更为浓烈、色泽更深。本庄园属于低地（“Pahatharata”）茶产区，具体位于鲁哈纳产茶区内——这是锡兰茶三大地理分类之一，另两类为高地（“Udarata”）与中地（“Medarata”）。访客通常会以「Ayubowan」受到迎接，这是一句意为「愿您长寿」的僧伽罗语问候语，有时还会由庄园主席阿努拉·阿图科拉拉（Anura Athukorala）亲自接待。"],
+      sectionHeadings: [
+        "锡兰茶——品质的象征",
+        "从咖啡到茶",
+        "一个产业的诞生",
+        "低地锡兰茶",
+        "传统的迎接",
+      ],
+      sectionBodies: [
+        "自19世纪初以来，“锡兰”这个名字便与茶叶密不可分。锡兰茶的历史可追溯至斯里兰卡的英国殖民统治时期，距今已有两百多年。",
+        "斯里兰卡有记录的第一株茶树出现于1824年，当时英国人从中国带来一株茶树，种植在佩拉德尼亚皇家植物园内作非商业用途。1839年，又有更多茶叶作物从阿萨姆和加尔各答引入进行试种。然而，斯里兰卡茶园的真正诞生，源于该岛当时唯一成功产业咖啡业的衰落。1869年，斯里兰卡繁荣的咖啡种植园遭受一种名为咖啡锈病的新植物病害侵袭，斯里兰卡的咖啡产业在不到十年间彻底覆灭。斯里兰卡的大规模茶叶种植由此拉开序幕。",
+        "锡兰茶的故事始于1867年，由苏格兰籍前咖啡种植园主詹姆斯·泰勒（James Taylor）在康提鲁勒康德拉庄园（Loolecondera Estate）的19英亩土地上进行的一次多元化种植试验。历经岁月，它发展成斯里兰卡如今的七大产茶区：康提、乌瓦、鲁哈纳（南部）、乌达普塞拉瓦、努沃勒埃利耶、丁布拉和萨伯拉加姆瓦。",
+        "高地茶（海拔约1200米以上，如努沃勒埃利耶和乌瓦地区）通常口感细腻、香气高扬。低地茶（海拔约600米以下，如本庄园所产）则通常更为浓烈、色泽更深。本庄园属于低地（“Pahatharata”）茶产区，具体位于鲁哈纳产茶区内——这是锡兰茶三大地理分类之一，另两类为高地（“Udarata”）与中地（“Medarata”）。",
+        "访客通常会以「Ayubowan」受到迎接，这是一句意为「愿您长寿」的僧伽罗语问候语，有时还会由庄园主席阿努拉·阿图科拉拉（Anura Athukorala）亲自接待。",
+      ],
       duration: "5-10分钟",
     },
     "jaggery-palm": {
@@ -4899,8 +5205,18 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     sorting: {
       name: "選別・格付け",
       heroTagline: "各等級がどのように分類されるかを示す、この農園自前の茶葉等級看板。",
-      sectionHeadings: ["選別・格付け"],
-      sectionBodies: ["緑茶も紅茶も、まったく同じ茶樹、同じ葉から始まります。両者を実際に分けるのは発酵（酸化）という工程で、紅茶はこれを経ますが、緑茶は省きます。この工場の生産の大部分は紅茶です。乾燥した葉が選別機を通る際、元の新芽のどの部分から来たかによって一度の通過で分けられます——柔らかく折れやすい先端と一番上の葉——それぞれの新芽のわずか約2%——はFBOPFエクストラスペシャルになります。これは最上級で最も高価な等級です。その下にある葉はBOPやペコーのような力強い等級になります。最も成熟した一番下の葉はダストになり、使えない茎やくずはリフューズとして取り除かれます。その選別機には、葉や花のような粒子を見分けられるカメラシステムを備えた色選別機が組み込まれており、該当しないものはすべてろ過されます。異なる網目の篩が、複数回の工程でさらに大きさ別に粒子を分けます。静電分離機はローラー上で残った茶色の茎の破片に静電気を帯びさせ、それらを取り除けるようにします。ここでの色や個性はいずれも染料や添加物によるものではなく、天然の加工工程によるものだけです。価値は葉の大きさだけでなく、新芽のどの位置にあったかによって決まります——葉が上部にあり柔らかいほど、等級も価格も高くなります。香り付けした紅茶ティーバッグに通常入っているのは高級茶葉ではなく、ダスト等級です。FBOPFエクストラスペシャルのような最高級茶は、輸出市場での価値が非常に高いため、国内で販売されることはめったにありません。"],
+      sectionHeadings: [
+        "選別・格付け",
+        "新芽の位置による格付け",
+        "選別機械",
+        "等級、価値、輸出",
+      ],
+      sectionBodies: [
+        "緑茶も紅茶も、まったく同じ茶樹、同じ葉から始まります。両者を実際に分けるのは発酵（酸化）という工程で、紅茶はこれを経ますが、緑茶は省きます。この工場の生産の大部分は紅茶です。",
+        "乾燥した葉が選別機を通る際、元の新芽のどの部分から来たかによって一度の通過で分けられます——柔らかく折れやすい先端と一番上の葉——それぞれの新芽のわずか約2%——はFBOPFエクストラスペシャルになります。これは最上級で最も高価な等級です。その下にある葉はBOPやペコーのような力強い等級になります。最も成熟した一番下の葉はダストになり、使えない茎やくずはリフューズとして取り除かれます。",
+        "その選別機には、葉や花のような粒子を見分けられるカメラシステムを備えた色選別機が組み込まれており、該当しないものはすべてろ過されます。異なる網目の篩が、複数回の工程でさらに大きさ別に粒子を分けます。静電分離機はローラー上で残った茶色の茎の破片に静電気を帯びさせ、それらを取り除けるようにします。ここでの色や個性はいずれも染料や添加物によるものではなく、天然の加工工程によるものだけです。",
+        "価値は葉の大きさだけでなく、新芽のどの位置にあったかによって決まります——葉が上部にあり柔らかいほど、等級も価格も高くなります。香り付けした紅茶ティーバッグに通常入っているのは高級茶葉ではなく、ダスト等級です。FBOPFエクストラスペシャルのような最高級茶は、輸出市場での価値が非常に高いため、国内で販売されることはめったにありません。",
+      ],
       duration: "選別は機械で連続的に行われ、1バッチあたり約30〜45分かかります。",
     },
     packing: {
@@ -5069,8 +5385,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     "artisanal-tea-grades": {
       name: "職人技の高級茶",
       heroTagline: "この農園自前の職人技特選茶グレード看板。",
-      sectionHeadings: ["職人技の高級茶"],
-      sectionBodies: ["標準的な紅茶に加えて、この農園では希少な手作りの職人技の茶も生産しています。その多くは主力の紅茶ラインではなく、別棟の手作り茶工場で手作業により仕上げられます。だからこそこれらの等級は「職人技の高級茶」とも呼ばれ、大量生産というより一つの手仕事に近いものです。その多くは特徴的な紫色の新芽——茶業研究所が開発したクローン品種TRI 2043——に由来します。その色はアントシアニンによるものです。収量の少ない品種のため、スリランカのすべての農園がこれを栽培しているわけではありません。ゴールデンティップスはこの新芽の完全に成熟した芽を使い、シルバーティップスは同じ新芽のより淡く、まだ未熟な芽を使います。その細く銀色の産毛が、この等級に名前と淡い輝きを与えています。芽だけを計量し、数時間萎凋させてから乾燥させます——これは完全発酵させる等級よりも簡単な工程で——ほのかに甘く、花のような香り、なめらかな口当たりの一杯に仕上がります。ホワイトティーは新芽から二枚半の葉を摘み、萎凋を完全に省きます。紅茶のように発酵させて揉むのではなく、蒸してから乾燥させます。その結果、非常に軽く加工された、自然な甘みのある味わいになり、淡い水色、なめらかな口当たり、花のような香り、そして天然の抗酸化物質の豊富さを備えています。パープルティーは同じ茶摘みを使いますが、ホワイトティーとは異なり、萎凋・揉捻・発酵という紅茶の全工程を経ます。その結果、ウーロン茶に近い風味になります——紅茶より軽く、緑茶より青臭さが少なく、カフェインは比較的少なく、天然の抗酸化物質を豊富に含みます。ピンクティーは最初はホワイトティーと同様にほぼ無色ですが、ライムを数滴加えると初めてピンク色に変わります——柑橘が、新芽に色を与えるのと同じアントシアニン色素に変色反応を起こすのです。蜂蜜を数滴加えるのにも合い、アイスティーとして飲むことが推奨されており、これも天然の抗酸化物質を豊富に含みます。ビタグロウはこれとは異なり、紫色の新芽ではなく、通常の緑色の新芽の芽から作られます。農園ではまた、蓮の花を使ったブレンドなど付加価値のあるブレンド茶や、同じ新芽から手で結んだブルーミングティーも作っています。これらの職人技の茶は、標準的な紅茶よりもはるかに少ない量で摘み取られ加工されるため、より希少で貴重なものとなっています——試飲カウンターでお尋ねください。これらの等級のほとんどには、紫がかった新芽と通常の緑の新芽のどちらも使用できますが、農園では主に紫がかった新芽を使用しています。"],
+      sectionHeadings: [
+        "職人技の高級茶",
+        "ゴールデンティップスとシルバーティップス",
+        "ホワイトティーとパープルティー",
+        "ピンクティーとビタグロウ",
+        "ブレンドと希少性",
+      ],
+      sectionBodies: [
+        "標準的な紅茶に加えて、この農園では希少な手作りの職人技の茶も生産しています。その多くは主力の紅茶ラインではなく、別棟の手作り茶工場で手作業により仕上げられます。だからこそこれらの等級は「職人技の高級茶」とも呼ばれ、大量生産というより一つの手仕事に近いものです。その多くは特徴的な紫色の新芽——茶業研究所が開発したクローン品種TRI 2043——に由来します。その色はアントシアニンによるものです。収量の少ない品種のため、スリランカのすべての農園がこれを栽培しているわけではありません。",
+        "ゴールデンティップスはこの新芽の完全に成熟した芽を使い、シルバーティップスは同じ新芽のより淡く、まだ未熟な芽を使います。その細く銀色の産毛が、この等級に名前と淡い輝きを与えています。芽だけを計量し、数時間萎凋させてから乾燥させます——これは完全発酵させる等級よりも簡単な工程で——ほのかに甘く、花のような香り、なめらかな口当たりの一杯に仕上がります。",
+        "ホワイトティーは新芽から二枚半の葉を摘み、萎凋を完全に省きます。紅茶のように発酵させて揉むのではなく、蒸してから乾燥させます。その結果、非常に軽く加工された、自然な甘みのある味わいになり、淡い水色、なめらかな口当たり、花のような香り、そして天然の抗酸化物質の豊富さを備えています。パープルティーは同じ茶摘みを使いますが、ホワイトティーとは異なり、萎凋・揉捻・発酵という紅茶の全工程を経ます。その結果、ウーロン茶に近い風味になります——紅茶より軽く、緑茶より青臭さが少なく、カフェインは比較的少なく、天然の抗酸化物質を豊富に含みます。",
+        "ピンクティーは最初はホワイトティーと同様にほぼ無色ですが、ライムを数滴加えると初めてピンク色に変わります——柑橘が、新芽に色を与えるのと同じアントシアニン色素に変色反応を起こすのです。蜂蜜を数滴加えるのにも合い、アイスティーとして飲むことが推奨されており、これも天然の抗酸化物質を豊富に含みます。ビタグロウはこれとは異なり、紫色の新芽ではなく、通常の緑色の新芽の芽から作られます。",
+        "農園ではまた、蓮の花を使ったブレンドなど付加価値のあるブレンド茶や、同じ新芽から手で結んだブルーミングティーも作っています。これらの職人技の茶は、標準的な紅茶よりもはるかに少ない量で摘み取られ加工されるため、より希少で貴重なものとなっています——試飲カウンターでお尋ねください。これらの等級のほとんどには、紫がかった新芽と通常の緑の新芽のどちらも使用できますが、農園では主に紫がかった新芽を使用しています。",
+      ],
       duration: "5分",
     },
     "pahatharata-manufacturing": {
@@ -5306,8 +5634,20 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     introduction: {
       name: "セイロンティー入門",
       heroTagline: "敷地内の看板に見られるセイロンティーの品質の証。",
-      sectionHeadings: ["セイロンティー — 品質の証"],
-      sectionBodies: ["1800年代初頭以来、「セイロン」という名前は紅茶の代名詞となってきました。セイロンティーの歴史は、200年以上前のスリランカにおける英国統治の時代にまでさかのぼります。スリランカで記録された最初の茶樹は1824年に到来しました。当時イギリス人が中国から茶樹を持ち込み、非営利用途としてペラデニヤ王立植物園に植えたのです。1839年には、試験栽培のためにアッサムやカルカッタからさらに茶の苗が運ばれました。しかし、スリランカにおける茶園の真の誕生は、当時島で唯一成功していたコーヒー産業の衰退の結果でした。1869年、スリランカの繁栄していたコーヒー農園はコーヒーさび病と呼ばれる新たな植物の病気に襲われ、その結果、スリランカのコーヒー産業は10年足らずで壊滅しました。こうしてスリランカでの茶の大規模栽培が始まったのです。セイロンティーの物語は1867年、キャンディのルーレコンデラ農園で、元コーヒー栽培者であったスコットランド人ジェームズ・テイラーが19エーカーの土地に茶を植えた多角化実験として始まりました。長い年月を経て、それはスリランカの7つの茶産地へと発展しました。キャンディ、ウバ、ルフナ（南部）、ウダプッセラワ、ヌワラエリヤ、ディンブラ、サバラガムワです。高地茶（ヌワラエリヤやウバなど、標高約1,200m以上）は繊細で香り高い傾向があります。低地茶（ここで生産されるような標高約600m未満）は一般により力強く色が濃くなります。この農園は低地（「パハタラタ」）産地で、特にルフナ茶産地に位置しており、これは高地（「ウダラタ」）、中地（「メダラタ」）と並ぶセイロンティーの3つの地理的分類の一つです。訪問者は伝統的に「アーユボーワン」——「長寿を」という意味のシンハラ語の挨拶——で迎えられ、時には農園の会長であるアヌラ・アトゥコララ氏自らが直接出迎えることもあります。"],
+      sectionHeadings: [
+        "セイロンティー — 品質の証",
+        "コーヒーから紅茶へ",
+        "産業の誕生",
+        "低地セイロンティー",
+        "伝統的な歓迎",
+      ],
+      sectionBodies: [
+        "1800年代初頭以来、「セイロン」という名前は紅茶の代名詞となってきました。セイロンティーの歴史は、200年以上前のスリランカにおける英国統治の時代にまでさかのぼります。",
+        "スリランカで記録された最初の茶樹は1824年に到来しました。当時イギリス人が中国から茶樹を持ち込み、非営利用途としてペラデニヤ王立植物園に植えたのです。1839年には、試験栽培のためにアッサムやカルカッタからさらに茶の苗が運ばれました。しかし、スリランカにおける茶園の真の誕生は、当時島で唯一成功していたコーヒー産業の衰退の結果でした。1869年、スリランカの繁栄していたコーヒー農園はコーヒーさび病と呼ばれる新たな植物の病気に襲われ、その結果、スリランカのコーヒー産業は10年足らずで壊滅しました。こうしてスリランカでの茶の大規模栽培が始まったのです。",
+        "セイロンティーの物語は1867年、キャンディのルーレコンデラ農園で、元コーヒー栽培者であったスコットランド人ジェームズ・テイラーが19エーカーの土地に茶を植えた多角化実験として始まりました。長い年月を経て、それはスリランカの7つの茶産地へと発展しました。キャンディ、ウバ、ルフナ（南部）、ウダプッセラワ、ヌワラエリヤ、ディンブラ、サバラガムワです。",
+        "高地茶（ヌワラエリヤやウバなど、標高約1,200m以上）は繊細で香り高い傾向があります。低地茶（ここで生産されるような標高約600m未満）は一般により力強く色が濃くなります。この農園は低地（「パハタラタ」）産地で、特にルフナ茶産地に位置しており、これは高地（「ウダラタ」）、中地（「メダラタ」）と並ぶセイロンティーの3つの地理的分類の一つです。",
+        "訪問者は伝統的に「アーユボーワン」——「長寿を」という意味のシンハラ語の挨拶——で迎えられ、時には農園の会長であるアヌラ・アトゥコララ氏自らが直接出迎えることもあります。",
+      ],
       duration: "5〜10分",
     },
     "jaggery-palm": {
