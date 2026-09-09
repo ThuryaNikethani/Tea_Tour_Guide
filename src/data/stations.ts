@@ -209,6 +209,20 @@ import introductionCollageImg from "../assets/introduction/introduction-collage.
 // troughs. Used as "pahatharata-manufacturing"'s heroImage. See the
 // provenance note near the "pahatharata-manufacturing" station below.
 import pahatharataManufacturingCollageImg from "../assets/pahatharata-manufacturing/pahatharata-manufacturing-collage.jpg";
+// Full-bleed hero banner images for stations that already have their own
+// inline section images and text — these are purely additive (same
+// treatment "nursery" gets from its heroVideo), reusing existing photos
+// already used elsewhere in each station, with nothing removed or
+// changed in the sections themselves. Each is a generated collage from
+// that station's own images, except "unique-fruits", which collages one
+// cover photo from each of its six fruits.
+import cinnamonHeroCollageImg from "../assets/cinnamon/hero/cinnamon-hero-collage.jpg";
+import gingerHeroCollageImg from "../assets/ginger/hero/ginger-hero-collage.jpg";
+import turmericHeroCollageImg from "../assets/turmeric/hero/turmeric-hero-collage.jpg";
+import beeHeroCollageImg from "../assets/bee/hero/bee-hero-collage.jpg";
+import coconutHeroCollageImg from "../assets/coconut/hero/coconut-hero-collage.jpg";
+import jaggeryPalmHeroCollageImg from "../assets/kithul/hero/jaggery-palm-hero-collage.jpg";
+import uniqueFruitsHeroCollageImg from "../assets/unique-fruits/unique-fruits-hero-collage.jpg";
 // A generated collage combining four real photos of the Handmade Tea
 // Factory's own equipment (withering trough, tray rack, hand-roller,
 // dryer unit), same treatment as "sorting"'s collage. Used as
@@ -725,6 +739,23 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * Stayed in its plain description/keyPoints/duration shape
  * (heroImage/heroTagline render independently of `sections`) — no
  * restructuring, no text changed.
+ * A different, purely additive pattern was applied the same day to the
+ * seven stations the user had explicitly excluded from the earlier
+ * heroImage/collage pass — "cinnamon", "ginger-turmeric", "turmeric",
+ * "bee", "unique-fruits", "coconut-field", and "jaggery-palm" — after the
+ * user asked for their "first page image" (the top banner) to follow the
+ * same full-bleed treatment "nursery"'s heroVideo already gets, without
+ * changing anything else. Each already had a heroTagline, so only a new
+ * `heroImage` field was added; none of their existing inline section
+ * images, items, or body text were touched or removed. Each heroImage is
+ * a generated same-size-crop collage built from images the station
+ * already uses elsewhere: cinnamon (tree + fruit), ginger-turmeric (plant
+ * + rhizome), turmeric (plant + flower), bee (on a wildflower + in
+ * flight), coconut-field (plantation + inflorescence), and jaggery-palm
+ * (all four of its images: tree, leaves, both inflorescence shots).
+ * "unique-fruits" — per the user's explicit request for that one — uses
+ * one cover photo from each of its six fruits (dragon fruit, pineapple,
+ * Ceylon olive, papaya, guava, starfruit) rather than just two images.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
@@ -1475,7 +1506,8 @@ export const STATIONS: Station[] = [
     shortName: "Cinnamon",
     icon: "TreePine",
     verified: true,
-    lastVerified: "2026-08-26",
+    lastVerified: "2026-09-09",
+    heroImage: cinnamonHeroCollageImg,
     heroTagline: "From a fragrant evergreen tree to the factory's own cinnamon teas.",
     sections: [
       {
@@ -1546,7 +1578,8 @@ export const STATIONS: Station[] = [
     shortName: "Ginger",
     icon: "Leaf",
     verified: true,
-    lastVerified: "2026-08-26",
+    lastVerified: "2026-09-09",
+    heroImage: gingerHeroCollageImg,
     heroTagline: "From a fragrant tropical rhizome to the factory's own ginger teas.",
     sections: [
       {
@@ -1603,7 +1636,8 @@ export const STATIONS: Station[] = [
     shortName: "Turmeric",
     icon: "Leaf",
     verified: true,
-    lastVerified: "2026-09-02",
+    lastVerified: "2026-09-09",
+    heroImage: turmericHeroCollageImg,
     heroTagline: "From a golden rhizome in the ground to a spice, dye, and medicine cabinet staple.",
     sections: [
       {
@@ -1679,7 +1713,8 @@ export const STATIONS: Station[] = [
     shortName: "Bees",
     icon: "Bug",
     verified: true,
-    lastVerified: "2026-08-26",
+    lastVerified: "2026-09-09",
+    heroImage: beeHeroCollageImg,
     heroTagline: "Nature's tireless pollinator, hard at work across the estate.",
     sections: [
       {
@@ -1755,7 +1790,8 @@ export const STATIONS: Station[] = [
     shortName: "Unique Fruits",
     icon: "Citrus",
     verified: true,
-    lastVerified: "2026-09-03",
+    lastVerified: "2026-09-09",
+    heroImage: uniqueFruitsHeroCollageImg,
     heroTagline: "From the island's own orchards to a closer look at some of its most striking crops.",
     sections: [
       {
@@ -1995,6 +2031,7 @@ export const STATIONS: Station[] = [
     icon: "Palmtree",
     verified: true,
     lastVerified: "2026-09-09",
+    heroImage: coconutHeroCollageImg,
     heroTagline: "The 'Tree of Life' — a coastal giant where almost nothing goes to waste.",
     sections: [
       {
@@ -2058,7 +2095,8 @@ export const STATIONS: Station[] = [
     shortName: "Jaggery Palm",
     icon: "Droplet",
     verified: true,
-    lastVerified: "2026-09-01",
+    lastVerified: "2026-09-09",
+    heroImage: jaggeryPalmHeroCollageImg,
     heroTagline: "From a towering fishtail palm to Sri Lanka's traditional treacle and jaggery.",
     sections: [
       {
