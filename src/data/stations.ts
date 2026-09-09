@@ -249,6 +249,14 @@ import pluckingGroupImg from "../assets/plucking/plucking-group.jpg";
 // note near the "tea-factory" station below.
 import factoryBuilding1Img from "../assets/tea-factory/factory-building-1.jpg";
 import factoryBuilding2Img from "../assets/tea-factory/factory-building-2.jpg";
+// Real, user-supplied photos of visitors at the estate's own tea-tasting
+// counter in the tea center. Visitor faces are visible; use confirmed
+// with the user. See the provenance note near the "tea-center" station
+// below.
+import tastingFamily1Img from "../assets/tea-center/tasting-family-1.jpg";
+import tastingFamily2Img from "../assets/tea-center/tasting-family-2.jpg";
+import tastingGroup3Img from "../assets/tea-center/tasting-group-3.jpg";
+import tastingCouple4Img from "../assets/tea-center/tasting-couple-4.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -607,6 +615,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * description/keyPoints merged unchanged into one section body; multi-
  * image row uses the established `imageFit: "contain"` equal-size
  * treatment.
+ * "tea-center" was converted the same way, same day, to carry four real
+ * photos of visitors at the estate's own tasting counter — visitor faces
+ * are visible in all four; use confirmed with the user beforehand, same
+ * as the earlier plucking-photo consent check. Existing description/
+ * keyPoints merged unchanged into one section body; multi-image row uses
+ * the same `imageFit: "contain"` equal-size treatment as clonal-tea and
+ * tea-factory.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -2080,11 +2095,16 @@ export const STATIONS: Station[] = [
     shortName: "Tea Center",
     icon: "Coffee",
     verified: true,
-    lastVerified: "2026-09-01",
-    description:
-      "The tour ends at the tea center, where a tasting panel checks every batch — not just here, but earlier too, whenever tea leaves the main factory for the local market or comes in for packing — for defects like over-fermentation, under-fermentation, or scorching, discarding anything that fails before it's sold and noting even minor issues so they can inform future production. On display here are two more small-batch specialties from the handmade factory, Flower Chakra and Tea Coin. Artisanal teas like these can be re-infused up to three times using water heated to about 80°C rather than boiling — roughly 2, 5, and 8 minutes per steep with fresh hot water each time — unlike standard black tea, which is brewed once at full boiling point.",
-    keyPoints:
-      "Tasting follows a method similar to wine tasting — smelling first, then slurping to pull the tea across the taste buds on the sides of the tongue with a draw of air; the panel spits rather than swallows while tasting up to 50 teas a day, though visitors are welcome to actually drink what they try. Properly brewed black tea needs about 2.5 to 3 minutes of covered steeping, not just a quick dip. BOPF and BOPF Special are the grades most Sri Lankans actually drink day to day; Dust and Dust 1, the lowest grades, are never sent to export markets and are what typically ends up — with added colouring — in cheap supermarket tea bags, which is why the colour appears the instant they're dipped rather than after a proper steep. Much of what's sold in supermarkets is also blended with cheaper tea bought in from elsewhere, unlike the estate's own unblended, single-origin teas. The very finest grades — FF Extra Special, FF Special, FBOP — come from only about 1% of the harvest, the most immature part of the bud, and sell for around $25 per 100g; bulkier grades like OPA and OP run closer to $5-6 per 200g. The white tip particles visible in the finest grades add extra sweetness and mostly go to European buyers, while Arabic markets tend to prefer a stronger cup. Beyond tea, the estate blends its own green and black tea (about 90%) with local herbs (about 10%) — gotukola, heenbovitiya, and moringa — and makes Masala, Cinnamon, and Ginger spice teas from its own spices; the masala recipe uses seven Sri Lankan spices, including cardamom, cinnamon, ginger, and black pepper (the rest a kept secret), and masala or BOP tea is what's recommended for milk tea.",
+    lastVerified: "2026-09-09",
+    heroTagline: "Visitors sampling tea at the estate's own tasting counter.",
+    sections: [
+      {
+        heading: "Tea Center",
+        image: [tastingFamily1Img, tastingFamily2Img, tastingGroup3Img, tastingCouple4Img],
+        imageFit: "contain",
+        body: "The tour ends at the tea center, where a tasting panel checks every batch — not just here, but earlier too, whenever tea leaves the main factory for the local market or comes in for packing — for defects like over-fermentation, under-fermentation, or scorching, discarding anything that fails before it's sold and noting even minor issues so they can inform future production. On display here are two more small-batch specialties from the handmade factory, Flower Chakra and Tea Coin. Artisanal teas like these can be re-infused up to three times using water heated to about 80°C rather than boiling — roughly 2, 5, and 8 minutes per steep with fresh hot water each time — unlike standard black tea, which is brewed once at full boiling point. Tasting follows a method similar to wine tasting — smelling first, then slurping to pull the tea across the taste buds on the sides of the tongue with a draw of air; the panel spits rather than swallows while tasting up to 50 teas a day, though visitors are welcome to actually drink what they try. Properly brewed black tea needs about 2.5 to 3 minutes of covered steeping, not just a quick dip. BOPF and BOPF Special are the grades most Sri Lankans actually drink day to day; Dust and Dust 1, the lowest grades, are never sent to export markets and are what typically ends up — with added colouring — in cheap supermarket tea bags, which is why the colour appears the instant they're dipped rather than after a proper steep. Much of what's sold in supermarkets is also blended with cheaper tea bought in from elsewhere, unlike the estate's own unblended, single-origin teas. The very finest grades — FF Extra Special, FF Special, FBOP — come from only about 1% of the harvest, the most immature part of the bud, and sell for around $25 per 100g; bulkier grades like OPA and OP run closer to $5-6 per 200g. The white tip particles visible in the finest grades add extra sweetness and mostly go to European buyers, while Arabic markets tend to prefer a stronger cup. Beyond tea, the estate blends its own green and black tea (about 90%) with local herbs (about 10%) — gotukola, heenbovitiya, and moringa — and makes Masala, Cinnamon, and Ginger spice teas from its own spices; the masala recipe uses seven Sri Lankan spices, including cardamom, cinnamon, ginger, and black pepper (the rest a kept secret), and masala or BOP tea is what's recommended for milk tea.",
+      },
+    ],
     duration: "10-15 minutes",
   },
   {
