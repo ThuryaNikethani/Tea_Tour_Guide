@@ -805,6 +805,20 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * with room to spare. The other collages built from portrait photos were
  * left as rebuilt in the previous pass; their subjects already sit at or
  * above panel-center, which comfortably survives a top-anchored crop too.
+ * That previous pass had overcorrected, though: making each panel much
+ * wider/shorter (to survive the vertical top-crop on ultra-wide monitors)
+ * pushed several collages' overall aspect out to 5:1-7.7:1, which is
+ * wider than a typical desktop banner's own aspect (~3.5:1) — so on an
+ * ordinary browser window, object-cover now had to crop the *sides* of
+ * the (relatively-too-wide) image instead, cutting off entire outer
+ * panels. The user caught this on introduction's 5-panel banner (only
+ * the middle 3 panels were visible). Rebalanced every affected collage
+ * to a consistent ~4:1 overall aspect regardless of panel count
+ * (clonal-tea and the 4-panel ones at 400x400 per panel, introduction's
+ * 5 panels at 400x500, the 2-panel ones at 800x400) — wide enough to
+ * limit the vertical top-crop's damage, narrow enough that a normal
+ * desktop window shows every panel without side-cropping. Same per-photo
+ * vertical anchors as before, just reapplied to the new panel height.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
