@@ -766,6 +766,25 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * The six now-fully-unused imports were removed to satisfy
  * noUnusedLocals; each image's neighbouring sibling import (still used
  * by a later section) was left in place.
+ * The user then flagged clonal-tea's heroImage collage as visually messy
+ * on a wide screen — its 4 source photos are all portrait, and the
+ * collage had been built at a portrait-ish panel shape (400x560 each);
+ * on a very wide viewport the banner's own object-cover crop (which
+ * always keeps the vertical *center* band, regardless of screen width)
+ * cropped straight through each panel's sign at an inconsistent height,
+ * since each sign sat at a different position within its own portrait
+ * source. Fixed by rebuilding every heroImage collage sourced from
+ * portrait photos — clonal-tea, introduction, shade-management,
+ * handmade-factory, tea-center, jaggery-palm, and plucking — at a much
+ * wider, shorter panel shape (roughly 500x320, vs. the original 400x560)
+ * so there's far less left to crop at any viewport width, with each
+ * panel's crop additionally vertically anchored toward wherever that
+ * photo's actual subject (sign, face, equipment) sits, rather than a
+ * blind center crop. Collages built from already-landscape photos
+ * (sorting, packing, tea-factory, pahatharata-manufacturing, cinnamon,
+ * ginger-turmeric, turmeric, bee, coconut-field, unique-fruits) were left
+ * as-is since they weren't affected. No station data, text, or file path
+ * changed — only the pixel content of the affected collage image files.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
