@@ -197,10 +197,13 @@ import starfruitHarvestImg from "../assets/starfruit/starfruit-harvest.webp";
 // field, showing the cultivar's distinctive purple-red young shoot. See
 // the provenance note near the "organic-cultivation" station below.
 import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
-// Real, user-supplied photo of this estate's own equipment/signage, used
-// directly as "introduction"'s heroImage. See the provenance note near
-// the "introduction" station below.
-import ceylonTeaSymbolImg from "../assets/introduction/ceylon-tea-symbol.jpg";
+// A generated collage combining three real photos: the estate's own
+// Ceylon Tea Symbol signboard, an AR-TEA Academy tea-culture card held up
+// in the tea field, and a visitor holding two tea shoots. Visitor face is
+// visible in the third; use confirmed with the user. Used as
+// "introduction"'s heroImage. See the provenance note near the
+// "introduction" station below.
+import introductionCollageImg from "../assets/introduction/introduction-collage.jpg";
 // A generated collage combining four real photos of the Handmade Tea
 // Factory's own equipment (withering trough, tray rack, hand-roller,
 // dryer unit), same treatment as "sorting"'s collage. Used as
@@ -697,6 +700,14 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * unchanged when its interior photo was first added — the user
  * explicitly overrode that this time, so it got the heroImage treatment
  * too.
+ * "introduction"'s single-photo heroImage was upgraded to a three-photo
+ * collage shortly after: the existing Ceylon Tea Symbol signboard photo,
+ * plus two new user-supplied photos — an AR-TEA Academy tea-culture card
+ * held up in the tea field, and a visitor holding two tea shoots (green
+ * and purple-hued) for comparison. Visitor face is visible in the third;
+ * use confirmed with the user. The old single-image import was replaced
+ * by the new collage import rather than kept alongside it, since nothing
+ * else referenced it.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
@@ -1274,7 +1285,7 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-09",
     virtualTourUrl: "https://ceylonteatourism.com/",
-    heroImage: ceylonTeaSymbolImg,
+    heroImage: introductionCollageImg,
     heroTagline: "The Ceylon Tea Symbol of Quality, seen on a signboard at the estate.",
     sections: [
       {
