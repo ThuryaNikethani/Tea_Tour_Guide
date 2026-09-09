@@ -233,6 +233,14 @@ export function StationDetail() {
   );
 }
 
+/** Picks a column count (capped at maxCols) that never leaves a single lonely image on the last row. */
+function columnsFor(imageCount: number, maxCols = 4): number {
+  if (imageCount <= maxCols) return imageCount;
+  let cols = maxCols;
+  while (cols > 1 && imageCount % cols === 1) cols--;
+  return cols;
+}
+
 /** Renders one section's image(s), heading, body, and item cards — shared by the top-level section pager and a selected fruit's own stacked sections. */
 function SectionContent({ section }: { section: StationSection }) {
   const isContain = section.imageFit === "contain";
@@ -241,15 +249,18 @@ function SectionContent({ section }: { section: StationSection }) {
   // distortion — this is what actually guarantees they render at the same size, regardless of each
   // photo's own aspect ratio (unlike relying on matching source-file dimensions, which drift as
   // photos are swapped).
-  // grid-cols-[repeat(auto-fit,minmax(140px,1fr))] keeps every image at least 140px wide (roughly
-  // 4 fit across the text column) and wraps any extra images onto additional rows instead of
-  // squeezing them all onto one line — unlike flex-wrap, grid keeps the same column tracks across
-  // every row, so a lone leftover image on the last row stays the same size as the rest rather than
-  // stretching to fill it.
+  // The column count (via columnsFor) wraps extra images onto additional rows instead of squeezing
+  // them all onto one line, while never leaving just one lonely image on the last row — unlike plain
+  // flex-wrap, grid keeps the same column tracks across every row, so a wrapped row's images stay
+  // the same size as the rest rather than stretching to fill it.
   const imageClass = isContain ? "w-full h-72 object-contain rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
+  const imageCols = isContain && Array.isArray(section.image) ? columnsFor(section.image.length) : undefined;
   const images = section.image && (
     Array.isArray(section.image) ? (
-      <div className={isContain ? "grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] justify-center gap-2 mb-3" : "grid grid-cols-2 gap-2 mb-3"}>
+      <div
+        className={isContain ? "grid justify-center gap-1.5 mb-3" : "grid grid-cols-2 gap-2 mb-3"}
+        style={isContain ? { gridTemplateColumns: `repeat(${imageCols}, minmax(140px, 1fr))` } : undefined}
+      >
         {section.image.map((src) => (
           <img key={src} src={src} alt={section.heading} loading="lazy" className={imageClass} />
         ))}
