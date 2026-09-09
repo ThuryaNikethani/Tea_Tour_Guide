@@ -111,7 +111,6 @@ import tri2043Img from "../assets/nursery/gallery/pla9-moj4O07C.jpg";
 import tri4006Img from "../assets/nursery/gallery/pla13-CsUH1VFU.jpg";
 import tri3025Img from "../assets/nursery/gallery/pla17-CN4UIDLb.jpg";
 // Real photos from the factory's own cinnamon plantation and product line.
-import cinnamonTreeImg from "../assets/cinnamon/cinnamon-tree.webp";
 import cinnamonFruitImg from "../assets/cinnamon/cinnamon-fruit.jpg";
 import cinnamonPlantationImg from "../assets/cinnamon/cinnamon-plantation.jpg";
 import cinnamonLeavesImg from "../assets/cinnamon/cinnamon-leaves.webp";
@@ -123,7 +122,6 @@ import flavouredCinnamonTeaImg from "../assets/cinnamon/flavoured-cinnamon-tea.j
 // tapping/boiling process. See the provenance note near the "jaggery-palm"
 // station below for why these were used anyway and which of the site's ten
 // images were skipped.
-import kithulTreeImg from "../assets/kithul/kithul-tree.jpg";
 import kithulLeavesImg from "../assets/kithul/kithul-leaves.jpg";
 import kithulInflorescence1Img from "../assets/kithul/kithul-inflorescence-1.jpg";
 import kithulInflorescence2Img from "../assets/kithul/kithul-inflorescence-2.jpg";
@@ -131,7 +129,6 @@ import kithulInflorescence2Img from "../assets/kithul/kithul-inflorescence-2.jpg
 // note the site's own spelling) — real photos of the estate's Curcuma longa
 // crop, none carrying any visible third-party credit. See the provenance
 // note near the "turmeric" station below.
-import turmericPlantImg from "../assets/turmeric/turmeric-plant.jpg";
 import turmericFlowerImg from "../assets/turmeric/turmeric-flower.webp";
 import turmericRhizomeImg from "../assets/turmeric/turmeric-rhizome.webp";
 import turmericFieldImg from "../assets/turmeric/turmeric-field.jpg";
@@ -288,7 +285,6 @@ import clonalTeaCollageImg from "../assets/clonal-tea/clonal-tea-collage.jpg";
 // not photos of this estate's own trees. See the provenance note near the
 // "coconut-field" station below for why these were used anyway and which of
 // the site's ten images were skipped.
-import coconutPlantationImg from "../assets/coconut/coconut-plantation.avif";
 import coconutInflorescenceImg from "../assets/coconut/coconut-inflorescence.jpg";
 import coconutClusterImg from "../assets/coconut/coconut-cluster.png";
 import coconutKingClusterImg from "../assets/coconut/coconut-king-cluster.jpg";
@@ -299,7 +295,6 @@ import coconutKingClusterImg from "../assets/coconut/coconut-king-cluster.jpg";
 import coconutTreatGroupImg from "../assets/coconut/coconut-treat-group.jpg";
 import coconutTreatGatheringImg from "../assets/coconut/coconut-treat-gathering.jpg";
 // Real photos from the factory's own ginger plantation and product line.
-import gingerPlantImg from "../assets/ginger/ginger-plant.jpg";
 import gingerRhizomeImg from "../assets/ginger/ginger-rhizome.jpg";
 import gingerField1Img from "../assets/ginger/ginger-field-1.jpg";
 import gingerField2Img from "../assets/ginger/ginger-field-2.webp";
@@ -311,7 +306,6 @@ import flavouredGingerTeaImg from "../assets/ginger/flavoured-ginger-tea.jpg";
 import beeFlightImg from "../assets/bee/bee-flight.jpg";
 import beeOnYellowFlowerImg from "../assets/bee/bee-on-yellow-flower.jpg";
 import beePollenBasketImg from "../assets/bee/bee-pollen-basket.jpg";
-import beeWildflowerImg from "../assets/bee/bee-wildflower.jpeg";
 // Openly-licensed stock photos (Wikimedia Commons) illustrating the generic
 // peeling tools — not photos of this factory's own tools. See the provenance
 // note near the "cinnamon" station below for sourcing and licenses.
@@ -756,6 +750,22 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * "unique-fruits" — per the user's explicit request for that one — uses
  * one cover photo from each of its six fruits (dragon fruit, pineapple,
  * Ceylon olive, papaya, guava, starfruit) rather than just two images.
+ * Minutes later the user asked to remove the now-redundant "first page
+ * image" from each of these stations (except "unique-fruits", whose
+ * first section never had one) — the inline image on each station's very
+ * first section, which the new heroImage banner made duplicate: cinnamon
+ * (cinnamonTreeImg off "About the Cinnamon Tree"), ginger-turmeric
+ * (gingerPlantImg off "About the Ginger Plant"), turmeric
+ * (turmericPlantImg off "About the Turmeric Plant"), bee (beeWildflowerImg
+ * off "About the Honeybee"), coconut-field (coconutPlantationImg off
+ * "About the Coconut Tree"), and jaggery-palm (kithulTreeImg off "About
+ * the Kithul Palm"). Only that one field was removed from each — every
+ * other section, image, and word of body text is untouched, and the
+ * heroImage collages themselves are unaffected since each is a
+ * pre-generated static file, not built from these imports at runtime.
+ * The six now-fully-unused imports were removed to satisfy
+ * noUnusedLocals; each image's neighbouring sibling import (still used
+ * by a later section) was left in place.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
@@ -1512,7 +1522,6 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "About the Cinnamon Tree",
-        image: cinnamonTreeImg,
         body: "Cinnamomum verum — sold as 'true cinnamon' or Ceylon cinnamon — is a small evergreen tree in the laurel family, native to Sri Lanka and southern India. It's the tree's inner bark that matters commercially: peeled, dried, and rolled into the familiar cinnamon quills. Given well-drained soil and steady tropical rainfall, the tree also yields leaves and an essential oil valued in cooking and traditional medicine worldwide.",
       },
       {
@@ -1584,7 +1593,6 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "About the Ginger Plant",
-        image: gingerPlantImg,
         body: "Zingiber officinale — the ginger plant — is a perennial herb in the Zingiberaceae family, widely grown in tropical and subtropical regions including Sri Lanka and India. It's the underground rhizome that matters most: used as a spice and medicine for centuries. Ginger thrives in warm, humid climates with rich, well-drained soil, and plays a central role in traditional cuisine and herbal medicine across many cultures.",
       },
       {
@@ -1642,7 +1650,6 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "About the Turmeric Plant",
-        image: turmericPlantImg,
         body: "Curcuma longa — the turmeric plant — is a perennial herb in the ginger family, Zingiberaceae, native to South Asia. It's grown chiefly for its rhizomes, which are boiled, dried, and ground into the bright yellow powder known as turmeric. The plant thrives in warm, humid climates with well-drained, fertile soil, and has been valued for centuries as a spice, a natural dye, and a traditional medicine.",
       },
       {
@@ -1719,7 +1726,6 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "About the Honeybee",
-        image: beeWildflowerImg,
         body: "Apis mellifera — the honeybee — is one of the world's most important pollinators, admired for its remarkable teamwork, honey production, and essential role in ecosystems everywhere. A small, striped insect with two pairs of wings, a stinger, and an excellent sense of smell, it has adapted to life in highly organised colonies found on nearly every continent.",
       },
       {
@@ -2036,7 +2042,6 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "About the Coconut Tree",
-        image: coconutPlantationImg,
         body: "Cocos nucifera — the coconut tree — is a tall palm in the Arecaceae family, widely cultivated across tropical coastal regions worldwide. Known as the 'Tree of Life', every part of it is useful — from its nutritious fruit and refreshing water to its wood, leaves, and fibre. The tree thrives in sandy, well-drained soils and can withstand high salinity, making it common along coastlines.",
       },
       {
@@ -2101,7 +2106,6 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "About the Kithul Palm",
-        image: kithulTreeImg,
         body: "Caryota urens — the kithul palm, or fishtail palm — is a tall, graceful palm found across Sri Lanka, India, and other tropical Asian countries, valued for its multipurpose use. Its most notable product is the sweet sap tapped from its flower stalks, which is boiled down to produce traditional kithul treacle and jaggery. The tree is also known for its strong, fibrous trunk and beautiful fishtail-shaped leaves.",
       },
       {
