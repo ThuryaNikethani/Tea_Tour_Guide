@@ -35,12 +35,12 @@ export function Header() {
             ))}
           </div>
 
-          <Link to="/" className="flex items-center gap-3 justify-self-start md:justify-self-center">
-            <img src={logo} alt="" className="w-10 h-10 rounded-full object-contain" />
-            <span className="font-heading font-semibold text-xl text-tea-900 dark:text-white">{t("appTitle")}</span>
+          <Link to="/" className="flex items-center gap-3 min-w-0 justify-self-start md:justify-self-center">
+            <img src={logo} alt="" className="w-10 h-10 rounded-full object-contain shrink-0" />
+            <span className="font-heading font-semibold text-xl text-tea-900 dark:text-white truncate">{t("appTitle")}</span>
           </Link>
 
-          <div className="flex items-center gap-3 justify-self-end">
+          <div className="flex items-center gap-3 justify-self-end shrink-0">
             <Link to="/#contact" className="hidden md:inline shrink-0 whitespace-nowrap hover:text-gold-600 text-xs font-semibold uppercase tracking-[0.12em] text-tea-700 dark:text-tea-200 transition-colors">
               {t("contactUs")}
             </Link>
