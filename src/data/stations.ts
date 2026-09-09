@@ -234,6 +234,12 @@ import lowGrownTeaGradesSignImg from "../assets/sorting/low-grown-tea-grades-sig
 // per-grade percentages are not factual and are not used in this
 // station's text, only shown as a generic supporting graphic.
 import gradeYieldDiagramImg from "../assets/sorting/grade-yield-diagram.jpg";
+// Real, user-supplied photos of visitors touring the sorting/grading
+// floor, including the estate's electronic colour separator. Visitor
+// faces are partly visible (hairnets/masks); use confirmed with the
+// user. See the provenance note near the "sorting" station below.
+import sortingFloorVisit1Img from "../assets/sorting/sorting-floor-visit-1.jpg";
+import sortingFloorVisit2Img from "../assets/sorting/sorting-floor-visit-2.jpg";
 // Real, user-supplied photo of the estate's own polytunnel interior —
 // the same photo used as the cover of the supplied crop-schedule PDF,
 // showing several of the labelled crops (Scotch Bonnet, leeks, carrots,
@@ -650,6 +656,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * is still shared with "sorting", which keeps its own unrelated
  * multi-image row untouched. Section text itself (and the sorting
  * station) is byte-identical to before.
+ * "sorting" gained two real photos on 2026-09-09 — visitors touring the
+ * sorting/grading floor, including the estate's electronic colour
+ * separator — appended to the existing three-image row (the two grade
+ * signs plus the AI-generated yield diagram), now five images in the
+ * same `imageFit: "contain"` equal-size treatment. Visitor faces are
+ * partly visible (hairnets/masks); use confirmed with the user. No text
+ * or other station changed.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -1560,12 +1573,12 @@ export const STATIONS: Station[] = [
     shortName: "Sort",
     icon: "Filter",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-09",
     heroTagline: "The estate's own tea-grade signs, laying out how each grade is classified.",
     sections: [
       {
         heading: "Sorting & Grading",
-        image: [lowGrownTeaGradesSignImg, artisanalTeaGradesSignImg, gradeYieldDiagramImg],
+        image: [lowGrownTeaGradesSignImg, artisanalTeaGradesSignImg, gradeYieldDiagramImg, sortingFloorVisit1Img, sortingFloorVisit2Img],
         imageFit: "contain",
         body: "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse. That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong. Sieves of different mesh sizes further separate particles by size over several passes, and an electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside — none of this colour or character comes from dyes or additives, only natural processing. Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
       },
