@@ -19,8 +19,9 @@ const CULTIVAR_PHOTOS = [
 export function Highlights() {
   const { t, language } = useLanguage();
   const nurseryStation = getStation("nursery")!;
-  const cultivarIndex = nurseryStation.sections?.findIndex((s) => s.heading === "Tea Cultivars") ?? -1;
-  const cultivarSection = cultivarIndex >= 0 ? localizeStation(nurseryStation, language).sections?.[cultivarIndex] : undefined;
+  const clonalTeaStation = getStation("clonal-tea")!;
+  const cultivarIndex = clonalTeaStation.sections?.findIndex((s) => s.heading === "Tea Cultivars") ?? -1;
+  const cultivarSection = cultivarIndex >= 0 ? localizeStation(clonalTeaStation, language).sections?.[cultivarIndex] : undefined;
 
   return (
     <div className="bg-white dark:bg-tea-950">
@@ -40,19 +41,19 @@ export function Highlights() {
               image={cultivarSection.image as string}
               heading={cultivarSection.heading}
               body={cultivarSection.body}
-              href={`/station/${nurseryStation.id}#section-${cultivarIndex}`}
+              href={`/station/${clonalTeaStation.id}#section-${cultivarIndex}`}
               ctaLabel={t("startTour")}
             />
           )}
         </div>
       </section>
 
-      {/* ---------- Cultivar photo strip: real signposted plants from the nursery, each linking to its own section ---------- */}
+      {/* ---------- Cultivar photo strip: real signposted plants in the nursery garden, each linking to its own section on the Clonal Tea page ---------- */}
       <section className="max-w-4xl mx-auto px-4 pt-8 pb-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gold-500/25 border border-gold-500/25">
           {CULTIVAR_PHOTOS.map(({ img, code }) => {
-            const sectionIndex = nurseryStation.sections?.findIndex((s) => s.heading === code) ?? -1;
-            const href = sectionIndex >= 0 ? `/station/${nurseryStation.id}#section-${sectionIndex}` : `/station/${nurseryStation.id}`;
+            const sectionIndex = clonalTeaStation.sections?.findIndex((s) => s.heading === code) ?? -1;
+            const href = sectionIndex >= 0 ? `/station/${clonalTeaStation.id}#section-${sectionIndex}` : `/station/${clonalTeaStation.id}`;
             return (
               <Link key={code} to={href} className="relative block bg-white group">
                 <img src={img} alt={code} loading="lazy" className="w-full h-40 object-cover group-hover:opacity-85 transition-opacity" />
