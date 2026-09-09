@@ -819,6 +819,20 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * limit the vertical top-crop's damage, narrow enough that a normal
  * desktop window shows every panel without side-cropping. Same per-photo
  * vertical anchors as before, just reapplied to the new panel height.
+ * The user then flagged three of clonal-tea's four panels (TRI 2022,
+ * TRI 4006, TRI 3025) as looking rotated compared to the fourth (TRI
+ * 2043). Root cause: those three source photos carry an EXIF orientation
+ * tag (value 6, "rotate 90° CW to display correctly") that the collage
+ * script's plain `Image.open()` was ignoring — it works on the raw,
+ * still-rotated pixel data unless told otherwise, which is why the photos
+ * displayed correctly everywhere else (browsers/viewers apply EXIF
+ * orientation automatically) but came out sideways once baked into a
+ * collage. TRI 2043 has no EXIF orientation tag, which is why it alone
+ * looked right. Fixed by adding `ImageOps.exif_transpose()` right after
+ * opening each image, before cropping — this bakes in the correct
+ * rotation permanently. Rebuilt at 400x400 panels (matching the other
+ * 4-panel collages), keeping the same anchor logic; TRI 3025's sign is
+ * now fully visible too, which the rotation had partly obscured before.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
