@@ -598,6 +598,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * (Bhutan Oyster, Black Oyster) with no additional data filled in.
  * Folded into the existing description/keyPoints text, same as the
  * pruning and tea-grade signs earlier — no restructuring to sections.
+ * "clonal-tea" was converted the same way on 2026-09-09 to carry the same
+ * four signposted TRI cultivar photos (TRI 2022, TRI 2043, TRI 4006, TRI
+ * 3025) already used in the nursery station's "Tea Cultivars" trial-plot
+ * sections and on the home page's Highlights cultivar strip — reusing the
+ * existing imported image files rather than adding new ones, same
+ * pattern as the artisanal-tea-grades/sorting shared sign image. Existing
+ * description/keyPoints merged unchanged into one section body; multi-
+ * image row uses the established `imageFit: "contain"` equal-size
+ * treatment.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -1302,11 +1311,16 @@ export const STATIONS: Station[] = [
     shortName: "Clonal Tea",
     icon: "Gem",
     verified: true,
-    lastVerified: "2026-08-31",
-    description:
-      "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price. The Tea Research Institute (TRI) breeds clonal varieties for different needs — some for drought or rain tolerance and higher yield, others for the distinctive red- or green-tipped young buds prized for hand-made specialty teas. Widely planted, high-yielding cultivars such as TRI 2023, TRI 2025, and TRI 2026 are common on both estates and in home gardens, while the rarer specialty cultivars are mostly grown on larger estates for handcrafted tea rather than everyday cultivation. Despite looking like years, these TRI numbers are simply assigned identifiers, not the year each cultivar was released.",
-    keyPoints:
-      "Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities. Buds from the specialty red- or green-tipped cultivars are hand-picked for rare grades like Golden Tips and Silver Tips, and estates typically pay around Rs. 100 more per kilogram for them than for standard plucked leaf.",
+    lastVerified: "2026-09-09",
+    heroTagline: "Some of the estate's own signposted clonal cultivar trial plants.",
+    sections: [
+      {
+        heading: "Clonal Tea",
+        image: [tri2022Img, tri2043Img, tri4006Img, tri3025Img],
+        imageFit: "contain",
+        body: "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price. The Tea Research Institute (TRI) breeds clonal varieties for different needs — some for drought or rain tolerance and higher yield, others for the distinctive red- or green-tipped young buds prized for hand-made specialty teas. Widely planted, high-yielding cultivars such as TRI 2023, TRI 2025, and TRI 2026 are common on both estates and in home gardens, while the rarer specialty cultivars are mostly grown on larger estates for handcrafted tea rather than everyday cultivation. Despite looking like years, these TRI numbers are simply assigned identifiers, not the year each cultivar was released. Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities. Buds from the specialty red- or green-tipped cultivars are hand-picked for rare grades like Golden Tips and Silver Tips, and estates typically pay around Rs. 100 more per kilogram for them than for standard plucked leaf.",
+      },
+    ],
     duration: "5-10 minutes",
   },
   {
