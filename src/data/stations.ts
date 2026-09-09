@@ -785,6 +785,17 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * ginger-turmeric, turmeric, bee, coconut-field, unique-fruits) were left
  * as-is since they weren't affected. No station data, text, or file path
  * changed — only the pixel content of the affected collage image files.
+ * The user then asked for a more direct fix: crop every heroImage banner
+ * from the top rather than the center, so `object-top` was added to the
+ * heroImage `<img>` in StationDetail.tsx (heroVideo is untouched). Since
+ * "keep the top, crop the bottom" is now the rule at every viewport
+ * width, clonal-tea's collage was rebuilt again — panels shortened
+ * (500x260 vs. 500x320) and all four signs fully bottom-anchored in their
+ * source crop, which places each sign right at the top of its panel
+ * instead of past the panel's middle, so it survives the new top-crop
+ * with room to spare. The other collages built from portrait photos were
+ * left as rebuilt in the previous pass; their subjects already sit at or
+ * above panel-center, which comfortably survives a top-anchored crop too.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
