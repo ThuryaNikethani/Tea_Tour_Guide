@@ -221,25 +221,18 @@ import highShadeAlbiziaImg from "../assets/shade-management/high-shade-albizia.j
 // height. See the provenance note near the "pruning" station below.
 import firstCrossCutSignImg from "../assets/pruning/first-cross-cut-sign.jpg";
 import secondCrossCutSignImg from "../assets/pruning/second-cross-cut-sign.jpg";
-// Real, user-supplied photos of the estate's own two tea-grade signs
-// (background removed with AI, then cropped in to the poster itself,
-// same as the pruning signs) — "Artisanal Tea Grades" (shown on both
-// "sorting" and "artisanal-tea-grades", see each station's provenance
-// note below) and "Low Grown Tea Grades" (used on "sorting" only, see
-// its provenance note below).
+// Real, user-supplied photo of the estate's own "Artisanal Tea Grades"
+// sign (background removed with AI, then cropped in to the poster
+// itself, same as the pruning signs) — used as "artisanal-tea-grades"'s
+// own heroImage, and also baked into "sorting"'s collage heroImage
+// below. See each station's provenance note below.
 import artisanalTeaGradesSignImg from "../assets/sorting/artisanal-tea-grades-sign.jpg";
-import lowGrownTeaGradesSignImg from "../assets/sorting/low-grown-tea-grades-sign.jpg";
-// NOT a real photo — a fully AI-generated illustrative diagram (confirmed
-// by the user), not sourced from any actual estate sign or document. Its
-// per-grade percentages are not factual and are not used in this
-// station's text, only shown as a generic supporting graphic.
-import gradeYieldDiagramImg from "../assets/sorting/grade-yield-diagram.jpg";
-// Real, user-supplied photos of visitors touring the sorting/grading
-// floor, including the estate's electronic colour separator. Visitor
-// faces are partly visible (hairnets/masks); use confirmed with the
-// user. See the provenance note near the "sorting" station below.
-import sortingFloorVisit1Img from "../assets/sorting/sorting-floor-visit-1.jpg";
-import sortingFloorVisit2Img from "../assets/sorting/sorting-floor-visit-2.jpg";
+// A generated collage combining all five of "sorting"'s images (both
+// grade signs, the AI-generated yield diagram, and the two sorting-floor
+// visitor photos) into one wide strip, each center-cropped to the same
+// size — used as the station's heroImage banner. See the provenance note
+// near the "sorting" station below.
+import sortingCollageImg from "../assets/sorting/sorting-collage.jpg";
 // Real, user-supplied photo of the estate's own polytunnel interior —
 // the same photo used as the cover of the supplied crop-schedule PDF,
 // showing several of the labelled crops (Scotch Bonnet, leeks, carrots,
@@ -669,8 +662,18 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * the other four since it wasn't already used as a hero elsewhere, unlike
  * the Artisanal sign). The remaining four images — the Artisanal sign,
  * the AI-generated yield diagram, and the two sorting-floor visitor
- * photos — stay in the section as a plain four-image row, which now fits
- * on one line without wrapping.
+ * photos — stayed in the section as a plain four-image row.
+ * Superseded a few minutes later, still 2026-09-09: the user asked for
+ * all five images combined into one clean collage instead. Generated
+ * with a small Pillow script (not committed) that center-crops each of
+ * the five source images to the same 400x560 box and lays them out
+ * side by side into one 2000x560 strip, `sorting-collage.jpg`, used as
+ * the sole `heroImage`. The section's image row was removed entirely —
+ * all five images now live only inside the collage file. The four
+ * individual imports that were only feeding that row (low-grown sign,
+ * yield diagram, both sorting-floor photos) were removed as unused;
+ * `artisanalTeaGradesSignImg` stays imported since "artisanal-tea-grades"
+ * still uses it directly as its own heroImage.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -1582,13 +1585,11 @@ export const STATIONS: Station[] = [
     icon: "Filter",
     verified: true,
     lastVerified: "2026-09-09",
-    heroImage: lowGrownTeaGradesSignImg,
+    heroImage: sortingCollageImg,
     heroTagline: "The estate's own tea-grade signs, laying out how each grade is classified.",
     sections: [
       {
         heading: "Sorting & Grading",
-        image: [artisanalTeaGradesSignImg, gradeYieldDiagramImg, sortingFloorVisit1Img, sortingFloorVisit2Img],
-        imageFit: "contain",
         body: "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea. As dried leaf passes through the grading machinery, it's separated in a single pass by which part of the original shoot it came from: the tender, easily-snapped tip and topmost leaves — only about 2% of each shoot — become FBOPF Extra Special, the finest and most expensive grade, while leaf further down becomes solid grades like BOP and Pekoe. The most mature, lowest leaf becomes Dust, and any unusable stalks and scraps are discarded as Refuse. That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong. Sieves of different mesh sizes further separate particles by size over several passes, and an electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside — none of this colour or character comes from dyes or additives, only natural processing. Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
       },
     ],
