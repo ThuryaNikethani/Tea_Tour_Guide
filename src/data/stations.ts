@@ -833,6 +833,23 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * rotation permanently. Rebuilt at 400x400 panels (matching the other
  * 4-panel collages), keeping the same anchor logic; TRI 3025's sign is
  * now fully visible too, which the rotation had partly obscured before.
+ * On 2026-09-09 the user pointed out that tea-cultivar information lived
+ * in two places — "nursery"'s "Tea Cultivars" section plus 8 individual
+ * TRI-cultivar sections (TRI 4049, 3069, 3055, 4053, 2022, 2043, 4006,
+ * 3025), and "clonal-tea"'s own general explanation — and asked for it to
+ * live in one place: "clonal-tea". All 8 of those sections were moved
+ * (not copied) out of "nursery" and appended after "clonal-tea"'s
+ * existing "Clonal Tea" section, in their original order, with every
+ * heading/image/body byte-identical to before — nursery keeps its first
+ * 11 sections (propagation through transplanting) unchanged. No new
+ * imports were needed: tri4049Img/tri3069Img/tri3055Img/tri4053Img
+ * (previously nursery-only) and tri2022Img/tri2043Img/tri4006Img/
+ * tri3025Img (already also used in clonal-tea's heroImage collage) are
+ * both just referenced from their new home in the same module. The
+ * Highlights page's "Tea Cultivars" story card and 4-photo cultivar strip
+ * (src/pages/Highlights.tsx) were repointed from `nursery` to
+ * `clonal-tea` accordingly, so clicking through from the home page now
+ * lands on the Clonal Tea station instead of Tea Nursery.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
@@ -1498,6 +1515,23 @@ export const STATIONS: Station[] = [
         heading: "Transplanting",
         body: "Transplanting begins early in the monsoon. The rehabilitation grass is cut down at ground level and laid along the contour rows, and tea goes in between those original grass rows at a spacing of 1.2 by 0.6 metres. The theoretical planting density could run higher, but drains, terraces, paths, and access roads inevitably eat into the count, so the working minimum is 11,000 plants per hectare — about 4,500 per acre. Planting holes or trenches are marked out along the contour using an 'A'-frame or a road tracer, dug to size, and packed with compost or other organic matter two to three weeks ahead of planting. Only healthy, vigorous plants aged six to twelve months go in, and in areas with a nematode problem, a nematicide like Furadan or Nemacur goes into each hole at 7 grams. Once planted, cut grass serves as mulch between the rows, stakes brace young plants against the wind, and low, creeping cover crops such as Desmodium ovalifolium or Stylosanthus gracilis help hold the soil in place.",
       },
+    ],
+  },
+  {
+    id: "clonal-tea",
+    order: 4,
+    name: "Clonal Tea",
+    shortName: "Clonal Tea",
+    icon: "Gem",
+    verified: true,
+    lastVerified: "2026-09-09",
+    heroImage: clonalTeaCollageImg,
+    heroTagline: "Some of the estate's own signposted clonal cultivar trial plants.",
+    sections: [
+      {
+        heading: "Clonal Tea",
+        body: "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price. The Tea Research Institute (TRI) breeds clonal varieties for different needs — some for drought or rain tolerance and higher yield, others for the distinctive red- or green-tipped young buds prized for hand-made specialty teas. Widely planted, high-yielding cultivars such as TRI 2023, TRI 2025, and TRI 2026 are common on both estates and in home gardens, while the rarer specialty cultivars are mostly grown on larger estates for handcrafted tea rather than everyday cultivation. Despite looking like years, these TRI numbers are simply assigned identifiers, not the year each cultivar was released. Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities. Buds from the specialty red- or green-tipped cultivars are hand-picked for rare grades like Golden Tips and Silver Tips, and estates typically pay around Rs. 100 more per kilogram for them than for standard plucked leaf.",
+      },
       {
         heading: "Tea Cultivars",
         image: tri4049Img,
@@ -1537,23 +1571,6 @@ export const STATIONS: Station[] = [
         heading: "TRI 3025",
         image: tri3025Img,
         body: "TRI 3025 marks the edge of the trial plot, next to a bilingual 'Tea Cultivars' signboard and a dated planting plaque. Together, the labelled plants here form the nursery's working record of which cultivars are worth expanding.",
-      },
-    ],
-  },
-  {
-    id: "clonal-tea",
-    order: 4,
-    name: "Clonal Tea",
-    shortName: "Clonal Tea",
-    icon: "Gem",
-    verified: true,
-    lastVerified: "2026-09-09",
-    heroImage: clonalTeaCollageImg,
-    heroTagline: "Some of the estate's own signposted clonal cultivar trial plants.",
-    sections: [
-      {
-        heading: "Clonal Tea",
-        body: "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price. The Tea Research Institute (TRI) breeds clonal varieties for different needs — some for drought or rain tolerance and higher yield, others for the distinctive red- or green-tipped young buds prized for hand-made specialty teas. Widely planted, high-yielding cultivars such as TRI 2023, TRI 2025, and TRI 2026 are common on both estates and in home gardens, while the rarer specialty cultivars are mostly grown on larger estates for handcrafted tea rather than everyday cultivation. Despite looking like years, these TRI numbers are simply assigned identifiers, not the year each cultivar was released. Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities. Buds from the specialty red- or green-tipped cultivars are hand-picked for rare grades like Golden Tips and Silver Tips, and estates typically pay around Rs. 100 more per kilogram for them than for standard plucked leaf.",
       },
     ],
     duration: "5-10 minutes",
