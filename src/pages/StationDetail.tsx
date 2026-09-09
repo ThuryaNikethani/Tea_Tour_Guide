@@ -224,7 +224,10 @@ function SectionContent({ section }: { section: StationSection }) {
   // and use object-contain so each one scales down to fit inside without cropping or distortion —
   // this is what actually guarantees they render at the same size, regardless of each photo's own
   // aspect ratio (unlike relying on matching source-file dimensions, which drift as photos are swapped).
-  const imageClass = isContain ? "flex-1 h-72 object-contain rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
+  // min-w-0 overrides the flex item's default min-width:auto, which otherwise lets a tall/narrow
+  // photo's natural content width push the row past the container — the row must stay exactly as
+  // wide as the text below it, not grow to fit whatever the images would prefer.
+  const imageClass = isContain ? "flex-1 min-w-0 h-72 object-contain rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
   const images = section.image && (
     Array.isArray(section.image) ? (
       <div className={isContain ? "flex flex-nowrap justify-center items-start gap-2 mb-3" : "grid grid-cols-2 gap-2 mb-3"}>
