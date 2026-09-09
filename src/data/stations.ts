@@ -197,30 +197,27 @@ import starfruitHarvestImg from "../assets/starfruit/starfruit-harvest.webp";
 // field, showing the cultivar's distinctive purple-red young shoot. See
 // the provenance note near the "organic-cultivation" station below.
 import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
-// Real, user-supplied photos of this estate's own equipment and signage.
-// See the provenance notes near the "introduction" and "handmade-factory"
-// stations below.
+// Real, user-supplied photo of this estate's own equipment/signage, used
+// directly as "introduction"'s heroImage. See the provenance note near
+// the "introduction" station below.
 import ceylonTeaSymbolImg from "../assets/introduction/ceylon-tea-symbol.jpg";
-import handmadeTrayRackImg from "../assets/handmade-factory/tray-rack.jpg";
-import rollerMachineImg from "../assets/handmade-factory/roller-machine.jpg";
-import dryerUnitImg from "../assets/handmade-factory/dryer-unit.jpg";
-// Real, user-supplied photo of the estate's own small withering trough at
-// the Handmade Tea Factory, filled with leaf. See the provenance note
-// near the "handmade-factory" station below.
-import witheringTroughImg from "../assets/handmade-factory/withering-trough.jpg";
-// Real, user-supplied photos of two labelled shade trees on the estate —
-// a general "why shade trees" signboard, and a high-shade Albizia
-// moluccana specimen tagged with its own species/size marker. See the
-// provenance note near the "shade-management" station below.
-import shadeTreeSignboardImg from "../assets/shade-management/shade-tree-signboard.jpg";
-import highShadeAlbiziaImg from "../assets/shade-management/high-shade-albizia.jpg";
-// Real, user-supplied photos of the estate's own two pruning-stage signs
-// (cropped in to the poster itself, cutting out most of the surrounding
-// foliage) — "Palamu Haras Kapuma" (first cross-cut) and "Dewana Haras
-// Kapuma" (second cross-cut), each with its own illustrated target
-// height. See the provenance note near the "pruning" station below.
-import firstCrossCutSignImg from "../assets/pruning/first-cross-cut-sign.jpg";
-import secondCrossCutSignImg from "../assets/pruning/second-cross-cut-sign.jpg";
+// A generated collage combining four real photos of the Handmade Tea
+// Factory's own equipment (withering trough, tray rack, hand-roller,
+// dryer unit), same treatment as "sorting"'s collage. Used as
+// "handmade-factory"'s heroImage. See the provenance note near the
+// "handmade-factory" station below.
+import handmadeFactoryCollageImg from "../assets/handmade-factory/handmade-factory-collage.jpg";
+// A generated collage combining two real photos of labelled shade trees
+// on the estate — a general "why shade trees" signboard, and a
+// high-shade Albizia moluccana specimen. Used as "shade-management"'s
+// heroImage. See the provenance note near the "shade-management" station
+// below.
+import shadeManagementCollageImg from "../assets/shade-management/shade-management-collage.jpg";
+// A generated collage combining the estate's own two pruning-stage signs
+// — "Palamu Haras Kapuma" (first cross-cut) and "Dewana Haras Kapuma"
+// (second cross-cut). Used as "pruning"'s heroImage. See the provenance
+// note near the "pruning" station below.
+import pruningCollageImg from "../assets/pruning/pruning-collage.jpg";
 // Real, user-supplied photo of the estate's own "Artisanal Tea Grades"
 // sign (background removed with AI, then cropped in to the poster
 // itself, same as the pruning signs) — used as "artisanal-tea-grades"'s
@@ -243,28 +240,27 @@ import packingCollageImg from "../assets/packing/packing-collage.jpg";
 // Real, user-supplied photo of the estate's own polytunnel interior —
 // the same photo used as the cover of the supplied crop-schedule PDF,
 // showing several of the labelled crops (Scotch Bonnet, leeks, carrots,
-// radish) and the misting system in use. See the provenance note near
-// the "polytunnel" station below.
+// radish) and the misting system in use. Used directly as "polytunnel"'s
+// heroImage. See the provenance note near the "polytunnel" station below.
 import polytunnelInteriorImg from "../assets/polytunnel/polytunnel-interior.jpg";
-// Real, user-supplied photos of visitors hand-plucking tea in the
-// estate's own garden, wearing the traditional back-carried plucking
-// basket. See the provenance note near the "plucking" station below.
-import pluckerWithBasketImg from "../assets/plucking/plucker-with-basket.jpg";
-import pluckingGroupImg from "../assets/plucking/plucking-group.jpg";
-// Real, user-supplied exterior photos of the estate's own main factory
-// building, with its "Athukorala Tea Factory" signage. Resized down from
-// the original ~24MP/40MB PNGs to a normal web size. See the provenance
-// note near the "tea-factory" station below.
-import factoryBuilding1Img from "../assets/tea-factory/factory-building-1.jpg";
-import factoryBuilding2Img from "../assets/tea-factory/factory-building-2.jpg";
-// Real, user-supplied photos of visitors at the estate's own tea-tasting
-// counter in the tea center. Visitor faces are visible; use confirmed
-// with the user. See the provenance note near the "tea-center" station
-// below.
-import tastingFamily1Img from "../assets/tea-center/tasting-family-1.jpg";
-import tastingFamily2Img from "../assets/tea-center/tasting-family-2.jpg";
-import tastingGroup3Img from "../assets/tea-center/tasting-group-3.jpg";
-import tastingCouple4Img from "../assets/tea-center/tasting-couple-4.jpg";
+// A generated collage combining two real photos of visitors hand-plucking
+// tea in the estate's own garden. Used as "plucking"'s heroImage. See the
+// provenance note near the "plucking" station below.
+import pluckingCollageImg from "../assets/plucking/plucking-collage.jpg";
+// A generated collage combining two real exterior photos of the estate's
+// own main factory building. Used as "tea-factory"'s heroImage. See the
+// provenance note near the "tea-factory" station below.
+import teaFactoryCollageImg from "../assets/tea-factory/tea-factory-collage.jpg";
+// A generated collage combining four real photos of visitors at the
+// estate's own tea-tasting counter. Visitor faces are visible; use
+// confirmed with the user. Used as "tea-center"'s heroImage. See the
+// provenance note near the "tea-center" station below.
+import teaCenterCollageImg from "../assets/tea-center/tea-center-collage.jpg";
+// A generated collage combining the same four signposted TRI cultivar
+// photos already used in the nursery station's "Tea Cultivars" sections.
+// Used as "clonal-tea"'s heroImage. See the provenance note near the
+// "clonal-tea" station below.
+import clonalTeaCollageImg from "../assets/clonal-tea/clonal-tea-collage.jpg";
 // Sourced from the factory's own coconut microsite (coconut-atf.netlify.app),
 // but NOT the estate's own photography — generic Cocos nucifera photography,
 // not photos of this estate's own trees. See the provenance note near the
@@ -681,6 +677,26 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * yield diagram, both sorting-floor photos) were removed as unused;
  * `artisanalTeaGradesSignImg` stays imported since "artisanal-tea-grades"
  * still uses it directly as its own heroImage.
+ * Extended to most of the rest of the site the same day: "introduction",
+ * "clonal-tea", "pruning", "organic-cultivation", "shade-management",
+ * "plucking", "tea-factory", "handmade-factory", "tea-center", and
+ * "polytunnel" all moved their inline section image(s) into a top-level
+ * `heroImage` — a generated same-size-crop collage for the multi-image
+ * ones (clonal-tea, pruning, shade-management, plucking, tea-factory,
+ * handmade-factory, tea-center), or the single existing photo directly
+ * for the ones that only had one (introduction, organic-cultivation,
+ * polytunnel). Every one of these already had a heroTagline from earlier
+ * work, reused as-is for the banner overlay. Explicitly excluded, per the
+ * user: "nursery" (its own many-image cultivar-trial layout), "cinnamon",
+ * "ginger-turmeric", "turmeric", "bee", "unique-fruits" (and its nested
+ * fruit sub-pages), "coconut-field", and "jaggery-palm" — all left
+ * exactly as they were. "sorting", "artisanal-tea-grades", and "packing"
+ * already had this treatment from earlier the same day and were left
+ * alone. Section body text is untouched everywhere; only the image
+ * field(s) moved. Polytunnel had earlier been told to keep its layout
+ * unchanged when its interior photo was first added — the user
+ * explicitly overrode that this time, so it got the heroImage treatment
+ * too.
  * "packing" gained the same collage-heroImage treatment on 2026-09-09 —
  * two real photos the user supplied (visitors bagging graded tea, and
  * examining finished grades in bins), combined with the same Pillow
@@ -1256,13 +1272,13 @@ export const STATIONS: Station[] = [
     shortName: "Introduction",
     icon: "Mountain",
     verified: true,
-    lastVerified: "2026-09-04",
+    lastVerified: "2026-09-09",
     virtualTourUrl: "https://ceylonteatourism.com/",
+    heroImage: ceylonTeaSymbolImg,
     heroTagline: "The Ceylon Tea Symbol of Quality, seen on a signboard at the estate.",
     sections: [
       {
         heading: "Ceylon Tea — Symbol of Quality",
-        image: ceylonTeaSymbolImg,
         body: "Since the early 1800s, the name \"Ceylon\" has been synonymous with tea. The history of Ceylon tea runs back to the British rule in Sri Lanka over two hundred years ago. The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. In 1839, further tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka. The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa. High-grown tea (above roughly 1,200m, as in Nuwara Eliya and Uva) tends to be delicate and aromatic; low-grown tea (below about 600m, as produced here) is typically stronger and darker — this estate is a low-country, or 'Pahatharata,' producer, sitting within the Ruhuna growing region specifically, one of Ceylon tea's three geographic classifications alongside up-country ('Udarata') and mid-country ('Medarata'). Visitors are traditionally welcomed with 'Ayubowan' — a Sinhala greeting meaning 'may you live long' — sometimes in person by the estate's own chairman, Anura Athukorala.",
       },
     ],
@@ -1394,12 +1410,11 @@ export const STATIONS: Station[] = [
     icon: "Gem",
     verified: true,
     lastVerified: "2026-09-09",
+    heroImage: clonalTeaCollageImg,
     heroTagline: "Some of the estate's own signposted clonal cultivar trial plants.",
     sections: [
       {
         heading: "Clonal Tea",
-        image: [tri2022Img, tri2043Img, tri4006Img, tri3025Img],
-        imageFit: "contain",
         body: "Some of the most sought-after teas come from clonal plants — cuttings propagated from a single exceptional parent bush rather than grown from seed. This stop covers how clonal tea is propagated and why it can command a premium price. The Tea Research Institute (TRI) breeds clonal varieties for different needs — some for drought or rain tolerance and higher yield, others for the distinctive red- or green-tipped young buds prized for hand-made specialty teas. Widely planted, high-yielding cultivars such as TRI 2023, TRI 2025, and TRI 2026 are common on both estates and in home gardens, while the rarer specialty cultivars are mostly grown on larger estates for handcrafted tea rather than everyday cultivation. Despite looking like years, these TRI numbers are simply assigned identifiers, not the year each cultivar was released. Clonal propagation preserves a prized plant's exact characteristics; the finest clonal teas are often produced in very limited quantities. Buds from the specialty red- or green-tipped cultivars are hand-picked for rare grades like Golden Tips and Silver Tips, and estates typically pay around Rs. 100 more per kilogram for them than for standard plucked leaf.",
       },
     ],
@@ -1412,13 +1427,12 @@ export const STATIONS: Station[] = [
     shortName: "Pruning",
     icon: "Scissors",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-09",
+    heroImage: pruningCollageImg,
     heroTagline: "The estate's own on-site signs marking its two pruning stages.",
     sections: [
       {
         heading: "Pruning",
-        image: [firstCrossCutSignImg, secondCrossCutSignImg],
-        imageFit: "contain",
         body: "Before pruning, the estate deliberately leaves the tea bush to grow out for a period rather than cutting it back right away — letting new growth come in fully so the bush builds up nourishment. Only once that build-up is complete does pruning begin, cutting the bush back down to roughly knee height. On-site signs mark this out as two named stages: the first cross-cut (Palamu Haras Kapuma) brings the bush down to roughly 9-12 inches (22-30 cm), and the second cross-cut (Dewana Haras Kapuma) brings it back up to roughly 16-18 inches (40-45 cm). Letting the bush grow out first, rather than pruning on a fixed schedule regardless of condition, gives the plant time to channel nourishment upward before it's cut back.",
       },
     ],
@@ -1675,12 +1689,12 @@ export const STATIONS: Station[] = [
     shortName: "Organic Tea",
     icon: "Recycle",
     verified: true,
-    lastVerified: "2026-09-04",
+    lastVerified: "2026-09-09",
+    heroImage: tri2043ShootImg,
     heroTagline: "A closer look at the estate's own organically grown TRI 2043 tea bushes.",
     sections: [
       {
         heading: "TRI 2043 — Grown Organically at the Estate",
-        image: tri2043ShootImg,
         body: "The tea cultivar grown organically at this estate is TRI 2043, a China-type cultivar bred by the Tea Research Institute and known for a purple-hued shoot coloured by the pigment anthocyanin instead of the usual green. Mature TRI 2043 bushes here, grown without synthetic pesticides or fertilisers, already supply specialty grades like Golden Tip, Silver Tip, White Tea, Purple Tea, and Pink Tea. That's different from the younger TRI 2043 cuttings back at the nursery — those are still being trialled and haven't been cleared for planting at scale yet. TRI 2043 is naturally low-yielding, which is why the specialty grades made from it stay so limited in supply. Organic certification itself generally requires several years of chemical-free cultivation before a plot can be certified, with yields running lower than on conventionally managed land throughout.",
       },
     ],
@@ -1693,13 +1707,12 @@ export const STATIONS: Station[] = [
     shortName: "Shade Trees",
     icon: "Trees",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-09",
+    heroImage: shadeManagementCollageImg,
     heroTagline: "Two of the estate's own labelled shade trees, growing right among the tea bushes.",
     sections: [
       {
         heading: "Shade Tree Management",
-        image: [shadeTreeSignboardImg, highShadeAlbiziaImg],
-        imageFit: "contain",
         body: "Tea plants need balanced sunlight — too harsh and the leaves burn, too dark and they won't grow — so the estate manages this with two layers of shade trees planted among the bushes. The low shade tree — known locally as Makulatha (Ladappa, Vatamara) — is planted closer to the tea bushes to moderate ground temperature, retain soil moisture, and act as a natural windbreak. High shade trees such as Albizia are tall, wide-canopy trees that filter intense direct sunlight across large sections of the estate while enriching the soil with falling organic matter. Estate managers regularly prune both layers to fine-tune shade conditions for the season and altitude, tracking the botanical names and characteristics of each shade species alongside the tea cultivars to protect biodiversity and crop health.",
       },
     ],
@@ -1996,12 +2009,12 @@ export const STATIONS: Station[] = [
     shortName: "Pluck",
     icon: "Hand",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-09",
+    heroImage: pluckingCollageImg,
     heroTagline: "Visitors hand-plucking tea in the estate's own garden.",
     sections: [
       {
         heading: "Plucking",
-        image: [pluckerWithBasketImg, pluckingGroupImg],
         body: "Every leaf begins in the tea garden, where pluckers hand-pick each shoot down to what staff call 'deka hamara' — two and a half leaves — often three and a half, rather than a strict two-leaves-and-a-bud count. This fine plucking standard is what gives Ceylon tea its delicate character — coarser leaves are left on the bush. The exact leaf count plucked differs between black tea and green tea. Only the youngest growth is used. Hand plucking protects the bush and selects the leaves with the highest concentration of flavour compounds, something machines can't replicate at this quality level.",
       },
     ],
@@ -2054,12 +2067,12 @@ export const STATIONS: Station[] = [
     shortName: "Tea Factory",
     icon: "Factory",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-09",
+    heroImage: teaFactoryCollageImg,
     heroTagline: "The estate's own main factory building.",
     sections: [
       {
         heading: "The Tea Factory",
-        image: [factoryBuilding1Img, factoryBuilding2Img],
         body: "The main factory building is where plucked leaf is turned into finished tea, from weighing through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — weighing, withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order. A working tea factory runs the full weighing-to-packing sequence under one roof, timed closely with each day's leaf intake — incoming leaf is weighed on arrival to log the day's harvest before processing begins. Visitors touring the factory floor are asked to wear a hairnet, a mask, and protective footwear, in line with the facility's hygiene standards.",
       },
     ],
@@ -2148,13 +2161,12 @@ export const STATIONS: Station[] = [
     shortName: "Handmade Factory",
     icon: "HandHeart",
     verified: true,
-    lastVerified: "2026-09-04",
+    lastVerified: "2026-09-09",
+    heroImage: handmadeFactoryCollageImg,
     heroTagline: "The estate's own Handmade Tea Factory — withering trough, tray racks, hand-roller, and dryer.",
     sections: [
       {
         heading: "Handmade Tea Factory",
-        image: [witheringTroughImg, handmadeTrayRackImg, rollerMachineImg, dryerUnitImg],
-        imagePosition: "bottom",
         body: "Alongside mechanized production, some tea is processed entirely by hand rather than machine at every stage. Most of the estate's artisanal specialty grades — Golden Tip, Silver Tip, White Tea, Purple Tea, Pink Tea, Vita Glow (made from the green-hued shoot's bud, unlike Golden and Silver Tip's purple-hued one), hand-tied Blooming Tea, and flower-infused blends such as lotus tea — are finished here rather than in the main black tea factory. Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume. A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; once steamed, the leaf rests outside to shed the surface moisture left by steaming, then is hand-rolled to curl it and draw out its colour, strength, aroma, and taste, before a final pass through the dryer, with drying time varying from one small producer to the next. The building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato). This stop covers what distinguishes hand-made tea from factory-line production. Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying. The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
       },
     ],
@@ -2168,12 +2180,11 @@ export const STATIONS: Station[] = [
     icon: "Coffee",
     verified: true,
     lastVerified: "2026-09-09",
+    heroImage: teaCenterCollageImg,
     heroTagline: "Visitors sampling tea at the estate's own tasting counter.",
     sections: [
       {
         heading: "Tea Center",
-        image: [tastingFamily1Img, tastingFamily2Img, tastingGroup3Img, tastingCouple4Img],
-        imageFit: "contain",
         body: "The tour ends at the tea center, where a tasting panel checks every batch — not just here, but earlier too, whenever tea leaves the main factory for the local market or comes in for packing — for defects like over-fermentation, under-fermentation, or scorching, discarding anything that fails before it's sold and noting even minor issues so they can inform future production. On display here are two more small-batch specialties from the handmade factory, Flower Chakra and Tea Coin. Artisanal teas like these can be re-infused up to three times using water heated to about 80°C rather than boiling — roughly 2, 5, and 8 minutes per steep with fresh hot water each time — unlike standard black tea, which is brewed once at full boiling point. Tasting follows a method similar to wine tasting — smelling first, then slurping to pull the tea across the taste buds on the sides of the tongue with a draw of air; the panel spits rather than swallows while tasting up to 50 teas a day, though visitors are welcome to actually drink what they try. Properly brewed black tea needs about 2.5 to 3 minutes of covered steeping, not just a quick dip. BOPF and BOPF Special are the grades most Sri Lankans actually drink day to day; Dust and Dust 1, the lowest grades, are never sent to export markets and are what typically ends up — with added colouring — in cheap supermarket tea bags, which is why the colour appears the instant they're dipped rather than after a proper steep. Much of what's sold in supermarkets is also blended with cheaper tea bought in from elsewhere, unlike the estate's own unblended, single-origin teas. The very finest grades — FF Extra Special, FF Special, FBOP — come from only about 1% of the harvest, the most immature part of the bud, and sell for around $25 per 100g; bulkier grades like OPA and OP run closer to $5-6 per 200g. The white tip particles visible in the finest grades add extra sweetness and mostly go to European buyers, while Arabic markets tend to prefer a stronger cup. Beyond tea, the estate blends its own green and black tea (about 90%) with local herbs (about 10%) — gotukola, heenbovitiya, and moringa — and makes Masala, Cinnamon, and Ginger spice teas from its own spices; the masala recipe uses seven Sri Lankan spices, including cardamom, cinnamon, ginger, and black pepper (the rest a kept secret), and masala or BOP tea is what's recommended for milk tea.",
       },
     ],
@@ -2186,12 +2197,12 @@ export const STATIONS: Station[] = [
     shortName: "Polytunnel",
     icon: "Carrot",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-09",
+    heroImage: polytunnelInteriorImg,
     heroTagline: "Inside the estate's own polytunnel, already growing its first crops.",
     sections: [
       {
         heading: "Polytunnel & Greenhouse",
-        image: polytunnelInteriorImg,
         body: "Alongside an existing greenhouse, the estate is building a polytunnel for growing an assortment of vegetables entirely its own — Scotch Bonnet and green chili peppers, capsicum, gherkins, tomatoes, bell peppers, cabbage, radish, green beans, leeks, spring onions, and carrots among them. Once complete, guests staying at the villa or cabana will be able to freshly pick vegetables grown right here themselves. Each crop follows its own watering routine, alternating root-level drip irrigation with overhead misting depending on the growth stage — misting mainly helps early germination and cooling for crops like carrot and radish, for instance, while drip takes over as the main method once fruiting begins for crops like tomato. Time to first harvest varies widely by crop, from as little as 25-35 days for radish up to 90-120 days for leeks, so the polytunnel should have something ready to pick at almost any point in the season.",
       },
     ],
