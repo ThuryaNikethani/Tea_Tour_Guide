@@ -255,11 +255,18 @@ function SectionContent({ section }: { section: StationSection }) {
   // the same size as the rest rather than stretching to fill it.
   const imageClass = isContain ? "w-full h-72 object-contain rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
   const imageCols = isContain && Array.isArray(section.image) ? columnsFor(section.image.length) : undefined;
+  // The 140px minimum looks right once there's room for it, but on a narrow phone with 3-4 columns
+  // it doesn't fit (e.g. 4 columns need >=560px) — min() caps it to whatever actually fits the
+  // viewport (accounting for the page's own side padding and the gaps between columns) so the grid
+  // never forces horizontal overflow, while still preferring 140px wherever there's space for it.
+  const minColWidth = imageCols
+    ? `min(140px, calc((100vw - 2rem - 0.375rem * ${imageCols - 1}) / ${imageCols}))`
+    : undefined;
   const images = section.image && (
     Array.isArray(section.image) ? (
       <div
         className={isContain ? "grid justify-center gap-1.5 mb-3" : "grid grid-cols-2 gap-2 mb-3"}
-        style={isContain ? { gridTemplateColumns: `repeat(${imageCols}, minmax(140px, 1fr))` } : undefined}
+        style={isContain ? { gridTemplateColumns: `repeat(${imageCols}, minmax(${minColWidth}, 1fr))` } : undefined}
       >
         {section.image.map((src) => (
           <img key={src} src={src} alt={section.heading} loading="lazy" className={imageClass} />
