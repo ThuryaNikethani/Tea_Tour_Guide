@@ -54,6 +54,8 @@ export interface Station {
   duration?: string;
   /** Rich stations (Tea Nursery) use a full-bleed hero video/image plus ordered sections. */
   heroVideo?: string;
+  /** Same full-bleed treatment as heroVideo, for stations with a real photo but no video. */
+  heroImage?: string;
   heroTagline?: string;
   sections?: StationSection[];
   processVideo?: string;
@@ -636,6 +638,18 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * Existing three sections (tree, characteristics, uses/benefits) left
  * untouched; new section adds one short new sentence describing the
  * on-site coconut treat rather than restating anything already covered.
+ * "artisanal-tea-grades" moved its sign photo out of the section body and
+ * into a new top-level `heroImage` field on 2026-09-09, so it renders as
+ * a full-bleed banner with the station name and existing heroTagline
+ * overlaid — the same treatment `heroVideo` already gave the nursery
+ * station, just with a static image instead of a video. Added `heroImage`
+ * to the `Station` interface and a matching render branch in
+ * StationDetail.tsx (mirroring the heroVideo block, not modifying it).
+ * Scoped to this one station only — every other station's layout and the
+ * shared image-in-section rendering path are unchanged. The sign image
+ * is still shared with "sorting", which keeps its own unrelated
+ * multi-image row untouched. Section text itself (and the sorting
+ * station) is byte-identical to before.
  * "shade-management" was converted from description/keyPoints to the
  * heroTagline/sections shape on 2026-09-07, to carry two of the user's own
  * photos: a general "why shade trees" signboard, and a labelled Albizia
@@ -1565,14 +1579,12 @@ export const STATIONS: Station[] = [
     shortName: "Artisanal Teas",
     icon: "Sparkles",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-09",
+    heroImage: artisanalTeaGradesSignImg,
     heroTagline: "The estate's own Artisanal Tea Grades sign.",
     sections: [
       {
         heading: "Artisanal Tea Grades",
-        image: artisanalTeaGradesSignImg,
-        imageFit: "contain",
-        imagePosition: "bottom",
         body: "In addition to standard black tea, the estate also produces rare, handcrafted artisanal teas — mostly finished by hand at the separate Handmade Tea Factory rather than the main black tea line, which is why these grades are also called 'Artisanal Tea Grades': it's closer to a craft than mass production. Many of them come from a distinctive purple-hued shoot — TRI 2043, a Tea Research Institute clone — whose colour comes from anthocyanin; it's a low-yielding cultivar, which is why not every Sri Lankan estate grows it. Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud, whose fine silvery hairs give the grade its name and a faint shimmer; the bud alone is weighed, withered for a few hours, and dried — a simpler process than the fully fermented grades — for a subtly sweet, floral cup with a velvety texture. White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste, with a pale liquor, a velvety texture, a floral aroma, and a natural richness in antioxidants. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting — for a flavour closer to oolong: lighter than black tea but less vegetal than green tea, comparatively low in caffeine, and naturally rich in antioxidants. Pink tea starts out essentially colourless like white tea, and only turns pink once a couple of drops of lime are added — the citrus triggers a colour change in the same anthocyanin pigment that gives the shoot its hue; it also takes well to a couple of drops of honey, is recommended served as iced tea, and is naturally rich in antioxidants too. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one. The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots. These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
       },
     ],
