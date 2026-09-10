@@ -2355,21 +2355,8 @@ export const STATIONS: Station[] = [
     duration: "The final batch is packed and ready for dispatch the same day it's graded.",
   },
   {
-    id: "quality-checking",
-    order: 24,
-    name: "Quality Checking",
-    shortName: "Quality Check",
-    icon: "ClipboardCheck",
-    verified: false,
-    description:
-      "Before tea leaves the main factory — whether it's headed to packing or out to the local market — it passes through a quality check. A member of staff inspects the dried leaf's colour, twist, and particle size, checks its moisture content, and smells and tastes a small sample for aroma and flavour, watching for defects like over-fermentation, under-fermentation, or scorching. Anything that doesn't meet standard is set aside rather than sold, and even minor issues are noted so they can inform the next batch. This is the same kind of check the tasting panel repeats more formally later, at the tea center.",
-    keyPoints:
-      "Colour, twist, particle size, moisture, aroma, and taste are all checked before a batch is approved for packing or sale; batches that fail are set aside, and even small issues get recorded to improve future production.",
-    duration: "A few minutes per batch, done alongside the ongoing grading and packing work.",
-  },
-  {
     id: "handmade-factory",
-    order: 25,
+    order: 24,
     name: "Handmade Tea Factory",
     shortName: "Handmade Factory",
     icon: "HandHeart",
@@ -2403,7 +2390,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "tea-center",
-    order: 26,
+    order: 25,
     name: "Tea Center",
     shortName: "Tea Center",
     icon: "Coffee",
@@ -2437,7 +2424,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "polytunnel",
-    order: 27,
+    order: 26,
     name: "Polytunnel & Greenhouse",
     shortName: "Polytunnel",
     icon: "Carrot",
@@ -2455,7 +2442,7 @@ export const STATIONS: Station[] = [
   },
   {
     id: "mushroom-hut",
-    order: 28,
+    order: 27,
     name: "Mushroom Hut",
     shortName: "Mushroom Hut",
     icon: "Warehouse",
