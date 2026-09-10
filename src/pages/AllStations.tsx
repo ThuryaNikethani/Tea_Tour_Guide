@@ -6,6 +6,7 @@ import {
   Carrot,
   CheckCheck,
   CheckCircle2,
+  ClipboardCheck,
   Citrus,
   Clock,
   Coffee,
@@ -82,6 +83,7 @@ const STATION_ICONS: Record<string, LucideIcon> = {
   Scissors,
   Carrot,
   Warehouse,
+  ClipboardCheck,
 };
 
 export function AllStations() {
