@@ -437,14 +437,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "වායු නොගමන් ඇසුරුම තේ තෙතමනයෙන් සහ ගඳ සුවඳවලින් ආරක්ෂා කරන අතර, ක්‍රියාවලියේ සෑම පෙර අදියරකදීම ප්‍රවේශමෙන් ගොඩනගන ලද රසය රඳවා ගනී. විවිධ රටවල් තමන්ගේ තේවලින් විවිධ දේ අපේක්ෂා කරයි — සමහරු ශක්තිමත්, කහට රසැති කෝප්පයක් කැමති අතර, තවත් සමහරු එසේ නොවේ. එබැවින් ශ්‍රේණියක් අංකුරයේ කුමන කොටසින් ලැබෙනවාද යන්න එක් එක් අපනයන වෙළඳපොළේ රුචියට ගැලපෙන පරිදි සකස් වී ඇත. උදාහරණයක් ලෙස, අරාබි භාෂාව කතා කරන වෙළඳපොළවල් තමන්ගේම දේශයේ එදිනෙදා පානය කරන පුරුද්දේ කොටසක් නොවන විශේෂිත ශ්‍රේණි ඉල්ලා සිටියි. සෘජුවම අපනයනය කරනවා වෙනුවට බොහෝ දුරට බ්‍රෝකර්වරුන් හරහා විකිණීම යන්නෙන් අදහස් වන්නේ, ඉදිරි ජාත්‍යන්තර නැව්ගත කිරීම හා වෙළඳ නාම කිරීම සාමාන්‍යයෙන් හසුරුවන්නේ බාහිර මිලදී ගන්නන් බවයි.",
       duration: "අවසාන කණ්ඩායම ශ්‍රේණිගත කරන දිනයේම පැක් කර නැව්ගත කිරීමට සූදානම් වේ.",
     },
-    "quality-checking": {
-      name: "තත්ත්ව පරීක්ෂාව",
-      description:
-        "තේ ප්‍රධාන කර්මාන්තශාලාවෙන් පිටවීමට පෙර — එය පැක් කිරීමට යැවුවත් හෝ දේශීය වෙළඳපොළට යැවුවත් — එය තත්ත්ව පරීක්ෂාවකට ලක් වේ. කාර්ය මණ්ඩල සාමාජිකයෙක් වියළි කොළයේ වර්ණය, ඉතලීම, සහ අංශු ප්‍රමාණය පරීක්ෂා කර, එහි තෙතමනය පරීක්ෂා කර, කුඩා නියැදියක සුවඳ හා රසය සුවඳ බලා රස බලා, අධික පැසවීම, අඩු පැසවීම, හෝ දැවීම වැනි දෝෂ සඳහා නිරීක්ෂණය කරයි. ප්‍රමිතියට නොගැලපෙන ඕනෑම දෙයක් විකිණීම වෙනුවට වෙන් කර තබන අතර, ඊළඟ කණ්ඩායමට උපකාරී වීමට සුළු දෝෂ පවා සටහන් කරනු ලැබේ. මෙය පසුව තේ මධ්‍යස්ථානයේදී රස බැලීමේ කණ්ඩායම වඩාත් විධිමත් ලෙස පුනරාවර්තනය කරන එම ආකාරයේම පරීක්ෂාවකි.",
-      keyPoints:
-        "වර්ණය, ඉතලීම, අංශු ප්‍රමාණය, තෙතමනය, සුවඳ, සහ රසය යන සියල්ල කණ්ඩායමක් පැක් කිරීමට හෝ විකිණීමට අනුමත කිරීමට පෙර පරීක්ෂා කරනු ලැබේ; අසමත් වන කණ්ඩායම් වෙන් කර තබන අතර, අනාගත නිෂ්පාදනය වැඩිදියුණු කිරීමට සුළු දෝෂ පවා සටහන් කරනු ලැබේ.",
-      duration: "එක් එක් කණ්ඩායමකට මිනිත්තු කිහිපයක්, ක්‍රියාත්මක වන ශ්‍රේණිගත කිරීම සහ පැක් කිරීමේ කටයුතු සමඟ එකවර සිදු කරනු ලැබේ.",
-    },
     cinnamon: {
       name: "කුරුඳු වගාව",
       sectionHeadings: ["කුරුඳු ගස පිළිබඳ", "ලක්ෂණ", "කුරුඳු පීල කිරීම: මෙවලම් සහ ක්‍රියාවලිය", "ප්‍රතිලාභ", "කුරුඳු තේ නිෂ්පාදන"],
@@ -1000,14 +992,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       description: "தரப்படுத்தப்பட்ட தேயிலை எடைபோடப்பட்டு, தரத்திற்காக சுவைபார்க்கப்பட்டு, அலுமினியம் இழை படலம் இட்ட ஈரப்பதம் தடுக்கும் பேக்கேஜிங்கில் முத்திரையிடப்படுகிறது. இதில் தொழிற்சாலையின் பெயரும் சின்னமும், பதிவு எண், சிலோன் தேயிலை சின்னம், மற்றும் உணவு பாதுகாப்பு சான்றிதழ் அச்சிடப்பட்டுள்ளன. பேக்கிங் பகுதியில் பல முடிக்கப்பட்ட தரங்கள் அருகருகே காணப்படுகின்றன — Dust (பெரும்பாலும் தேநீர் பைகளுக்கு), OP1, Pekoe, BOP (Broken Orange Pekoe), மற்றும் OP (Orange Pekoe). OP1 மற்றும் OP குறிப்பாக அரபு மொழி பேசும் சந்தைகளில் பிரபலமானவை, Pekoe ரஷ்யாவிலும் ஈரானிலும் நன்கு அறியப்பட்டது. இங்கு தயாரிக்கப்படும் மிக அரிதான, மிக மதிப்புமிக்க தரம் SFOPE1 ஆகும் — இது ஒரு 'Flowery Tippy' தரம் என அழைக்கப்படுகிறது, தளிரின் உச்சியிலிருந்து கிடைக்கும் வெளிர், வெள்ளி நிற நுனி துகள்களைக் கொண்டிருப்பதால் இந்த பெயர் பெற்றது. இது வலிமையான சுவையை விட அதன் நுட்பமான தன்மைக்காக மதிக்கப்படுகிறது. பைகளின் எடையும் தரத்திற்கேற்ப மாறுபடும்: நிலையான அளவு பையில் Dust போன்ற மெல்லிய, அடர்த்தியான தரத்தை (சுமார் 58 கிலோ) OPE போன்ற பெரிய, இலை நிறைந்த தரத்தை (சுமார் 30 கிலோ) விட மிக அதிகமாக கொள்ள முடியும். பெரும்பாலும், தொழிற்சாலை தனது முடிக்கப்பட்ட தேயிலையை கொழும்பு தேயிலை தரகர்களிடம் ஒப்படைக்கிறது — Forbes & Walker, Akbar Brothers, Finlays போன்ற பெயர்கள் குறிப்பிடப்பட்டன — அவர்கள் அதை கொழும்பு தேயிலை ஏலத்திற்கு கொண்டு செல்கிறார்கள். அங்கு வாங்குபவர்கள் அதை வாங்கி, பெரும்பாலும் மேலும் மதிப்பு சேர்த்த பிறகு தங்கள் சொந்த பிராண்டில் ஏற்றுமதி செய்கிறார்கள். அத்துகோரள பெயரிலேயே நேரடி ஏற்றுமதியும் நடைபெறுகிறது, ஆனால் இது பெரும்பாலும் வெளிநாட்டு வாங்குபவர்களின் சிறப்பு ஆர்டர்களுக்கு மட்டுமே.",
       keyPoints: "காற்றுப்புகா பேக்கிங் தேயிலையை ஈரப்பதம் மற்றும் வாசனைகளிலிருந்து பாதுகாக்கிறது, செயல்முறையின் ஒவ்வொரு முந்தைய கட்டத்திலும் கவனமாக கட்டமைக்கப்பட்ட சுவையை பாதுகாக்கிறது. வெவ்வேறு நாடுகள் தங்கள் தேயிலையிலிருந்து வெவ்வேறு விஷயங்களை எதிர்பார்க்கின்றன — சிலர் வலிமையான, கடுமையான கோப்பையை விரும்புகிறார்கள், மற்றவர்கள் விரும்புவதில்லை. எனவே ஒரு தரம் தளிரின் எந்த பகுதியிலிருந்து வருகிறது என்பது ஒவ்வொரு ஏற்றுமதி சந்தையின் ருசிக்கும் ஏற்ப பொருத்தப்பட்டுள்ளது. உதாரணமாக, அரபு மொழி பேசும் சந்தைகள் தங்கள் சொந்த நாட்டில் அன்றாட குடிப்பழக்கத்தின் பகுதியாக இல்லாத குறிப்பிட்ட தரங்களை கோருகின்றன. நேரடியாக ஏற்றுமதி செய்வதற்கு பதிலாக பெரும்பாலும் தரகர்கள் மூலம் விற்பனை செய்வது என்பதன் பொருள், தொடர்ந்து சர்வதேச கப்பல் போக்குவரத்தும் பிராண்டிங்கும் பொதுவாக வெளி வாங்குபவர்களால் கையாளப்படுகிறது.",
       duration: "இறுதித் தொகுதி தரப்படுத்தப்பட்ட அன்றே பொதிசெய்யப்பட்டு அனுப்புதலுக்குத் தயாராகிறது.",
-    },
-    "quality-checking": {
-      name: "தர பரிசோதனை",
-      description:
-        "தேயிலை முதன்மை தொழிற்சாலையை விட்டு வெளியேறுவதற்கு முன் — அது பேக்கிங்கிற்குச் செல்கிறதா அல்லது உள்ளூர் சந்தைக்குச் செல்கிறதா என்பதைப் பொருட்படுத்தாமல் — அது ஒரு தர பரிசோதனையைக் கடந்து செல்கிறது. ஒரு பணியாளர் உலர்ந்த இலையின் நிறம், முறுக்கு, மற்றும் துகள் அளவை ஆய்வு செய்து, அதன் ஈரப்பதத்தை சரிபார்த்து, ஒரு சிறிய மாதிரியை மணந்து சுவைத்து வாசனை மற்றும் சுவையைப் பரிசோதிக்கிறார், அதிக நொதித்தல், குறைந்த நொதித்தல், அல்லது கருகுதல் போன்ற குறைபாடுகளுக்காக கவனிக்கிறார். தரத்திற்கு பொருந்தாத எதுவும் விற்பனை செய்யப்படுவதற்கு பதிலாக ஒதுக்கி வைக்கப்படுகிறது, மேலும் அடுத்த தொகுதிக்கு உதவும் வகையில் சிறிய பிரச்சினைகள் கூட குறிப்பிடப்படுகின்றன. இது பின்னர் தேயிலை மையத்தில் சுவை பரிசோதனை குழு மேலும் முறையாக மீண்டும் செய்யும் அதே வகையான பரிசோதனையாகும்.",
-      keyPoints:
-        "நிறம், முறுக்கு, துகள் அளவு, ஈரப்பதம், வாசனை, மற்றும் சுவை ஆகிய அனைத்தும் ஒரு தொகுதி பேக்கிங் அல்லது விற்பனைக்கு அங்கீகரிக்கப்படுவதற்கு முன் பரிசோதிக்கப்படுகின்றன; தோல்வியடையும் தொகுதிகள் ஒதுக்கி வைக்கப்படுகின்றன, மேலும் எதிர்கால உற்பத்தியை மேம்படுத்த சிறிய பிரச்சினைகள் கூட பதிவு செய்யப்படுகின்றன.",
-      duration: "ஒரு தொகுதிக்கு சில நிமிடங்கள், நடைபெறும் தரப்படுத்தல் மற்றும் பேக்கிங் பணிகளுடன் ஒரே நேரத்தில் செய்யப்படுகிறது.",
     },
     cinnamon: {
       name: "இலவங்கப்பட்டை தோட்டம்",
@@ -1565,14 +1549,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Il confezionamento ermetico protegge il tè dall'umidità e dagli odori, preservando il gusto costruito con cura in ogni fase precedente del processo. Paesi diversi vogliono cose diverse dal loro tè — alcuni preferiscono una tazza forte e astringente, altri no — quindi quale parte del germoglio dà origine a una qualità è di fatto abbinato al palato di ogni mercato di esportazione. I mercati di lingua araba, ad esempio, richiedono specificamente qualità che non fanno parte delle abitudini quotidiane di consumo nei loro paesi. Vendere principalmente tramite broker anziché esportare direttamente significa che gli acquirenti esterni gestiscono di solito la spedizione internazionale successiva e il branding.",
       duration: "Il lotto finale viene confezionato e pronto per la spedizione lo stesso giorno in cui viene classificato.",
     },
-    "quality-checking": {
-      name: "Controllo Qualità",
-      description:
-        "Prima che il tè lasci la fabbrica principale — sia diretto al confezionamento sia al mercato locale — passa attraverso un controllo di qualità. Un addetto ispeziona il colore, l'arrotolamento e la dimensione delle particelle della foglia essiccata, ne controlla l'umidità, e annusa e assaggia un piccolo campione per aroma e gusto, verificando difetti come sovra-fermentazione, sotto-fermentazione o bruciature. Tutto ciò che non soddisfa lo standard viene messo da parte anziché venduto, e anche i problemi minori vengono annotati per informare il lotto successivo. È lo stesso tipo di controllo che il panel di degustazione ripete più formalmente più avanti, al centro del tè.",
-      keyPoints:
-        "Colore, arrotolamento, dimensione delle particelle, umidità, aroma e gusto vengono tutti controllati prima che un lotto sia approvato per il confezionamento o la vendita; i lotti che non superano il controllo vengono messi da parte, e anche i problemi minori vengono registrati per migliorare la produzione futura.",
-      duration: "Pochi minuti per lotto, svolto insieme al lavoro continuo di classificazione e confezionamento.",
-    },
     cinnamon: {
       name: "Piantagione di Cannella",
       sectionHeadings: ["L'Albero della Cannella", "Caratteristiche", "Sbucciare la Cannella: Strumenti e Processo", "Benefici", "Prodotti al Tè alla Cannella"],
@@ -2128,14 +2104,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       description: "يُوزَن الشاي المُصنَّف، ويُتذوَّق للتأكد من جودته، ويُختَم في عبوات مقاومة للرطوبة مبطنة برقائق الألومنيوم، مطبوع عليها اسم المصنع وشعاره، ورقم تسجيله، ورمز شاي سيلان، وشهادة سلامة الأغذية. تتجاور عدة درجات جاهزة في منطقة التعبئة — Dust (المخصص أساسًا لأكياس الشاي)، وOP1، وPekoe، وBOP (Broken Orange Pekoe)، وOP (Orange Pekoe) — مع رواج خاص لـOP1 وOP في الأسواق الناطقة بالعربية، وشهرة جيدة لـPekoe في روسيا وإيران. أندر وأثمن درجة تُصنَع هنا هي SFOPE1، وهي درجة 'Flowery Tippy' سُمّيت بذلك لاحتوائها على قطع طرفية شاحبة فضية اللون من أعلى جزء في البرعم — وتُقدَّر أكثر لطابعها الرقيق منه لقوتها. يختلف وزن الأكياس أيضًا حسب الدرجة: يستوعب الكيس ذو الحجم الثابت كمية أكبر بكثير من درجة رقيقة وكثيفة مثل Dust (نحو 58 كجم) مقارنة بدرجة أكبر حجمًا وأكثر ورقية مثل OPE (نحو 30 كجم). تسلّم المصنع في الغالب شايه الجاهز لسماسرة الشاي في كولومبو — وردت أسماء مثل Forbes & Walker وAkbar Brothers وFinlays — الذين ينقلونه إلى مزاد شاي كولومبو، حيث يشتريه المشترون وغالبًا ما يصدّرونه تحت علامتهم التجارية الخاصة بعد إضافة قيمة أخرى. يحدث أيضًا تصدير مباشر تحت اسم أثوكورالا نفسه، لكن ذلك يكون بشكل رئيسي لطلبات خاصة عرضية من مشترين في الخارج.",
       keyPoints: "تحمي التعبئة المُحكَمة الشاي من الرطوبة والروائح، وتحافظ على النكهة التي بُنيت بعناية في كل مرحلة سابقة من العملية. تريد الدول المختلفة أشياء مختلفة من شايها — يفضل البعض كوبًا قويًا وقابضًا، بينما لا يفضل آخرون ذلك — لذا فإن أي جزء من البرعم تأتي منه درجة معينة يُوائَم فعليًا مع ذوق كل سوق تصدير. تطلب الأسواق الناطقة بالعربية، على سبيل المثال، درجات محددة ليست جزءًا من عادات الشرب اليومية في بلدانها. البيع في الغالب عبر السماسرة بدلاً من التصدير المباشر يعني أن المشترين الخارجيين هم من يتولون عادة الشحن الدولي اللاحق والعلامة التجارية.",
       duration: "يُعبَّأ الدفعة النهائية وتكون جاهزة للشحن في نفس يوم تصنيفها.",
-    },
-    "quality-checking": {
-      name: "فحص الجودة",
-      description:
-        "قبل أن يغادر الشاي المصنع الرئيسي — سواء كان متجهًا إلى التعبئة أو إلى السوق المحلي — يمر بفحص جودة. يفحص أحد الموظفين لون الأوراق المجففة والتفافها وحجم الجسيمات، ويتحقق من رطوبتها، ويشم ويتذوق عينة صغيرة لتقييم الرائحة والنكهة، مراقبًا عيوبًا مثل الإفراط في التخمير أو نقصه أو الاحتراق. يُستبعد كل ما لا يستوفي المعيار بدلاً من بيعه، وتُسجَّل حتى المشكلات الطفيفة لتوجيه الدفعة التالية. هذا هو نفس نوع الفحص الذي يكرره فريق التذوق لاحقًا بشكل أكثر رسمية في مركز الشاي.",
-      keyPoints:
-        "يتم فحص اللون والالتفاف وحجم الجسيمات والرطوبة والرائحة والنكهة جميعها قبل الموافقة على دفعة للتعبئة أو البيع؛ تُستبعد الدفعات التي لا تجتاز الفحص، وتُسجَّل حتى المشكلات الطفيفة لتحسين الإنتاج المستقبلي.",
-      duration: "بضع دقائق لكل دفعة، تُنجَز جنبًا إلى جنب مع أعمال التصنيف والتعبئة الجارية.",
     },
     cinnamon: {
       name: "مزرعة القرفة",
@@ -2693,14 +2661,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "Герметичная упаковка защищает чай от влаги и посторонних запахов, сохраняя вкус, который тщательно формировался на каждом предыдущем этапе процесса. Разные страны хотят от своего чая разного — одни предпочитают крепкий, терпкий настой, другие нет, — поэтому то, из какой части побега получен сорт, фактически подбирается под вкус каждого экспортного рынка. Арабоязычные рынки, например, специально запрашивают сорта, которые не входят в повседневные привычки питья у себя дома. Продажа в основном через брокеров, а не прямой экспорт, означает, что дальнейшую международную доставку и брендинг обычно берут на себя внешние покупатели.",
       duration: "Финальная партия упаковывается и готова к отправке в тот же день, когда проходит сортировку.",
     },
-    "quality-checking": {
-      name: "Проверка качества",
-      description:
-        "Прежде чем чай покинет основную фабрику — направляясь на упаковку или на местный рынок — он проходит проверку качества. Сотрудник осматривает цвет, скрутку и размер частиц высушенного листа, проверяет его влажность, а также нюхает и пробует небольшой образец на аромат и вкус, отслеживая такие дефекты, как переферментация, недоферментация или подгорание. Всё, что не соответствует стандарту, откладывается в сторону, а не продаётся, и даже незначительные проблемы фиксируются, чтобы учесть их в следующей партии. Это та же самая проверка, которую позже, уже более формально, повторяет дегустационная комиссия в чайном центре.",
-      keyPoints:
-        "Цвет, скрутка, размер частиц, влажность, аромат и вкус — всё это проверяется перед тем, как партия будет одобрена для упаковки или продажи; партии, не прошедшие проверку, откладываются в сторону, а даже незначительные проблемы фиксируются для улучшения будущего производства.",
-      duration: "Несколько минут на партию, выполняется параллельно с текущей сортировкой и упаковкой.",
-    },
     cinnamon: {
       name: "Плантация корицы",
       sectionHeadings: ["О коричном дереве", "Характеристики", "Очистка корицы: инструменты и процесс", "Польза", "Чайная продукция с корицей"],
@@ -3256,14 +3216,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       description: "Sortierter Tee wird gewogen, zur Qualitätsprüfung verkostet und in feuchtigkeitsdichte, mit Aluminiumfolie ausgekleidete Verpackungen versiegelt, bedruckt mit dem Namen und Logo der Fabrik, ihrer Registrierungsnummer, dem Ceylon-Tee-Symbol und dem Lebensmittelsicherheitszertifikat. Im Verpackungsbereich stehen mehrere fertige Sorten nebeneinander — Dust (hauptsächlich für Teebeutel), OP1, Pekoe, BOP (Broken Orange Pekoe) und OP (Orange Pekoe), wobei OP1 und OP besonders in arabischsprachigen Märkten beliebt sind und Pekoe in Russland und im Iran gut bekannt ist. Die seltenste und wertvollste hier hergestellte Sorte ist SFOPE1, eine 'Flowery Tippy'-Sorte, benannt nach den blassen, silbrigen Spitzenstücken, die sie von ganz oben im Trieb enthält — geschätzt eher für ihren feinen Charakter als für ihre Stärke. Auch das Beutelgewicht variiert je nach Sorte: Ein Beutel fester Größe fasst deutlich mehr von einer feinen, dichten Sorte wie Dust (etwa 58kg) als von einer voluminöseren, blattreicheren Sorte wie OPE (etwa 30kg). Meist übergibt die Fabrik ihren fertigen Tee an Teemakler in Colombo — genannt wurden Namen wie Forbes & Walker, Akbar Brothers und Finlays —, die ihn zur Colombo-Teeauktion bringen, wo Käufer ihn erwerben und oft nach weiterer Wertschöpfung unter eigener Marke exportieren. Direktexport unter dem Namen Athukorala selbst kommt ebenfalls vor, aber hauptsächlich für gelegentliche Sonderbestellungen von Käufern im Ausland.",
       keyPoints: "Luftdichte Verpackung schützt den Tee vor Feuchtigkeit und Gerüchen und bewahrt den Geschmack, der in jeder vorherigen Phase des Prozesses sorgfältig aufgebaut wurde. Verschiedene Länder wollen unterschiedliche Dinge von ihrem Tee — manche bevorzugen eine kräftige, herbe Tasse, andere nicht —, weshalb abgestimmt darauf ist, aus welchem Teil des Triebs eine Sorte stammt, passend zum Geschmack jedes Exportmarkts. Arabischsprachige Märkte etwa fragen gezielt Sorten nach, die zuhause nicht Teil der alltäglichen Trinkgewohnheiten sind. Der Verkauf hauptsächlich über Makler statt Direktexport bedeutet, dass externe Käufer üblicherweise den weiteren internationalen Versand und das Branding übernehmen.",
       duration: "Die letzte Charge wird noch am Tag der Klassifizierung verpackt und versandbereit gemacht.",
-    },
-    "quality-checking": {
-      name: "Qualitätsprüfung",
-      description:
-        "Bevor der Tee die Hauptfabrik verlässt — ob er nun zur Verpackung oder auf den lokalen Markt geht — durchläuft er eine Qualitätsprüfung. Ein Mitarbeiter untersucht Farbe, Rollung und Partikelgröße des getrockneten Blatts, prüft dessen Feuchtigkeitsgehalt und riecht sowie schmeckt eine kleine Probe auf Aroma und Geschmack, wobei auf Fehler wie Über- oder Unterfermentierung oder Anbrennen geachtet wird. Alles, was den Standard nicht erfüllt, wird aussortiert statt verkauft, und selbst kleinere Probleme werden notiert, um die nächste Charge zu informieren. Es ist dieselbe Art von Prüfung, die das Verkostungsteam später im Teezentrum noch formeller wiederholt.",
-      keyPoints:
-        "Farbe, Rollung, Partikelgröße, Feuchtigkeit, Aroma und Geschmack werden alle geprüft, bevor eine Charge für Verpackung oder Verkauf freigegeben wird; Chargen, die durchfallen, werden aussortiert, und selbst kleinere Probleme werden notiert, um die künftige Produktion zu verbessern.",
-      duration: "Wenige Minuten pro Charge, parallel zur laufenden Sortierung und Verpackung.",
     },
     cinnamon: {
       name: "Zimtplantage",
@@ -3821,14 +3773,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "El empaquetado hermético protege el té de la humedad y los olores, preservando el sabor construido con cuidado en cada etapa anterior del proceso. Los distintos países quieren cosas distintas de su té — algunos prefieren una taza fuerte y astringente, otros no — así que qué parte del brote da origen a un grado se ajusta efectivamente al paladar de cada mercado de exportación. Los mercados de habla árabe, por ejemplo, solicitan específicamente grados que no forman parte de los hábitos cotidianos de consumo en sus países. Vender sobre todo a través de corredores en lugar de exportar directamente significa que los compradores externos suelen encargarse del envío internacional posterior y de la marca.",
       duration: "El lote final se empaqueta y queda listo para su despacho el mismo día en que se clasifica.",
     },
-    "quality-checking": {
-      name: "Control de Calidad",
-      description:
-        "Antes de que el té salga de la fábrica principal — ya sea hacia el empaquetado o hacia el mercado local — pasa por un control de calidad. Un miembro del personal inspecciona el color, el enrollado y el tamaño de partícula de la hoja seca, comprueba su humedad, y huele y prueba una pequeña muestra para valorar el aroma y el sabor, vigilando defectos como sobrefermentación, subfermentación o quemado. Todo lo que no cumple el estándar se aparta en lugar de venderse, y hasta los problemas menores se anotan para orientar el siguiente lote. Es el mismo tipo de control que el panel de cata repite más formalmente después, en el centro de té.",
-      keyPoints:
-        "El color, el enrollado, el tamaño de partícula, la humedad, el aroma y el sabor se comprueban antes de aprobar un lote para empaquetado o venta; los lotes que no lo superan se apartan, y hasta los problemas menores se registran para mejorar la producción futura.",
-      duration: "Unos minutos por lote, realizado junto con el trabajo continuo de clasificación y empaquetado.",
-    },
     cinnamon: {
       name: "Plantación de Canela",
       sectionHeadings: ["Sobre el Árbol de Canela", "Características", "Pelado de la Canela: Herramientas y Proceso", "Beneficios", "Productos de Té de Canela"],
@@ -4384,14 +4328,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       description: "Le thé classé est pesé, dégusté pour en vérifier la qualité, et scellé dans des emballages étanches à l'humidité doublés de papier aluminium, imprimés avec le nom et le logo de la fabrique, son numéro d'enregistrement, le Symbole du Thé de Ceylan, et le certificat de sécurité alimentaire. Dans la zone d'emballage, plusieurs qualités finies se côtoient — Dust (destiné surtout aux sachets), OP1, Pekoe, BOP (Broken Orange Pekoe) et OP (Orange Pekoe) — l'OP1 et l'OP étant particulièrement populaires sur les marchés arabophones, et le Pekoe bien connu en Russie et en Iran. La qualité la plus rare et la plus précieuse produite ici est le SFOPE1, une qualité 'Flowery Tippy' ainsi nommée pour les fragments de pointe pâles et argentés qu'elle contient, provenant du tout haut du bourgeon — appréciée davantage pour son caractère délicat que pour sa force. Le poids des sacs varie aussi selon la qualité : un sac de taille fixe contient bien plus d'une qualité fine et dense comme le Dust (environ 58 kg) que d'une qualité plus volumineuse et feuillue comme l'OPE (environ 30 kg). La fabrique confie surtout son thé fini à des courtiers en thé de Colombo — des noms comme Forbes & Walker, Akbar Brothers et Finlays ont été cités — qui l'amènent à la Vente aux enchères de thé de Colombo, où des acheteurs l'acquièrent et l'exportent souvent sous leur propre marque après lui avoir ajouté de la valeur. L'exportation directe sous le nom Athukorala lui-même existe aussi, mais surtout pour des commandes spéciales occasionnelles d'acheteurs étrangers.",
       keyPoints: "L'emballage hermétique protège le thé de l'humidité et des odeurs, préservant le goût soigneusement construit à chaque étape antérieure du processus. Les pays veulent des choses différentes de leur thé — certains préfèrent une tasse forte et astringente, d'autres non — donc la partie du bourgeon dont provient une qualité est en fait adaptée au palais de chaque marché d'exportation. Les marchés arabophones, par exemple, demandent spécifiquement des qualités qui ne font pas partie des habitudes quotidiennes de consommation chez eux. Vendre surtout via des courtiers plutôt qu'exporter directement signifie que des acheteurs extérieurs gèrent généralement l'expédition internationale ultérieure et le branding.",
       duration: "Le lot final est emballé et prêt à être expédié le jour même de son classement.",
-    },
-    "quality-checking": {
-      name: "Contrôle Qualité",
-      description:
-        "Avant que le thé ne quitte la fabrique principale — qu'il soit destiné à l'emballage ou au marché local — il passe par un contrôle qualité. Un membre du personnel inspecte la couleur, le roulage et la taille des particules de la feuille séchée, vérifie son taux d'humidité, et sent et goûte un petit échantillon pour en évaluer l'arôme et le goût, en surveillant des défauts comme la sur-fermentation, la sous-fermentation ou le brûlage. Tout ce qui ne répond pas à la norme est mis de côté plutôt que vendu, et même les problèmes mineurs sont notés pour orienter le lot suivant. C'est le même type de contrôle que le jury de dégustation répète plus tard, de façon plus formelle, au centre du thé.",
-      keyPoints:
-        "La couleur, le roulage, la taille des particules, l'humidité, l'arôme et le goût sont tous contrôlés avant qu'un lot ne soit approuvé pour l'emballage ou la vente ; les lots qui échouent sont mis de côté, et même les problèmes mineurs sont consignés pour améliorer la production future.",
-      duration: "Quelques minutes par lot, effectué en parallèle du travail continu de classement et d'emballage.",
     },
     cinnamon: {
       name: "Plantation de Cannelle",
@@ -4949,14 +4885,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       keyPoints: "密封包装能保护茶叶免受潮气和异味影响，保留住整个工序中每一个环节精心积累而成的风味。不同国家对茶叶的需求各不相同——有些人偏好浓烈涩口的茶汤，有些人则不然——因此一款等级取自嫩芽的哪个部位，实际上是根据各个出口市场的口味来匹配的。例如，阿拉伯语市场专门要求那些在他们本国日常饮用习惯之外的特定等级。以经纪商销售为主而非直接出口，意味着后续的国际运输和品牌事务通常由外部买家来处理。",
       duration: "最后一批茶叶在分级当天即可完成包装，准备发货。",
     },
-    "quality-checking": {
-      name: "品质检验",
-      description:
-        "茶叶在离开主厂之前——无论是送去包装还是运往本地市场——都要经过一次品质检验。工作人员会检查干茶的色泽、卷曲度和颗粒大小，测量其含水量，并闻香、试饮少量样品以评估香气和滋味，留意过度发酵、发酵不足或烘焦等缺陷。任何不达标的茶叶都会被剔除而不是出售，即使是细微的问题也会被记录下来，以指导下一批茶叶的生产。这与后面茶叶中心的品茶小组更正式地重复的检验是同一类检查。",
-      keyPoints:
-        "色泽、卷曲度、颗粒大小、含水量、香气和滋味都会在一批茶叶被批准用于包装或销售之前接受检验；未通过的批次会被剔除，即使是细微的问题也会被记录下来，以改进未来的生产。",
-      duration: "每批检验只需几分钟，与正在进行的分级和包装工作同时进行。",
-    },
     cinnamon: {
       name: "肉桂种植园",
       sectionHeadings: ["关于肉桂树", "特征", "剥取肉桂皮：工具与流程", "益处", "肉桂茶产品"],
@@ -5512,14 +5440,6 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       description: "等級付けされた茶は計量され、品質のために試飲され、アルミ箔で裏打ちされた防湿包装に密封されます。そこには工場の名前とロゴ、登録番号、セイロンティーのシンボル、そして食品安全証明書が印刷されています。梱包エリアには複数の完成した等級が並んでいます——Dust（主にティーバッグ用）、OP1、Pekoe、BOP（Broken Orange Pekoe）、OP（Orange Pekoe）——OP1とOPは特にアラビア語圏の市場で人気があり、Pekoeはロシアとイランでよく知られています。ここで作られる最も希少で価値の高い等級はSFOPE1で、「Flowery Tippy」等級と呼ばれています。新芽の最上部から得られる淡く銀色のチップの断片を含んでいることからこの名がつき、力強さよりもその繊細な個性のために評価されています。袋の重量も等級によって異なります——決まった大きさの袋には、Dustのような薄く密度の高い等級（約58キロ）の方が、OPEのようなよりかさばる葉の多い等級（約30キロ）よりもはるかに多く入ります。工場は主に完成した茶をコロンボの茶商——Forbes & Walker、Akbar Brothers、Finlaysといった名前が挙がりました——に引き渡し、彼らがそれをコロンボ茶オークションに持ち込みます。そこで買い手がそれを購入し、多くの場合さらに付加価値を加えた後、自社ブランドで輸出します。アトゥコララという名前自体での直接輸出も行われますが、それは主に海外の買い手からの臨時の特別注文向けです。",
       keyPoints: "気密包装は茶を湿気と匂いから守り、工程の各段階で丁寧に築き上げられた風味を保ちます。国によって茶に求めるものは異なります——強く渋みのある一杯を好む国もあれば、そうでない国もあります——そのため、ある等級が新芽のどの部分から得られるかは、実質的に各輸出市場の好みに合わせて調整されています。例えば、アラビア語圏の市場は、自国での日常的な飲用習慣には含まれない特定の等級を、名指しで求めます。直接輸出するのではなく主に仲介業者を通じて販売するということは、その後の国際輸送やブランディングを通常は外部の買い手が担うことを意味します。",
       duration: "最終ロットは格付けされた当日のうちに梱包され、出荷準備が整います。",
-    },
-    "quality-checking": {
-      name: "品質チェック",
-      description:
-        "茶が主力工場を出る前に——包装に向かうにせよ、地元市場に向かうにせよ——品質チェックを受けます。担当者が乾燥した茶葉の色、揉捻の具合、粒の大きさを検査し、水分含有量を確認し、少量のサンプルを香りと味のために嗅いで試飲し、過発酵、発酵不足、焦げといった欠陥がないか確認します。基準を満たさないものは販売せずに取り除かれ、些細な問題でも次のロットに活かすために記録されます。これは後にティーセンターで試飲チームがより正式な形で繰り返すのと同じ種類のチェックです。",
-      keyPoints:
-        "色、揉捻の具合、粒の大きさ、水分、香り、味はすべて、ロットが梱包や販売のために承認される前に確認されます。不合格となったロットは取り除かれ、些細な問題でも今後の生産を改善するために記録されます。",
-      duration: "1ロットあたり数分、進行中の格付けや梱包作業と並行して行われます。",
     },
     cinnamon: {
       name: "シナモン農園",
