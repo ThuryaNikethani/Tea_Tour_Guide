@@ -234,7 +234,7 @@ import uniqueFruitsHeroCollageImg from "../assets/unique-fruits/unique-fruits-he
 // "handmade-factory"'s heroImage. See the provenance note near the
 // "handmade-factory" station below.
 import handmadeFactoryCollageImg from "../assets/handmade-factory/handmade-factory-collage.jpg";
-import handRollingTraysImg from "../assets/handmade-factory/hand-rolling-trays.jpg";
+import witheringRollingHandsImg from "../assets/handmade-factory/withering-rolling-hands.jpg";
 import handRolledLeafVariationImg from "../assets/handmade-factory/hand-rolled-leaf-variation.jpg";
 import chakraFlowerTeaCoinImg from "../assets/handmade-factory/chakra-flower-tea-coin.jpg";
 // A generated collage combining two real photos of labelled shade trees
@@ -2428,7 +2428,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "Withering and Rolling",
-        image: handRollingTraysImg,
+        image: witheringRollingHandsImg,
         body: "Withering happens naturally here, in a small trough monitored with a hygrometer rather than the main factory's forced-air fans, bringing moisture down to around 50% before rolling. Leaf is then hand-rolled on a tray, judged by feel rather than the clock; for larger bulk orders, small mechanical rollers step in for the same purpose, since hand-rolling alone can't keep pace with volume.",
       },
       {
