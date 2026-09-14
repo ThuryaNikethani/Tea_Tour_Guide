@@ -197,6 +197,7 @@ import starfruitHarvestImg from "../assets/starfruit/starfruit-harvest.webp";
 // the provenance note near the "organic-cultivation" station below.
 import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
 import purpleShootCloseupImg from "../assets/organic-cultivation/purple-shoot-closeup.jpg";
+import witheringTroughImg from "../assets/withering/withering-trough.jpg";
 // A generated collage combining three real photos: the estate's own
 // Ceylon Tea Symbol signboard, an AR-TEA Academy tea-culture card held up
 // in the tea field, and a visitor holding two tea shoots. Visitor face is
@@ -2384,6 +2385,7 @@ export const STATIONS: Station[] = [
     icon: "Wind",
     verified: true,
     lastVerified: "2026-09-14",
+    heroImage: witheringTroughImg,
     description:
       "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs — 85 feet long and 6 feet wide, each fitted with a 46-inch fan running at 960 RPM to force air through it and steadily remove moisture — what the estate calls the 'modern' withering process. At a loading rate of about 2.5 kg per square foot, one trough holds around 1,250 kg of green leaf. The leaf stays in the trough for 12 hours, turned upside down by hand every 4 hours, with heat applied from underneath for 3 to 4 hours during that cycle; it's loosened one final time before being unloaded in the early morning. Out of every 100 kg of green leaf, about 43 kg of water is removed — checked by testing 2.5 kg of leaf in a 1-square-foot box — leaving the leaf at around 57% to 58% moisture by the time it turns limp and pliable, ready for rolling without shattering. The withered leaf is weighed again before it moves on to rolling.",
     keyPoints:
