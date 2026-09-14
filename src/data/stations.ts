@@ -2331,13 +2331,13 @@ export const STATIONS: Station[] = [
     shortName: "Wither",
     icon: "Wind",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-14",
     description:
-      "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs roughly a foot deep, where large fans force air through it to steadily remove moisture — what the estate calls the 'modern' withering process. Moisture drops from around 75% at plucking to roughly 45% by the time the leaf turns limp and pliable, ready for rolling without shattering. The withered leaf is weighed again before it moves on to rolling.",
+      "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs — 85 feet long and 6 feet wide, each fitted with a 46-inch fan running at 960 RPM to force air through it and steadily remove moisture — what the estate calls the 'modern' withering process. At a loading rate of about 2.5 kg per square foot, one trough holds around 1,250 kg of green leaf. The leaf stays in the trough for 12 hours, turned upside down by hand every 4 hours, with heat applied from underneath for 3 to 4 hours during that cycle; it's loosened one final time before being unloaded in the early morning. Out of every 100 kg of green leaf, about 43 kg of water is removed — checked by testing 2.5 kg of leaf in a 1-square-foot box — leaving the leaf at around 57% to 58% moisture by the time it turns limp and pliable, ready for rolling without shattering. The withered leaf is weighed again before it moves on to rolling.",
     keyPoints:
       "Withering evens out moisture across the leaf and lets natural enzymes begin the chemical changes that will later create the tea's aroma and colour.",
     processVideo: "/videos/withering-process.mp4",
-    duration: "This stage typically takes 10 to 12 hours, depending on humidity and airflow.",
+    duration: "This stage runs for a full 12 hours, with the leaf turned every 4 hours.",
   },
   {
     id: "rolling",
@@ -2346,13 +2346,13 @@ export const STATIONS: Station[] = [
     shortName: "Roll",
     icon: "RotateCw",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-14",
     description:
-      "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
+      "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed. Two charging rollers each take in 280 kg of withered leaf. The first roll runs for 20 minutes at 30 to 32 RPM; the resulting doolies (rolled leaf particles) pass along a conveyor to a roll breaker fitted with wire mesh, which drops the smallest particles through as the 'first dool' and sends it on to fermentation. Leaf that doesn't pass through moves up the conveyor to two secondary rollers — with intake reduced by 12% to 14% from the original 280 kg — for a second roll of another 20 minutes at 32 RPM, after which that 'second dool' goes straight to fermentation without sifting.",
     keyPoints:
       "Breaking the cell walls exposes enzymes to oxygen, kicking off oxidation. How hard and how long the leaf is rolled shapes the final tea's strength and appearance. The first of several passes, a gentle 'pre-conditioning' roll, is meant to coat the twisted particles in the leaf's own juices before firmer rolling follows.",
     processVideo: "/videos/rolling-process.mp4",
-    duration: "Rolling usually runs for 45 minutes to an hour, often in multiple passes.",
+    duration: "Two 20-minute rolls (40 minutes total) — the first at 30 to 32 RPM, the second at 32 RPM.",
   },
   {
     id: "fermentation",
@@ -2361,13 +2361,13 @@ export const STATIONS: Station[] = [
     shortName: "Ferment",
     icon: "FlaskConical",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-14",
     description:
-      "Rolled leaf is spread out in a cool, humid room held at around 25 to 30°C and left to oxidise, with a humidifier keeping the air moist enough for the reaction to happen. The green leaf gradually turns a coppery brown as it develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
+      "Rolled leaf — both the first and second dool — is spread out in a cool, humid room held at around 25 to 30°C and left to oxidise for 2.5 hours, with a humidifier keeping the air moist enough for the reaction to happen. The room has to stay completely clean — free of bacteria, stagnant water, or old leaf — since bacteria halts enzyme activity and would spoil the colour, strength, and liquor quality. Over those 2.5 hours the green leaf gradually turns a coppery brown as it fully develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
     keyPoints:
       "This is the single most important step for flavour. Timing has to be judged precisely — too little and the tea is thin, too much and it turns flat and dull. It's also what separates the tea types made here: black tea goes withering, rolling, fermentation, then firing, while green tea skips fermentation entirely (withering, rolling, drying only) and is milder — mostly drunk for its gentler, more medicinal character; white tea skips both withering and fermentation, going straight from fresh leaf to steaming and drying. The factory doesn't produce Oolong tea, which the guide describes as a black-tea-like fermented style made by repeated steaming and hand-brushing rather than machine rolling.",
     processVideo: "/videos/fermentation-process.mp4",
-    duration: "At this factory, fermentation typically takes 1.5 to 2.5 hours depending on conditions, before the leaf moves on to drying.",
+    duration: "Fermentation takes 2.5 hours for both the first and second dool, before the leaf moves on to drying.",
   },
   {
     id: "drying",
@@ -2376,9 +2376,9 @@ export const STATIONS: Station[] = [
     shortName: "Dry",
     icon: "Flame",
     verified: true,
-    lastVerified: "2026-09-07",
+    lastVerified: "2026-09-14",
     description:
-      "The oxidised leaf passes through hot-air dryers — reportedly running at around 240°C — that halt oxidation instantly and lock in the tea's character. What comes out the other end is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
+      "Before going into the dryer, the fermented leaf is loosened. It then passes through hot-air dryers — firewood-generated heat drawn in by a main fan at around 240°F (120°C to 130°C) — that halt oxidation instantly and lock in the tea's character. What comes out the other end is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
     keyPoints:
       "Firing stops the chemical changes at exactly the right moment and reduces moisture from around 45-50% down to about 2-3%, which is essential for the tea to stay fresh during storage and shipping.",
     processVideo: "/videos/drying-process.mp4",
