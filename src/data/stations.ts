@@ -214,7 +214,7 @@ import jamesTaylorPortraitImg from "../assets/introduction/james-taylor-portrait
 // troughs. Used as "pahatharata-manufacturing"'s heroImage. See the
 // provenance note near the "pahatharata-manufacturing" station below.
 import pahatharataManufacturingCollageImg from "../assets/pahatharata-manufacturing/pahatharata-manufacturing-collage.jpg";
-import factoryProcessingDrumsImg from "../assets/pahatharata-manufacturing/factory-processing-drums.jpg";
+import factoryFloorWorkerImg from "../assets/pahatharata-manufacturing/factory-floor-worker.jpg";
 import ctcTeaGranulesImg from "../assets/pahatharata-manufacturing/ctc-tea-granules.jpg";
 // Full-bleed hero banner images for stations that already have their own
 // inline section images and text — these are purely additive (same
@@ -1518,7 +1518,7 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Low-Country vs. High-Grown Processing",
-        image: factoryProcessingDrumsImg,
+        image: factoryFloorWorkerImg,
         body: "Low-country ('Pahatharata') estates like this one process tea differently from high-grown estates further inland — and the estate's own manufacturing process, covered stage by stage earlier on this tour, bears that out: rolling here breaks the leaf down into small, dense particles rather than twisting it into whole orthodox leaf, the hallmark of CTC (Crush-Tear-Curl) processing. This stop is a quick recap of what that low-country approach means for plucking, processing, and grading.",
       },
       {
