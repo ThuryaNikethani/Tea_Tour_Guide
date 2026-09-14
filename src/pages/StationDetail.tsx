@@ -177,27 +177,31 @@ export function StationDetail() {
             </AnimatePresence>
 
             <div className="flex items-center justify-between mt-7 pt-4 border-t border-tea-100 dark:border-tea-800">
-              <button
-                type="button"
-                onClick={() => goToSection(sectionIndex - 1)}
-                disabled={sectionIndex === 0}
-                className="flex items-center gap-1 text-sm font-medium text-tea-700 dark:text-tea-200 hover:text-gold-600 disabled:opacity-30 disabled:pointer-events-none transition-colors"
-              >
-                <ChevronLeft size={16} />
-                {t("previousSection")}
-              </button>
+              {totalSections > 1 && (
+                <button
+                  type="button"
+                  onClick={() => goToSection(sectionIndex - 1)}
+                  disabled={sectionIndex === 0}
+                  className="flex items-center gap-1 text-sm font-medium text-tea-700 dark:text-tea-200 hover:text-gold-600 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                >
+                  <ChevronLeft size={16} />
+                  {t("previousSection")}
+                </button>
+              )}
               <span className="text-xs text-tea-400 dark:text-tea-500">
                 {t("sectionOf").replace("{current}", String(sectionIndex + 1)).replace("{total}", String(totalSections))}
               </span>
-              <button
-                type="button"
-                onClick={() => goToSection(sectionIndex + 1)}
-                disabled={isLastSection}
-                className="flex items-center gap-1 text-sm font-medium text-tea-700 dark:text-tea-200 hover:text-gold-600 disabled:opacity-30 disabled:pointer-events-none transition-colors"
-              >
-                {t("nextSection")}
-                <ChevronRight size={16} />
-              </button>
+              {totalSections > 1 && (
+                <button
+                  type="button"
+                  onClick={() => goToSection(sectionIndex + 1)}
+                  disabled={isLastSection}
+                  className="flex items-center gap-1 text-sm font-medium text-tea-700 dark:text-tea-200 hover:text-gold-600 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                >
+                  {t("nextSection")}
+                  <ChevronRight size={16} />
+                </button>
+              )}
             </div>
           </div>
           );
