@@ -253,7 +253,11 @@ function SectionContent({ section }: { section: StationSection }) {
   // them all onto one line, while never leaving just one lonely image on the last row — unlike plain
   // flex-wrap, grid keeps the same column tracks across every row, so a wrapped row's images stay
   // the same size as the rest rather than stretching to fill it.
-  const imageClass = isContain ? "w-full h-72 object-contain rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
+  // object-cover's default crop centers on the image; a portrait-oriented photo (e.g. a person's
+  // portrait) often needs the crop anchored to the top instead, or it centers on the torso/neck
+  // rather than the face.
+  const focusClass = section.imageFocus === "top" ? "object-top" : section.imageFocus === "bottom" ? "object-bottom" : "object-center";
+  const imageClass = isContain ? "w-full h-72 object-contain rounded-md shadow-sm" : `w-full h-56 object-cover ${focusClass} rounded-md shadow-sm`;
   const imageCols = isContain && Array.isArray(section.image) ? columnsFor(section.image.length) : undefined;
   // The 140px minimum looks right once there's room for it, but on a narrow phone with 3-4 columns
   // it doesn't fit (e.g. 4 columns need >=560px) — min() caps it to whatever actually fits the
