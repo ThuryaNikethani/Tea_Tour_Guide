@@ -16,6 +16,8 @@ export interface StationSection {
   imagePosition?: "top" | "bottom";
   /** "cover" (default) crops to fill a fixed height; "contain" shows the whole image uncropped, at its own aspect ratio. */
   imageFit?: "cover" | "contain";
+  /** Small photo-credit line shown under the image, only needed for the rare licensed (non-CC0) photo that requires attribution. */
+  imageCredit?: string;
   /** When set, renders each as its own card (image + heading + body + tags) instead of one blended paragraph. */
   items?: StationSubItem[];
   /**
@@ -205,8 +207,8 @@ import introductionCollageImg from "../assets/introduction/introduction-collage.
 // of "introduction"'s section topics — sourced free-license from Unsplash and
 // Pexels. See the provenance note near the "introduction" station below.
 import ceylonTeaFieldImg from "../assets/introduction/ceylon-tea-field.jpg";
-import coffeeBerriesImg from "../assets/introduction/coffee-berries.jpg";
-import teaEstateHillsideImg from "../assets/introduction/tea-estate-hillside.jpg";
+import coffeeLeafRustImg from "../assets/introduction/coffee-leaf-rust.jpg";
+import jamesTaylorPortraitImg from "../assets/introduction/james-taylor-portrait.jpg";
 // A generated collage combining two real photos of the estate's own
 // low-country tea field (with a labelled shade tree) and its withering
 // troughs. Used as "pahatharata-manufacturing"'s heroImage. See the
@@ -1427,10 +1429,21 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * Symbol of Quality", "From Coffee to Tea", "The Birth of an Industry")
  * each got one illustrative photo, matching nursery's per-section image
  * pattern (not every section — "Low-Country Ceylon Tea" and "A Traditional
- * Welcome" were deliberately left without one). These are generic,
- * free-license stock photos (Unsplash/Pexels, free for commercial use, no
- * attribution required) — NOT the estate's own photography, unlike most
- * other images in this file. No content, wording, or logic changed.
+ * Welcome" were deliberately left without one). "Ceylon Tea — Symbol of
+ * Quality" uses a generic, free-license stock photo (Unsplash/Pexels, free
+ * for commercial use, no attribution required) — NOT the estate's own
+ * photography, unlike most other images in this file.
+ * "The Birth of an Industry" and "From Coffee to Tea" were then swapped
+ * (same day) for two more specific real photos, at the user's request,
+ * since the section names James Taylor and describes the coffee rust
+ * disease specifically: a public-domain 1894 portrait of James Taylor
+ * himself (Wikimedia Commons, PD-1923, no attribution required), and a
+ * real photo of coffee leaf rust (Hemileia vastatrix) — the actual disease
+ * described in that section's text. The coffee-rust photo is licensed
+ * CC BY-SA 4.0, which (unlike every other image here) legally requires a
+ * visible credit — hence the new optional `imageCredit` field on
+ * `StationSection`, shown as a small caption under the image only where
+ * set. No content, wording, or logic changed otherwise.
  */
 export const STATIONS: Station[] = [
   {
@@ -1452,12 +1465,13 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "From Coffee to Tea",
-        image: coffeeBerriesImg,
+        image: coffeeLeafRustImg,
+        imageCredit: "Coffee leaf rust (Hemileia vastatrix) — the disease described below. Photo: Fairview Estate, Kiambu, Kenya (CC BY-SA 4.0, Wikimedia Commons).",
         body: "The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. In 1839, further tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
       },
       {
         heading: "The Birth of an Industry",
-        image: teaEstateHillsideImg,
+        image: jamesTaylorPortraitImg,
         body: "The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa.",
       },
       {
