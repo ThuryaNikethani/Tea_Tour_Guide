@@ -235,6 +235,7 @@ import uniqueFruitsHeroCollageImg from "../assets/unique-fruits/unique-fruits-he
 // "handmade-factory" station below.
 import handmadeFactoryCollageImg from "../assets/handmade-factory/handmade-factory-collage.jpg";
 import handRollingTraysImg from "../assets/handmade-factory/hand-rolling-trays.jpg";
+import handRolledLeafVariationImg from "../assets/handmade-factory/hand-rolled-leaf-variation.jpg";
 // A generated collage combining two real photos of labelled shade trees
 // on the estate — a general "why shade trees" signboard, and a
 // high-shade Albizia moluccana specimen. Used as "shade-management"'s
@@ -2435,6 +2436,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "What Makes Handmade Tea Different",
+        image: handRolledLeafVariationImg,
         body: "This stop covers what distinguishes hand-made tea from factory-line production. Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying.",
       },
       {
