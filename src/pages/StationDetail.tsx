@@ -273,7 +273,10 @@ function SectionContent({ section }: { section: StationSection }) {
         ))}
       </div>
     ) : (
-      <img src={section.image} alt={section.heading} loading="lazy" className={`${imageClass} mb-3 ${isContain ? "max-w-full" : ""}`} />
+      <div className="mb-3">
+        <img src={section.image} alt={section.heading} loading="lazy" className={`${imageClass} ${isContain ? "max-w-full" : ""}`} />
+        {section.imageCredit && <p className="text-tea-400 dark:text-tea-500 text-[11px] mt-1">{section.imageCredit}</p>}
+      </div>
     )
   );
 
