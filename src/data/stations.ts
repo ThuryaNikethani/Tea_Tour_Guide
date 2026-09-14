@@ -265,6 +265,7 @@ import artisanalTeaGradesSignImg from "../assets/sorting/artisanal-tea-grades-si
 // size — used as the station's heroImage banner. See the provenance note
 // near the "sorting" station below.
 import sortingCollageImg from "../assets/sorting/sorting-collage.jpg";
+import gradingMachineryWorkerImg from "../assets/sorting/grading-machinery-worker.jpg";
 // A generated collage combining two real, user-supplied photos of
 // visitors at the packing area (bagging graded tea, and examining
 // finished grades in bins), center-cropped to the same size and laid out
@@ -1867,6 +1868,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "The Grading Machinery",
+        image: gradingMachineryWorkerImg,
         body: "That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong — since Sri Lankan production is centred on Black Tea, this step is what eliminates any remaining brown, under-fermented particles and stalk fragments. Sieves of different mesh sizes — measured by the number of square holes per inch, ranging from as coarse as 3 holes per inch up to as fine as 60 — sift the leaf into around 21 distinct grades by particle size over several passes. An electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside, and dedicated machines remove refuse tea from the batch entirely — none of this colour or character comes from dyes or additives, only natural processing.",
       },
       {
