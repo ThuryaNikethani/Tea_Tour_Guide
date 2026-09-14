@@ -2378,11 +2378,11 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-14",
     description:
-      "Before going into the dryer, the fermented leaf is loosened. It then passes through hot-air dryers — firewood-generated heat drawn in by a main fan at around 240°F (120°C to 130°C) — that halt oxidation instantly and lock in the tea's character. What comes out the other end is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
+      "Before going into the dryer, the fermented leaf is loosened. It then passes through hot-air dryers — firewood-generated heat drawn in by a main fan, held to an inlet temperature of 120°C to 130°C — that halt oxidation instantly and lock in the tea's character. Inside, the dryer is divided into 6 sections; leaf falls from the top tray down through these sections to the lower trays, tumbling forward and backward as it travels, and exits after exactly 21 minutes, by which point the exhaust temperature should read around 80°C (roughly 140°F to 150°F). It's that combination — 120-130°C inlet, 80°C exhaust, 21 minutes — that the dryer is built to hold, and what turns the leaf properly black. Drop the inlet below 120°C and the leaf comes out under-dried and brownish, even if the exhaust reads 100°C from thinning the leaf layer; push the inlet to 150°C while the exhaust falls to 75°C and the leaf ends up soggy and stewed instead. What comes out at the right settings is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
     keyPoints:
-      "Firing stops the chemical changes at exactly the right moment and reduces moisture from around 45-50% down to about 2-3%, which is essential for the tea to stay fresh during storage and shipping.",
+      "Firing stops the chemical changes at exactly the right moment and reduces moisture from around 45-50% down to about 2-3%, which is essential for the tea to stay fresh during storage and shipping. The dryer alone doesn't decide the tea's final weight and quality, though — that comes from a whole chain of conditions: good-quality green leaf, proper withering, correct manufacturing, successful fermentation (the most crucial step of all), and finally, correct processing in the dryer.",
     processVideo: "/videos/drying-process.mp4",
-    duration: "Leaf passes through the dryer in around 20 minutes at carefully controlled temperatures.",
+    duration: "Leaf travels through the dryer for exactly 21 minutes, on a tightly held inlet-to-exhaust temperature rotation.",
   },
   {
     id: "packing",
