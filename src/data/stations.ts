@@ -1921,6 +1921,11 @@ export const STATIONS: Station[] = [
         heading: "Blends and Rarity",
         body: "The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots. These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
       },
+      {
+        heading: "Flower Chakra & Tea Coin",
+        image: chakraFlowerTeaCoinImg,
+        body: "The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
+      },
     ],
     duration: "5 minutes",
   },
@@ -2466,11 +2471,6 @@ export const STATIONS: Station[] = [
         heading: "What Makes Handmade Tea Different",
         image: handRolledLeafVariationImg,
         body: "This stop covers what distinguishes hand-made tea from factory-line production. Hand-rolling and hand-processing produce smaller batches with more variation between leaves, often prized for their distinct character. Handmade teas fall into two broad categories — fermented, black-tea-style ones (identifiable by their black colour), which include Purple Tea despite its unusual source shoot, and non-fermented ones like White Tea, which skip fermentation entirely and go straight to drying.",
-      },
-      {
-        heading: "Flower Chakra & Tea Coin",
-        image: chakraFlowerTeaCoinImg,
-        body: "The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
       },
     ],
     processVideo: "/videos/handmade-factory-process.mp4",
