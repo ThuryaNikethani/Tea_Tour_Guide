@@ -290,6 +290,13 @@ import packingCollageImg from "../assets/packing/packing-collage.jpg";
 // radish) and the misting system in use. Used directly as "polytunnel"'s
 // heroImage. See the provenance note near the "polytunnel" station below.
 import polytunnelInteriorImg from "../assets/polytunnel/polytunnel-interior.jpg";
+// Free-license stock photos (Pexels), not estate photos — no real photo of
+// the estate's own mushroom hut has been supplied yet. Used to illustrate
+// "mushroom-hut"'s generic, standard-knowledge sections. See the
+// provenance note near the "mushroom-hut" station below.
+import mushroomPinkOysterImg from "../assets/mushroom-hut/pink-oyster.jpg";
+import mushroomGreyOysterSubstrateImg from "../assets/mushroom-hut/grey-oyster-substrate.jpg";
+import mushroomHarvestingImg from "../assets/mushroom-hut/harvesting-oyster-mushrooms.jpg";
 // A generated collage combining two real photos of visitors hand-plucking
 // tea in the estate's own garden. Used as "plucking"'s heroImage. See the
 // provenance note near the "plucking" station below.
@@ -1480,6 +1487,26 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * `StationSection` since it's harmless infrastructure, but nothing
  * currently sets it.
  * No content, wording, or logic changed through any of this.
+ * "mushroom-hut" was converted from its plain description/keyPoints shape
+ * to `sections` on 2026-09-14, at the user's request to split its dense
+ * paragraphs into meaningful parts and add more detail. The two original
+ * sentences of `description` became the "A Different Kind of Garden" and
+ * "The Oyster Mushroom Varieties" sections; the two `keyPoints` sentences
+ * became "Harvest Cycle" and "Nutrition & Health Benefits" — none of that
+ * existing wording was altered. A new "Growing Medium & Spawn" section was
+ * added, plus one new sentence each at the end of "The Oyster Mushroom
+ * Varieties" and "Harvest Cycle", all sticking to the same generic,
+ * standard oyster-mushroom-cultivation knowledge the station's original
+ * description drew on (spawn run, substrate pasteurisation, fruiting
+ * flushes) rather than inventing estate-specific facts, consistent with
+ * this being a `verified: true` station whose content is still generic
+ * pending the estate's own cultivation details. Three free-license Pexels
+ * photos (pink oyster mushrooms, grey oyster mushrooms on straw substrate,
+ * a hand harvesting oyster mushrooms) were added as section images, since
+ * no real photo of the estate's own hut has been supplied yet — same
+ * approach as the "introduction" station's generic illustrative photos.
+ * `verified`, `lastVerified`, `processVideo`, and `duration` left
+ * untouched; no other station changed.
  */
 export const STATIONS: Station[] = [
   {
@@ -2644,10 +2671,31 @@ export const STATIONS: Station[] = [
     icon: "Warehouse",
     verified: true,
     lastVerified: "2026-09-07",
-    description:
-      "Alongside its tea, spice, and fruit crops, the estate keeps a dedicated mushroom hut — a small, shaded structure built to hold the dark, cool, humid conditions mushrooms need to fruit, rather than the sun and airflow the rest of the gardens are grown for. The hut is set up to grow several oyster mushroom varieties — American Oyster (Pleurotus pulmonarius), Bhutan Oyster, Black Oyster, and Pink Oyster (Pleurotus djamor) — alongside Abalone Mushroom (Pleurotus cystidiosus), all cultivated on a straw or sawdust substrate rather than soil.",
-    keyPoints:
-      "Growing mushrooms like this is a low-cost, sustainable way for a farm to diversify beyond its main crop, often making use of agricultural waste such as straw as the growing medium, with a single batch of substrate yielding several harvests over several weeks. The estate's own signage highlights each variety's nutritional side: American Oyster, Pink Oyster, and Abalone mushrooms are each described as rich in protein, vitamins, and antioxidants, with benefits framed around immune support, heart and digestive health, reducing inflammation, and helping lower cholesterol.",
+    sections: [
+      {
+        heading: "A Different Kind of Garden",
+        body: "Alongside its tea, spice, and fruit crops, the estate keeps a dedicated mushroom hut — a small, shaded structure built to hold the dark, cool, humid conditions mushrooms need to fruit, rather than the sun and airflow the rest of the gardens are grown for.",
+      },
+      {
+        heading: "The Oyster Mushroom Varieties",
+        image: mushroomPinkOysterImg,
+        body: "The hut is set up to grow several oyster mushroom varieties — American Oyster (Pleurotus pulmonarius), Bhutan Oyster, Black Oyster, and Pink Oyster (Pleurotus djamor) — alongside Abalone Mushroom (Pleurotus cystidiosus), all cultivated on a straw or sawdust substrate rather than soil. All of these belong to the genus Pleurotus, recognisable by their fan- or oyster-shaped caps growing in dense, overlapping shelves straight out of the substrate rather than on individual stems, with colour the main thing separating one variety from another — anywhere from white and grey to pink, gold, or near-black — while the mild, faintly savoury flavour stays much the same across all of them.",
+      },
+      {
+        heading: "Growing Medium & Spawn",
+        image: mushroomGreyOysterSubstrateImg,
+        body: "Cultivation starts with the substrate itself — straw or sawdust, the same material behind the estate's low-cost, waste-based approach — which is soaked and pasteurised with heat to kill off competing moulds and bacteria before it's mixed with spawn, grain fully colonised by mushroom mycelium, and packed into perforated bags or blocks. Those blocks are then left in the dark for a two-to-three-week 'spawn run', during which the white mycelium spreads through the entire substrate, before the hut's dark, cool, humid conditions take over to trigger fruiting.",
+      },
+      {
+        heading: "Harvest Cycle",
+        image: mushroomHarvestingImg,
+        body: "Growing mushrooms like this is a low-cost, sustainable way for a farm to diversify beyond its main crop, often making use of agricultural waste such as straw as the growing medium, with a single batch of substrate yielding several harvests over several weeks. Each block typically produces two to four such flushes spaced roughly one to two weeks apart, with the largest flush first and yields tapering off after that; mushrooms are twisted off in whole clusters rather than cut, since leftover stubs can rot and invite contamination that would spoil the next flush.",
+      },
+      {
+        heading: "Nutrition & Health Benefits",
+        body: "The estate's own signage highlights each variety's nutritional side: American Oyster, Pink Oyster, and Abalone mushrooms are each described as rich in protein, vitamins, and antioxidants, with benefits framed around immune support, heart and digestive health, reducing inflammation, and helping lower cholesterol.",
+      },
+    ],
     processVideo: "/videos/mushroom-hut-process.mp4",
     duration: "5 minutes",
   },
