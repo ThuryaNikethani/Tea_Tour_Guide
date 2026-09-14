@@ -262,6 +262,7 @@ import artisanalTeaGradesSignImg from "../assets/sorting/artisanal-tea-grades-si
 import goldenTipsTeaImg from "../assets/artisanal-tea-grades/golden-tips-tea.jpg";
 import silverTipsTeaImg from "../assets/artisanal-tea-grades/silver-tips-tea.jpg";
 import purpleTeaImg from "../assets/artisanal-tea-grades/purple-tea.jpg";
+import whiteTeaImg from "../assets/artisanal-tea-grades/white-tea.jpg";
 import pinkTeaImg from "../assets/artisanal-tea-grades/pink-tea.jpg";
 import vitaGlowTeaImg from "../assets/artisanal-tea-grades/vitaglow-tea.jpg";
 import silverGreenTeaImg from "../assets/artisanal-tea-grades/silver-green-tea.jpg";
@@ -1919,7 +1920,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "White Tea & Purple Tea",
-        image: purpleTeaImg,
+        image: [whiteTeaImg, purpleTeaImg],
         body: "White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste, with a pale liquor, a velvety texture, a floral aroma, and a natural richness in antioxidants. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting — for a flavour closer to oolong: lighter than black tea but less vegetal than green tea, comparatively low in caffeine, and naturally rich in antioxidants.",
       },
       {
