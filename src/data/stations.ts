@@ -237,6 +237,7 @@ import handmadeFactoryCollageImg from "../assets/handmade-factory/handmade-facto
 import witheringRollingHandsImg from "../assets/handmade-factory/withering-rolling-hands.jpg";
 import handRolledLeafVariationImg from "../assets/handmade-factory/hand-rolled-leaf-variation.jpg";
 import chakraFlowerTeaCoinImg from "../assets/handmade-factory/chakra-flower-tea-coin.jpg";
+import greenTeaDryingTraysImg from "../assets/handmade-factory/green-tea-drying-trays.jpg";
 // A generated collage combining two real photos of labelled shade trees
 // on the estate — a general "why shade trees" signboard, and a
 // high-shade Albizia moluccana specimen. Used as "shade-management"'s
@@ -2433,6 +2434,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "Green Tea, Drying & the Building",
+        image: greenTeaDryingTraysImg,
         body: "A dedicated green tea machine — steaming and pressing the leaf — handles that grade separately, though it's currently out of service for a minor repair; once steamed, the leaf rests outside to shed the surface moisture left by steaming, then is hand-rolled to curl it and draw out its colour, strength, aroma, and taste, before a final pass through the dryer, with drying time varying from one small producer to the next. The building's small oven doubles as a bakery for tea-based snacks like biscuits. Drying, done right after rolling, runs on two separate dryers here — one traditional firewood-fired, one electric — each holding 34 trays, and both are also put to use on other small-batch products, from cardamom, cloves, and ginger to Innala (a local sweet potato).",
       },
       {
