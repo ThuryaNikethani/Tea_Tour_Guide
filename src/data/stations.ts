@@ -1912,25 +1912,21 @@ export const STATIONS: Station[] = [
       {
         heading: "Golden Tip & Silver Tip",
         image: goldenSilverTipImg,
-        imageFit: "contain",
         body: "Golden Tip uses that shoot's fully matured bud, while Silver Tip uses the same shoot's paler, still-immature bud, whose fine silvery hairs give the grade its name and a faint shimmer; the bud alone is weighed, withered for a few hours, and dried — a simpler process than the fully fermented grades — for a subtly sweet, floral cup with a velvety texture.",
       },
       {
         heading: "White Tea & Purple Tea",
         image: whitePurpleTeaImg,
-        imageFit: "contain",
         body: "White tea takes two and a half leaves from the shoot and skips withering entirely — steamed and dried rather than fermented and rolled like black tea — for a very lightly processed, naturally sweet taste, with a pale liquor, a velvety texture, a floral aroma, and a natural richness in antioxidants. Purple tea uses the same pluck but, unlike white tea, goes through the full black-tea process — withering, rolling, and fermenting — for a flavour closer to oolong: lighter than black tea but less vegetal than green tea, comparatively low in caffeine, and naturally rich in antioxidants.",
       },
       {
         heading: "Pink Tea & Vita Glow",
         image: pinkVitaglowTeaImg,
-        imageFit: "contain",
         body: "Pink tea starts out essentially colourless like white tea, and only turns pink once a couple of drops of lime are added — the citrus triggers a colour change in the same anthocyanin pigment that gives the shoot its hue; it also takes well to a couple of drops of honey, is recommended served as iced tea, and is naturally rich in antioxidants too. Vita Glow is made instead from the ordinary green-hued shoot's bud rather than the purple one.",
       },
       {
         heading: "Blends and Rarity",
         image: blendsRarityImg,
-        imageFit: "contain",
         body: "The estate also crafts value-added blends — such as tea infused with lotus flowers — and hand-tied Blooming Tea from the same shoots. These artisanal grades are picked and processed in far smaller quantities than standard black tea, which is what makes them rarer and more prized — ask at the tasting counter to sample them. Either the purple-hued or the regular green shoot can be used for most of these grades, though the estate mostly uses the purple-hued one.",
       },
       {
