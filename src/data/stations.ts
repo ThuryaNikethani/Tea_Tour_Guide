@@ -196,7 +196,7 @@ import starfruitHarvestImg from "../assets/starfruit/starfruit-harvest.webp";
 // field, showing the cultivar's distinctive purple-red young shoot. See
 // the provenance note near the "organic-cultivation" station below.
 import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
-import handHoldingShootImg from "../assets/organic-cultivation/hand-holding-shoot.jpg";
+import purpleShootCloseupImg from "../assets/organic-cultivation/purple-shoot-closeup.jpg";
 // A generated collage combining three real photos: the estate's own
 // Ceylon Tea Symbol signboard, an AR-TEA Academy tea-culture card held up
 // in the tea field, and a visitor holding two tea shoots. Visitor face is
@@ -1991,7 +1991,7 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "TRI 2043 — Grown Organically at the Estate",
-        image: handHoldingShootImg,
+        image: purpleShootCloseupImg,
         body: "The tea cultivar grown organically at this estate is TRI 2043, a China-type cultivar bred by the Tea Research Institute and known for a purple-hued shoot coloured by the pigment anthocyanin instead of the usual green. Mature TRI 2043 bushes here, grown without synthetic pesticides or fertilisers, already supply specialty grades like Golden Tip, Silver Tip, White Tea, Purple Tea, and Pink Tea. That's different from the younger TRI 2043 cuttings back at the nursery — those are still being trialled and haven't been cleared for planting at scale yet. TRI 2043 is naturally low-yielding, which is why the specialty grades made from it stay so limited in supply. Organic certification itself generally requires several years of chemical-free cultivation before a plot can be certified, with yields running lower than on conventionally managed land throughout.",
       },
     ],
