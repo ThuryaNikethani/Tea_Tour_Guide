@@ -201,6 +201,12 @@ import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
 // "introduction"'s heroImage. See the provenance note near the
 // "introduction" station below.
 import introductionCollageImg from "../assets/introduction/introduction-collage.jpg";
+// Generic stock photos (not the estate's own photography) illustrating a few
+// of "introduction"'s section topics — sourced free-license from Unsplash and
+// Pexels. See the provenance note near the "introduction" station below.
+import ceylonTeaFieldImg from "../assets/introduction/ceylon-tea-field.jpg";
+import coffeeBerriesImg from "../assets/introduction/coffee-berries.jpg";
+import teaEstateHillsideImg from "../assets/introduction/tea-estate-hillside.jpg";
 // A generated collage combining two real photos of the estate's own
 // low-country tea field (with a labelled shade tree) and its withering
 // troughs. Used as "pahatharata-manufacturing"'s heroImage. See the
@@ -1416,6 +1422,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * were moved onto "handmade-factory" instead, alongside its existing tray
  * rack photo (all three as one multi-image section, since all three show
  * that one stop's own equipment).
+ *
+ * On 2026-09-14, three of "introduction"'s five sections ("Ceylon Tea —
+ * Symbol of Quality", "From Coffee to Tea", "The Birth of an Industry")
+ * each got one illustrative photo, matching nursery's per-section image
+ * pattern (not every section — "Low-Country Ceylon Tea" and "A Traditional
+ * Welcome" were deliberately left without one). These are generic,
+ * free-license stock photos (Unsplash/Pexels, free for commercial use, no
+ * attribution required) — NOT the estate's own photography, unlike most
+ * other images in this file. No content, wording, or logic changed.
  */
 export const STATIONS: Station[] = [
   {
@@ -1432,14 +1447,17 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Ceylon Tea — Symbol of Quality",
+        image: ceylonTeaFieldImg,
         body: "Since the early 1800s, the name \"Ceylon\" has been synonymous with tea. The history of Ceylon tea runs back to the British rule in Sri Lanka over two hundred years ago.",
       },
       {
         heading: "From Coffee to Tea",
+        image: coffeeBerriesImg,
         body: "The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. In 1839, further tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
       },
       {
         heading: "The Birth of an Industry",
+        image: teaEstateHillsideImg,
         body: "The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa.",
       },
       {
