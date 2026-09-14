@@ -16,6 +16,8 @@ export interface StationSection {
   imagePosition?: "top" | "bottom";
   /** "cover" (default) crops to fill a fixed height; "contain" shows the whole image uncropped, at its own aspect ratio. */
   imageFit?: "cover" | "contain";
+  /** Which part of a "cover"-cropped image to keep visible. Defaults to "center" — only needed for a tall/portrait photo (e.g. a person's portrait) where centering would crop off the subject. */
+  imageFocus?: "top" | "center" | "bottom";
   /** Small photo-credit line shown under the image, only needed for the rare licensed (non-CC0) photo that requires attribution. */
   imageCredit?: string;
   /** When set, renders each as its own card (image + heading + body + tags) instead of one blended paragraph. */
@@ -207,7 +209,8 @@ import introductionCollageImg from "../assets/introduction/introduction-collage.
 // of "introduction"'s section topics — sourced free-license from Unsplash and
 // Pexels. See the provenance note near the "introduction" station below.
 import ceylonTeaFieldImg from "../assets/introduction/ceylon-tea-field.jpg";
-import coffeeLeafRustImg from "../assets/introduction/coffee-leaf-rust.jpg";
+import coffeeBeansImg from "../assets/introduction/coffee-beans.jpg";
+import driedTeaLeavesImg from "../assets/introduction/dried-tea-leaves.jpg";
 import jamesTaylorPortraitImg from "../assets/introduction/james-taylor-portrait.jpg";
 // A generated collage combining two real photos of the estate's own
 // low-country tea field (with a labelled shade tree) and its withering
@@ -1429,21 +1432,32 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * Symbol of Quality", "From Coffee to Tea", "The Birth of an Industry")
  * each got one illustrative photo, matching nursery's per-section image
  * pattern (not every section — "Low-Country Ceylon Tea" and "A Traditional
- * Welcome" were deliberately left without one). "Ceylon Tea — Symbol of
- * Quality" uses a generic, free-license stock photo (Unsplash/Pexels, free
- * for commercial use, no attribution required) — NOT the estate's own
- * photography, unlike most other images in this file.
- * "The Birth of an Industry" and "From Coffee to Tea" were then swapped
- * (same day) for two more specific real photos, at the user's request,
- * since the section names James Taylor and describes the coffee rust
- * disease specifically: a public-domain 1894 portrait of James Taylor
- * himself (Wikimedia Commons, PD-1923, no attribution required), and a
- * real photo of coffee leaf rust (Hemileia vastatrix) — the actual disease
- * described in that section's text. The coffee-rust photo is licensed
- * CC BY-SA 4.0, which (unlike every other image here) legally requires a
- * visible credit — hence the new optional `imageCredit` field on
- * `StationSection`, shown as a small caption under the image only where
- * set. No content, wording, or logic changed otherwise.
+ * Welcome" were deliberately left without one). All are generic, free-
+ * license stock photos (Unsplash, free for commercial use, no attribution
+ * required) — NOT the estate's own photography, unlike most other images
+ * in this file.
+ * "The Birth of an Industry" was then swapped (same day) for a
+ * public-domain 1894 portrait of James Taylor himself (Wikimedia Commons,
+ * PD-1923, no attribution required), since the section names him
+ * specifically — a real photo of the actual person is a stronger, more
+ * specific match than a generic estate landscape. Its `imageFocus: "top"`
+ * keeps his face in frame; without it, the default center-crop landed on
+ * his beard/collar instead, since the source portrait is tall (portrait
+ * orientation).
+ * "From Coffee to Tea" went through two more iterations the same day: a
+ * real photo of coffee leaf rust (Hemileia vastatrix, the actual disease
+ * described in that section's text) was tried first, but it required a
+ * CC BY-SA visible credit line (added via a new optional `imageCredit`
+ * field) — the user then pointed to a two-cups coffee-vs-tea comparison
+ * photo they liked on another tea estate's site, which turned out to be a
+ * paid Shutterstock image not licensed for reuse here. The final choice
+ * recreates that same side-by-side comparison idea instead, using two
+ * separate free-license photos (roasted coffee beans, loose dried tea
+ * leaves) rendered next to each other via the existing multi-image
+ * `imageFit: "contain"` mechanism — no compositing, no credit needed. The
+ * `imageCredit` field stayed on `StationSection` since it's harmless
+ * infrastructure, but nothing currently sets it.
+ * No content, wording, or logic changed through any of this.
  */
 export const STATIONS: Station[] = [
   {
@@ -1465,13 +1479,14 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "From Coffee to Tea",
-        image: coffeeLeafRustImg,
-        imageCredit: "Coffee leaf rust (Hemileia vastatrix) — the disease described below. Photo: Fairview Estate, Kiambu, Kenya (CC BY-SA 4.0, Wikimedia Commons).",
+        image: [coffeeBeansImg, driedTeaLeavesImg],
+        imageFit: "contain",
         body: "The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. In 1839, further tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
       },
       {
         heading: "The Birth of an Industry",
         image: jamesTaylorPortraitImg,
+        imageFocus: "top",
         body: "The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa.",
       },
       {
