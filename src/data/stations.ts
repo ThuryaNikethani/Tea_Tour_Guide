@@ -207,8 +207,7 @@ import introductionCollageImg from "../assets/introduction/introduction-collage.
 // of "introduction"'s section topics — sourced free-license from Unsplash and
 // Pexels. See the provenance note near the "introduction" station below.
 import ceylonTeaFieldImg from "../assets/introduction/ceylon-tea-field.jpg";
-import coffeeBeansImg from "../assets/introduction/coffee-beans.jpg";
-import driedTeaLeavesImg from "../assets/introduction/dried-tea-leaves.jpg";
+import coffeeTeaCupsImg from "../assets/introduction/coffee-tea-cups.jpg";
 import jamesTaylorPortraitImg from "../assets/introduction/james-taylor-portrait.jpg";
 // A generated collage combining two real photos of the estate's own
 // low-country tea field (with a labelled shade tree) and its withering
@@ -1445,19 +1444,20 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * asset itself was pre-cropped to a tight, landscape-oriented headshot
  * (hair to mustache, border and caption removed) at roughly the image
  * box's own aspect ratio, so a plain center-crop shows his face properly.
- * "From Coffee to Tea" went through two more iterations the same day: a
- * real photo of coffee leaf rust (Hemileia vastatrix, the actual disease
+ * "From Coffee to Tea" went through a few iterations the same day: a real
+ * photo of coffee leaf rust (Hemileia vastatrix, the actual disease
  * described in that section's text) was tried first, but it required a
  * CC BY-SA visible credit line (added via a new optional `imageCredit`
- * field) — the user then pointed to a two-cups coffee-vs-tea comparison
+ * field). The user then pointed to a two-cups coffee-vs-tea comparison
  * photo they liked on another tea estate's site, which turned out to be a
- * paid Shutterstock image not licensed for reuse here. The final choice
- * recreates that same side-by-side comparison idea instead, using two
- * separate free-license photos (roasted coffee beans, loose dried tea
- * leaves) rendered next to each other via the existing multi-image
- * `imageFit: "contain"` mechanism — no compositing, no credit needed. The
- * `imageCredit` field stayed on `StationSection` since it's harmless
- * infrastructure, but nothing currently sets it.
+ * paid Shutterstock image not licensed for reuse here — a from-scratch
+ * "coffee beans next to tea leaves" collage was tried as a substitute, but
+ * missed the point: the reference showed actual brewed cups of coffee and
+ * tea, not raw ingredients. The final image is a free-license photo that
+ * does show both real cups side by side (one coffee, one tea), matching
+ * what the user actually asked for. The `imageCredit` field stayed on
+ * `StationSection` since it's harmless infrastructure, but nothing
+ * currently sets it.
  * No content, wording, or logic changed through any of this.
  */
 export const STATIONS: Station[] = [
@@ -1480,8 +1480,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "From Coffee to Tea",
-        image: [coffeeBeansImg, driedTeaLeavesImg],
-        imageFit: "contain",
+        image: coffeeTeaCupsImg,
         body: "The first recorded tea plant in Sri Lanka arrived in 1824, when the British brought a tea plant from China and planted it in Peradeniya's Royal Botanical Garden for non-commercial use. In 1839, further tea crops were brought down from Assam and Calcutta for experimental purposes. However, the actual birth of tea plantations in Sri Lanka came as the result of the death of the island's one successful coffee industry: in 1869, Sri Lanka's flourishing coffee plantations were struck by a new plant disease named coffee rust, and the coffee enterprise in Sri Lanka was wiped out in less than a decade. Thus began the mass cultivation of tea in Sri Lanka.",
       },
       {
