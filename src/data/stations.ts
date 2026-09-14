@@ -198,6 +198,7 @@ import starfruitHarvestImg from "../assets/starfruit/starfruit-harvest.webp";
 import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
 import purpleShootCloseupImg from "../assets/organic-cultivation/purple-shoot-closeup.jpg";
 import witheringTroughImg from "../assets/withering/withering-trough.jpg";
+import rollingMachineryImg from "../assets/rolling/rolling-machinery.jpg";
 // A generated collage combining three real photos: the estate's own
 // Ceylon Tea Symbol signboard, an AR-TEA Academy tea-culture card held up
 // in the tea field, and a visitor holding two tea shoots. Visitor face is
@@ -2401,6 +2402,7 @@ export const STATIONS: Station[] = [
     icon: "RotateCw",
     verified: true,
     lastVerified: "2026-09-14",
+    heroImage: rollingMachineryImg,
     description:
       "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed. Two charging rollers each take in 280 kg of withered leaf. The first roll runs for 20 minutes at 30 to 32 RPM; the resulting doolies (rolled leaf particles) pass along a conveyor to a roll breaker fitted with wire mesh, which drops the smallest particles through as the 'first dool' and sends it on to fermentation. Leaf that doesn't pass through moves up the conveyor to two secondary rollers — with intake reduced by 12% to 14% from the original 280 kg — for a second roll of another 20 minutes at 32 RPM, after which that 'second dool' goes straight to fermentation without sifting.",
     keyPoints:
