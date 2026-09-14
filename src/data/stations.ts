@@ -252,6 +252,7 @@ import shadeManagementCollageImg from "../assets/shade-management/shade-manageme
 // note near the "pruning" station below.
 import pruningCollageImg from "../assets/pruning/pruning-collage.jpg";
 import prunedBushRowsImg from "../assets/pruning/pruned-bush-rows.jpg";
+import workerCuttingToolImg from "../assets/pruning/worker-cutting-tool.jpg";
 // Real, user-supplied photo of the estate's own "Artisanal Tea Grades"
 // sign (background removed with AI, then cropped in to the poster
 // itself, same as the pruning signs) — used as "artisanal-tea-grades"'s
@@ -1671,7 +1672,7 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Pruning",
-        image: prunedBushRowsImg,
+        image: [prunedBushRowsImg, workerCuttingToolImg],
         body: "Before pruning, the estate deliberately leaves the tea bush to grow out for a period rather than cutting it back right away — letting new growth come in fully so the bush builds up nourishment. Only once that build-up is complete does pruning begin, cutting the bush back down to roughly knee height. On-site signs mark this out as two named stages: the first cross-cut (Palamu Haras Kapuma) brings the bush down to roughly 9-12 inches (22-30 cm), and the second cross-cut (Dewana Haras Kapuma) brings it back up to roughly 16-18 inches (40-45 cm). Letting the bush grow out first, rather than pruning on a fixed schedule regardless of condition, gives the plant time to channel nourishment upward before it's cut back.",
       },
     ],
