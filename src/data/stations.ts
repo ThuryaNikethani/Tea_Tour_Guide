@@ -214,6 +214,8 @@ import jamesTaylorPortraitImg from "../assets/introduction/james-taylor-portrait
 // troughs. Used as "pahatharata-manufacturing"'s heroImage. See the
 // provenance note near the "pahatharata-manufacturing" station below.
 import pahatharataManufacturingCollageImg from "../assets/pahatharata-manufacturing/pahatharata-manufacturing-collage.jpg";
+import factoryProcessingDrumsImg from "../assets/pahatharata-manufacturing/factory-processing-drums.jpg";
+import ctcTeaGranulesImg from "../assets/pahatharata-manufacturing/ctc-tea-granules.jpg";
 // Full-bleed hero banner images for stations that already have their own
 // inline section images and text — these are purely additive (same
 // treatment "nursery" gets from its heroVideo), reusing existing photos
@@ -1513,10 +1515,18 @@ export const STATIONS: Station[] = [
     lastVerified: "2026-09-09",
     heroImage: pahatharataManufacturingCollageImg,
     heroTagline: "Visitors touring the estate's own factory floor.",
-    description:
-      "Low-country ('Pahatharata') estates like this one process tea differently from high-grown estates further inland — and the estate's own manufacturing process, covered stage by stage earlier on this tour, bears that out: rolling here breaks the leaf down into small, dense particles rather than twisting it into whole orthodox leaf, the hallmark of CTC (Crush-Tear-Curl) processing. This stop is a quick recap of what that low-country approach means for plucking, processing, and grading.",
-    keyPoints:
-      "CTC (Crush-Tear-Curl) mechanically processes the leaf into small, dense granules, producing the strong, brisk character low-country Ceylon tea is known for — the same leaf particles seen earlier at the rolling and sorting stops on this tour.",
+    sections: [
+      {
+        heading: "Low-Country vs. High-Grown Processing",
+        image: factoryProcessingDrumsImg,
+        body: "Low-country ('Pahatharata') estates like this one process tea differently from high-grown estates further inland — and the estate's own manufacturing process, covered stage by stage earlier on this tour, bears that out: rolling here breaks the leaf down into small, dense particles rather than twisting it into whole orthodox leaf, the hallmark of CTC (Crush-Tear-Curl) processing. This stop is a quick recap of what that low-country approach means for plucking, processing, and grading.",
+      },
+      {
+        heading: "CTC: Crush-Tear-Curl",
+        image: ctcTeaGranulesImg,
+        body: "CTC (Crush-Tear-Curl) mechanically processes the leaf into small, dense granules, producing the strong, brisk character low-country Ceylon tea is known for — the same leaf particles seen earlier at the rolling and sorting stops on this tour.",
+      },
+    ],
     duration: "10-15 minutes",
   },
   {
