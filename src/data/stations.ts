@@ -1844,11 +1844,19 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "The Grading Machinery",
-        body: "That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong. Sieves of different mesh sizes further separate particles by size over several passes, and an electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside — none of this colour or character comes from dyes or additives, only natural processing.",
+        body: "That grading machinery includes a colour separator with a camera system that can tell apart particles like leaf and flower, filtering out anything that doesn't belong — since Sri Lankan production is centred on Black Tea, this step is what eliminates any remaining brown, under-fermented particles and stalk fragments. Sieves of different mesh sizes — measured by the number of square holes per inch, ranging from as coarse as 3 holes per inch up to as fine as 60 — sift the leaf into around 21 distinct grades by particle size over several passes. An electrostatic separator gives any remaining brown stalk fragments a static charge on rollers so they can be pulled aside, and dedicated machines remove refuse tea from the batch entirely — none of this colour or character comes from dyes or additives, only natural processing.",
       },
       {
         heading: "Grade, Value, and Export",
         body: "Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
+      },
+      {
+        heading: "Market Marks and Grade Names",
+        body: "Beyond position on the shoot and mesh size, sorted tea is also classified into three market categories — First Mark, Second Mark, and Third Mark. The main grades produced here include OPA, OP, OP1, BOP1, FBOP, FF1, FF, Pekoe, Pekoe1, BOP Special, BOPA, FF Extra Special, Extra Special 1, and FF Special, while lower-value off-grade tea falls into categories such as 1A, BM, BP, FNGS, and BT.",
+      },
+      {
+        heading: "Yield and Outturn",
+        body: "On average, 100 kg of green leaf yields about 21.5 kg of finished, packed black tea — an outturn of roughly 21.5%, with the rest lost to moisture evaporation and to refuse removed during sorting. Standard Tea Board testing guidelines put this at around 4.65 kg of green leaf needed per 1 kg of made tea. The factory targets at least 65% of output in the main grades, keeps off-grade tea to no more than 20%, with the remainder falling into Second Mark and similar categories.",
       },
     ],
     duration: "Sorting runs continuously on machinery and takes roughly 30 to 45 minutes per batch.",
