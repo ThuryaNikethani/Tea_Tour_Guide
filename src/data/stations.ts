@@ -266,6 +266,7 @@ import artisanalTeaGradesSignImg from "../assets/sorting/artisanal-tea-grades-si
 // near the "sorting" station below.
 import sortingCollageImg from "../assets/sorting/sorting-collage.jpg";
 import gradingMachineryWorkerImg from "../assets/sorting/grading-machinery-worker.jpg";
+import gradedTeaExportSacksImg from "../assets/sorting/graded-tea-export-sacks.jpg";
 // A generated collage combining two real, user-supplied photos of
 // visitors at the packing area (bagging graded tea, and examining
 // finished grades in bins), center-cropped to the same size and laid out
@@ -1873,6 +1874,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "Grade, Value, and Export",
+        image: gradedTeaExportSacksImg,
         body: "Value follows position on the shoot, not just leaf size — the higher and more tender the leaf, the higher its grade and price. Dust grade, not the premium leaf, is what typically ends up in flavoured tea bags; the finest grades like FBOPF Extra Special are rarely sold locally because of how much they're worth on export markets.",
       },
       {
