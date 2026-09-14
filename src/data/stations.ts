@@ -2440,6 +2440,7 @@ export const STATIONS: Station[] = [
         body: "The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
       },
     ],
+    processVideo: "/videos/handmade-factory-process.mp4",
     duration: "10 minutes",
   },
   {
