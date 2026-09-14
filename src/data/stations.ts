@@ -16,8 +16,6 @@ export interface StationSection {
   imagePosition?: "top" | "bottom";
   /** "cover" (default) crops to fill a fixed height; "contain" shows the whole image uncropped, at its own aspect ratio. */
   imageFit?: "cover" | "contain";
-  /** Which part of a "cover"-cropped image to keep visible. Defaults to "center" — only needed for a tall/portrait photo (e.g. a person's portrait) where centering would crop off the subject. */
-  imageFocus?: "top" | "center" | "bottom";
   /** Small photo-credit line shown under the image, only needed for the rare licensed (non-CC0) photo that requires attribution. */
   imageCredit?: string;
   /** When set, renders each as its own card (image + heading + body + tags) instead of one blended paragraph. */
@@ -1440,10 +1438,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * public-domain 1894 portrait of James Taylor himself (Wikimedia Commons,
  * PD-1923, no attribution required), since the section names him
  * specifically — a real photo of the actual person is a stronger, more
- * specific match than a generic estate landscape. Its `imageFocus: "top"`
- * keeps his face in frame; without it, the default center-crop landed on
- * his beard/collar instead, since the source portrait is tall (portrait
- * orientation).
+ * specific match than a generic estate landscape. The source scan is a
+ * tall book portrait (with a cream page border and a caption baked in);
+ * displayed as-is, the section's wide/short image box center-cropped it
+ * down to just his beard and collar. Rather than fight that with CSS, the
+ * asset itself was pre-cropped to a tight, landscape-oriented headshot
+ * (hair to mustache, border and caption removed) at roughly the image
+ * box's own aspect ratio, so a plain center-crop shows his face properly.
  * "From Coffee to Tea" went through two more iterations the same day: a
  * real photo of coffee leaf rust (Hemileia vastatrix, the actual disease
  * described in that section's text) was tried first, but it required a
@@ -1486,7 +1487,6 @@ export const STATIONS: Station[] = [
       {
         heading: "The Birth of an Industry",
         image: jamesTaylorPortraitImg,
-        imageFocus: "top",
         body: "The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa.",
       },
       {
