@@ -200,6 +200,7 @@ import purpleShootCloseupImg from "../assets/organic-cultivation/purple-shoot-cl
 import witheringTroughImg from "../assets/withering/withering-trough.jpg";
 import rollingMachineryImg from "../assets/rolling/rolling-machinery.jpg";
 import fermentationFloorImg from "../assets/fermentation/fermentation-floor.jpg";
+import dryerMachineImg from "../assets/drying/dryer-machine.jpg";
 // A generated collage combining three real photos: the estate's own
 // Ceylon Tea Symbol signboard, an AR-TEA Academy tea-culture card held up
 // in the tea field, and a visitor holding two tea shoots. Visitor face is
@@ -2435,6 +2436,7 @@ export const STATIONS: Station[] = [
     icon: "Flame",
     verified: true,
     lastVerified: "2026-09-14",
+    heroImage: dryerMachineImg,
     description:
       "Before going into the dryer, the fermented leaf is loosened. It then passes through hot-air dryers — firewood-generated heat drawn in by a main fan, held to an inlet temperature of 120°C to 130°C — that halt oxidation instantly and lock in the tea's character. Inside, the dryer is divided into 6 sections; leaf falls from the top tray down through these sections to the lower trays, tumbling forward and backward as it travels, and exits after exactly 21 minutes, by which point the exhaust temperature should read around 80°C (roughly 140°F to 150°F). It's that combination — 120-130°C inlet, 80°C exhaust, 21 minutes — that the dryer is built to hold, and what turns the leaf properly black. Drop the inlet below 120°C and the leaf comes out under-dried and brownish, even if the exhaust reads 100°C from thinning the leaf layer; push the inlet to 150°C while the exhaust falls to 75°C and the leaf ends up soggy and stewed instead. What comes out at the right settings is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
     keyPoints:
