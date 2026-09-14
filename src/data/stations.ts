@@ -199,6 +199,7 @@ import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
 import purpleShootCloseupImg from "../assets/organic-cultivation/purple-shoot-closeup.jpg";
 import witheringTroughImg from "../assets/withering/withering-trough.jpg";
 import rollingMachineryImg from "../assets/rolling/rolling-machinery.jpg";
+import fermentationFloorImg from "../assets/fermentation/fermentation-floor.jpg";
 // A generated collage combining three real photos: the estate's own
 // Ceylon Tea Symbol signboard, an AR-TEA Academy tea-culture card held up
 // in the tea field, and a visitor holding two tea shoots. Visitor face is
@@ -2418,6 +2419,7 @@ export const STATIONS: Station[] = [
     icon: "FlaskConical",
     verified: true,
     lastVerified: "2026-09-14",
+    heroImage: fermentationFloorImg,
     description:
       "Rolled leaf — both the first and second dool — is spread out in a cool, humid room held at around 25 to 30°C and left to oxidise for 2.5 hours, with a humidifier keeping the air moist enough for the reaction to happen. The room has to stay completely clean — free of bacteria, stagnant water, or old leaf — since bacteria halts enzyme activity and would spoil the colour, strength, and liquor quality. Over those 2.5 hours the green leaf gradually turns a coppery brown as it fully develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
     keyPoints:
