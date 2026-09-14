@@ -267,6 +267,7 @@ import artisanalTeaGradesSignImg from "../assets/sorting/artisanal-tea-grades-si
 import sortingCollageImg from "../assets/sorting/sorting-collage.jpg";
 import gradingMachineryWorkerImg from "../assets/sorting/grading-machinery-worker.jpg";
 import gradedTeaExportSacksImg from "../assets/sorting/graded-tea-export-sacks.jpg";
+import sortingFloorVisitImg from "../assets/sorting/sorting-floor-visit-2.jpg";
 // A generated collage combining two real, user-supplied photos of
 // visitors at the packing area (bagging graded tea, and examining
 // finished grades in bins), center-cropped to the same size and laid out
@@ -1861,6 +1862,7 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Sorting & Grading",
+        image: sortingFloorVisitImg,
         body: "Green Tea and Black Tea both start from the very same bush and leaf — what actually separates them is fermentation (oxidation), a step Black Tea goes through that Green Tea skips. This factory's production is mostly Black Tea.",
       },
       {
