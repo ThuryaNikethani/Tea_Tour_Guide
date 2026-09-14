@@ -236,6 +236,7 @@ import uniqueFruitsHeroCollageImg from "../assets/unique-fruits/unique-fruits-he
 import handmadeFactoryCollageImg from "../assets/handmade-factory/handmade-factory-collage.jpg";
 import handRollingTraysImg from "../assets/handmade-factory/hand-rolling-trays.jpg";
 import handRolledLeafVariationImg from "../assets/handmade-factory/hand-rolled-leaf-variation.jpg";
+import chakraFlowerTeaCoinImg from "../assets/handmade-factory/chakra-flower-tea-coin.jpg";
 // A generated collage combining two real photos of labelled shade trees
 // on the estate — a general "why shade trees" signboard, and a
 // high-shade Albizia moluccana specimen. Used as "shade-management"'s
@@ -2441,6 +2442,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "Flower Chakra & Tea Coin",
+        image: chakraFlowerTeaCoinImg,
         body: "The most labour-intensive items made here are two small-batch specialties — Flower Chakra, a hand-rolled black-tea ring using about two shoots each, and Tea Coin — a single person can hand-roll only around 25 grams of either a day, which is why they're so expensive and mostly bought as a souvenir by wealthy tea enthusiasts rather than used for everyday drinking. Most handmade output, including Purple Tea, is made to order in small batches rather than produced continuously in bulk.",
       },
     ],
