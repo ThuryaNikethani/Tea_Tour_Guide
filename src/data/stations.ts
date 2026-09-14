@@ -2389,10 +2389,24 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-14",
     heroImage: witheringTroughImg,
-    description:
-      "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs — 85 feet long and 6 feet wide, each fitted with a 46-inch fan running at 960 RPM to force air through it and steadily remove moisture — what the estate calls the 'modern' withering process. At a loading rate of about 2.5 kg per square foot, one trough holds around 1,250 kg of green leaf. The leaf stays in the trough for 12 hours, turned upside down by hand every 4 hours, with heat applied from underneath for 3 to 4 hours during that cycle; it's loosened one final time before being unloaded in the early morning. Out of every 100 kg of green leaf, about 43 kg of water is removed — checked by testing 2.5 kg of leaf in a 1-square-foot box — leaving the leaf at around 57% to 58% moisture by the time it turns limp and pliable, ready for rolling without shattering. The withered leaf is weighed again before it moves on to rolling.",
-    keyPoints:
-      "Withering evens out moisture across the leaf and lets natural enzymes begin the chemical changes that will later create the tea's aroma and colour.",
+    sections: [
+      {
+        heading: "Loading the Troughs",
+        body: "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs — 85 feet long and 6 feet wide, each fitted with a 46-inch fan running at 960 RPM to force air through it and steadily remove moisture — what the estate calls the 'modern' withering process. At a loading rate of about 2.5 kg per square foot, one trough holds around 1,250 kg of green leaf.",
+      },
+      {
+        heading: "The 12-Hour Cycle",
+        body: "The leaf stays in the trough for 12 hours, turned upside down by hand every 4 hours, with heat applied from underneath for 3 to 4 hours during that cycle; it's loosened one final time before being unloaded in the early morning. The withered leaf is weighed again before it moves on to rolling.",
+      },
+      {
+        heading: "Moisture Loss",
+        body: "Out of every 100 kg of green leaf, about 43 kg of water is removed — checked by testing 2.5 kg of leaf in a 1-square-foot box — leaving the leaf at around 57% to 58% moisture by the time it turns limp and pliable, ready for rolling without shattering.",
+      },
+      {
+        heading: "Why Withering Matters",
+        body: "Withering evens out moisture across the leaf and lets natural enzymes begin the chemical changes that will later create the tea's aroma and colour.",
+      },
+    ],
     processVideo: "/videos/withering-process.mp4",
     duration: "This stage runs for a full 12 hours, with the leaf turned every 4 hours.",
   },
@@ -2405,10 +2419,24 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-14",
     heroImage: rollingMachineryImg,
-    description:
-      "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed. Two charging rollers each take in 280 kg of withered leaf. The first roll runs for 20 minutes at 30 to 32 RPM; the resulting doolies (rolled leaf particles) pass along a conveyor to a roll breaker fitted with wire mesh, which drops the smallest particles through as the 'first dool' and sends it on to fermentation. Leaf that doesn't pass through moves up the conveyor to two secondary rollers — with intake reduced by 12% to 14% from the original 280 kg — for a second roll of another 20 minutes at 32 RPM, after which that 'second dool' goes straight to fermentation without sifting.",
-    keyPoints:
-      "Breaking the cell walls exposes enzymes to oxygen, kicking off oxidation. How hard and how long the leaf is rolled shapes the final tea's strength and appearance. The first of several passes, a gentle 'pre-conditioning' roll, is meant to coat the twisted particles in the leaf's own juices before firmer rolling follows.",
+    sections: [
+      {
+        heading: "Twisting and Breaking the Leaf",
+        body: "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
+      },
+      {
+        heading: "The First Roll",
+        body: "Two charging rollers each take in 280 kg of withered leaf. The first roll runs for 20 minutes at 30 to 32 RPM; the resulting doolies (rolled leaf particles) pass along a conveyor to a roll breaker fitted with wire mesh, which drops the smallest particles through as the 'first dool' and sends it on to fermentation.",
+      },
+      {
+        heading: "The Second Roll",
+        body: "Leaf that doesn't pass through moves up the conveyor to two secondary rollers — with intake reduced by 12% to 14% from the original 280 kg — for a second roll of another 20 minutes at 32 RPM, after which that 'second dool' goes straight to fermentation without sifting.",
+      },
+      {
+        heading: "Why Rolling Matters",
+        body: "Breaking the cell walls exposes enzymes to oxygen, kicking off oxidation. How hard and how long the leaf is rolled shapes the final tea's strength and appearance. The first of several passes, a gentle 'pre-conditioning' roll, is meant to coat the twisted particles in the leaf's own juices before firmer rolling follows.",
+      },
+    ],
     processVideo: "/videos/rolling-process.mp4",
     duration: "Two 20-minute rolls (40 minutes total) — the first at 30 to 32 RPM, the second at 32 RPM.",
   },
@@ -2421,10 +2449,28 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-14",
     heroImage: fermentationFloorImg,
-    description:
-      "Rolled leaf — both the first and second dool — is spread out in a cool, humid room held at around 25 to 30°C and left to oxidise for 2.5 hours, with a humidifier keeping the air moist enough for the reaction to happen. The room has to stay completely clean — free of bacteria, stagnant water, or old leaf — since bacteria halts enzyme activity and would spoil the colour, strength, and liquor quality. Over those 2.5 hours the green leaf gradually turns a coppery brown as it fully develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
-    keyPoints:
-      "This is the single most important step for flavour. Timing has to be judged precisely — too little and the tea is thin, too much and it turns flat and dull. It's also what separates the tea types made here: black tea goes withering, rolling, fermentation, then firing, while green tea skips fermentation entirely (withering, rolling, drying only) and is milder — mostly drunk for its gentler, more medicinal character; white tea skips both withering and fermentation, going straight from fresh leaf to steaming and drying. The factory doesn't produce Oolong tea, which the guide describes as a black-tea-like fermented style made by repeated steaming and hand-brushing rather than machine rolling.",
+    sections: [
+      {
+        heading: "Oxidising the Leaf",
+        body: "Rolled leaf — both the first and second dool — is spread out in a cool, humid room held at around 25 to 30°C and left to oxidise for 2.5 hours, with a humidifier keeping the air moist enough for the reaction to happen.",
+      },
+      {
+        heading: "Keeping the Room Clean",
+        body: "The room has to stay completely clean — free of bacteria, stagnant water, or old leaf — since bacteria halts enzyme activity and would spoil the colour, strength, and liquor quality.",
+      },
+      {
+        heading: "From Green to Copper",
+        body: "Over those 2.5 hours the green leaf gradually turns a coppery brown as it fully develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
+      },
+      {
+        heading: "Getting the Timing Right",
+        body: "This is the single most important step for flavour. Timing has to be judged precisely — too little and the tea is thin, too much and it turns flat and dull.",
+      },
+      {
+        heading: "Black, Green, White, and Oolong Tea",
+        body: "It's also what separates the tea types made here: black tea goes withering, rolling, fermentation, then firing, while green tea skips fermentation entirely (withering, rolling, drying only) and is milder — mostly drunk for its gentler, more medicinal character; white tea skips both withering and fermentation, going straight from fresh leaf to steaming and drying. The factory doesn't produce Oolong tea, which the guide describes as a black-tea-like fermented style made by repeated steaming and hand-brushing rather than machine rolling.",
+      },
+    ],
     processVideo: "/videos/fermentation-process.mp4",
     duration: "Fermentation takes 2.5 hours for both the first and second dool, before the leaf moves on to drying.",
   },
@@ -2437,10 +2483,32 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-14",
     heroImage: dryerMachineImg,
-    description:
-      "Before going into the dryer, the fermented leaf is loosened. It then passes through hot-air dryers — firewood-generated heat drawn in by a main fan, held to an inlet temperature of 120°C to 130°C — that halt oxidation instantly and lock in the tea's character. Inside, the dryer is divided into 6 sections; leaf falls from the top tray down through these sections to the lower trays, tumbling forward and backward as it travels, and exits after exactly 21 minutes, by which point the exhaust temperature should read around 80°C (roughly 140°F to 150°F). It's that combination — 120-130°C inlet, 80°C exhaust, 21 minutes — that the dryer is built to hold, and what turns the leaf properly black. Drop the inlet below 120°C and the leaf comes out under-dried and brownish, even if the exhaust reads 100°C from thinning the leaf layer; push the inlet to 150°C while the exhaust falls to 75°C and the leaf ends up soggy and stewed instead. What comes out at the right settings is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
-    keyPoints:
-      "Firing stops the chemical changes at exactly the right moment and reduces moisture from around 45-50% down to about 2-3%, which is essential for the tea to stay fresh during storage and shipping. The dryer alone doesn't decide the tea's final weight and quality, though — that comes from a whole chain of conditions: good-quality green leaf, proper withering, correct manufacturing, successful fermentation (the most crucial step of all), and finally, correct processing in the dryer.",
+    sections: [
+      {
+        heading: "Into the Dryer",
+        body: "Before going into the dryer, the fermented leaf is loosened. It then passes through hot-air dryers — firewood-generated heat drawn in by a main fan, held to an inlet temperature of 120°C to 130°C — that halt oxidation instantly and lock in the tea's character.",
+      },
+      {
+        heading: "Six Sections, 21 Minutes",
+        body: "Inside, the dryer is divided into 6 sections; leaf falls from the top tray down through these sections to the lower trays, tumbling forward and backward as it travels, and exits after exactly 21 minutes, by which point the exhaust temperature should read around 80°C (roughly 140°F to 150°F).",
+      },
+      {
+        heading: "Getting the Balance Right",
+        body: "It's that combination — 120-130°C inlet, 80°C exhaust, 21 minutes — that the dryer is built to hold, and what turns the leaf properly black. Drop the inlet below 120°C and the leaf comes out under-dried and brownish, even if the exhaust reads 100°C from thinning the leaf layer; push the inlet to 150°C while the exhaust falls to 75°C and the leaf ends up soggy and stewed instead.",
+      },
+      {
+        heading: "The Result",
+        body: "What comes out at the right settings is the familiar black, crisp tea leaf. Visitors notice the heat immediately — it's one of the warmest stops on the factory floor.",
+      },
+      {
+        heading: "Locking In Freshness",
+        body: "Firing stops the chemical changes at exactly the right moment and reduces moisture from around 45-50% down to about 2-3%, which is essential for the tea to stay fresh during storage and shipping.",
+      },
+      {
+        heading: "A Chain of Conditions",
+        body: "The dryer alone doesn't decide the tea's final weight and quality, though — that comes from a whole chain of conditions: good-quality green leaf, proper withering, correct manufacturing, successful fermentation (the most crucial step of all), and finally, correct processing in the dryer.",
+      },
+    ],
     processVideo: "/videos/drying-process.mp4",
     duration: "Leaf travels through the dryer for exactly 21 minutes, on a tightly held inlet-to-exhaust temperature rotation.",
   },
@@ -2454,10 +2522,32 @@ export const STATIONS: Station[] = [
     lastVerified: "2026-09-09",
     heroImage: packingCollageImg,
     heroTagline: "Visitors at the estate's own packing area.",
-    description:
-      "Graded tea is weighed, tasted for quality, and sealed into moisture-proof packaging lined with aluminium foil, printed with the factory's name and logo, its registration number, the Ceylon Tea Symbol, and its food safety certificate. The packing area is where several finished grades sit side by side — Dust (destined mainly for tea bags), OP1, Pekoe, BOP (Broken Orange Pekoe), and OP (Orange Pekoe) — with OP1 and OP especially popular across Arabic-speaking markets and Pekoe well known in Russia and Iran. The rarest and most valuable grade made here is SFOPE1, a 'Flowery Tippy' grade named for the pale, silvery tip pieces it contains from the very top of the shoot — prized more for its delicate character than raw strength. Bag weights vary by grade too: a fixed-size bag holds far more of a fine, dense grade like Dust (around 58kg) than a bulkier, leafier grade like OPE (around 30kg). Mostly, the factory hands its finished tea to Colombo tea brokers — names like Forbes & Walker, Akbar Brothers, and Finlays came up — who bring it to the Colombo Tea Auction, where buyers purchase it and often export it under their own brand after adding further value; direct export under the Athukorala name itself does happen too, but mainly for occasional special orders from overseas buyers.",
-    keyPoints:
-      "Airtight packing protects the tea from moisture and odours, preserving the flavour that was carefully built through every earlier stage of the process. Different countries want different things from their tea — some prefer a strong, astringent cup, others don't — so which part of the shoot a grade comes from is effectively matched to each export market's palate; Arabic-speaking markets, for instance, specifically request grades that aren't part of everyday drinking habits back home. Selling mostly through brokers rather than exporting directly means outside buyers usually handle onward international shipment and branding.",
+    sections: [
+      {
+        heading: "Weighing, Tasting, and Sealing",
+        body: "Graded tea is weighed, tasted for quality, and sealed into moisture-proof packaging lined with aluminium foil, printed with the factory's name and logo, its registration number, the Ceylon Tea Symbol, and its food safety certificate.",
+      },
+      {
+        heading: "Grades on the Packing Floor",
+        body: "The packing area is where several finished grades sit side by side — Dust (destined mainly for tea bags), OP1, Pekoe, BOP (Broken Orange Pekoe), and OP (Orange Pekoe) — with OP1 and OP especially popular across Arabic-speaking markets and Pekoe well known in Russia and Iran. The rarest and most valuable grade made here is SFOPE1, a 'Flowery Tippy' grade named for the pale, silvery tip pieces it contains from the very top of the shoot — prized more for its delicate character than raw strength.",
+      },
+      {
+        heading: "Bag Weights by Grade",
+        body: "Bag weights vary by grade too: a fixed-size bag holds far more of a fine, dense grade like Dust (around 58kg) than a bulkier, leafier grade like OPE (around 30kg).",
+      },
+      {
+        heading: "From Factory to Auction",
+        body: "Mostly, the factory hands its finished tea to Colombo tea brokers — names like Forbes & Walker, Akbar Brothers, and Finlays came up — who bring it to the Colombo Tea Auction, where buyers purchase it and often export it under their own brand after adding further value; direct export under the Athukorala name itself does happen too, but mainly for occasional special orders from overseas buyers.",
+      },
+      {
+        heading: "Why Airtight Packing Matters",
+        body: "Airtight packing protects the tea from moisture and odours, preserving the flavour that was carefully built through every earlier stage of the process.",
+      },
+      {
+        heading: "Matching Grades to Markets",
+        body: "Different countries want different things from their tea — some prefer a strong, astringent cup, others don't — so which part of the shoot a grade comes from is effectively matched to each export market's palate; Arabic-speaking markets, for instance, specifically request grades that aren't part of everyday drinking habits back home. Selling mostly through brokers rather than exporting directly means outside buyers usually handle onward international shipment and branding.",
+      },
+    ],
     duration: "The final batch is packed and ready for dispatch the same day it's graded.",
   },
   {
