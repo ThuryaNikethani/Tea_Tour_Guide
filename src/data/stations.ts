@@ -302,6 +302,11 @@ import sortingFloorVisitImg from "../assets/sorting/sorting-floor-visit-2.jpg";
 // "packing"'s heroImage. Visitor faces are visible; use confirmed with
 // the user. See the provenance note near the "packing" station below.
 import packingCollageImg from "../assets/packing/packing-collage.jpg";
+// Free-license photo (Pexels) of a real Sri Lankan tea factory packing
+// room — grade-labelled sacks of different sizes and a weighing scale.
+// Not an estate photo (no real photo of the estate's own bag weighing has
+// been supplied yet). See the provenance note near "packing" below.
+import gradedTeaSacksImg from "../assets/packing/graded-tea-sacks.jpg";
 // Real, user-supplied photo of the estate's own polytunnel interior —
 // the same photo used as the cover of the supplied crop-schedule PDF,
 // showing several of the labelled crops (Scotch Bonnet, leeks, carrots,
@@ -1697,6 +1702,26 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * every other process video on the site already being silent. Same file
  * path (`cinnamon-peeling-process.mp4`), so no `stations.ts` code change
  * was needed. No wording changed; no other station affected.
+ * "packing" gained one section image on 2026-09-15, sourced from the
+ * internet at the user's request, selectively rather than one per section
+ * — only where a real photo of the physical process could be found, not
+ * on the business/market sections ("From Factory to Auction", "Why
+ * Airtight Packing Matters", "Matching Grades to Markets") which describe
+ * context rather than a visible step. No official Athukorala packing
+ * photos were reachable online first: the factory's own website
+ * (athukorala-group.vercel.app) uses Unsplash stock photography rather
+ * than its own photos, its virtual-tour site (ceylonteatourism.com) is a
+ * JS-loaded viewer with no fetchable images, and its Facebook page sits
+ * behind a login wall. A 1908 colonial-era postcard of "Ceylon tea
+ * packers" turned up on Wikimedia Commons but was rejected as too
+ * historical to illustrate a modern process description. Pexels had a
+ * genuine, current photo of a Sri Lankan tea factory's packing room
+ * instead — grade-labelled paper sacks of visibly different sizes next to
+ * a weighing scale — added to "Bag Weights by Grade", the section it
+ * matches most specifically (a sack in the photo has its net weight
+ * stamped directly on it). Not an estate photo — no real photo of the
+ * estate's own bag weighing has been supplied yet. No wording changed; no
+ * other station affected.
  */
 export const STATIONS: Station[] = [
   {
@@ -2756,6 +2781,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "Bag Weights by Grade",
+        image: gradedTeaSacksImg,
         body: "Bag weights vary by grade too: a fixed-size bag holds far more of a fine, dense grade like Dust (around 58kg) than a bulkier, leafier grade like OPE (around 30kg).",
       },
       {
