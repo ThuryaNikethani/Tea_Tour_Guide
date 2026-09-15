@@ -576,6 +576,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * treatments used elsewhere, per the user's request not to change this
  * station's existing layout. Existing description/keyPoints merged
  * unchanged into one section body; no facts changed.
+ * "polytunnel"'s heroImage photo was swapped on 2026-09-15 for another
+ * real user-supplied photo (a WhatsApp image) — this one an exterior shot
+ * of the same polytunnel structure with seedling trays visible inside
+ * through the shade netting, replacing the interior PDF-cover photo. Same
+ * file path (`polytunnel-interior.jpg`), just new file content, so no
+ * `stations.ts` import change needed. The heroTagline's wording was
+ * trimmed from "Inside the estate's own polytunnel..." to "The estate's
+ * own polytunnel..." since the new photo is an exterior view, not an
+ * interior one — the only wording change made.
  * "plucking" gained two real photos on 2026-09-07 — visitors hand-picking
  * tea shoots in the estate's own garden, one wearing the traditional
  * back-carried plucking basket, confirmed by the user as fine to publish
@@ -2654,7 +2663,7 @@ export const STATIONS: Station[] = [
     verified: true,
     lastVerified: "2026-09-09",
     heroImage: polytunnelInteriorImg,
-    heroTagline: "Inside the estate's own polytunnel, already growing its first crops.",
+    heroTagline: "The estate's own polytunnel, already growing its first crops.",
     sections: [
       {
         heading: "Polytunnel & Greenhouse",
