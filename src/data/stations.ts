@@ -290,6 +290,17 @@ import packingCollageImg from "../assets/packing/packing-collage.jpg";
 // radish) and the misting system in use. Used directly as "polytunnel"'s
 // heroImage. See the provenance note near the "polytunnel" station below.
 import polytunnelInteriorImg from "../assets/polytunnel/polytunnel-interior.jpg";
+// Real, user-supplied photos of individual seedlings growing in the
+// estate's own polytunnel grow bags, identified by leaf shape against the
+// station's existing crop list. See the provenance note near the
+// "polytunnel" station below.
+import gherkinSeedling1Img from "../assets/polytunnel/gherkin-seedling-1.jpg";
+import gherkinSeedling2Img from "../assets/polytunnel/gherkin-seedling-2.jpg";
+import radishSeedlingImg from "../assets/polytunnel/radish-seedling.jpg";
+import cabbageSeedlingImg from "../assets/polytunnel/cabbage-seedling.jpg";
+import pepperSeedling1Img from "../assets/polytunnel/pepper-seedling-1.jpg";
+import pepperSeedling2Img from "../assets/polytunnel/pepper-seedling-2.jpg";
+import tomatoSeedlingImg from "../assets/polytunnel/tomato-seedling.jpg";
 // Free-license stock photos (Pexels), not estate photos — no real photo of
 // the estate's own mushroom hut has been supplied yet. Used to illustrate
 // "mushroom-hut"'s generic, standard-knowledge sections. See the
@@ -1532,6 +1543,22 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * station was first written up (see the 2026-09-07 note above). heroImage,
  * heroTagline, `verified`, and `lastVerified` untouched; no other station
  * changed.
+ * "polytunnel" gained seven more real photos the same day (2026-09-15) —
+ * user-supplied WhatsApp images of individual seedlings growing in the
+ * polytunnel's own grow bags. None were labelled, so each was identified by
+ * leaf shape against the crop list already in "About the Polytunnel &
+ * Greenhouse": two heart-leaved seedlings as gherkin (the only cucurbit in
+ * the list), one pink-stemmed seedling as radish, one green-stemmed
+ * round-leaved seedling as cabbage, two glossy paired-leaf seedlings as
+ * chilli/bell pepper (grouped together and left unattributed to a specific
+ * pepper variety, since Scotch Bonnet, green chilli, capsicum, and bell
+ * pepper seedlings aren't visually distinguishable from each other at this
+ * stage), and one lobed-leaf seedling as tomato — unambiguous. Added as
+ * five new sections after "Harvest Timing" ("Gherkin Seedlings", "Radish
+ * Seedling", "Cabbage Seedling", "Chilli Pepper Seedlings", "Tomato
+ * Seedling"), the same one-photo(-or-pair)-per-section pattern used by the
+ * nursery station's labelled TRI cultivar plants. No other content in this
+ * or any other station changed.
  */
 export const STATIONS: Station[] = [
   {
@@ -2692,6 +2719,31 @@ export const STATIONS: Station[] = [
       {
         heading: "Harvest Timing",
         body: "Time to first harvest varies widely by crop, from as little as 25-35 days for radish up to 90-120 days for leeks, so the polytunnel should have something ready to pick at almost any point in the season. Growing such a wide mix of fast- and slow-maturing vegetables side by side is itself a deliberate choice, since it staggers harvests naturally rather than having everything ready — or finished — all at once.",
+      },
+      {
+        heading: "Gherkin Seedlings",
+        image: [gherkinSeedling1Img, gherkinSeedling2Img],
+        body: "These two seedlings, still just a leaf or two along, are gherkins — identifiable by the heart-shaped true leaves typical of the cucumber family, growing here in coir-filled grow bags with a drip line already run to the base of each plant.",
+      },
+      {
+        heading: "Radish Seedling",
+        image: radishSeedlingImg,
+        body: "The pink-tinged stem and leaves on this seedling are characteristic of radish — one of the fastest crops in the polytunnel to reach harvest, ready to pick in as little as 25-35 days.",
+      },
+      {
+        heading: "Cabbage Seedling",
+        image: cabbageSeedlingImg,
+        body: "With rounder, slightly waxy-looking leaves and a green (rather than pink-tinged) stem, this seedling is cabbage — a much slower crop than radish, planted out here well before its head begins to form.",
+      },
+      {
+        heading: "Chilli Pepper Seedlings",
+        image: [pepperSeedling1Img, pepperSeedling2Img],
+        body: "These young plants, with their glossy, pointed oval leaves growing in opposite pairs, are chilli or bell peppers. The polytunnel grows several pepper varieties side by side — Scotch Bonnet, green chilli, capsicum, and bell pepper among them — which look essentially identical to one another at this early seedling stage.",
+      },
+      {
+        heading: "Tomato Seedling",
+        image: tomatoSeedlingImg,
+        body: "This tomato seedling already shows the plant's distinctive lobed, serrated, slightly fuzzy leaves. Tomato is the crop named earlier as the example of one that switches from misting to drip irrigation once fruiting begins.",
       },
     ],
     duration: "5 minutes",
