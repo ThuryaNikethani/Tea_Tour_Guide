@@ -1591,7 +1591,9 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * silent, matching 832x464/60fps, 5.8s) was appended the same way the same
  * day, bringing the combined video to ~92.4s. A fourth WhatsApp clip (also
  * silent, matching 832x464/60fps, 11.6s) was appended the same way the
- * same day, bringing the combined video to ~104s, ~14.3MB. Same
+ * same day, bringing the combined video to ~104s. A fifth WhatsApp clip
+ * (also silent, matching 832x464/60fps, 68.0s) was appended the same way
+ * the same day, bringing the combined video to ~172s, ~27.3MB. Same
  * `filter_complex concat` + re-encode approach each time; same pattern as
  * "handmade-factory"'s multi-clip video; no `stations.ts` change needed
  * for any of the appends. No wording changed; no other station affected.
