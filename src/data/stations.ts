@@ -205,12 +205,10 @@ import witheringTroughImg from "../assets/withering/withering-trough.jpg";
 // pan-firing equipment. See the provenance note near "withering" below.
 import witheringTroughsFactoryImg from "../assets/withering/withering-troughs-factory.jpg";
 import rollingMachineryImg from "../assets/rolling/rolling-machinery.jpg";
-// CC BY 2.0 photo (Wikimedia Commons, Jean-Pierre Dalbéra) of a full-size,
-// labelled "Orthodox Roller" at the KDHP Tea Museum, Munnar, India — a
-// genuine industrial orthodox rolling machine of the same twist-and-break
-// design principle described here. See the provenance note near "rolling"
-// below.
-import orthodoxRollingTableImg from "../assets/rolling/orthodox-rolling-table.jpg";
+// Real, user-supplied photo of the estate's own rolling room floor (the
+// same rolling tables as rollingMachineryImg, a different angle). See the
+// provenance note near "rolling" below.
+import rollingRoomFloorImg from "../assets/rolling/rolling-room-floor.jpg";
 import fermentationFloorImg from "../assets/fermentation/fermentation-floor.jpg";
 // Real, user-supplied photo of the estate's own rolled leaf spread out on
 // the fermentation floor, already turning coppery brown. See the
@@ -1664,9 +1662,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * its `fluidised-bed-drier.jpg` asset, plus the now-unused `imageCredit`
  * line, were removed outright rather than kept as a fallback — same
  * "prefer the real photo once supplied" pattern used throughout this
- * project. "rolling"'s Wikimedia "Orthodox Roller" photo is untouched;
- * still no real photo of the estate's own rolling machinery. No wording
- * changed; no other station affected.
+ * project.
+ * "rolling"'s Wikimedia "Orthodox Roller" photo got the same treatment
+ * shortly after — the user supplied a real photo of the estate's own
+ * rolling room floor (the same rolling tables as heroImage's
+ * rollingMachineryImg, a different angle), replacing the Wikimedia stock
+ * photo in "Twisting and Breaking the Leaf". That photo, its
+ * `orthodox-rolling-table.jpg` asset, and the now-unused `imageCredit`
+ * line were removed outright, same as drying's swap. No wording changed;
+ * no other station affected.
  * "fermentation" gained a real photo the same day — a WhatsApp image of
  * the estate's own rolled leaf spread out on the fermentation floor,
  * already turning the coppery-brown colour the text describes. Added to
@@ -2617,8 +2621,7 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Twisting and Breaking the Leaf",
-        image: orthodoxRollingTableImg,
-        imageCredit: "Jean-Pierre Dalbéra, CC BY 2.0, via Wikimedia Commons",
+        image: rollingRoomFloorImg,
         body: "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
       },
       {
