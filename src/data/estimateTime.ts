@@ -11,9 +11,11 @@ function countWords(text?: string): number {
 export function estimateStationMinutes(station: Station): number {
   let words = countWords(station.description) + countWords(station.keyPoints);
 
+  let videoCount = 0;
   if (station.sections) {
     words += station.sections.reduce((sum, s) => {
       let sectionWords = countWords(s.heading) + countWords(s.body);
+      if (s.video) videoCount++;
       if (s.fruits) {
         sectionWords += s.fruits.reduce(
           (fSum, fruit) =>
@@ -30,6 +32,7 @@ export function estimateStationMinutes(station: Station): number {
   let minutes = words / WORDS_PER_MINUTE;
   if (station.heroVideo) minutes += MINUTES_PER_VIDEO;
   if (station.processVideo) minutes += MINUTES_PER_VIDEO;
+  minutes += videoCount * MINUTES_PER_VIDEO;
 
   return Math.max(1, Math.round(minutes));
 }
