@@ -17,6 +17,7 @@ const stationSectionSchema = z.object({
   body: z.string().min(1),
   image: z.union([z.string(), z.array(z.string()).min(1)]).optional(),
   items: z.array(stationSubItemSchema).optional(),
+  video: z.string().optional(),
 });
 
 const stationSchema = z.object({
