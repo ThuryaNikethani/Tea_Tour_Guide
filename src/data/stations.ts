@@ -294,9 +294,10 @@ import polytunnelInteriorImg from "../assets/polytunnel/polytunnel-interior.jpg"
 // estate's own polytunnel grow bags, identified by leaf shape against the
 // station's existing crop list. See the provenance note near the
 // "polytunnel" station below.
-// Free-license stock photo (Pexels), not an estate photo — illustrates the
-// "Watering & Irrigation" section's drip-line concept generically, since no
-// real photo of the estate's own irrigation lines has been supplied yet.
+// Real, user-supplied photo of the estate's own polytunnel rows — grow
+// bags on roof-tile risers with a drip line to each, matching the
+// "Watering & Irrigation" section's description. See the provenance note
+// near the "polytunnel" station below.
 import dripIrrigationImg from "../assets/polytunnel/drip-irrigation.jpg";
 import gherkinSeedling1Img from "../assets/polytunnel/gherkin-seedling-1.jpg";
 import gherkinSeedling2Img from "../assets/polytunnel/gherkin-seedling-2.jpg";
@@ -1563,13 +1564,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * Seedling"), the same one-photo(-or-pair)-per-section pattern used by the
  * nursery station's labelled TRI cultivar plants. No other content in this
  * or any other station changed.
- * "polytunnel"'s "Watering & Irrigation" section gained an image the same
- * day — a free-license Pexels photo of coir grow bags with drip lines run
- * to young cucurbit seedlings, chosen for how closely it happens to match
- * the estate's own grow-bag-and-drip-line setup pictured in the seedling
- * photos above. Not an estate photo (no real photo of the estate's own
- * irrigation lines has been supplied yet), same generic-illustration
- * approach as the introduction station's "From Coffee to Tea" photo. No
+ * "polytunnel"'s "Watering & Irrigation" section briefly used a free-
+ * license Pexels stock photo of coir grow bags with drip lines, until the
+ * user supplied a real photo of the estate's own polytunnel rows the same
+ * day — long lines of grow bags on roof-tile risers, each with its own
+ * drip line, seen from inside the polytunnel. Same file path
+ * (`drip-irrigation.jpg`), just new file content, so no `stations.ts`
+ * import change was needed beyond updating the provenance comment. No
  * wording changed.
  */
 export const STATIONS: Station[] = [
