@@ -229,11 +229,14 @@ import type { StationTranslation } from "./stations";
  * (sectionBodies plus all three itemBodies arrays — Characteristics,
  * Benefits, and the 2 tea products — all 10 languages), as did
  * "coconut-field" (heroTagline, sectionBodies, and both itemBodies
- * arrays — Characteristics and Uses & Benefits — all 10 languages).
- * Remaining not-yet-naturalized stations (unique-fruits' fruit-gallery
- * fields and the untouched remainder of jaggery-palm beyond its one
- * already-rewritten "About the X" paragraph) are still to be done in a
- * future pass.
+ * arrays — Characteristics and Uses & Benefits — all 10 languages), and
+ * "jaggery-palm" got the same treatment too (sectionBodies and both
+ * itemBodies arrays, all 10 languages — Japanese needed no changes,
+ * already split into plain sentences). This completes every station
+ * that had received the 2026-09-02/09-09 "About the X"-only passes.
+ * Remaining not-yet-naturalized station: unique-fruits' fruit-gallery
+ * fields (6 fruits' worth of sections and item bodies, all 10
+ * languages) — still to be done in a future pass.
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -978,7 +981,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "උස් මසුන්-වල් කොළයකින් ශ්‍රී ලංකාවේ සාම්ප්‍රදායික පැණි සහ හකුරු දක්වා.",
       sectionHeadings: ["කිතුල් ගස පිළිබඳ", "ලක්ෂණ", "භාවිත සහ ප්‍රතිලාභ"],
       sectionBodies: [
-        "කිතුල් ගස (Caryota urens), එනම් මසුන්-වල් තල්ගස, ශ්‍රී ලංකාව, ඉන්දියාව, සහ අනෙකුත් නිවර්තන ආසියානු රටවල දක්නට ලැබෙන උස් හා අලංකාර ගසකි. එහි බහුකාර්ය භාවිතය නිසා එය අගය කරනු ලැබේ. වඩාත්ම කැපී පෙනෙන නිෂ්පාදනය වන්නේ මල් කරලවලින් උරාගන්නා පැණියි — එය උතුරුවා සාම්ප්‍රදායික කිතුල් පැණි සහ හකුරු සාදනු ලැබේ. මෙම ගස එහි ශක්තිමත් තන්තුමය කඳ සහ අලංකාර මසුන්-වල් හැඩැති කොළ සඳහාද ප්‍රසිද්ධය.",
+        "කිතුල් ගස (Caryota urens), එනම් මසුන්-වල් තල්ගස, ශ්‍රී ලංකාව, ඉන්දියාව, සහ අනෙකුත් නිවර්තන ආසියානු රටවල දක්නට ලැබෙන උස් හා අලංකාර ගසකි. එහි බහුකාර්ය භාවිතය නිසා එය අගය කරනු ලැබේ. වඩාත්ම කැපී පෙනෙන නිෂ්පාදනය වන්නේ මල් කරලවලින් උරාගන්නා පැණියි. එය උතුරුවා සාම්ප්‍රදායික කිතුල් පැණි සහ හකුරු සාදනු ලැබේ. මෙම ගස එහි ශක්තිමත් තන්තුමය කඳ සහ අලංකාර මසුන්-වල් හැඩැති කොළ සඳහාද ප්‍රසිද්ධය.",
         "ගස පිළිබඳ කෙටි විස්තරයක්:",
         "කිතුල් ගසේ වටිනාකම එහි පැණි සහ හකුරුවලට වඩා බොහෝ දුරට විහිදේ:",
       ],
@@ -993,13 +996,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "මීටර් 12ත් 20ත් අතර උසැති වේ.",
           "විශාල, පිනේට් කොළ මසුන්-වල් හැඩැති කොළ කැබලි සහිතව, මීටර් 3ත් 5ත් අතර දිග.",
           "ක්‍රීම් පැහැති සුදු මල් කඳේ මුදුනේ සිට පහළට එල්ලෙන දිගු පොකුරු වශයෙන් හටගනී.",
-          "කුඩා, වටකුරු ගෙඩිය එහි මතුපිට කුපිත කරන ස්ඵටික සහිතව; කෑමට සුදුසු නොවේ.",
+          "කුඩා, වටකුරු ගෙඩිය එහි මතුපිට කුපිත කරන ස්ඵටික සහිතව. කෑමට සුදුසු නොවේ.",
           "ශ්‍රී ලංකාවේ සහ දකුණු ඉන්දියාවේ නිවර්තන වර්ෂාවනාන්තර, තෙත් නිම්න, සහ සෙවන සහිත කඳුකර බෑවුම්.",
         ],
         [
-          "පැණි උතුරුවා සාම්ප්‍රදායික ශ්‍රී ලාංකික රසකාරක වන කිතුල් පැණි සහ හකුරු නිපදවනු ලැබේ; එම පැණියෙන්ම රා පැසවීමට හෝ ආසවනය කර අරක්කු බවට පත් කළ හැකි අතර, අභ්‍යන්තර හරයෙන් සාගු වැනි පිටියක් ලබාගත හැක.",
-          "කිතුල් පැණි ශ්‍රී ලාංකික සම්ප්‍රදායේ ස්වාභාවික ශක්ති වර්ධකයක් ලෙස සලකනු ලබන අතර ප්‍රතිඔක්සිකාරක හා ප්‍රති-ගිනි අවුලුවන ගුණාංග ඇතැයි විශ්වාස කෙරේ; පැණි ආහාර දිරවීමට උපකාර වීමට සහ තෙහෙට්ටුව අඩු කිරීමට සාම්ප්‍රදායික ඖෂධයේ භාවිතා කරයි.",
-          "කිතුල් ගස නිවර්තන වනාන්තරවල වාසස්ථානය සහ සෙවන සැපයීමෙන් ජෛව විවිධත්වයට සහාය වේ; එහි ගැඹුරු මුල් කඳුකර, තෙත් ප්‍රදේශවල පස ඛාදනය වැළැක්වීමට උපකාර වන අතර ජලාශ ස්ථායීතාවයට දායක වේ.",
+          "පැණි උතුරුවා සාම්ප්‍රදායික ශ්‍රී ලාංකික රසකාරක වන කිතුල් පැණි සහ හකුරු නිපදවනු ලැබේ. එම පැණියෙන්ම රා පැසවීමට හෝ ආසවනය කර අරක්කු බවට පත් කළ හැකි අතර, අභ්‍යන්තර හරයෙන් සාගු වැනි පිටියක් ලබාගත හැක.",
+          "කිතුල් පැණි ශ්‍රී ලාංකික සම්ප්‍රදායේ ස්වාභාවික ශක්ති වර්ධකයක් ලෙස සලකනු ලබන අතර ප්‍රතිඔක්සිකාරක හා ප්‍රති-ගිනි අවුලුවන ගුණාංග ඇතැයි විශ්වාස කෙරේ. පැණි ආහාර දිරවීමට උපකාර වීමට සහ තෙහෙට්ටුව අඩු කිරීමට සාම්ප්‍රදායික ඖෂධයේ භාවිතා කරයි.",
+          "කිතුල් ගස නිවර්තන වනාන්තරවල වාසස්ථානය සහ සෙවන සැපයීමෙන් ජෛව විවිධත්වයට සහාය වේ. එහි ගැඹුරු මුල් කඳුකර, තෙත් ප්‍රදේශවල පස ඛාදනය වැළැක්වීමට උපකාර වන අතර ජලාශ ස්ථායීතාවයට දායක වේ.",
         ],
       ],
       duration: "මිනිත්තු 5-10",
@@ -1593,7 +1596,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "உயரமான மீன்-வால் பனையிலிருந்து இலங்கையின் பாரம்பரிய பாகு மற்றும் வெல்லம் வரை.",
       sectionHeadings: ["கிதுள் பனையைப் பற்றி", "பண்புகள்", "பயன்கள் மற்றும் நன்மைகள்"],
       sectionBodies: [
-        "கிதுள் பனை (Caryota urens), அல்லது மீன்-வால் பனை, இலங்கை, இந்தியா, மற்றும் பிற வெப்பமண்டல ஆசிய நாடுகள் முழுவதும் காணப்படும் உயரமான, அழகிய பனை. இதன் பல்நோக்கு பயன்பாட்டிற்காக இது மதிக்கப்படுகிறது. மிகவும் குறிப்பிடத்தக்க விளைபொருள் அதன் பூக்கும் தண்டுகளிலிருந்து சேகரிக்கப்படும் இனிப்புச் சாறு — இது காய்ச்சப்பட்டு பாரம்பரிய கிதுள் பாகு மற்றும் வெல்லமாக மாற்றப்படுகிறது. இந்த மரம் அதன் வலிமையான, நார்ச்சத்துள்ள தண்டு மற்றும் அழகிய மீன்-வால் வடிவ இலைகளுக்காகவும் அறியப்படுகிறது.",
+        "கிதுள் பனை (Caryota urens), அல்லது மீன்-வால் பனை, இலங்கை, இந்தியா, மற்றும் பிற வெப்பமண்டல ஆசிய நாடுகள் முழுவதும் காணப்படும் உயரமான, அழகிய பனை. இதன் பல்நோக்கு பயன்பாட்டிற்காக இது மதிக்கப்படுகிறது. மிகவும் குறிப்பிடத்தக்க விளைபொருள் அதன் பூக்கும் தண்டுகளிலிருந்து சேகரிக்கப்படும் இனிப்புச் சாறு. இது காய்ச்சப்பட்டு பாரம்பரிய கிதுள் பாகு மற்றும் வெல்லமாக மாற்றப்படுகிறது. இந்த மரம் அதன் வலிமையான, நார்ச்சத்துள்ள தண்டு மற்றும் அழகிய மீன்-வால் வடிவ இலைகளுக்காகவும் அறியப்படுகிறது.",
         "பனையைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
         "கிதுள் பனையின் மதிப்பு அதன் பாகு மற்றும் வெல்லத்தைத் தாண்டி விரிவடைகிறது:",
       ],
@@ -1608,13 +1611,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "12 முதல் 20 மீட்டர் வரை உயரம்.",
           "பெரிய, இரட்டைப் பட்டைவிரி இலைகள் மீன்-வால் வடிவ இலைத்துண்டுகளுடன், 3 முதல் 5 மீட்டர் வரை நீளம்.",
           "க்ரீம் நிற வெள்ளை பூக்கள் தண்டின் உச்சியிலிருந்து கீழ்நோக்கி தொங்கும் நீண்ட கொத்துகளாக உருவாகின்றன.",
-          "சிறிய, வட்டமான பழம் அதன் மேற்பரப்பில் எரிச்சலூட்டும் படிகங்களுடன்; உண்ணத் தகுதியற்றது.",
+          "சிறிய, வட்டமான பழம் அதன் மேற்பரப்பில் எரிச்சலூட்டும் படிகங்களுடன். உண்ணத் தகுதியற்றது.",
           "இலங்கை மற்றும் தென்னிந்தியாவின் வெப்பமண்டல மழைக்காடுகள், ஈரமான பள்ளத்தாக்குகள், மற்றும் நிழல் மலைச் சரிவுகள்.",
         ],
         [
-          "இனிப்புச் சாறு காய்ச்சப்பட்டு பாரம்பரிய இலங்கை இனிப்பு பொருட்களான கிதுள் பாகு மற்றும் வெல்லம் தயாரிக்கப்படுகிறது; அதே சாறு புளிக்க வைக்கப்பட்டு கள்ளாகவோ அல்லது வடிகட்டி அரக்காகவோ மாற்றப்படலாம், மேலும் உள் கூழிலிருந்து சாகுவை ஒத்த மாவைப் பெறலாம்.",
-          "கிதுள் பாகு இலங்கை பாரம்பரியத்தில் ஒரு இயற்கை ஆற்றல் ஊக்கியாகக் கருதப்படுகிறது, மேலும் ஆக்ஸிஜனேற்ற எதிர்ப்பு மற்றும் அழற்சி எதிர்ப்பு பண்புகளைக் கொண்டிருப்பதாக நம்பப்படுகிறது; இச்சாறு செரிமானத்திற்கு உதவவும் சோர்வைக் குறைக்கவும் பாரம்பரிய மருத்துவத்தில் பயன்படுத்தப்படுகிறது.",
-          "கிதுள் பனை வெப்பமண்டல காடுகளில் வாழ்விடம் மற்றும் நிழலை வழங்குவதன் மூலம் பல்லுயிர் பெருக்கத்திற்கு உதவுகிறது; அதன் ஆழமான வேர்கள் மலைப்பாங்கான, ஈரமான பகுதிகளில் மண் அரிப்பைத் தடுக்க உதவுகின்றன மற்றும் நீர்நிலைப் பாதுகாப்பிற்கு பங்களிக்கின்றன.",
+          "இனிப்புச் சாறு காய்ச்சப்பட்டு பாரம்பரிய இலங்கை இனிப்பு பொருட்களான கிதுள் பாகு மற்றும் வெல்லம் தயாரிக்கப்படுகிறது. அதே சாறு புளிக்க வைக்கப்பட்டு கள்ளாகவோ அல்லது வடிகட்டி அரக்காகவோ மாற்றப்படலாம், மேலும் உள் கூழிலிருந்து சாகுவை ஒத்த மாவைப் பெறலாம்.",
+          "கிதுள் பாகு இலங்கை பாரம்பரியத்தில் ஒரு இயற்கை ஆற்றல் ஊக்கியாகக் கருதப்படுகிறது, மேலும் ஆக்ஸிஜனேற்ற எதிர்ப்பு மற்றும் அழற்சி எதிர்ப்பு பண்புகளைக் கொண்டிருப்பதாக நம்பப்படுகிறது. இச்சாறு செரிமானத்திற்கு உதவவும் சோர்வைக் குறைக்கவும் பாரம்பரிய மருத்துவத்தில் பயன்படுத்தப்படுகிறது.",
+          "கிதுள் பனை வெப்பமண்டல காடுகளில் வாழ்விடம் மற்றும் நிழலை வழங்குவதன் மூலம் பல்லுயிர் பெருக்கத்திற்கு உதவுகிறது. அதன் ஆழமான வேர்கள் மலைப்பாங்கான, ஈரமான பகுதிகளில் மண் அரிப்பைத் தடுக்க உதவுகின்றன மற்றும் நீர்நிலைப் பாதுகாப்பிற்கு பங்களிக்கின்றன.",
         ],
       ],
       duration: "5-10 நிமிடங்கள்",
@@ -2223,13 +2226,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Alta dai 12 ai 20 metri.",
           "Grandi foglie bipennate con foglioline a forma di coda di pesce, lunghe dai 3 ai 5 metri.",
           "Fiori bianco crema portati in lunghi grappoli pendenti, dalla cima del tronco verso il basso.",
-          "Frutto piccolo e rotondo con cristalli irritanti sulla superficie; non commestibile.",
+          "Frutto piccolo e rotondo con cristalli irritanti sulla superficie. Non commestibile.",
           "Foresta pluviale tropicale, valli umide e pendii collinari ombreggiati dello Sri Lanka e dell'India meridionale.",
         ],
         [
-          "La linfa dolce viene fatta bollire per produrre lo sciroppo e il jaggery di kithul, dolcificanti tradizionali dello Sri Lanka; la stessa linfa può anche essere fermentata in toddy o distillata in arrack, e il midollo interno può fornire un amido simile al sago.",
-          "Lo sciroppo di kithul è considerato nella tradizione dello Sri Lanka un energizzante naturale e si ritiene abbia proprietà antiossidanti e antinfiammatorie; la linfa è usata nella medicina tradizionale per favorire la digestione e ridurre la stanchezza.",
-          "La palma kithul sostiene la biodiversità fornendo habitat e ombra nelle foreste tropicali; le sue radici profonde aiutano a prevenire l'erosione del suolo nelle regioni collinari e umide e contribuiscono alla stabilità dei bacini idrici.",
+          "La linfa dolce viene fatta bollire per produrre lo sciroppo e il jaggery di kithul, dolcificanti tradizionali dello Sri Lanka. La stessa linfa può anche essere fermentata in toddy o distillata in arrack, e il midollo interno può fornire un amido simile al sago.",
+          "Lo sciroppo di kithul è considerato nella tradizione dello Sri Lanka un energizzante naturale e si ritiene abbia proprietà antiossidanti e antinfiammatorie. La linfa è usata nella medicina tradizionale per favorire la digestione e ridurre la stanchezza.",
+          "La palma kithul sostiene la biodiversità fornendo habitat e ombra nelle foreste tropicali. Le sue radici profonde aiutano a prevenire l'erosione del suolo nelle regioni collinari e umide e contribuiscono alla stabilità dei bacini idrici.",
         ],
       ],
       duration: "5-10 minuti",
@@ -2838,13 +2841,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "يتراوح ارتفاعه بين 12 و20 مترًا.",
           "أوراق ريشية مزدوجة كبيرة ذات وريقات شبيهة بذيل السمك، يتراوح طولها بين 3 و5 أمتار.",
           "أزهار بيضاء كريمية تنمو في عناقيد طويلة متدلية من أعلى الجذع نحو الأسفل.",
-          "ثمرة صغيرة مستديرة تحتوي سطحها على بلورات مهيّجة؛ غير صالحة للأكل.",
+          "ثمرة صغيرة مستديرة تحتوي سطحها على بلورات مهيّجة. غير صالحة للأكل.",
           "الغابات المطيرة الاستوائية والوديان الرطبة والمنحدرات الجبلية المظللة في سريلانكا وجنوب الهند.",
         ],
         [
-          "يُغلى النسغ الحلو لإنتاج دبس وجاجري الكيثول، وهما محلّيان تقليديان في سريلانكا؛ ويمكن أيضًا تخمير النسغ نفسه لصنع التودي أو تقطيره لصنع الأراك، كما يمكن أن يوفر اللب الداخلي نشا شبيهًا بالساغو.",
-          "يُعتبر دبس الكيثول في التقاليد السريلانكية مقويًا طبيعيًا للطاقة ويُعتقد أن له خصائص مضادة للأكسدة ومضادة للالتهابات؛ ويُستخدم النسغ في الطب التقليدي لدعم الهضم وتقليل التعب.",
-          "يدعم نخيل الكيثول التنوع البيولوجي من خلال توفير الموطن والظل في الغابات الاستوائية؛ وتساعد جذوره العميقة على منع تآكل التربة في المناطق الجبلية الرطبة وتسهم في استقرار مستجمعات المياه.",
+          "يُغلى النسغ الحلو لإنتاج دبس وجاجري الكيثول، وهما محلّيان تقليديان في سريلانكا. ويمكن أيضًا تخمير النسغ نفسه لصنع التودي أو تقطيره لصنع الأراك، كما يمكن أن يوفر اللب الداخلي نشا شبيهًا بالساغو.",
+          "يُعتبر دبس الكيثول في التقاليد السريلانكية مقويًا طبيعيًا للطاقة ويُعتقد أن له خصائص مضادة للأكسدة ومضادة للالتهابات. ويُستخدم النسغ في الطب التقليدي لدعم الهضم وتقليل التعب.",
+          "يدعم نخيل الكيثول التنوع البيولوجي من خلال توفير الموطن والظل في الغابات الاستوائية. وتساعد جذوره العميقة على منع تآكل التربة في المناطق الجبلية الرطبة وتسهم في استقرار مستجمعات المياه.",
         ],
       ],
       duration: "5-10 دقائق",
@@ -3453,13 +3456,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "От 12 до 20 метров высотой.",
           "Крупные дважды перистые листья с похожими на рыбий хвост листочками, длиной от 3 до 5 метров.",
           "Кремово-белые цветки образуют длинные свисающие соцветия, растущие от верхушки ствола вниз.",
-          "Мелкий круглый плод с раздражающими кристаллами на поверхности; несъедобен.",
+          "Мелкий круглый плод с раздражающими кристаллами на поверхности. Несъедобен.",
           "Тропические дождевые леса, сырые долины и затенённые горные склоны Шри-Ланки и Южной Индии.",
         ],
         [
-          "Сладкий сок вываривается до состояния китульской патоки и джаггери — традиционных шри-ланкийских подсластителей; тот же сок можно также сбраживать в тодди или перегонять в арак, а внутренняя сердцевина может давать крахмал, похожий на саго.",
-          "В шри-ланкийской традиции китульская патока считается природным источником энергии и, как считается, обладает антиоксидантными и противовоспалительными свойствами; сок используется в традиционной медицине для улучшения пищеварения и снижения усталости.",
-          "Пальма китул поддерживает биоразнообразие, обеспечивая среду обитания и тень в тропических лесах; её глубокие корни помогают предотвращать эрозию почвы в холмистых, влажных регионах и способствуют устойчивости водосборов.",
+          "Сладкий сок вываривается до состояния китульской патоки и джаггери, традиционных шри-ланкийских подсластителей. Тот же сок можно также сбраживать в тодди или перегонять в арак, а внутренняя сердцевина может давать крахмал, похожий на саго.",
+          "В шри-ланкийской традиции китульская патока считается природным источником энергии и, как считается, обладает антиоксидантными и противовоспалительными свойствами. Сок используется в традиционной медицине для улучшения пищеварения и снижения усталости.",
+          "Пальма китул поддерживает биоразнообразие, обеспечивая среду обитания и тень в тропических лесах. Её глубокие корни помогают предотвращать эрозию почвы в холмистых, влажных регионах и способствуют устойчивости водосборов.",
         ],
       ],
       duration: "5–10 минут",
@@ -4068,13 +4071,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "12 bis 20 Meter hoch.",
           "Große, doppelt gefiederte Blätter mit fischschwanzförmigen Fiederblättchen, 3 bis 5 Meter lang.",
           "Cremeweiße Blüten in langen, hängenden Trauben, die von der Stammspitze abwärts wachsen.",
-          "Kleine, runde Frucht mit reizenden Kristallen auf der Oberfläche; nicht essbar.",
+          "Kleine, runde Frucht mit reizenden Kristallen auf der Oberfläche. Nicht essbar.",
           "Tropischer Regenwald, feuchte Täler und schattige Hügelhänge in Sri Lanka und Südindien.",
         ],
         [
-          "Der süße Saft wird zu Kithul-Sirup und Jaggery eingekocht, traditionellen sri-lankischen Süßungsmitteln; derselbe Saft kann auch zu Toddy vergoren oder zu Arrak destilliert werden, und das innere Mark kann eine sagoartige Stärke liefern.",
-          "Kithul-Sirup gilt in der sri-lankischen Tradition als natürlicher Energiespender und soll antioxidative und entzündungshemmende Eigenschaften besitzen; der Saft wird in der traditionellen Medizin zur Unterstützung der Verdauung und zur Verringerung von Müdigkeit eingesetzt.",
-          "Die Kithul-Palme unterstützt die Biodiversität, indem sie Lebensraum und Schatten in tropischen Wäldern bietet; ihre tiefen Wurzeln helfen, Bodenerosion in hügeligen, feuchten Regionen vorzubeugen, und tragen zur Stabilität der Wassereinzugsgebiete bei.",
+          "Der süße Saft wird zu Kithul-Sirup und Jaggery eingekocht, traditionellen sri-lankischen Süßungsmitteln. Derselbe Saft kann auch zu Toddy vergoren oder zu Arrak destilliert werden, und das innere Mark kann eine sagoartige Stärke liefern.",
+          "Kithul-Sirup gilt in der sri-lankischen Tradition als natürlicher Energiespender und soll antioxidative und entzündungshemmende Eigenschaften besitzen. Der Saft wird in der traditionellen Medizin zur Unterstützung der Verdauung und zur Verringerung von Müdigkeit eingesetzt.",
+          "Die Kithul-Palme unterstützt die Biodiversität, indem sie Lebensraum und Schatten in tropischen Wäldern bietet. Ihre tiefen Wurzeln helfen, Bodenerosion in hügeligen, feuchten Regionen vorzubeugen, und tragen zur Stabilität der Wassereinzugsgebiete bei.",
         ],
       ],
       duration: "5-10 Minuten",
@@ -4683,13 +4686,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Entre 12 y 20 metros de altura.",
           "Hojas grandes y bipinnadas con foliolos con forma de cola de pez, de 3 a 5 metros de largo.",
           "Flores blanco cremoso que crecen en largos racimos colgantes desde la parte superior del tronco hacia abajo.",
-          "Fruto pequeño y redondo con cristales irritantes en la superficie; no comestible.",
+          "Fruto pequeño y redondo con cristales irritantes en la superficie. No comestible.",
           "Selva tropical, valles húmedos y laderas de colinas sombreadas de Sri Lanka y el sur de la India.",
         ],
         [
-          "La savia dulce se hierve para producir la melaza y el jaggery de kithul, edulcorantes tradicionales de Sri Lanka; la misma savia también puede fermentarse en toddy o destilarse en arrack, y la médula interior puede producir un almidón similar al sagú.",
-          "La melaza de kithul se considera en la tradición de Sri Lanka un estimulante energético natural y se cree que tiene propiedades antioxidantes y antiinflamatorias; la savia se usa en la medicina tradicional para favorecer la digestión y reducir la fatiga.",
-          "La palma kithul favorece la biodiversidad al proporcionar hábitat y sombra en los bosques tropicales; sus raíces profundas ayudan a prevenir la erosión del suelo en regiones montañosas y húmedas y contribuyen a la estabilidad de las cuencas hidrográficas.",
+          "La savia dulce se hierve para producir la melaza y el jaggery de kithul, edulcorantes tradicionales de Sri Lanka. La misma savia también puede fermentarse en toddy o destilarse en arrack, y la médula interior puede producir un almidón similar al sagú.",
+          "La melaza de kithul se considera en la tradición de Sri Lanka un estimulante energético natural y se cree que tiene propiedades antioxidantes y antiinflamatorias. La savia se usa en la medicina tradicional para favorecer la digestión y reducir la fatiga.",
+          "La palma kithul favorece la biodiversidad al proporcionar hábitat y sombra en los bosques tropicales. Sus raíces profundas ayudan a prevenir la erosión del suelo en regiones montañosas y húmedas y contribuyen a la estabilidad de las cuencas hidrográficas.",
         ],
       ],
       duration: "5-10 minutos",
@@ -5298,13 +5301,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "De 12 à 20 mètres de haut.",
           "Grandes feuilles bipennées aux folioles en forme de queue de poisson, longues de 3 à 5 mètres.",
           "Fleurs blanc crème portées en longues grappes pendantes, du sommet du tronc vers le bas.",
-          "Petit fruit rond portant des cristaux irritants à sa surface ; non comestible.",
+          "Petit fruit rond portant des cristaux irritants à sa surface. Non comestible.",
           "Forêt tropicale humide, vallées humides et versants de collines ombragés du Sri Lanka et du sud de l'Inde.",
         ],
         [
-          "La sève sucrée est bouillie pour produire le sirop et le jaggery de kithul, des édulcorants traditionnels sri-lankais ; la même sève peut aussi être fermentée en toddy ou distillée en arrack, et la moelle intérieure peut fournir un amidon proche du sagou.",
-          "Le sirop de kithul est considéré, dans la tradition sri-lankaise, comme un tonique énergétique naturel et on lui attribue des propriétés antioxydantes et anti-inflammatoires ; la sève est utilisée en médecine traditionnelle pour favoriser la digestion et réduire la fatigue.",
-          "Le palmier kithul soutient la biodiversité en offrant habitat et ombre dans les forêts tropicales ; ses racines profondes aident à prévenir l'érosion des sols dans les régions vallonnées et humides et contribuent à la stabilité des bassins versants.",
+          "La sève sucrée est bouillie pour produire le sirop et le jaggery de kithul, des édulcorants traditionnels sri-lankais. La même sève peut aussi être fermentée en toddy ou distillée en arrack, et la moelle intérieure peut fournir un amidon proche du sagou.",
+          "Le sirop de kithul est considéré, dans la tradition sri-lankaise, comme un tonique énergétique naturel et on lui attribue des propriétés antioxydantes et anti-inflammatoires. La sève est utilisée en médecine traditionnelle pour favoriser la digestion et réduire la fatigue.",
+          "Le palmier kithul soutient la biodiversité en offrant habitat et ombre dans les forêts tropicales. Ses racines profondes aident à prévenir l'érosion des sols dans les régions vallonnées et humides et contribuent à la stabilité des bassins versants.",
         ],
       ],
       duration: "5-10 minutes",
@@ -5913,13 +5916,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "株高12至20米。",
           "大型二回羽状叶，小叶呈鱼尾状，长3至5米。",
           "乳白色花朵呈长长的下垂花穗，从树干顶端向下依次开放。",
-          "果实小巧浑圆，表面带有刺激性结晶；不可食用。",
+          "果实小巧浑圆，表面带有刺激性结晶。不可食用。",
           "斯里兰卡及南印度的热带雨林、湿润山谷及有遮荫的山坡。",
         ],
         [
-          "甜树液经熬煮后制成基图尔糖浆与贾格里糖，均为斯里兰卡传统甜味剂；同样的树液也可以发酵成托迪酒或蒸馏成亚力酒，树干内部的髓心还可提取类似西谷米的淀粉。",
-          "在斯里兰卡传统中，基图尔糖浆被视为天然滋补品，据信具有抗氧化和抗炎特性；树液在传统医学中用于帮助消化、缓解疲劳。",
-          "基图尔棕榈通过为热带森林提供栖息地和遮荫，支持生物多样性；其深长的根系有助于防止多山潮湿地区的水土流失，并有助于维护流域的稳定性。",
+          "甜树液经熬煮后制成基图尔糖浆与贾格里糖，均为斯里兰卡传统甜味剂。同样的树液也可以发酵成托迪酒或蒸馏成亚力酒，树干内部的髓心还可提取类似西谷米的淀粉。",
+          "在斯里兰卡传统中，基图尔糖浆被视为天然滋补品，据信具有抗氧化和抗炎特性。树液在传统医学中用于帮助消化、缓解疲劳。",
+          "基图尔棕榈通过为热带森林提供栖息地和遮荫，支持生物多样性。其深长的根系有助于防止多山潮湿地区的水土流失，并有助于维护流域的稳定性。",
         ],
       ],
       duration: "5-10分钟",
