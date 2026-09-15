@@ -214,9 +214,15 @@ import type { StationTranslation } from "./stations";
  * mirroring), "pruning" (its single sectionBody, all 10 languages), and
  * "plucking" (its single sectionBody, all 10 languages — Japanese
  * needed no changes, already split into plain sentences), and
- * "tea-factory" (its single sectionBody, all 10 languages). Remaining
- * not-yet-naturalized stations (unique-fruits' fruit-gallery fields,
- * bee, turmeric, and the untouched remainder of
+ * "tea-factory" (its single sectionBody, all 10 languages), "bee" (its
+ * sectionBodies and itemBodies, all 10 languages — mostly just an
+ * "Apis mellifera — the honeybee —" appositive dash and a couple of
+ * itemBody dash/semicolon chains), and "turmeric" (same shape, all 10
+ * languages; also fixed a leftover untranslated English word,
+ * "promote", found mid-sentence in the Chinese itemBody while working
+ * through it — a genuine translation gap, not a phrasing change).
+ * Remaining not-yet-naturalized stations (unique-fruits' fruit-gallery
+ * fields and the untouched remainder of
  * cinnamon/ginger-turmeric/coconut-field/jaggery-palm beyond their one
  * already-rewritten "About the X" paragraph) are still to be done in a
  * future pass.
@@ -607,7 +613,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "බිමේ රන්වන් මුල් කඳකින් කුළුබඩුවක්, වර්ණකයක්, සහ ඖෂධ භාණ්ඩයක් දක්වා.",
       sectionHeadings: ["කහ ශාකය පිළිබඳ", "ලක්ෂණ", "භාවිත සහ ප්‍රතිලාභ"],
       sectionBodies: [
-        "කහ ශාකය (Curcuma longa) — දකුණු ආසියාවට ආවේණික, ඉඟුරු පවුලට (Zingiberaceae) අයත් බහුවාර්ෂික පැළෑටියකි. එය ප්‍රධාන වශයෙන් වගා කරනු ලබන්නේ එහි මුල් කඳ සඳහා වන අතර, ඒවා තම්බා, වියලා, කහ පැහැති කුඩු බවට අඹරනු ලැබේ — එයයි කහ ලෙස හැඳින්වෙන්නේ. මෙම ශාකය උණුසුම්, තෙත් දේශගුණයන්හි, හොඳින් ජලය බැස යන සරු පසෙහි වර්ධනය වන අතර, සියවස් ගණනාවක් තිස්සේ කුළුබඩුවක්, ස්වාභාවික වර්ණකයක්, සහ සාම්ප්‍රදායික ඖෂධයක් ලෙස අගය කර ඇත.",
+        "කහ ශාකය (Curcuma longa) දකුණු ආසියාවට ආවේණික, ඉඟුරු පවුලට (Zingiberaceae) අයත් බහුවාර්ෂික පැළෑටියකි. එය ප්‍රධාන වශයෙන් වගා කරනු ලබන්නේ එහි මුල් කඳ සඳහා වන අතර, ඒවා තම්බා, වියලා, කහ පැහැති කුඩු බවට අඹරනු ලැබේ. එසේ අඹරන ලද කුඩුවම කහ ලෙස හැඳින්වෙයි. මෙම ශාකය උණුසුම්, තෙත් දේශගුණයන්හි, හොඳින් ජලය බැස යන සරු පසෙහි වර්ධනය වන අතර, සියවස් ගණනාවක් තිස්සේ කුළුබඩුවක්, ස්වාභාවික වර්ණකයක්, සහ සාම්ප්‍රදායික ඖෂධයක් ලෙස අගය කර ඇත.",
         "ශාකය පිළිබඳ කෙටි විස්තරයක්:",
         "කහ ශාකයේ වටිනාකම එහි මුල් කඳේ වර්ණයට වඩා බොහෝ දුරට විහිදේ:",
       ],
@@ -622,13 +628,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "මීටරයක් තෙක් උසැති වේ.",
           "විශාල, දීප්තිමත් කොළ පැහැති, දිගටි කොළ, මුල් කඳේ පාදයෙන් දිගු දඬු සහිතව හටගනී.",
           "කොළ පැහැති කොවුලෙන් වට වූ ඝන, කේතුාකාර කරලවල පිහිටි ලා කහ සිට සුදු දක්වා මල්.",
-          "බීජ බොහොමයක් අඩංගු කුඩා, වියළි කැප්සියුලයකි; වගා කරන ලද ශාකවල කලාතුරකින් දක්නට ලැබේ.",
+          "බීජ බොහොමයක් අඩංගු කුඩා, වියළි කැප්සියුලයකි. වගා කරන ලද ශාකවල කලාතුරකින් දක්නට ලැබේ.",
           "මධ්‍යස්ථ වර්ෂාපතනයක් සහ අර්ධ සෙවනක් සහිත නිවර්තන සහ අර්ධ නිවර්තන ප්‍රදේශ.",
         ],
         [
           "ව්‍යංජන, සුප්, බත් ආහාර, සහ සෝස් සඳහා කුළුබඩුවක් ලෙස පුළුල්ව භාවිතා වන කහ, ආහාරවලට උණුසුම්, පස් රසැති රසයක් සහ රන්වන් වර්ණයක් ලබා දෙන අතර, කහ කිරි සහ කහ තේ වැනි පාන වර්ග සඳහාද භාවිතා වේ.",
           "කහෙහි ශක්තිමත් ප්‍රතිඔක්සිකාරක හා ප්‍රති-ගිනි අවුලුවන ගුණාංග සහිත ස්වාභාවික සංයෝගයක් වන කර්කියුමින් අඩංගු වන අතර, සන්ධි සෞඛ්‍යයට උපකාර වීමට, ආහාර දිරවීමට, ප්‍රතිශක්තිකරණය වැඩි දියුණු කිරීමට, සහ සම සෞඛ්‍යය ප්‍රවර්ධනය කිරීමට සාම්ප්‍රදායිකව භාවිතා කරයි.",
-          "කහ වගාව තිරසාර ගොවිතැනට සහාය වේ — එහි ඝන පත්‍ර ස්කන්ධය පස ඛාදනය අඩු කිරීමට උපකාරී වන අතර, පස් සෞඛ්‍යය සහ ජෛව විවිධත්වය වැඩි දියුණු කිරීම සඳහා එය බොහෝ විට අනෙකුත් ශාක සමඟ අන්තර් වගා කරනු ලැබේ.",
+          "කහ වගාව තිරසාර ගොවිතැනට සහාය වේ. එහි ඝන පත්‍ර ස්කන්ධය පස ඛාදනය අඩු කිරීමට උපකාරී වන අතර, පස් සෞඛ්‍යය සහ ජෛව විවිධත්වය වැඩි දියුණු කිරීම සඳහා එය බොහෝ විට අනෙකුත් ශාක සමඟ අන්තර් වගා කරනු ලැබේ.",
         ],
       ],
       duration: "මිනිත්තු 5-10",
@@ -638,7 +644,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "වතුයාය පුරා නොනවත්වා වැඩ කරන ස්වභාවික පරාග කාරකයා.",
       sectionHeadings: ["මී මැස්සා පිළිබඳ", "ලක්ෂණ", "වාසස්ථානය සහ හැසිරීම"],
       sectionBodies: [
-        "Apis mellifera — මී මැස්සා — ලොව වැදගත්ම පරාග කාරකයන්ගෙන් එකකි, එහි විශිෂ්ට කණ්ඩායම් වැඩ, මී පැණි නිෂ්පාදනය, සහ පරිසර පද්ධතිවල අත්‍යවශ්‍ය කාර්යභාරය නිසා අගය කරනු ලැබේ. පියාපත් යුගල දෙකක්, දෂ්ට කටුවක්, සහ තියුණු ගන්ධ හැඟීමක් සහිත කුඩා, ඉරි සහිත කෘමියෙක් වන එය, පාහේ සෑම මහාද්වීපයකම දක්නට ලැබෙන අතිශයින් සංවිධානාත්මක ජනපදවල ජීවත් වීමට අනුවර්තනය වී ඇත.",
+        "Apis mellifera, එනම් මී මැස්සා, ලොව වැදගත්ම පරාග කාරකයන්ගෙන් එකකි, එහි විශිෂ්ට කණ්ඩායම් වැඩ, මී පැණි නිෂ්පාදනය, සහ පරිසර පද්ධතිවල අත්‍යවශ්‍ය කාර්යභාරය නිසා අගය කරනු ලැබේ. පියාපත් යුගල දෙකක්, දෂ්ට කටුවක්, සහ තියුණු ගන්ධ හැඟීමක් සහිත කුඩා, ඉරි සහිත කෘමියෙක් වන එය, පාහේ සෑම මහාද්වීපයකම දක්නට ලැබෙන අතිශයින් සංවිධානාත්මක ජනපදවල ජීවත් වීමට අනුවර්තනය වී ඇත.",
         "මී මැස්සෙකු වැඩ කරන ආකාරය පිළිබඳ කෙටි විස්තරයක්:",
         "මී මැස්සන් ජීවත් වන ස්ථානය, සහ ඔවුන් වැදගත් වන්නේ මන්ද යන්න:",
       ],
@@ -1222,7 +1228,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "மண்ணில் உள்ள தங்க வண்ண கிழங்கிலிருந்து மசாலா, சாயம், மற்றும் மருந்துப் பொருள் வரை.",
       sectionHeadings: ["மஞ்சள் தாவரத்தைப் பற்றி", "பண்புகள்", "பயன்கள் மற்றும் நன்மைகள்"],
       sectionBodies: [
-        "மஞ்சள் தாவரம் (Curcuma longa) — தென்னாசியாவை பூர்வீகமாகக் கொண்ட, இஞ்சி குடும்பமான Zingiberaceae-க்கு சொந்தமான ஒரு பல்லாண்டு மூலிகையாகும். இது முதன்மையாக அதன் கிழங்குகளுக்காக பயிரிடப்படுகிறது, அவை வேகவைக்கப்பட்டு, உலர்த்தப்பட்டு, பிரகாசமான மஞ்சள் நிற தூளாக அரைக்கப்படுகின்றன — இதுவே மஞ்சள் எனப்படுகிறது. இந்த தாவரம் வெப்பமான, ஈரப்பதமான காலநிலைகளில், நன்கு வடிகட்டும் வளமான மண்ணில் செழித்து வளர்கிறது, மேலும் நூற்றாண்டுகளாக ஒரு மசாலாப் பொருளாகவும், இயற்கை சாயமாகவும், பாரம்பரிய மருந்தாகவும் மதிக்கப்பட்டு வருகிறது.",
+        "மஞ்சள் தாவரம் (Curcuma longa) தென்னாசியாவை பூர்வீகமாகக் கொண்ட, இஞ்சி குடும்பமான Zingiberaceae-க்கு சொந்தமான ஒரு பல்லாண்டு மூலிகையாகும். இது முதன்மையாக அதன் கிழங்குகளுக்காக பயிரிடப்படுகிறது, அவை வேகவைக்கப்பட்டு, உலர்த்தப்பட்டு, பிரகாசமான மஞ்சள் நிற தூளாக அரைக்கப்படுகின்றன. இவ்வாறு அரைக்கப்பட்ட தூளே மஞ்சள் எனப்படுகிறது. இந்த தாவரம் வெப்பமான, ஈரப்பதமான காலநிலைகளில், நன்கு வடிகட்டும் வளமான மண்ணில் செழித்து வளர்கிறது, மேலும் நூற்றாண்டுகளாக ஒரு மசாலாப் பொருளாகவும், இயற்கை சாயமாகவும், பாரம்பரிய மருந்தாகவும் மதிக்கப்பட்டு வருகிறது.",
         "தாவரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
         "மஞ்சள் தாவரத்தின் மதிப்பு அதன் கிழங்கின் நிறத்தைத் தாண்டி விரிவடைகிறது:",
       ],
@@ -1237,13 +1243,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "1 மீட்டர் வரை உயரம்.",
           "பெரிய, பிரகாசமான பச்சை, நீள்வட்ட இலைகள், கிழங்கின் அடிப்பகுதியிலிருந்து நீண்ட தண்டுகளுடன் தோன்றும்.",
           "பச்சை காம்புகளால் சூழப்பட்ட அடர்த்தியான, கூம்பு வடிவ கொத்துகளில் அமைந்த வெளிர் மஞ்சள் முதல் வெள்ளை நிற பூக்கள்.",
-          "ஏராளமான விதைகளைக் கொண்ட ஒரு சிறிய, உலர் காய்; பயிரிடப்பட்ட தாவரங்களில் அரிதாகவே காணப்படும்.",
+          "ஏராளமான விதைகளைக் கொண்ட ஒரு சிறிய, உலர் காய். பயிரிடப்பட்ட தாவரங்களில் அரிதாகவே காணப்படும்.",
           "மிதமான மழைப்பொழிவு மற்றும் பகுதி நிழலுடன் கூடிய வெப்பமண்டல மற்றும் துணை வெப்பமண்டல பகுதிகள்.",
         ],
         [
           "கறிகள், சூப்கள், அரிசி உணவுகள், மற்றும் சாஸ்களில் மசாலாப் பொருளாக பரவலாகப் பயன்படுத்தப்படும் மஞ்சள், உணவுகளுக்கு சூடான, மண் வாசனையுள்ள சுவையையும் தங்க நிறத்தையும் அளிக்கிறது, மேலும் மஞ்சள் பால் மற்றும் மஞ்சள் தேநீர் போன்ற பானங்களிலும் பயன்படுத்தப்படுகிறது.",
           "வலிமையான ஆக்ஸிஜனேற்ற எதிர்ப்பு மற்றும் அழற்சி எதிர்ப்பு பண்புகளைக் கொண்ட இயற்கை சேர்மமான கர்குமினை மஞ்சளில் உள்ளது, இது மூட்டு ஆரோக்கியத்தை ஆதரிக்கவும், செரிமானத்திற்கு உதவவும், நோய் எதிர்ப்பு சக்தியை மேம்படுத்தவும், சருமத்தை ஆரோக்கியமாக வைத்திருக்கவும் பாரம்பரியமாகப் பயன்படுத்தப்படுகிறது.",
-          "மஞ்சள் சாகுபடி நிலையான விவசாயத்திற்கு ஆதரவளிக்கிறது — அதன் அடர்த்தியான இலைகள் மண் அரிப்பைக் குறைக்க உதவுகின்றன, மேலும் மண் ஆரோக்கியத்தையும் பல்லுயிர் பெருக்கத்தையும் மேம்படுத்த இது பெரும்பாலும் பிற தாவரங்களுடன் இடைப்பயிராக பயிரிடப்படுகிறது.",
+          "மஞ்சள் சாகுபடி நிலையான விவசாயத்திற்கு ஆதரவளிக்கிறது. அதன் அடர்த்தியான இலைகள் மண் அரிப்பைக் குறைக்க உதவுகின்றன, மேலும் மண் ஆரோக்கியத்தையும் பல்லுயிர் பெருக்கத்தையும் மேம்படுத்த இது பெரும்பாலும் பிற தாவரங்களுடன் இடைப்பயிராக பயிரிடப்படுகிறது.",
         ],
       ],
       duration: "5-10 நிமிடங்கள்",
@@ -1253,7 +1259,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "தோட்டம் முழுவதும் அயராது உழைக்கும் இயற்கையின் மகரந்தச் சேர்க்கையாளர்.",
       sectionHeadings: ["தேனீயைப் பற்றி", "பண்புகள்", "வாழிடம் மற்றும் நடத்தை"],
       sectionBodies: [
-        "Apis mellifera — தேனீ — உலகின் மிக முக்கியமான மகரந்தச் சேர்க்கையாளர்களில் ஒன்றாகும், அதன் குறிப்பிடத்தக்க குழுப்பணி, தேன் உற்பத்தி, மற்றும் சுற்றுச்சூழல் அமைப்புகளில் அதன் இன்றியமையாத பங்கிற்காக போற்றப்படுகிறது. இரு ஜோடி இறக்கைகள், ஒரு கொடுக்கு, மற்றும் சிறந்த வாசனை உணர்வுடன் கூடிய ஒரு சிறிய, கோடிட்ட பூச்சியான இது, கிட்டத்தட்ட ஒவ்வொரு கண்டத்திலும் காணப்படும் மிகவும் ஒழுங்கமைக்கப்பட்ட காலனிகளில் வாழ ஏற்றவாறு தகவமைந்துள்ளது.",
+        "Apis mellifera, அதாவது தேனீ, உலகின் மிக முக்கியமான மகரந்தச் சேர்க்கையாளர்களில் ஒன்றாகும், அதன் குறிப்பிடத்தக்க குழுப்பணி, தேன் உற்பத்தி, மற்றும் சுற்றுச்சூழல் அமைப்புகளில் அதன் இன்றியமையாத பங்கிற்காக போற்றப்படுகிறது. இரு ஜோடி இறக்கைகள், ஒரு கொடுக்கு, மற்றும் சிறந்த வாசனை உணர்வுடன் கூடிய ஒரு சிறிய, கோடிட்ட பூச்சியான இது, கிட்டத்தட்ட ஒவ்வொரு கண்டத்திலும் காணப்படும் மிகவும் ஒழுங்கமைக்கப்பட்ட காலனிகளில் வாழ ஏற்றவாறு தகவமைந்துள்ளது.",
         "ஒரு தேனீயை இயக்கும் அம்சங்கள் பற்றிய ஒரு சுருக்கமான பார்வை:",
         "தேனீக்கள் வாழும் இடம், மற்றும் அவை ஏன் முக்கியம்:",
       ],
@@ -1837,7 +1843,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "Da un rizoma dorato nel terreno a spezia, colorante naturale e rimedio della tradizione.",
       sectionHeadings: ["La Pianta di Curcuma", "Caratteristiche", "Usi e Benefici"],
       sectionBodies: [
-        "Curcuma longa — la pianta di curcuma — è un'erba perenne della famiglia dello zenzero, le Zingiberaceae, originaria dell'Asia meridionale. Viene coltivata principalmente per i suoi rizomi, che vengono bolliti, essiccati e macinati fino a ottenere la polvere gialla brillante nota come curcuma. La pianta prospera in climi caldi e umidi con terreno fertile e ben drenato, ed è apprezzata da secoli come spezia, colorante naturale e medicina tradizionale.",
+        "Curcuma longa, la pianta di curcuma, è un'erba perenne della famiglia dello zenzero, le Zingiberaceae, originaria dell'Asia meridionale. Viene coltivata principalmente per i suoi rizomi, che vengono bolliti, essiccati e macinati fino a ottenere la polvere gialla brillante nota come curcuma. La pianta prospera in climi caldi e umidi con terreno fertile e ben drenato, ed è apprezzata da secoli come spezia, colorante naturale e medicina tradizionale.",
         "Uno sguardo rapido alla pianta stessa:",
         "Il valore della pianta di curcuma va ben oltre il colore del suo rizoma:",
       ],
@@ -1852,13 +1858,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Alta fino a 1 metro.",
           "Foglie grandi, verde brillante, oblunghe, con lunghi piccioli che spuntano dalla base del rizoma.",
           "Fiori dal giallo pallido al bianco, disposti in dense spighe coniche circondate da brattee verdi.",
-          "Una piccola capsula secca contenente numerosi semi; raramente visibile sulle piante coltivate.",
+          "Una piccola capsula secca contenente numerosi semi. Raramente visibile sulle piante coltivate.",
           "Regioni tropicali e subtropicali con piogge moderate e ombra parziale.",
         ],
         [
           "Ampiamente usata come spezia in curry, zuppe, piatti di riso e salse, la curcuma dona un sapore caldo e terroso e un colore dorato ai cibi, ed è usata anche in bevande come il latte alla curcuma e il tè alla curcuma.",
           "La curcuma contiene curcumina, un composto naturale con forti proprietà antiossidanti e antinfiammatorie, tradizionalmente usato per sostenere la salute delle articolazioni, favorire la digestione, rafforzare le difese immunitarie e promuovere il benessere della pelle.",
-          "La coltivazione della curcuma sostiene l'agricoltura sostenibile — il suo fogliame fitto aiuta a ridurre l'erosione del suolo, e la pianta viene spesso coltivata in consociazione con altre per migliorare la salute del suolo e la biodiversità.",
+          "La coltivazione della curcuma sostiene l'agricoltura sostenibile. Il suo fogliame fitto aiuta a ridurre l'erosione del suolo, e la pianta viene spesso coltivata in consociazione con altre per migliorare la salute del suolo e la biodiversità.",
         ],
       ],
       duration: "5-10 minuti",
@@ -1868,7 +1874,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "L'infaticabile impollinatore della natura, al lavoro in tutta la tenuta.",
       sectionHeadings: ["L'Ape", "Caratteristiche", "Habitat e Comportamento"],
       sectionBodies: [
-        "L'Apis mellifera — l'ape mellifera — è uno degli impollinatori più importanti al mondo, ammirata per il suo straordinario lavoro di squadra, la produzione di miele e il ruolo essenziale che svolge negli ecosistemi ovunque. Un piccolo insetto a strisce con due paia di ali, un pungiglione e un eccellente senso dell'olfatto, si è adattato alla vita in colonie altamente organizzate presenti in quasi ogni continente.",
+        "L'Apis mellifera, ovvero l'ape mellifera, è uno degli impollinatori più importanti al mondo, ammirata per il suo straordinario lavoro di squadra, la produzione di miele e il ruolo essenziale che svolge negli ecosistemi ovunque. Un piccolo insetto a strisce con due paia di ali, un pungiglione e un eccellente senso dell'olfatto, si è adattato alla vita in colonie altamente organizzate presenti in quasi ogni continente.",
         "Uno sguardo rapido a cosa rende speciale un'ape:",
         "Dove vivono le api e perché sono importanti:",
       ],
@@ -2467,13 +2473,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "يصل ارتفاعه إلى متر واحد.",
           "أوراق كبيرة، خضراء زاهية، مستطيلة، ذات أعناق طويلة تنمو من قاعدة الجذمور.",
           "أزهار من الأصفر الباهت إلى الأبيض، تنمو في سنابل كثيفة مخروطية الشكل محاطة بقنابع خضراء.",
-          "ثمرة صغيرة جافة تحتوي على بذور عديدة؛ نادرًا ما تُشاهد في النباتات المزروعة.",
+          "ثمرة صغيرة جافة تحتوي على بذور عديدة. نادرًا ما تُشاهد في النباتات المزروعة.",
           "المناطق الاستوائية وشبه الاستوائية ذات الأمطار المعتدلة والظل الجزئي.",
         ],
         [
           "يُستخدم الكركم على نطاق واسع كتوابل في الكاري والحساء وأطباق الأرز والصلصات، إذ يضفي نكهة دافئة ترابية ولونًا ذهبيًا على الطعام، ويُستخدم أيضًا في مشروبات مثل حليب الكركم وشاي الكركم.",
           "يحتوي الكركم على الكركمين، وهو مركب طبيعي ذو خصائص قوية مضادة للأكسدة ومضادة للالتهابات، يُستخدم تقليديًا لدعم صحة المفاصل، ومساعدة الهضم، وتعزيز المناعة، ودعم صحة البشرة.",
-          "تدعم زراعة الكركم الزراعة المستدامة — إذ تساعد أوراقه الكثيفة على تقليل تآكل التربة، وغالبًا ما تُزرع النبتة مع نباتات أخرى لتحسين صحة التربة والتنوع البيولوجي.",
+          "تدعم زراعة الكركم الزراعة المستدامة. إذ تساعد أوراقه الكثيفة على تقليل تآكل التربة، وغالبًا ما تُزرع النبتة مع نباتات أخرى لتحسين صحة التربة والتنوع البيولوجي.",
         ],
       ],
       duration: "5-10 دقائق",
@@ -3082,13 +3088,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "До 1 метра высотой.",
           "Крупные, ярко-зелёные, продолговатые листья с длинными черешками, отрастающие от основания корневища.",
           "Бледно-жёлтые или белые цветки, собранные в плотные конические колосья, окружённые зелёными прицветниками.",
-          "Мелкая сухая коробочка с многочисленными семенами; на культивируемых растениях встречается редко.",
+          "Мелкая сухая коробочка с многочисленными семенами. На культивируемых растениях встречается редко.",
           "Тропические и субтропические регионы с умеренными осадками и частичной тенью.",
         ],
         [
           "Широко используемая как пряность в карри, супах, рисовых блюдах и соусах, куркума придаёт пище тёплый, землистый вкус и золотистый цвет, а также используется в напитках, таких как куркумовое молоко и куркумовый чай.",
           "Куркума содержит куркумин — природное соединение с сильными антиоксидантными и противовоспалительными свойствами, традиционно используемое для поддержки здоровья суставов, улучшения пищеварения, укрепления иммунитета и здоровья кожи.",
-          "Выращивание куркумы способствует устойчивому земледелию — её густая листва помогает уменьшить эрозию почвы, а само растение часто выращивают в смешанных посадках с другими культурами для улучшения здоровья почвы и биоразнообразия.",
+          "Выращивание куркумы способствует устойчивому земледелию. Её густая листва помогает уменьшить эрозию почвы, а само растение часто выращивают в смешанных посадках с другими культурами для улучшения здоровья почвы и биоразнообразия.",
         ],
       ],
       duration: "5–10 минут",
@@ -3682,7 +3688,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "Von einem goldenen Rhizom im Boden zu Gewürz, Farbstoff und traditionellem Heilmittel.",
       sectionHeadings: ["Über die Kurkumapflanze", "Merkmale", "Verwendung und Nutzen"],
       sectionBodies: [
-        "Curcuma longa — die Kurkumapflanze — ist eine mehrjährige Staude aus der Ingwerfamilie (Zingiberaceae) mit Ursprung in Südasien. Sie wird hauptsächlich wegen ihrer Rhizome angebaut, die gekocht, getrocknet und zu dem leuchtend gelben Pulver namens Kurkuma gemahlen werden. Die Pflanze gedeiht in warmem, feuchtem Klima auf gut durchlässigem, fruchtbarem Boden und wird seit Jahrhunderten als Gewürz, natürlicher Farbstoff und traditionelles Heilmittel geschätzt.",
+        "Curcuma longa, die Kurkumapflanze, ist eine mehrjährige Staude aus der Ingwerfamilie (Zingiberaceae) mit Ursprung in Südasien. Sie wird hauptsächlich wegen ihrer Rhizome angebaut, die gekocht, getrocknet und zu dem leuchtend gelben Pulver namens Kurkuma gemahlen werden. Die Pflanze gedeiht in warmem, feuchtem Klima auf gut durchlässigem, fruchtbarem Boden und wird seit Jahrhunderten als Gewürz, natürlicher Farbstoff und traditionelles Heilmittel geschätzt.",
         "Ein kurzer Blick auf die Pflanze selbst:",
         "Der Wert der Kurkumapflanze geht weit über die Farbe ihres Rhizoms hinaus:",
       ],
@@ -3697,13 +3703,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Bis zu 1 Meter hoch.",
           "Große, leuchtend grüne, längliche Blätter mit langen Stielen, die aus der Basis des Rhizoms wachsen.",
           "Blassgelbe bis weiße Blüten in dichten, kegelförmigen Ähren, umgeben von grünen Hochblättern.",
-          "Eine kleine, trockene Kapsel mit zahlreichen Samen; bei Kulturpflanzen selten zu sehen.",
+          "Eine kleine, trockene Kapsel mit zahlreichen Samen. Bei Kulturpflanzen selten zu sehen.",
           "Tropische und subtropische Regionen mit mäßigem Niederschlag und Halbschatten.",
         ],
         [
           "Kurkuma wird häufig als Gewürz in Currys, Suppen, Reisgerichten und Saucen verwendet, verleiht Speisen einen warmen, erdigen Geschmack und eine goldene Farbe und wird auch in Getränken wie Kurkuma-Milch und Kurkuma-Tee eingesetzt.",
           "Kurkuma enthält Curcumin, eine natürliche Verbindung mit starken antioxidativen und entzündungshemmenden Eigenschaften, die traditionell zur Unterstützung der Gelenkgesundheit, der Verdauung, der Immunabwehr und des Hautwohlbefindens eingesetzt wird.",
-          "Der Kurkumaanbau unterstützt nachhaltige Landwirtschaft — sein dichtes Laub hilft, Bodenerosion zu verringern, und die Pflanze wird oft zusammen mit anderen Kulturen angebaut, um Bodengesundheit und Biodiversität zu verbessern.",
+          "Der Kurkumaanbau unterstützt nachhaltige Landwirtschaft. Sein dichtes Laub hilft, Bodenerosion zu verringern, und die Pflanze wird oft zusammen mit anderen Kulturen angebaut, um Bodengesundheit und Biodiversität zu verbessern.",
         ],
       ],
       duration: "5-10 Minuten",
@@ -3733,7 +3739,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Ein kleiner Körper mit gelb-schwarzen Streifen, zwei Flügelpaaren, einem Stachel, Facettenaugen und einem starken Geruchssinn.",
         ],
         [
-          "Weltweit in Wiesen, Gärten, Wäldern, Obstgärten und auf Bauernhöfen zu finden; sie bauen ihre Stöcke je nach Art in Baumhöhlen, von Menschen geschaffenen Strukturen oder unterirdischen Hohlräumen.",
+          "Weltweit in Wiesen, Gärten, Wäldern, Obstgärten und auf Bauernhöfen zu finden. Sie bauen ihre Stöcke je nach Art in Baumhöhlen, von Menschen geschaffenen Strukturen oder unterirdischen Hohlräumen.",
           "Bienen ernähren sich hauptsächlich von Nektar als Energiequelle und von Pollen als Proteinquelle. Sie sind hochsoziale Insekten, die in Kolonien mit einer Königin, Arbeiterinnen und Drohnen leben, und spielen eine entscheidende Rolle bei der Bestäubung.",
           "Viele Bienenpopulationen gehen aufgrund von Pestizideinsatz, Lebensraumverlust, Krankheiten und Klimawandel zurück, weshalb sich Erhaltungsbemühungen nun auf nachhaltige Landwirtschaft, reduzierten Pestizideinsatz und den Schutz natürlicher Lebensräume konzentrieren.",
         ],
@@ -4312,13 +4318,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Hasta 1 metro de altura.",
           "Hojas grandes, de un verde brillante, oblongas, con tallos largos que emergen de la base del rizoma.",
           "Flores de amarillo pálido a blanco, dispuestas en espigas cónicas densas rodeadas de brácteas verdes.",
-          "Una pequeña cápsula seca con numerosas semillas; rara vez se ve en las plantas cultivadas.",
+          "Una pequeña cápsula seca con numerosas semillas. Rara vez se ve en las plantas cultivadas.",
           "Regiones tropicales y subtropicales con lluvias moderadas y sombra parcial.",
         ],
         [
           "Ampliamente usada como especia en curris, sopas, platos de arroz y salsas, la cúrcuma aporta un sabor cálido y terroso y un color dorado a los alimentos, y también se usa en bebidas como la leche de cúrcuma y el té de cúrcuma.",
           "La cúrcuma contiene curcumina, un compuesto natural con fuertes propiedades antioxidantes y antiinflamatorias, usado tradicionalmente para favorecer la salud articular, ayudar a la digestión, reforzar la inmunidad y promover el bienestar de la piel.",
-          "El cultivo de la cúrcuma favorece la agricultura sostenible —su follaje denso ayuda a reducir la erosión del suelo, y la planta suele cultivarse junto a otras para mejorar la salud del suelo y la biodiversidad.",
+          "El cultivo de la cúrcuma favorece la agricultura sostenible. Su follaje denso ayuda a reducir la erosión del suelo, y la planta suele cultivarse junto a otras para mejorar la salud del suelo y la biodiversidad.",
         ],
       ],
       duration: "5-10 minutos",
@@ -4912,7 +4918,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "D'un rhizome doré dans le sol à une épice, un colorant et un remède traditionnel.",
       sectionHeadings: ["À propos du Curcuma", "Caractéristiques", "Usages et Bienfaits"],
       sectionBodies: [
-        "Curcuma longa — le curcuma — est une plante herbacée vivace de la famille du gingembre, les Zingiberaceae, originaire d'Asie du Sud. Il est principalement cultivé pour ses rhizomes, qui sont bouillis, séchés puis moulus en une poudre jaune vif connue sous le nom de curcuma. La plante prospère sous des climats chauds et humides, dans un sol fertile et bien drainé, et est appréciée depuis des siècles comme épice, colorant naturel et remède traditionnel.",
+        "Curcuma longa, le curcuma, est une plante herbacée vivace de la famille du gingembre, les Zingiberaceae, originaire d'Asie du Sud. Il est principalement cultivé pour ses rhizomes, qui sont bouillis, séchés puis moulus en une poudre jaune vif connue sous le nom de curcuma. La plante prospère sous des climats chauds et humides, dans un sol fertile et bien drainé, et est appréciée depuis des siècles comme épice, colorant naturel et remède traditionnel.",
         "Un aperçu rapide de la plante elle-même :",
         "La valeur du curcuma va bien au-delà de la couleur de son rhizome :",
       ],
@@ -4927,13 +4933,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Jusqu'à 1 mètre de haut.",
           "Grandes feuilles oblongues, vert vif, aux longs pétioles émergeant de la base du rhizome.",
           "Fleurs jaune pâle à blanches, disposées en épis denses et coniques entourés de bractées vertes.",
-          "Une petite capsule sèche contenant de nombreuses graines ; rarement observée sur les plants cultivés.",
+          "Une petite capsule sèche contenant de nombreuses graines. Rarement observée sur les plants cultivés.",
           "Régions tropicales et subtropicales à pluviométrie modérée et ombre partielle.",
         ],
         [
           "Largement utilisé comme épice dans les currys, soupes, plats de riz et sauces, le curcuma apporte une saveur chaude et terreuse ainsi qu'une couleur dorée aux aliments, et sert aussi dans des boissons comme le lait au curcuma et le thé au curcuma.",
           "Le curcuma contient de la curcumine, un composé naturel aux propriétés antioxydantes et anti-inflammatoires marquées, traditionnellement utilisé pour soutenir la santé des articulations, favoriser la digestion, renforcer l'immunité et améliorer le bien-être de la peau.",
-          "La culture du curcuma soutient une agriculture durable — son feuillage dense aide à réduire l'érosion des sols, et la plante est souvent cultivée en association avec d'autres pour améliorer la santé du sol et la biodiversité.",
+          "La culture du curcuma soutient une agriculture durable. Son feuillage dense aide à réduire l'érosion des sols, et la plante est souvent cultivée en association avec d'autres pour améliorer la santé du sol et la biodiversité.",
         ],
       ],
       duration: "5-10 minutes",
@@ -4965,7 +4971,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           "Présentes dans le monde entier dans les prairies, jardins, bois, vergers et fermes, elles construisent leurs ruches dans des cavités d'arbres, des structures artificielles ou des cavités souterraines selon l'espèce.",
           "Les abeilles se nourrissent principalement de nectar pour l'énergie et de pollen pour les protéines. Ce sont des insectes hautement sociaux, vivant en colonies avec une reine, des ouvrières et des faux-bourdons, et jouant un rôle crucial dans la pollinisation.",
-          "De nombreuses populations d'abeilles déclinent en raison de l'utilisation de pesticides, de la perte d'habitat, des maladies et du changement climatique ; les efforts de conservation se concentrent désormais sur l'agriculture durable, la réduction de l'utilisation de pesticides et la protection des habitats naturels.",
+          "De nombreuses populations d'abeilles déclinent en raison de l'utilisation de pesticides, de la perte d'habitat, des maladies et du changement climatique. Les efforts de conservation se concentrent désormais sur l'agriculture durable, la réduction de l'utilisation de pesticides et la protection des habitats naturels.",
         ],
       ],
     },
@@ -5542,13 +5548,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "株高可达1米。",
           "大型鲜绿色长圆形叶片，从根茎基部长出，带有长长的叶柄。",
           "淡黄色至白色的花朵，密集排列成锥形花穗，外围有绿色苞片包裹。",
-          "内含大量种子的小型干燥蒴果；在栽培植株上较为少见。",
+          "内含大量种子的小型干燥蒴果。在栽培植株上较为少见。",
           "降雨适中、有部分遮荫的热带及亚热带地区。",
         ],
         [
           "姜黄被广泛用作咖喱、汤品、米饭料理及酱汁中的香料，为食物增添温暖的泥土芳香与金黄色泽，也用于姜黄奶、姜黄茶等饮品中。",
-          "姜黄含有姜黄素，这是一种具有强抗氧化和抗炎特性的天然化合物，传统上用于支持关节健康、帮助消化、增强免疫力，并promote皮肤健康。",
-          "姜黄种植有助于可持续农业——其茂密的叶片有助于减少水土流失，且常与其他作物间作，以改善土壤健康和生物多样性。",
+          "姜黄含有姜黄素，这是一种具有强抗氧化和抗炎特性的天然化合物，传统上用于支持关节健康、帮助消化、增强免疫力，并促进皮肤健康。",
+          "姜黄种植有助于可持续农业。其茂密的叶片有助于减少水土流失，且常与其他作物间作，以改善土壤健康和生物多样性。",
         ],
       ],
       duration: "5-10分钟",
@@ -6163,7 +6169,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         [
           "カレー、スープ、米料理、ソースなどに香辛料として広く使われるターメリックは、料理に温かみのある土っぽい風味と黄金色を加え、ターメリックミルクやターメリックティーなどの飲み物にも使われる。",
           "ターメリックには強い抗酸化作用と抗炎症作用を持つ天然化合物クルクミンが含まれており、伝統的に関節の健康を支え、消化を助け、免疫力を高め、肌の健康を促進するために用いられてきた。",
-          "ターメリックの栽培は持続可能な農業を支えている——その密生した葉は土壌浸食を減らすのに役立ち、土壌の健康と生物多様性を高めるために他の作物と混植されることも多い。",
+          "ターメリックの栽培は持続可能な農業を支えている。その密生した葉は土壌浸食を減らすのに役立ち、土壌の健康と生物多様性を高めるために他の作物と混植されることも多い。",
         ],
       ],
       duration: "5〜10分",
