@@ -212,6 +212,10 @@ import rollingMachineryImg from "../assets/rolling/rolling-machinery.jpg";
 // below.
 import orthodoxRollingTableImg from "../assets/rolling/orthodox-rolling-table.jpg";
 import fermentationFloorImg from "../assets/fermentation/fermentation-floor.jpg";
+// Real, user-supplied photo of the estate's own rolled leaf spread out on
+// the fermentation floor, already turning coppery brown. See the
+// provenance note near the "fermentation" station below.
+import fermentingLeafCopperImg from "../assets/fermentation/fermenting-leaf-copper.jpg";
 import dryerMachineImg from "../assets/drying/dryer-machine.jpg";
 // CC BY-SA 4.0 photo (Wikimedia Commons, Harvinder Chandigarh) of a real,
 // full-size, nameplated "Kamalin Multi Therm Fluidised Bed Drier" in
@@ -1653,6 +1657,11 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * repeating the same mismatch problem. Not estate photos — no real photos
  * of the estate's own rolling/drying machinery have been supplied yet. No
  * wording changed; no other station affected.
+ * "fermentation" gained a real photo the same day — a WhatsApp image of
+ * the estate's own rolled leaf spread out on the fermentation floor,
+ * already turning the coppery-brown colour the text describes. Added to
+ * the "From Green to Copper" section, the one that specifically describes
+ * this colour change. No wording changed; no other station affected.
  */
 export const STATIONS: Station[] = [
   {
@@ -2638,6 +2647,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "From Green to Copper",
+        image: fermentingLeafCopperImg,
         body: "Over those 2.5 hours the green leaf gradually turns a coppery brown as it fully develops the colour, body, and aroma associated with black tea — entirely from natural oxidation, with no dyes or added colour.",
       },
       {
