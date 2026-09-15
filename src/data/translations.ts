@@ -225,9 +225,11 @@ import type { StationTranslation } from "./stations";
  * and every itemBodies array — Characteristics, the 7 peeling tools,
  * Benefits, and the 2 tea products — all 10 languages), going beyond
  * the single "About the Cinnamon Tree" paragraph the 2026-09-09 pass had
- * covered. Remaining not-yet-naturalized stations (unique-fruits'
- * fruit-gallery fields and the untouched remainder of
- * ginger-turmeric/coconut-field/jaggery-palm beyond their one
+ * covered. "ginger-turmeric" got the same full treatment the same day
+ * (sectionBodies plus all three itemBodies arrays — Characteristics,
+ * Benefits, and the 2 tea products — all 10 languages). Remaining
+ * not-yet-naturalized stations (unique-fruits' fruit-gallery fields and
+ * the untouched remainder of coconut-field/jaggery-palm beyond their one
  * already-rewritten "About the X" paragraph) are still to be done in a
  * future pass.
  */
@@ -575,7 +577,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "සුවඳවත් නිවර්තන මුල් කඳකින් කර්මාන්තශාලාවේම ඉඟුරු තේ දක්වා.",
       sectionHeadings: ["ඉඟුරු ශාකය පිළිබඳ", "ලක්ෂණ", "ප්‍රතිලාභ", "ඉඟුරු තේ නිෂ්පාදන"],
       sectionBodies: [
-        "ඉඟුරු ශාකය (Zingiber officinale) සින්ජිබරේසී පවුලට අයත් බහුවාර්ෂික පැළෑටියකි. එය ශ්‍රී ලංකාව සහ ඉන්දියාව ඇතුළු නිවර්තන හා අර්ධ නිවර්තන ප්‍රදේශවල පුළුල් ලෙස වගා කෙරේ. වඩාත් වැදගත් වන්නේ එහි භූගත මුල් කඳයි — එය සියවස් ගණනාවක් තිස්සේ කුළුබඩුවක් හා ඖෂධයක් ලෙස භාවිතා වී තිබේ. ඉඟුරු වර්ධනය වන්නේ පෝෂ්‍යදායී, හොඳින් ජලය බැස යන පසක් සහිත උණුසුම් හා තෙත් දේශගුණයන්හිය. බොහෝ සංස්කෘතීන්හි සාම්ප්‍රදායික ආහාර පිසීමේ සහ ශාක ඖෂධවේදයේ එය ප්‍රධාන කාර්යභාරයක් ඉටු කරයි.",
+        "ඉඟුරු ශාකය (Zingiber officinale) සින්ජිබරේසී පවුලට අයත් බහුවාර්ෂික පැළෑටියකි. එය ශ්‍රී ලංකාව සහ ඉන්දියාව ඇතුළු නිවර්තන හා අර්ධ නිවර්තන ප්‍රදේශවල පුළුල් ලෙස වගා කෙරේ. වඩාත් වැදගත් වන්නේ එහි භූගත මුල් කඳයි. එය සියවස් ගණනාවක් තිස්සේ කුළුබඩුවක් හා ඖෂධයක් ලෙස භාවිතා වී තිබේ. ඉඟුරු වර්ධනය වන්නේ පෝෂ්‍යදායී, හොඳින් ජලය බැස යන පසක් සහිත උණුසුම් හා තෙත් දේශගුණයන්හිය. බොහෝ සංස්කෘතීන්හි සාම්ප්‍රදායික ආහාර පිසීමේ සහ ශාක ඖෂධවේදයේ එය ප්‍රධාන කාර්යභාරයක් ඉටු කරයි.",
         "ශාකය පිළිබඳ කෙටි විස්තරයක්:",
         "ඉඟුරුවේ වටිනාකම කුස්සියෙන් ඔබ්බට විහිදේ:",
         "කර්මාන්තශාලාව උසස් තත්ත්වයේ ශ්‍රී ලාංකික ඉඟුරුවලින් සකසන ලද, ස්වාභාවිකව කුළුබඩු සහිත සුවපහසු අත්දැකීමක් සඳහා ඉඟුරු තේ මිශ්‍රණ දෙකක් නිෂ්පාදනය කරයි.",
@@ -592,17 +594,17 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "මීටර් 1 සිට 1.5 දක්වා උසැති වේ.",
           "දිග, පටු, හීල්ල හැඩැති කොළ සෙන්ටිමීටර් 15 සිට 30 දක්වා දිග, කඳ දිගේ පරස්පර ලෙස පිහිටා ඇත.",
           "රතු පාට තොල් සහිත කුඩා කහ-කොළ පැහැති මල්, මුල් කඳෙන් හට ගන්නා වෙනම අංකුරවල හට ගනී.",
-          "වගාවේදී කලාතුරකින් හට ගනී; බීජ කිහිපයක් අඩංගු කුඩා කැප්සියුලයකි.",
+          "වගාවේදී කලාතුරකින් හට ගනී. බීජ කිහිපයක් අඩංගු කුඩා කැප්සියුලයකි.",
           "අර්ධ සෙවන සහිත, සරු, හොඳින් ජලය බැස යන පසක් සහිත උණුසුම්, තෙත් දේශගුණයන්.",
         ],
         [
           "නැවුම් හා වියළි ඉඟුරු ලොව පුරා ආහාර පිසීමේ අත්‍යවශ්‍ය අමුද්‍රව්‍යයකි, එහි තියුණු, කුළුබඩු රසය හා සුවඳ නිසා ව්‍යංජන, සුප්, රසකැවිලි, පාන වර්ග, සහ සෝස් සඳහා භාවිතා කරයි.",
-          "රුධිර සීනි නියාමනයට උපකාරී ජින්ජරෝල් වැනි ජෛව ක්‍රියාකාරී සංයෝග අඩංගු වන අතර, ප්‍රතිඔක්සිකාරක, සහ දිරවීමට උපකාරී ගුණාංග ඇත; ඔක්කාරය සමනය කිරීමට, දිරවීම වැඩි දියුණු කිරීමට, සහ සෙම්ප්‍රතිශ්‍යාව අඩු කිරීමට බහුලව භාවිතා කරයි.",
+          "රුධිර සීනි නියාමනයට උපකාරී ජින්ජරෝල් වැනි ජෛව ක්‍රියාකාරී සංයෝග අඩංගු වන අතර, ප්‍රතිඔක්සිකාරක, සහ දිරවීමට උපකාරී ගුණාංග ඇත. ඔක්කාරය සමනය කිරීමට, දිරවීම වැඩි දියුණු කිරීමට, සහ සෙම්ප්‍රතිශ්‍යාව අඩු කිරීමට බහුලව භාවිතා කරයි.",
           "ඉඟුරු වගාව තිරසාර ගොවිතැන් ක්‍රම සඳහා සහාය වන අතර, පස් ජෛව විවිධත්වය පොහොසත් කරයි, සහ නිවර්තන කලාපවල කුඩා ගොවීන්ට ආදායමක් සපයයි.",
         ],
         [
-          "පිරිසිදු සිලෝන් තේ ස්වාභාවික ඉඟුරු සාරය සමඟ මිශ්‍ර කිරීමෙන් ප්‍රාණවත් හා සුවඳවත් පානයක් ලබා දෙයි — උගුර සමනය කිරීමට හා දිරවීමට උපකාරී වීමට සුදුසුය.",
-          "ඉඟුරු සහ ශාක රසයන්හි ප්‍රසන්න එකතුවක්, සෑම උරෙකදීම උණුසුම, නැවුම් බව, සහ සමතුලිතතාවයක් ලබා දෙයි — ස්වභාවයේ සහ රසයේ සැබෑ එකතුවකි.",
+          "පිරිසිදු සිලෝන් තේ ස්වාභාවික ඉඟුරු සාරය සමඟ මිශ්‍ර කිරීමෙන් ප්‍රාණවත් හා සුවඳවත් පානයක් ලබා දෙයි. උගුර සමනය කිරීමට හා දිරවීමට උපකාරී වීමට සුදුසුය.",
+          "ඉඟුරු සහ ශාක රසයන්හි ප්‍රසන්න එකතුවක්, සෑම උරෙකදීම උණුසුම, නැවුම් බව, සහ සමතුලිතතාවයක් ලබා දෙයි. ස්වභාවයේ සහ රසයේ සැබෑ එකතුවකි.",
         ],
       ],
       itemTags: [
@@ -1190,7 +1192,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "நறுமணமிக்க வெப்பமண்டல வேர்த்தண்டிலிருந்து தொழிற்சாலையின் சொந்த இஞ்சி தேநீர் வரை.",
       sectionHeadings: ["இஞ்சி செடியைப் பற்றி", "பண்புகள்", "நன்மைகள்", "இஞ்சி தேநீர் தயாரிப்புகள்"],
       sectionBodies: [
-        "இஞ்சி செடி (Zingiber officinale) ஜிஞ்சிபரேசி குடும்பத்தைச் சேர்ந்த ஒரு பல்லாண்டு மூலிகை. இது இலங்கை மற்றும் இந்தியா உட்பட வெப்பமண்டல மற்றும் துணை வெப்பமண்டல பகுதிகளில் பரவலாக வளர்க்கப்படுகிறது. மிக முக்கியமானது அதன் நிலத்தடி வேர்த்தண்டே — இது நூற்றாண்டுகளாக மசாலாவாகவும் மருந்தாகவும் பயன்படுத்தப்பட்டு வருகிறது. இஞ்சி வளமான, வடிகட்டும் மண்ணுடன் கூடிய வெப்பமான, ஈரப்பதமான காலநிலைகளில் செழிக்கிறது. பல கலாச்சாரங்களில் பாரம்பரிய சமையலிலும் மூலிகை மருத்துவத்திலும் இது முக்கிய பங்கு வகிக்கிறது.",
+        "இஞ்சி செடி (Zingiber officinale) ஜிஞ்சிபரேசி குடும்பத்தைச் சேர்ந்த ஒரு பல்லாண்டு மூலிகை. இது இலங்கை மற்றும் இந்தியா உட்பட வெப்பமண்டல மற்றும் துணை வெப்பமண்டல பகுதிகளில் பரவலாக வளர்க்கப்படுகிறது. மிக முக்கியமானது அதன் நிலத்தடி வேர்த்தண்டே. இது நூற்றாண்டுகளாக மசாலாவாகவும் மருந்தாகவும் பயன்படுத்தப்பட்டு வருகிறது. இஞ்சி வளமான, வடிகட்டும் மண்ணுடன் கூடிய வெப்பமான, ஈரப்பதமான காலநிலைகளில் செழிக்கிறது. பல கலாச்சாரங்களில் பாரம்பரிய சமையலிலும் மூலிகை மருத்துவத்திலும் இது முக்கிய பங்கு வகிக்கிறது.",
         "செடியைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
         "இஞ்சியின் மதிப்பு சமையலறையை தாண்டியும் விரிவடைகிறது:",
         "தொழிற்சாலை உயர்தர இலங்கை இஞ்சியிலிருந்து தயாரிக்கப்பட்ட, இயற்கையாக காரமான மற்றும் புத்துணர்ச்சியூட்டும் அனுபவத்திற்கான இரண்டு இஞ்சி தேநீர் கலவைகளை உற்பத்தி செய்கிறது.",
@@ -1207,17 +1209,17 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "சுமார் 1 முதல் 1.5 மீட்டர் வரை உயரம் வளரும்.",
           "15 முதல் 30 செ.மீ நீளமுள்ள நீண்ட, குறுகிய, ஈட்டி வடிவ இலைகள், தண்டு வழியாக மாறி மாறி அமைந்திருக்கும்.",
           "ஊதா உதடுகளுடன் கூடிய சிறிய மஞ்சள்-பச்சை நிற பூக்கள், வேர்த்தண்டிலிருந்து தோன்றும் தனி தளிர்களில் உருவாகும்.",
-          "சாகுபடியில் அரிதாகவே உருவாகும்; பல விதைகளைக் கொண்ட ஒரு சிறிய காய்.",
+          "சாகுபடியில் அரிதாகவே உருவாகும். பல விதைகளைக் கொண்ட ஒரு சிறிய காய்.",
           "பகுதி நிழல் மற்றும் வளமான, வடிகட்டும் மண்ணுடன் கூடிய வெப்பமான, ஈரப்பதமான காலநிலைகள்.",
         ],
         [
           "புதிய மற்றும் உலர்ந்த இஞ்சி உலகளாவிய சமையலில் இன்றியமையாத பொருட்களாகும், அதன் காரமான, மசாலா சுவை மற்றும் வாசனைக்காக கறிகள், சூப்கள், இனிப்புகள், பானங்கள், மற்றும் சாஸ்களில் பயன்படுத்தப்படுகிறது.",
-          "இரத்த சர்க்கரையை கட்டுப்படுத்த உதவும் ஜிஞ்சரால் போன்ற உயிரியல் செயல்பாட்டு கூட்டுப்பொருட்களைக் கொண்டுள்ளது, அழற்சி எதிர்ப்பு, ஆக்ஸிஜனேற்ற எதிர்ப்பு, மற்றும் செரிமான நன்மைகளைக் கொண்டுள்ளது; குமட்டலைப் போக்கவும், செரிமானத்தை மேம்படுத்தவும், சளி அறிகுறிகளைக் குறைக்கவும் பொதுவாகப் பயன்படுத்தப்படுகிறது.",
+          "இரத்த சர்க்கரையை கட்டுப்படுத்த உதவும் ஜிஞ்சரால் போன்ற உயிரியல் செயல்பாட்டு கூட்டுப்பொருட்களைக் கொண்டுள்ளது, அழற்சி எதிர்ப்பு, ஆக்ஸிஜனேற்ற எதிர்ப்பு, மற்றும் செரிமான நன்மைகளைக் கொண்டுள்ளது. குமட்டலைப் போக்கவும், செரிமானத்தை மேம்படுத்தவும், சளி அறிகுறிகளைக் குறைக்கவும் பொதுவாகப் பயன்படுத்தப்படுகிறது.",
           "இஞ்சி சாகுபடி நிலைத்தன்மையான விவசாய முறைகளை ஆதரிக்கிறது, மண் பல்லுயிர் பெருக்கத்தை வளப்படுத்துகிறது, மற்றும் வெப்பமண்டல பகுதிகளில் சிறு விவசாயிகளுக்கு வருமானத்தை வழங்குகிறது.",
         ],
         [
-          "தூய சிலோன் தேயிலை இயற்கையான இஞ்சி சாற்றுடன் இணைந்து புத்துணர்ச்சியூட்டும் மற்றும் நறுமணமிக்க பானத்தை வழங்குகிறது — தொண்டையை ஆற்றவும் செரிமானத்திற்கு உதவவும் ஏற்றது.",
-          "இஞ்சி மற்றும் மூலிகை சுவைகளின் இனிமையான கலவை, ஒவ்வொரு உறிஞ்சலிலும் சூடு, புத்துணர்ச்சி, மற்றும் சமநிலையை வழங்குகிறது — இயற்கை மற்றும் சுவையின் உண்மையான இணக்கம்.",
+          "தூய சிலோன் தேயிலை இயற்கையான இஞ்சி சாற்றுடன் இணைந்து புத்துணர்ச்சியூட்டும் மற்றும் நறுமணமிக்க பானத்தை வழங்குகிறது. தொண்டையை ஆற்றவும் செரிமானத்திற்கு உதவவும் ஏற்றது.",
+          "இஞ்சி மற்றும் மூலிகை சுவைகளின் இனிமையான கலவை, ஒவ்வொரு உறிஞ்சலிலும் சூடு, புத்துணர்ச்சி, மற்றும் சமநிலையை வழங்குகிறது. இயற்கை மற்றும் சுவையின் உண்மையான இணக்கம்.",
         ],
       ],
       itemTags: [
@@ -1822,17 +1824,17 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Fino a 1-1,5 metri di altezza.",
           "Foglie lunghe, strette, a forma di lancia, lunghe 15-30 centimetri, disposte alternativamente lungo il fusto.",
           "Piccoli fiori giallo-verdastri con labbra viola, portati su germogli separati che emergono dal rizoma.",
-          "Prodotto raramente in coltivazione; una piccola capsula contenente diversi semi.",
+          "Prodotto raramente in coltivazione. Una piccola capsula contenente diversi semi.",
           "Climi caldi e umidi con ombra parziale e terreno fertile e ben drenato.",
         ],
         [
           "Lo zenzero fresco ed essiccato sono ingredienti essenziali nelle cucine di tutto il mondo, usati in curry, zuppe, dolci, bevande e salse per il loro sapore pungente e speziato e il loro aroma.",
-          "Contiene composti bioattivi come il gingerolo con benefici antinfiammatori, antiossidanti e digestivi; comunemente usato per alleviare la nausea, migliorare la digestione e ridurre i sintomi del raffreddore.",
+          "Contiene composti bioattivi come il gingerolo con benefici antinfiammatori, antiossidanti e digestivi. Comunemente usato per alleviare la nausea, migliorare la digestione e ridurre i sintomi del raffreddore.",
           "La coltivazione dello zenzero sostiene sistemi agricoli sostenibili, arricchisce la biodiversità del suolo e fornisce reddito ai piccoli agricoltori nelle regioni tropicali.",
         ],
         [
-          "Il tè di Ceylon puro infuso con estratto naturale di zenzero offre una bevanda rivitalizzante e aromatica — perfetta per lenire la gola e favorire la digestione.",
-          "Una deliziosa fusione di zenzero e sapori erbali, che offre calore, freschezza ed equilibrio in ogni sorso — una vera armonia di natura e sapore.",
+          "Il tè di Ceylon puro infuso con estratto naturale di zenzero offre una bevanda rivitalizzante e aromatica. Perfetta per lenire la gola e favorire la digestione.",
+          "Una deliziosa fusione di zenzero e sapori erbali, che offre calore, freschezza ed equilibrio in ogni sorso. Una vera armonia di natura e sapore.",
         ],
       ],
       itemTags: [
@@ -2437,17 +2439,17 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "يصل ارتفاعه إلى 1-1.5 متر تقريبًا.",
           "أوراق طويلة وضيقة رمحية الشكل يتراوح طولها بين 15 و30 سم، مرتبة بالتناوب على طول الساق.",
           "أزهار صغيرة صفراء مخضرة بشفاه أرجوانية، تنمو على براعم منفصلة تخرج من الجذمور.",
-          "نادرًا ما يُنتج في الزراعة؛ كبسولة صغيرة تحتوي على عدة بذور.",
+          "نادرًا ما يُنتج في الزراعة. كبسولة صغيرة تحتوي على عدة بذور.",
           "مناخات دافئة ورطبة مع ظل جزئي وتربة خصبة جيدة الصرف.",
         ],
         [
           "الزنجبيل الطازج والمجفف مكونان أساسيان في المطابخ حول العالم، يُستخدمان في الكاري والحساء والحلويات والمشروبات والصلصات لنكهته الحريفة الحادة ورائحته.",
-          "يحتوي على مركبات نشطة حيويًا مثل الجينجيرول ذات فوائد مضادة للالتهابات ومضادة للأكسدة وهضمية؛ يُستخدم بشكل شائع لتخفيف الغثيان وتحسين الهضم وتقليل أعراض نزلات البرد.",
+          "يحتوي على مركبات نشطة حيويًا مثل الجينجيرول ذات فوائد مضادة للالتهابات ومضادة للأكسدة وهضمية. يُستخدم بشكل شائع لتخفيف الغثيان وتحسين الهضم وتقليل أعراض نزلات البرد.",
           "تدعم زراعة الزنجبيل أنظمة الزراعة المستدامة، وتُثري التنوع البيولوجي للتربة، وتوفر دخلاً لصغار المزارعين في المناطق الاستوائية.",
         ],
         [
-          "يقدم شاي سيلان النقي الممزوج بخلاصة الزنجبيل الطبيعية مشروبًا منعشًا وعطريًا — مثالي لتهدئة الحلق ومساعدة الهضم.",
-          "مزيج بديع من نكهات الزنجبيل والأعشاب، يمنح الدفء والانتعاش والتوازن في كل رشفة — انسجام حقيقي بين الطبيعة والنكهة.",
+          "يقدم شاي سيلان النقي الممزوج بخلاصة الزنجبيل الطبيعية مشروبًا منعشًا وعطريًا. مثالي لتهدئة الحلق ومساعدة الهضم.",
+          "مزيج بديع من نكهات الزنجبيل والأعشاب، يمنح الدفء والانتعاش والتوازن في كل رشفة. انسجام حقيقي بين الطبيعة والنكهة.",
         ],
       ],
       itemTags: [
@@ -3035,7 +3037,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "От ароматного тропического корневища до фирменного имбирного чая фабрики.",
       sectionHeadings: ["Об имбире", "Характеристики", "Польза", "Чайная продукция с имбирем"],
       sectionBodies: [
-        "Имбирь (Zingiber officinale) — многолетнее травянистое растение семейства Имбирные. Его широко выращивают в тропических и субтропических регионах, включая Шри-Ланку и Индию. Наибольшую ценность представляет подземное корневище — на протяжении веков его используют как пряность и лекарство. Имбирь хорошо растёт в тёплом влажном климате на богатой, хорошо дренированной почве. Он играет центральную роль в традиционной кухне и травяной медицине многих культур.",
+        "Имбирь (Zingiber officinale) — многолетнее травянистое растение семейства Имбирные. Его широко выращивают в тропических и субтропических регионах, включая Шри-Ланку и Индию. Наибольшую ценность представляет подземное корневище. На протяжении веков его используют как пряность и лекарство. Имбирь хорошо растёт в тёплом влажном климате на богатой, хорошо дренированной почве. Он играет центральную роль в традиционной кухне и травяной медицине многих культур.",
         "Коротко о самом растении:",
         "Польза имбиря выходит далеко за пределы кухни:",
         "Фабрика производит две смеси имбирного чая из высококачественного шри-ланкийского имбиря для естественно пряного и освежающего вкуса.",
@@ -3052,17 +3054,17 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "До 1–1,5 метра в высоту.",
           "Длинные, узкие, ланцетовидные листья длиной 15–30 см, расположенные поочерёдно вдоль стебля.",
           "Мелкие желтовато-зелёные цветки с пурпурными губами, растущие на отдельных побегах, выходящих из корневища.",
-          "Редко образуется при выращивании; небольшая коробочка с несколькими семенами.",
+          "Редко образуется при выращивании. Небольшая коробочка с несколькими семенами.",
           "Тёплый, влажный климат с частичной тенью и плодородной, хорошо дренированной почвой.",
         ],
         [
           "Свежий и сушёный имбирь — незаменимые ингредиенты кухонь всего мира, используемые в карри, супах, сладостях, напитках и соусах за их острый, пряный вкус и аромат.",
-          "Содержит биоактивные соединения, такие как гингерол, обладающие противовоспалительными, антиоксидантными и пищеварительными свойствами; часто используется для облегчения тошноты, улучшения пищеварения и уменьшения симптомов простуды.",
+          "Содержит биоактивные соединения, такие как гингерол, обладающие противовоспалительными, антиоксидантными и пищеварительными свойствами. Часто используется для облегчения тошноты, улучшения пищеварения и уменьшения симптомов простуды.",
           "Выращивание имбиря поддерживает устойчивые системы земледелия, обогащает биоразнообразие почвы и обеспечивает доход мелким фермерам в тропических регионах.",
         ],
         [
-          "Чистый цейлонский чай с натуральным экстрактом имбиря создаёт бодрящий и ароматный напиток — прекрасно успокаивает горло и помогает пищеварению.",
-          "Восхитительное сочетание имбиря и травяных вкусов, дарящее тепло, свежесть и баланс в каждом глотке — настоящая гармония природы и вкуса.",
+          "Чистый цейлонский чай с натуральным экстрактом имбиря создаёт бодрящий и ароматный напиток. Прекрасно успокаивает горло и помогает пищеварению.",
+          "Восхитительное сочетание имбиря и травяных вкусов, дарящее тепло, свежесть и баланс в каждом глотке. Настоящая гармония природы и вкуса.",
         ],
       ],
       itemTags: [
@@ -3650,7 +3652,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       heroTagline: "Von einem aromatischen tropischen Rhizom zu den eigenen Ingwertees der Fabrik.",
       sectionHeadings: ["Über die Ingwerpflanze", "Merkmale", "Vorteile", "Ingwertee-Produkte"],
       sectionBodies: [
-        "Ingwer (Zingiber officinale) ist eine mehrjährige krautige Pflanze aus der Familie der Ingwergewächse. Er wird in tropischen und subtropischen Regionen weit verbreitet angebaut, darunter Sri Lanka und Indien. Am wichtigsten ist das unterirdische Rhizom — es wird seit Jahrhunderten als Gewürz und Heilmittel verwendet. Ingwer gedeiht in warmem, feuchtem Klima mit nährstoffreichem, gut durchlässigem Boden. In vielen Kulturen spielt er eine zentrale Rolle in der traditionellen Küche und Kräutermedizin.",
+        "Ingwer (Zingiber officinale) ist eine mehrjährige krautige Pflanze aus der Familie der Ingwergewächse. Er wird in tropischen und subtropischen Regionen weit verbreitet angebaut, darunter Sri Lanka und Indien. Am wichtigsten ist das unterirdische Rhizom. Es wird seit Jahrhunderten als Gewürz und Heilmittel verwendet. Ingwer gedeiht in warmem, feuchtem Klima mit nährstoffreichem, gut durchlässigem Boden. In vielen Kulturen spielt er eine zentrale Rolle in der traditionellen Küche und Kräutermedizin.",
         "Ein kurzer Blick auf die Pflanze selbst:",
         "Der Wert von Ingwer reicht weit über die Küche hinaus:",
         "Die Fabrik stellt zwei Ingwertee-Mischungen her, hergestellt aus hochwertigem sri-lankischem Ingwer für ein natürlich scharfes, erfrischendes Erlebnis.",
@@ -3667,17 +3669,17 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Bis zu 1 bis 1,5 Meter hoch.",
           "Lange, schmale, lanzettliche Blätter von 15 bis 30 Zentimetern Länge, abwechselnd entlang des Stängels angeordnet.",
           "Kleine gelblich-grüne Blüten mit violetten Lippen, die an separaten Trieben aus dem Rhizom entstehen.",
-          "Wird im Anbau selten gebildet; eine kleine Kapsel mit mehreren Samen.",
+          "Wird im Anbau selten gebildet. Eine kleine Kapsel mit mehreren Samen.",
           "Warmes, feuchtes Klima mit Halbschatten und fruchtbarem, gut durchlässigem Boden.",
         ],
         [
           "Frischer und getrockneter Ingwer sind unverzichtbare Zutaten in Küchen weltweit, verwendet in Currys, Suppen, Süßspeisen, Getränken und Saucen für ihren scharfen, würzigen Geschmack und Duft.",
-          "Enthält bioaktive Verbindungen wie Gingerol mit entzündungshemmenden, antioxidativen und verdauungsfördernden Vorteilen; wird häufig zur Linderung von Übelkeit, Verbesserung der Verdauung und Reduzierung von Erkältungssymptomen eingesetzt.",
+          "Enthält bioaktive Verbindungen wie Gingerol mit entzündungshemmenden, antioxidativen und verdauungsfördernden Vorteilen. Wird häufig zur Linderung von Übelkeit, Verbesserung der Verdauung und Reduzierung von Erkältungssymptomen eingesetzt.",
           "Der Ingweranbau unterstützt nachhaltige Landwirtschaftssysteme, bereichert die Bodenbiodiversität und schafft Einkommen für Kleinbauern in tropischen Regionen.",
         ],
         [
-          "Reiner Ceylon-Tee mit natürlichem Ingwerextrakt ergibt ein belebendes, aromatisches Getränk — perfekt zur Beruhigung des Halses und zur Unterstützung der Verdauung.",
-          "Eine köstliche Fusion aus Ingwer- und Kräutergeschmack, die Wärme, Frische und Ausgewogenheit in jedem Schluck bietet — eine wahre Harmonie aus Natur und Geschmack.",
+          "Reiner Ceylon-Tee mit natürlichem Ingwerextrakt ergibt ein belebendes, aromatisches Getränk. Perfekt zur Beruhigung des Halses und zur Unterstützung der Verdauung.",
+          "Eine köstliche Fusion aus Ingwer- und Kräutergeschmack, die Wärme, Frische und Ausgewogenheit in jedem Schluck bietet. Eine wahre Harmonie aus Natur und Geschmack.",
         ],
       ],
       itemTags: [
@@ -4282,17 +4284,17 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Hasta 1 a 1,5 metros de altura.",
           "Hojas largas, estrechas y lanceoladas de 15 a 30 centímetros de largo, dispuestas alternadamente a lo largo del tallo.",
           "Pequeñas flores de color verde amarillento con labios morados, que nacen en brotes separados que emergen del rizoma.",
-          "Rara vez se produce en cultivo; una pequeña cápsula que contiene varias semillas.",
+          "Rara vez se produce en cultivo. Una pequeña cápsula que contiene varias semillas.",
           "Climas cálidos y húmedos con sombra parcial y suelo fértil y bien drenado.",
         ],
         [
           "El jengibre fresco y seco son ingredientes esenciales en las cocinas de todo el mundo, usados en curris, sopas, dulces, bebidas y salsas por su sabor picante y especiado y su aroma.",
-          "Contiene compuestos bioactivos como el gingerol con beneficios antiinflamatorios, antioxidantes y digestivos; comúnmente usado para aliviar las náuseas, mejorar la digestión y reducir los síntomas del resfriado.",
+          "Contiene compuestos bioactivos como el gingerol con beneficios antiinflamatorios, antioxidantes y digestivos. Comúnmente usado para aliviar las náuseas, mejorar la digestión y reducir los síntomas del resfriado.",
           "El cultivo del jengibre sostiene sistemas agrícolas sostenibles, enriquece la biodiversidad del suelo y proporciona ingresos a los pequeños agricultores en regiones tropicales.",
         ],
         [
-          "El té de Ceilán puro infundido con extracto natural de jengibre ofrece una bebida revitalizante y aromática — perfecta para calmar la garganta y ayudar a la digestión.",
-          "Una deliciosa fusión de sabores de jengibre y hierbas, que aporta calidez, frescura y equilibrio en cada sorbo — una verdadera armonía de naturaleza y sabor.",
+          "El té de Ceilán puro infundido con extracto natural de jengibre ofrece una bebida revitalizante y aromática. Perfecta para calmar la garganta y ayudar a la digestión.",
+          "Una deliciosa fusión de sabores de jengibre y hierbas, que aporta calidez, frescura y equilibrio en cada sorbo. Una verdadera armonía de naturaleza y sabor.",
         ],
       ],
       itemTags: [
@@ -4897,17 +4899,17 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Jusqu'à 1 à 1,5 mètre de hauteur.",
           "Feuilles longues, étroites, lancéolées de 15 à 30 centimètres de long, disposées alternativement le long de la tige.",
           "Petites fleurs jaune verdâtre à lèvres violettes, portées sur des pousses séparées émergeant du rhizome.",
-          "Rarement produit en culture ; une petite capsule contenant plusieurs graines.",
+          "Rarement produit en culture. Une petite capsule contenant plusieurs graines.",
           "Climats chauds et humides avec ombre partielle et sol fertile et bien drainé.",
         ],
         [
           "Le gingembre frais et séché sont des ingrédients essentiels dans les cuisines du monde entier, utilisés dans les currys, soupes, sucreries, boissons et sauces pour leur saveur piquante et épicée et leur arôme.",
-          "Contient des composés bioactifs comme le gingérol aux bienfaits anti-inflammatoires, antioxydants et digestifs ; couramment utilisé pour soulager les nausées, améliorer la digestion et réduire les symptômes du rhume.",
+          "Contient des composés bioactifs comme le gingérol aux bienfaits anti-inflammatoires, antioxydants et digestifs. Couramment utilisé pour soulager les nausées, améliorer la digestion et réduire les symptômes du rhume.",
           "La culture du gingembre soutient des systèmes agricoles durables, enrichit la biodiversité des sols et procure des revenus aux petits exploitants des régions tropicales.",
         ],
         [
-          "Le thé de Ceylan pur infusé d'extrait naturel de gingembre offre une boisson revitalisante et aromatique — parfaite pour apaiser la gorge et aider la digestion.",
-          "Une délicieuse fusion de saveurs de gingembre et d'herbes, apportant chaleur, fraîcheur et équilibre à chaque gorgée — une véritable harmonie de nature et de saveur.",
+          "Le thé de Ceylan pur infusé d'extrait naturel de gingembre offre une boisson revitalisante et aromatique. Parfaite pour apaiser la gorge et aider la digestion.",
+          "Une délicieuse fusion de saveurs de gingembre et d'herbes, apportant chaleur, fraîcheur et équilibre à chaque gorgée. Une véritable harmonie de nature et de saveur.",
         ],
       ],
       itemTags: [
@@ -5512,7 +5514,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "高约1至1.5米。",
           "叶片细长呈披针形，长15至30厘米，沿茎交替排列。",
           "淡黄绿色的小花，唇瓣呈紫色，生长在从根茎抽出的独立花茎上。",
-          "在栽培中较少结果；果实为含有数枚种子的小蒴果。",
+          "在栽培中较少结果。果实为含有数枚种子的小蒴果。",
           "温暖潮湿的气候，半阴环境，土壤肥沃且排水良好。",
         ],
         [
@@ -5521,8 +5523,8 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "生姜种植支持可持续的农业系统，丰富土壤生物多样性，并为热带地区的小农提供了收入来源。",
         ],
         [
-          "纯正锡兰茶浸入天然生姜精华，带来提神醒脑、香气四溢的饮品——非常适合舒缓喉咙、帮助消化。",
-          "生姜与草本风味的美妙融合，每一口都带来温暖、清新与平衡之感——是自然与风味的真正和谐。",
+          "纯正锡兰茶浸入天然生姜精华，带来提神醒脑、香气四溢的饮品。非常适合舒缓喉咙、帮助消化。",
+          "生姜与草本风味的美妙融合，每一口都带来温暖、清新与平衡之感。是自然与风味的真正和谐。",
         ],
       ],
       itemTags: [
@@ -6137,7 +6139,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "純粋なセイロンティーに天然のショウガエキスを加えた、活力を与える香り高い一杯です。喉を癒し、消化を助けるのに最適です。",
-          "ショウガとハーブの風味が織りなす心地よい融合で、一口ごとに温かさ、爽やかさ、バランスをもたらします——自然と風味の真の調和です。",
+          "ショウガとハーブの風味が織りなす心地よい融合で、一口ごとに温かさ、爽やかさ、バランスをもたらします。自然と風味の真の調和です。",
         ],
       ],
       itemTags: [
