@@ -198,9 +198,24 @@ import starfruitHarvestImg from "../assets/starfruit/starfruit-harvest.webp";
 import tri2043ShootImg from "../assets/organic-cultivation/tri-2043-shoot.jpg";
 import purpleShootCloseupImg from "../assets/organic-cultivation/purple-shoot-closeup.jpg";
 import witheringTroughImg from "../assets/withering/withering-trough.jpg";
+// CC BY-SA 4.0 photo (Wikimedia Commons, Rik Schuiling / TropCrop-TCS) of
+// real trough withering at Rukuriri Tea Factory, Kenya — same CTC trough-
+// withering method described in this station's text, chosen after several
+// generic "tea factory" stock photos turned out to show unrelated Chinese
+// pan-firing equipment. See the provenance note near "withering" below.
+import witheringTroughsFactoryImg from "../assets/withering/withering-troughs-factory.jpg";
 import rollingMachineryImg from "../assets/rolling/rolling-machinery.jpg";
+// CC BY-SA 3.0 photo (Wikimedia Commons, Shansov.net) of an orthodox tea
+// rolling table — a genuine rolling machine of the same twist-and-break
+// design principle described here, though smaller/older than the estate's
+// own industrial rollers. See the provenance note near "rolling" below.
+import orthodoxRollingTableImg from "../assets/rolling/orthodox-rolling-table.jpg";
 import fermentationFloorImg from "../assets/fermentation/fermentation-floor.jpg";
 import dryerMachineImg from "../assets/drying/dryer-machine.jpg";
+// CC BY-SA 3.0 photo (Wikimedia Commons, Felix Gertz) of a real multi-
+// chamber tea firing/drying machine with gauges, in a working tea factory
+// on São Miguel, Azores. See the provenance note near "drying" below.
+import teaFiringMachineImg from "../assets/drying/tea-firing-machine.jpg";
 // A generated collage combining three real photos: the estate's own
 // Ceylon Tea Symbol signboard, an AR-TEA Academy tea-culture card held up
 // in the tea field, and a visitor holding two tea shoots. Visitor face is
@@ -1602,6 +1617,31 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * approach each time; same pattern as "handmade-factory"'s multi-clip
  * video; no `stations.ts` change needed for any of the six appends. No
  * wording changed; no other station affected.
+ * "withering", "rolling", and "drying" each gained one section image on
+ * 2026-09-15, sourced from the internet at the user's request, following
+ * the same one-photo-per-topic pattern as the nursery station's cultivar
+ * sections. Several generic "tea factory" stock photos (Pexels) were
+ * checked first and rejected — they turned out to show Chinese pan-firing
+ * drums and hand-bundled leaf presses, a completely different tea
+ * tradition from the CTC/orthodox troughs, rollers, and multi-section
+ * dryer these stations actually describe, and using them would have
+ * misrepresented the real equipment. Wikimedia Commons (CC BY-SA) turned
+ * up closer matches instead: "Loading the Troughs" got a real photo of
+ * trough withering at Rukuriri Tea Factory, Kenya (same CTC trough method,
+ * leaf being turned by hand); "Twisting and Breaking the Leaf" got a
+ * photo of a genuine orthodox tea rolling table (same twist-and-break
+ * design principle, though a smaller/older machine than the estate's own
+ * 280 kg industrial rollers — not claimed to be the same machine);
+ * "Into the Dryer" got a photo of a real multi-chamber tea firing machine
+ * with temperature gauges. Each carries an `imageCredit` line for CC
+ * BY-SA attribution, the first sections to actually use that
+ * previously-unused field. One accurate photo was added per station
+ * (on its first/most relevant section) rather than one per every
+ * subsection, since no further free-license photos specific enough to the
+ * 85-foot troughs, 280 kg CTC rollers, or 6-section dryer described here
+ * could be found without repeating the same mismatch problem. Not estate
+ * photos — no real photos of the estate's own rolling/drying machinery
+ * have been supplied yet. No wording changed; no other station affected.
  */
 export const STATIONS: Station[] = [
   {
@@ -2515,6 +2555,8 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Loading the Troughs",
+        image: witheringTroughsFactoryImg,
+        imageCredit: "Rik Schuiling / TropCrop-TCS, CC BY-SA 4.0, via Wikimedia Commons",
         body: "Leaf arriving from the field is first weighed to log the day's harvest, then spread thinly across long troughs — 85 feet long and 6 feet wide, each fitted with a 46-inch fan running at 960 RPM to force air through it and steadily remove moisture — what the estate calls the 'modern' withering process. At a loading rate of about 2.5 kg per square foot, one trough holds around 1,250 kg of green leaf.",
       },
       {
@@ -2545,6 +2587,8 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Twisting and Breaking the Leaf",
+        image: orthodoxRollingTableImg,
+        imageCredit: "Shansov.net, CC BY-SA 3.0, via Wikimedia Commons",
         body: "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
       },
       {
@@ -2609,6 +2653,8 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Into the Dryer",
+        image: teaFiringMachineImg,
+        imageCredit: "Felix Gertz, CC BY-SA 3.0, via Wikimedia Commons",
         body: "Before going into the dryer, the fermented leaf is loosened. It then passes through hot-air dryers — firewood-generated heat drawn in by a main fan, held to an inlet temperature of 120°C to 130°C — that halt oxidation instantly and lock in the tea's character.",
       },
       {
