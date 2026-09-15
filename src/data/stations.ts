@@ -365,6 +365,10 @@ import teaCentreEntranceImg from "../assets/tea-center/tea-centre-entrance.jpg";
 // shelves, showing grade-labelled Pure Ceylon Tea boxes (OPA, OP, OP1,
 // Pekoe). See the provenance note near the "tea-center" station below.
 import teaCentreShopShelvesImg from "../assets/tea-center/tea-centre-shop-shelves.jpg";
+// Real, user-supplied photo of the estate's own tasting counter, with
+// graded tea samples laid out in a row of dishes. See the provenance note
+// near the "tea-center" station below.
+import teaCentreTastingCounterImg from "../assets/tea-center/tea-centre-tasting-counter.jpg";
 // A generated collage combining the same four signposted TRI cultivar
 // photos already used in the nursery station's "Tea Cultivars" sections.
 // Used as "clonal-tea"'s heroImage. See the provenance note near the
@@ -1772,8 +1776,10 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * Symbol) — added to the station's first section, "Tea Center". A second
  * photo, of the Tea Centre's own retail shelves stocked with grade-
  * labelled Pure Ceylon Tea boxes (OPA, OP, OP1, Pekoe visible), was added
- * to "Everyday Grades & Supermarket Tea". No wording changed; no other
- * station affected.
+ * to "Everyday Grades & Supermarket Tea". A third photo, of the estate's
+ * own tasting counter with graded tea samples laid out in a row of
+ * dishes, was added to "Herbal & Spice Blends" at the user's direction.
+ * No wording changed; no other station affected.
  */
 export const STATIONS: Station[] = [
   {
@@ -2916,6 +2922,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "Herbal & Spice Blends",
+        image: teaCentreTastingCounterImg,
         body: "Beyond tea, the estate blends its own green and black tea (about 90%) with local herbs (about 10%) — gotukola, heenbovitiya, and moringa — and makes Masala, Cinnamon, and Ginger spice teas from its own spices; the masala recipe uses seven Sri Lankan spices, including cardamom, cinnamon, ginger, and black pepper (the rest a kept secret), and masala or BOP tea is what's recommended for milk tea.",
       },
     ],
