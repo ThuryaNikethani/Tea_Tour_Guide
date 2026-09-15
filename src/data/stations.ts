@@ -1572,6 +1572,16 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * (`drip-irrigation.jpg`), just new file content, so no `stations.ts`
  * import change was needed beyond updating the provenance comment. No
  * wording changed.
+ * "tea-factory" gained a real `processVideo` on 2026-09-15 — a WhatsApp
+ * video of the factory floor, already silent and a modest 832x464/6.8MB,
+ * so it was re-encoded only for faststart (`-c:v copy -an`, no
+ * downscale/recompression needed), landing at ~6.5MB. Same plain rendering
+ * as the other process videos: native `controls`, `preload="none"`, no
+ * autoplay. Since "tea-factory" already uses the `sections` shape (one
+ * section, converted earlier for its heroImage), the video renders on that
+ * section's page via the existing `(!station.sections || isLastSection)`
+ * check in StationDetail.tsx — no rendering-logic change needed. No
+ * wording changed; no other station affected.
  */
 export const STATIONS: Station[] = [
   {
@@ -2470,6 +2480,7 @@ export const STATIONS: Station[] = [
         body: "The main factory building is where plucked leaf is turned into finished tea, from weighing through to packing. This stop is an overview of the working factory floor and the equipment used at each stage — weighing, withering, rolling, fermentation (oxidation), drying, tea separating (grading), and final packing, in that order. A working tea factory runs the full weighing-to-packing sequence under one roof, timed closely with each day's leaf intake — incoming leaf is weighed on arrival to log the day's harvest before processing begins. Visitors touring the factory floor are asked to wear a hairnet, a mask, and protective footwear, in line with the facility's hygiene standards.",
       },
     ],
+    processVideo: "/videos/tea-factory-process.mp4",
     duration: "10-15 minutes",
   },
   {
