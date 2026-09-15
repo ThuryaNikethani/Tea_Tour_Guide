@@ -217,11 +217,10 @@ import fermentationFloorImg from "../assets/fermentation/fermentation-floor.jpg"
 // provenance note near the "fermentation" station below.
 import fermentingLeafCopperImg from "../assets/fermentation/fermenting-leaf-copper.jpg";
 import dryerMachineImg from "../assets/drying/dryer-machine.jpg";
-// CC BY-SA 4.0 photo (Wikimedia Commons, Harvinder Chandigarh) of a real,
-// full-size, nameplated "Kamalin Multi Therm Fluidised Bed Drier" in
-// working condition at the KDHP Tea Museum/factory, Munnar, India. See the
-// provenance note near "drying" below.
-import fluidisedBedDrierImg from "../assets/drying/fluidised-bed-drier.jpg";
+// Real, user-supplied photo of the estate's own dryer (the same "Dryer
+// No.01" machine as dryerMachineImg, a closer view of the intake hopper).
+// See the provenance note near "drying" below.
+import dryerIntakeHopperImg from "../assets/drying/dryer-intake-hopper.jpg";
 // A generated collage combining three real photos: the estate's own
 // Ceylon Tea Symbol signboard, an AR-TEA Academy tea-culture card held up
 // in the tea field, and a visitor holding two tea shoots. Visitor face is
@@ -1655,8 +1654,19 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * free-license photos specific enough to the 85-foot troughs, 280 kg CTC
  * rollers, or 6-section dryer described here could be found without
  * repeating the same mismatch problem. Not estate photos — no real photos
- * of the estate's own rolling/drying machinery have been supplied yet. No
- * wording changed; no other station affected.
+ * of the estate's own rolling/drying machinery had been supplied yet at
+ * that point. No wording changed; no other station affected.
+ * "drying"'s "Into the Dryer" image was swapped again shortly after — the
+ * user supplied a real photo of the estate's own dryer (the same "Dryer
+ * No.01" machine already used as heroImage, a closer view of the intake
+ * hopper), replacing the Wikimedia "Kamalin Fluidised Bed Drier" stock
+ * photo now that an actual estate photo exists. That Wikimedia photo and
+ * its `fluidised-bed-drier.jpg` asset, plus the now-unused `imageCredit`
+ * line, were removed outright rather than kept as a fallback — same
+ * "prefer the real photo once supplied" pattern used throughout this
+ * project. "rolling"'s Wikimedia "Orthodox Roller" photo is untouched;
+ * still no real photo of the estate's own rolling machinery. No wording
+ * changed; no other station affected.
  * "fermentation" gained a real photo the same day — a WhatsApp image of
  * the estate's own rolled leaf spread out on the fermentation floor,
  * already turning the coppery-brown colour the text describes. Added to
@@ -2674,8 +2684,7 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Into the Dryer",
-        image: fluidisedBedDrierImg,
-        imageCredit: "Harvinder Chandigarh, CC BY-SA 4.0, via Wikimedia Commons",
+        image: dryerIntakeHopperImg,
         body: "Before going into the dryer, the fermented leaf is loosened. It then passes through hot-air dryers — firewood-generated heat drawn in by a main fan, held to an inlet temperature of 120°C to 130°C — that halt oxidation instantly and lock in the tea's character.",
       },
       {
