@@ -245,8 +245,9 @@ function columnsFor(imageCount: number, maxCols = 4): number {
   return cols;
 }
 
-/** Renders one section's image(s), heading, body, and item cards — shared by the top-level section pager and a selected fruit's own stacked sections. */
+/** Renders one section's image(s), heading, body, item cards, and optional inline video — shared by the top-level section pager and a selected fruit's own stacked sections. */
 function SectionContent({ section }: { section: StationSection }) {
+  const { t } = useLanguage();
   const isContain = section.imageFit === "contain";
   // "contain" images share one fixed-size box (equal width via the grid track, shared height via
   // h-72) and use object-contain so each one scales down to fit inside without cropping or
@@ -318,6 +319,13 @@ function SectionContent({ section }: { section: StationSection }) {
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {section.video && (
+        <div className="mt-6">
+          <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-3">{t("watchProcess")}</h2>
+          <ProcessVideoPlayer src={section.video} />
         </div>
       )}
     </>
