@@ -205,17 +205,19 @@ import witheringTroughImg from "../assets/withering/withering-trough.jpg";
 // pan-firing equipment. See the provenance note near "withering" below.
 import witheringTroughsFactoryImg from "../assets/withering/withering-troughs-factory.jpg";
 import rollingMachineryImg from "../assets/rolling/rolling-machinery.jpg";
-// CC BY-SA 3.0 photo (Wikimedia Commons, Shansov.net) of an orthodox tea
-// rolling table — a genuine rolling machine of the same twist-and-break
-// design principle described here, though smaller/older than the estate's
-// own industrial rollers. See the provenance note near "rolling" below.
+// CC BY 2.0 photo (Wikimedia Commons, Jean-Pierre Dalbéra) of a full-size,
+// labelled "Orthodox Roller" at the KDHP Tea Museum, Munnar, India — a
+// genuine industrial orthodox rolling machine of the same twist-and-break
+// design principle described here. See the provenance note near "rolling"
+// below.
 import orthodoxRollingTableImg from "../assets/rolling/orthodox-rolling-table.jpg";
 import fermentationFloorImg from "../assets/fermentation/fermentation-floor.jpg";
 import dryerMachineImg from "../assets/drying/dryer-machine.jpg";
-// CC BY-SA 3.0 photo (Wikimedia Commons, Felix Gertz) of a real multi-
-// chamber tea firing/drying machine with gauges, in a working tea factory
-// on São Miguel, Azores. See the provenance note near "drying" below.
-import teaFiringMachineImg from "../assets/drying/tea-firing-machine.jpg";
+// CC BY-SA 4.0 photo (Wikimedia Commons, Harvinder Chandigarh) of a real,
+// full-size, nameplated "Kamalin Multi Therm Fluidised Bed Drier" in
+// working condition at the KDHP Tea Museum/factory, Munnar, India. See the
+// provenance note near "drying" below.
+import fluidisedBedDrierImg from "../assets/drying/fluidised-bed-drier.jpg";
 // A generated collage combining three real photos: the estate's own
 // Ceylon Tea Symbol signboard, an AR-TEA Academy tea-culture card held up
 // in the tea field, and a visitor holding two tea shoots. Visitor face is
@@ -1625,23 +1627,32 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * drums and hand-bundled leaf presses, a completely different tea
  * tradition from the CTC/orthodox troughs, rollers, and multi-section
  * dryer these stations actually describe, and using them would have
- * misrepresented the real equipment. Wikimedia Commons (CC BY-SA) turned
- * up closer matches instead: "Loading the Troughs" got a real photo of
- * trough withering at Rukuriri Tea Factory, Kenya (same CTC trough method,
- * leaf being turned by hand); "Twisting and Breaking the Leaf" got a
- * photo of a genuine orthodox tea rolling table (same twist-and-break
- * design principle, though a smaller/older machine than the estate's own
- * 280 kg industrial rollers — not claimed to be the same machine);
- * "Into the Dryer" got a photo of a real multi-chamber tea firing machine
- * with temperature gauges. Each carries an `imageCredit` line for CC
- * BY-SA attribution, the first sections to actually use that
- * previously-unused field. One accurate photo was added per station
- * (on its first/most relevant section) rather than one per every
- * subsection, since no further free-license photos specific enough to the
- * 85-foot troughs, 280 kg CTC rollers, or 6-section dryer described here
- * could be found without repeating the same mismatch problem. Not estate
- * photos — no real photos of the estate's own rolling/drying machinery
- * have been supplied yet. No wording changed; no other station affected.
+ * misrepresented the real equipment. Wikimedia Commons turned up closer
+ * matches instead: "Loading the Troughs" got a real photo of trough
+ * withering at Rukuriri Tea Factory, Kenya (same CTC trough method, leaf
+ * being turned by hand).
+ * The first choice for "rolling" and "drying" was still wrong, though —
+ * pointed out by the user the same day: a small hand-crank rolling table
+ * and a vintage multi-door firing machine (Azores), neither representative
+ * of the large industrial machines an actual working factory uses. Both
+ * were replaced with better matches, still from Wikimedia Commons, this
+ * time full-size, nameplated machines photographed at the KDHP Tea
+ * Museum/factory in Munnar, India (the same orthodox-manufacture tradition
+ * Sri Lanka uses): "Twisting and Breaking the Leaf" now uses a photo of a
+ * full-size, labelled "Orthodox Roller" (CC BY 2.0, Jean-Pierre Dalbéra);
+ * "Into the Dryer" now uses a photo of a full-size, nameplated "Kamalin
+ * Multi Therm Fluidised Bed Drier" in working condition (CC BY-SA 4.0,
+ * Harvinder Chandigarh) — the earlier "Felix Gertz" firing-machine photo
+ * and its `tea-firing-machine.jpg` asset were removed outright rather than
+ * kept as a fallback. Each photo carries an `imageCredit` line for
+ * attribution, the first sections to actually use that previously-unused
+ * field. One accurate photo per station (on its first/most relevant
+ * section) rather than one per every subsection, since no further
+ * free-license photos specific enough to the 85-foot troughs, 280 kg CTC
+ * rollers, or 6-section dryer described here could be found without
+ * repeating the same mismatch problem. Not estate photos — no real photos
+ * of the estate's own rolling/drying machinery have been supplied yet. No
+ * wording changed; no other station affected.
  */
 export const STATIONS: Station[] = [
   {
@@ -2588,7 +2599,7 @@ export const STATIONS: Station[] = [
       {
         heading: "Twisting and Breaking the Leaf",
         image: orthodoxRollingTableImg,
-        imageCredit: "Shansov.net, CC BY-SA 3.0, via Wikimedia Commons",
+        imageCredit: "Jean-Pierre Dalbéra, CC BY 2.0, via Wikimedia Commons",
         body: "Withered leaves pass through rolling machines that twist and break the leaf's cell walls, releasing the juices and oils locked inside and breaking the leaf down into small particles. This is where the leaf's shape and the tea's strength are formed.",
       },
       {
@@ -2653,8 +2664,8 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Into the Dryer",
-        image: teaFiringMachineImg,
-        imageCredit: "Felix Gertz, CC BY-SA 3.0, via Wikimedia Commons",
+        image: fluidisedBedDrierImg,
+        imageCredit: "Harvinder Chandigarh, CC BY-SA 4.0, via Wikimedia Commons",
         body: "Before going into the dryer, the fermented leaf is loosened. It then passes through hot-air dryers — firewood-generated heat drawn in by a main fan, held to an inlet temperature of 120°C to 130°C — that halt oxidation instantly and lock in the tea's character.",
       },
       {
