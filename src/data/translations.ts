@@ -221,9 +221,13 @@ import type { StationTranslation } from "./stations";
  * languages; also fixed a leftover untranslated English word,
  * "promote", found mid-sentence in the Chinese itemBody while working
  * through it — a genuine translation gap, not a phrasing change).
- * Remaining not-yet-naturalized stations (unique-fruits' fruit-gallery
- * fields and the untouched remainder of
- * cinnamon/ginger-turmeric/coconut-field/jaggery-palm beyond their one
+ * "cinnamon" was also fully naturalized on 2026-09-15 (its sectionBodies
+ * and every itemBodies array — Characteristics, the 7 peeling tools,
+ * Benefits, and the 2 tea products — all 10 languages), going beyond
+ * the single "About the Cinnamon Tree" paragraph the 2026-09-09 pass had
+ * covered. Remaining not-yet-naturalized stations (unique-fruits'
+ * fruit-gallery fields and the untouched remainder of
+ * ginger-turmeric/coconut-field/jaggery-palm beyond their one
  * already-rewritten "About the X" paragraph) are still to be done in a
  * future pass.
  */
@@ -517,11 +521,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "කුරුඳු වගාව",
       sectionHeadings: ["කුරුඳු ගස පිළිබඳ", "ලක්ෂණ", "කුරුඳු පීල කිරීම: මෙවලම් සහ ක්‍රියාවලිය", "ප්‍රතිලාභ", "කුරුඳු තේ නිෂ්පාදන"],
       sectionBodies: [
-        "Cinnamomum verum ගස 'සැබෑ කුරුඳු' හෝ සිලෝන් කුරුඳු නමින් විකිණේ. එය ලෝරේසී පවුලට අයත් කුඩා සදාහරිත ගසක් වන අතර, ශ්‍රී ලංකාවට සහ දකුණු ඉන්දියාවට ආවේණිකය. වාණිජමය වශයෙන් වැදගත් වන්නේ ගසේ අභ්‍යන්තර පොත්තයි — එය පීල කර, වියලා, හුරුපුරුදු කුරුඳු දඬු බවට රෝල් කරනු ලැබේ. හොඳින් ජලය බැස යන පසක් සහ නිතිපතා නිවර්තන වර්ෂාපතනයක් ලැබුණහොත්, ගස කොළ සහ අත්‍යවශ්‍ය තෙල් ද ලබා දෙයි — ලොව පුරා ආහාර පිසීමේදී සහ සාම්ප්‍රදායික වෛද්‍ය විද්‍යාවේ අගය කරන ඒවාය.",
+        "Cinnamomum verum ගස 'සැබෑ කුරුඳු' හෝ සිලෝන් කුරුඳු නමින් විකිණේ. එය ලෝරේසී පවුලට අයත් කුඩා සදාහරිත ගසක් වන අතර, ශ්‍රී ලංකාවට සහ දකුණු ඉන්දියාවට ආවේණිකය. වාණිජමය වශයෙන් වැදගත් වන්නේ ගසේ අභ්‍යන්තර පොත්තයි. එය පීල කර, වියලා, හුරුපුරුදු කුරුඳු දඬු බවට රෝල් කරනු ලැබේ. හොඳින් ජලය බැස යන පසක් සහ නිතිපතා නිවර්තන වර්ෂාපතනයක් ලැබුණහොත්, ගස කොළ සහ අත්‍යවශ්‍ය තෙල් ද ලබා දෙයි. මේවා ලොව පුරා ආහාර පිසීමේදී සහ සාම්ප්‍රදායික වෛද්‍ය විද්‍යාවේ අගය කරනු ලැබේ.",
         "ගස පිළිබඳ කෙටි විස්තරයක්:",
-        "පීල කිරීම ආරම්භ කිරීමට පෙර පොත්ත ලිහිල් වීමට නෙළන ලද අංකුර දිනක් පමණ විවේකයට තබනු ලැබේ — පරම්පරා ගණනාවක් තිස්සේ පීලකරුවන් අතින් අතට හුවමාරු වූ දක්ෂතාවකි. සම්බන්ධ මෙවලම් සරල නමුත් අත්‍යවශ්‍ය වේ:",
+        "පීල කිරීම ආරම්භ කිරීමට පෙර පොත්ත ලිහිල් වීමට නෙළන ලද අංකුර දිනක් පමණ විවේකයට තබනු ලැබේ. මෙය පරම්පරා ගණනාවක් තිස්සේ පීලකරුවන් අතින් අතට හුවමාරු වූ දක්ෂතාවකි. සම්බන්ධ මෙවලම් සරල නමුත් අත්‍යවශ්‍ය වේ:",
         "කුරුඳුවේ වටිනාකම කුස්සියෙන් ඔබ්බට විහිදේ:",
-        "කර්මාන්තශාලාව සිය කුරුඳු සියල්ලම අමු කුළුබඩුවක් ලෙස විකිණීම වෙනුවට, එහිම තේ පරාසයේ අගය එකතු කළ අමුද්‍රව්‍යයක් ලෙසද එය භාවිතා කරයි — ස්වාභාවික ශ්‍රී ලාංකික කුරුඳුවලින් සකසන ලද, පිරිසිදු සුවඳවත් අත්දැකීමක් සඳහා උසස් තත්ත්වයේ කුරුඳු තේ මිශ්‍රණ දෙකකට එය මිශ්‍ර කරමින්. පුළුල් අර්ථයෙන්, කුරුඳු කර්මාන්තය සාමාන්‍යයෙන් පොත්ත සහ කොළ අනෙකුත් අගය එකතු කළ භාණ්ඩ බවටද පරිවර්තනය කරයි — ආහාර පිසීම, රූපලාවණ්‍යාගාර, සහ සුවඳ චිකිත්සාව සඳහා පොත්ත හා කොළ තෙල්, බාගත කළ කුරුඳු කුඩු, සහ ආහාර-ශ්‍රේණියේ ඔලියෝරෙසින්.",
+        "කර්මාන්තශාලාව සිය කුරුඳු සියල්ලම අමු කුළුබඩුවක් ලෙස විකිණීම වෙනුවට, එහිම තේ පරාසයේ අගය එකතු කළ අමුද්‍රව්‍යයක් ලෙසද එය භාවිතා කරයි. ස්වාභාවික ශ්‍රී ලාංකික කුරුඳුවලින් සකසන ලද, පිරිසිදු සුවඳවත් අත්දැකීමක් සඳහා උසස් තත්ත්වයේ කුරුඳු තේ මිශ්‍රණ දෙකකට එය මිශ්‍ර කරයි. පුළුල් අර්ථයෙන්, කුරුඳු කර්මාන්තය සාමාන්‍යයෙන් පොත්ත සහ කොළ අනෙකුත් අගය එකතු කළ භාණ්ඩ බවටද පරිවර්තනය කරයි. එනම් ආහාර පිසීම, රූපලාවණ්‍යාගාර, සහ සුවඳ චිකිත්සාව සඳහා පොත්ත හා කොළ තෙල්, බාගත කළ කුරුඳු කුඩු, සහ ආහාර-ශ්‍රේණියේ ඔලියෝරෙසින්.",
       ],
       itemHeadings: [
         [],
@@ -541,21 +545,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "නෙළන ලද අංකුර දිගට කැපීමට සහ සියුම් පීල කිරීමේ වැඩ ආරම්භ වීමට පෙර පොත්ත දිගට පැළීමට භාවිතා කරන විශාල, කොකු හැඩැති පිහියකි.",
-          "සැබෑ පීල කිරීම ආරම්භ වීමට පෙර තුනී, රළු පිටත පොත්ත සීරීමට අංකුරය දිගේ අදිනු ලබන කෙටි හැඬලයක් සහිත කොකු මෙවලමකි — 'ගානවා' යන්නෙන් අදහස් වන්නේ 'සීරීම' යන්නයි.",
-          "ලිහිල් වූ අභ්‍යන්තර පොත්ත එහි දිග දිගේ කැපීමට සහ ලී කඳෙන් තනි තීරුවක් ලෙස එය එසවීමට භාවිතා කරන කුඩා, වක්‍ර තලයකි — 'තලනවා' යන්නෙන් අදහස් වන්නේ 'පීල කිරීම' යන්නයි.",
+          "සැබෑ පීල කිරීම ආරම්භ වීමට පෙර තුනී, රළු පිටත පොත්ත සීරීමට අංකුරය දිගේ අදිනු ලබන කෙටි හැඬලයක් සහිත කොකු මෙවලමකි. 'ගානවා' යන්නෙන් අදහස් වන්නේ 'සීරීම' යන්නයි.",
+          "ලිහිල් වූ අභ්‍යන්තර පොත්ත එහි දිග දිගේ කැපීමට සහ ලී කඳෙන් තනි තීරුවක් ලෙස එය එසවීමට භාවිතා කරන කුඩා, වක්‍ර තලයකි. 'තලනවා' යන්නෙන් අදහස් වන්නේ 'පීල කිරීම' යන්නයි.",
           "කැපූ පොත්ත, අංකුරයේ මුළු දිග දිගේ නොකැඩී ලීයෙන් මෘදු ලෙස වෙන් කිරීමට එය යටින් රැගෙන යන සුමට, වටකුරු ලෝහ දණ්ඩකි.",
           "පීල කරන ලද පොත්ත රෝල් කර වියලීමට පෙර ඒකාකාර දිගකට කැපීමට භාවිතා කරයි.",
           "පැය ගණනාවක් තිස්සේ තියුණු පීල කිරීමේ මෙවලම් හැසිරවීමේදී කැපුම්වලින් ආරක්ෂා වීමට ඇඟිලිවල පළඳින ආරක්ෂිත ආවරණයකි.",
           "පොත්ත කැපී රෝල් කිරීමට සූදානම් කරන අතරතුර ඒකාකාර දිග මැනීමට හා සලකුණු කිරීමට භාවිතා කරන ක්‍රමාංකනය කළ දණ්ඩකි.",
         ],
         [
-          "රසවත් සහ රස නොවන කෑම වර්ග, පාන වර්ග, සහ බේකින් සඳහා භාවිතා කරයි — සිලෝන් කුරුඳුට බොහෝ වෙළඳපොළවල විකුණන ශක්තිමත්, ඝන පොත්ත සහිත කැසියා වර්ග වලට වඩා මෘදු, සියුම් මිහිරි රසයක් ඇත.",
-          "ප්‍රතිඔක්සිකාරක, ප්‍රති-ගිනි අවුලුවන, සහ ප්‍රතිබැක්ටීරීය ගුණාංග ඇති අතර, රුධිර සීනි නියාමනය කිරීමට, ආහාර දිරවීම වැඩි දියුණු කිරීමට, සහ හෘද සෞඛ්‍යය ප්‍රවර්ධනය කිරීමට සාම්ප්‍රදායිකව භාවිතා කරයි; එහි අත්‍යවශ්‍ය තෙලට සාම්ප්‍රදායික වෛද්‍ය විද්‍යාවේ සහ සුවඳ චිකිත්සාවේ දිගු ඉතිහාසයක් ඇත.",
+          "රසවත් සහ රස නොවන කෑම වර්ග, පාන වර්ග, සහ බේකින් සඳහා භාවිතා කරයි. සිලෝන් කුරුඳුට බොහෝ වෙළඳපොළවල විකුණන ශක්තිමත්, ඝන පොත්ත සහිත කැසියා වර්ග වලට වඩා මෘදු, සියුම් මිහිරි රසයක් ඇත.",
+          "ප්‍රතිඔක්සිකාරක, ප්‍රති-ගිනි අවුලුවන, සහ ප්‍රතිබැක්ටීරීය ගුණාංග ඇති අතර, රුධිර සීනි නියාමනය කිරීමට, ආහාර දිරවීම වැඩි දියුණු කිරීමට, සහ හෘද සෞඛ්‍යය ප්‍රවර්ධනය කිරීමට සාම්ප්‍රදායිකව භාවිතා කරයි. එහි අත්‍යවශ්‍ය තෙලට සාම්ප්‍රදායික වෛද්‍ය විද්‍යාවේ සහ සුවඳ චිකිත්සාවේ දිගු ඉතිහාසයක් ඇත.",
           "ගස් නිවර්තන වනාන්තරවල ජෛව විවිධත්වයට එකතු වන අතර, පරාග කරන්නන් සඳහා පැණි සපයයි, සහ දේශීය ගොවීන්ට කුරුඳු අනෙකුත් බෝග සමඟ තිරසාර ලෙස වගා කිරීමට ඉඩ සලසන කෘෂි-වන ක්‍රම සඳහා සහාය වේ.",
         ],
         [
-          "පිරිසිදු සිලෝන් කුරුඳු තුනී තේ කොළ සමඟ ඒකාබද්ධ වී උණුසුම්, සුවපහසු පානයක් සියුම් කුළුබඩු රසයක් සමඟ ලබා දෙයි — ආහාර වේලකට පසුව විවේක ගැනීමට හෝ උදෑසන නැවුම් ආරම්භයක් සඳහා සුදුසුය.",
-          "ස්වාභාවික කුරුඳු රසය සහ සුවඳවත් ශාක වලින් සුවිශේෂී ලෙස මිශ්‍ර කර ඇති අතර, රසකාරක බුබුළු, කුළුබඩු, සහ සුවඳ අතර සමගියක් ගෙන දෙයි — කර්මාන්තශාලාවේ සුවිශේෂී මිශ්‍රණයකි.",
+          "පිරිසිදු සිලෝන් කුරුඳු තුනී තේ කොළ සමඟ ඒකාබද්ධ වී උණුසුම්, සුවපහසු පානයක් සියුම් කුළුබඩු රසයක් සමඟ ලබා දෙයි. ආහාර වේලකට පසුව විවේක ගැනීමට හෝ උදෑසන නැවුම් ආරම්භයක් සඳහා සුදුසුය.",
+          "ස්වාභාවික කුරුඳු රසය සහ සුවඳවත් ශාක වලින් සුවිශේෂී ලෙස මිශ්‍ර කර ඇති අතර, රසකාරක බුබුළු, කුළුබඩු, සහ සුවඳ අතර සමගියක් ගෙන දෙයි. කර්මාන්තශාලාවේ සුවිශේෂී මිශ්‍රණයකි.",
         ],
       ],
       itemTags: [
@@ -1132,11 +1136,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "இலவங்கப்பட்டை தோட்டம்",
       sectionHeadings: ["இலவங்கப்பட்டை மரத்தைப் பற்றி", "பண்புகள்", "இலவங்கப்பட்டை உரித்தல்: கருவிகள் மற்றும் செயல்முறை", "நன்மைகள்", "இலவங்கப்பட்டை தேநீர் தயாரிப்புகள்"],
       sectionBodies: [
-        "Cinnamomum verum மரம் 'உண்மையான இலவங்கப்பட்டை' அல்லது சிலோன் இலவங்கப்பட்டை என விற்கப்படுகிறது. இது லாரேசி குடும்பத்தைச் சேர்ந்த ஒரு சிறிய பசுமையான மரம், இலங்கை மற்றும் தென் இந்தியாவை பூர்வீகமாகக் கொண்டது. வணிக ரீதியாக முக்கியமானது மரத்தின் உள் பட்டையே — அது உரிக்கப்பட்டு, உலர்த்தப்பட்டு, பரிச்சயமான இலவங்கப்பட்டை சுருள்களாக சுருட்டப்படுகிறது. வடிகட்டும் மண் மற்றும் நிலையான வெப்பமண்டல மழைப்பொழிவு கிடைத்தால், மரம் இலைகளையும் ஒரு அத்தியாவசிய எண்ணெயையும் தருகிறது — உலகம் முழுவதும் சமையலிலும் பாரம்பரிய மருத்துவத்திலும் மதிக்கப்படுபவை.",
+        "Cinnamomum verum மரம் 'உண்மையான இலவங்கப்பட்டை' அல்லது சிலோன் இலவங்கப்பட்டை என விற்கப்படுகிறது. இது லாரேசி குடும்பத்தைச் சேர்ந்த ஒரு சிறிய பசுமையான மரம், இலங்கை மற்றும் தென் இந்தியாவை பூர்வீகமாகக் கொண்டது. வணிக ரீதியாக முக்கியமானது மரத்தின் உள் பட்டையே. அது உரிக்கப்பட்டு, உலர்த்தப்பட்டு, பரிச்சயமான இலவங்கப்பட்டை சுருள்களாக சுருட்டப்படுகிறது. வடிகட்டும் மண் மற்றும் நிலையான வெப்பமண்டல மழைப்பொழிவு கிடைத்தால், மரம் இலைகளையும் ஒரு அத்தியாவசிய எண்ணெயையும் தருகிறது. இவை உலகம் முழுவதும் சமையலிலும் பாரம்பரிய மருத்துவத்திலும் மதிக்கப்படுகின்றன.",
         "மரத்தைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
-        "உரித்தல் தொடங்குவதற்கு முன் பட்டை தளர்வதற்காக அறுவடை செய்யப்பட்ட தளிர்கள் ஒரு நாள் ஓய்வெடுக்க விடப்படுகின்றன — பல தலைமுறை உரிப்பவர்களால் கடத்தப்பட்ட ஒரு திறமை. இதில் பயன்படும் கருவிகள் எளிமையானவை ஆனால் இன்றியமையாதவை:",
+        "உரித்தல் தொடங்குவதற்கு முன் பட்டை தளர்வதற்காக அறுவடை செய்யப்பட்ட தளிர்கள் ஒரு நாள் ஓய்வெடுக்க விடப்படுகின்றன. இது பல தலைமுறை உரிப்பவர்களால் கடத்தப்பட்ட ஒரு திறமையாகும். இதில் பயன்படும் கருவிகள் எளிமையானவை ஆனால் இன்றியமையாதவை:",
         "இலவங்கப்பட்டையின் மதிப்பு சமையலறையை தாண்டியும் விரிவடைகிறது:",
-        "தனது இலவங்கப்பட்டை அனைத்தையும் மூலப்பொருளாக விற்பதற்குப் பதிலாக, தொழிற்சாலை அதை தனது சொந்த தேநீர் வரம்பில் மதிப்புக்கூட்டப்பட்ட பொருளாகவும் பயன்படுத்துகிறது — இயற்கையான இலங்கை இலவங்கப்பட்டையிலிருந்து தயாரிக்கப்பட்ட, தூய, நறுமணமிக்க அனுபவத்திற்கான இரண்டு உயர்தர இலவங்கப்பட்டை தேநீர் கலவைகளில் அதை கலந்து. இன்னும் பரந்த அளவில், இலவங்கப்பட்டை தொழில்துறை பொதுவாக பட்டையையும் இலைகளையும் மற்ற மதிப்புக் கூட்டப்பட்ட பொருட்களாகவும் மாற்றுகிறது — சமையல், அழகுசாதனப் பொருட்கள் மற்றும் நறுமணச் சிகிச்சைக்கான பட்டை மற்றும் இலை எண்ணெய், அரைத்த இலவங்கப்பட்டைத் தூள், மற்றும் உணவுத் தர ஒலியோரெசின்.",
+        "தனது இலவங்கப்பட்டை அனைத்தையும் மூலப்பொருளாக விற்பதற்குப் பதிலாக, தொழிற்சாலை அதை தனது சொந்த தேநீர் வரம்பில் மதிப்புக்கூட்டப்பட்ட பொருளாகவும் பயன்படுத்துகிறது. இயற்கையான இலங்கை இலவங்கப்பட்டையிலிருந்து தயாரிக்கப்பட்ட, தூய, நறுமணமிக்க அனுபவத்திற்கான இரண்டு உயர்தர இலவங்கப்பட்டை தேநீர் கலவைகளில் அதை கலக்கிறது. இன்னும் பரந்த அளவில், இலவங்கப்பட்டை தொழில்துறை பொதுவாக பட்டையையும் இலைகளையும் மற்ற மதிப்புக் கூட்டப்பட்ட பொருட்களாகவும் மாற்றுகிறது. அதாவது சமையல், அழகுசாதனப் பொருட்கள் மற்றும் நறுமணச் சிகிச்சைக்கான பட்டை மற்றும் இலை எண்ணெய், அரைத்த இலவங்கப்பட்டைத் தூள், மற்றும் உணவுத் தர ஒலியோரெசின்.",
       ],
       itemHeadings: [
         [],
@@ -1156,21 +1160,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "அறுவடை செய்யப்பட்ட தளிர்களை நீளத்திற்கு வெட்டவும், நுட்பமான உரித்தல் பணி தொடங்குவதற்கு முன் பட்டையை நீளவாக்கில் பிளக்கவும் பயன்படுத்தப்படும் பெரிய, கொக்கி வடிவ கத்தி.",
-          "உண்மையான உரித்தல் தொடங்குவதற்கு முன் மெல்லிய, கரடுமுரடான வெளிப்புற பட்டையை சுரண்ட தளிர் வழியாக இழுக்கப்படும் குறுகிய கைப்பிடி கொண்ட கொக்கி கருவி — 'காணவா' என்றால் சிங்களத்தில் 'சுரண்டுதல்' என்று பொருள்.",
-          "தளர்வான உட்பட்டையை அதன் நீளம் முழுவதும் கீறி, ஒரே துண்டாக மரத் தண்டிலிருந்து தூக்கி எடுக்கப் பயன்படும் ஒரு சிறிய, வளைந்த கத்தி — 'தலனவா' என்றால் சிங்களத்தில் 'உரித்தல்' என்று பொருள்.",
+          "உண்மையான உரித்தல் தொடங்குவதற்கு முன் மெல்லிய, கரடுமுரடான வெளிப்புற பட்டையை சுரண்ட தளிர் வழியாக இழுக்கப்படும் குறுகிய கைப்பிடி கொண்ட கொக்கி கருவி. 'காணவா' என்றால் சிங்களத்தில் 'சுரண்டுதல்' என்று பொருள்.",
+          "தளர்வான உட்பட்டையை அதன் நீளம் முழுவதும் கீறி, ஒரே துண்டாக மரத் தண்டிலிருந்து தூக்கி எடுக்கப் பயன்படும் ஒரு சிறிய, வளைந்த கத்தி. 'தலனவா' என்றால் சிங்களத்தில் 'உரித்தல்' என்று பொருள்.",
           "கீறப்பட்ட பட்டையை கிழிக்காமல் தளிரின் முழு நீளம் முழுவதும் மரத்திலிருந்து மென்மையாகப் பிரிக்க அதன் அடியில் செலுத்தப்படும் மென்மையான, வட்டமான உலோகக் கம்பி.",
           "உரிக்கப்பட்ட பட்டைத் துண்டுகளை சுருட்டி உலர்த்துவதற்கு முன் சீரான நீளத்திற்கு வெட்ட பயன்படுகிறது.",
           "மணிக்கணக்கில் கூர்மையான உரிக்கும் கருவிகளைக் கையாளும்போது வெட்டுக்களிலிருந்து பாதுகாக்க விரல்களில் அணியப்படும் பாதுகாப்பு உறை.",
           "பட்டைத் துண்டுகள் வெட்டப்பட்டு சுருட்டுவதற்குத் தயாராகும்போது சீரான நீளங்களை அளந்து குறிக்கப் பயன்படும் அளவீடு செய்யப்பட்ட கம்பி.",
         ],
         [
-          "இனிப்பு மற்றும் காரமான உணவுகள், பானங்கள், மற்றும் பேக்கிங்கில் பயன்படுத்தப்படுகிறது — பல சந்தைகளில் விற்கப்படும் வலிமையான, தடிமனான பட்டையுடைய கேசியா வகைகளை விட சிலோன் இலவங்கப்பட்டை மென்மையான, நுட்பமான இனிப்புத் தன்மை கொண்டது.",
-          "ஆக்ஸிஜனேற்ற எதிர்ப்பு, அழற்சி எதிர்ப்பு, மற்றும் நுண்ணுயிர் எதிர்ப்பு பண்புகள் உள்ளன, இரத்த சர்க்கரையை கட்டுப்படுத்த, செரிமானத்தை மேம்படுத்த, மற்றும் இதய ஆரோக்கியத்தை மேம்படுத்த பாரம்பரியமாக பயன்படுத்தப்படுகிறது; அதன் அத்தியாவசிய எண்ணெய்க்கு பாரம்பரிய மருத்துவத்திலும் நறுமண சிகிச்சையிலும் நீண்ட வரலாறு உண்டு.",
+          "இனிப்பு மற்றும் காரமான உணவுகள், பானங்கள், மற்றும் பேக்கிங்கில் பயன்படுத்தப்படுகிறது. பல சந்தைகளில் விற்கப்படும் வலிமையான, தடிமனான பட்டையுடைய கேசியா வகைகளை விட சிலோன் இலவங்கப்பட்டை மென்மையான, நுட்பமான இனிப்புத் தன்மை கொண்டது.",
+          "ஆக்ஸிஜனேற்ற எதிர்ப்பு, அழற்சி எதிர்ப்பு, மற்றும் நுண்ணுயிர் எதிர்ப்பு பண்புகள் உள்ளன, இரத்த சர்க்கரையை கட்டுப்படுத்த, செரிமானத்தை மேம்படுத்த, மற்றும் இதய ஆரோக்கியத்தை மேம்படுத்த பாரம்பரியமாக பயன்படுத்தப்படுகிறது. அதன் அத்தியாவசிய எண்ணெய்க்கு பாரம்பரிய மருத்துவத்திலும் நறுமண சிகிச்சையிலும் நீண்ட வரலாறு உண்டு.",
           "மரங்கள் வெப்பமண்டல காடுகளின் பல்லுயிர் பெருக்கத்திற்கு பங்களிக்கின்றன, மகரந்தச் சேர்க்கையாளர்களுக்கு தேன் அளிக்கின்றன, மற்றும் உள்ளூர் விவசாயிகள் இலவங்கப்பட்டையை மற்ற பயிர்களுடன் நிலைத்தன்மையுடன் வளர்க்க உதவும் வேளாண்-வனவியல் முறைகளை ஆதரிக்கின்றன.",
         ],
         [
-          "தூய சிலோன் இலவங்கப்பட்டை சிறந்த தேயிலை இலைகளுடன் இணைந்து, நுட்பமான மசாலா சுவையுடன் ஒரு சூடான, ஆறுதலான பானத்தை வழங்குகிறது — உணவுக்குப் பிறகு ஓய்வெடுக்கவோ அல்லது காலையைப் புத்துணர்ச்சியுடன் தொடங்கவோ ஏற்றது.",
-          "இயற்கையான இலவங்கப்பட்டை சுவை மற்றும் நறுமணமிக்க மூலிகைகளால் தனித்துவமாக கலக்கப்பட்டு, இனிப்பு, காரம், மற்றும் நறுமணத்தின் இணக்கத்தை வெளிப்படுத்துகிறது — தொழிற்சாலையின் சிறப்பியல்பு கலவைகளில் ஒன்று.",
+          "தூய சிலோன் இலவங்கப்பட்டை சிறந்த தேயிலை இலைகளுடன் இணைந்து, நுட்பமான மசாலா சுவையுடன் ஒரு சூடான, ஆறுதலான பானத்தை வழங்குகிறது. உணவுக்குப் பிறகு ஓய்வெடுக்கவோ அல்லது காலையைப் புத்துணர்ச்சியுடன் தொடங்கவோ ஏற்றது.",
+          "இயற்கையான இலவங்கப்பட்டை சுவை மற்றும் நறுமணமிக்க மூலிகைகளால் தனித்துவமாக கலக்கப்பட்டு, இனிப்பு, காரம், மற்றும் நறுமணத்தின் இணக்கத்தை வெளிப்படுத்துகிறது. தொழிற்சாலையின் சிறப்பியல்பு கலவைகளில் ஒன்று.",
         ],
       ],
       itemTags: [
@@ -1749,9 +1753,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       sectionBodies: [
         "La Cinnamomum verum, venduta come 'vera cannella' o cannella di Ceylon, è un piccolo albero sempreverde della famiglia delle lauracee, originario dello Sri Lanka e dell'India meridionale. Ciò che conta commercialmente è la corteccia interna dell'albero: viene pelata, essiccata e arrotolata nei familiari bastoncini di cannella. Con un terreno ben drenato e piogge tropicali costanti, l'albero produce anche foglie e un olio essenziale, apprezzato in tutto il mondo in cucina e nella medicina tradizionale.",
         "Uno sguardo rapido all'albero stesso:",
-        "I rami raccolti vengono lasciati riposare per circa un giorno affinché la corteccia si allenti prima di iniziare la sbucciatura — un'abilità tramandata attraverso generazioni di sbucciatori. Gli strumenti coinvolti sono semplici ma essenziali:",
+        "I rami raccolti vengono lasciati riposare per circa un giorno affinché la corteccia si allenti prima di iniziare la sbucciatura. È un'abilità tramandata attraverso generazioni di sbucciatori. Gli strumenti coinvolti sono semplici ma essenziali:",
         "Il valore della cannella va ben oltre la cucina:",
-        "Anziché vendere tutta la sua cannella come spezia grezza, la fabbrica la utilizza anche come ingrediente a valore aggiunto nella propria gamma di tè — miscelandola in due tè alla cannella premium, realizzati con cannella naturale dello Sri Lanka per un'esperienza pura e aromatica. Più in generale, l'industria della cannella trasforma tipicamente la corteccia e le foglie anche in altri prodotti a valore aggiunto — olio di corteccia e di foglie per cucina, cosmetici e aromaterapia, cannella in polvere e oleoresina per uso alimentare.",
+        "Anziché vendere tutta la sua cannella come spezia grezza, la fabbrica la utilizza anche come ingrediente a valore aggiunto nella propria gamma di tè, miscelandola in due tè alla cannella premium realizzati con cannella naturale dello Sri Lanka per un'esperienza pura e aromatica. Più in generale, l'industria della cannella trasforma tipicamente la corteccia e le foglie anche in altri prodotti a valore aggiunto: olio di corteccia e di foglie per cucina, cosmetici e aromaterapia, cannella in polvere e oleoresina per uso alimentare.",
       ],
       itemHeadings: [
         [],
@@ -1771,21 +1775,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "Un grande coltello a forma di uncino usato per tagliare a misura i rami raccolti e spaccare la corteccia per il lungo prima che inizi il lavoro fine di sbucciatura.",
-          "Uno strumento uncinato con manico corto, passato lungo il ramo per raschiare via la sottile corteccia esterna ruvida prima che inizi la vera sbucciatura — 'gaanawa' significa 'raschiare' in singalese.",
-          "Una piccola lama curva usata per incidere la corteccia interna allentata lungo la sua lunghezza e sollevarla dal fusto legnoso in un'unica striscia — 'thalanawa' significa 'sbucciare' in singalese.",
+          "Uno strumento uncinato con manico corto, passato lungo il ramo per raschiare via la sottile corteccia esterna ruvida prima che inizi la vera sbucciatura. 'Gaanawa' significa 'raschiare' in singalese.",
+          "Una piccola lama curva usata per incidere la corteccia interna allentata lungo la sua lunghezza e sollevarla dal fusto legnoso in un'unica striscia. 'Thalanawa' significa 'sbucciare' in singalese.",
           "Un'asta metallica liscia e arrotondata infilata sotto la corteccia incisa per separarla delicatamente dal legno lungo tutta la lunghezza del ramo senza strapparla.",
           "Usate per tagliare le strisce di corteccia sbucciata a una lunghezza uniforme prima di arrotolarle e farle essiccare.",
           "Una protezione indossata sulle dita per proteggerle dai tagli durante l'uso prolungato degli affilati strumenti di sbucciatura.",
           "Un'asta calibrata usata per misurare e segnare lunghezze uniformi mentre le strisce di corteccia vengono tagliate e preparate per l'arrotolamento.",
         ],
         [
-          "Usata in piatti dolci e salati, bevande e prodotti da forno — la cannella di Ceylon ha un sapore più delicato e meno intenso rispetto alle varietà di cassia dalla corteccia più spessa, comunemente vendute in molti mercati.",
-          "Possiede proprietà antiossidanti, antinfiammatorie e antimicrobiche, tradizionalmente usata per aiutare a regolare la glicemia, favorire la digestione e sostenere la salute del cuore; il suo olio essenziale ha una lunga storia nella medicina tradizionale e nell'aromaterapia.",
+          "Usata in piatti dolci e salati, bevande e prodotti da forno. La cannella di Ceylon ha un sapore più delicato e meno intenso rispetto alle varietà di cassia dalla corteccia più spessa, comunemente vendute in molti mercati.",
+          "Possiede proprietà antiossidanti, antinfiammatorie e antimicrobiche, tradizionalmente usata per aiutare a regolare la glicemia, favorire la digestione e sostenere la salute del cuore. Il suo olio essenziale ha una lunga storia nella medicina tradizionale e nell'aromaterapia.",
           "Gli alberi contribuiscono alla biodiversità delle foreste tropicali, forniscono nettare agli impollinatori e sostengono sistemi agroforestali che permettono agli agricoltori locali di coltivarla insieme ad altre colture in modo sostenibile.",
         ],
         [
-          "La pura cannella di Ceylon unita a foglie di tè pregiate offre una bevanda calda e rilassante con note speziate delicate — ideale per rilassarsi dopo i pasti o per iniziare la mattina con una carica rinfrescante.",
-          "Una miscela unica arricchita con aroma naturale di cannella ed erbe aromatiche, che porta in risalto un'armonia di dolcezza, speziatura e fragranza — una delle miscele distintive della fabbrica.",
+          "La pura cannella di Ceylon unita a foglie di tè pregiate offre una bevanda calda e rilassante con note speziate delicate. Ideale per rilassarsi dopo i pasti o per iniziare la mattina con una carica rinfrescante.",
+          "Una miscela unica arricchita con aroma naturale di cannella ed erbe aromatiche, che porta in risalto un'armonia di dolcezza, speziatura e fragranza. Una delle miscele distintive della fabbrica.",
         ],
       ],
       itemTags: [
@@ -2364,9 +2368,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       sectionBodies: [
         "شجرة Cinnamomum verum، التي تُباع باسم 'القرفة الحقيقية' أو قرفة سيلان، هي شجرة صغيرة دائمة الخضرة من الفصيلة الغارية، موطنها الأصلي سريلانكا وجنوب الهند. ما يهم تجاريًا هو اللحاء الداخلي للشجرة، الذي يُقشَّر ويُجفَّف ويُلف إلى عيدان القرفة المألوفة. ومع تربة جيدة الصرف وأمطار استوائية منتظمة، تنتج الشجرة أيضًا أوراقًا وزيتًا عطريًا يُقدَّر في الطهي والطب التقليدي حول العالم.",
         "نظرة سريعة على الشجرة نفسها:",
-        "تُترك الأفرع المحصودة لترتاح ليوم تقريبًا حتى تصبح اللحاء أكثر ليونة قبل بدء التقشير — وهي مهارة توارثتها أجيال من المقشرين. الأدوات المستخدمة بسيطة لكنها ضرورية:",
+        "تُترك الأفرع المحصودة لترتاح ليوم تقريبًا حتى تصبح اللحاء أكثر ليونة قبل بدء التقشير. وهي مهارة توارثتها أجيال من المقشرين. الأدوات المستخدمة بسيطة لكنها ضرورية:",
         "تتجاوز قيمة القرفة المطبخ بكثير:",
-        "بدلاً من بيع كل قرفتها كتوابل خام، يستخدمها المصنع أيضًا كمكون ذي قيمة مضافة في تشكيلة الشاي الخاصة به — بمزجها في مزيجين فاخرين من شاي القرفة، مصنوعين من قرفة سريلانكية طبيعية لتجربة نقية وعطرية. بشكل أعم، تحوّل صناعة القرفة عادةً اللحاء والأوراق أيضًا إلى منتجات أخرى ذات قيمة مضافة — زيت اللحاء والأوراق للطبخ ومستحضرات التجميل والعلاج بالروائح، ومسحوق القرفة المطحون، وراتنج الزيت الغذائي.",
+        "بدلاً من بيع كل قرفتها كتوابل خام، يستخدمها المصنع أيضًا كمكون ذي قيمة مضافة في تشكيلة الشاي الخاصة به، بمزجها في مزيجين فاخرين من شاي القرفة، مصنوعين من قرفة سريلانكية طبيعية لتجربة نقية وعطرية. بشكل أعم، تحوّل صناعة القرفة عادةً اللحاء والأوراق أيضًا إلى منتجات أخرى ذات قيمة مضافة: زيت اللحاء والأوراق للطبخ ومستحضرات التجميل والعلاج بالروائح، ومسحوق القرفة المطحون، وراتنج الزيت الغذائي.",
       ],
       itemHeadings: [
         [],
@@ -2386,21 +2390,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "سكين كبير على شكل خطاف يُستخدم لقطع الأفرع المحصودة حسب الطول وشق اللحاء طوليًا قبل بدء أعمال التقشير الدقيقة.",
-          "أداة معقوفة ذات مقبض قصير تُمرَّر على طول الفرع لكشط اللحاء الخارجي الرقيق والخشن قبل بدء التقشير الفعلي — تعني كلمة 'غاناوا' في السينهالية 'الكشط'.",
-          "نصل صغير منحنٍ يُستخدم لشق اللحاء الداخلي المُرخى على طول امتداده ورفعه عن الساق الخشبية في شريط واحد — تعني كلمة 'ثالاناوا' في السينهالية 'التقشير'.",
+          "أداة معقوفة ذات مقبض قصير تُمرَّر على طول الفرع لكشط اللحاء الخارجي الرقيق والخشن قبل بدء التقشير الفعلي. وتعني كلمة 'غاناوا' في السينهالية 'الكشط'.",
+          "نصل صغير منحنٍ يُستخدم لشق اللحاء الداخلي المُرخى على طول امتداده ورفعه عن الساق الخشبية في شريط واحد. وتعني كلمة 'ثالاناوا' في السينهالية 'التقشير'.",
           "قضيب معدني أملس ومستدير يُدخل تحت اللحاء المشقوق لفصله بلطف عن الخشب على طول الفرع بالكامل دون تمزيقه.",
           "يُستخدم لقص شرائط اللحاء المقشرة إلى طول موحد قبل لفها وتجفيفها.",
           "غطاء واقٍ يُلبس على الأصابع للحماية من الجروح أثناء التعامل مع أدوات التقشير الحادة لساعات متواصلة.",
           "قضيب مُعايَر يُستخدم لقياس وتحديد أطوال موحدة أثناء قص شرائط اللحاء وتحضيرها للف.",
         ],
         [
-          "تُستخدم في الأطباق الحلوة والمالحة والمشروبات والمخبوزات — تتميز قرفة سيلان بنكهة أكثر اعتدالًا ورقة مقارنة بأصناف الكاسيا الأقوى والأكثر سماكة التي تُباع في العديد من الأسواق.",
-          "تحمل خصائص مضادة للأكسدة ومضادة للالتهابات ومضادة للميكروبات، وتُستخدم تقليديًا للمساعدة في تنظيم سكر الدم ودعم الهضم وتعزيز صحة القلب؛ ولزيتها العطري تاريخ طويل في الطب التقليدي والعلاج بالروائح.",
+          "تُستخدم في الأطباق الحلوة والمالحة والمشروبات والمخبوزات. وتتميز قرفة سيلان بنكهة أكثر اعتدالًا ورقة مقارنة بأصناف الكاسيا الأقوى والأكثر سماكة التي تُباع في العديد من الأسواق.",
+          "تحمل خصائص مضادة للأكسدة ومضادة للالتهابات ومضادة للميكروبات، وتُستخدم تقليديًا للمساعدة في تنظيم سكر الدم ودعم الهضم وتعزيز صحة القلب. ولزيتها العطري تاريخ طويل في الطب التقليدي والعلاج بالروائح.",
           "تُسهم الأشجار في التنوع البيولوجي للغابات الاستوائية، وتوفر الرحيق للملقحات، وتدعم أنظمة الزراعة الحرجية التي تتيح للمزارعين المحليين زراعتها إلى جانب محاصيل أخرى بشكل مستدام.",
         ],
         [
-          "تمتزج قرفة سيلان النقية مع أوراق شاي فاخرة لتقدم مشروبًا دافئًا ومهدئًا بلمسات توابل خفيفة — مثالي للاسترخاء بعد الوجبات أو لبدء الصباح بانتعاش.",
-          "مزيج فريد مُنكَّه بنكهة القرفة الطبيعية والأعشاب العطرية، يبرز توازنًا بين الحلاوة والتوابل والعطر — أحد المزيجات المميزة للمصنع.",
+          "تمتزج قرفة سيلان النقية مع أوراق شاي فاخرة لتقدم مشروبًا دافئًا ومهدئًا بلمسات توابل خفيفة. مثالي للاسترخاء بعد الوجبات أو لبدء الصباح بانتعاش.",
+          "مزيج فريد مُنكَّه بنكهة القرفة الطبيعية والأعشاب العطرية، يبرز توازنًا بين الحلاوة والتوابل والعطر. أحد المزيجات المميزة للمصنع.",
         ],
       ],
       itemTags: [
@@ -2977,11 +2981,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Плантация корицы",
       sectionHeadings: ["О коричном дереве", "Характеристики", "Очистка корицы: инструменты и процесс", "Польза", "Чайная продукция с корицей"],
       sectionBodies: [
-        "Cinnamomum verum, которую продают как «настоящую корицу» или цейлонскую корицу, — это небольшое вечнозелёное дерево семейства Лавровые, произрастающее в Шри-Ланке и Южной Индии. Коммерческую ценность представляет внутренняя кора дерева — её очищают, сушат и скручивают в привычные палочки корицы. При хорошо дренированной почве и стабильных тропических дождях дерево также даёт листья и эфирное масло, ценимые по всему миру в кулинарии и традиционной медицине.",
+        "Cinnamomum verum, которую продают как «настоящую корицу» или цейлонскую корицу, — это небольшое вечнозелёное дерево семейства Лавровые, произрастающее в Шри-Ланке и Южной Индии. Коммерческую ценность представляет внутренняя кора дерева. Её очищают, сушат и скручивают в привычные палочки корицы. При хорошо дренированной почве и стабильных тропических дождях дерево также даёт листья и эфирное масло, ценимые по всему миру в кулинарии и традиционной медицине.",
         "Коротко о самом дереве:",
-        "Собранным побегам дают отлежаться около суток, чтобы кора размягчилась перед началом очистки, — навык, передаваемый из поколения в поколение сборщиков. Используемые инструменты просты, но незаменимы:",
+        "Собранным побегам дают отлежаться около суток, чтобы кора размягчилась перед началом очистки. Это навык, передаваемый из поколения в поколение сборщиков. Используемые инструменты просты, но незаменимы:",
         "Польза корицы выходит далеко за пределы кухни:",
-        "Вместо того чтобы продавать всю свою корицу как сырую пряность, фабрика также использует её как продукт с добавленной стоимостью в собственном ассортименте чая — добавляя её в две премиальные смеси чая с корицей из натуральной шри-ланкийской корицы для чистого, ароматного вкуса. В более широком смысле, отрасль по производству корицы обычно превращает кору и листья и в другие продукты с добавленной стоимостью — масло коры и листьев для кулинарии, косметики и ароматерапии, молотую корицу и пищевой олеорезин.",
+        "Вместо того чтобы продавать всю свою корицу как сырую пряность, фабрика также использует её как продукт с добавленной стоимостью в собственном ассортименте чая, добавляя её в две премиальные смеси чая с корицей из натуральной шри-ланкийской корицы для чистого, ароматного вкуса. В более широком смысле, отрасль по производству корицы обычно превращает кору и листья и в другие продукты с добавленной стоимостью: масло коры и листьев для кулинарии, косметики и ароматерапии, молотую корицу и пищевой олеорезин.",
       ],
       itemHeadings: [
         [],
@@ -3001,21 +3005,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "Большой нож в форме крюка, используемый для нарезки собранных побегов по длине и продольного раскалывания коры перед началом тонкой работы по очистке.",
-          "Крюкообразный инструмент с коротким черенком, которым проводят вдоль побега, чтобы соскоблить тонкую грубую наружную кору перед началом настоящей очистки — «гаанава» на сингальском означает «скоблить».",
-          "Небольшое изогнутое лезвие, которым надрезают размягчённую внутреннюю кору по всей длине и снимают её со древесного стебля единой полосой — «таланава» на сингальском означает «очищать».",
+          "Крюкообразный инструмент с коротким черенком, которым проводят вдоль побега, чтобы соскоблить тонкую грубую наружную кору перед началом настоящей очистки. «Гаанава» на сингальском означает «скоблить».",
+          "Небольшое изогнутое лезвие, которым надрезают размягчённую внутреннюю кору по всей длине и снимают её со древесного стебля единой полосой. «Таланава» на сингальском означает «очищать».",
           "Гладкий округлый металлический стержень, вводимый под надрезанную кору, чтобы бережно отделить её от древесины по всей длине побега, не разорвав.",
           "Используются для обрезки очищенных полос коры до одинаковой длины перед скручиванием и сушкой.",
           "Защитный чехол, надеваемый на пальцы для защиты от порезов при работе с острыми инструментами для очистки в течение долгих часов.",
           "Калиброванный стержень, используемый для измерения и разметки одинаковой длины при нарезке и подготовке полос коры к скручиванию.",
         ],
         [
-          "Используется в сладких и солёных блюдах, напитках и выпечке — цейлонская корица обладает более мягким, деликатным сладковатым вкусом по сравнению с более резкими сортами кассии с толстой корой, которые продаются на многих рынках.",
-          "Обладает антиоксидантными, противовоспалительными и антимикробными свойствами, традиционно используется для регулирования уровня сахара в крови, улучшения пищеварения и поддержания здоровья сердца; её эфирное масло имеет долгую историю применения в традиционной медицине и ароматерапии.",
+          "Используется в сладких и солёных блюдах, напитках и выпечке. Цейлонская корица обладает более мягким, деликатным сладковатым вкусом по сравнению с более резкими сортами кассии с толстой корой, которые продаются на многих рынках.",
+          "Обладает антиоксидантными, противовоспалительными и антимикробными свойствами, традиционно используется для регулирования уровня сахара в крови, улучшения пищеварения и поддержания здоровья сердца. Её эфирное масло имеет долгую историю применения в традиционной медицине и ароматерапии.",
           "Деревья способствуют биоразнообразию тропических лесов, обеспечивают нектаром опылителей и поддерживают агролесоводческие системы, позволяющие местным фермерам устойчиво выращивать корицу вместе с другими культурами.",
         ],
         [
-          "Чистая цейлонская корица в сочетании с высококачественными чайными листьями создаёт тёплый, успокаивающий напиток с тонкими пряными нотками — идеален для отдыха после еды или бодрого начала утра.",
-          "Уникальная смесь с натуральным ароматом корицы и душистыми травами, раскрывающая гармонию сладости, пряности и аромата — один из фирменных купажей фабрики.",
+          "Чистая цейлонская корица в сочетании с высококачественными чайными листьями создаёт тёплый, успокаивающий напиток с тонкими пряными нотками. Идеален для отдыха после еды или бодрого начала утра.",
+          "Уникальная смесь с натуральным ароматом корицы и душистыми травами, раскрывающая гармонию сладости, пряности и аромата. Один из фирменных купажей фабрики.",
         ],
       ],
       itemTags: [
@@ -3592,11 +3596,11 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Zimtplantage",
       sectionHeadings: ["Über den Zimtbaum", "Merkmale", "Zimt Schälen: Werkzeuge und Ablauf", "Vorteile", "Zimttee-Produkte"],
       sectionBodies: [
-        "Cinnamomum verum, verkauft als „echter Zimt“ oder Ceylon-Zimt, ist ein kleiner immergrüner Baum aus der Familie der Lorbeergewächse, beheimatet in Sri Lanka und Südindien. Kommerziell zählt vor allem die innere Rinde des Baums — sie wird geschält, getrocknet und zu den bekannten Zimtstangen gerollt. Bei gut durchlässigem Boden und beständigem tropischem Regen liefert der Baum außerdem Blätter und ein ätherisches Öl, das weltweit in der Küche und in der traditionellen Medizin geschätzt wird.",
+        "Cinnamomum verum, verkauft als „echter Zimt“ oder Ceylon-Zimt, ist ein kleiner immergrüner Baum aus der Familie der Lorbeergewächse, beheimatet in Sri Lanka und Südindien. Kommerziell zählt vor allem die innere Rinde des Baums. Sie wird geschält, getrocknet und zu den bekannten Zimtstangen gerollt. Bei gut durchlässigem Boden und beständigem tropischem Regen liefert der Baum außerdem Blätter und ein ätherisches Öl, das weltweit in der Küche und in der traditionellen Medizin geschätzt wird.",
         "Ein kurzer Blick auf den Baum selbst:",
-        "Die geernteten Triebe lässt man etwa einen Tag ruhen, damit sich die Rinde löst, bevor das Schälen beginnt — eine Fertigkeit, die über Generationen von Schälern weitergegeben wurde. Die dabei verwendeten Werkzeuge sind einfach, aber unverzichtbar:",
+        "Die geernteten Triebe lässt man etwa einen Tag ruhen, damit sich die Rinde löst, bevor das Schälen beginnt. Es ist eine Fertigkeit, die über Generationen von Schälern weitergegeben wurde. Die dabei verwendeten Werkzeuge sind einfach, aber unverzichtbar:",
         "Der Wert von Zimt reicht weit über die Küche hinaus:",
-        "Statt seinen gesamten Zimt als Rohgewürz zu verkaufen, verwendet die Fabrik ihn auch als wertschöpfende Zutat in der eigenen Teereihe — sie mischt ihn in zwei Premium-Zimttee-Mischungen, hergestellt aus natürlichem sri-lankischem Zimt für ein reines, aromatisches Erlebnis. Allgemeiner betrachtet verarbeitet die Zimtindustrie Rinde und Blätter typischerweise auch zu anderen wertschöpfenden Produkten — Rinden- und Blattöl für Küche, Kosmetik und Aromatherapie, gemahlenem Zimtpulver und lebensmitteltauglichem Oleoresin.",
+        "Statt seinen gesamten Zimt als Rohgewürz zu verkaufen, verwendet die Fabrik ihn auch als wertschöpfende Zutat in der eigenen Teereihe. Sie mischt ihn in zwei Premium-Zimttee-Mischungen, hergestellt aus natürlichem sri-lankischem Zimt für ein reines, aromatisches Erlebnis. Allgemeiner betrachtet verarbeitet die Zimtindustrie Rinde und Blätter typischerweise auch zu anderen wertschöpfenden Produkten: Rinden- und Blattöl für Küche, Kosmetik und Aromatherapie, gemahlenem Zimtpulver und lebensmitteltauglichem Oleoresin.",
       ],
       itemHeadings: [
         [],
@@ -3616,21 +3620,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "Ein großes, hakenförmiges Messer, mit dem die geernteten Triebe auf Länge geschnitten und die Rinde der Länge nach aufgespalten wird, bevor die feine Schälarbeit beginnt.",
-          "Ein hakenförmiges Werkzeug mit kurzem Griff, das am Trieb entlanggezogen wird, um die dünne, raue äußere Rinde abzuschaben, bevor das eigentliche Schälen beginnt — 'gaanawa' bedeutet auf Singhalesisch 'schaben'.",
-          "Eine kleine, gebogene Klinge, mit der die gelockerte innere Rinde der Länge nach eingeritzt und in einem einzigen Streifen vom holzigen Stiel gelöst wird — 'thalanawa' bedeutet auf Singhalesisch 'schälen'.",
+          "Ein hakenförmiges Werkzeug mit kurzem Griff, das am Trieb entlanggezogen wird, um die dünne, raue äußere Rinde abzuschaben, bevor das eigentliche Schälen beginnt. 'Gaanawa' bedeutet auf Singhalesisch 'schaben'.",
+          "Eine kleine, gebogene Klinge, mit der die gelockerte innere Rinde der Länge nach eingeritzt und in einem einzigen Streifen vom holzigen Stiel gelöst wird. 'Thalanawa' bedeutet auf Singhalesisch 'schälen'.",
           "Ein glatter, runder Metallstab, der unter die eingeritzte Rinde geschoben wird, um sie über die gesamte Länge des Triebs vorsichtig vom Holz zu lösen, ohne sie zu zerreißen.",
           "Wird verwendet, um die geschälten Rindenstreifen auf eine einheitliche Länge zu schneiden, bevor sie gerollt und getrocknet werden.",
           "Eine Schutzhülle, die über die Finger gezogen wird, um sie beim stundenlangen Umgang mit den scharfen Schälwerkzeugen vor Schnitten zu schützen.",
           "Ein kalibrierter Stab, mit dem einheitliche Längen gemessen und markiert werden, während die Rindenstreifen zugeschnitten und für das Rollen vorbereitet werden.",
         ],
         [
-          "Verwendet in süßen wie herzhaften Gerichten, Getränken und Gebäck — Ceylon-Zimt hat eine mildere, feinere Süße als die kräftigeren, dickrindigeren Cassia-Sorten, die auf vielen Märkten verkauft werden.",
-          "Besitzt antioxidative, entzündungshemmende und antimikrobielle Eigenschaften, traditionell verwendet, um den Blutzucker zu regulieren, die Verdauung zu unterstützen und die Herzgesundheit zu fördern; sein ätherisches Öl hat eine lange Geschichte in der traditionellen Medizin und Aromatherapie.",
+          "Verwendet in süßen wie herzhaften Gerichten, Getränken und Gebäck. Ceylon-Zimt hat eine mildere, feinere Süße als die kräftigeren, dickrindigeren Cassia-Sorten, die auf vielen Märkten verkauft werden.",
+          "Besitzt antioxidative, entzündungshemmende und antimikrobielle Eigenschaften, traditionell verwendet, um den Blutzucker zu regulieren, die Verdauung zu unterstützen und die Herzgesundheit zu fördern. Sein ätherisches Öl hat eine lange Geschichte in der traditionellen Medizin und Aromatherapie.",
           "Die Bäume tragen zur Artenvielfalt tropischer Wälder bei, liefern Nektar für Bestäuber und stützen Agroforstsysteme, die es lokalen Bauern ermöglichen, Zimt nachhaltig neben anderen Kulturen anzubauen.",
         ],
         [
-          "Reiner Ceylon-Zimt kombiniert mit feinen Teeblättern ergibt ein warmes, beruhigendes Getränk mit dezenten Gewürznoten — ideal zum Entspannen nach dem Essen oder für einen erfrischenden Start in den Morgen.",
-          "Eine einzigartige Mischung mit natürlichem Zimtaroma und duftenden Kräutern, die eine Harmonie aus Süße, Würze und Duft hervorbringt — eine der charakteristischen Mischungen der Fabrik.",
+          "Reiner Ceylon-Zimt kombiniert mit feinen Teeblättern ergibt ein warmes, beruhigendes Getränk mit dezenten Gewürznoten. Ideal zum Entspannen nach dem Essen oder für einen erfrischenden Start in den Morgen.",
+          "Eine einzigartige Mischung mit natürlichem Zimtaroma und duftenden Kräutern, die eine Harmonie aus Süße, Würze und Duft hervorbringt. Eine der charakteristischen Mischungen der Fabrik.",
         ],
       ],
       itemTags: [
@@ -4209,9 +4213,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       sectionBodies: [
         "Cinnamomum verum, vendida como \"canela verdadera\" o canela de Ceilán, es un pequeño árbol de hoja perenne de la familia de las lauráceas, originario de Sri Lanka y el sur de la India. Lo que importa comercialmente es la corteza interna del árbol, que se pela, se seca y se enrolla en los familiares rollos de canela. Con un suelo bien drenado y lluvias tropicales constantes, el árbol también produce hojas y un aceite esencial muy valorado en la cocina y la medicina tradicional de todo el mundo.",
         "Un vistazo rápido al árbol:",
-        "Los brotes cosechados se dejan reposar durante aproximadamente un día para que la corteza se afloje antes de comenzar el pelado — una habilidad transmitida a través de generaciones de peladores. Las herramientas utilizadas son sencillas pero esenciales:",
+        "Los brotes cosechados se dejan reposar durante aproximadamente un día para que la corteza se afloje antes de comenzar el pelado. Es una habilidad transmitida a través de generaciones de peladores. Las herramientas utilizadas son sencillas pero esenciales:",
         "El valor de la canela va mucho más allá de la cocina:",
-        "En lugar de vender toda su canela como especia cruda, la fábrica también la utiliza como ingrediente de valor añadido en su propia línea de té — incorporándola en dos mezclas premium de té de canela, elaboradas con canela natural de Sri Lanka para una experiencia pura y aromática. De forma más amplia, la industria de la canela suele transformar también la corteza y las hojas en otros productos de valor añadido — aceite de corteza y de hoja para cocina, cosmética y aromaterapia, canela molida en polvo y oleorresina de grado alimentario.",
+        "En lugar de vender toda su canela como especia cruda, la fábrica también la utiliza como ingrediente de valor añadido en su propia línea de té, incorporándola en dos mezclas premium de té de canela elaboradas con canela natural de Sri Lanka para una experiencia pura y aromática. De forma más amplia, la industria de la canela suele transformar también la corteza y las hojas en otros productos de valor añadido: aceite de corteza y de hoja para cocina, cosmética y aromaterapia, canela molida en polvo y oleorresina de grado alimentario.",
       ],
       itemHeadings: [
         [],
@@ -4231,21 +4235,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "Un cuchillo grande en forma de gancho utilizado para cortar los brotes cosechados a la medida y partir la corteza a lo largo antes de que comience el trabajo fino de pelado.",
-          "Una herramienta en forma de gancho con mango corto que se pasa a lo largo del brote para raspar la fina y áspera corteza exterior antes de que comience el pelado real — 'gaanawa' significa 'raspar' en cingalés.",
-          "Una pequeña hoja curva utilizada para marcar la corteza interior aflojada a lo largo de su longitud y separarla del tallo leñoso en una sola tira — 'thalanawa' significa 'pelar' en cingalés.",
+          "Una herramienta en forma de gancho con mango corto que se pasa a lo largo del brote para raspar la fina y áspera corteza exterior antes de que comience el pelado real. 'Gaanawa' significa 'raspar' en cingalés.",
+          "Una pequeña hoja curva utilizada para marcar la corteza interior aflojada a lo largo de su longitud y separarla del tallo leñoso en una sola tira. 'Thalanawa' significa 'pelar' en cingalés.",
           "Una varilla metálica lisa y redondeada que se introduce bajo la corteza marcada para separarla suavemente de la madera a lo largo de todo el brote sin desgarrarla.",
           "Se usan para recortar las tiras de corteza pelada a una longitud uniforme antes de enrollarlas y secarlas.",
           "Una funda protectora que se usa en los dedos para protegerlos de cortes al manejar las afiladas herramientas de pelado durante horas seguidas.",
           "Una varilla calibrada utilizada para medir y marcar longitudes uniformes mientras las tiras de corteza se cortan y preparan para enrollarlas.",
         ],
         [
-          "Se usa en platos dulces y salados, bebidas y productos horneados — la canela de Ceilán tiene un dulzor más suave y delicado que las variedades de casia, de corteza más gruesa y fuerte, que se venden en muchos mercados.",
-          "Posee propiedades antioxidantes, antiinflamatorias y antimicrobianas, usada tradicionalmente para ayudar a regular el azúcar en sangre, favorecer la digestión y apoyar la salud del corazón; su aceite esencial tiene una larga historia en la medicina tradicional y la aromaterapia.",
+          "Se usa en platos dulces y salados, bebidas y productos horneados. La canela de Ceilán tiene un dulzor más suave y delicado que las variedades de casia, de corteza más gruesa y fuerte, que se venden en muchos mercados.",
+          "Posee propiedades antioxidantes, antiinflamatorias y antimicrobianas, usada tradicionalmente para ayudar a regular el azúcar en sangre, favorecer la digestión y apoyar la salud del corazón. Su aceite esencial tiene una larga historia en la medicina tradicional y la aromaterapia.",
           "Los árboles contribuyen a la biodiversidad de los bosques tropicales, proporcionan néctar a los polinizadores y sostienen sistemas agroforestales que permiten a los agricultores locales cultivarla junto a otros cultivos de forma sostenible.",
         ],
         [
-          "La canela pura de Ceilán combinada con hojas de té selectas ofrece una bebida cálida y reconfortante con sutiles notas especiadas — ideal para relajarse después de las comidas o para empezar la mañana con un toque refrescante.",
-          "Una mezcla única infundida con aroma natural de canela y hierbas aromáticas, que revela una armonía de dulzor, especias y fragancia — una de las mezclas insignia de la fábrica.",
+          "La canela pura de Ceilán combinada con hojas de té selectas ofrece una bebida cálida y reconfortante con sutiles notas especiadas. Ideal para relajarse después de las comidas o para empezar la mañana con un toque refrescante.",
+          "Una mezcla única infundida con aroma natural de canela y hierbas aromáticas, que revela una armonía de dulzor, especias y fragancia. Una de las mezclas insignia de la fábrica.",
         ],
       ],
       itemTags: [
@@ -4824,9 +4828,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       sectionBodies: [
         "Le Cinnamomum verum, vendu sous le nom de « vraie cannelle » ou cannelle de Ceylan, est un petit arbre à feuilles persistantes de la famille des lauracées, originaire du Sri Lanka et du sud de l'Inde. Ce qui compte commercialement, c'est l'écorce interne de l'arbre, qui est pelée, séchée puis enroulée en bâtons de cannelle familiers. Avec un sol bien drainé et des pluies tropicales régulières, l'arbre fournit aussi des feuilles et une huile essentielle appréciées dans le monde entier en cuisine et en médecine traditionnelle.",
         "Un rapide aperçu de l'arbre lui-même :",
-        "Les pousses récoltées sont laissées au repos environ une journée pour que l'écorce se détache avant le début de l'épluchage — un savoir-faire transmis de génération en génération d'éplucheurs. Les outils utilisés sont simples mais essentiels :",
+        "Les pousses récoltées sont laissées au repos environ une journée pour que l'écorce se détache avant le début de l'épluchage. C'est un savoir-faire transmis de génération en génération d'éplucheurs. Les outils utilisés sont simples mais essentiels :",
         "La valeur de la cannelle va bien au-delà de la cuisine :",
-        "Plutôt que de vendre toute sa cannelle comme épice brute, l'usine l'utilise aussi comme ingrédient à valeur ajoutée dans sa propre gamme de thé — en l'intégrant à deux mélanges premium de thé à la cannelle, élaborés à partir de cannelle naturelle du Sri Lanka pour une expérience pure et aromatique. Plus largement, l'industrie de la cannelle transforme aussi généralement l'écorce et les feuilles en d'autres produits à valeur ajoutée — huile d'écorce et de feuille pour la cuisine, la cosmétique et l'aromathérapie, de la cannelle moulue en poudre et de l'oléorésine de qualité alimentaire.",
+        "Plutôt que de vendre toute sa cannelle comme épice brute, l'usine l'utilise aussi comme ingrédient à valeur ajoutée dans sa propre gamme de thé, en l'intégrant à deux mélanges premium de thé à la cannelle élaborés à partir de cannelle naturelle du Sri Lanka pour une expérience pure et aromatique. Plus largement, l'industrie de la cannelle transforme aussi généralement l'écorce et les feuilles en d'autres produits à valeur ajoutée : huile d'écorce et de feuille pour la cuisine, la cosmétique et l'aromathérapie, de la cannelle moulue en poudre et de l'oléorésine de qualité alimentaire.",
       ],
       itemHeadings: [
         [],
@@ -4846,21 +4850,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "Un grand couteau en forme de crochet utilisé pour couper les pousses récoltées à la bonne longueur et fendre l'écorce dans le sens de la longueur avant que ne commence le travail minutieux d'épluchage.",
-          "Un outil crochu à manche court, passé le long de la pousse pour racler la fine écorce externe rugueuse avant que l'épluchage proprement dit ne commence — « gaanawa » signifie « gratter » en cingalais.",
-          "Une petite lame courbe utilisée pour inciser l'écorce interne détachée sur toute sa longueur et la soulever de la tige ligneuse en une seule bande — « thalanawa » signifie « éplucher » en cingalais.",
+          "Un outil crochu à manche court, passé le long de la pousse pour racler la fine écorce externe rugueuse avant que l'épluchage proprement dit ne commence. « Gaanawa » signifie « gratter » en cingalais.",
+          "Une petite lame courbe utilisée pour inciser l'écorce interne détachée sur toute sa longueur et la soulever de la tige ligneuse en une seule bande. « Thalanawa » signifie « éplucher » en cingalais.",
           "Une tige métallique lisse et arrondie insérée sous l'écorce incisée pour la séparer délicatement du bois sur toute la longueur de la pousse sans la déchirer.",
           "Utilisés pour couper les bandes d'écorce épluchée à une longueur uniforme avant de les enrouler et de les sécher.",
           "Une protection portée sur les doigts pour se prémunir des coupures lors de la manipulation des outils d'épluchage tranchants pendant des heures d'affilée.",
           "Une tige calibrée utilisée pour mesurer et marquer des longueurs uniformes lorsque les bandes d'écorce sont coupées et préparées pour l'enroulage.",
         ],
         [
-          "Utilisée dans les plats sucrés comme salés, les boissons et la pâtisserie — la cannelle de Ceylan a une douceur plus délicate que les variétés de cassia, à l'écorce plus épaisse et plus forte, vendues sur de nombreux marchés.",
-          "Possède des propriétés antioxydantes, anti-inflammatoires et antimicrobiennes, traditionnellement utilisée pour aider à réguler la glycémie, favoriser la digestion et soutenir la santé cardiaque ; son huile essentielle a une longue histoire en médecine traditionnelle et en aromathérapie.",
+          "Utilisée dans les plats sucrés comme salés, les boissons et la pâtisserie. La cannelle de Ceylan a une douceur plus délicate que les variétés de cassia, à l'écorce plus épaisse et plus forte, vendues sur de nombreux marchés.",
+          "Possède des propriétés antioxydantes, anti-inflammatoires et antimicrobiennes, traditionnellement utilisée pour aider à réguler la glycémie, favoriser la digestion et soutenir la santé cardiaque. Son huile essentielle a une longue histoire en médecine traditionnelle et en aromathérapie.",
           "Les arbres contribuent à la biodiversité des forêts tropicales, fournissent du nectar aux pollinisateurs et soutiennent des systèmes agroforestiers qui permettent aux agriculteurs locaux de la cultiver aux côtés d'autres cultures de manière durable.",
         ],
         [
-          "La cannelle pure de Ceylan associée à des feuilles de thé fines offre une boisson chaude et réconfortante aux notes épicées délicates — idéale pour se détendre après les repas ou commencer la matinée avec un regain de fraîcheur.",
-          "Un mélange unique infusé d'arôme naturel de cannelle et d'herbes aromatiques, révélant une harmonie de douceur, d'épices et de parfum — l'un des mélanges emblématiques de l'usine.",
+          "La cannelle pure de Ceylan associée à des feuilles de thé fines offre une boisson chaude et réconfortante aux notes épicées délicates. Idéale pour se détendre après les repas ou commencer la matinée avec un regain de fraîcheur.",
+          "Un mélange unique infusé d'arôme naturel de cannelle et d'herbes aromatiques, révélant une harmonie de douceur, d'épices et de parfum. L'un des mélanges emblématiques de l'usine.",
         ],
       ],
       itemTags: [
@@ -5439,9 +5443,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       sectionBodies: [
         "肉桂（Cinnamomum verum）又称“真肉桂”或锡兰肉桂，是樟科的一种小型常绿乔木，原产于斯里兰卡和印度南部。真正具有商业价值的是树的内层树皮，经过剥皮、晒干后卷成人们熟悉的肉桂卷。只要有排水良好的土壤和稳定的热带降雨，这种树还能提供树叶和精油，两者都在全球烹饪和传统医学中备受推崇。",
         "简单了解一下这种树本身：",
-        "采下的枝条要放置约一天，使树皮松动后才开始剥皮——这是历代剥皮工人传承下来的手艺。所用的工具简单却不可或缺：",
+        "采下的枝条要放置约一天，使树皮松动后才开始剥皮。这是历代剥皮工人传承下来的手艺。所用的工具简单却不可或缺：",
         "肉桂的价值远不止于厨房：",
-        "本厂并未将全部肉桂作为原料香料出售，还将其作为增值原料用于自有茶系列——将其调配成两款高端肉桂茶，均以天然斯里兰卡肉桂精制而成，带来纯净芳香的品饮体验。更广泛地说，肉桂行业通常还会把树皮和树叶加工成其他增值产品——用于烹饪、化妆品和芳香疗法的树皮油和叶油、肉桂粉，以及食品级油树脂。",
+        "本厂并未将全部肉桂作为原料香料出售，还将其作为增值原料用于自有茶系列，调配成两款高端肉桂茶，均以天然斯里兰卡肉桂精制而成，带来纯净芳香的品饮体验。更广泛地说，肉桂行业通常还会把树皮和树叶加工成其他增值产品，例如用于烹饪、化妆品和芳香疗法的树皮油和叶油、肉桂粉，以及食品级油树脂。",
       ],
       itemHeadings: [
         [],
@@ -5461,21 +5465,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "一种钩形大刀，用于将采下的枝条截成所需长度，并在进行精细剥皮工序前先沿树皮纵向劈开。",
-          "一种带短柄的钩形工具，沿枝条刮去薄而粗糙的外层树皮，之后才开始真正的剥皮——僧伽罗语中'gaanawa'意为'刮'。",
-          "一种小巧的弯刀，用来沿树皮长度划开已松动的内层树皮，并将其整条完整地从木质枝干上剥离下来——僧伽罗语中'thalanawa'意为'剥'。",
+          "一种带短柄的钩形工具，沿枝条刮去薄而粗糙的外层树皮，之后才开始真正的剥皮。僧伽罗语中'gaanawa'意为'刮'。",
+          "一种小巧的弯刀，用来沿树皮长度划开已松动的内层树皮，并将其整条完整地从木质枝干上剥离下来。僧伽罗语中'thalanawa'意为'剥'。",
           "一根光滑的圆形金属棒，从划开的树皮下方伸入，沿枝条全长将树皮与木质部分轻轻分离，而不使其撕裂。",
           "用于将剥下的树皮条修剪成统一长度，之后再卷起晾干。",
           "套在手指上的保护罩，用于长时间使用锋利的剥皮工具时防止割伤。",
           "一种带刻度的量杆，用于在裁剪和准备卷制树皮条时测量并标记统一的长度。",
         ],
         [
-          "广泛用于甜咸菜肴、饮品和烘焙食品中——与市面上常见的、树皮更厚更浓烈的桂皮品种相比，锡兰肉桂的甜味更为柔和细腻。",
-          "具有抗氧化、抗炎和抗菌特性，传统上用于帮助调节血糖、促进消化和支持心脏健康；其精油在传统医学和芳香疗法中也有悠久的应用历史。",
+          "广泛用于甜咸菜肴、饮品和烘焙食品中。与市面上常见的、树皮更厚更浓烈的桂皮品种相比，锡兰肉桂的甜味更为柔和细腻。",
+          "具有抗氧化、抗炎和抗菌特性，传统上用于帮助调节血糖、促进消化和支持心脏健康。其精油在传统医学和芳香疗法中也有悠久的应用历史。",
           "这些树木有助于维持热带森林的生物多样性，为传粉昆虫提供花蜜，并支撑起让当地农民得以与其他作物一同可持续种植的农林复合系统。",
         ],
         [
-          "纯正锡兰肉桂与优质茶叶相融合，带来温暖舒缓、香料味淡雅的饮品——适合餐后小憩，也适合清晨提神。",
-          "融入天然肉桂风味与芳香草本的独特拼配，呈现甜、香、辛三者和谐之美——本厂招牌拼配之一。",
+          "纯正锡兰肉桂与优质茶叶相融合，带来温暖舒缓、香料味淡雅的饮品。适合餐后小憩，也适合清晨提神。",
+          "融入天然肉桂风味与芳香草本的独特拼配，呈现甜、香、辛三者和谐之美。本厂招牌拼配之一。",
         ],
       ],
       itemTags: [
@@ -6054,9 +6058,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       sectionBodies: [
         "「本物のシナモン」またはセイロンシナモンとして売られているCinnamomum verumは、クスノキ科の小さな常緑樹で、スリランカと南インドが原産です。商業的に重要なのは木の内側の樹皮で、これを剥いで乾燥させ、おなじみのシナモンスティックへと巻き上げます。水はけの良い土壌と安定した熱帯の降雨があれば、木は葉や精油も生み出し、どちらも世界中で料理や伝統医療に重宝されています。",
         "木そのものについて簡単にご紹介します：",
-        "収穫した枝は、皮を剥き始める前に樹皮が緩むよう、約1日休ませます——これは代々の皮剥き職人によって受け継がれてきた技術です。使用する道具はシンプルですが欠かせません。",
+        "収穫した枝は、皮を剥き始める前に樹皮が緩むよう、約1日休ませます。これは代々の皮剥き職人によって受け継がれてきた技術です。使用する道具はシンプルですが欠かせません。",
         "シナモンの価値は台所にとどまりません：",
-        "工場では、収穫したシナモンのすべてを原料香辛料として販売するのではなく、自社の紅茶ラインナップにおける付加価値素材としても活用しています——天然のスリランカ産シナモンを使用した2種類のプレミアムシナモンティーにブレンドし、純粋で香り高い味わいをお届けしています。より広く見ると、シナモン産業では通常、樹皮や葉を他の付加価値製品にも加工します——料理、化粧品、アロマセラピー用の樹皮油・葉油、粉末シナモン、食品グレードのオレオレジンなどです。",
+        "工場では、収穫したシナモンのすべてを原料香辛料として販売するのではなく、自社の紅茶ラインナップにおける付加価値素材としても活用しています。天然のスリランカ産シナモンを使用した2種類のプレミアムシナモンティーにブレンドし、純粋で香り高い味わいをお届けしています。より広く見ると、シナモン産業では通常、樹皮や葉を他の付加価値製品にも加工します。料理、化粧品、アロマセラピー用の樹皮油・葉油、粉末シナモン、食品グレードのオレオレジンなどです。",
       ],
       itemHeadings: [
         [],
@@ -6076,21 +6080,21 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
         ],
         [
           "収穫した枝を必要な長さに切り、本格的な皮剥き作業を始める前に樹皮を縦方向に割るために使う、フック状の大きなナイフです。",
-          "本格的な皮剥きを始める前に、枝に沿って引いて薄くざらついた外皮を削り取る、短い柄の付いたフック状の道具です——シンハラ語で「gaanawa」は「削る」を意味します。",
-          "緩んだ内側の樹皮をその長さに沿って切り込み、木質の茎から一本の帯状にはがし取るために使う、小さく湾曲した刃物です——シンハラ語で「thalanawa」は「剥く」を意味します。",
+          "本格的な皮剥きを始める前に、枝に沿って引いて薄くざらついた外皮を削り取る、短い柄の付いたフック状の道具です。シンハラ語で「gaanawa」は「削る」を意味します。",
+          "緩んだ内側の樹皮をその長さに沿って切り込み、木質の茎から一本の帯状にはがし取るために使う、小さく湾曲した刃物です。シンハラ語で「thalanawa」は「剥く」を意味します。",
           "切り込みを入れた樹皮の下に差し込み、枝の全長にわたって樹皮を破らずに木部からそっと分離させるための、滑らかで丸みを帯びた金属の棒です。",
           "剥いた樹皮を巻いて乾燥させる前に、均一な長さに切りそろえるために使います。",
           "何時間も鋭い皮剥き道具を扱う際、切り傷から指を守るために装着する保護カバーです。",
           "樹皮を切って巻く準備をする際に、均一な長さを測って印を付けるために使う目盛り付きの棒です。",
         ],
         [
-          "甘い料理にも塩気のある料理にも、飲み物や焼き菓子にも使われます——セイロンシナモンは、多くの市場で売られている、より樹皮が厚く強い味のカシア種に比べて、穏やかで繊細な甘みを持っています。",
+          "甘い料理にも塩気のある料理にも、飲み物や焼き菓子にも使われます。セイロンシナモンは、多くの市場で売られている、より樹皮が厚く強い味のカシア種に比べて、穏やかで繊細な甘みを持っています。",
           "抗酸化、抗炎症、抗菌作用があり、血糖値の調整、消化の促進、心臓の健康維持を助けるものとして伝統的に用いられてきました。その精油も伝統医療やアロマセラピーにおいて長い歴史を持っています。",
           "木々は熱帯林の生物多様性に貢献し、送粉者に蜜を提供し、地元の農家が他の作物と共に持続可能に栽培できる農林複合システムを支えています。",
         ],
         [
           "純粋なセイロンシナモンと上質な茶葉を組み合わせ、ほのかなスパイスの香りが漂う温かく落ち着いた一杯に仕上げました。食後のひとときにも、朝の爽やかなスタートにも最適です。",
-          "天然のシナモンの風味と香り高いハーブをブレンドした独自のブレンドで、甘さ、スパイス、香りの調和を引き出します——工場を代表するブレンドの一つです。",
+          "天然のシナモンの風味と香り高いハーブをブレンドした独自のブレンドで、甘さ、スパイス、香りの調和を引き出します。工場を代表するブレンドの一つです。",
         ],
       ],
       itemTags: [
