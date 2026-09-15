@@ -1773,7 +1773,7 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * other station affected.
  * "tea-center" gained a real photo the same day — a WhatsApp image of the
  * estate's own Tea Centre entrance (stone facade, signage, Ceylon Tea
- * Symbol) — added to the station's first section, "Tea Center". A second
+ * Symbol) — added to the station's first section, "Tea Centre". A second
  * photo, of the Tea Centre's own retail shelves stocked with grade-
  * labelled Pure Ceylon Tea boxes (OPA, OP, OP1, Pekoe visible), was added
  * to "Everyday Grades & Supermarket Tea". A third photo, of the estate's
@@ -2894,8 +2894,8 @@ export const STATIONS: Station[] = [
   {
     id: "tea-center",
     order: 25,
-    name: "Tea Center",
-    shortName: "Tea Center",
+    name: "Tea Centre",
+    shortName: "Tea Centre",
     icon: "Coffee",
     verified: true,
     lastVerified: "2026-09-09",
@@ -2903,9 +2903,9 @@ export const STATIONS: Station[] = [
     heroTagline: "Visitors sampling tea at the estate's own tasting counter.",
     sections: [
       {
-        heading: "Tea Center",
+        heading: "Tea Centre",
         image: teaCentreEntranceImg,
-        body: "The tour ends at the tea center, where a tasting panel checks every batch — not just here, but earlier too, whenever tea leaves the main factory for the local market or comes in for packing — for defects like over-fermentation, under-fermentation, or scorching, discarding anything that fails before it's sold and noting even minor issues so they can inform future production. On display here are two more small-batch specialties from the handmade factory, Flower Chakra and Tea Coin.",
+        body: "The tour ends at the tea centre, where a tasting panel checks every batch — not just here, but earlier too, whenever tea leaves the main factory for the local market or comes in for packing — for defects like over-fermentation, under-fermentation, or scorching, discarding anything that fails before it's sold and noting even minor issues so they can inform future production. On display here are two more small-batch specialties from the handmade factory, Flower Chakra and Tea Coin.",
       },
       {
         heading: "Brewing and Tasting",
