@@ -227,9 +227,11 @@ import type { StationTranslation } from "./stations";
  * the single "About the Cinnamon Tree" paragraph the 2026-09-09 pass had
  * covered. "ginger-turmeric" got the same full treatment the same day
  * (sectionBodies plus all three itemBodies arrays — Characteristics,
- * Benefits, and the 2 tea products — all 10 languages). Remaining
- * not-yet-naturalized stations (unique-fruits' fruit-gallery fields and
- * the untouched remainder of coconut-field/jaggery-palm beyond their one
+ * Benefits, and the 2 tea products — all 10 languages), as did
+ * "coconut-field" (heroTagline, sectionBodies, and both itemBodies
+ * arrays — Characteristics and Uses & Benefits — all 10 languages).
+ * Remaining not-yet-naturalized stations (unique-fruits' fruit-gallery
+ * fields and the untouched remainder of jaggery-palm beyond its one
  * already-rewritten "About the X" paragraph) are still to be done in a
  * future pass.
  */
@@ -922,13 +924,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "පොල් වත්ත",
-      heroTagline: "'ජීවන වෘක්ෂය' — වෙරළබඩ යෝධයෙකි, එහි කිසිවක්ම පාහේ අපතේ නොයයි.",
+      heroTagline: "'ජීවන වෘක්ෂය', වෙරළබඩ යෝධයෙකි, එහි කිසිවක්ම පාහේ අපතේ නොයයි.",
       sectionHeadings: ["පොල් ගස පිළිබඳ", "ලක්ෂණ", "භාවිත සහ ප්‍රතිලාභ", "පොල් සත්කාරයක්"],
       sectionBodies: [
-        "පොල් ගස (Cocos nucifera) Arecaceae පවුලට අයත් උස් ගසකි. එය ලොව පුරා නිවර්තන වෙරළබඩ ප්‍රදේශවල පුළුල් ලෙස වගා කෙරේ. 'ජීවන වෘක්ෂය' ලෙස හඳුන්වන මෙයින් සෑම කොටසක්ම ප්‍රයෝජනවත් වේ — පෝෂ්‍යදායී ගෙඩියේ සිට ප්‍රාණවත් වතුර, ලීය, කොළ, සහ තන්තු දක්වා. මෙම ගස වැලි සහිත, හොඳින් ජලය බැස යන පසෙහි වර්ධනය වන අතර ඉහළ ලවණතාවයට ඔරොත්තු දෙයි, එබැවින් වෙරළබඩ ප්‍රදේශවල සුලභය.",
+        "පොල් ගස (Cocos nucifera) Arecaceae පවුලට අයත් උස් ගසකි. එය ලොව පුරා නිවර්තන වෙරළබඩ ප්‍රදේශවල පුළුල් ලෙස වගා කෙරේ. 'ජීවන වෘක්ෂය' ලෙස හඳුන්වන මෙයින් සෑම කොටසක්ම ප්‍රයෝජනවත් වේ. පෝෂ්‍යදායී ගෙඩියේ සිට ප්‍රාණවත් වතුර, ලීය, කොළ, සහ තන්තු දක්වා. මෙම ගස වැලි සහිත, හොඳින් ජලය බැස යන පසෙහි වර්ධනය වන අතර ඉහළ ලවණතාවයට ඔරොත්තු දෙයි, එබැවින් වෙරළබඩ ප්‍රදේශවල සුලභය.",
         "ගස පිළිබඳ කෙටි විස්තරයක්:",
         "පොල් ගසේ වටිනාකම ගෙඩියට වඩා බොහෝ දුරට විහිදේ:",
-        "මෙම නැවතුම දැන් විස්තර කළ දේ ප්‍රායෝගිකව අත්විඳීමක් සමඟින් පැමිණේ — අමුත්තන්ට නැවුම් තැඹිලි ගෙඩියක් සත්කාර කරනු ලැබේ, එතැනම කපා, ගසෙන් තවමත් සිසිල්ව ඇති අතරම පිදුරු පොදකින් සෘජුවම පානය කරනු ලැබේ.",
+        "මෙම නැවතුම දැන් විස්තර කළ දේ ප්‍රායෝගිකව අත්විඳීමක් සමඟින් පැමිණේ. අමුත්තන්ට නැවුම් තැඹිලි ගෙඩියක් සත්කාර කරනු ලැබේ, එතැනම කපා, ගසෙන් තවමත් සිසිල්ව ඇති අතරම පිදුරු පොදකින් සෘජුවම පානය කරනු ලැබේ.",
       ],
       itemHeadings: [
         [],
@@ -945,9 +947,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "නිවර්තන වෙරළබඩ ප්‍රදේශ; සම්පූර්ණ හිරු එළිය සහිත වැලි, ලවණ පසෙහි වර්ධනය වේ.",
         ],
         [
-          "පොල් වතුර ප්‍රාණවත් පානයක් වන අතර, සුදු මඤ්ඤොක්කා (කොප්පරා) ආහාර පිසීමට, පිසීමට, සහ තෙල් උපුටා ගැනීමට භාවිතා කරයි; පොල් කිරි සහ ක්‍රීම් නිවර්තන ආහාර පිසීමේදී අත්‍යවශ්‍යය.",
-          "පොල් තෙල්හි ක්ෂුද්‍ර ජීවී විරෝධී සහ තෙතමනය සපයන ගුණාංග ඇත; පොල් වතුර තෙතමනය සපයන අතර විද්‍යුත් විච්ඡේදක බහුල වන අතර වකුගඩු හා හෘද සෞඛ්‍යයට සහාය වේ.",
-          "පොල් ගස් වෙරළබඩ පස ස්ථායීකරණය කිරීමට සහ ඛාදනය වැළැක්වීමට උපකාරී වේ; ඒවා බොහෝ වෙරළබඩ ජීවීන්ට සෙවන සහ වාසස්ථානය සපයන අතර දේශීය පරිසර පද්ධතිවලට සහාය වේ.",
+          "පොල් වතුර ප්‍රාණවත් පානයක් වන අතර, සුදු මඤ්ඤොක්කා (කොප්පරා) ආහාර පිසීමට, පිසීමට, සහ තෙල් උපුටා ගැනීමට භාවිතා කරයි. පොල් කිරි සහ ක්‍රීම් නිවර්තන ආහාර පිසීමේදී අත්‍යවශ්‍යය.",
+          "පොල් තෙල්හි ක්ෂුද්‍ර ජීවී විරෝධී සහ තෙතමනය සපයන ගුණාංග ඇත. පොල් වතුර තෙතමනය සපයන අතර විද්‍යුත් විච්ඡේදක බහුල වන අතර වකුගඩු හා හෘද සෞඛ්‍යයට සහාය වේ.",
+          "පොල් ගස් වෙරළබඩ පස ස්ථායීකරණය කිරීමට සහ ඛාදනය වැළැක්වීමට උපකාරී වේ. ඒවා බොහෝ වෙරළබඩ ජීවීන්ට සෙවන සහ වාසස්ථානය සපයන අතර දේශීය පරිසර පද්ධතිවලට සහාය වේ.",
         ],
       ],
       duration: "මිනිත්තු 5-10",
@@ -1537,13 +1539,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "தென்னை வயல்",
-      heroTagline: "'உயிர் மரம்' — கடலோர ராட்சதன், இதில் எதுவும் வீணாவதில்லை.",
+      heroTagline: "'உயிர் மரம்', கடலோர ராட்சதன், இதில் எதுவும் வீணாவதில்லை.",
       sectionHeadings: ["தென்னை மரத்தைப் பற்றி", "பண்புகள்", "பயன்கள் மற்றும் நன்மைகள்", "தேங்காய் உபசாரம்"],
       sectionBodies: [
-        "தென்னை மரம் (Cocos nucifera) Arecaceae குடும்பத்தைச் சேர்ந்த உயரமான பனை. இது உலகம் முழுவதும் வெப்பமண்டல கடலோரப் பகுதிகளில் பரவலாக பயிரிடப்படுகிறது. 'உயிர் மரம்' என அழைக்கப்படும் இதன் ஒவ்வொரு பகுதியும் பயனுள்ளதாக இருக்கிறது — சத்தான பழம் மற்றும் புத்துணர்ச்சியூட்டும் நீரிலிருந்து மரம், இலைகள், நார் வரை. இந்த மரம் மணல் நிறைந்த, நன்கு வடிகட்டும் மண்ணில் செழித்து வளர்கிறது, அதிக உப்புத்தன்மையையும் தாங்கக்கூடியது — இதனால் கடலோரங்களில் பொதுவானது.",
+        "தென்னை மரம் (Cocos nucifera) Arecaceae குடும்பத்தைச் சேர்ந்த உயரமான பனை. இது உலகம் முழுவதும் வெப்பமண்டல கடலோரப் பகுதிகளில் பரவலாக பயிரிடப்படுகிறது. 'உயிர் மரம்' என அழைக்கப்படும் இதன் ஒவ்வொரு பகுதியும் பயனுள்ளதாக இருக்கிறது. சத்தான பழம் மற்றும் புத்துணர்ச்சியூட்டும் நீரிலிருந்து மரம், இலைகள், நார் வரை. இந்த மரம் மணல் நிறைந்த, நன்கு வடிகட்டும் மண்ணில் செழித்து வளர்கிறது, அதிக உப்புத்தன்மையையும் தாங்கக்கூடியது. இதனால் கடலோரங்களில் பொதுவானது.",
         "பனையைப் பற்றிய ஒரு சுருக்கமான பார்வை:",
         "தென்னை பனையின் மதிப்பு பழத்தைத் தாண்டி விரிவடைகிறது:",
-        "இந்த நிறுத்தம் இப்போது விவரிக்கப்பட்டதை நேரடியாக அனுபவிக்கும் வாய்ப்புடன் வருகிறது — பார்வையாளர்களுக்கு புதிய இளநீர் வழங்கப்படுகிறது, அப்போதே வெட்டப்பட்டு, மரத்திலிருந்து இன்னும் குளிர்ச்சியாக இருக்கும் நிலையிலேயே வைக்கோல் மூலம் நேரடியாக பருகப்படுகிறது.",
+        "இந்த நிறுத்தம் இப்போது விவரிக்கப்பட்டதை நேரடியாக அனுபவிக்கும் வாய்ப்புடன் வருகிறது. பார்வையாளர்களுக்கு புதிய இளநீர் வழங்கப்படுகிறது, அப்போதே வெட்டப்பட்டு, மரத்திலிருந்து இன்னும் குளிர்ச்சியாக இருக்கும் நிலையிலேயே வைக்கோல் மூலம் நேரடியாக பருகப்படுகிறது.",
       ],
       itemHeadings: [
         [],
@@ -1560,9 +1562,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "வெப்பமண்டல கடலோரப் பகுதிகள்; முழு சூரிய ஒளியுடன் மணல், உப்பு மண்ணில் செழிக்கிறது.",
         ],
         [
-          "தேங்காய் நீர் ஒரு புத்துணர்ச்சியூட்டும் பானமாகும், மேலும் வெள்ளை சதை (கொப்பரா) சமையல், பேக்கிங், மற்றும் எண்ணெய் பிரித்தெடுத்தலுக்குப் பயன்படுத்தப்படுகிறது; தேங்காய் பால் மற்றும் கிரீம் வெப்பமண்டல உணவு வகைகளில் இன்றியமையாதவை.",
-          "தேங்காய் எண்ணெயில் நுண்ணுயிர் எதிர்ப்பு மற்றும் ஈரப்பதமூட்டும் பண்புகள் உள்ளன; தேங்காய் நீர் நீரேற்றமூட்டுவதுடன் எலக்ட்ரோலைட்டுகள் நிறைந்தது, சிறுநீரகம் மற்றும் இதய ஆரோக்கியத்திற்கு உதவுகிறது.",
-          "தென்னை மரங்கள் கடலோர மண்ணை உறுதிப்படுத்தவும் அரிப்பைத் தடுக்கவும் உதவுகின்றன; அவை பல கடலோர உயிரினங்களுக்கு நிழலும் வாழ்விடமும் வழங்கி உள்ளூர் சுற்றுச்சூழல் அமைப்புகளுக்கு ஆதரவளிக்கின்றன.",
+          "தேங்காய் நீர் ஒரு புத்துணர்ச்சியூட்டும் பானமாகும், மேலும் வெள்ளை சதை (கொப்பரா) சமையல், பேக்கிங், மற்றும் எண்ணெய் பிரித்தெடுத்தலுக்குப் பயன்படுத்தப்படுகிறது. தேங்காய் பால் மற்றும் கிரீம் வெப்பமண்டல உணவு வகைகளில் இன்றியமையாதவை.",
+          "தேங்காய் எண்ணெயில் நுண்ணுயிர் எதிர்ப்பு மற்றும் ஈரப்பதமூட்டும் பண்புகள் உள்ளன. தேங்காய் நீர் நீரேற்றமூட்டுவதுடன் எலக்ட்ரோலைட்டுகள் நிறைந்தது, சிறுநீரகம் மற்றும் இதய ஆரோக்கியத்திற்கு உதவுகிறது.",
+          "தென்னை மரங்கள் கடலோர மண்ணை உறுதிப்படுத்தவும் அரிப்பைத் தடுக்கவும் உதவுகின்றன. அவை பல கடலோர உயிரினங்களுக்கு நிழலும் வாழ்விடமும் வழங்கி உள்ளூர் சுற்றுச்சூழல் அமைப்புகளுக்கு ஆதரவளிக்கின்றன.",
         ],
       ],
       duration: "5-10 நிமிடங்கள்",
@@ -2152,13 +2154,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Campo di Cocco",
-      heroTagline: "L'\"Albero della Vita\" — un gigante costiero di cui non si spreca quasi nulla.",
+      heroTagline: "L'\"Albero della Vita\", un gigante costiero di cui non si spreca quasi nulla.",
       sectionHeadings: ["La Palma da Cocco", "Caratteristiche", "Usi e Benefici", "Un Assaggio di Cocco"],
       sectionBodies: [
         "La palma da cocco (Cocos nucifera) è una palma alta della famiglia delle Arecaceae. È ampiamente coltivata nelle regioni costiere tropicali di tutto il mondo. Conosciuta come l'\"Albero della Vita\", ogni sua parte è utile: dal frutto nutriente e dall'acqua rinfrescante al legno, alle foglie e alle fibre. L'albero prospera in terreni sabbiosi e ben drenati e resiste bene all'alta salinità, il che lo rende comune lungo le coste.",
         "Uno sguardo rapido alla palma stessa:",
         "Il valore della palma da cocco va ben oltre il frutto stesso:",
-        "Questa tappa offre un assaggio pratico di quanto appena descritto — ai visitatori viene offerta una king coconut fresca, aperta al momento e sorseggiata direttamente con una cannuccia, ancora fresca dall'albero.",
+        "Questa tappa offre un assaggio pratico di quanto appena descritto. Ai visitatori viene offerta una king coconut fresca, aperta al momento e sorseggiata direttamente con una cannuccia, ancora fresca dall'albero.",
       ],
       itemHeadings: [
         [],
@@ -2175,9 +2177,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Aree costiere tropicali; prospera in terreni sabbiosi e salini con piena esposizione al sole.",
         ],
         [
-          "L'acqua di cocco è una bevanda rinfrescante, e la polpa bianca (copra) è usata in cucina, nella panificazione e nell'estrazione dell'olio; il latte e la crema di cocco sono essenziali nelle cucine tropicali.",
-          "L'olio di cocco ha proprietà antimicrobiche e idratanti; l'acqua di cocco idrata ed è ricca di elettroliti, a sostegno della salute renale e cardiaca.",
-          "Le palme da cocco aiutano a stabilizzare i suoli costieri e a prevenire l'erosione; forniscono ombra e habitat a numerosi organismi costieri e sostengono gli ecosistemi locali.",
+          "L'acqua di cocco è una bevanda rinfrescante, e la polpa bianca (copra) è usata in cucina, nella panificazione e nell'estrazione dell'olio. Il latte e la crema di cocco sono essenziali nelle cucine tropicali.",
+          "L'olio di cocco ha proprietà antimicrobiche e idratanti. L'acqua di cocco idrata ed è ricca di elettroliti, a sostegno della salute renale e cardiaca.",
+          "Le palme da cocco aiutano a stabilizzare i suoli costieri e a prevenire l'erosione. Forniscono ombra e habitat a numerosi organismi costieri e sostengono gli ecosistemi locali.",
         ],
       ],
       duration: "5-10 minuti",
@@ -2767,13 +2769,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "حقل جوز الهند",
-      heroTagline: "«شجرة الحياة» — عملاق ساحلي لا يكاد يُهدر منه شيء.",
+      heroTagline: "«شجرة الحياة»، عملاق ساحلي لا يكاد يُهدر منه شيء.",
       sectionHeadings: ["عن شجرة جوز الهند", "الخصائص", "الاستخدامات والفوائد", "ضيافة جوز الهند"],
       sectionBodies: [
         "جوز الهند (Cocos nucifera) نخلة طويلة تنتمي إلى الفصيلة النخيلية. تُزرع على نطاق واسع في المناطق الساحلية الاستوائية حول العالم. تُعرف بـ«شجرة الحياة»، إذ يُستفاد من كل جزء منها: من ثمرتها المغذية ومائها المنعش إلى خشبها وأوراقها وأليافها. وتزدهر هذه الشجرة في التربة الرملية جيدة التصريف، وتتحمل الملوحة العالية، مما يجعلها شائعة على طول السواحل.",
         "نظرة سريعة على النخلة نفسها:",
         "تتجاوز قيمة نخلة جوز الهند الثمرة نفسها إلى حد بعيد:",
-        "تأتي هذه المحطة مصحوبة بتجربة عملية لما ورد وصفه للتو — يُقدَّم للزوار جوز هند ملكي (king coconut) طازج، يُفتح في الحال ويُشرب مباشرة بواسطة ماصة وهو لا يزال باردًا من الشجرة.",
+        "تأتي هذه المحطة مصحوبة بتجربة عملية لما ورد وصفه للتو. يُقدَّم للزوار جوز هند ملكي (king coconut) طازج، يُفتح في الحال ويُشرب مباشرة بواسطة ماصة وهو لا يزال باردًا من الشجرة.",
       ],
       itemHeadings: [
         [],
@@ -2790,9 +2792,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "المناطق الساحلية الاستوائية؛ تزدهر في التربة الرملية المالحة تحت أشعة الشمس الكاملة.",
         ],
         [
-          "ماء جوز الهند مشروب منعش، ويُستخدم اللب الأبيض (النارجيل المجفف) في الطهي والخَبز واستخلاص الزيت؛ ويُعد حليب وكريمة جوز الهند من العناصر الأساسية في المطابخ الاستوائية.",
-          "يتمتع زيت جوز الهند بخصائص مضادة للميكروبات ومرطبة؛ وماء جوز الهند مرطب وغني بالإلكتروليتات، ما يدعم صحة الكلى والقلب.",
-          "تساعد أشجار جوز الهند على تثبيت التربة الساحلية ومنع التآكل؛ وتوفر الظل والموطن للعديد من الكائنات الساحلية وتدعم النظم البيئية المحلية.",
+          "ماء جوز الهند مشروب منعش، ويُستخدم اللب الأبيض (النارجيل المجفف) في الطهي والخَبز واستخلاص الزيت. ويُعد حليب وكريمة جوز الهند من العناصر الأساسية في المطابخ الاستوائية.",
+          "يتمتع زيت جوز الهند بخصائص مضادة للميكروبات ومرطبة. وماء جوز الهند مرطب وغني بالإلكتروليتات، ما يدعم صحة الكلى والقلب.",
+          "تساعد أشجار جوز الهند على تثبيت التربة الساحلية ومنع التآكل. وتوفر الظل والموطن للعديد من الكائنات الساحلية وتدعم النظم البيئية المحلية.",
         ],
       ],
       duration: "5-10 دقائق",
@@ -3382,13 +3384,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Кокосовое поле",
-      heroTagline: "«Дерево жизни» — прибрежный гигант, у которого почти ничего не пропадает даром.",
+      heroTagline: "«Дерево жизни», прибрежный гигант, у которого почти ничего не пропадает даром.",
       sectionHeadings: ["О кокосовой пальме", "Характеристики", "Применение и польза", "Кокосовое угощение"],
       sectionBodies: [
         "Кокосовая пальма (Cocos nucifera) — высокая пальма семейства Арековые. Её широко культивируют в тропических прибрежных регионах по всему миру. Известная как «дерево жизни», она полезна каждой своей частью: от питательного плода и освежающей воды до древесины, листьев и волокна. Дерево хорошо растёт на песчаных, хорошо дренированных почвах и выдерживает высокую засолённость, поэтому оно так распространено вдоль побережий.",
         "Краткий обзор самой пальмы:",
         "Ценность кокосовой пальмы выходит далеко за рамки самого плода:",
-        "Эта остановка сопровождается практической дегустацией только что описанного — посетителям предлагают свежий королевский кокос (king coconut), который вскрывают прямо на месте и пьют через трубочку, пока он ещё прохладный, только что с дерева.",
+        "Эта остановка сопровождается практической дегустацией только что описанного. Посетителям предлагают свежий королевский кокос (king coconut), который вскрывают прямо на месте и пьют через трубочку, пока он ещё прохладный, только что с дерева.",
       ],
       itemHeadings: [
         [],
@@ -3405,9 +3407,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Тропические прибрежные районы; хорошо растёт на песчаных, солёных почвах при полном солнечном освещении.",
         ],
         [
-          "Кокосовая вода — освежающий напиток, а белая мякоть (копра) используется в кулинарии, выпечке и для производства масла; кокосовое молоко и сливки незаменимы в тропической кухне.",
-          "Кокосовое масло обладает антимикробными и увлажняющими свойствами; кокосовая вода увлажняет организм и богата электролитами, поддерживая здоровье почек и сердца.",
-          "Кокосовые пальмы помогают стабилизировать прибрежные почвы и предотвращать эрозию; они дают тень и среду обитания множеству прибрежных организмов и поддерживают местные экосистемы.",
+          "Кокосовая вода — освежающий напиток, а белая мякоть (копра) используется в кулинарии, выпечке и для производства масла. Кокосовое молоко и сливки незаменимы в тропической кухне.",
+          "Кокосовое масло обладает антимикробными и увлажняющими свойствами. Кокосовая вода увлажняет организм и богата электролитами, поддерживая здоровье почек и сердца.",
+          "Кокосовые пальмы помогают стабилизировать прибрежные почвы и предотвращать эрозию. Они дают тень и среду обитания множеству прибрежных организмов и поддерживают местные экосистемы.",
         ],
       ],
       duration: "5–10 минут",
@@ -3997,13 +3999,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Kokosnussfeld",
-      heroTagline: "Der „Baum des Lebens“ — ein Küstenriese, bei dem fast nichts verschwendet wird.",
+      heroTagline: "Der „Baum des Lebens“, ein Küstenriese, bei dem fast nichts verschwendet wird.",
       sectionHeadings: ["Über die Kokospalme", "Merkmale", "Verwendung und Nutzen", "Eine Kokosnuss-Erfrischung"],
       sectionBodies: [
         "Die Kokospalme (Cocos nucifera) ist eine hohe Palme aus der Familie der Arecaceae. Sie wird weltweit in tropischen Küstenregionen weit verbreitet angebaut. Als „Baum des Lebens“ bekannt, ist jeder Teil von ihr nützlich: von der nahrhaften Frucht und dem erfrischenden Wasser bis hin zu Holz, Blättern und Fasern. Der Baum gedeiht auf sandigen, gut durchlässigen Böden und verträgt hohe Salzgehalte, weshalb er entlang von Küsten so verbreitet ist.",
         "Ein kurzer Blick auf die Palme selbst:",
         "Der Wert der Kokospalme geht weit über die Frucht selbst hinaus:",
-        "Diese Station bringt eine praktische Kostprobe dessen, was gerade beschrieben wurde — Besucher werden mit einer frischen King Coconut verwöhnt, die vor Ort aufgeschnitten und direkt mit einem Strohhalm getrunken wird, noch kühl vom Baum.",
+        "Diese Station bringt eine praktische Kostprobe dessen, was gerade beschrieben wurde. Besucher werden mit einer frischen King Coconut verwöhnt, die vor Ort aufgeschnitten und direkt mit einem Strohhalm getrunken wird, noch kühl vom Baum.",
       ],
       itemHeadings: [
         [],
@@ -4020,9 +4022,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Tropische Küstengebiete; gedeiht auf sandigen, salzigen Böden bei voller Sonneneinstrahlung.",
         ],
         [
-          "Kokoswasser ist ein erfrischendes Getränk, und das weiße Fruchtfleisch (Kopra) wird zum Kochen, Backen und zur Ölgewinnung verwendet; Kokosmilch und -sahne sind in der tropischen Küche unverzichtbar.",
-          "Kokosöl hat antimikrobielle und feuchtigkeitsspendende Eigenschaften; Kokoswasser spendet Flüssigkeit und ist reich an Elektrolyten, was die Nieren- und Herzgesundheit unterstützt.",
-          "Kokospalmen helfen, Küstenböden zu stabilisieren und Erosion vorzubeugen; sie bieten zahlreichen Küstenorganismen Schatten und Lebensraum und unterstützen lokale Ökosysteme.",
+          "Kokoswasser ist ein erfrischendes Getränk, und das weiße Fruchtfleisch (Kopra) wird zum Kochen, Backen und zur Ölgewinnung verwendet. Kokosmilch und -sahne sind in der tropischen Küche unverzichtbar.",
+          "Kokosöl hat antimikrobielle und feuchtigkeitsspendende Eigenschaften. Kokoswasser spendet Flüssigkeit und ist reich an Elektrolyten, was die Nieren- und Herzgesundheit unterstützt.",
+          "Kokospalmen helfen, Küstenböden zu stabilisieren und Erosion vorzubeugen. Sie bieten zahlreichen Küstenorganismen Schatten und Lebensraum und unterstützen lokale Ökosysteme.",
         ],
       ],
       duration: "5-10 Minuten",
@@ -4612,13 +4614,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Campo de Cocoteros",
-      heroTagline: "El «Árbol de la Vida» — un gigante costero del que casi nada se desperdicia.",
+      heroTagline: "El «Árbol de la Vida», un gigante costero del que casi nada se desperdicia.",
       sectionHeadings: ["Sobre la Palma de Coco", "Características", "Usos y Beneficios", "Un Refrigerio de Coco"],
       sectionBodies: [
         "La palmera de coco (Cocos nucifera) es una palmera alta de la familia Arecaceae. Se cultiva ampliamente en regiones costeras tropicales de todo el mundo. Conocida como el «Árbol de la Vida», todas sus partes son útiles: desde su fruto nutritivo y su agua refrescante hasta su madera, hojas y fibra. El árbol prospera en suelos arenosos bien drenados y puede resistir una alta salinidad, lo que lo hace común a lo largo de las costas.",
         "Un vistazo rápido a la palmera:",
         "El valor de la palmera de coco va mucho más allá del propio fruto:",
-        "Esta parada viene con una degustación práctica de lo que se acaba de describir — a los visitantes se les ofrece un coco rey (king coconut) fresco, abierto en el momento y bebido directamente con una pajita, todavía frío recién bajado del árbol.",
+        "Esta parada viene con una degustación práctica de lo que se acaba de describir. A los visitantes se les ofrece un coco rey (king coconut) fresco, abierto en el momento y bebido directamente con una pajita, todavía frío recién bajado del árbol.",
       ],
       itemHeadings: [
         [],
@@ -4635,9 +4637,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Áreas costeras tropicales; prospera en suelos arenosos y salinos con plena exposición al sol.",
         ],
         [
-          "El agua de coco es una bebida refrescante, y la pulpa blanca (copra) se usa para cocinar, hornear y extraer aceite; la leche y la crema de coco son esenciales en las cocinas tropicales.",
-          "El aceite de coco tiene propiedades antimicrobianas e hidratantes; el agua de coco hidrata y es rica en electrolitos, favoreciendo la salud renal y cardíaca.",
-          "Las palmeras de coco ayudan a estabilizar los suelos costeros y a prevenir la erosión; proporcionan sombra y hábitat a numerosos organismos costeros y sostienen los ecosistemas locales.",
+          "El agua de coco es una bebida refrescante, y la pulpa blanca (copra) se usa para cocinar, hornear y extraer aceite. La leche y la crema de coco son esenciales en las cocinas tropicales.",
+          "El aceite de coco tiene propiedades antimicrobianas e hidratantes. El agua de coco hidrata y es rica en electrolitos, favoreciendo la salud renal y cardíaca.",
+          "Las palmeras de coco ayudan a estabilizar los suelos costeros y a prevenir la erosión. Proporcionan sombra y hábitat a numerosos organismos costeros y sostienen los ecosistemas locales.",
         ],
       ],
       duration: "5-10 minutos",
@@ -5227,13 +5229,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "Champ de Cocotiers",
-      heroTagline: "L'« Arbre de Vie » — un géant côtier dont presque rien ne se perd.",
+      heroTagline: "L'« Arbre de Vie », un géant côtier dont presque rien ne se perd.",
       sectionHeadings: ["À propos du Cocotier", "Caractéristiques", "Usages et Bienfaits", "Une Pause Noix de Coco"],
       sectionBodies: [
         "Le cocotier (Cocos nucifera) est un grand palmier de la famille des Arecaceae. Il est largement cultivé dans les régions côtières tropicales du monde entier. Connu comme l'« Arbre de Vie », chacune de ses parties est utile : de son fruit nourrissant et de son eau rafraîchissante à son bois, ses feuilles et ses fibres. L'arbre prospère dans les sols sableux et bien drainés et peut résister à une forte salinité, ce qui le rend courant le long des côtes.",
         "Un aperçu rapide du palmier lui-même :",
         "La valeur du cocotier va bien au-delà du fruit lui-même :",
-        "Cette étape s'accompagne d'une dégustation pratique de ce qui vient d'être décrit — les visiteurs se voient offrir une noix de coco royale (king coconut) fraîche, ouverte sur place et bue directement à la paille, encore fraîche de l'arbre.",
+        "Cette étape s'accompagne d'une dégustation pratique de ce qui vient d'être décrit. Les visiteurs se voient offrir une noix de coco royale (king coconut) fraîche, ouverte sur place et bue directement à la paille, encore fraîche de l'arbre.",
       ],
       itemHeadings: [
         [],
@@ -5250,9 +5252,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "Zones côtières tropicales ; prospère dans les sols sableux et salins en plein soleil.",
         ],
         [
-          "L'eau de coco est une boisson rafraîchissante, et la chair blanche (coprah) est utilisée en cuisine, en pâtisserie et pour l'extraction d'huile ; le lait et la crème de coco sont essentiels dans les cuisines tropicales.",
-          "L'huile de coco a des propriétés antimicrobiennes et hydratantes ; l'eau de coco hydrate et est riche en électrolytes, favorisant la santé rénale et cardiaque.",
-          "Les cocotiers aident à stabiliser les sols côtiers et à prévenir l'érosion ; ils offrent ombre et habitat à de nombreux organismes côtiers et soutiennent les écosystèmes locaux.",
+          "L'eau de coco est une boisson rafraîchissante, et la chair blanche (coprah) est utilisée en cuisine, en pâtisserie et pour l'extraction d'huile. Le lait et la crème de coco sont essentiels dans les cuisines tropicales.",
+          "L'huile de coco a des propriétés antimicrobiennes et hydratantes. L'eau de coco hydrate et est riche en électrolytes, favorisant la santé rénale et cardiaque.",
+          "Les cocotiers aident à stabiliser les sols côtiers et à prévenir l'érosion. Ils offrent ombre et habitat à de nombreux organismes côtiers et soutiennent les écosystèmes locaux.",
         ],
       ],
       duration: "5-10 minutes",
@@ -5842,13 +5844,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "椰园",
-      heroTagline: "「生命之树」——一种几乎全身都不会被浪费的海岸巨树。",
+      heroTagline: "「生命之树」，一种几乎全身都不会被浪费的海岸巨树。",
       sectionHeadings: ["关于椰子树", "特征", "用途与益处", "椰子款待"],
       sectionBodies: [
         "椰子树（Cocos nucifera）是棕榈科的一种高大棕榈树，广泛种植于世界各地的热带沿海地区。被誉为「生命之树」，它的每一部分都物尽其用，从营养丰富的果实、清凉解渴的椰子水，到木材、叶片与纤维。这种树在排水良好的沙质土壤中长势良好，并能耐受高盐分，因此在海岸线一带十分常见。",
         "棕榈树本身的简要介绍：",
         "椰子树的价值远不止果实本身：",
-        "这一站带来一次亲身体验，正好呼应上文所述——游客会获赠一颗新鲜的王椰（king coconut），当场切开，插上吸管直接饮用，椰子仍带着刚从树上摘下的清凉。",
+        "这一站带来一次亲身体验，正好呼应上文所述。游客会获赠一颗新鲜的王椰（king coconut），当场切开，插上吸管直接饮用，椰子仍带着刚从树上摘下的清凉。",
       ],
       itemHeadings: [
         [],
@@ -5865,9 +5867,9 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
           "热带沿海地区；在阳光充足、排水良好的沙质盐碱地中长势良好。",
         ],
         [
-          "椰子水是一种清凉饮品，白色果肉（椰干）可用于烹饪、烘焙及榨油；椰奶与椰浆是热带菜肴中不可或缺的食材。",
-          "椰子油具有抗菌与保湿特性；椰子水能补充水分并富含电解质，有助于肾脏与心脏健康。",
-          "椰子树有助于稳固海岸土壤、防止水土流失；它们为众多沿海生物提供遮荫与栖息地，支持当地生态系统。",
+          "椰子水是一种清凉饮品，白色果肉（椰干）可用于烹饪、烘焙及榨油。椰奶与椰浆是热带菜肴中不可或缺的食材。",
+          "椰子油具有抗菌与保湿特性。椰子水能补充水分并富含电解质，有助于肾脏与心脏健康。",
+          "椰子树有助于稳固海岸土壤、防止水土流失。它们为众多沿海生物提供遮荫与栖息地，支持当地生态系统。",
         ],
       ],
       duration: "5-10分钟",
@@ -6457,13 +6459,13 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "coconut-field": {
       name: "ココナッツ畑",
-      heroTagline: "「生命の木」——ほとんど無駄になる部分がない、海岸の巨木。",
+      heroTagline: "「生命の木」、ほとんど無駄になる部分がない海岸の巨木。",
       sectionHeadings: ["ココナッツヤシについて", "特徴", "用途と効能", "ココナッツのおもてなし"],
       sectionBodies: [
         "ココナッツヤシ（Cocos nucifera）はヤシ科に属する背の高いヤシで、世界中の熱帯沿岸地域で広く栽培されています。「生命の木」として知られ、その全ての部分が役立ちます。栄養豊富な果実や爽やかなココナッツウォーターから、木材、葉、繊維まで無駄がありません。この木は水はけのよい砂質の土壤でよく育ち、高い塩分にも耐えられるため、海岸沿いでよく見られます。",
         "ヤシそのものを簡単に見てみましょう：",
         "ココナッツヤシの価値は、果実そのものだけにとどまりません：",
-        "このストップでは、今説明した内容を実際に体験できます——訪問者にはその場でカットした新鮮なキングココナッツが振る舞われ、木からもぎたての冷たさが残るうちに、ストローでそのまま飲むことができます。",
+        "このストップでは、今説明した内容を実際に体験できます。訪問者にはその場でカットした新鮮なキングココナッツが振る舞われ、木からもぎたての冷たさが残るうちに、ストローでそのまま飲むことができます。",
       ],
       itemHeadings: [
         [],
