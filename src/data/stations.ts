@@ -313,22 +313,30 @@ import gradedTeaSacksImg from "../assets/packing/graded-tea-sacks.jpg";
 // radish) and the misting system in use. Used directly as "polytunnel"'s
 // heroImage. See the provenance note near the "polytunnel" station below.
 import polytunnelInteriorImg from "../assets/polytunnel/polytunnel-interior.jpg";
-// Real, user-supplied photos of individual seedlings growing in the
-// estate's own polytunnel grow bags, identified by leaf shape against the
-// station's existing crop list. See the provenance note near the
-// "polytunnel" station below.
 // Real, user-supplied photo of the estate's own polytunnel rows — grow
 // bags on roof-tile risers with a drip line to each, matching the
 // "Watering & Irrigation" section's description. See the provenance note
 // near the "polytunnel" station below.
 import dripIrrigationImg from "../assets/polytunnel/drip-irrigation.jpg";
-import gherkinSeedling1Img from "../assets/polytunnel/gherkin-seedling-1.jpg";
-import gherkinSeedling2Img from "../assets/polytunnel/gherkin-seedling-2.jpg";
-import radishSeedlingImg from "../assets/polytunnel/radish-seedling.jpg";
-import cabbageSeedlingImg from "../assets/polytunnel/cabbage-seedling.jpg";
-import pepperSeedling1Img from "../assets/polytunnel/pepper-seedling-1.jpg";
-import pepperSeedling2Img from "../assets/polytunnel/pepper-seedling-2.jpg";
 import tomatoSeedlingImg from "../assets/polytunnel/tomato-seedling.jpg";
+// Real, user-supplied photos of individual seedlings growing in the
+// estate's own polytunnel grow bags, each explicitly named by the user
+// (Sinhala names given, romanised here) and cross-checked against a
+// supplied "Plant Identification" record for its scientific name. Replace
+// an earlier, incorrect leaf-shape-guessed set (gherkin/radish/chilli
+// photos that turned out to be beans, red cabbage, and unspecified
+// peppers). See the provenance note near the "polytunnel" station below.
+import fertigationControlHeadImg from "../assets/polytunnel/fertigation-control-head.jpg";
+import maluMirisImg from "../assets/polytunnel/malu-miris-capsicum.jpg";
+import amuMirisImg from "../assets/polytunnel/amu-miris-chilli.jpg";
+import naiMirisImg from "../assets/polytunnel/nai-miris.jpg";
+import gediGowaImg from "../assets/polytunnel/gedi-gowa-cabbage.jpg";
+import athuGowaImg from "../assets/polytunnel/athu-gowa-red-cabbage.jpg";
+import bonchiImg from "../assets/polytunnel/bonchi-green-beans.jpg";
+import raabuImg from "../assets/polytunnel/raabu-radish.jpg";
+import carrotSeedlingImg from "../assets/polytunnel/carrot-seedling.jpg";
+import leeksSeedlingImg from "../assets/polytunnel/leeks-seedling.jpg";
+import cucumberSeedlingImg from "../assets/polytunnel/cucumber-seedling.jpg";
 // Free-license stock photos (Pexels), not estate photos — no real photo of
 // the estate's own mushroom hut has been supplied yet. Used to illustrate
 // "mushroom-hut"'s generic, standard-knowledge sections. See the
@@ -1587,6 +1595,35 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * Seedling"), the same one-photo(-or-pair)-per-section pattern used by the
  * nursery station's labelled TRI cultivar plants. No other content in this
  * or any other station changed.
+ * That leaf-shape guessing turned out wrong for four of the five: the
+ * user pointed it out and, shortly after, supplied a fresh, explicitly
+ * labelled set of 10 seedling photos (Sinhala names given for each) plus
+ * a "Plant Identification" PDF recording each crop's scientific name. Only
+ * the scientific names were taken from that PDF, per the user's
+ * instruction; English names come from the PDF's own "Crop name" field
+ * where it gave one (Capsicum, Chilli, Cabbage spp, Cabbage (red), Green
+ * beans, Radish, Carrot, Leeks, Salad Cucumber), or — for "Nai miris",
+ * which the PDF and the user both leave in Sinhala with no separate
+ * English term — a plain, literal translation ("cobra chilli") noted in
+ * the section body rather than asserted as an official name. The four
+ * wrong sections ("Gherkin Seedlings", "Radish Seedling", "Cabbage
+ * Seedling", "Chilli Pepper Seedlings") were replaced with ten sections,
+ * one per photo, headed "[Romanised Sinhala name] ([English name])" —
+ * matching the "Kaththa (Large Knife)" style already used by the cinnamon
+ * station's tool sections — in the order the user supplied them: "Malu
+ * Miris (Capsicum)", "Amu Miris (Chilli)", "Nai Miris", "Gedi Gowa
+ * (Cabbage)", "Athu Gowa (Red Cabbage)", "Bonchi (Green Beans)", "Raabu
+ * (Radish)", "Carrot", "Leeks", "Cucumber". The old, wrongly-identified
+ * gherkin/radish/cabbage/pepper image files were deleted outright, same
+ * "remove rather than keep as a fallback" pattern used elsewhere in this
+ * project. A new "Fertigation Control Head" section was added right after
+ * "Harvest Timing" (before the crop sections) for a photo the user
+ * separately supplied of the polytunnel's own fertiliser-injection and
+ * filtration setup. Sections 1-3 ("About the Polytunnel & Greenhouse",
+ * "Watering & Irrigation", "Harvest Timing") and "Tomato Seedling" — which
+ * was correctly identified the first time — were left completely
+ * untouched, per the user's explicit instruction. No wording in those
+ * four sections changed.
  * "polytunnel"'s "Watering & Irrigation" section briefly used a free-
  * license Pexels stock photo of coir grow bags with drip lines, until the
  * user supplied a real photo of the estate's own polytunnel rows the same
@@ -2892,24 +2929,59 @@ export const STATIONS: Station[] = [
         body: "Time to first harvest varies widely by crop, from as little as 25-35 days for radish up to 90-120 days for leeks, so the polytunnel should have something ready to pick at almost any point in the season. Growing such a wide mix of fast- and slow-maturing vegetables side by side is itself a deliberate choice, since it staggers harvests naturally rather than having everything ready — or finished — all at once.",
       },
       {
-        heading: "Gherkin Seedlings",
-        image: [gherkinSeedling1Img, gherkinSeedling2Img],
-        body: "These two seedlings, still just a leaf or two along, are gherkins — identifiable by the heart-shaped true leaves typical of the cucumber family, growing here in coir-filled grow bags with a drip line already run to the base of each plant.",
+        heading: "Fertigation Control Head",
+        image: fertigationControlHeadImg,
+        body: "This control head feeds the drip lines running to every grow bag — a filter to keep sediment out, a pressure gauge, shut-off valves for isolating sections of pipe, and two fertiliser tanks fitted with a venturi injector that meters liquid fertiliser straight into the irrigation water as it passes through, so each plant is watered and fed in the same pass.",
       },
       {
-        heading: "Radish Seedling",
-        image: radishSeedlingImg,
-        body: "The pink-tinged stem and leaves on this seedling are characteristic of radish — one of the fastest crops in the polytunnel to reach harvest, ready to pick in as little as 25-35 days.",
+        heading: "Malu Miris (Capsicum)",
+        image: maluMirisImg,
+        body: "With its glossy, pointed oval leaves growing in opposite pairs, this seedling is Malu Miris, a capsicum (Capsicum annuum) — grown here in a coir-filled grow bag with a drip line already run to its base.",
       },
       {
-        heading: "Cabbage Seedling",
-        image: cabbageSeedlingImg,
-        body: "With rounder, slightly waxy-looking leaves and a green (rather than pink-tinged) stem, this seedling is cabbage — a much slower crop than radish, planted out here well before its head begins to form.",
+        heading: "Amu Miris (Chilli)",
+        image: amuMirisImg,
+        body: "This seedling is Amu Miris, a chilli (Capsicum annuum) — at this early stage its leaves are almost indistinguishable from the capsicum's, since both are the same species grown for different uses.",
       },
       {
-        heading: "Chilli Pepper Seedlings",
-        image: [pepperSeedling1Img, pepperSeedling2Img],
-        body: "These young plants, with their glossy, pointed oval leaves growing in opposite pairs, are chilli or bell peppers. The polytunnel grows several pepper varieties side by side — Scotch Bonnet, green chilli, capsicum, and bell pepper among them — which look essentially identical to one another at this early seedling stage.",
+        heading: "Nai Miris",
+        image: naiMirisImg,
+        body: "Nai Miris — Sinhala for 'cobra chilli' — is Capsicum chinense, a different and generally hotter species from the estate's other peppers, related to varieties like habanero and Scotch Bonnet.",
+      },
+      {
+        heading: "Gedi Gowa (Cabbage)",
+        image: gediGowaImg,
+        body: "This seedling's rounder, slightly waxy-looking leaves belong to Gedi Gowa — literally 'ball cabbage' — the common head-forming cabbage (Brassica oleracea var. capitata), planted out here well before its head begins to form.",
+      },
+      {
+        heading: "Athu Gowa (Red Cabbage)",
+        image: athuGowaImg,
+        body: "The reddish-purple leaves on this seedling belong to Athu Gowa — literally 'branch cabbage' — a looser, non-heading cabbage (Brassica oleracea var. acephala) rather than the ball-forming type.",
+      },
+      {
+        heading: "Bonchi (Green Beans)",
+        image: bonchiImg,
+        body: "These broad, heart-shaped leaves belong to Bonchi, green beans (Phaseolus vulgaris) — a climbing crop once it gets going, quite different in habit from the low-growing vegetables around it.",
+      },
+      {
+        heading: "Raabu (Radish)",
+        image: raabuImg,
+        body: "This tiny seedling, still just at the cotyledon stage, is Raabu, radish (Raphanus sativus) — one of the fastest crops in the polytunnel to reach harvest, ready to pick in as little as 25-35 days.",
+      },
+      {
+        heading: "Carrot",
+        image: carrotSeedlingImg,
+        body: "Carrot (Daucus carota subsp. sativus) is recognisable even this early by its thin, grass-like first leaves, quite different from the broad seed leaves of the other vegetables grown here.",
+      },
+      {
+        heading: "Leeks",
+        image: leeksSeedlingImg,
+        body: "Leeks (Allium ampeloprasum) emerge as a single thin blade, among the slowest crops in the polytunnel to reach harvest — as long as 90-120 days from planting.",
+      },
+      {
+        heading: "Cucumber",
+        image: cucumberSeedlingImg,
+        body: "This seedling's two broad, rounded seed leaves are the cotyledons of a salad cucumber (Cucumis sativus), before its true, more heart-shaped leaves appear.",
       },
       {
         heading: "Tomato Seedling",
