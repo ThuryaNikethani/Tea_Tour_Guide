@@ -1676,6 +1676,27 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * already turning the coppery-brown colour the text describes. Added to
  * the "From Green to Copper" section, the one that specifically describes
  * this colour change. No wording changed; no other station affected.
+ * "cinnamon"'s `processVideo` was extended on 2026-09-15 with a second
+ * clip — a real WhatsApp video of a peeler demonstrating the peeling
+ * technique live to seated visitors, relevant specifically to the
+ * "Peeling Cinnamon: Tools & Process" section, though `processVideo` is a
+ * station-level field that plays once after the last section rather than
+ * being attachable to one section, so it was appended to the existing
+ * clip instead of introducing a new per-section video field. The two
+ * clips differ in aspect ratio (848x480 vs 704x480) and frame rate (30fps
+ * vs 59.94fps); rather than stretching the narrower clip to fill the wider
+ * frame (which would have distorted it), it was padded with black bars to
+ * preserve its own proportions, and both were normalised to 30fps before
+ * concatenation via `filter_complex concat` (re-encoded, libx264 crf 28).
+ * The new clip runs 8m52s against the original 1m33s, so the combined
+ * video was re-encoded at a lower bitrate (~500kbps, ~39MB total) to keep
+ * the file web-sized. Per the user's request the new clip carries no
+ * audio; since the two clips are now one continuous file, the original
+ * clip's audio track was dropped too rather than producing a video with
+ * sound for part of its length and silence for the rest — consistent with
+ * every other process video on the site already being silent. Same file
+ * path (`cinnamon-peeling-process.mp4`), so no `stations.ts` code change
+ * was needed. No wording changed; no other station affected.
  */
 export const STATIONS: Station[] = [
   {
