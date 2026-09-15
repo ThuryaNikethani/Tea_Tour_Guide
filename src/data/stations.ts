@@ -357,6 +357,10 @@ import teaFactoryCollageImg from "../assets/tea-factory/tea-factory-collage.jpg"
 // confirmed with the user. Used as "tea-center"'s heroImage. See the
 // provenance note near the "tea-center" station below.
 import teaCenterCollageImg from "../assets/tea-center/tea-center-collage.jpg";
+// Real, user-supplied photo of the estate's own Tea Centre entrance —
+// stone facade, signage, and the Ceylon Tea Symbol. See the provenance
+// note near the "tea-center" station below.
+import teaCentreEntranceImg from "../assets/tea-center/tea-centre-entrance.jpg";
 // A generated collage combining the same four signposted TRI cultivar
 // photos already used in the nursery station's "Tea Cultivars" sections.
 // Used as "clonal-tea"'s heroImage. See the provenance note near the
@@ -1759,6 +1763,10 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * stamped directly on it). Not an estate photo — no real photo of the
  * estate's own bag weighing has been supplied yet. No wording changed; no
  * other station affected.
+ * "tea-center" gained a real photo the same day — a WhatsApp image of the
+ * estate's own Tea Centre entrance (stone facade, signage, Ceylon Tea
+ * Symbol) — added to the station's first section, "Tea Center". No
+ * wording changed; no other station affected.
  */
 export const STATIONS: Station[] = [
   {
@@ -2883,6 +2891,7 @@ export const STATIONS: Station[] = [
     sections: [
       {
         heading: "Tea Center",
+        image: teaCentreEntranceImg,
         body: "The tour ends at the tea center, where a tasting panel checks every batch — not just here, but earlier too, whenever tea leaves the main factory for the local market or comes in for packing — for defects like over-fermentation, under-fermentation, or scorching, discarding anything that fails before it's sold and noting even minor issues so they can inform future production. On display here are two more small-batch specialties from the handmade factory, Flower Chakra and Tea Coin.",
       },
       {
