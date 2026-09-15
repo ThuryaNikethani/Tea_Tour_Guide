@@ -361,6 +361,10 @@ import teaCenterCollageImg from "../assets/tea-center/tea-center-collage.jpg";
 // stone facade, signage, and the Ceylon Tea Symbol. See the provenance
 // note near the "tea-center" station below.
 import teaCentreEntranceImg from "../assets/tea-center/tea-centre-entrance.jpg";
+// Real, user-supplied photo of the estate's own Tea Centre retail
+// shelves, showing grade-labelled Pure Ceylon Tea boxes (OPA, OP, OP1,
+// Pekoe). See the provenance note near the "tea-center" station below.
+import teaCentreShopShelvesImg from "../assets/tea-center/tea-centre-shop-shelves.jpg";
 // A generated collage combining the same four signposted TRI cultivar
 // photos already used in the nursery station's "Tea Cultivars" sections.
 // Used as "clonal-tea"'s heroImage. See the provenance note near the
@@ -1765,8 +1769,11 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * other station affected.
  * "tea-center" gained a real photo the same day — a WhatsApp image of the
  * estate's own Tea Centre entrance (stone facade, signage, Ceylon Tea
- * Symbol) — added to the station's first section, "Tea Center". No
- * wording changed; no other station affected.
+ * Symbol) — added to the station's first section, "Tea Center". A second
+ * photo, of the Tea Centre's own retail shelves stocked with grade-
+ * labelled Pure Ceylon Tea boxes (OPA, OP, OP1, Pekoe visible), was added
+ * to "Everyday Grades & Supermarket Tea". No wording changed; no other
+ * station affected.
  */
 export const STATIONS: Station[] = [
   {
@@ -2900,6 +2907,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "Everyday Grades & Supermarket Tea",
+        image: teaCentreShopShelvesImg,
         body: "BOPF and BOPF Special are the grades most Sri Lankans actually drink day to day; Dust and Dust 1, the lowest grades, are never sent to export markets and are what typically ends up — with added colouring — in cheap supermarket tea bags, which is why the colour appears the instant they're dipped rather than after a proper steep. Much of what's sold in supermarkets is also blended with cheaper tea bought in from elsewhere, unlike the estate's own unblended, single-origin teas.",
       },
       {
