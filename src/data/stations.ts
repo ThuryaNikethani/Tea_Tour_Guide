@@ -20,6 +20,8 @@ export interface StationSection {
   imageCredit?: string;
   /** When set, renders each as its own card (image + heading + body + tags) instead of one blended paragraph. */
   items?: StationSubItem[];
+  /** A process video specific to this one section, rendered inline below its body — unlike `Station.processVideo`, which plays once after the whole station's last section. */
+  video?: string;
   /**
    * When set, this section renders as a gallery of selectable cards (thumbnail +
    * name) instead of body/items. Clicking a card shows that one fruit's full
@@ -1780,6 +1782,16 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * own tasting counter with graded tea samples laid out in a row of
  * dishes, was added to "Herbal & Spice Blends" at the user's direction.
  * No wording changed; no other station affected.
+ * "cinnamon"'s `processVideo` was moved on 2026-09-15, at the user's
+ * request, from the station level (where it played once after the last
+ * section, "Cinnamon Tea Products") to a new `video` field on the
+ * "Peeling Cinnamon: Tools & Process" section specifically, since that's
+ * what the video actually shows. This required a small schema addition —
+ * `StationSection.video`, rendered inline by `SectionContent` in
+ * StationDetail.tsx — since until now only whole-station process videos
+ * (`Station.processVideo`) existed; no other station's video was
+ * touched. The video file itself is unchanged (still silent, no audio
+ * track) and no station text changed.
  */
 export const STATIONS: Station[] = [
   {
@@ -2020,6 +2032,7 @@ export const STATIONS: Station[] = [
       {
         heading: "Peeling Cinnamon: Tools & Process",
         body: "Harvested shoots are left to rest for about a day so the bark loosens before peeling begins — a skill passed down through generations of peelers. The tools involved are simple but essential:",
+        video: "/videos/cinnamon-peeling-process.mp4",
         items: [
           { heading: "Kaththa (Large Knife)", image: kaththaToolImg, body: "A large, hook-shaped knife used to cut the harvested shoots to length and split the bark lengthwise before the fine peeling work begins." },
           { heading: "Gaana Kokaththa (Scraper)", image: scraperToolImg, body: "A short-handled hooked tool drawn along the shoot to scrape off the thin, rough outer bark before the real peeling starts — 'gaanawa' means 'to scrape' in Sinhala." },
@@ -2059,7 +2072,6 @@ export const STATIONS: Station[] = [
         ],
       },
     ],
-    processVideo: "/videos/cinnamon-peeling-process.mp4",
   },
   {
     id: "ginger-turmeric",
