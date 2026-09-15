@@ -1516,6 +1516,22 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * approach as the "introduction" station's generic illustrative photos.
  * `verified`, `lastVerified`, `processVideo`, and `duration` left
  * untouched; no other station changed.
+ * "polytunnel" was split from its single-paragraph section into three on
+ * 2026-09-15, at the user's request to divide it meaningfully without
+ * losing detail, adding more where reasonable: "About the Polytunnel &
+ * Greenhouse" (crop list, guest-picking use, plus a new sentence on what a
+ * polytunnel actually does — trapping warmth and light while keeping out
+ * monsoon rain and pests), "Watering & Irrigation" (the existing drip/
+ * misting-by-growth-stage sentence, plus a new sentence explaining why
+ * each method suits its stage), and "Harvest Timing" (the existing
+ * 25-35/90-120-day range, plus a new sentence on why growing fast- and
+ * slow-maturing crops together staggers the harvest). All added sentences
+ * stick to generic, standard polytunnel-gardening knowledge rather than
+ * new estate-specific facts — deliberately not reintroducing the detailed
+ * per-crop irrigation table that was left out as too granular when this
+ * station was first written up (see the 2026-09-07 note above). heroImage,
+ * heroTagline, `verified`, and `lastVerified` untouched; no other station
+ * changed.
  */
 export const STATIONS: Station[] = [
   {
@@ -2666,8 +2682,16 @@ export const STATIONS: Station[] = [
     heroTagline: "The estate's own polytunnel, already growing its first crops.",
     sections: [
       {
-        heading: "Polytunnel & Greenhouse",
-        body: "Alongside an existing greenhouse, the estate is building a polytunnel for growing an assortment of vegetables entirely its own — Scotch Bonnet and green chili peppers, capsicum, gherkins, tomatoes, bell peppers, cabbage, radish, green beans, leeks, spring onions, and carrots among them. Once complete, guests staying at the villa or cabana will be able to freshly pick vegetables grown right here themselves. Each crop follows its own watering routine, alternating root-level drip irrigation with overhead misting depending on the growth stage — misting mainly helps early germination and cooling for crops like carrot and radish, for instance, while drip takes over as the main method once fruiting begins for crops like tomato. Time to first harvest varies widely by crop, from as little as 25-35 days for radish up to 90-120 days for leeks, so the polytunnel should have something ready to pick at almost any point in the season.",
+        heading: "About the Polytunnel & Greenhouse",
+        body: "Alongside an existing greenhouse, the estate is building a polytunnel for growing an assortment of vegetables entirely its own — Scotch Bonnet and green chili peppers, capsicum, gherkins, tomatoes, bell peppers, cabbage, radish, green beans, leeks, spring onions, and carrots among them. Once complete, guests staying at the villa or cabana will be able to freshly pick vegetables grown right here themselves. A polytunnel's semi-transparent covering works much like a greenhouse's glass, trapping warmth and letting light through while keeping out heavy monsoon rain and many common pests — conditions that let the estate grow vegetables it otherwise couldn't manage reliably in the open field, and extend the growing season beyond what open-air beds allow.",
+      },
+      {
+        heading: "Watering & Irrigation",
+        body: "Each crop follows its own watering routine, alternating root-level drip irrigation with overhead misting depending on the growth stage — misting mainly helps early germination and cooling for crops like carrot and radish, for instance, while drip takes over as the main method once fruiting begins for crops like tomato. The two methods serve different purposes: misting keeps the air and soil surface humid enough for young seeds and seedlings to establish, while drip delivers water straight to the root zone once plants are bigger, using less water overall and keeping leaves dry to reduce the risk of fungal disease.",
+      },
+      {
+        heading: "Harvest Timing",
+        body: "Time to first harvest varies widely by crop, from as little as 25-35 days for radish up to 90-120 days for leeks, so the polytunnel should have something ready to pick at almost any point in the season. Growing such a wide mix of fast- and slow-maturing vegetables side by side is itself a deliberate choice, since it staggers harvests naturally rather than having everything ready — or finished — all at once.",
       },
     ],
     duration: "5 minutes",
