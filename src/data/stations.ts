@@ -1580,8 +1580,16 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * autoplay. Since "tea-factory" already uses the `sections` shape (one
  * section, converted earlier for its heroImage), the video renders on that
  * section's page via the existing `(!station.sections || isLastSection)`
- * check in StationDetail.tsx — no rendering-logic change needed. No
- * wording changed; no other station affected.
+ * check in StationDetail.tsx — no rendering-logic change needed.
+ * A second WhatsApp clip of the same factory floor (also silent, matching
+ * 832x464/60fps, 16.2s) was appended the same day as a second clip in the
+ * same file, combined via ffmpeg's `filter_complex concat` (decode +
+ * re-encode, libx264 crf 24 — the concat demuxer's stream-copy path was
+ * tried first but produced corrupt timestamps that squashed the second
+ * clip to near-zero duration) into one ~86.6s, ~12.9MB video at the same
+ * `/videos/tea-factory-process.mp4` path — no `stations.ts` change needed
+ * for this swap. Same pattern as "handmade-factory"'s multi-clip video.
+ * No wording changed; no other station affected.
  */
 export const STATIONS: Station[] = [
   {
