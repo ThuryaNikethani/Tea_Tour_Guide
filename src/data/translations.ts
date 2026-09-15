@@ -211,12 +211,14 @@ import type { StationTranslation } from "./stations";
  * single sectionBody, all 10 languages), "organic-cultivation" (checked
  * in all 10 languages — only German actually had a dash chain to split;
  * the rest were already plain sentences with no dash/semicolon
- * mirroring), and "pruning" (its single sectionBody, all 10 languages).
- * Remaining not-yet-naturalized stations (plucking, tea-factory,
- * unique-fruits' fruit-gallery fields, bee, turmeric, and the untouched
- * remainder of cinnamon/ginger-turmeric/coconut-field/jaggery-palm
- * beyond their one already-rewritten "About the X" paragraph) are still
- * to be done in a future pass.
+ * mirroring), "pruning" (its single sectionBody, all 10 languages), and
+ * "plucking" (its single sectionBody, all 10 languages — Japanese
+ * needed no changes, already split into plain sentences). Remaining
+ * not-yet-naturalized stations (tea-factory, unique-fruits'
+ * fruit-gallery fields, bee, turmeric, and the untouched remainder of
+ * cinnamon/ginger-turmeric/coconut-field/jaggery-palm beyond their one
+ * already-rewritten "About the X" paragraph) are still to be done in a
+ * future pass.
  */
 // Real, verified: name + heroTagline + sectionHeadings, extracted directly
 // from the live factory site per language (same order as stations.ts).
@@ -420,7 +422,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "නෙළීම",
       heroTagline: "වතුයායේම උයනේ තේ අතින් නෙළන අමුත්තන්.",
       sectionHeadings: ["නෙළීම"],
-      sectionBodies: ["සෑම කොළයක්ම ආරම්භ වන්නේ තේ වත්තෙනි, එහිදී නෙළන්නන් සෑම අංකුරයකින්ම, කම්කරුවන් 'දෙක හමාර' ලෙස හඳුන්වන කොළ දෙක හමාරක් දක්වා — බොහෝ විට කොළ තුන හමාරක් දක්වා — දැඩි ලෙස 'අංකුරය සහ කොළ දෙකක්' යන නීතියට වඩා අතින් නෙළා ගනී. මෙම සියුම් නෙළීමේ ප්‍රමිතිය නිසාය ලංකා තේවලට එහි සියුම් ලක්ෂණය ලැබෙන්නේ — රළු කොළ පඳුරේම තබා යයි. කළු තේ සහ හරිත තේ සඳහා නෙළන කොළ ගණන වෙනස් වේ. යොදාගන්නේ නවතම වර්ධනය පමණි. අතින් නෙළීම පඳුර ආරක්ෂා කරන අතර, රසායනික ද්‍රව්‍ය වැඩිම සාන්ද්‍රණයක් සහිත කොළ තෝරාගනී, එය මෙම තත්ත්ව මට්ටමින් යන්ත්‍ර වලට අනුකරණය කළ නොහැක."],
+      sectionBodies: ["සෑම කොළයක්ම ආරම්භ වන්නේ තේ වත්තෙනි, එහිදී නෙළන්නන් සෑම අංකුරයකින්ම, කම්කරුවන් 'දෙක හමාර' ලෙස හඳුන්වන කොළ දෙක හමාරක් දක්වා, බොහෝ විට කොළ තුන හමාරක් දක්වා, දැඩි ලෙස 'අංකුරය සහ කොළ දෙකක්' යන නීතියට වඩා අතින් නෙළා ගනී. මෙම සියුම් නෙළීමේ ප්‍රමිතිය නිසාය ලංකා තේවලට එහි සියුම් ලක්ෂණය ලැබෙන්නේ. රළු කොළ පඳුරේම තබා යයි. කළු තේ සහ හරිත තේ සඳහා නෙළන කොළ ගණන වෙනස් වේ. යොදාගන්නේ නවතම වර්ධනය පමණි. අතින් නෙළීම පඳුර ආරක්ෂා කරන අතර, රසායනික ද්‍රව්‍ය වැඩිම සාන්ද්‍රණයක් සහිත කොළ තෝරාගනී, එය මෙම තත්ත්ව මට්ටමින් යන්ත්‍ර වලට අනුකරණය කළ නොහැක."],
       duration: "කොළ දිනපතා, වසර පුරාම නෙළනු ලබන අතර, නැවුම්ව තබා ගැනීම සඳහා පැය කිහිපයක් ඇතුළත කර්මාන්තශාලාවට ගෙන යනු ලැබේ.",
     },
     withering: {
@@ -1035,7 +1037,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "பறித்தல்",
       heroTagline: "தோட்டத்தின் சொந்த தேயிலைத் தோட்டத்தில் கையால் தேயிலை பறிக்கும் பார்வையாளர்கள்.",
       sectionHeadings: ["பறித்தல்"],
-      sectionBodies: ["ஒவ்வொரு இலையும் தேயிலைத் தோட்டத்தில் தொடங்குகிறது, அங்கு பறிப்பவர்கள் ஒவ்வொரு தளிரையும் ஊழியர்கள் 'தேக ஹமார' என்று அழைக்கும் இரண்டரை இலைகள் வரை — பெரும்பாலும் மூன்றரை இலைகள் வரை — கடுமையான 'இரண்டு இலைகள் மற்றும் ஒரு மொட்டு' விதிக்குப் பதிலாக கையால் பறிக்கிறார்கள். இந்த நுணுக்கமான பறிப்பு தரம்தான் இலங்கை தேயிலைக்கு அதன் நுட்பமான தன்மையை அளிக்கிறது — கரடுமுரடான இலைகள் புதரிலேயே விடப்படுகின்றன. கருப்பு தேயிலை மற்றும் பச்சை தேயிலைக்கு இடையே பறிக்கப்படும் துல்லியமான இலை எண்ணிக்கை வேறுபடுகிறது. மிக இளம் வளர்ச்சி மட்டுமே பயன்படுத்தப்படுகிறது. கையால் பறிப்பது புதரைப் பாதுகாக்கிறது, அதிக சுவை கூறுகள் கொண்ட இலைகளைத் தேர்ந்தெடுக்கிறது — இந்த தரத்தில் இயந்திரங்களால் நகலெடுக்க முடியாதது."],
+      sectionBodies: ["ஒவ்வொரு இலையும் தேயிலைத் தோட்டத்தில் தொடங்குகிறது, அங்கு பறிப்பவர்கள் ஒவ்வொரு தளிரையும் ஊழியர்கள் 'தேக ஹமார' என்று அழைக்கும் இரண்டரை இலைகள் வரை, பெரும்பாலும் மூன்றரை இலைகள் வரை, கடுமையான 'இரண்டு இலைகள் மற்றும் ஒரு மொட்டு' விதிக்குப் பதிலாக கையால் பறிக்கிறார்கள். இந்த நுணுக்கமான பறிப்பு தரம்தான் இலங்கை தேயிலைக்கு அதன் நுட்பமான தன்மையை அளிக்கிறது. கரடுமுரடான இலைகள் புதரிலேயே விடப்படுகின்றன. கருப்பு தேயிலை மற்றும் பச்சை தேயிலைக்கு இடையே பறிக்கப்படும் துல்லியமான இலை எண்ணிக்கை வேறுபடுகிறது. மிக இளம் வளர்ச்சி மட்டுமே பயன்படுத்தப்படுகிறது. கையால் பறிப்பது புதரைப் பாதுகாக்கிறது, அதிக சுவை கூறுகள் கொண்ட இலைகளைத் தேர்ந்தெடுக்கிறது. இயந்திரங்களால் இந்த தரத்தில் இதை நகலெடுக்க முடியாது."],
       duration: "இலைகள் தினமும், ஆண்டு முழுவதும் பறிக்கப்பட்டு, புத்துணர்ச்சியாக இருக்க சில மணி நேரங்களில் தொழிற்சாலைக்கு விரைந்து கொண்டு செல்லப்படுகின்றன.",
     },
     withering: {
@@ -1650,7 +1652,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Raccolta",
       heroTagline: "Visitatori raccolgono il tè a mano nel giardino della tenuta stessa.",
       sectionHeadings: ["Raccolta"],
-      sectionBodies: ["Ogni foglia inizia il suo percorso nel giardino del tè, dove i raccoglitori raccolgono a mano ogni germoglio fino a quello che il personale chiama 'deka hamara' — due foglie e mezzo — spesso tre e mezzo, anziché la rigida regola delle due foglie e un germoglio. Questo standard di raccolta fine è ciò che conferisce al tè di Ceylon il suo carattere delicato — le foglie più grossolane vengono lasciate sull'arbusto. Il numero esatto di foglie raccolte varia tra il tè nero e il tè verde. Viene utilizzata solo la crescita più giovane. La raccolta manuale protegge l'arbusto e seleziona le foglie con la più alta concentrazione di composti aromatici, qualcosa che le macchine non possono replicare a questo livello di qualità."],
+      sectionBodies: ["Ogni foglia inizia il suo percorso nel giardino del tè, dove i raccoglitori raccolgono a mano ogni germoglio fino a quello che il personale chiama 'deka hamara', due foglie e mezzo, spesso tre e mezzo, anziché la rigida regola delle due foglie e un germoglio. Questo standard di raccolta fine è ciò che conferisce al tè di Ceylon il suo carattere delicato. Le foglie più grossolane vengono lasciate sull'arbusto. Il numero esatto di foglie raccolte varia tra il tè nero e il tè verde. Viene utilizzata solo la crescita più giovane. La raccolta manuale protegge l'arbusto e seleziona le foglie con la più alta concentrazione di composti aromatici, qualcosa che le macchine non possono replicare a questo livello di qualità."],
       duration: "Le foglie vengono raccolte quotidianamente, tutto l'anno, e portate rapidamente in fabbrica entro poche ore per rimanere fresche.",
     },
     withering: {
@@ -2265,7 +2267,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "القطاف",
       heroTagline: "زوار يقطفون الشاي يدويًا في حديقة المزرعة الخاصة بها.",
       sectionHeadings: ["القطاف"],
-      sectionBodies: ["تبدأ كل ورقة في حديقة الشاي، حيث يقطف العمال يدويًا كل برعم حتى ما يسميه الموظفون 'ديكا هامارا' — ورقتان ونصف — وغالبًا ثلاث أوراق ونصف، بدلاً من القاعدة الصارمة المتمثلة في ورقتين وبرعم واحد. هذا المعيار الدقيق للقطف هو ما يمنح شاي سيلان طابعه الرقيق — إذ تُترك الأوراق الأكثر خشونة على الشجيرة. ويختلف العدد الدقيق للأوراق المقطوفة بين الشاي الأسود والشاي الأخضر. لا يُستخدم سوى النمو الأحدث. القطف اليدوي يحمي الشجيرة ويختار الأوراق ذات أعلى تركيز من مركبات النكهة، وهو أمر لا يمكن للآلات محاكاته عند هذا المستوى من الجودة."],
+      sectionBodies: ["تبدأ كل ورقة في حديقة الشاي، حيث يقطف العمال يدويًا كل برعم حتى ما يسميه الموظفون 'ديكا هامارا'، أي ورقتان ونصف، وغالبًا ثلاث أوراق ونصف، بدلاً من القاعدة الصارمة المتمثلة في ورقتين وبرعم واحد. هذا المعيار الدقيق للقطف هو ما يمنح شاي سيلان طابعه الرقيق. وتُترك الأوراق الأكثر خشونة على الشجيرة. ويختلف العدد الدقيق للأوراق المقطوفة بين الشاي الأسود والشاي الأخضر. لا يُستخدم سوى النمو الأحدث. القطف اليدوي يحمي الشجيرة ويختار الأوراق ذات أعلى تركيز من مركبات النكهة، وهو أمر لا يمكن للآلات محاكاته عند هذا المستوى من الجودة."],
       duration: "تُقطف الأوراق يوميًا على مدار العام، وتُنقل بسرعة إلى المصنع خلال ساعات للحفاظ على نضارتها.",
     },
     withering: {
@@ -2880,7 +2882,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Сбор листьев",
       heroTagline: "Гости собственноручно собирают чай в саду самого поместья.",
       sectionHeadings: ["Сбор листьев"],
-      sectionBodies: ["Каждый лист начинается на чайной плантации, где сборщики вручную обрывают каждый побег до того, что персонал называет «дека хамара» — два с половиной листа, — часто до трёх с половиной, а не строго по правилу «два листа и почка». Именно этот стандарт тонкого сбора придаёт цейлонскому чаю его деликатный характер — более грубые листья остаются на кусте. Точное количество собираемых листьев отличается для чёрного и зелёного чая. Используется только самая молодая поросль. Ручной сбор бережёт куст и позволяет отобрать листья с наивысшей концентрацией вкусовых веществ — то, что машины не могут повторить на таком уровне качества."],
+      sectionBodies: ["Каждый лист начинается на чайной плантации, где сборщики вручную обрывают каждый побег до того, что персонал называет «дека хамара», то есть два с половиной листа, часто до трёх с половиной, а не строго по правилу «два листа и почка». Именно этот стандарт тонкого сбора придаёт цейлонскому чаю его деликатный характер. Более грубые листья остаются на кусте. Точное количество собираемых листьев отличается для чёрного и зелёного чая. Используется только самая молодая поросль. Ручной сбор бережёт куст и позволяет отобрать листья с наивысшей концентрацией вкусовых веществ — то, что машины не могут повторить на таком уровне качества."],
       duration: "Листья собираются ежедневно круглый год и в течение нескольких часов доставляются на фабрику, чтобы сохранить свежесть.",
     },
     withering: {
@@ -3495,7 +3497,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Pflücken",
       heroTagline: "Besucher pflücken eigenhändig Tee im Garten des Anwesens.",
       sectionHeadings: ["Pflücken"],
-      sectionBodies: ["Jedes Blatt beginnt im Teegarten, wo die Pflücker jeden Trieb von Hand bis zu dem pflücken, was das Personal 'deka hamara' nennt — zweieinhalb Blätter — oft dreieinhalb, statt der strengen Regel von zwei Blättern und einer Knospe. Dieser feine Pflückstandard verleiht Ceylon-Tee seinen zarten Charakter — gröbere Blätter bleiben am Strauch. Die genaue Anzahl der gepflückten Blätter unterscheidet sich zwischen Schwarztee und Grüntee. Es wird nur der jüngste Wuchs verwendet. Handpflücken schützt den Strauch und wählt die Blätter mit der höchsten Konzentration an Aromastoffen aus — etwas, das Maschinen auf diesem Qualitätsniveau nicht nachbilden können."],
+      sectionBodies: ["Jedes Blatt beginnt im Teegarten, wo die Pflücker jeden Trieb von Hand bis zu dem pflücken, was das Personal 'deka hamara' nennt, also zweieinhalb Blätter, oft dreieinhalb, statt der strengen Regel von zwei Blättern und einer Knospe. Dieser feine Pflückstandard verleiht Ceylon-Tee seinen zarten Charakter. Gröbere Blätter bleiben am Strauch. Die genaue Anzahl der gepflückten Blätter unterscheidet sich zwischen Schwarztee und Grüntee. Es wird nur der jüngste Wuchs verwendet. Handpflücken schützt den Strauch und wählt die Blätter mit der höchsten Konzentration an Aromastoffen aus — etwas, das Maschinen auf diesem Qualitätsniveau nicht nachbilden können."],
       duration: "Die Blätter werden das ganze Jahr über täglich gepflückt und innerhalb weniger Stunden zur Fabrik gebracht, um frisch zu bleiben.",
     },
     withering: {
@@ -4110,7 +4112,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Recolección",
       heroTagline: "Visitantes recolectando té a mano en el propio jardín de la finca.",
       sectionHeadings: ["Recolección"],
-      sectionBodies: ["Cada hoja comienza en el jardín de té, donde los recolectores recogen a mano cada brote hasta lo que el personal llama 'deka hamara' — dos hojas y media — a menudo tres y media, en lugar de la estricta regla de dos hojas y un brote. Este estándar de recolección fina es lo que le da al té de Ceilán su carácter delicado — las hojas más gruesas se dejan en el arbusto. El número exacto de hojas recolectadas difiere entre el té negro y el té verde. Solo se utiliza el crecimiento más joven. La recolección manual protege el arbusto y selecciona las hojas con mayor concentración de compuestos de sabor, algo que las máquinas no pueden replicar a este nivel de calidad."],
+      sectionBodies: ["Cada hoja comienza en el jardín de té, donde los recolectores recogen a mano cada brote hasta lo que el personal llama 'deka hamara', dos hojas y media, a menudo tres y media, en lugar de la estricta regla de dos hojas y un brote. Este estándar de recolección fina es lo que le da al té de Ceilán su carácter delicado. Las hojas más gruesas se dejan en el arbusto. El número exacto de hojas recolectadas difiere entre el té negro y el té verde. Solo se utiliza el crecimiento más joven. La recolección manual protege el arbusto y selecciona las hojas con mayor concentración de compuestos de sabor, algo que las máquinas no pueden replicar a este nivel de calidad."],
       duration: "Las hojas se recolectan a diario, durante todo el año, y se llevan rápidamente a la fábrica en cuestión de horas para mantenerse frescas.",
     },
     withering: {
@@ -4725,7 +4727,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "Cueillette",
       heroTagline: "Des visiteurs cueillent le thé à la main dans le jardin du domaine.",
       sectionHeadings: ["Cueillette"],
-      sectionBodies: ["Chaque feuille commence dans le jardin de thé, où les cueilleurs récoltent à la main chaque pousse jusqu'à ce que le personnel appelle « deka hamara » — deux feuilles et demie — souvent trois et demie, plutôt que la règle stricte des deux feuilles et un bourgeon. Cette norme de cueillette fine est ce qui donne au thé de Ceylan son caractère délicat — les feuilles plus grossières restent sur le buisson. Le nombre exact de feuilles cueillies diffère entre le thé noir et le thé vert. Seule la pousse la plus jeune est utilisée. La cueillette manuelle protège le buisson et sélectionne les feuilles à la plus forte concentration de composés aromatiques, ce que les machines ne peuvent reproduire à ce niveau de qualité."],
+      sectionBodies: ["Chaque feuille commence dans le jardin de thé, où les cueilleurs récoltent à la main chaque pousse jusqu'à ce que le personnel appelle « deka hamara », soit deux feuilles et demie, souvent trois et demie, plutôt que la règle stricte des deux feuilles et un bourgeon. Cette norme de cueillette fine est ce qui donne au thé de Ceylan son caractère délicat. Les feuilles plus grossières restent sur le buisson. Le nombre exact de feuilles cueillies diffère entre le thé noir et le thé vert. Seule la pousse la plus jeune est utilisée. La cueillette manuelle protège le buisson et sélectionne les feuilles à la plus forte concentration de composés aromatiques, ce que les machines ne peuvent reproduire à ce niveau de qualité."],
       duration: "Les feuilles sont cueillies quotidiennement, toute l'année, et acheminées à l'usine en quelques heures pour rester fraîches.",
     },
     withering: {
@@ -5340,7 +5342,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
       name: "采摘",
       heroTagline: "游客在庄园自家茶园里亲手采茶。",
       sectionHeadings: ["采摘"],
-      sectionBodies: ["每一片茶叶都始于茶园，采茶工会将每根新梢采到员工所称的\"deka hamara\"（两叶半）——常常是三叶半——而不是严格的\"一芽两叶\"标准。正是这种精细的采摘标准赋予了锡兰茶其细腻的特质——较粗老的叶片则留在茶树上。红茶与绿茶所采摘的确切叶片数量有所不同。只使用最嫩的新梢。手工采摘既保护茶树，又能挑选出风味物质浓度最高的叶片，这是机器在这种品质水平上无法替代的。"],
+      sectionBodies: ["每一片茶叶都始于茶园，采茶工会将每根新梢采到员工所称的\"deka hamara\"，即两叶半，常常是三叶半，而不是严格的\"一芽两叶\"标准。正是这种精细的采摘标准赋予了锡兰茶其细腻的特质。较粗老的叶片则留在茶树上。红茶与绿茶所采摘的确切叶片数量有所不同。只使用最嫩的新梢。手工采摘既保护茶树，又能挑选出风味物质浓度最高的叶片，这是机器在这种品质水平上无法替代的。"],
       duration: "茶叶全年每日采摘，并在数小时内送往工厂以保持新鲜。",
     },
     withering: {
