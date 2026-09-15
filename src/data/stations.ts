@@ -1589,10 +1589,12 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * clip to near-zero duration) into one ~86.6s video at the same
  * `/videos/tea-factory-process.mp4` path. A third WhatsApp clip (also
  * silent, matching 832x464/60fps, 5.8s) was appended the same way the same
- * day, bringing the combined video to ~92.4s, ~12.9MB. Same
+ * day, bringing the combined video to ~92.4s. A fourth WhatsApp clip (also
+ * silent, matching 832x464/60fps, 11.6s) was appended the same way the
+ * same day, bringing the combined video to ~104s, ~14.3MB. Same
  * `filter_complex concat` + re-encode approach each time; same pattern as
  * "handmade-factory"'s multi-clip video; no `stations.ts` change needed
- * for either append. No wording changed; no other station affected.
+ * for any of the appends. No wording changed; no other station affected.
  */
 export const STATIONS: Station[] = [
   {
