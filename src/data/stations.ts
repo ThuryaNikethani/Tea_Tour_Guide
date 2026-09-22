@@ -1792,6 +1792,24 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * (`Station.processVideo`) existed; no other station's video was
  * touched. The video file itself is unchanged (still silent, no audio
  * track) and no station text changed.
+ * On 2026-09-22, "cinnamon"'s combined video was split back into its two
+ * original parts, at the user's request, undoing the 2026-09-15
+ * concatenation. The user supplied a fresh copy of the live
+ * peeling-demonstration clip ("WhatsApp Video 2026-09-10 at
+ * 12.32.45.mp4", 8m51.63s, native 704x480 — matching the 8m52s appended
+ * clip almost exactly), which was re-encoded (audio stripped, 30fps,
+ * libx264 crf 28, faststart) and now IS `cinnamon-peeling-process.mp4`,
+ * still attached to the "Peeling Cinnamon: Tools & Process" section's
+ * `video` field — no `stations.ts` change needed for that part, same
+ * path as before. The original short clip ("ATF CINNAMON.mp4", the
+ * first ~92.7s of the old combined file, confirmed by frame inspection:
+ * full-frame branded/product footage before that point, pillarboxed
+ * live-demo footage after) was re-extracted from the previous combined
+ * file into a new `cinnamon-intro.mp4` and restored as the station-level
+ * `processVideo`, playing after the last section — matching exactly how
+ * it worked before the 2026-09-15 concatenation. Both files are silent
+ * (no audio track), per the user's explicit request. No other station,
+ * text, or logic touched.
  */
 export const STATIONS: Station[] = [
   {
@@ -2072,6 +2090,7 @@ export const STATIONS: Station[] = [
         ],
       },
     ],
+    processVideo: "/videos/cinnamon-intro.mp4",
   },
   {
     id: "ginger-turmeric",
