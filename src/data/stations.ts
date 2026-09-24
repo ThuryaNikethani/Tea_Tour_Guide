@@ -1810,6 +1810,15 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * it worked before the 2026-09-15 concatenation. Both files are silent
  * (no audio track), per the user's explicit request. No other station,
  * text, or logic touched.
+ * On 2026-09-24, "tea-center" gained a real `processVideo` — a WhatsApp
+ * video the user supplied of a staff member walking through a tea
+ * tasting/cupping demonstration at the tasting counter (brewed liquor
+ * samples, graded leaf laid out, small-batch specialties), matching
+ * this station's own "Brewing and Tasting" content. Re-encoded to 30fps
+ * for consistency with the site's other process videos, but — unlike
+ * every other process video on the site — kept its original audio
+ * track, per the user's explicit request this one play with sound. No
+ * other station, text, or logic touched.
  */
 export const STATIONS: Station[] = [
   {
@@ -2957,6 +2966,7 @@ export const STATIONS: Station[] = [
         body: "Beyond tea, the estate blends its own green and black tea (about 90%) with local herbs (about 10%) — gotukola, heenbovitiya, and moringa — and makes Masala, Cinnamon, and Ginger spice teas from its own spices; the masala recipe uses seven Sri Lankan spices, including cardamom, cinnamon, ginger, and black pepper (the rest a kept secret), and masala or BOP tea is what's recommended for milk tea.",
       },
     ],
+    processVideo: "/videos/tea-center-process.mp4",
     duration: "10-15 minutes",
   },
   {
