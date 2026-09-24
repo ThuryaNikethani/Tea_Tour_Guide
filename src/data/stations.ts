@@ -1819,6 +1819,13 @@ import measuringRodToolImg from "../assets/cinnamon/tools/measuring-rod.jpg";
  * every other process video on the site — kept its original audio
  * track, per the user's explicit request this one play with sound. No
  * other station, text, or logic touched.
+ * On 2026-09-24, "tea-center" also gained a section-level `video` on
+ * "The Finest Grades & Export Markets" — a WhatsApp video the user
+ * supplied showing a brewed cup being tasted and labelled OPA/OP/OP1
+ * grade samples laid out, matching that section's own content. The
+ * source file had no audio track to begin with, so nothing was
+ * stripped; re-encoded to 30fps for consistency with the site's other
+ * videos. No other station, text, or logic touched.
  */
 export const STATIONS: Station[] = [
   {
@@ -2959,6 +2966,7 @@ export const STATIONS: Station[] = [
       {
         heading: "The Finest Grades & Export Markets",
         body: "The very finest grades — FF Extra Special, FF Special, FBOP — come from only about 1% of the harvest, the most immature part of the bud, and sell for around $25 per 100g; bulkier grades like OPA and OP run closer to $5-6 per 200g. The white tip particles visible in the finest grades add extra sweetness and mostly go to European buyers, while Arabic markets tend to prefer a stronger cup.",
+        video: "/videos/tea-center-grades.mp4",
       },
       {
         heading: "Herbal & Spice Blends",
