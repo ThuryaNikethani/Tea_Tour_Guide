@@ -77,7 +77,7 @@ export function StationDetail() {
       )}
 
       <div className="max-w-2xl mx-auto px-4 py-6">
-        <Link to="/stations" className="inline-flex items-center gap-1 text-tea-600 dark:text-tea-400 hover:text-tea-900 dark:hover:text-white text-sm mb-6">
+        <Link to="/stations" className="inline-flex items-center gap-1 rounded-full border border-tea-300 dark:border-tea-600 bg-white/60 dark:bg-tea-800/60 px-3 py-1.5 text-tea-700 dark:text-tea-200 hover:border-gold-500 hover:text-gold-600 dark:hover:border-gold-500 dark:hover:text-gold-400 text-sm font-medium transition-colors mb-6">
           <ChevronLeft size={16} />
           {t("backToStations")}
         </Link>
@@ -182,7 +182,7 @@ export function StationDetail() {
                   type="button"
                   onClick={() => goToSection(sectionIndex - 1)}
                   disabled={sectionIndex === 0}
-                  className="flex items-center gap-1 text-sm font-medium text-tea-700 dark:text-tea-200 hover:text-gold-600 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                  className="flex items-center gap-1 rounded-full border border-tea-300 dark:border-tea-600 px-3 py-1.5 text-sm font-medium text-tea-700 dark:text-tea-200 hover:border-gold-500 hover:text-gold-600 dark:hover:border-gold-500 disabled:opacity-30 disabled:pointer-events-none transition-colors"
                 >
                   <ChevronLeft size={16} />
                   {t("previousSection")}
@@ -196,7 +196,7 @@ export function StationDetail() {
                   type="button"
                   onClick={() => goToSection(sectionIndex + 1)}
                   disabled={isLastSection}
-                  className="flex items-center gap-1 text-sm font-medium text-tea-700 dark:text-tea-200 hover:text-gold-600 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+                  className="flex items-center gap-1 rounded-full border border-tea-300 dark:border-tea-600 px-3 py-1.5 text-sm font-medium text-tea-700 dark:text-tea-200 hover:border-gold-500 hover:text-gold-600 dark:hover:border-gold-500 disabled:opacity-30 disabled:pointer-events-none transition-colors"
                 >
                   {t("nextSection")}
                   <ChevronRight size={16} />
