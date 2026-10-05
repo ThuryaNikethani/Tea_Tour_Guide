@@ -16,6 +16,13 @@ export interface StationSection {
   imagePosition?: "top" | "bottom";
   /** "cover" (default) crops to fill a fixed height; "contain" shows the whole image uncropped, at its own aspect ratio. */
   imageFit?: "cover" | "contain";
+  /**
+   * For a single (non-array) image: locks its box to this exact width/height ratio (e.g. "600/460")
+   * instead of a fixed height, so the image always fills its box edge-to-edge with no cropping and
+   * no empty gutters at any screen width — use when the fixed-height box's aspect ratio drifts too
+   * far from the photo's own at some widths (e.g. a portrait photo in a wide, short box).
+   */
+  imageAspectRatio?: string;
   /** Small photo-credit line shown under the image, only needed for the rare licensed (non-CC0) photo that requires attribution. */
   imageCredit?: string;
   /** When set, renders each as its own card (image + heading + body + tags) instead of one blended paragraph. */
@@ -1859,7 +1866,7 @@ export const STATIONS: Station[] = [
       {
         heading: "The Birth of an Industry",
         image: jamesTaylorPortraitImg,
-        imageFit: "contain",
+        imageAspectRatio: "600/460",
         body: "The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa.",
       },
       {
