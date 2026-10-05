@@ -1859,6 +1859,7 @@ export const STATIONS: Station[] = [
       {
         heading: "The Birth of an Industry",
         image: jamesTaylorPortraitImg,
+        imageFit: "contain",
         body: "The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa.",
       },
       {
