@@ -242,9 +242,10 @@ import introductionCollageImg from "../assets/introduction/introduction-collage.
 // Pexels. See the provenance note near the "introduction" station below.
 import ceylonTeaFieldImg from "../assets/introduction/ceylon-tea-field.jpg";
 import coffeeTeaCupsImg from "../assets/introduction/coffee-tea-cups.jpg";
-// Real photo of the Loolecondera Estate itself, the birthplace of Ceylon tea named in this
-// section's text. CC BY-SA 4.0 (Shimar96, via Wikimedia Commons), attribution required.
-import looleconderaEstateImg from "../assets/introduction/loolecondera-estate.jpg";
+// Generic illustrative Sri Lankan tea hillside (not confirmed to be Loolecondera itself) —
+// free-license from Pexels, no attribution required, same sourcing as this station's other
+// generic photos.
+import teaEstateHillsideImg from "../assets/introduction/tea-estate-hillside.jpg";
 // A generated collage combining two real photos of the estate's own
 // low-country tea field (with a labelled shade tree) and its withering
 // troughs. Used as "pahatharata-manufacturing"'s heroImage. See the
@@ -1867,8 +1868,7 @@ export const STATIONS: Station[] = [
       },
       {
         heading: "The Birth of an Industry",
-        image: looleconderaEstateImg,
-        imageCredit: "Shimar96, CC BY-SA 4.0, via Wikimedia Commons",
+        image: teaEstateHillsideImg,
         body: "The story of Ceylon tea started in 1867 on a 19-acre plot of land at the Loolecondera Estate in Kandy, planted by the Scottish former coffee planter James Taylor, as part of a diversification experiment. Through the years, it grew into seven tea-growing regions, which include Kandy, Uva, Ruhuna (South), Udapussellawa, Nuwara Eliya, Dimbula, and Sabaragamuwa.",
       },
       {
