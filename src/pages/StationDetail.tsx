@@ -122,7 +122,6 @@ export function StationDetail() {
           const currentSection = station.sections![sectionIndex];
           const selectedFruit = currentSection.fruits?.find((f) => f.id === selectedFruitId);
           return (
-          <div>
             <AnimatePresence mode="wait">
               <motion.section
                 key={`${sectionIndex}-${selectedFruitId ?? "gallery"}`}
@@ -175,35 +174,6 @@ export function StationDetail() {
                 )}
               </motion.section>
             </AnimatePresence>
-
-            <div className="flex items-center justify-between mt-7 pt-4 border-t border-tea-100 dark:border-tea-800">
-              {totalSections > 1 && (
-                <button
-                  type="button"
-                  onClick={() => goToSection(sectionIndex - 1)}
-                  disabled={sectionIndex === 0}
-                  className="flex items-center gap-1 rounded-full border border-tea-300 dark:border-tea-600 px-3 py-1.5 text-sm font-medium text-tea-700 dark:text-tea-200 hover:border-gold-500 hover:text-gold-600 dark:hover:border-gold-500 disabled:opacity-30 disabled:pointer-events-none transition-colors"
-                >
-                  <ChevronLeft size={16} />
-                  {t("previousSection")}
-                </button>
-              )}
-              <span className="text-xs text-tea-400 dark:text-tea-500">
-                {t("sectionOf").replace("{current}", String(sectionIndex + 1)).replace("{total}", String(totalSections))}
-              </span>
-              {totalSections > 1 && (
-                <button
-                  type="button"
-                  onClick={() => goToSection(sectionIndex + 1)}
-                  disabled={isLastSection}
-                  className="flex items-center gap-1 rounded-full border border-tea-300 dark:border-tea-600 px-3 py-1.5 text-sm font-medium text-tea-700 dark:text-tea-200 hover:border-gold-500 hover:text-gold-600 dark:hover:border-gold-500 disabled:opacity-30 disabled:pointer-events-none transition-colors"
-                >
-                  {t("nextSection")}
-                  <ChevronRight size={16} />
-                </button>
-              )}
-            </div>
-          </div>
           );
         })() : (
           <>
@@ -230,6 +200,36 @@ export function StationDetail() {
             <h2 className="font-heading font-semibold text-xl text-tea-900 dark:text-white mb-3">{t("virtualTour")}</h2>
             <VirtualTourEmbed url={station.virtualTourUrl} title={t("virtualTour")} />
           </section>
+        )}
+
+        {station.sections && (
+          <div className="flex items-center justify-between mt-7 pt-4 border-t border-tea-100 dark:border-tea-800">
+            {totalSections > 1 && (
+              <button
+                type="button"
+                onClick={() => goToSection(sectionIndex - 1)}
+                disabled={sectionIndex === 0}
+                className="flex items-center gap-1 rounded-full border border-tea-300 dark:border-tea-600 px-3 py-1.5 text-sm font-medium text-tea-700 dark:text-tea-200 hover:border-gold-500 hover:text-gold-600 dark:hover:border-gold-500 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+              >
+                <ChevronLeft size={16} />
+                {t("previousSection")}
+              </button>
+            )}
+            <span className="text-xs text-tea-400 dark:text-tea-500">
+              {t("sectionOf").replace("{current}", String(sectionIndex + 1)).replace("{total}", String(totalSections))}
+            </span>
+            {totalSections > 1 && (
+              <button
+                type="button"
+                onClick={() => goToSection(sectionIndex + 1)}
+                disabled={isLastSection}
+                className="flex items-center gap-1 rounded-full border border-tea-300 dark:border-tea-600 px-3 py-1.5 text-sm font-medium text-tea-700 dark:text-tea-200 hover:border-gold-500 hover:text-gold-600 dark:hover:border-gold-500 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+              >
+                {t("nextSection")}
+                <ChevronRight size={16} />
+              </button>
+            )}
+          </div>
         )}
 
       </div>
