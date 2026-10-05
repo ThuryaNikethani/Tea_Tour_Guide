@@ -258,7 +258,12 @@ function SectionContent({ section }: { section: StationSection }) {
   // them all onto one line, while never leaving just one lonely image on the last row — unlike plain
   // flex-wrap, grid keeps the same column tracks across every row, so a wrapped row's images stay
   // the same size as the rest rather than stretching to fill it.
-  const imageClass = isContain ? "w-full h-72 object-contain rounded-md shadow-sm" : "w-full h-56 object-cover rounded-md shadow-sm";
+  // A single "contain" image keeps the same h-56 box as "cover" images (so switching a section to
+  // "contain" doesn't change its footprint on the page) — only a multi-image "contain" grid uses the
+  // taller h-72, which existing grids (coconut-field, clonal-tea, etc.) already rely on.
+  const imageClass = isContain
+    ? `w-full ${Array.isArray(section.image) ? "h-72" : "h-56"} object-contain rounded-md shadow-sm`
+    : "w-full h-56 object-cover rounded-md shadow-sm";
   const imageCols = isContain && Array.isArray(section.image) ? columnsFor(section.image.length) : undefined;
   // The 140px minimum looks right once there's room for it, but on a narrow phone with 3-4 columns
   // it doesn't fit (e.g. 4 columns need >=560px) — min() caps it to whatever actually fits the
