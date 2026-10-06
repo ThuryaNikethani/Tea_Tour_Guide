@@ -33,13 +33,14 @@ import handmadeFactoryWatermarkImg from "../assets/handmade-factory/withering-ro
 import sortingWatermarkImg from "../assets/sorting/grading-machinery-worker.jpg";
 import packingWatermarkImg from "../assets/packing/graded-tea-sacks.jpg";
 import teaCenterWatermarkImg from "../assets/tea-center/tea-centre-entrance.jpg";
-import clonalTeaWatermarkImg from "../assets/nursery/gallery/pla9-moj4O07C.jpg";
-// These four collages have no other section photo anywhere in the app, so each is one panel
+import clonalTeaWatermarkImg from "../assets/clonal-tea/silver-tip-buds.jpg";
+// These three collages have no other section photo anywhere in the app, so each is one panel
 // cropped directly out of its own existing collage file instead.
 import shadeManagementWatermarkImg from "../assets/shade-management/shade-tree-signboard.jpg";
-import pruningWatermarkImg from "../assets/pruning/first-crosscut-sign.jpg";
 import pluckingWatermarkImg from "../assets/plucking/visitors-plucking.jpg";
 import teaFactoryWatermarkImg from "../assets/tea-factory/factory-building-signage.jpg";
+// "pruning" has its own section photo, used here instead of a panel cropped out of its collage.
+import pruningWatermarkImg from "../assets/pruning/pruned-bush-rows.jpg";
 
 const COLLAGE_WATERMARK_OVERRIDES: Record<string, string> = {
   "pahatharata-manufacturing": pahatharataManufacturingWatermarkImg,
