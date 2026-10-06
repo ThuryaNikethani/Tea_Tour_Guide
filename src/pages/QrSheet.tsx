@@ -40,7 +40,11 @@ import shadeManagementWatermarkImg from "../assets/shade-management/shade-tree-s
 import pluckingWatermarkImg from "../assets/plucking/visitors-plucking.jpg";
 import teaFactoryWatermarkImg from "../assets/tea-factory/factory-building-signage.jpg";
 // "pruning" has its own section photo, used here instead of a panel cropped out of its collage.
-import pruningWatermarkImg from "../assets/pruning/pruned-bush-rows.jpg";
+import pruningWatermarkImg from "../assets/pruning/worker-cutting-tool.jpg";
+// "artisanal-tea-grades"'s heroImage is a text-heavy sign photo (reads as clutter at low
+// opacity behind the card's own text), and its own section photos are all busy product-package
+// shots — so this uses a clean, text-free grading-floor photo from the same station group instead.
+import artisanalTeaGradesWatermarkImg from "../assets/sorting/graded-tea-export-sacks.jpg";
 
 const COLLAGE_WATERMARK_OVERRIDES: Record<string, string> = {
   "pahatharata-manufacturing": pahatharataManufacturingWatermarkImg,
@@ -60,6 +64,7 @@ const COLLAGE_WATERMARK_OVERRIDES: Record<string, string> = {
   "tea-factory": teaFactoryWatermarkImg,
   "tea-center": teaCenterWatermarkImg,
   "clonal-tea": clonalTeaWatermarkImg,
+  "artisanal-tea-grades": artisanalTeaGradesWatermarkImg,
 };
 
 /** Every QR card gets a faint background watermark using a real photo already in the app —
