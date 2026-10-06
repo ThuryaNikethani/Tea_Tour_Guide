@@ -66,7 +66,7 @@ export function QrSheet() {
                   src={introductionWatermarkImg}
                   alt=""
                   aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover opacity-20 -z-10"
+                  className="absolute inset-0 w-full h-full object-cover opacity-35 -z-10"
                 />
               )}
 
