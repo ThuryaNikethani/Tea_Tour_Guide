@@ -14,6 +14,9 @@ import introductionWatermarkImg from "../assets/introduction/story-of-ceylon-tea
 import nurseryWatermarkImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
 // "mushroom-hut" has neither a heroImage nor a heroVideo, so it falls back to this section photo.
 import mushroomHutWatermarkImg from "../assets/mushroom-hut/pink-oyster.jpg";
+// The factory's contact-info banner, cropped from the bottom strip of the same signboard photo
+// above — shown fully opaque (not faded like the watermark) at the bottom of every QR card.
+import contactBannerImg from "../assets/brand/factory-contact-banner.jpg";
 
 /** Every QR card gets a faint background watermark using a real photo already in the app —
  * each station's own heroImage where it has one, with a couple of explicit fallbacks for the
@@ -127,6 +130,7 @@ export function QrSheet() {
                 <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
                 <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
               </div>
+              <img src={contactBannerImg} alt="Athukorala Tea Factory - Pitigala contact details" className="w-full h-auto rounded-b-md" />
             </div>
           );
         })}
@@ -155,6 +159,7 @@ export function QrSheet() {
               <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
               <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
             </div>
+            <img src={contactBannerImg} alt="Athukorala Tea Factory - Pitigala contact details" className="w-full h-auto rounded-b-md" />
           </div>
 
           <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:border-gold-500 print:min-h-[250mm] print:justify-center">
@@ -177,6 +182,7 @@ export function QrSheet() {
               <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
               <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
             </div>
+            <img src={contactBannerImg} alt="Athukorala Tea Factory - Pitigala contact details" className="w-full h-auto rounded-b-md" />
           </div>
         </div>
       </div>
