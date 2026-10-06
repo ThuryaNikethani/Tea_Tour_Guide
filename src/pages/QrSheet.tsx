@@ -6,9 +6,24 @@ import { STATIONS } from "../data/stations";
 import { localizeStation } from "../data/localize";
 import { localizeVilla } from "../data/villa";
 import logo from "../assets/brand/athu-BZCrr7Wr.png";
-// Real on-site photo of the estate's own "Story of Ceylon Tea" signboard, used as a faint
-// background watermark on the "introduction" station's QR card only (see render below).
+// Real on-site photo of the estate's own "Story of Ceylon Tea" signboard, used as the
+// "introduction" station's QR watermark specifically (see getWatermarkImage below) instead of
+// its own heroImage, since the user supplied this one directly for that card.
 import introductionWatermarkImg from "../assets/introduction/story-of-ceylon-tea-signboard.jpg";
+// "nursery" has a heroVideo but no heroImage, so it falls back to this section photo instead.
+import nurseryWatermarkImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
+// "mushroom-hut" has neither a heroImage nor a heroVideo, so it falls back to this section photo.
+import mushroomHutWatermarkImg from "../assets/mushroom-hut/pink-oyster.jpg";
+
+/** Every QR card gets a faint background watermark using a real photo already in the app —
+ * each station's own heroImage where it has one, with a couple of explicit fallbacks for the
+ * two stations that don't (see imports above). */
+function getWatermarkImage(station: { id: string; heroImage?: string }): string | undefined {
+  if (station.id === "introduction") return introductionWatermarkImg;
+  if (station.id === "nursery") return nurseryWatermarkImg;
+  if (station.id === "mushroom-hut") return mushroomHutWatermarkImg;
+  return station.heroImage;
+}
 
 /**
  * Batch print sheet: one QR code per station, meant to be printed and
@@ -54,6 +69,7 @@ export function QrSheet() {
         {STATIONS.map((station, index) => {
           const localized = localizeStation(station, language);
           const url = `${origin}/station/${station.id}`;
+          const watermarkSrc = getWatermarkImage(station);
           return (
             <div
               key={station.id}
@@ -61,9 +77,9 @@ export function QrSheet() {
                 index < STATIONS.length - 1 ? "print:break-after-page" : ""
               }`}
             >
-              {station.id === "introduction" && (
+              {watermarkSrc && (
                 <img
-                  src={introductionWatermarkImg}
+                  src={watermarkSrc}
                   alt=""
                   aria-hidden="true"
                   className="absolute inset-0 w-full h-full object-cover opacity-35 -z-10"
