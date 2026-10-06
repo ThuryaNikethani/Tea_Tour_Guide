@@ -33,7 +33,7 @@ import handmadeFactoryWatermarkImg from "../assets/handmade-factory/withering-ro
 import sortingWatermarkImg from "../assets/sorting/grading-machinery-worker.jpg";
 import packingWatermarkImg from "../assets/packing/graded-tea-sacks.jpg";
 import teaCenterWatermarkImg from "../assets/tea-center/tea-centre-entrance.jpg";
-import clonalTeaWatermarkImg from "../assets/clonal-tea/silver-tip-buds.jpg";
+import clonalTeaWatermarkImg from "../assets/nursery/gallery/pla1-DxzHBDYN.jpg";
 // These three collages have no other section photo anywhere in the app, so each is one panel
 // cropped directly out of its own existing collage file instead.
 import shadeManagementWatermarkImg from "../assets/shade-management/shade-tree-signboard.jpg";
