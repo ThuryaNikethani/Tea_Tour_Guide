@@ -6,6 +6,9 @@ import { STATIONS } from "../data/stations";
 import { localizeStation } from "../data/localize";
 import { localizeVilla } from "../data/villa";
 import logo from "../assets/brand/athu-BZCrr7Wr.png";
+// Real on-site photo of the estate's own "Story of Ceylon Tea" signboard, used as a faint
+// background watermark on the "introduction" station's QR card only (see render below).
+import introductionWatermarkImg from "../assets/introduction/story-of-ceylon-tea-signboard.jpg";
 
 /**
  * Batch print sheet: one QR code per station, meant to be printed and
@@ -54,10 +57,19 @@ export function QrSheet() {
           return (
             <div
               key={station.id}
-              className={`relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-tea-300 rounded-md p-6 print:break-inside-avoid print:border-tea-400 print:min-h-[250mm] print:justify-center ${
+              className={`relative overflow-hidden flex flex-col items-center gap-3 bg-white border-2 border-dashed border-tea-300 rounded-md p-6 print:break-inside-avoid print:border-tea-400 print:min-h-[250mm] print:justify-center ${
                 index < STATIONS.length - 1 ? "print:break-after-page" : ""
               }`}
             >
+              {station.id === "introduction" && (
+                <img
+                  src={introductionWatermarkImg}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover opacity-20 -z-10"
+                />
+              )}
+
               <Scissors
                 size={14}
                 className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden"
