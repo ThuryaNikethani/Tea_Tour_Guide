@@ -47,7 +47,7 @@ export function QrSheet() {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-5 print:grid-cols-1 print:gap-0">
+      <div className="grid sm:grid-cols-2 gap-5 print:!grid-cols-1 print:!gap-0">
         {STATIONS.map((station, index) => {
           const localized = localizeStation(station, language);
           const url = `${origin}/station/${station.id}`;
@@ -106,7 +106,7 @@ export function QrSheet() {
 
       {/* Special QR codes: entrance overview and villa marketing, separate from the per-station tour codes above */}
       <div className="mt-10 pt-8 border-t-2 border-tea-200 dark:border-tea-700 print:break-before-page">
-        <div className="grid sm:grid-cols-2 gap-5 print:grid-cols-1 print:gap-0">
+        <div className="grid sm:grid-cols-2 gap-5 print:!grid-cols-1 print:!gap-0">
           <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:break-after-page print:border-gold-500 print:min-h-[250mm] print:justify-center">
             <Scissors size={14} className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden" />
             <h2 className="font-heading font-semibold text-xl text-tea-900 text-center print:text-3xl">{t("appTitle")}</h2>
