@@ -8,8 +8,11 @@ import { localizeVilla } from "../data/villa";
 import logo from "../assets/brand/athu-BZCrr7Wr.png";
 // Real on-site photo of the estate's own "Story of Ceylon Tea" signboard, used as the
 // "introduction" station's QR watermark specifically (see getWatermarkImage below) instead of
-// its own heroImage, since the user supplied this one directly for that card.
-import introductionWatermarkImg from "../assets/introduction/story-of-ceylon-tea-signboard.jpg";
+// its own heroImage, since the user supplied this one directly for that card. This is a crop of
+// the original photo with its own bottom contact-banner strip removed — otherwise that banner
+// (faded, since it's part of the watermark) doubled up with the explicit contactBannerImg footer
+// every card already gets below.
+import introductionWatermarkImg from "../assets/introduction/story-of-ceylon-tea-signboard-scene.jpg";
 // "nursery" has a heroVideo but no heroImage, so it falls back to this section photo instead.
 import nurseryWatermarkImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
 // "mushroom-hut" has neither a heroImage nor a heroVideo, so it falls back to this section photo.
