@@ -47,14 +47,16 @@ export function QrSheet() {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-5 print:grid-cols-2 print:gap-x-6 print:gap-y-8">
-        {STATIONS.map((station) => {
+      <div className="grid sm:grid-cols-2 gap-5 print:grid-cols-1 print:gap-0">
+        {STATIONS.map((station, index) => {
           const localized = localizeStation(station, language);
           const url = `${origin}/station/${station.id}`;
           return (
             <div
               key={station.id}
-              className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-tea-300 rounded-md p-6 print:break-inside-avoid print:border-tea-400"
+              className={`relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-tea-300 rounded-md p-6 print:break-inside-avoid print:border-tea-400 print:min-h-[250mm] print:justify-center ${
+                index < STATIONS.length - 1 ? "print:break-after-page" : ""
+              }`}
             >
               <Scissors
                 size={14}
@@ -77,19 +79,20 @@ export function QrSheet() {
                 )}
               </div>
 
-              <h2 className="font-heading font-semibold text-xl text-tea-900 text-center">{localized.name}</h2>
+              <h2 className="font-heading font-semibold text-xl text-tea-900 text-center print:text-3xl">{localized.name}</h2>
 
               <div className="p-3 bg-white rounded-xl border border-tea-100 shadow-sm">
                 <QRCodeSVG
                   value={url}
                   size={170}
+                  className="print:!w-[320px] print:!h-[320px]"
                   level="H"
                   fgColor="#1a2e17"
                   imageSettings={{ src: logo, height: 32, width: 32, excavate: true }}
                 />
               </div>
 
-              <p className="text-tea-600 text-xs font-medium">{t("scanQrHint")}</p>
+              <p className="text-tea-600 text-xs font-medium print:text-base">{t("scanQrHint")}</p>
               <p className="text-tea-400 text-[11px] break-all text-center font-mono">{url}</p>
 
               <div className="w-full flex items-center gap-2 pt-3 mt-1 border-t border-tea-100">
@@ -103,21 +106,22 @@ export function QrSheet() {
 
       {/* Special QR codes: entrance overview and villa marketing, separate from the per-station tour codes above */}
       <div className="mt-10 pt-8 border-t-2 border-tea-200 dark:border-tea-700 print:break-before-page">
-        <div className="grid sm:grid-cols-2 gap-5 print:grid-cols-2 print:gap-x-6 print:gap-y-8">
-          <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:border-gold-500">
+        <div className="grid sm:grid-cols-2 gap-5 print:grid-cols-1 print:gap-0">
+          <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:break-after-page print:border-gold-500 print:min-h-[250mm] print:justify-center">
             <Scissors size={14} className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden" />
-            <h2 className="font-heading font-semibold text-xl text-tea-900 text-center">{t("appTitle")}</h2>
+            <h2 className="font-heading font-semibold text-xl text-tea-900 text-center print:text-3xl">{t("appTitle")}</h2>
             <p className="text-tea-500 text-xs text-center">{t("tagline")}</p>
             <div className="p-3 bg-white rounded-xl border border-tea-100 shadow-sm">
               <QRCodeSVG
                 value={`${origin}/`}
                 size={170}
+                className="print:!w-[320px] print:!h-[320px]"
                 level="H"
                 fgColor="#1a2e17"
                 imageSettings={{ src: logo, height: 32, width: 32, excavate: true }}
               />
             </div>
-            <p className="text-tea-600 text-xs font-medium">{t("scanQrHint")}</p>
+            <p className="text-tea-600 text-xs font-medium print:text-base">{t("scanQrHint")}</p>
             <p className="text-tea-400 text-[11px] break-all text-center font-mono">{`${origin}/`}</p>
             <div className="w-full flex items-center gap-2 pt-3 mt-1 border-t border-tea-100">
               <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
@@ -125,20 +129,21 @@ export function QrSheet() {
             </div>
           </div>
 
-          <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:border-gold-500">
+          <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:border-gold-500 print:min-h-[250mm] print:justify-center">
             <Scissors size={14} className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden" />
-            <h2 className="font-heading font-semibold text-xl text-tea-900 text-center">{villa.name}</h2>
+            <h2 className="font-heading font-semibold text-xl text-tea-900 text-center print:text-3xl">{villa.name}</h2>
             <p className="text-tea-500 text-xs text-center">{villa.tagline}</p>
             <div className="p-3 bg-white rounded-xl border border-tea-100 shadow-sm">
               <QRCodeSVG
                 value={`${origin}/villa`}
                 size={170}
+                className="print:!w-[320px] print:!h-[320px]"
                 level="H"
                 fgColor="#1a2e17"
                 imageSettings={{ src: logo, height: 32, width: 32, excavate: true }}
               />
             </div>
-            <p className="text-tea-600 text-xs font-medium">{t("scanQrHint")}</p>
+            <p className="text-tea-600 text-xs font-medium print:text-base">{t("scanQrHint")}</p>
             <p className="text-tea-400 text-[11px] break-all text-center font-mono">{`${origin}/villa`}</p>
             <div className="w-full flex items-center gap-2 pt-3 mt-1 border-t border-tea-100">
               <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
