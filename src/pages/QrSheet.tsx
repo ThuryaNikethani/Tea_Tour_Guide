@@ -9,17 +9,13 @@ import logo from "../assets/brand/athu-BZCrr7Wr.png";
 // Real on-site photo of the estate's own "Story of Ceylon Tea" signboard, used as the
 // "introduction" station's QR watermark specifically (see getWatermarkImage below) instead of
 // its own heroImage, since the user supplied this one directly for that card. This is a crop of
-// the original photo with its own bottom contact-banner strip removed — otherwise that banner
-// (faded, since it's part of the watermark) doubled up with the explicit contactBannerImg footer
-// every card already gets below.
+// the original photo with its own bottom contact-banner strip removed (that banner isn't used
+// elsewhere on this page, so the crop just keeps the watermark to the scene itself).
 import introductionWatermarkImg from "../assets/introduction/story-of-ceylon-tea-signboard-scene.jpg";
 // "nursery" has a heroVideo but no heroImage, so it falls back to this section photo instead.
 import nurseryWatermarkImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
 // "mushroom-hut" has neither a heroImage nor a heroVideo, so it falls back to this section photo.
 import mushroomHutWatermarkImg from "../assets/mushroom-hut/pink-oyster.jpg";
-// The factory's contact-info banner, cropped from the bottom strip of the same signboard photo
-// above — shown fully opaque (not faded like the watermark) at the bottom of every QR card.
-import contactBannerImg from "../assets/brand/factory-contact-banner.jpg";
 
 /** Every QR card gets a faint background watermark using a real photo already in the app —
  * each station's own heroImage where it has one, with a couple of explicit fallbacks for the
@@ -133,7 +129,6 @@ export function QrSheet() {
                 <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
                 <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
               </div>
-              <img src={contactBannerImg} alt="Athukorala Tea Factory - Pitigala contact details" className="w-full h-auto rounded-b-md" />
             </div>
           );
         })}
@@ -162,7 +157,6 @@ export function QrSheet() {
               <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
               <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
             </div>
-            <img src={contactBannerImg} alt="Athukorala Tea Factory - Pitigala contact details" className="w-full h-auto rounded-b-md" />
           </div>
 
           <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:border-gold-500 print:min-h-[250mm] print:justify-center">
@@ -185,7 +179,6 @@ export function QrSheet() {
               <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
               <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
             </div>
-            <img src={contactBannerImg} alt="Athukorala Tea Factory - Pitigala contact details" className="w-full h-auto rounded-b-md" />
           </div>
         </div>
       </div>
