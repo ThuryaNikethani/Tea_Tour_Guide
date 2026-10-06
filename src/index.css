@@ -13,3 +13,12 @@ body {
   background-color: theme("colors.tea.950");
   color: theme("colors.tea.50");
 }
+
+/* Locks the printable QR sheet (src/pages/QrSheet.tsx) to A4 paper with a sensible margin,
+   regardless of the browser/printer's own default page size (often US Letter). */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+}
