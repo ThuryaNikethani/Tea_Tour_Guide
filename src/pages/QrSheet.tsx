@@ -16,14 +16,60 @@ import introductionWatermarkImg from "../assets/introduction/story-of-ceylon-tea
 import nurseryWatermarkImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
 // "mushroom-hut" has neither a heroImage nor a heroVideo, so it falls back to this section photo.
 import mushroomHutWatermarkImg from "../assets/mushroom-hut/pink-oyster.jpg";
+// 17 stations' heroImage is a generated multi-photo collage (several photos side by side) rather
+// than a single photo — fine as a hero banner, but busy/seamy as a faded watermark. Each of these
+// uses a single existing photo instead: the same one already used in that station's own sections
+// where one exists, or (for the four with no other section photo at all) one panel cropped out of
+// their own collage, so it's still the exact same photographic content already on the site.
+import pahatharataManufacturingWatermarkImg from "../assets/pahatharata-manufacturing/factory-floor-worker.jpg";
+import cinnamonWatermarkImg from "../assets/cinnamon/cinnamon-fruit.jpg";
+import gingerTurmericWatermarkImg from "../assets/ginger/ginger-rhizome.jpg";
+import turmericWatermarkImg from "../assets/turmeric/turmeric-flower.webp";
+import beeWatermarkImg from "../assets/bee/bee-flight.jpg";
+import coconutFieldWatermarkImg from "../assets/coconut/coconut-inflorescence.jpg";
+import jaggeryPalmWatermarkImg from "../assets/kithul/kithul-leaves.jpg";
+import uniqueFruitsWatermarkImg from "../assets/dragon-fruit/dragon-fruit-vine.jpg";
+import handmadeFactoryWatermarkImg from "../assets/handmade-factory/withering-rolling-hands.jpg";
+import sortingWatermarkImg from "../assets/sorting/sorting-floor-visit-2.jpg";
+import packingWatermarkImg from "../assets/packing/graded-tea-sacks.jpg";
+import teaCenterWatermarkImg from "../assets/tea-center/tea-centre-entrance.jpg";
+import clonalTeaWatermarkImg from "../assets/nursery/gallery/pla9-moj4O07C.jpg";
+// These four collages have no other section photo anywhere in the app, so each is one panel
+// cropped directly out of its own existing collage file instead.
+import shadeManagementWatermarkImg from "../assets/shade-management/shade-tree-signboard.jpg";
+import pruningWatermarkImg from "../assets/pruning/first-crosscut-sign.jpg";
+import pluckingWatermarkImg from "../assets/plucking/visitors-plucking.jpg";
+import teaFactoryWatermarkImg from "../assets/tea-factory/factory-building-signage.jpg";
+
+const COLLAGE_WATERMARK_OVERRIDES: Record<string, string> = {
+  "pahatharata-manufacturing": pahatharataManufacturingWatermarkImg,
+  cinnamon: cinnamonWatermarkImg,
+  "ginger-turmeric": gingerTurmericWatermarkImg,
+  turmeric: turmericWatermarkImg,
+  bee: beeWatermarkImg,
+  "coconut-field": coconutFieldWatermarkImg,
+  "jaggery-palm": jaggeryPalmWatermarkImg,
+  "unique-fruits": uniqueFruitsWatermarkImg,
+  "handmade-factory": handmadeFactoryWatermarkImg,
+  "shade-management": shadeManagementWatermarkImg,
+  pruning: pruningWatermarkImg,
+  sorting: sortingWatermarkImg,
+  packing: packingWatermarkImg,
+  plucking: pluckingWatermarkImg,
+  "tea-factory": teaFactoryWatermarkImg,
+  "tea-center": teaCenterWatermarkImg,
+  "clonal-tea": clonalTeaWatermarkImg,
+};
 
 /** Every QR card gets a faint background watermark using a real photo already in the app —
- * each station's own heroImage where it has one, with a couple of explicit fallbacks for the
- * two stations that don't (see imports above). */
+ * each station's own heroImage where it has one, with explicit overrides for the few stations
+ * whose heroImage is a multi-photo collage (see COLLAGE_WATERMARK_OVERRIDES) or that have no
+ * heroImage at all (see imports above). */
 function getWatermarkImage(station: { id: string; heroImage?: string }): string | undefined {
   if (station.id === "introduction") return introductionWatermarkImg;
   if (station.id === "nursery") return nurseryWatermarkImg;
   if (station.id === "mushroom-hut") return mushroomHutWatermarkImg;
+  if (COLLAGE_WATERMARK_OVERRIDES[station.id]) return COLLAGE_WATERMARK_OVERRIDES[station.id];
   return station.heroImage;
 }
 
