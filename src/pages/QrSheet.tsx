@@ -25,7 +25,7 @@ import mushroomHutWatermarkImg from "../assets/mushroom-hut/pink-oyster.jpg";
 // uses a single existing photo instead: the same one already used in that station's own sections
 // where one exists, or (for the four with no other section photo at all) one panel cropped out of
 // their own collage, so it's still the exact same photographic content already on the site.
-import pahatharataManufacturingWatermarkImg from "../assets/pahatharata-manufacturing/leaf-basket-withering-trough.jpg";
+import pahatharataManufacturingWatermarkImg from "../assets/pahatharata-manufacturing/leaf-baskets-factory-floor.jpg";
 import cinnamonWatermarkImg from "../assets/cinnamon/cinnamon-fruit.jpg";
 import gingerTurmericWatermarkImg from "../assets/ginger/ginger-rhizome.jpg";
 import turmericWatermarkImg from "../assets/turmeric/turmeric-flower.webp";
