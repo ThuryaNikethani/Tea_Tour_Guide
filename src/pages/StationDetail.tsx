@@ -353,6 +353,7 @@ function formatVerifiedDate(iso: string, language: string): string {
 }
 
 function ShareButton({ title }: { title: string }) {
+  const { t } = useLanguage();
   const [copied, setCopied] = useState(false);
 
   async function handleShare() {
@@ -377,7 +378,7 @@ function ShareButton({ title }: { title: string }) {
   return (
     <button
       type="button"
-      aria-label="Share this station"
+      aria-label={t("shareStation")}
       onClick={handleShare}
       className="flex items-center justify-center w-8 h-8 rounded-full text-tea-400 hover:text-gold-600 hover:bg-tea-50 dark:hover:bg-tea-900 transition-colors"
     >

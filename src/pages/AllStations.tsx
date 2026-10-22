@@ -156,7 +156,7 @@ function StationCard({
     >
       {wasVisited && (
         <span
-          aria-label="Visited"
+          aria-label={t("visited")}
           className="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 rounded-full bg-gold-500 text-white shadow-sm"
         >
           <CheckCheck size={13} />

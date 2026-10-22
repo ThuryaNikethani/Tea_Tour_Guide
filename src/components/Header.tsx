@@ -48,7 +48,7 @@ export function Header() {
             <LanguageDropdown />
             <button
               type="button"
-              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((v) => !v)}
               className="md:hidden flex items-center justify-center w-9 h-9 border border-gold-500/50 text-tea-900 dark:text-tea-100"
@@ -78,11 +78,12 @@ export function Header() {
 }
 
 function ThemeToggle() {
+  const { t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   return (
     <button
       type="button"
-      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={theme === "dark" ? t("switchToLightMode") : t("switchToDarkMode")}
       onClick={toggleTheme}
       className="flex items-center justify-center w-9 h-9 border border-gold-500/50 hover:border-gold-500 text-tea-900 dark:text-tea-100 transition-colors"
     >
