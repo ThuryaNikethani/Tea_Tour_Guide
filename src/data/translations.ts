@@ -553,6 +553,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "පැක් කිරීම",
+      heroTagline: "වතුයායේම ඇසුරුම් කිරීමේ ස්ථානයේ අමුත්තන්.",
       sectionHeadings: ["බර කිරීම, රස බැලීම, සහ මුද්‍රා තැබීම", "පැක් කිරීමේ තට්ටුවේ ශ්‍රේණි", "ශ්‍රේණිය අනුව බෑග් බර", "කර්මාන්තශාලාවේ සිට වෙන්දේසියට", "වායු නොගමන් ඇසුරුම වැදගත් වන්නේ ඇයි", "ශ්‍රේණි වෙළඳපොළවලට ගැලපීම"],
       sectionBodies: [
         "ශ්‍රේණිගත කළ තේ බර කරනු ලබන අතර, තත්ත්වය සඳහා රස බලා, ඇලුමිනියම් තීරු කඩදාසියෙන් ආස්තරණය කළ තෙතමන-සුරක්ෂිත ඇසුරුම්වලට මුද්‍රා තබනු ලැබේ. ඒවායේ කර්මාන්තශාලාවේ නම සහ ලාංඡනය, ලියාපදිංචි අංකය, සිලෝන් තේ සංකේතය, සහ ආහාර සුරක්ෂිතතා සහතිකය මුද්‍රණය කර ඇත.",
@@ -566,6 +567,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "කුරුඳු වගාව",
+      heroTagline: "සුවඳවත් සදාහරිත ගසකින් කර්මාන්තශාලාවේම කුරුඳු තේ දක්වා.",
       sectionHeadings: ["කුරුඳු ගස පිළිබඳ", "ලක්ෂණ", "කුරුඳු පීල කිරීම: මෙවලම් සහ ක්‍රියාවලිය", "ප්‍රතිලාභ", "කුරුඳු තේ නිෂ්පාදන"],
       sectionBodies: [
         "Cinnamomum verum ගස 'සැබෑ කුරුඳු' හෝ සිලෝන් කුරුඳු නමින් විකිණේ. එය ලෝරේසී පවුලට අයත් කුඩා සදාහරිත ගසක් වන අතර, ශ්‍රී ලංකාවට සහ දකුණු ඉන්දියාවට ආවේණිකය. වාණිජමය වශයෙන් වැදගත් වන්නේ ගසේ අභ්‍යන්තර පොත්තයි. එය පීල කර, වියලා, හුරුපුරුදු කුරුඳු දඬු බවට රෝල් කරනු ලැබේ. හොඳින් ජලය බැස යන පසක් සහ නිතිපතා නිවර්තන වර්ෂාපතනයක් ලැබුණහොත්, ගස කොළ සහ අත්‍යවශ්‍ය තෙල් ද ලබා දෙයි. මේවා ලොව පුරා ආහාර පිසීමේදී සහ සාම්ප්‍රදායික වෛද්‍ය විද්‍යාවේ අගය කරනු ලැබේ.",
@@ -744,6 +746,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "තේ නිෂ්පාදනය (දකුණු ප්‍රදේශය)",
+      heroTagline: "වතුයායේම කර්මාන්තශාලා බිම නරඹන අමුත්තන්.",
       sectionHeadings: ["පහත රට එදිරිව උස් රට සැකසීම", "CTC සැකසුම"],
       sectionBodies: [
         "පහත රට ('පහත රට') වතු, මෙම වතුය මෙන්ම, දුර අභ්‍යන්තර උස් රට වතුවලට වඩා වෙනස් ලෙස තේ සකසයි. මෙම චාරිකාවේ මීට පෙර අදියරෙන් අදියර ආවරණය කළ වතුයායේම නිෂ්පාදන ක්‍රියාවලිය එය තහවුරු කරයි. මෙහි රෝල් කිරීම කොළය සම්පූර්ණ සාම්ප්‍රදායික කොළයක් ලෙස ඇඹරීම වෙනුවට කුඩා, ඝන අංශු බවට කඩා දමයි, එය CTC (Crush-Tear-Curl) සැකසීමේ ලාක්ෂණික ලක්ෂණයයි. මෙම නැවතුම එම පහත රට ප්‍රවේශය නෙළීම, සැකසීම, සහ ශ්‍රේණිගත කිරීම සඳහා අදහස් කරන්නේ කුමක්ද යන්න පිළිබඳ කෙටි සාරාංශයකි.",
@@ -1168,6 +1171,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "பொதிசெய்தல்",
+      heroTagline: "தோட்டத்தின் சொந்த பொதியிடல் பகுதியில் பார்வையாளர்கள்.",
       sectionHeadings: ["எடைபோடுதல், சுவைபார்த்தல், முத்திரையிடுதல்", "பொதிசெய்யும் தளத்தில் உள்ள தரங்கள்", "தரத்திற்கேற்ப பை எடைகள்", "தொழிற்சாலையிலிருந்து ஏலத்திற்கு", "காற்றுப்புகா பேக்கிங் ஏன் முக்கியம்", "தரங்களை சந்தைகளுக்கு பொருத்துதல்"],
       sectionBodies: [
         "தரப்படுத்தப்பட்ட தேயிலை எடைபோடப்பட்டு, தரத்திற்காக சுவைபார்க்கப்பட்டு, அலுமினியம் இழை படலம் இட்ட ஈரப்பதம் தடுக்கும் பேக்கேஜிங்கில் முத்திரையிடப்படுகிறது. இதில் தொழிற்சாலையின் பெயரும் சின்னமும், பதிவு எண், சிலோன் தேயிலை சின்னம், மற்றும் உணவு பாதுகாப்பு சான்றிதழ் அச்சிடப்பட்டுள்ளன.",
@@ -1181,6 +1185,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "இலவங்கப்பட்டை தோட்டம்",
+      heroTagline: "நறுமணமிக்க பசுமைமாறா மரத்திலிருந்து தொழிற்சாலையின் சொந்த இலவங்கப்பட்டை தேநீர் வரை.",
       sectionHeadings: ["இலவங்கப்பட்டை மரத்தைப் பற்றி", "பண்புகள்", "இலவங்கப்பட்டை உரித்தல்: கருவிகள் மற்றும் செயல்முறை", "நன்மைகள்", "இலவங்கப்பட்டை தேநீர் தயாரிப்புகள்"],
       sectionBodies: [
         "Cinnamomum verum மரம் 'உண்மையான இலவங்கப்பட்டை' அல்லது சிலோன் இலவங்கப்பட்டை என விற்கப்படுகிறது. இது லாரேசி குடும்பத்தைச் சேர்ந்த ஒரு சிறிய பசுமையான மரம், இலங்கை மற்றும் தென் இந்தியாவை பூர்வீகமாகக் கொண்டது. வணிக ரீதியாக முக்கியமானது மரத்தின் உள் பட்டையே. அது உரிக்கப்பட்டு, உலர்த்தப்பட்டு, பரிச்சயமான இலவங்கப்பட்டை சுருள்களாக சுருட்டப்படுகிறது. வடிகட்டும் மண் மற்றும் நிலையான வெப்பமண்டல மழைப்பொழிவு கிடைத்தால், மரம் இலைகளையும் ஒரு அத்தியாவசிய எண்ணெயையும் தருகிறது. இவை உலகம் முழுவதும் சமையலிலும் பாரம்பரிய மருத்துவத்திலும் மதிக்கப்படுகின்றன.",
@@ -1359,6 +1364,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "தேயிலை உற்பத்தி (தெற்கு பகுதி)",
+      heroTagline: "தோட்டத்தின் சொந்த தொழிற்சாலைத் தளத்தைச் சுற்றிப் பார்க்கும் பார்வையாளர்கள்.",
       sectionHeadings: ["தாழ்நில எதிராக உயர்நில பதப்படுத்தல்", "CTC செயலாக்கம்"],
       sectionBodies: [
         "தாழ்வான நாட்டு ('பஹத்தரட') தோட்டங்கள், இந்த தோட்டத்தைப் போலவே, உள்நாட்டு உயர் தோட்டங்களிலிருந்து வேறுபட்ட முறையில் தேயிலையை செயலாக்குகின்றன. இந்த சுற்றுலாவில் முன்னதாக படிப்படியாக விளக்கப்பட்ட தோட்டத்தின் சொந்த உற்பத்தி செயல்முறையே இதை உறுதிப்படுத்துகிறது. இங்கு உருட்டுதல் இலையை முழுமையான பாரம்பரிய இலையாக முறுக்குவதற்குப் பதிலாக சிறிய, அடர்த்தியான துகள்களாக உடைக்கிறது, இதுவே CTC (நசுக்கு-கிழி-சுருட்டு) செயலாக்கத்தின் அடையாள அம்சமாகும். தாழ்வான நாட்டு அணுகுமுறை பறித்தல், செயலாக்கம், மற்றும் தரம் பிரித்தலுக்கு என்ன அர்த்தம் என்பதற்கான ஒரு சுருக்கமான மறுபார்வையே இந்த நிறுத்தம்.",
@@ -1783,6 +1789,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "Confezionamento",
+      heroTagline: "Visitatori nell'area di confezionamento della tenuta.",
       sectionHeadings: ["Pesatura, Assaggio e Sigillatura", "Le Qualità sul Piano di Confezionamento", "Il Peso dei Sacchi per Qualità", "Dalla Fabbrica all'Asta", "Perché la Sigillatura Ermetica è Importante", "Abbinare le Qualità ai Mercati"],
       sectionBodies: [
         "Il tè classificato viene pesato, assaggiato per la qualità, e sigillato in confezioni a prova di umidità rivestite di foglio di alluminio, stampate con il nome e il logo della fabbrica, il suo numero di registrazione, il Simbolo del Tè di Ceylon e il certificato di sicurezza alimentare.",
@@ -1796,6 +1803,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Piantagione di Cannella",
+      heroTagline: "Da un profumato albero sempreverde ai tè alla cannella della fabbrica.",
       sectionHeadings: ["L'Albero della Cannella", "Caratteristiche", "Sbucciare la Cannella: Strumenti e Processo", "Benefici", "Prodotti al Tè alla Cannella"],
       sectionBodies: [
         "La Cinnamomum verum, venduta come 'vera cannella' o cannella di Ceylon, è un piccolo albero sempreverde della famiglia delle lauracee, originario dello Sri Lanka e dell'India meridionale. Ciò che conta commercialmente è la corteccia interna dell'albero: viene pelata, essiccata e arrotolata nei familiari bastoncini di cannella. Con un terreno ben drenato e piogge tropicali costanti, l'albero produce anche foglie e un olio essenziale, apprezzato in tutto il mondo in cucina e nella medicina tradizionale.",
@@ -1974,6 +1982,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Lavorazione del Tè (Sud)",
+      heroTagline: "Visitatori in visita al reparto produttivo della fabbrica della tenuta.",
       sectionHeadings: ["Lavorazione Bassa Quota vs. Alta Quota", "CTC: Crush-Tear-Curl"],
       sectionBodies: [
         "Le tenute delle pianure ('Pahatharata') come questa lavorano il tè in modo diverso rispetto alle tenute d'alta quota più nell'entroterra. Il processo di lavorazione della tenuta stessa, illustrato fase per fase in precedenza in questo tour, lo conferma: qui l'arrotolamento riduce la foglia in piccole particelle dense anziché arrotolarla in foglie intere in stile ortodosso, il tratto distintivo della lavorazione CTC (Crush-Tear-Curl). Questa tappa è un rapido riepilogo di cosa significhi questo approccio delle pianure per la raccolta, la lavorazione e la classificazione.",
@@ -2398,6 +2407,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "التعبئة",
+      heroTagline: "زوار في منطقة التعبئة الخاصة بالمزرعة.",
       sectionHeadings: ["الوزن والتذوق والختم", "الدرجات على أرضية التعبئة", "وزن الأكياس حسب الدرجة", "من المصنع إلى المزاد", "لماذا تُعد التعبئة المُحكَمة مهمة", "مطابقة الدرجات مع الأسواق"],
       sectionBodies: [
         "يُوزَن الشاي المُصنَّف، ويُتذوَّق للتأكد من جودته، ويُختَم في عبوات مقاومة للرطوبة مبطنة برقائق الألومنيوم، مطبوع عليها اسم المصنع وشعاره، ورقم تسجيله، ورمز شاي سيلان، وشهادة سلامة الأغذية.",
@@ -2411,6 +2421,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "مزرعة القرفة",
+      heroTagline: "من شجرة دائمة الخضرة عطرية إلى شاي القرفة الخاص بالمصنع.",
       sectionHeadings: ["عن شجرة القرفة", "الخصائص", "تقشير القرفة: الأدوات والعملية", "الفوائد", "منتجات شاي القرفة"],
       sectionBodies: [
         "شجرة Cinnamomum verum، التي تُباع باسم 'القرفة الحقيقية' أو قرفة سيلان، هي شجرة صغيرة دائمة الخضرة من الفصيلة الغارية، موطنها الأصلي سريلانكا وجنوب الهند. ما يهم تجاريًا هو اللحاء الداخلي للشجرة، الذي يُقشَّر ويُجفَّف ويُلف إلى عيدان القرفة المألوفة. ومع تربة جيدة الصرف وأمطار استوائية منتظمة، تنتج الشجرة أيضًا أوراقًا وزيتًا عطريًا يُقدَّر في الطهي والطب التقليدي حول العالم.",
@@ -2589,6 +2600,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "تصنيع الشاي (الجنوب)",
+      heroTagline: "زوار يتجولون في أرضية المصنع الخاصة بالمزرعة.",
       sectionHeadings: ["المعالجة في الأراضي المنخفضة مقابل المرتفعة", "CTC: السحق والتمزيق واللف"],
       sectionBodies: [
         "تعالج مزارع الأراضي المنخفضة ('باهاتارتا')، مثل هذه المزرعة، الشاي بشكل مختلف عن مزارع الأراضي المرتفعة الداخلية. وتؤكد ذلك عملية التصنيع الخاصة بالمزرعة نفسها، التي تناولتها المحطات السابقة في هذه الجولة مرحلةً تلو الأخرى: يُحوَّل اللف هنا الورقة إلى جزيئات صغيرة وكثيفة بدلاً من لفها إلى ورقة أرثوذكسية كاملة، وهي السمة المميزة لمعالجة CTC (السحق-التمزيق-اللف). هذه المحطة عبارة عن ملخص سريع لما يعنيه نهج الأراضي المنخفضة هذا بالنسبة للقطف والمعالجة والفرز.",
@@ -3013,6 +3025,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "Упаковка",
+      heroTagline: "Гости на собственном участке упаковки поместья.",
       sectionHeadings: ["Взвешивание, дегустация и запечатывание", "Сорта на участке упаковки", "Вес мешков по сортам", "От фабрики до аукциона", "Почему герметичная упаковка важна", "Соответствие сортов рынкам"],
       sectionBodies: [
         "Отсортированный чай взвешивают, пробуют на качество и запечатывают во влагостойкую упаковку с алюминиевой фольгой внутри, с напечатанным названием и логотипом фабрики, её регистрационным номером, символом цейлонского чая и сертификатом безопасности пищевых продуктов.",
@@ -3026,6 +3039,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Плантация корицы",
+      heroTagline: "От ароматного вечнозелёного дерева до фирменного коричного чая фабрики.",
       sectionHeadings: ["О коричном дереве", "Характеристики", "Очистка корицы: инструменты и процесс", "Польза", "Чайная продукция с корицей"],
       sectionBodies: [
         "Cinnamomum verum, которую продают как «настоящую корицу» или цейлонскую корицу, — это небольшое вечнозелёное дерево семейства Лавровые, произрастающее в Шри-Ланке и Южной Индии. Коммерческую ценность представляет внутренняя кора дерева. Её очищают, сушат и скручивают в привычные палочки корицы. При хорошо дренированной почве и стабильных тропических дождях дерево также даёт листья и эфирное масло, ценимые по всему миру в кулинарии и традиционной медицине.",
@@ -3204,6 +3218,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Производство чая (Юг)",
+      heroTagline: "Гости осматривают цех собственной фабрики поместья.",
       sectionHeadings: ["Переработка на низинных и высокогорных плантациях", "CTC: дробление-разрыв-скручивание"],
       sectionBodies: [
         "Низинные («Пахатарата») плантации, как эта, обрабатывают чай иначе, чем высокогорные плантации дальше вглубь острова. Собственный производственный процесс поместья, показанный этап за этапом ранее в этом туре, подтверждает это: скручивание здесь превращает лист в мелкие плотные частицы, а не скручивает его в цельный ортодоксальный лист. Это отличительная черта CTC-обработки (Crush-Tear-Curl). Эта остановка — краткое резюме того, что означает такой низинный подход для сбора листа, обработки и сортировки.",
@@ -3628,6 +3643,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "Verpacken",
+      heroTagline: "Besucher im eigenen Verpackungsbereich des Anwesens.",
       sectionHeadings: ["Wiegen, Verkosten und Versiegeln", "Die Sorten im Verpackungsbereich", "Beutelgewicht nach Sorte", "Von der Fabrik zur Auktion", "Warum luftdichte Verpackung wichtig ist", "Sorten passend zu den Märkten"],
       sectionBodies: [
         "Sortierter Tee wird gewogen, zur Qualitätsprüfung verkostet und in feuchtigkeitsdichte, mit Aluminiumfolie ausgekleidete Verpackungen versiegelt, bedruckt mit dem Namen und Logo der Fabrik, ihrer Registrierungsnummer, dem Ceylon-Tee-Symbol und dem Lebensmittelsicherheitszertifikat.",
@@ -3641,6 +3657,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Zimtplantage",
+      heroTagline: "Von einem duftenden immergrünen Baum zu den eigenen Zimttees der Fabrik.",
       sectionHeadings: ["Über den Zimtbaum", "Merkmale", "Zimt Schälen: Werkzeuge und Ablauf", "Vorteile", "Zimttee-Produkte"],
       sectionBodies: [
         "Cinnamomum verum, verkauft als „echter Zimt“ oder Ceylon-Zimt, ist ein kleiner immergrüner Baum aus der Familie der Lorbeergewächse, beheimatet in Sri Lanka und Südindien. Kommerziell zählt vor allem die innere Rinde des Baums. Sie wird geschält, getrocknet und zu den bekannten Zimtstangen gerollt. Bei gut durchlässigem Boden und beständigem tropischem Regen liefert der Baum außerdem Blätter und ein ätherisches Öl, das weltweit in der Küche und in der traditionellen Medizin geschätzt wird.",
@@ -3819,6 +3836,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Teeherstellung (Süden)",
+      heroTagline: "Besucher bei einem Rundgang durch die eigene Fabrikhalle des Anwesens.",
       sectionHeadings: ["Verarbeitung im Tiefland gegenüber dem Hochland", "CTC: Crush-Tear-Curl"],
       sectionBodies: [
         "Tiefland-Plantagen ('Pahatharata') wie diese verarbeiten Tee anders als Hochlandplantagen weiter im Landesinneren. Der eigene Herstellungsprozess des Anwesens, der zuvor auf dieser Tour Schritt für Schritt gezeigt wurde, bestätigt das: Das Rollen zerkleinert das Blatt hier zu kleinen, dichten Partikeln, statt es zu einem ganzen orthodoxen Blatt zu rollen. Das ist das Kennzeichen der CTC-Verarbeitung (Crush-Tear-Curl). Diese Station fasst kurz zusammen, was dieser Tiefland-Ansatz für Pflücken, Verarbeitung und Sortierung bedeutet.",
@@ -4243,6 +4261,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "Empaquetado",
+      heroTagline: "Visitantes en la propia zona de envasado de la finca.",
       sectionHeadings: ["Pesaje, Cata y Sellado", "Los Grados en la Zona de Empaquetado", "Peso de las Bolsas por Grado", "De la Fábrica a la Subasta", "Por Qué el Sellado Hermético es Importante", "Ajustando los Grados a los Mercados"],
       sectionBodies: [
         "El té clasificado se pesa, se cata para comprobar su calidad, y se sella en envases a prueba de humedad forrados con papel de aluminio, impresos con el nombre y el logotipo de la fábrica, su número de registro, el Símbolo del Té de Ceilán y el certificado de seguridad alimentaria.",
@@ -4256,6 +4275,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Plantación de Canela",
+      heroTagline: "De un árbol perenne y aromático a los tés de canela propios de la fábrica.",
       sectionHeadings: ["Sobre el Árbol de Canela", "Características", "Pelado de la Canela: Herramientas y Proceso", "Beneficios", "Productos de Té de Canela"],
       sectionBodies: [
         "Cinnamomum verum, vendida como \"canela verdadera\" o canela de Ceilán, es un pequeño árbol de hoja perenne de la familia de las lauráceas, originario de Sri Lanka y el sur de la India. Lo que importa comercialmente es la corteza interna del árbol, que se pela, se seca y se enrolla en los familiares rollos de canela. Con un suelo bien drenado y lluvias tropicales constantes, el árbol también produce hojas y un aceite esencial muy valorado en la cocina y la medicina tradicional de todo el mundo.",
@@ -4434,6 +4454,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Fabricación de Té (Sur)",
+      heroTagline: "Visitantes recorriendo la propia planta de la fábrica de la finca.",
       sectionHeadings: ["Procesamiento en Tierras Bajas frente a Tierras Altas", "CTC: Crush-Tear-Curl"],
       sectionBodies: [
         "Las fincas de tierras bajas ('Pahatharata') como esta procesan el té de forma diferente a las fincas de tierras altas más hacia el interior. El propio proceso de fabricación de la finca, cubierto etapa por etapa anteriormente en este recorrido, lo confirma: aquí el enrollado reduce la hoja a partículas pequeñas y densas en lugar de enrollarla en hoja entera al estilo ortodoxo. Ese es el sello distintivo del procesamiento CTC (Crush-Tear-Curl). Esta parada es un resumen rápido de lo que ese enfoque de tierras bajas significa para la recolección, el procesamiento y la clasificación.",
@@ -4858,6 +4879,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "Emballage",
+      heroTagline: "Des visiteurs dans la zone d'emballage du domaine.",
       sectionHeadings: ["Pesée, Dégustation et Scellage", "Les Qualités sur l'Aire d'Emballage", "Le Poids des Sacs par Qualité", "De la Fabrique à la Vente aux Enchères", "Pourquoi l'Emballage Hermétique est Important", "Adapter les Qualités aux Marchés"],
       sectionBodies: [
         "Le thé classé est pesé, dégusté pour en vérifier la qualité, et scellé dans des emballages étanches à l'humidité doublés de papier aluminium, imprimés avec le nom et le logo de la fabrique, son numéro d'enregistrement, le Symbole du Thé de Ceylan, et le certificat de sécurité alimentaire.",
@@ -4871,6 +4893,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "Plantation de Cannelle",
+      heroTagline: "D'un arbre persistant parfumé aux thés à la cannelle de l'usine.",
       sectionHeadings: ["À Propos du Cannelier", "Caractéristiques", "Éplucher la Cannelle : Outils et Processus", "Bienfaits", "Produits de Thé à la Cannelle"],
       sectionBodies: [
         "Le Cinnamomum verum, vendu sous le nom de « vraie cannelle » ou cannelle de Ceylan, est un petit arbre à feuilles persistantes de la famille des lauracées, originaire du Sri Lanka et du sud de l'Inde. Ce qui compte commercialement, c'est l'écorce interne de l'arbre, qui est pelée, séchée puis enroulée en bâtons de cannelle familiers. Avec un sol bien drainé et des pluies tropicales régulières, l'arbre fournit aussi des feuilles et une huile essentielle appréciées dans le monde entier en cuisine et en médecine traditionnelle.",
@@ -5049,6 +5072,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "Fabrication du Thé (Sud)",
+      heroTagline: "Des visiteurs parcourant l'atelier de l'usine du domaine.",
       sectionHeadings: ["Transformation en Basse Altitude vs. Haute Altitude", "CTC : Crush-Tear-Curl"],
       sectionBodies: [
         "Les plantations de basses terres (« Pahatharata ») comme celle-ci transforment le thé différemment des plantations de hautes terres situées plus à l'intérieur des terres. Le propre procédé de fabrication du domaine, présenté étape par étape plus tôt dans ce parcours, le confirme : ici, le roulage réduit la feuille en petites particules denses plutôt que de la rouler en feuille entière façon orthodoxe. C'est la marque distinctive du procédé CTC (Crush-Tear-Curl). Cette étape est un rapide résumé de ce que cette approche des basses terres signifie pour la cueillette, la transformation et le triage.",
@@ -5473,6 +5497,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "包装",
+      heroTagline: "游客在庄园自家的包装区。",
       sectionHeadings: ["称重、试饮与封装", "包装区的各个等级", "各等级的袋重", "从茶厂到拍卖会", "密封包装为何重要", "等级与市场的匹配"],
       sectionBodies: [
         "分级后的茶叶经过称重、品质试饮，然后密封进衬有铝箔的防潮包装中，包装上印有茶厂的名称和标志、注册编号、锡兰茶标志以及食品安全证书。",
@@ -5486,6 +5511,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "肉桂种植园",
+      heroTagline: "从芬芳的常绿树，到本厂自制的肉桂茶。",
       sectionHeadings: ["关于肉桂树", "特征", "剥取肉桂皮：工具与流程", "益处", "肉桂茶产品"],
       sectionBodies: [
         "肉桂（Cinnamomum verum）又称“真肉桂”或锡兰肉桂，是樟科的一种小型常绿乔木，原产于斯里兰卡和印度南部。真正具有商业价值的是树的内层树皮，经过剥皮、晒干后卷成人们熟悉的肉桂卷。只要有排水良好的土壤和稳定的热带降雨，这种树还能提供树叶和精油，两者都在全球烹饪和传统医学中备受推崇。",
@@ -5664,6 +5690,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "低地茶制作（南部）",
+      heroTagline: "游客参观庄园自家的工厂车间。",
       sectionHeadings: ["低地与高地加工工艺对比", "CTC：压碎-撕裂-揉卷"],
       sectionBodies: [
         "像本庄园这样的低地（“Pahatharata”）庄园的制茶方式与内陆高地庄园不同。本次游览中此前逐一介绍过的庄园自身生产流程正印证了这一点：这里的揉捻是将茶叶揉碎成细小紧实的颗粒，而不是像正统工艺那样揉成完整的茶叶。这正是CTC（压碎-撕裂-揉卷）加工的标志性特征。本站是对低地这种方式在采茶、加工与分级方面所代表意义的简要回顾。",
@@ -6088,6 +6115,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     packing: {
       name: "梱包",
+      heroTagline: "農園自前の包装エリアを訪れた訪問者たち。",
       sectionHeadings: ["計量、試飲、密封", "梱包エリアの等級", "等級ごとの袋の重量", "工場からオークションへ", "気密包装が重要な理由", "等級と市場のすり合わせ"],
       sectionBodies: [
         "等級付けされた茶は計量され、品質のために試飲され、アルミ箔で裏打ちされた防湿包装に密封されます。そこには工場の名前とロゴ、登録番号、セイロンティーのシンボル、そして食品安全証明書が印刷されています。",
@@ -6101,6 +6129,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     cinnamon: {
       name: "シナモン農園",
+      heroTagline: "香り高い常緑樹から、工場自家製のシナモンティーへ。",
       sectionHeadings: ["シナモンの木について", "特徴", "シナモンの皮剥き：道具と工程", "効能", "シナモンティー製品"],
       sectionBodies: [
         "「本物のシナモン」またはセイロンシナモンとして売られているCinnamomum verumは、クスノキ科の小さな常緑樹で、スリランカと南インドが原産です。商業的に重要なのは木の内側の樹皮で、これを剥いで乾燥させ、おなじみのシナモンスティックへと巻き上げます。水はけの良い土壌と安定した熱帯の降雨があれば、木は葉や精油も生み出し、どちらも世界中で料理や伝統医療に重宝されています。",
@@ -6279,6 +6308,7 @@ const PLACEHOLDER_TRANSLATIONS: Partial<Record<Exclude<LanguageCode, "en">, Reco
     },
     "pahatharata-manufacturing": {
       name: "紅茶製造（南部）",
+      heroTagline: "農園自前の工場フロアを見学する訪問者たち。",
       sectionHeadings: ["低地と高地の製法の違い", "CTC：クラッシュ・ティア・カール"],
       sectionBodies: [
         "この農園のような低地（「パハタラタ」）の農園は、内陸の高地農園とは異なる方法で茶を加工します。このツアーで先ほど段階ごとに紹介した農園自体の製造工程が、まさにそれを裏付けています。ここでの揉捻は、正統派の紅茶のように葉を丸ごと巻き上げるのではなく、小さく密な粒状に砕きます。これはCTC（クラッシュ・ティア・カール）加工の特徴です。このストップでは、この低地方式が摘採、加工、選別にとって何を意味するのかを簡単に振り返ります。",
