@@ -19,7 +19,7 @@ body {
 @media print {
   @page {
     size: A3;
-    margin: 8mm;
+    margin: 0;
   }
 }
 
@@ -206,10 +206,12 @@ body {
 }
 
 @media print {
-  /* One sign filling each A3 sheet (297 × 420 mm less the 8 mm page margin). */
+  /* One sign filling each A3 sheet edge to edge (297 × 420 mm, no page margin). */
   .qr-sign {
-    width: 281mm;
-    height: 403mm;
+    width: 297mm;
+    height: 420mm;
+    border: 0;
+    border-radius: 0;
     aspect-ratio: auto;
     margin: 0 auto;
     box-shadow: none;
