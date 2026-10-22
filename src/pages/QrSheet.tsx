@@ -6,6 +6,7 @@ import { STATIONS } from "../data/stations";
 import { localizeStation } from "../data/localize";
 import { localizeVilla } from "../data/villa";
 import logo from "../assets/brand/athu-BZCrr7Wr.png";
+import { QrSignCard } from "../components/QrSignCard";
 // Real on-site photo of the estate's own "Story of Ceylon Tea" signboard, used as the
 // "introduction" station's QR watermark specifically (see getWatermarkImage below) instead of
 // its own heroImage, since the user supplied this one directly for that card. This is a crop of
@@ -128,60 +129,35 @@ export function QrSheet() {
           return (
             <div
               key={station.id}
-              className={`relative isolate overflow-hidden flex flex-col items-center gap-3 bg-white border-2 border-dashed border-tea-300 rounded-md p-6 print:break-inside-avoid print:border-tea-400 print:min-h-[250mm] print:justify-center ${
-                index < STATIONS.length - 1 ? "print:break-after-page" : ""
-              }`}
+              className={`relative print:break-inside-avoid ${index < STATIONS.length - 1 ? "print:break-after-page" : ""}`}
             >
-              {watermarkSrc && (
-                <img
-                  src={watermarkSrc}
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover opacity-35 -z-10"
-                />
-              )}
-
-              <Scissors
-                size={14}
-                className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden"
+              <QrSignCard
+                title={localized.name}
+                url={url}
+                footer={t("appTitle")}
+                backgroundSrc={watermarkSrc}
+                corner={
+                  <Scissors
+                    size={14}
+                    className="absolute top-1 right-1 z-10 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden"
+                  />
+                }
+                badge={
+                  <>
+                    <span className="qr-sign-number">{station.order}</span>
+                    {station.verified && <CheckCircle2 className="qr-sign-verified" />}
+                  </>
+                }
+                tagline={
+                  <>
+                    <div>
+                      {t("stationOf").replace("{current}", String(station.order)).replace("{total}", String(STATIONS.length))}
+                      {!station.verified && <span className="qr-sign-draft">{t("draftLabel")}</span>}
+                    </div>
+                    <div className="qr-sign-hint">{t("scanQrHint")}</div>
+                  </>
+                }
               />
-
-              <div className="flex items-center gap-2">
-                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-tea-700 text-white font-semibold text-xs shrink-0">
-                  {station.order}
-                </span>
-                <span className="text-tea-500 text-xs font-medium uppercase tracking-wide">
-                  {t("stationOf").replace("{current}", String(station.order)).replace("{total}", String(STATIONS.length))}
-                </span>
-                {station.verified ? (
-                  <CheckCircle2 size={14} className="text-tea-600" />
-                ) : (
-                  <span className="text-[10px] uppercase tracking-wide text-brass-600 bg-brass-300/15 border border-brass-300/50 rounded-full px-2 py-0.5">
-                    {t("draftLabel")}
-                  </span>
-                )}
-              </div>
-
-              <h2 className="font-heading font-semibold text-xl text-tea-900 text-center print:text-3xl">{localized.name}</h2>
-
-              <div className="p-3 bg-white rounded-xl border border-tea-100 shadow-sm">
-                <QRCodeSVG
-                  value={url}
-                  size={170}
-                  className="print:!w-[320px] print:!h-[320px]"
-                  level="H"
-                  fgColor="#1a2e17"
-                  imageSettings={{ src: logo, height: 32, width: 32, excavate: true }}
-                />
-              </div>
-
-              <p className="text-tea-600 text-xs font-medium print:text-base">{t("scanQrHint")}</p>
-              <p className="text-tea-400 text-[11px] break-all text-center font-mono">{url}</p>
-
-              <div className="w-full flex items-center gap-2 pt-3 mt-1 border-t border-tea-100">
-                <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
-                <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
-              </div>
             </div>
           );
         })}

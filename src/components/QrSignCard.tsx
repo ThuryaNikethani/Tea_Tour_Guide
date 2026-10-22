@@ -40,8 +40,8 @@ export function QrSignCard({ title, tagline, url, footer, backgroundSrc, badge, 
             <stop offset="1" stopColor="#0f2a10" stopOpacity="0.5" />
           </linearGradient>
         </defs>
-        <path d="M0 40 C30 54 70 52 100 30 V145 H0 Z" fill="url(#qr-sign-tint)" />
-        <path d="M0 40 C30 54 70 52 100 30" fill="none" stroke="#fff" strokeOpacity="0.9" strokeWidth="0.7" />
+        <path d="M0 30 C30 42 70 40 100 20 V145 H0 Z" fill="url(#qr-sign-tint)" />
+        <path d="M0 30 C30 42 70 40 100 20" fill="none" stroke="#fff" strokeOpacity="0.9" strokeWidth="0.7" />
       </svg>
 
       {corner}
