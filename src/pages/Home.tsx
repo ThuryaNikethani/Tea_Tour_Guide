@@ -30,7 +30,7 @@ export function Home() {
         <div className="absolute inset-0 bg-tea-950/70" />
         <div className="relative max-w-3xl mx-auto px-6 py-16 md:py-24 flex flex-col items-center text-center">
           <p className="text-gold-300 text-xs font-semibold uppercase tracking-[0.3em] mb-4">
-            Visitor Tour Guide
+            {t("visitorTourGuide")}
           </p>
           <div className="mb-4">
             <Flourish />
@@ -76,7 +76,7 @@ export function Home() {
             to="/highlights"
             className="inline-flex items-center gap-2 border border-tea-900 dark:border-tea-100 text-tea-900 dark:text-tea-100 hover:bg-tea-900 dark:hover:bg-tea-100 hover:text-white dark:hover:text-tea-900 font-semibold text-xs uppercase tracking-[0.2em] px-9 py-3.5 transition-colors"
           >
-            Highlights
+            {t("highlights")}
             <ArrowRight size={15} />
           </Link>
         </div>

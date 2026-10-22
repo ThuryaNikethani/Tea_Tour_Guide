@@ -40,6 +40,8 @@ export interface UIStrings {
   statStations: string;
   statFullTour: string;
   statLanguages: string;
+  visitorTourGuide: string; // small line above the app title on the home page
+  highlights: string; // home page button linking to the highlights page
   footer: string;
 }
 
@@ -115,6 +117,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Stations",
     statFullTour: "Full Tour",
     statLanguages: "Languages",
+    visitorTourGuide: "Visitor Tour Guide",
+    highlights: "Highlights",
   },
   zh: {
     tagline: "体验从茶叶到茶杯的制茶艺术",
@@ -152,6 +156,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "站点",
     statFullTour: "完整参观",
     statLanguages: "语言",
+    visitorTourGuide: "游客导览指南",
+    highlights: "精彩亮点",
   },
   ja: {
     tagline: "茶葉からカップまで、紅茶製造の芸術を体験してください",
@@ -189,6 +195,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "ステーション",
     statFullTour: "全体ツアー",
     statLanguages: "言語",
+    visitorTourGuide: "見学ツアーガイド",
+    highlights: "ハイライト",
   },
   es: {
     tagline: "Experimente el arte de la producción de té, de la hoja a la taza",
@@ -226,6 +234,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Estaciones",
     statFullTour: "Recorrido Completo",
     statLanguages: "Idiomas",
+    visitorTourGuide: "Guía de Visita",
+    highlights: "Destacados",
   },
   fr: {
     tagline: "Découvrez l'art de la production de thé, de la feuille à la tasse",
@@ -263,6 +273,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Stations",
     statFullTour: "Visite Complète",
     statLanguages: "Langues",
+    visitorTourGuide: "Guide de Visite",
+    highlights: "Temps forts",
   },
   ru: {
     tagline: "Познакомьтесь с искусством производства чая от листа до чашки",
@@ -300,6 +312,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Станции",
     statFullTour: "Весь тур",
     statLanguages: "Языки",
+    visitorTourGuide: "Путеводитель для гостей",
+    highlights: "Главное",
   },
   si: {
     tagline: "තේ දලුවේ සිට කෝප්පය දක්වා තේ නිෂ්පාදන කලාව අත්විඳින්න",
@@ -337,6 +351,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "ස්ථාන",
     statFullTour: "සම්පූර්ණ චාරිකාව",
     statLanguages: "භාෂා",
+    visitorTourGuide: "අමුත්තන් සඳහා චාරිකා මඟපෙන්වීම",
+    highlights: "විශේෂාංග",
   },
   ar: {
     tagline: "اختبر فن إنتاج الشاي من الورقة إلى الكوب",
@@ -374,6 +390,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "المحطات",
     statFullTour: "الجولة الكاملة",
     statLanguages: "اللغات",
+    visitorTourGuide: "دليل جولة الزوار",
+    highlights: "أبرز المعالم",
   },
   it: {
     tagline: "Scopri l'arte della produzione del tè dalla foglia alla tazzina",
@@ -411,6 +429,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Stazioni",
     statFullTour: "Tour Completo",
     statLanguages: "Lingue",
+    visitorTourGuide: "Guida per i Visitatori",
+    highlights: "In evidenza",
   },
   de: {
     tagline: "Erleben Sie die Kunst der Tee-Produktion vom Blatt bis zur Tasse",
@@ -448,6 +468,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Stationen",
     statFullTour: "Komplette Tour",
     statLanguages: "Sprachen",
+    visitorTourGuide: "Besucher-Rundgang",
+    highlights: "Höhepunkte",
   },
   ta: {
     tagline: "இலையிலிருந்து கோப்பை வரை தேயிலை உற்பத்தியின் கலையை அனுபவியுங்கள்",
@@ -485,6 +507,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "நிலையங்கள்",
     statFullTour: "முழு சுற்றுலா",
     statLanguages: "மொழிகள்",
+    visitorTourGuide: "பார்வையாளர் சுற்றுலா வழிகாட்டி",
+    highlights: "சிறப்பம்சங்கள்",
   },
 };
 
