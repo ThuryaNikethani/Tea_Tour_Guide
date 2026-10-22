@@ -1885,7 +1885,7 @@ export const STATIONS: Station[] = [
   {
     id: "pahatharata-manufacturing",
     order: 2,
-    name: "Tea Manufacturing (Pahatharata)",
+    name: "Tea Manufacturing (Down South)",
     shortName: "Pahatharata",
     icon: "Layers",
     verified: true,
