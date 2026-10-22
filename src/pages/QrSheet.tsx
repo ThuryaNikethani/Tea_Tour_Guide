@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { QRCodeSVG } from "qrcode.react";
 import { CheckCircle2, Printer, Scissors } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { STATIONS } from "../data/stations";
@@ -7,6 +6,10 @@ import { localizeStation } from "../data/localize";
 import { localizeVilla } from "../data/villa";
 import logo from "../assets/brand/athu-BZCrr7Wr.png";
 import { QrSignCard } from "../components/QrSignCard";
+// Backgrounds for the two special cards: the tour entrance card shows the estate's tea field,
+// and the villa card shows the aerial shot of the estate where the villa stands.
+import tourEntranceImg from "../assets/introduction/ceylon-tea-field.jpg";
+import villaImg from "../assets/brand/ath-CFusSk2P.jpg";
 // Real on-site photo of the estate's own "Story of Ceylon Tea" signboard, used as the
 // "introduction" station's QR watermark specifically (see getWatermarkImage below) instead of
 // its own heroImage, since the user supplied this one directly for that card. This is a crop of
@@ -166,48 +169,46 @@ export function QrSheet() {
       {/* Special QR codes: entrance overview and villa marketing, separate from the per-station tour codes above */}
       <div className="mt-10 pt-8 border-t-2 border-tea-200 dark:border-tea-700 print:break-before-page">
         <div className="grid sm:grid-cols-2 gap-5 print:!grid-cols-1 print:!gap-0">
-          <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:break-after-page print:border-gold-500 print:min-h-[250mm] print:justify-center">
-            <Scissors size={14} className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden" />
-            <h2 className="font-heading font-semibold text-xl text-tea-900 text-center print:text-3xl">{t("appTitle")}</h2>
-            <p className="text-tea-500 text-xs text-center">{t("tagline")}</p>
-            <div className="p-3 bg-white rounded-xl border border-tea-100 shadow-sm">
-              <QRCodeSVG
-                value={`${origin}/`}
-                size={170}
-                className="print:!w-[320px] print:!h-[320px]"
-                level="H"
-                fgColor="#1a2e17"
-                imageSettings={{ src: logo, height: 32, width: 32, excavate: true }}
-              />
-            </div>
-            <p className="text-tea-600 text-xs font-medium print:text-base">{t("scanQrHint")}</p>
-            <p className="text-tea-400 text-[11px] break-all text-center font-mono">{`${origin}/`}</p>
-            <div className="w-full flex items-center gap-2 pt-3 mt-1 border-t border-tea-100">
-              <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
-              <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
-            </div>
+          <div className="relative print:break-inside-avoid print:break-after-page">
+            <QrSignCard
+              title={t("appTitle")}
+              url={`${origin}/`}
+              footer={t("appTitle")}
+              backgroundSrc={tourEntranceImg}
+              corner={
+                <Scissors
+                  size={14}
+                  className="absolute top-1 right-1 z-10 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden"
+                />
+              }
+              tagline={
+                <>
+                  <div>{t("tagline")}</div>
+                  <div className="qr-sign-hint">{t("scanQrHint")}</div>
+                </>
+              }
+            />
           </div>
 
-          <div className="relative flex flex-col items-center gap-3 bg-white border-2 border-dashed border-gold-400 rounded-md p-6 print:break-inside-avoid print:border-gold-500 print:min-h-[250mm] print:justify-center">
-            <Scissors size={14} className="absolute -top-2 -left-2 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden" />
-            <h2 className="font-heading font-semibold text-xl text-tea-900 text-center print:text-3xl">{villa.name}</h2>
-            <p className="text-tea-500 text-xs text-center">{villa.tagline}</p>
-            <div className="p-3 bg-white rounded-xl border border-tea-100 shadow-sm">
-              <QRCodeSVG
-                value={`${origin}/villa`}
-                size={170}
-                className="print:!w-[320px] print:!h-[320px]"
-                level="H"
-                fgColor="#1a2e17"
-                imageSettings={{ src: logo, height: 32, width: 32, excavate: true }}
-              />
-            </div>
-            <p className="text-tea-600 text-xs font-medium print:text-base">{t("scanQrHint")}</p>
-            <p className="text-tea-400 text-[11px] break-all text-center font-mono">{`${origin}/villa`}</p>
-            <div className="w-full flex items-center gap-2 pt-3 mt-1 border-t border-tea-100">
-              <img src={logo} alt="" className="w-5 h-5 rounded-full object-contain opacity-80" />
-              <span className="text-tea-400 text-[11px]">{t("appTitle")}</span>
-            </div>
+          <div className="relative print:break-inside-avoid">
+            <QrSignCard
+              title={villa.name}
+              url={`${origin}/villa`}
+              footer={t("appTitle")}
+              backgroundSrc={villaImg}
+              corner={
+                <Scissors
+                  size={14}
+                  className="absolute top-1 right-1 z-10 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden"
+                />
+              }
+              tagline={
+                <>
+                  <div>{villa.tagline}</div>
+                  <div className="qr-sign-hint">{t("scanQrHint")}</div>
+                </>
+              }
+            />
           </div>
         </div>
       </div>
