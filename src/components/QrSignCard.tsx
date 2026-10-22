@@ -84,7 +84,6 @@ export function QrSignCard({ title, tagline, url, footer, backgroundSrc, bodySrc
           />
         </div>
 
-        <p className="qr-sign-url">{url}</p>
       </div>
 
       <div className="qr-sign-pill">
