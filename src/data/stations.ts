@@ -320,7 +320,7 @@ import packingCollageImg from "../assets/packing/packing-collage.jpg";
 // room — grade-labelled sacks of different sizes and a weighing scale.
 // Not an estate photo (no real photo of the estate's own bag weighing has
 // been supplied yet). See the provenance note near "packing" below.
-import gradedTeaSacksImg from "../assets/packing/graded-tea-sacks.jpg";
+import gradedTeaSacksImg from "../assets/packing/stacked-tea-sacks-packing-room.jpg";
 // Real, user-supplied photo of the estate's own polytunnel interior —
 // the same photo used as the cover of the supplied crop-schedule PDF,
 // showing several of the labelled crops (Scotch Bonnet, leeks, carrots,
