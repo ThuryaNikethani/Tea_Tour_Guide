@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { CheckCircle2, Printer, Scissors } from "lucide-react";
+import { Printer, Scissors } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { STATIONS } from "../data/stations";
 import { localizeStation } from "../data/localize";
@@ -131,19 +131,6 @@ export function QrSheet() {
                     size={14}
                     className="absolute top-1 right-1 z-10 text-tea-400 bg-tea-50 rounded-full p-0.5 print:hidden"
                   />
-                }
-                badge={
-                  <>
-                    <span className="qr-sign-number">{station.order}</span>
-                    <span className="qr-sign-chip">
-                      {t("stationOf").replace("{current}", String(station.order)).replace("{total}", String(STATIONS.length))}
-                      {station.verified ? (
-                        <CheckCircle2 className="qr-sign-verified" />
-                      ) : (
-                        <span className="qr-sign-draft">{t("draftLabel")}</span>
-                      )}
-                    </span>
-                  </>
                 }
                 tagline={<div className="qr-sign-hint">{t("scanQrHint")}</div>}
               />

@@ -151,63 +151,6 @@ body {
   font-weight: 800;
 }
 
-.qr-sign-draft {
-  display: inline-block;
-  margin-left: 1.5cqw;
-  padding: 0.3cqw 1.8cqw;
-  vertical-align: middle;
-  font-size: 2.6cqw;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-shadow: none;
-  color: #fff;
-  background: #a16f2f;
-  border-radius: 999px;
-}
-
-.qr-sign-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10cqw;
-  height: 10cqw;
-  font-family: "Varela Round", Nunito, theme("fontFamily.body");
-  font-size: 5cqw;
-  color: #1d8a3c;
-  background: #fff;
-  border: 0.8cqw solid #1d8a3c;
-  border-radius: 999px;
-  box-shadow: 0 0.4cqw 1cqw rgb(0 0 0 / 0.3);
-}
-
-/* "Station 6 of 27" chip beside the number, so the tagline area is free for the scan hint. */
-.qr-sign-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 1.5cqw;
-  padding: 1cqw 3cqw;
-  font-weight: 900;
-  font-size: 3.6cqw;
-  color: #1d8a3c;
-  background: #fff;
-  border-radius: 999px;
-  box-shadow: 0 0.4cqw 1cqw rgb(0 0 0 / 0.3);
-}
-
-.qr-sign-chip .qr-sign-draft {
-  margin-left: 0;
-}
-
-.qr-sign-verified {
-  width: 6cqw;
-  height: 6cqw;
-  color: #fff;
-  background: #1d8a3c;
-  border-radius: 999px;
-  padding: 0.6cqw;
-  box-shadow: 0 0.4cqw 1cqw rgb(0 0 0 / 0.3);
-}
-
 .qr-sign-qr {
   width: 42cqw;
   padding: 2cqw;
