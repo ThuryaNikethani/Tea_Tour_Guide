@@ -251,7 +251,7 @@ import teaEstateHillsideImg from "../assets/introduction/tea-estate-hillside.jpg
 // troughs. Used as "pahatharata-manufacturing"'s heroImage. See the
 // provenance note near the "pahatharata-manufacturing" station below.
 import pahatharataManufacturingCollageImg from "../assets/pahatharata-manufacturing/pahatharata-manufacturing-collage.jpg";
-import factoryFloorWorkerImg from "../assets/pahatharata-manufacturing/leaf-basket-withering-trough.jpg";
+import factoryFloorWorkerImg from "../assets/pahatharata-manufacturing/leaf-baskets-factory-floor.jpg";
 import ctcTeaGranulesImg from "../assets/pahatharata-manufacturing/ctc-tea-granules.jpg";
 // Full-bleed hero banner images for stations that already have their own
 // inline section images and text — these are purely additive (same
