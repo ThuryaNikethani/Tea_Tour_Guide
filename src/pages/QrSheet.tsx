@@ -53,8 +53,8 @@ import artisanalTeaGradesWatermarkImg from "../assets/artisanal-tea-grades/tea-t
 
 // Second photo for each sign, filling the card below the header: a different photo of the same
 // topic from that station's own page (or its folder), so the header photo isn't repeated.
-// "packing" uses one panel cropped out of its own collage; "rolling" has no second photo of its
-// own, so it uses the tea roller photo from the handmade factory page.
+// "rolling" has no second photo of its own, so it uses the tea roller photo from the handmade
+// factory page.
 import introductionBodyImg from "../assets/introduction/coffee-tea-cups.jpg";
 import pahatharataManufacturingBodyImg from "../assets/pahatharata-manufacturing/ctc-tea-granules.jpg";
 import nurseryBodyImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
@@ -77,7 +77,8 @@ import witheringBodyImg from "../assets/withering/withering-troughs-factory.jpg"
 import rollingBodyImg from "../assets/handmade-factory/roller-machine.jpg";
 import fermentationBodyImg from "../assets/fermentation/fermenting-leaf-copper.jpg";
 import dryingBodyImg from "../assets/drying/dryer-intake-hopper.jpg";
-import packingBodyImg from "../assets/packing/visitor-packing-sack.jpg";
+// User-supplied photo of two workers shovelling graded tea on the packing floor.
+import packingBodyImg from "../assets/packing/workers-shovelling-graded-tea.jpg";
 import handmadeFactoryBodyImg from "../assets/handmade-factory/green-tea-drying-trays.jpg";
 import teaCenterBodyImg from "../assets/tea-center/tea-centre-shop-shelves.jpg";
 import polytunnelBodyImg from "../assets/polytunnel/drip-irrigation.jpg";
