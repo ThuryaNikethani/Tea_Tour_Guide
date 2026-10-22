@@ -8,8 +8,12 @@ type QrSignCardProps = {
   tagline: ReactNode;
   url: string;
   footer: string;
-  /** Topic photo: shown crisp in the curved header and softened behind the rest of the card. */
+  /** Topic photo shown large and clear in the curved header. */
   backgroundSrc?: string;
+  /** A second photo of the same topic filling the card below the header (falls back to backgroundSrc). */
+  bodySrc?: string;
+  /** CSS object-position for the lower photo, to keep its subject in view (default "center 70%"). */
+  bodyPosition?: string;
   /** Optional element in the top-left corner (e.g. the station number). */
   badge?: ReactNode;
   /** Optional screen-only element (e.g. the scissors cut mark). */
@@ -23,17 +27,18 @@ const HEADER_CURVE = "C72 57 30 57 0 46";
 /**
  * A printable QR card styled after the estate's on-site plant signs (e.g. the
  * Ceylon Olive sign): the topic's photo shown large and clear in a curved header so
- * visitors recognise the stop at a glance, the same photo softened behind the rest,
- * an outlined title on a green brush stroke, a green-framed QR with the logo in the
+ * visitors recognise the stop at a glance, a second photo of the topic filling the
+ * rest of the card, an outlined title on a green brush stroke, a green-framed QR with the logo in the
  * middle, and a green name pill along the bottom.
  */
-export function QrSignCard({ title, tagline, url, footer, backgroundSrc, badge, corner, className = "" }: QrSignCardProps) {
+export function QrSignCard({ title, tagline, url, footer, backgroundSrc, bodySrc, bodyPosition, badge, corner, className = "" }: QrSignCardProps) {
   const clipId = `qr-sign-clip-${useId().replace(/:/g, "")}`;
+  const lowerSrc = bodySrc ?? backgroundSrc;
 
   return (
     <div className={`qr-sign ${className}`}>
-      {backgroundSrc ? (
-        <img src={backgroundSrc} alt="" aria-hidden="true" className="qr-sign-photo" />
+      {lowerSrc ? (
+        <img src={lowerSrc} alt="" aria-hidden="true" className="qr-sign-photo" style={bodyPosition ? { objectPosition: bodyPosition } : undefined} />
       ) : (
         <div className="qr-sign-photo qr-sign-photo-fallback" aria-hidden="true" />
       )}

@@ -50,6 +50,76 @@ import pruningWatermarkImg from "../assets/pruning/worker-cutting-tool.jpg";
 // individual product-package shots).
 import artisanalTeaGradesWatermarkImg from "../assets/artisanal-tea-grades/tea-tin-display-shelf.jpg";
 
+// Second photo for each sign, filling the card below the header: a different photo of the same
+// topic from that station's own page (or its folder), so the header photo isn't repeated.
+// "packing" uses one panel cropped out of its own collage; "rolling" has no second photo of its
+// own, so it uses the tea roller photo from the handmade factory page.
+import introductionBodyImg from "../assets/introduction/coffee-tea-cups.jpg";
+import pahatharataManufacturingBodyImg from "../assets/pahatharata-manufacturing/ctc-tea-granules.jpg";
+import nurseryBodyImg from "../assets/nursery/pre-Cw0O8LPA.png";
+import clonalTeaBodyImg from "../assets/nursery/gallery/pla3-Dk5ZTCwz.jpg";
+import pruningBodyImg from "../assets/pruning/pruned-bush-rows.jpg";
+import cinnamonBodyImg from "../assets/cinnamon/cinnamon-plantation.jpg";
+import gingerTurmericBodyImg from "../assets/ginger/ginger-field-1.jpg";
+import turmericBodyImg from "../assets/turmeric/turmeric-rhizome.webp";
+import sortingBodyImg from "../assets/sorting/sorting-floor-visit-2.jpg";
+import artisanalTeaGradesBodyImg from "../assets/handmade-factory/chakra-flower-tea-coin.jpg";
+import beeBodyImg from "../assets/bee/bee-wildflower.jpeg";
+import organicCultivationBodyImg from "../assets/organic-cultivation/purple-shoot-closeup.jpg";
+import shadeManagementBodyImg from "../assets/shade-management/high-shade-albizia.jpg";
+import uniqueFruitsBodyImg from "../assets/pineapple/pineapple-plant.jpg";
+import coconutFieldBodyImg from "../assets/coconut/coconut-cluster.png";
+import pluckingBodyImg from "../assets/plucking/plucker-with-basket.jpg";
+import jaggeryPalmBodyImg from "../assets/kithul/kithul-inflorescence-2.jpg";
+import teaFactoryBodyImg from "../assets/tea-factory/factory-building-1.jpg";
+import witheringBodyImg from "../assets/withering/withering-troughs-factory.jpg";
+import rollingBodyImg from "../assets/handmade-factory/roller-machine.jpg";
+import fermentationBodyImg from "../assets/fermentation/fermenting-leaf-copper.jpg";
+import dryingBodyImg from "../assets/drying/dryer-intake-hopper.jpg";
+import packingBodyImg from "../assets/packing/visitor-packing-sack.jpg";
+import handmadeFactoryBodyImg from "../assets/handmade-factory/green-tea-drying-trays.jpg";
+import teaCenterBodyImg from "../assets/tea-center/tea-centre-shop-shelves.jpg";
+import polytunnelBodyImg from "../assets/polytunnel/drip-irrigation.jpg";
+import mushroomHutBodyImg from "../assets/mushroom-hut/grey-oyster-substrate.jpg";
+// The two special cards: the estate's tea field and hillside.
+import tourEntranceBodyImg from "../assets/introduction/tea-estate-hillside.jpg";
+import villaBodyImg from "../assets/introduction/ceylon-tea-field.jpg";
+
+const BODY_IMAGES: Record<string, string> = {
+  introduction: introductionBodyImg,
+  "pahatharata-manufacturing": pahatharataManufacturingBodyImg,
+  nursery: nurseryBodyImg,
+  "clonal-tea": clonalTeaBodyImg,
+  pruning: pruningBodyImg,
+  cinnamon: cinnamonBodyImg,
+  "ginger-turmeric": gingerTurmericBodyImg,
+  turmeric: turmericBodyImg,
+  sorting: sortingBodyImg,
+  "artisanal-tea-grades": artisanalTeaGradesBodyImg,
+  bee: beeBodyImg,
+  "organic-cultivation": organicCultivationBodyImg,
+  "shade-management": shadeManagementBodyImg,
+  "unique-fruits": uniqueFruitsBodyImg,
+  "coconut-field": coconutFieldBodyImg,
+  plucking: pluckingBodyImg,
+  "jaggery-palm": jaggeryPalmBodyImg,
+  "tea-factory": teaFactoryBodyImg,
+  withering: witheringBodyImg,
+  rolling: rollingBodyImg,
+  fermentation: fermentationBodyImg,
+  drying: dryingBodyImg,
+  packing: packingBodyImg,
+  "handmade-factory": handmadeFactoryBodyImg,
+  "tea-center": teaCenterBodyImg,
+  polytunnel: polytunnelBodyImg,
+  "mushroom-hut": mushroomHutBodyImg,
+};
+
+// The bee photo is very wide, so it's shifted to keep the bee itself in view below the header.
+const BODY_POSITIONS: Record<string, string> = {
+  bee: "62% 50%",
+};
+
 const COLLAGE_WATERMARK_OVERRIDES: Record<string, string> = {
   "pahatharata-manufacturing": pahatharataManufacturingWatermarkImg,
   cinnamon: cinnamonWatermarkImg,
@@ -126,6 +196,8 @@ export function QrSheet() {
                 url={url}
                 footer={t("appTitle")}
                 backgroundSrc={watermarkSrc}
+                bodySrc={BODY_IMAGES[station.id]}
+                bodyPosition={BODY_POSITIONS[station.id]}
                 corner={
                   <Scissors
                     size={14}
@@ -148,6 +220,7 @@ export function QrSheet() {
               url={`${origin}/`}
               footer={t("appTitle")}
               backgroundSrc={tourEntranceImg}
+              bodySrc={tourEntranceBodyImg}
               corner={
                 <Scissors
                   size={14}
@@ -169,6 +242,7 @@ export function QrSheet() {
               url={`${origin}/villa`}
               footer={t("appTitle")}
               backgroundSrc={villaImg}
+              bodySrc={villaBodyImg}
               corner={
                 <Scissors
                   size={14}
