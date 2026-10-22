@@ -15,9 +15,9 @@ import villaImg from "../assets/brand/ath-CFusSk2P.jpg";
 // the original photo with its own bottom contact-banner strip removed (that banner isn't used
 // elsewhere on this page, so the crop just keeps the watermark to the scene itself).
 import introductionWatermarkImg from "../assets/introduction/story-of-ceylon-tea-signboard-scene.jpg";
-// "nursery" has a heroVideo but no heroImage, so its header uses this section photo of the real
-// nursery (a worker tending rows of young tea plants under the shade net).
-import nurseryWatermarkImg from "../assets/nursery/leaf2-BiewwDSR.png";
+// "nursery" has a heroVideo but no heroImage, so its header uses this user-supplied photo of the
+// estate's own tea nursery: the black shade-net houses with their signboard.
+import nurseryWatermarkImg from "../assets/nursery/nursery-shade-net-houses.jpg";
 // "mushroom-hut" has neither a heroImage nor a heroVideo, so it falls back to this section photo.
 import mushroomHutWatermarkImg from "../assets/mushroom-hut/pink-oyster.jpg";
 // 17 stations' heroImage is a generated multi-photo collage (several photos side by side) rather
