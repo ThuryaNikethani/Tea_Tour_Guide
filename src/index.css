@@ -19,7 +19,7 @@ body {
 @media print {
   @page {
     size: A4;
-    margin: 12mm;
+    margin: 8mm;
   }
 }
 
@@ -273,9 +273,11 @@ body {
 }
 
 @media print {
-  /* One sign per A4 sheet, sized so the first one still fits under the letterhead. */
+  /* One sign filling each A4 sheet (210 × 297 mm less the 8 mm page margin). */
   .qr-sign {
-    width: 160mm;
+    width: 194mm;
+    height: 280mm;
+    aspect-ratio: auto;
     margin: 0 auto;
     box-shadow: none;
     break-inside: avoid;

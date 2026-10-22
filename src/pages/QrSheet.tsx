@@ -4,7 +4,6 @@ import { useLanguage } from "../context/LanguageContext";
 import { STATIONS } from "../data/stations";
 import { localizeStation } from "../data/localize";
 import { localizeVilla } from "../data/villa";
-import logo from "../assets/brand/athu-BZCrr7Wr.png";
 import { QrSignCard } from "../components/QrSignCard";
 // Backgrounds for the two special cards: the tour entrance card shows the estate's tea field,
 // and the villa card shows the aerial shot of the estate where the villa stands.
@@ -92,11 +91,10 @@ function getWatermarkImage(station: { id: string; heroImage?: string }): string 
 export function QrSheet() {
   const { t, language } = useLanguage();
   const origin = window.location.origin;
-  const printedOn = new Intl.DateTimeFormat(language, { dateStyle: "long" }).format(new Date());
   const villa = localizeVilla(language);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-6 print:max-w-none print:px-6 print:py-6">
+    <div className="max-w-5xl mx-auto px-4 py-6 print:max-w-none print:p-0">
       {/* Screen-only controls */}
       <div className="flex items-center justify-between gap-3 mb-6 print:hidden">
         <div className="min-w-0">
@@ -111,17 +109,6 @@ export function QrSheet() {
           <Printer size={16} />
           {t("printButton")}
         </button>
-      </div>
-
-      {/* Print-only letterhead */}
-      <div className="hidden print:flex items-center gap-3 border-b-2 border-tea-900 pb-4 mb-6">
-        <img src={logo} alt="" className="w-10 h-10 rounded-full object-contain" />
-        <div>
-          <p className="font-heading font-semibold text-lg text-tea-900 leading-tight">{t("appTitle")}</p>
-          <p className="text-tea-500 text-xs">
-            {t("qrSheetTitle")} · {printedOn}
-          </p>
-        </div>
       </div>
 
       <div className="grid sm:grid-cols-2 gap-5 print:!grid-cols-1 print:!gap-0">
@@ -166,7 +153,7 @@ export function QrSheet() {
       </div>
 
       {/* Special QR codes: entrance overview and villa marketing, separate from the per-station tour codes above */}
-      <div className="mt-10 pt-8 border-t-2 border-tea-200 dark:border-tea-700 print:break-before-page">
+      <div className="mt-10 pt-8 border-t-2 border-tea-200 dark:border-tea-700 print:break-before-page print:m-0 print:p-0 print:border-0">
         <div className="grid sm:grid-cols-2 gap-5 print:!grid-cols-1 print:!gap-0">
           <div className="relative print:break-inside-avoid print:break-after-page">
             <QrSignCard
