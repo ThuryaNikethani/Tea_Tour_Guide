@@ -14,18 +14,18 @@ body {
   color: theme("colors.tea.50");
 }
 
-/* Locks the printable QR sheet (src/pages/QrSheet.tsx) to A4 paper with a sensible margin,
+/* Locks the printable QR sheet (src/pages/QrSheet.tsx) to A3 paper with a sensible margin,
    regardless of the browser/printer's own default page size (often US Letter). */
 @media print {
   @page {
-    size: A4;
+    size: A3;
     margin: 8mm;
   }
 }
 
 /* ---------- Sign-style QR cards (src/components/QrSignCard.tsx) ----------
    Modelled on the estate's on-site plant signs (e.g. the Ceylon Olive sign). Sizes use
-   container units so a card looks the same on screen and on a full A4 print. */
+   container units so a card looks the same on screen and on a full A3 print. */
 
 .qr-sign {
   position: relative;
@@ -206,10 +206,10 @@ body {
 }
 
 @media print {
-  /* One sign filling each A4 sheet (210 × 297 mm less the 8 mm page margin). */
+  /* One sign filling each A3 sheet (297 × 420 mm less the 8 mm page margin). */
   .qr-sign {
-    width: 194mm;
-    height: 280mm;
+    width: 281mm;
+    height: 403mm;
     aspect-ratio: auto;
     margin: 0 auto;
     box-shadow: none;
