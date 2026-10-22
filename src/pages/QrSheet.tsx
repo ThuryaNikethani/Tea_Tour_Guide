@@ -122,6 +122,12 @@ const BODY_POSITIONS: Record<string, string> = {
   bee: "62% 50%",
 };
 
+// Sign titles that differ from the station's own name, in English only (the site's station
+// pages, and the sign in other languages, keep the station name as it is).
+const SIGN_TITLES_EN: Record<string, string> = {
+  "pahatharata-manufacturing": "Tea Manufacturing (Down South)",
+};
+
 const COLLAGE_WATERMARK_OVERRIDES: Record<string, string> = {
   "pahatharata-manufacturing": pahatharataManufacturingWatermarkImg,
   cinnamon: cinnamonWatermarkImg,
@@ -194,7 +200,7 @@ export function QrSheet() {
               className={`relative print:break-inside-avoid ${index < STATIONS.length - 1 ? "print:break-after-page" : ""}`}
             >
               <QrSignCard
-                title={localized.name}
+                title={(language === "en" && SIGN_TITLES_EN[station.id]) || localized.name}
                 url={url}
                 footer={t("appTitle")}
                 backgroundSrc={watermarkSrc}
