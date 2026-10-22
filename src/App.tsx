@@ -76,7 +76,7 @@ function Footer() {
                 rel="noreferrer"
                 className="hover:text-white underline underline-offset-2"
               >
-                Kurunduwatta No 01, Pitigala, Sri Lanka
+                {t("estateAddress")}
               </a>
             </li>
           </ul>

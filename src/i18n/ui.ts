@@ -48,6 +48,8 @@ export interface UIStrings {
   switchToLightMode: string; // screen-reader label for the theme button in dark mode
   shareStation: string; // screen-reader label for the share button on a station page
   visited: string; // screen-reader label for the tick on stations already visited
+  allRightsReserved: string; // end of the copyright line in the footer
+  estateAddress: string; // the estate's postal address, shown in the footer and on the villa page
   footer: string;
 }
 
@@ -56,9 +58,7 @@ export interface UIStrings {
  * from the factory's own live site (tea-tourism-guide.netlify.app) on
  * 2026-08-18 by switching its language picker and reading the rendered
  * text — verified real, in-use copy, safe to ship as-is. `footer` is built
- * from that same real appTitle plus "All rights reserved." in English,
- * matching the live site's actual behavior (it does not translate that
- * suffix in any language either).
+ * from that same real appTitle plus the translated "All rights reserved."
  *
  * Everything else — tagline, selectLanguage, startTour, allStations,
  * backToStations, stationOf, keyPoints, duration, scanQrHint — is new copy
@@ -123,6 +123,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Stations",
     statFullTour: "Full Tour",
     statLanguages: "Languages",
+    allRightsReserved: "All rights reserved.",
+    estateAddress: "Kurunduwatta No 01, Pitigala, Sri Lanka",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     switchToDarkMode: "Switch to dark mode",
@@ -168,6 +170,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "站点",
     statFullTour: "完整参观",
     statLanguages: "语言",
+    allRightsReserved: "版权所有。",
+    estateAddress: "斯里兰卡 皮蒂加拉 库伦杜瓦塔 01号",
     openMenu: "打开菜单",
     closeMenu: "关闭菜单",
     switchToDarkMode: "切换到深色模式",
@@ -213,6 +217,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "ステーション",
     statFullTour: "全体ツアー",
     statLanguages: "言語",
+    allRightsReserved: "無断転載を禁じます。",
+    estateAddress: "スリランカ ピティガラ クルンドゥワッタ 01番",
     openMenu: "メニューを開く",
     closeMenu: "メニューを閉じる",
     switchToDarkMode: "ダークモードに切り替え",
@@ -258,6 +264,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Estaciones",
     statFullTour: "Recorrido Completo",
     statLanguages: "Idiomas",
+    allRightsReserved: "Todos los derechos reservados.",
+    estateAddress: "Kurunduwatta n.º 01, Pitigala, Sri Lanka",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
     switchToDarkMode: "Cambiar a modo oscuro",
@@ -303,6 +311,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Stations",
     statFullTour: "Visite Complète",
     statLanguages: "Langues",
+    allRightsReserved: "Tous droits réservés.",
+    estateAddress: "Kurunduwatta n° 01, Pitigala, Sri Lanka",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
     switchToDarkMode: "Passer en mode sombre",
@@ -348,6 +358,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Станции",
     statFullTour: "Весь тур",
     statLanguages: "Языки",
+    allRightsReserved: "Все права защищены.",
+    estateAddress: "Курундуватта № 01, Питигала, Шри-Ланка",
     openMenu: "Открыть меню",
     closeMenu: "Закрыть меню",
     switchToDarkMode: "Включить тёмную тему",
@@ -393,6 +405,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "ස්ථාන",
     statFullTour: "සම්පූර්ණ චාරිකාව",
     statLanguages: "භාෂා",
+    allRightsReserved: "සියලු හිමිකම් ඇවිරිණි.",
+    estateAddress: "අංක 01, කුරුඳුවත්ත, පිටිගල, ශ්‍රී ලංකාව",
     openMenu: "මෙනුව විවෘත කරන්න",
     closeMenu: "මෙනුව වසන්න",
     switchToDarkMode: "අඳුරු ප්‍රකාරයට මාරු වන්න",
@@ -438,6 +452,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "المحطات",
     statFullTour: "الجولة الكاملة",
     statLanguages: "اللغات",
+    allRightsReserved: "جميع الحقوق محفوظة.",
+    estateAddress: "كوروندوواتا رقم 01، بيتيغالا، سريلانكا",
     openMenu: "فتح القائمة",
     closeMenu: "إغلاق القائمة",
     switchToDarkMode: "التبديل إلى الوضع الداكن",
@@ -483,6 +499,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Stazioni",
     statFullTour: "Tour Completo",
     statLanguages: "Lingue",
+    allRightsReserved: "Tutti i diritti riservati.",
+    estateAddress: "Kurunduwatta n. 01, Pitigala, Sri Lanka",
     openMenu: "Apri il menu",
     closeMenu: "Chiudi il menu",
     switchToDarkMode: "Passa alla modalità scura",
@@ -528,6 +546,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "Stationen",
     statFullTour: "Komplette Tour",
     statLanguages: "Sprachen",
+    allRightsReserved: "Alle Rechte vorbehalten.",
+    estateAddress: "Kurunduwatta Nr. 01, Pitigala, Sri Lanka",
     openMenu: "Menü öffnen",
     closeMenu: "Menü schließen",
     switchToDarkMode: "Zum dunklen Modus wechseln",
@@ -573,6 +593,8 @@ const APP_UI: Record<LanguageCode, AppUiStrings> = {
     statStations: "நிலையங்கள்",
     statFullTour: "முழு சுற்றுலா",
     statLanguages: "மொழிகள்",
+    allRightsReserved: "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+    estateAddress: "இல. 01, குருந்துவத்த, பிட்டிகல, இலங்கை",
     openMenu: "மெனுவைத் திறக்கவும்",
     closeMenu: "மெனுவை மூடவும்",
     switchToDarkMode: "இருண்ட பயன்முறைக்கு மாறவும்",
@@ -590,8 +612,8 @@ export const UI_STRINGS: Record<LanguageCode, UIStrings> = Object.fromEntries(
     {
       ...APP_UI[lang],
       ...VERIFIED[lang],
-      // Matches the live site's own behavior: it never translates this suffix either.
-      footer: `© 2026 ${VERIFIED[lang].appTitle}. All rights reserved.`,
+      // Chinese and Japanese end the sentence with "。" and no space instead of ". ".
+      footer: `© 2026 ${VERIFIED[lang].appTitle}${lang === "zh" || lang === "ja" ? "。" : ". "}${APP_UI[lang].allRightsReserved}`,
     },
   ])
 ) as Record<LanguageCode, UIStrings>;

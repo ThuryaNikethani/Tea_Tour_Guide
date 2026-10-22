@@ -56,7 +56,7 @@ export function VillaPage() {
                 rel="noreferrer"
                 className="hover:text-tea-900 dark:hover:text-white underline underline-offset-2"
               >
-                Kurunduwatta No 01, Pitigala, Sri Lanka
+                {t("estateAddress")}
               </a>
             </li>
           </ul>
