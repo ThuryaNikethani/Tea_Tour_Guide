@@ -35,7 +35,7 @@ import jaggeryPalmWatermarkImg from "../assets/kithul/kithul-leaves.jpg";
 import uniqueFruitsWatermarkImg from "../assets/dragon-fruit/dragon-fruit-vine.jpg";
 import handmadeFactoryWatermarkImg from "../assets/handmade-factory/withering-rolling-hands.jpg";
 import sortingWatermarkImg from "../assets/sorting/grading-machinery-worker.jpg";
-import packingWatermarkImg from "../assets/packing/graded-tea-sacks.jpg";
+import packingWatermarkImg from "../assets/packing/stacked-tea-sacks-packing-room.jpg";
 import teaCenterWatermarkImg from "../assets/tea-center/tea-centre-entrance.jpg";
 import clonalTeaWatermarkImg from "../assets/nursery/gallery/pla1-DxzHBDYN.jpg";
 // These three collages have no other section photo anywhere in the app, so each is one panel
