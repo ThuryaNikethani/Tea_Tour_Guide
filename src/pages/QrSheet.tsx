@@ -15,8 +15,9 @@ import villaImg from "../assets/brand/ath-CFusSk2P.jpg";
 // the original photo with its own bottom contact-banner strip removed (that banner isn't used
 // elsewhere on this page, so the crop just keeps the watermark to the scene itself).
 import introductionWatermarkImg from "../assets/introduction/story-of-ceylon-tea-signboard-scene.jpg";
-// "nursery" has a heroVideo but no heroImage, so it falls back to this section photo instead.
-import nurseryWatermarkImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
+// "nursery" has a heroVideo but no heroImage, so its header uses this section photo of the real
+// nursery (a worker tending rows of young tea plants under the shade net).
+import nurseryWatermarkImg from "../assets/nursery/leaf2-BiewwDSR.png";
 // "mushroom-hut" has neither a heroImage nor a heroVideo, so it falls back to this section photo.
 import mushroomHutWatermarkImg from "../assets/mushroom-hut/pink-oyster.jpg";
 // 17 stations' heroImage is a generated multi-photo collage (several photos side by side) rather
@@ -56,7 +57,7 @@ import artisanalTeaGradesWatermarkImg from "../assets/artisanal-tea-grades/tea-t
 // own, so it uses the tea roller photo from the handmade factory page.
 import introductionBodyImg from "../assets/introduction/coffee-tea-cups.jpg";
 import pahatharataManufacturingBodyImg from "../assets/pahatharata-manufacturing/ctc-tea-granules.jpg";
-import nurseryBodyImg from "../assets/nursery/pre-Cw0O8LPA.png";
+import nurseryBodyImg from "../assets/nursery/prepa-WnVZlTRI.jpeg";
 import clonalTeaBodyImg from "../assets/nursery/gallery/pla3-Dk5ZTCwz.jpg";
 import pruningBodyImg from "../assets/pruning/pruned-bush-rows.jpg";
 import cinnamonBodyImg from "../assets/cinnamon/cinnamon-plantation.jpg";
