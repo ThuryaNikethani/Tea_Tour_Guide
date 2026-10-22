@@ -50,22 +50,35 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Softened behind the body so the crisp header photo is what catches the eye. */
+  filter: blur(2.5px) saturate(1.1);
+  transform: scale(1.06);
 }
 
 .qr-sign-photo-fallback {
   background: linear-gradient(160deg, #6fa64a, #2f6b2a 55%, #16391a);
 }
 
-.qr-sign-curve {
+.qr-sign-tint {
   position: absolute;
   inset: 0;
   z-index: -1;
+  background: linear-gradient(180deg, rgb(15 42 16 / 0.05) 30%, rgb(15 42 16 / 0.42) 100%);
+}
+
+/* The topic photo, crisp and untinted, in a curved band across the top third. */
+.qr-sign-header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  overflow: visible;
 }
 
 .qr-sign-badge {
   position: absolute;
+  z-index: 1;
   top: 4cqw;
   left: 4cqw;
   display: flex;
@@ -74,10 +87,17 @@ body {
 }
 
 .qr-sign-body {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  bottom: 18cqw;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 31% 5cqw 0;
+  justify-content: space-evenly;
+  padding: 0 5cqw;
   text-align: center;
 }
 
@@ -117,7 +137,6 @@ body {
 }
 
 .qr-sign-tagline {
-  margin-top: 2.5cqw;
   font-weight: 900;
   font-size: 4.6cqw;
   line-height: 1.25;
@@ -128,8 +147,7 @@ body {
 }
 
 .qr-sign-hint {
-  margin-top: 1cqw;
-  font-size: 3.1cqw;
+  font-size: 3.8cqw;
   font-weight: 800;
 }
 
@@ -162,6 +180,24 @@ body {
   box-shadow: 0 0.4cqw 1cqw rgb(0 0 0 / 0.3);
 }
 
+/* "Station 6 of 27" chip beside the number, so the tagline area is free for the scan hint. */
+.qr-sign-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5cqw;
+  padding: 1cqw 3cqw;
+  font-weight: 900;
+  font-size: 3.6cqw;
+  color: #1d8a3c;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 0.4cqw 1cqw rgb(0 0 0 / 0.3);
+}
+
+.qr-sign-chip .qr-sign-draft {
+  margin-left: 0;
+}
+
 .qr-sign-verified {
   width: 6cqw;
   height: 6cqw;
@@ -173,8 +209,7 @@ body {
 }
 
 .qr-sign-qr {
-  width: 50cqw;
-  margin-top: 3cqw;
+  width: 42cqw;
   padding: 2cqw;
   background: #fff;
   border: 1cqw solid #22a046;
@@ -182,7 +217,7 @@ body {
 }
 
 .qr-sign-url {
-  margin: 1.5cqw 0 0;
+  margin: -2cqw 0 0;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 2.4cqw;
   color: #fff;
@@ -192,6 +227,7 @@ body {
 
 .qr-sign-pill {
   position: absolute;
+  z-index: 1;
   left: 5cqw;
   right: 5cqw;
   bottom: 4cqw;
@@ -243,5 +279,16 @@ body {
     margin: 0 auto;
     box-shadow: none;
     break-inside: avoid;
+  }
+
+  /* A CSS blur gets rasterised at print resolution (minutes per page, huge PDFs), so the
+     printed background stays sharp and is softened with a slightly stronger tint instead. */
+  .qr-sign-photo {
+    filter: none;
+    transform: none;
+  }
+
+  .qr-sign-tint {
+    background: linear-gradient(180deg, rgb(15 42 16 / 0.15) 30%, rgb(15 42 16 / 0.5) 100%);
   }
 }

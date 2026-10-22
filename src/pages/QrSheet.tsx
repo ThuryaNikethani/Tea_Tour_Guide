@@ -148,18 +148,17 @@ export function QrSheet() {
                 badge={
                   <>
                     <span className="qr-sign-number">{station.order}</span>
-                    {station.verified && <CheckCircle2 className="qr-sign-verified" />}
-                  </>
-                }
-                tagline={
-                  <>
-                    <div>
+                    <span className="qr-sign-chip">
                       {t("stationOf").replace("{current}", String(station.order)).replace("{total}", String(STATIONS.length))}
-                      {!station.verified && <span className="qr-sign-draft">{t("draftLabel")}</span>}
-                    </div>
-                    <div className="qr-sign-hint">{t("scanQrHint")}</div>
+                      {station.verified ? (
+                        <CheckCircle2 className="qr-sign-verified" />
+                      ) : (
+                        <span className="qr-sign-draft">{t("draftLabel")}</span>
+                      )}
+                    </span>
                   </>
                 }
+                tagline={<div className="qr-sign-hint">{t("scanQrHint")}</div>}
               />
             </div>
           );

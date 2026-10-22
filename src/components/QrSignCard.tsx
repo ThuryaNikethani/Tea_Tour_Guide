@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useId, type ReactNode } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import logo from "../assets/brand/athu-BZCrr7Wr.png";
 
@@ -8,7 +8,7 @@ type QrSignCardProps = {
   tagline: ReactNode;
   url: string;
   footer: string;
-  /** Topic photo filling the card behind everything else. */
+  /** Topic photo: shown crisp in the curved header and softened behind the rest of the card. */
   backgroundSrc?: string;
   /** Optional element in the top-left corner (e.g. the station number). */
   badge?: ReactNode;
@@ -17,13 +17,19 @@ type QrSignCardProps = {
   className?: string;
 };
 
+// The header's bottom edge, in a 100-wide coordinate space (the card is 145 tall).
+const HEADER_CURVE = "C72 57 30 57 0 46";
+
 /**
  * A printable QR card styled after the estate's on-site plant signs (e.g. the
- * Ceylon Olive sign): the topic's photo full-bleed with a curved white line under
- * the header, an outlined title on a green brush stroke, a green-framed QR with the
- * logo in the middle, and a green name pill along the bottom.
+ * Ceylon Olive sign): the topic's photo shown large and clear in a curved header so
+ * visitors recognise the stop at a glance, the same photo softened behind the rest,
+ * an outlined title on a green brush stroke, a green-framed QR with the logo in the
+ * middle, and a green name pill along the bottom.
  */
 export function QrSignCard({ title, tagline, url, footer, backgroundSrc, badge, corner, className = "" }: QrSignCardProps) {
+  const clipId = `qr-sign-clip-${useId().replace(/:/g, "")}`;
+
   return (
     <div className={`qr-sign ${className}`}>
       {backgroundSrc ? (
@@ -31,17 +37,22 @@ export function QrSignCard({ title, tagline, url, footer, backgroundSrc, badge, 
       ) : (
         <div className="qr-sign-photo qr-sign-photo-fallback" aria-hidden="true" />
       )}
+      <div className="qr-sign-tint" aria-hidden="true" />
 
-      {/* Lightly tint everything below the curve so the outlined text stays readable over any photo. */}
-      <svg className="qr-sign-curve" viewBox="0 0 100 145" preserveAspectRatio="none" aria-hidden="true">
+      <svg className="qr-sign-header" viewBox="0 0 100 60" aria-hidden="true">
         <defs>
-          <linearGradient id="qr-sign-tint" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#0f2a10" stopOpacity="0.18" />
-            <stop offset="1" stopColor="#0f2a10" stopOpacity="0.5" />
-          </linearGradient>
+          <clipPath id={clipId}>
+            <path d={`M0 0 H100 V36 ${HEADER_CURVE} Z`} />
+          </clipPath>
         </defs>
-        <path d="M0 30 C30 42 70 40 100 20 V145 H0 Z" fill="url(#qr-sign-tint)" />
-        <path d="M0 30 C30 42 70 40 100 20" fill="none" stroke="#fff" strokeOpacity="0.9" strokeWidth="0.7" />
+        {/* Soft shadow under the header edge so the clear photo lifts off the background. */}
+        <path d={`M100 36 ${HEADER_CURVE}`} fill="none" stroke="#000" strokeOpacity="0.25" strokeWidth="2.4" transform="translate(0 1)" />
+        {backgroundSrc ? (
+          <image href={backgroundSrc} x="0" y="0" width="100" height="60" preserveAspectRatio="xMidYMid slice" clipPath={`url(#${clipId})`} />
+        ) : (
+          <rect x="0" y="0" width="100" height="60" fill="#8fc46a" clipPath={`url(#${clipId})`} />
+        )}
+        <path d={`M100 36 ${HEADER_CURVE}`} fill="none" stroke="#fff" strokeWidth="0.9" />
       </svg>
 
       {corner}
